@@ -127,6 +127,8 @@ registerDrill({
   requires: ['word', 'example_en'],
   check(note, response) {
     const { word } = f<{ word: string }>(note)
-    return { correct: response.trim().toLowerCase() === word.toLowerCase(), expected: word }
+    // 대소문자 · 악센트(résumé ↔ resume) 차이는 무시한다
+    const plain = (x: string) => x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase()
+    return { correct: plain(response) === plain(word), expected: word }
   },
 })

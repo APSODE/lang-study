@@ -43,4 +43,10 @@ describe('채점', () => {
     expect(check('toeic-meaning', bare, '송장, 청구서')).toBe(true)
     expect(check('toeic-meaning', bare, '영수증')).toBe(false)
   })
+  it('빈칸: 대소문자 · 악센트 무시', () => {
+    const cv: Note = { id: 'toeic-résumé', track: 'toeic', fields: { word: 'résumé', meaning_ko: '이력서', example_en: 'Please send your résumé by Friday.' } }
+    expect(check('toeic-cloze', cv, 'Resume')).toBe(true)
+    expect(check('toeic-cloze', cv, 'résumé')).toBe(true)
+    expect(check('toeic-cloze', cv, 'resumes')).toBe(false)
+  })
 })
