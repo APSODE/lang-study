@@ -1,0 +1,15 @@
+#!/bin/sh
+# 호스트에 Node 없이 개발: 모든 명령을 node:26 컨테이너 안에서 실행한다.
+# 사용: ./nd npm install   ./nd npm test   ./nd npm run dev:server
+# 포트는 호스트 네트워크를 그대로 쓴다(서버 8081, Vite 5173).
+set -eu
+cd "$(dirname "$0")"
+mkdir -p "$HOME/.cache/nakamura-npm"
+TTY=""; [ -t 0 ] && [ -t 1 ] && TTY="-it"
+exec docker run --rm $TTY --init \
+  --user "$(id -u):$(id -g)" \
+  --network host \
+  -e HOME=/tmp -e npm_config_cache=/npm-cache -e npm_config_update_notifier=false \
+  -v "$HOME/.cache/nakamura-npm:/npm-cache" \
+  -v "$PWD:/app" -w /app \
+  node:26-bookworm-slim "$@"

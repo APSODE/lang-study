@@ -1,0 +1,19 @@
+:root {
+  --bg: #faf9f6;
+  --fg: #1f1e1d;
+  --muted: #6b6b68;
+  --card: #fff;
+  --line: #e4e4e1;
+  --accent: #c2410c;
+  color-scheme: light dark;
+  font-family: system-ui, 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1a1a19; --fg: #ecebe8; --muted: #a8a8a4; --card: #262625; --line: #333331; }
+}
+body { margin: 0; background: var(--bg); color: var(--fg); }
+main { max-width: 640px; margin: 0 auto; padding: 24px 16px; }
+h1 { color: var(--accent); margin: 0 0 4px; }
+.muted { color: var(--muted); }
+.tracks { list-style: none; padding: 0; display: grid; gap: 12px; }
+.tracks li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; justify-content: space-between; }

@@ -1,0 +1,19 @@
+{
+  "name": "@nakamura/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.ts",
+    "start": "node src/index.ts",
+    "cli": "node src/cli.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "@nakamura/core": "*",
+    "@hono/node-server": "^2.1.6",
+    "hono": "^4.9.0"
+  },
+  "devDependencies": { "@types/node": "^24.0.0", "typescript": "^5.9.0", "vitest": "^4.1.12" }
+}

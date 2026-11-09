@@ -1,0 +1,20 @@
+# 저사양 서버(퀴즈 v2 와 같은 오라클 1GB)용: 빌드 없이 PC 에서 보낸 nakamura:local 이미지를 실행한다.
+# 서버 배치: /opt/nakamura/{compose.yml, .env, backup.sh, data/}
+# 퀴즈 v2 는 127.0.0.1:8080, 이 앱은 127.0.0.1:8081.
+services:
+  app:
+    image: nakamura:local
+    container_name: nakamura
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATA_DIR: /data
+      HOST: 0.0.0.0
+      PORT: 8081
+      NODE_OPTIONS: --max-old-space-size=192
+    ports:
+      - "127.0.0.1:8081:8081"
+    mem_limit: 256m
+    memswap_limit: 512m
+    volumes:
+      - ./data:/data

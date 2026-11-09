@@ -1,0 +1,13 @@
+{
+  "name": "@nakamura/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": { "ts-fsrs": "^5.2.0" },
+  "devDependencies": { "typescript": "^5.9.0", "vitest": "^4.1.12" }
+}
