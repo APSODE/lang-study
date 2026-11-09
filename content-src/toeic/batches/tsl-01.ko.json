@@ -1,0 +1,1427 @@
+[
+  {
+    "example_en": "Please tell Mister Kim that his car is waiting at the front entrance.",
+    "example_ko": "김 씨에게 차가 정문 앞에서 기다리고 있다고 전해 주십시오.",
+    "forms": [
+      "misters"
+    ],
+    "list": "TSL",
+    "meaning_ko": "씨, 님",
+    "pos": "n",
+    "rank": 1,
+    "sfi": 71.28,
+    "u": 1342.2,
+    "word": "mister"
+  },
+  {
+    "example_en": "Ms. Park will be on vacation until the end of next week.",
+    "example_ko": "박 씨는 다음 주 말까지 휴가 중입니다.",
+    "forms": [
+      "vacations",
+      "vacationed",
+      "vacationing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "휴가, 휴가를 보내다",
+    "pos": "n, v",
+    "rank": 2,
+    "sfi": 65.56,
+    "u": 359.64,
+    "word": "vacation"
+  },
+  {
+    "example_en": "Our sales team will meet with a new client tomorrow morning.",
+    "example_ko": "우리 영업팀은 내일 아침 새 고객과 만날 예정입니다.",
+    "forms": [
+      "clients"
+    ],
+    "list": "TSL",
+    "meaning_ko": "고객, 의뢰인",
+    "pos": "n",
+    "rank": 3,
+    "sfi": 65.26,
+    "u": 335.37,
+    "word": "client"
+  },
+  {
+    "example_en": "The library now lets members borrow an e-book through its website.",
+    "example_ko": "그 도서관은 이제 회원들이 웹사이트를 통해 전자책을 빌릴 수 있게 합니다.",
+    "forms": [
+      "e-books",
+      "ebook",
+      "ebooks"
+    ],
+    "list": "TSL",
+    "meaning_ko": "전자책",
+    "pos": "n",
+    "rank": 4,
+    "sfi": 65.03,
+    "u": 318.45,
+    "word": "e-book"
+  },
+  {
+    "example_en": "A shuttle bus to the airport leaves the hotel every thirty minutes.",
+    "example_ko": "공항으로 가는 셔틀버스가 30분마다 호텔에서 출발합니다.",
+    "forms": [
+      "airports"
+    ],
+    "list": "TSL",
+    "meaning_ko": "공항",
+    "pos": "n",
+    "rank": 5,
+    "sfi": 65.02,
+    "u": 317.72,
+    "word": "airport"
+  },
+  {
+    "example_en": "The manager sent a memo about the new parking policy to all staff.",
+    "example_ko": "관리자가 새 주차 방침에 관한 회람을 전 직원에게 보냈습니다.",
+    "forms": [
+      "memos"
+    ],
+    "list": "TSL",
+    "meaning_ko": "메모, 회람",
+    "pos": "n",
+    "rank": 6,
+    "sfi": 64.07,
+    "u": 255.2,
+    "word": "memo"
+  },
+  {
+    "example_en": "I would like to make a reservation for four people at 7 p.m.",
+    "example_ko": "오후 7시에 네 명 예약을 하고 싶습니다.",
+    "forms": [
+      "reservations"
+    ],
+    "list": "TSL",
+    "meaning_ko": "예약",
+    "pos": "n",
+    "rank": 7,
+    "sfi": 63.98,
+    "u": 250.05,
+    "word": "reservation"
+  },
+  {
+    "example_en": "Moving the meeting to Friday seems like the most logical choice.",
+    "example_ko": "회의를 금요일로 옮기는 것이 가장 논리적인 선택인 것 같습니다.",
+    "list": "TSL",
+    "meaning_ko": "논리적인, 타당한",
+    "pos": "adj",
+    "rank": 8,
+    "sfi": 63.89,
+    "u": 244.91,
+    "word": "logical"
+  },
+  {
+    "example_en": "Please fax the signed contract to our office by this afternoon.",
+    "example_ko": "서명한 계약서를 오늘 오후까지 저희 사무실로 팩스로 보내 주십시오.",
+    "forms": [
+      "faxes",
+      "faxed",
+      "faxing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "팩스, 팩스로 보내다",
+    "pos": "n, v",
+    "rank": 9,
+    "sfi": 63.78,
+    "u": 239.02,
+    "word": "fax"
+  },
+  {
+    "example_en": "The board meeting will begin at ten o'clock sharp tomorrow.",
+    "example_ko": "이사회 회의는 내일 10시 정각에 시작합니다.",
+    "list": "TSL",
+    "meaning_ko": "정각, 시",
+    "pos": "adv",
+    "rank": 10,
+    "sfi": 63.51,
+    "u": 224.31,
+    "word": "o'clock"
+  },
+  {
+    "example_en": "We sincerely apologize for the delay in processing your order.",
+    "example_ko": "주문 처리가 지연된 점 진심으로 사과드립니다.",
+    "list": "TSL",
+    "meaning_ko": "진심으로",
+    "pos": "adv",
+    "rank": 11,
+    "sfi": 62.82,
+    "u": 191.22,
+    "word": "sincerely"
+  },
+  {
+    "example_en": "The new printer should be delivered sometime next week.",
+    "example_ko": "새 프린터는 다음 주 중 언젠가 배송될 것입니다.",
+    "list": "TSL",
+    "meaning_ko": "언젠가, 어느 때",
+    "pos": "adv",
+    "rank": 12,
+    "sfi": 62.43,
+    "u": 175.04,
+    "word": "sometime"
+  },
+  {
+    "example_en": "Please ask your supervisor to approve the request before submitting it.",
+    "example_ko": "제출하기 전에 상사에게 요청서 승인을 받으십시오.",
+    "forms": [
+      "supervisors"
+    ],
+    "list": "TSL",
+    "meaning_ko": "관리자, 상사, 감독관",
+    "pos": "n",
+    "rank": 13,
+    "sfi": 62.41,
+    "u": 174.3,
+    "word": "supervisor"
+  },
+  {
+    "example_en": "Customers can receive a full refund within thirty days of purchase.",
+    "example_ko": "고객은 구매 후 30일 이내에 전액 환불을 받을 수 있습니다.",
+    "forms": [
+      "refunds",
+      "refunded",
+      "refunding"
+    ],
+    "list": "TSL",
+    "meaning_ko": "환불, 환불하다",
+    "pos": "n, v",
+    "rank": 14,
+    "sfi": 62.3,
+    "u": 169.89,
+    "word": "refund"
+  },
+  {
+    "example_en": "The store sells a wide range of household goods at low prices.",
+    "example_ko": "그 상점은 다양한 생활 용품을 저렴한 가격에 판매합니다.",
+    "list": "TSL",
+    "meaning_ko": "상품, 물품",
+    "pos": "n",
+    "rank": 15,
+    "sfi": 62.13,
+    "u": 163.27,
+    "word": "goods"
+  },
+  {
+    "example_en": "All new employees must attend a safety workshop on Monday.",
+    "example_ko": "모든 신입 사원은 월요일에 안전 연수회에 참석해야 합니다.",
+    "forms": [
+      "workshops"
+    ],
+    "list": "TSL",
+    "meaning_ko": "연수회, 워크숍, 작업장",
+    "pos": "n",
+    "rank": 16,
+    "sfi": 62.07,
+    "u": 161.06,
+    "word": "workshop"
+  },
+  {
+    "example_en": "Our company is moving its main office downtown next spring.",
+    "example_ko": "우리 회사는 내년 봄 본사를 시내로 이전합니다.",
+    "forms": [
+      "downtowner"
+    ],
+    "list": "TSL",
+    "meaning_ko": "시내에, 시내, 도심의",
+    "pos": "adv, n, adj",
+    "rank": 17,
+    "sfi": 61.95,
+    "u": 156.65,
+    "word": "downtown"
+  },
+  {
+    "example_en": "The deadline for submitting the budget report is this Thursday.",
+    "example_ko": "예산 보고서 제출 마감일은 이번 주 목요일입니다.",
+    "forms": [
+      "deadlines"
+    ],
+    "list": "TSL",
+    "meaning_ko": "마감일, 기한",
+    "pos": "n",
+    "rank": 18,
+    "sfi": 61.91,
+    "u": 155.18,
+    "word": "deadline"
+  },
+  {
+    "example_en": "Please send the invoice to the accounting department by Friday.",
+    "example_ko": "금요일까지 송장을 회계부로 보내 주십시오.",
+    "forms": [
+      "invoices",
+      "invoiced",
+      "invoicing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "송장, 청구서",
+    "pos": "n",
+    "rank": 19,
+    "sfi": 61.85,
+    "u": 152.97,
+    "word": "invoice"
+  },
+  {
+    "example_en": "You can find our full price list in the enclosed brochure.",
+    "example_ko": "동봉된 안내 책자에서 전체 가격표를 확인하실 수 있습니다.",
+    "forms": [
+      "brochures"
+    ],
+    "list": "TSL",
+    "meaning_ko": "안내 책자, 소책자",
+    "pos": "n",
+    "rank": 20,
+    "sfi": 61.68,
+    "u": 147.09,
+    "word": "brochure"
+  },
+  {
+    "example_en": "The delivery truck is expected to arrive at noon today.",
+    "example_ko": "배송 트럭은 오늘 정오에 도착할 예정입니다.",
+    "list": "TSL",
+    "meaning_ko": "정오, 낮 12시",
+    "pos": "n",
+    "rank": 21,
+    "sfi": 61.65,
+    "u": 146.36,
+    "word": "noon"
+  },
+  {
+    "example_en": "Our accountant will review the tax documents before the end of the month.",
+    "example_ko": "우리 회계사가 월말 전에 세금 서류를 검토할 것입니다.",
+    "forms": [
+      "accountants"
+    ],
+    "list": "TSL",
+    "meaning_ko": "회계사, 회계 담당자",
+    "pos": "n",
+    "rank": 22,
+    "sfi": 61.57,
+    "u": 143.41,
+    "word": "accountant"
+  },
+  {
+    "example_en": "The clerk at the front desk gave us a map of the city.",
+    "example_ko": "프런트 데스크 직원이 우리에게 시내 지도를 주었습니다.",
+    "forms": [
+      "clerks"
+    ],
+    "list": "TSL",
+    "meaning_ko": "점원, 사무원",
+    "pos": "n",
+    "rank": 23,
+    "sfi": 61.5,
+    "u": 141.21,
+    "word": "clerk"
+  },
+  {
+    "example_en": "Visitors should wait in the lobby until someone comes to meet them.",
+    "example_ko": "방문객은 담당자가 맞으러 올 때까지 로비에서 기다려야 합니다.",
+    "forms": [
+      "lobbies",
+      "lobbied",
+      "lobbying"
+    ],
+    "list": "TSL",
+    "meaning_ko": "로비",
+    "pos": "n",
+    "rank": 24,
+    "sfi": 61.5,
+    "u": 141.21,
+    "word": "lobby"
+  },
+  {
+    "example_en": "The company will publish its annual report on its website next month.",
+    "example_ko": "회사는 다음 달 웹사이트에 연례 보고서를 게재할 것입니다.",
+    "forms": [
+      "publishes",
+      "published",
+      "publishing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "출판하다, 발행하다, 게재하다",
+    "pos": "v",
+    "rank": 25,
+    "sfi": 61.45,
+    "u": 139.74,
+    "word": "publish"
+  },
+  {
+    "example_en": "Please attach your résumé and a cover letter to the application form.",
+    "example_ko": "지원서에 이력서와 자기소개서를 첨부해 주십시오.",
+    "forms": [
+      "résumés"
+    ],
+    "list": "TSL",
+    "meaning_ko": "이력서",
+    "pos": "n",
+    "rank": 26,
+    "sfi": 57.53,
+    "u": 56.63,
+    "word": "résumé"
+  },
+  {
+    "example_en": "Please enclose a copy of your receipt with the returned item.",
+    "example_ko": "반품하는 물품에 영수증 사본을 동봉해 주십시오.",
+    "forms": [
+      "encloses",
+      "enclosed",
+      "enclosing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "동봉하다",
+    "pos": "v",
+    "rank": 27,
+    "sfi": 61.36,
+    "u": 136.79,
+    "word": "enclose"
+  },
+  {
+    "example_en": "Each applicant will be interviewed by two members of the hiring team.",
+    "example_ko": "각 지원자는 채용팀 두 명과 면접을 보게 됩니다.",
+    "forms": [
+      "applicants"
+    ],
+    "list": "TSL",
+    "meaning_ko": "지원자, 신청자",
+    "pos": "n",
+    "rank": 28,
+    "sfi": 61.27,
+    "u": 133.85,
+    "word": "applicant"
+  },
+  {
+    "example_en": "The marketing seminar will be held in Conference Room B on Tuesday.",
+    "example_ko": "마케팅 세미나는 화요일에 B 회의실에서 열립니다.",
+    "forms": [
+      "seminars"
+    ],
+    "list": "TSL",
+    "meaning_ko": "세미나, 연수회",
+    "pos": "n",
+    "rank": 29,
+    "sfi": 61.27,
+    "u": 133.85,
+    "word": "seminar"
+  },
+  {
+    "example_en": "A technician will come to repair the copy machine this afternoon.",
+    "example_ko": "오늘 오후에 기술자가 복사기를 수리하러 올 것입니다.",
+    "forms": [
+      "technicians"
+    ],
+    "list": "TSL",
+    "meaning_ko": "기술자, 기사",
+    "pos": "n",
+    "rank": 30,
+    "sfi": 61.1,
+    "u": 128.7,
+    "word": "technician"
+  },
+  {
+    "example_en": "Please wipe the counter with a clean cloth after each customer.",
+    "example_ko": "손님이 떠날 때마다 깨끗한 천으로 카운터를 닦아 주십시오.",
+    "forms": [
+      "cloths"
+    ],
+    "list": "TSL",
+    "meaning_ko": "천, 옷감, 행주",
+    "pos": "n",
+    "rank": 31,
+    "sfi": 60.79,
+    "u": 119.88,
+    "word": "cloth"
+  },
+  {
+    "example_en": "The bus fare to the city center has increased by fifty cents.",
+    "example_ko": "시내로 가는 버스 요금이 50센트 올랐습니다.",
+    "forms": [
+      "fares",
+      "fared",
+      "faring"
+    ],
+    "list": "TSL",
+    "meaning_ko": "요금, 운임",
+    "pos": "n",
+    "rank": 32,
+    "sfi": 60.65,
+    "u": 116.2,
+    "word": "fare"
+  },
+  {
+    "example_en": "Please keep your receipt in case you need to return the item.",
+    "example_ko": "물품을 반품해야 할 경우를 대비해 영수증을 보관해 주십시오.",
+    "forms": [
+      "receipts",
+      "receipted",
+      "receipting"
+    ],
+    "list": "TSL",
+    "meaning_ko": "영수증, 수령",
+    "pos": "n",
+    "rank": 33,
+    "sfi": 60.71,
+    "u": 117.67,
+    "word": "receipt"
+  },
+  {
+    "example_en": "Every traveler must show a valid passport at the check-in counter.",
+    "example_ko": "모든 여행객은 탑승 수속 창구에서 유효한 여권을 보여 주어야 합니다.",
+    "forms": [
+      "travelers",
+      "traveller",
+      "travellers"
+    ],
+    "list": "TSL",
+    "meaning_ko": "여행자, 여행객",
+    "pos": "n",
+    "rank": 34,
+    "sfi": 60.62,
+    "u": 115.47,
+    "word": "traveler"
+  },
+  {
+    "example_en": "The caller left a message asking about the job opening.",
+    "example_ko": "전화한 사람이 채용 공고에 관해 묻는 메시지를 남겼습니다.",
+    "forms": [
+      "callers"
+    ],
+    "list": "TSL",
+    "meaning_ko": "전화한 사람, 발신자",
+    "pos": "n",
+    "rank": 35,
+    "sfi": 60.6,
+    "u": 114.73,
+    "word": "caller"
+  },
+  {
+    "example_en": "It takes about twenty minutes to get to the office by subway.",
+    "example_ko": "지하철로 사무실까지 약 20분 걸립니다.",
+    "forms": [
+      "subways"
+    ],
+    "list": "TSL",
+    "meaning_ko": "지하철",
+    "pos": "n",
+    "rank": 36,
+    "sfi": 60.6,
+    "u": 114.73,
+    "word": "subway"
+  },
+  {
+    "example_en": "Please do not leave your luggage unattended in the waiting area.",
+    "example_ko": "대기 구역에 짐을 방치하지 마십시오.",
+    "list": "TSL",
+    "meaning_ko": "수하물, 짐",
+    "pos": "n",
+    "rank": 37,
+    "sfi": 60.51,
+    "u": 112.52,
+    "word": "luggage"
+  },
+  {
+    "example_en": "The next shipment of office supplies will arrive on Wednesday.",
+    "example_ko": "다음 사무용품 배송은 수요일에 도착합니다.",
+    "forms": [
+      "shipments"
+    ],
+    "list": "TSL",
+    "meaning_ko": "배송, 수송품, 선적",
+    "pos": "n",
+    "rank": 38,
+    "sfi": 60.37,
+    "u": 108.85,
+    "word": "shipment"
+  },
+  {
+    "example_en": "From her email, we can infer that the client is unhappy with the delay.",
+    "example_ko": "그녀의 이메일로 보아 고객이 지연에 불만이 있다고 추론할 수 있습니다.",
+    "forms": [
+      "infers",
+      "inferred",
+      "inferring"
+    ],
+    "list": "TSL",
+    "meaning_ko": "추론하다, 암시하다",
+    "pos": "v",
+    "rank": 39,
+    "sfi": 60.28,
+    "u": 106.64,
+    "word": "infer"
+  },
+  {
+    "example_en": "The waiter recommended the fish special to our table.",
+    "example_ko": "종업원이 우리 테이블에 생선 특선 요리를 추천했습니다.",
+    "forms": [
+      "waiters"
+    ],
+    "list": "TSL",
+    "meaning_ko": "종업원, 웨이터",
+    "pos": "n",
+    "rank": 40,
+    "sfi": 60.28,
+    "u": 106.64,
+    "word": "waiter"
+  },
+  {
+    "example_en": "The car rental office is located on the first floor of the airport.",
+    "example_ko": "자동차 대여 사무소는 공항 1층에 있습니다.",
+    "forms": [
+      "rentals"
+    ],
+    "list": "TSL",
+    "meaning_ko": "대여, 임대, 임대료",
+    "pos": "n",
+    "rank": 41,
+    "sfi": 60.25,
+    "u": 105.91,
+    "word": "rental"
+  },
+  {
+    "example_en": "The laptop comes with a two-year warranty against defects.",
+    "example_ko": "그 노트북에는 결함에 대한 2년 품질 보증이 제공됩니다.",
+    "forms": [
+      "warranties"
+    ],
+    "list": "TSL",
+    "meaning_ko": "품질 보증, 보증서",
+    "pos": "n",
+    "rank": 42,
+    "sfi": 60.19,
+    "u": 104.43,
+    "word": "warranty"
+  },
+  {
+    "example_en": "Employees can have lunch in the cafeteria on the third floor.",
+    "example_ko": "직원들은 3층 구내식당에서 점심을 먹을 수 있습니다.",
+    "forms": [
+      "cafeterias"
+    ],
+    "list": "TSL",
+    "meaning_ko": "구내식당",
+    "pos": "n",
+    "rank": 43,
+    "sfi": 60.16,
+    "u": 103.7,
+    "word": "cafeteria"
+  },
+  {
+    "example_en": "The head chef prepared a special menu for the company dinner.",
+    "example_ko": "주방장이 회사 만찬을 위해 특별 메뉴를 준비했습니다.",
+    "forms": [
+      "chefs"
+    ],
+    "list": "TSL",
+    "meaning_ko": "요리사, 주방장",
+    "pos": "n",
+    "rank": 44,
+    "sfi": 60.0,
+    "u": 100.02,
+    "word": "chef"
+  },
+  {
+    "example_en": "The elevator on the east side of the building is out of order.",
+    "example_ko": "건물 동쪽 엘리베이터가 고장 났습니다.",
+    "forms": [
+      "elevators"
+    ],
+    "list": "TSL",
+    "meaning_ko": "엘리베이터, 승강기",
+    "pos": "n",
+    "rank": 45,
+    "sfi": 59.84,
+    "u": 96.34,
+    "word": "elevator"
+  },
+  {
+    "example_en": "A reception for the new director will be held in the main hall.",
+    "example_ko": "신임 이사를 위한 환영회가 대강당에서 열립니다.",
+    "forms": [
+      "receptions"
+    ],
+    "list": "TSL",
+    "meaning_ko": "환영회, 접수처, 수신 상태",
+    "pos": "n",
+    "rank": 46,
+    "sfi": 59.84,
+    "u": 96.34,
+    "word": "reception"
+  },
+  {
+    "example_en": "Please make sure all the forms are filled out correctly.",
+    "example_ko": "모든 양식이 정확하게 작성되었는지 확인해 주십시오.",
+    "list": "TSL",
+    "meaning_ko": "정확하게, 올바르게",
+    "pos": "adv",
+    "rank": 47,
+    "word": "correctly"
+  },
+  {
+    "example_en": "The company signed a five-year lease for the new office space.",
+    "example_ko": "회사는 새 사무 공간에 대해 5년 임대차 계약을 맺었습니다.",
+    "forms": [
+      "leases",
+      "leased",
+      "leasing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "임대차 계약, 임대하다",
+    "pos": "n, v",
+    "rank": 48,
+    "sfi": 59.63,
+    "u": 91.93,
+    "word": "lease"
+  },
+  {
+    "example_en": "Many employees ride a bicycle to work when the weather is nice.",
+    "example_ko": "날씨가 좋으면 많은 직원들이 자전거를 타고 출근합니다.",
+    "forms": [
+      "bicycles",
+      "bicycled",
+      "bicycling"
+    ],
+    "list": "TSL",
+    "meaning_ko": "자전거",
+    "pos": "n",
+    "rank": 49,
+    "sfi": 59.6,
+    "u": 91.2,
+    "word": "bicycle"
+  },
+  {
+    "example_en": "Please notify the front desk if you plan to check out early.",
+    "example_ko": "일찍 체크아웃하실 계획이면 프런트에 알려 주십시오.",
+    "forms": [
+      "notifies",
+      "notified",
+      "notifying"
+    ],
+    "list": "TSL",
+    "meaning_ko": "알리다, 통지하다",
+    "pos": "v",
+    "rank": 50,
+    "sfi": 59.6,
+    "u": 91.2,
+    "word": "notify"
+  },
+  {
+    "example_en": "Members are invited to a special preview of the new exhibit.",
+    "example_ko": "회원들은 새 전시회의 특별 시사회에 초대됩니다.",
+    "forms": [
+      "previews",
+      "previewed",
+      "previewing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "시사회, 미리 보기, 미리 보다",
+    "pos": "n, v",
+    "rank": 51,
+    "sfi": 59.6,
+    "u": 91.2,
+    "word": "preview"
+  },
+  {
+    "example_en": "A parking attendant will help you find an empty space.",
+    "example_ko": "주차 안내원이 빈자리를 찾도록 도와드릴 것입니다.",
+    "forms": [
+      "attendants"
+    ],
+    "list": "TSL",
+    "meaning_ko": "안내원, 승무원, 종업원",
+    "pos": "n",
+    "rank": 52,
+    "sfi": 59.56,
+    "u": 90.46,
+    "word": "attendant"
+  },
+  {
+    "example_en": "You can renew your magazine subscription online at any time.",
+    "example_ko": "언제든지 온라인으로 잡지 구독을 갱신하실 수 있습니다.",
+    "forms": [
+      "subscriptions"
+    ],
+    "list": "TSL",
+    "meaning_ko": "구독, 정기 구독료",
+    "pos": "n",
+    "rank": 53,
+    "sfi": 59.56,
+    "u": 90.46,
+    "word": "subscription"
+  },
+  {
+    "example_en": "Please let me know what time is convenient for you to meet.",
+    "example_ko": "만나기 편리한 시간을 알려 주십시오.",
+    "list": "TSL",
+    "meaning_ko": "편리하다, 형편이 좋다",
+    "pos": "adj",
+    "rank": 54,
+    "sfi": 59.49,
+    "u": 88.99,
+    "word": "convenient"
+  },
+  {
+    "example_en": "Please read the user manual carefully before using the machine.",
+    "example_ko": "기계를 사용하기 전에 사용 설명서를 주의 깊게 읽어 주십시오.",
+    "forms": [
+      "manuals"
+    ],
+    "list": "TSL",
+    "meaning_ko": "설명서, 수동의, 육체노동의",
+    "pos": "n, adj",
+    "rank": 55,
+    "sfi": 59.46,
+    "u": 88.25,
+    "word": "manual"
+  },
+  {
+    "example_en": "The customer survey gave us a clue about why sales had dropped.",
+    "example_ko": "고객 설문 조사는 매출이 떨어진 이유에 대한 단서를 주었습니다.",
+    "forms": [
+      "clues",
+      "clued",
+      "cluing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "단서, 실마리",
+    "pos": "n",
+    "rank": 56,
+    "sfi": 59.38,
+    "u": 86.78,
+    "word": "clue"
+  },
+  {
+    "example_en": "My car is at the garage for repairs, so I will take a taxi.",
+    "example_ko": "제 차가 수리 때문에 정비소에 있어서 택시를 타겠습니다.",
+    "forms": [
+      "garages",
+      "garaged",
+      "garaging"
+    ],
+    "list": "TSL",
+    "meaning_ko": "차고, 정비소, 주차장",
+    "pos": "n",
+    "rank": 57,
+    "sfi": 59.42,
+    "u": 87.52,
+    "word": "garage"
+  },
+  {
+    "example_en": "Visitors must obtain a pass from security before entering the building.",
+    "example_ko": "방문객은 건물에 들어가기 전에 보안실에서 출입증을 받아야 합니다.",
+    "forms": [
+      "obtains",
+      "obtained",
+      "obtaining"
+    ],
+    "list": "TSL",
+    "meaning_ko": "얻다, 획득하다",
+    "pos": "v",
+    "rank": 58,
+    "sfi": 59.38,
+    "u": 86.78,
+    "word": "obtain"
+  },
+  {
+    "example_en": "The meeting was held around a large oval table in the boardroom.",
+    "example_ko": "회의는 이사회실의 큰 타원형 탁자에 둘러앉아 열렸습니다.",
+    "forms": [
+      "ovals"
+    ],
+    "list": "TSL",
+    "meaning_ko": "타원형의, 타원형",
+    "pos": "adj, n",
+    "rank": 59,
+    "sfi": 59.38,
+    "u": 86.78,
+    "word": "oval"
+  },
+  {
+    "example_en": "The store will close early on Friday to take inventory.",
+    "example_ko": "그 상점은 재고 조사를 위해 금요일에 일찍 문을 닫습니다.",
+    "forms": [
+      "inventories"
+    ],
+    "list": "TSL",
+    "meaning_ko": "재고, 재고 목록, 재고 조사",
+    "pos": "n",
+    "rank": 60,
+    "sfi": 59.27,
+    "u": 84.58,
+    "word": "inventory"
+  },
+  {
+    "example_en": "The company picnic will take place at an outdoor park near the river.",
+    "example_ko": "회사 야유회는 강 근처 야외 공원에서 열립니다.",
+    "forms": [
+      "outdoors"
+    ],
+    "list": "TSL",
+    "meaning_ko": "야외의, 실외의",
+    "pos": "adj",
+    "rank": 61,
+    "sfi": 59.27,
+    "u": 84.58,
+    "word": "outdoor"
+  },
+  {
+    "example_en": "Please make sure your suitcase does not weigh more than 23 kilograms.",
+    "example_ko": "여행 가방 무게가 23킬로그램을 넘지 않도록 해 주십시오.",
+    "forms": [
+      "suitcases"
+    ],
+    "list": "TSL",
+    "meaning_ko": "여행 가방",
+    "pos": "n",
+    "rank": 62,
+    "sfi": 59.27,
+    "u": 84.58,
+    "word": "suitcase"
+  },
+  {
+    "example_en": "The train will reach its final destination at 6:30 p.m.",
+    "example_ko": "열차는 오후 6시 30분에 최종 목적지에 도착합니다.",
+    "forms": [
+      "destinations"
+    ],
+    "list": "TSL",
+    "meaning_ko": "목적지, 행선지",
+    "pos": "n",
+    "rank": 63,
+    "sfi": 59.23,
+    "u": 83.84,
+    "word": "destination"
+  },
+  {
+    "example_en": "Please write your name, address, and occupation on the form.",
+    "example_ko": "양식에 이름, 주소, 직업을 적어 주십시오.",
+    "forms": [
+      "occupations"
+    ],
+    "list": "TSL",
+    "meaning_ko": "직업, 점유",
+    "pos": "n",
+    "rank": 64,
+    "sfi": 59.23,
+    "u": 83.84,
+    "word": "occupation"
+  },
+  {
+    "example_en": "We had to postpone the product launch until next month.",
+    "example_ko": "우리는 제품 출시를 다음 달로 연기해야 했습니다.",
+    "forms": [
+      "postpones",
+      "postponed",
+      "postponing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "연기하다, 미루다",
+    "pos": "v",
+    "rank": 65,
+    "sfi": 59.23,
+    "u": 83.84,
+    "word": "postpone"
+  },
+  {
+    "example_en": "The new sales figures contradict the forecast we made last year.",
+    "example_ko": "새 매출 수치는 작년에 우리가 세운 예측과 모순됩니다.",
+    "forms": [
+      "contradicts",
+      "contradicted",
+      "contradicting"
+    ],
+    "list": "TSL",
+    "meaning_ko": "모순되다, 반박하다",
+    "pos": "v",
+    "rank": 66,
+    "sfi": 59.16,
+    "u": 82.37,
+    "word": "contradict"
+  },
+  {
+    "example_en": "Don't forget to bring an umbrella because rain is expected this afternoon.",
+    "example_ko": "오늘 오후에 비가 예상되니 우산을 챙기는 것을 잊지 마십시오.",
+    "forms": [
+      "umbrellas"
+    ],
+    "list": "TSL",
+    "meaning_ko": "우산",
+    "pos": "n",
+    "rank": 67,
+    "sfi": 59.12,
+    "u": 81.64,
+    "word": "umbrella"
+  },
+  {
+    "example_en": "The analyst made an inference based on last quarter's sales data.",
+    "example_ko": "분석가는 지난 분기 매출 자료를 바탕으로 추론을 했습니다.",
+    "forms": [
+      "inferences"
+    ],
+    "list": "TSL",
+    "meaning_ko": "추론, 추리",
+    "pos": "n",
+    "rank": 68,
+    "sfi": 58.96,
+    "u": 78.69,
+    "word": "inference"
+  },
+  {
+    "example_en": "Please turn off your cellphone before the presentation begins.",
+    "example_ko": "발표가 시작되기 전에 휴대 전화를 꺼 주십시오.",
+    "forms": [
+      "cellphones",
+      "cell phone",
+      "cell phones"
+    ],
+    "list": "TSL",
+    "meaning_ko": "휴대 전화",
+    "pos": "n",
+    "rank": 69,
+    "sfi": 58.92,
+    "u": 77.96,
+    "word": "cellphone"
+  },
+  {
+    "example_en": "This compact printer fits easily on any small office desk.",
+    "example_ko": "이 소형 프린터는 작은 사무용 책상 어디에나 쉽게 들어갑니다.",
+    "forms": [
+      "compacts",
+      "compacted",
+      "compacting",
+      "compacter"
+    ],
+    "list": "TSL",
+    "meaning_ko": "소형의, 간편한",
+    "pos": "adj",
+    "rank": 70,
+    "sfi": 58.67,
+    "u": 73.55,
+    "word": "compact"
+  },
+  {
+    "example_en": "All merchandise on this shelf is twenty percent off this week.",
+    "example_ko": "이번 주에는 이 선반의 모든 상품이 20퍼센트 할인됩니다.",
+    "forms": [
+      "merchandises",
+      "merchandised",
+      "merchandising",
+      "merchandize",
+      "merchandizes",
+      "merchandized",
+      "merchandizing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "상품, 제품",
+    "pos": "n",
+    "rank": 71,
+    "sfi": 58.67,
+    "u": 73.55,
+    "word": "merchandise"
+  },
+  {
+    "example_en": "Please check in with the receptionist when you arrive for your appointment.",
+    "example_ko": "예약 시간에 도착하시면 접수 담당자에게 도착을 알려 주십시오.",
+    "forms": [
+      "receptionists"
+    ],
+    "list": "TSL",
+    "meaning_ko": "접수 담당자, 안내 직원",
+    "pos": "n",
+    "rank": 72,
+    "sfi": 58.62,
+    "u": 72.81,
+    "word": "receptionist"
+  },
+  {
+    "example_en": "I have an appointment with the dentist on Thursday afternoon.",
+    "example_ko": "저는 목요일 오후에 치과 예약이 있습니다.",
+    "forms": [
+      "dentists"
+    ],
+    "list": "TSL",
+    "meaning_ko": "치과 의사, 치과",
+    "pos": "n",
+    "rank": 73,
+    "sfi": 58.58,
+    "u": 72.07,
+    "word": "dentist"
+  },
+  {
+    "example_en": "Guests must show photo identification when checking in at the hotel.",
+    "example_ko": "투숙객은 호텔 체크인 시 사진이 있는 신분증을 제시해야 합니다.",
+    "forms": [
+      "identifications"
+    ],
+    "list": "TSL",
+    "meaning_ko": "신분증, 신원 확인",
+    "pos": "n",
+    "rank": 74,
+    "sfi": 58.58,
+    "u": 72.07,
+    "word": "identification"
+  },
+  {
+    "example_en": "Bring this coupon to any of our stores to receive a free coffee.",
+    "example_ko": "이 쿠폰을 저희 매장 어디에나 가져오시면 무료 커피를 받으실 수 있습니다.",
+    "forms": [
+      "coupons"
+    ],
+    "list": "TSL",
+    "meaning_ko": "쿠폰, 할인권",
+    "pos": "n",
+    "rank": 75,
+    "sfi": 58.53,
+    "u": 71.34,
+    "word": "coupon"
+  },
+  {
+    "example_en": "The flight to Tokyo will depart from Gate 12 at 9 a.m.",
+    "example_ko": "도쿄행 항공편은 오전 9시에 12번 게이트에서 출발합니다.",
+    "forms": [
+      "departs",
+      "departed",
+      "departing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "출발하다, 떠나다",
+    "pos": "v",
+    "rank": 76,
+    "sfi": 58.53,
+    "u": 71.34,
+    "word": "depart"
+  },
+  {
+    "example_en": "Could we reschedule our meeting for Thursday at 2 p.m.?",
+    "example_ko": "회의 일정을 목요일 오후 2시로 변경할 수 있을까요?",
+    "forms": [
+      "reschedules",
+      "rescheduled",
+      "rescheduling"
+    ],
+    "list": "TSL",
+    "meaning_ko": "일정을 변경하다",
+    "pos": "v",
+    "rank": 77,
+    "sfi": 58.53,
+    "u": 71.34,
+    "word": "reschedule"
+  },
+  {
+    "example_en": "Offering free shipping is a common tactic to attract online shoppers.",
+    "example_ko": "무료 배송을 제공하는 것은 온라인 쇼핑객을 끌어들이는 흔한 전략입니다.",
+    "forms": [
+      "tactics"
+    ],
+    "list": "TSL",
+    "meaning_ko": "전술, 전략, 작전",
+    "pos": "n",
+    "rank": 78,
+    "sfi": 58.49,
+    "u": 70.6,
+    "word": "tactic"
+  },
+  {
+    "example_en": "The hotel restaurant will be closed for renovation until May.",
+    "example_ko": "호텔 식당은 보수 공사로 5월까지 문을 닫습니다.",
+    "forms": [
+      "renovations"
+    ],
+    "list": "TSL",
+    "meaning_ko": "보수, 개조, 수리",
+    "pos": "n",
+    "rank": 79,
+    "sfi": 58.44,
+    "u": 69.87,
+    "word": "renovation"
+  },
+  {
+    "example_en": "The IT department will upgrade all office computers this weekend.",
+    "example_ko": "IT 부서가 이번 주말에 모든 사무실 컴퓨터를 업그레이드할 것입니다.",
+    "forms": [
+      "upgrades",
+      "upgraded",
+      "upgrading"
+    ],
+    "list": "TSL",
+    "meaning_ko": "개선하다, 업그레이드하다, 업그레이드",
+    "pos": "v, n",
+    "rank": 80,
+    "sfi": 58.4,
+    "u": 69.13,
+    "word": "upgrade"
+  },
+  {
+    "example_en": "A short welcome speech will precede the awards ceremony.",
+    "example_ko": "시상식에 앞서 짧은 환영사가 있겠습니다.",
+    "forms": [
+      "precedes",
+      "preceded",
+      "preceding"
+    ],
+    "list": "TSL",
+    "meaning_ko": "앞서다, 선행하다",
+    "pos": "v",
+    "rank": 81,
+    "sfi": 58.35,
+    "u": 68.4,
+    "word": "precede"
+  },
+  {
+    "example_en": "We will send you a replacement for the damaged item free of charge.",
+    "example_ko": "손상된 제품의 교체품을 무료로 보내 드리겠습니다.",
+    "forms": [
+      "replacements"
+    ],
+    "list": "TSL",
+    "meaning_ko": "교체, 후임자, 대체품",
+    "pos": "n",
+    "rank": 82,
+    "sfi": 58.44,
+    "u": 69.87,
+    "word": "replacement"
+  },
+  {
+    "example_en": "Guests may dine in the hotel restaurant or order room service.",
+    "example_ko": "투숙객은 호텔 식당에서 식사하거나 룸서비스를 주문할 수 있습니다.",
+    "forms": [
+      "dines",
+      "dined",
+      "dining"
+    ],
+    "list": "TSL",
+    "meaning_ko": "식사하다",
+    "pos": "v",
+    "rank": 83,
+    "sfi": 58.3,
+    "u": 67.66,
+    "word": "dine"
+  },
+  {
+    "example_en": "Make sure your passport is valid for at least six months before traveling.",
+    "example_ko": "여행 전에 여권 유효 기간이 최소 6개월 남아 있는지 확인하십시오.",
+    "forms": [
+      "passports"
+    ],
+    "list": "TSL",
+    "meaning_ko": "여권",
+    "pos": "n",
+    "rank": 84,
+    "sfi": 58.3,
+    "u": 67.66,
+    "word": "passport"
+  },
+  {
+    "example_en": "My coworker will cover my shifts while I am away on business.",
+    "example_ko": "제가 출장 가 있는 동안 동료가 제 근무를 대신할 것입니다.",
+    "forms": [
+      "coworkers"
+    ],
+    "list": "TSL",
+    "meaning_ko": "동료, 직장 동료",
+    "pos": "n",
+    "rank": 85,
+    "sfi": 58.21,
+    "u": 66.19,
+    "word": "coworker"
+  },
+  {
+    "example_en": "Please review the agenda for the upcoming board meeting.",
+    "example_ko": "다가오는 이사회 회의 안건을 검토해 주십시오.",
+    "list": "TSL",
+    "meaning_ko": "다가오는, 곧 있을",
+    "pos": "adj",
+    "rank": 86,
+    "sfi": 58.21,
+    "u": 66.19,
+    "word": "upcoming"
+  },
+  {
+    "example_en": "All confidential files are kept in the locked cabinet in my office.",
+    "example_ko": "모든 기밀 서류는 제 사무실의 잠긴 캐비닛에 보관되어 있습니다.",
+    "forms": [
+      "cabinets"
+    ],
+    "list": "TSL",
+    "meaning_ko": "캐비닛, 보관장",
+    "pos": "n",
+    "rank": 87,
+    "sfi": 58.16,
+    "u": 65.46,
+    "word": "cabinet"
+  },
+  {
+    "example_en": "This kitchen appliance comes with a one-year warranty.",
+    "example_ko": "이 주방 가전제품에는 1년 품질 보증이 제공됩니다.",
+    "forms": [
+      "appliances"
+    ],
+    "list": "TSL",
+    "meaning_ko": "가전제품, 기기",
+    "pos": "n",
+    "rank": 88,
+    "sfi": 58.11,
+    "u": 64.72,
+    "word": "appliance"
+  },
+  {
+    "example_en": "An explanatory note is attached to the end of the financial report.",
+    "example_ko": "재무 보고서 끝에 설명 주석이 첨부되어 있습니다.",
+    "list": "TSL",
+    "meaning_ko": "설명적인, 설명하는",
+    "pos": "adj",
+    "rank": 89,
+    "sfi": 58.11,
+    "u": 64.72,
+    "word": "explanatory"
+  },
+  {
+    "example_en": "The instructor will hand out the course materials at the first class.",
+    "example_ko": "강사가 첫 수업에서 강의 자료를 나눠 줄 것입니다.",
+    "forms": [
+      "instructors"
+    ],
+    "list": "TSL",
+    "meaning_ko": "강사, 교사",
+    "pos": "n",
+    "rank": 90,
+    "sfi": 58.06,
+    "u": 63.98,
+    "word": "instructor"
+  },
+  {
+    "example_en": "Please let the IT team know if your keyboard stops working.",
+    "example_ko": "키보드가 작동하지 않으면 IT팀에 알려 주십시오.",
+    "forms": [
+      "keyboards",
+      "keyboarded",
+      "keyboarding"
+    ],
+    "list": "TSL",
+    "meaning_ko": "키보드, 자판",
+    "pos": "n",
+    "rank": 91,
+    "sfi": 58.11,
+    "u": 64.72,
+    "word": "keyboard"
+  },
+  {
+    "example_en": "The company will announce the merger to the media on Monday.",
+    "example_ko": "회사는 월요일에 언론에 합병을 발표할 것입니다.",
+    "list": "TSL",
+    "meaning_ko": "언론, 매체",
+    "pos": "n",
+    "rank": 92,
+    "sfi": 58.06,
+    "u": 63.98,
+    "word": "media"
+  },
+  {
+    "example_en": "A new supermarket opened across the street from our office.",
+    "example_ko": "우리 사무실 길 건너편에 새 슈퍼마켓이 문을 열었습니다.",
+    "forms": [
+      "supermarkets"
+    ],
+    "list": "TSL",
+    "meaning_ko": "슈퍼마켓",
+    "pos": "n",
+    "rank": 93,
+    "sfi": 58.06,
+    "u": 63.98,
+    "word": "supermarket"
+  },
+  {
+    "example_en": "This coupon is valid until the end of the month.",
+    "example_ko": "이 쿠폰은 이달 말까지 유효합니다.",
+    "list": "TSL",
+    "meaning_ko": "유효하다, 타당하다",
+    "pos": "adj",
+    "rank": 94,
+    "sfi": 58.11,
+    "u": 64.72,
+    "word": "valid"
+  },
+  {
+    "example_en": "Admission to the museum is free for children under twelve.",
+    "example_ko": "12세 미만 어린이는 박물관 입장료가 무료입니다.",
+    "forms": [
+      "admissions"
+    ],
+    "list": "TSL",
+    "meaning_ko": "입장료, 입장, 입학",
+    "pos": "n",
+    "rank": 95,
+    "sfi": 58.01,
+    "u": 63.25,
+    "word": "admission"
+  },
+  {
+    "example_en": "Please bring your laptop to the training session tomorrow.",
+    "example_ko": "내일 교육에 노트북을 가져오십시오.",
+    "forms": [
+      "laptops"
+    ],
+    "list": "TSL",
+    "meaning_ko": "노트북 컴퓨터, 노트북",
+    "pos": "n",
+    "rank": 96,
+    "sfi": 58.01,
+    "u": 63.25,
+    "word": "laptop"
+  },
+  {
+    "example_en": "Please underline the key terms in the contract before the meeting.",
+    "example_ko": "회의 전에 계약서의 핵심 용어에 밑줄을 그어 주십시오.",
+    "forms": [
+      "underlines",
+      "underlined",
+      "underlining"
+    ],
+    "list": "TSL",
+    "meaning_ko": "밑줄을 긋다, 강조하다",
+    "pos": "v",
+    "rank": 97,
+    "sfi": 58.01,
+    "u": 63.25,
+    "word": "underline"
+  },
+  {
+    "example_en": "An electrical problem caused the lights to go out on the third floor.",
+    "example_ko": "전기 문제로 3층 조명이 꺼졌습니다.",
+    "list": "TSL",
+    "meaning_ko": "전기의, 전기적인",
+    "pos": "adj",
+    "rank": 98,
+    "sfi": 57.96,
+    "u": 62.51,
+    "word": "electrical"
+  },
+  {
+    "example_en": "The airplane landed safely despite the strong winds.",
+    "example_ko": "강풍에도 불구하고 비행기는 안전하게 착륙했습니다.",
+    "forms": [
+      "airplanes",
+      "aeroplane",
+      "aeroplanes"
+    ],
+    "list": "TSL",
+    "meaning_ko": "비행기",
+    "pos": "n",
+    "rank": 99,
+    "sfi": 57.91,
+    "u": 61.78,
+    "word": "airplane"
+  },
+  {
+    "example_en": "Mr. Lee received a new assignment in the overseas sales department.",
+    "example_ko": "이 씨는 해외 영업부에서 새 업무를 맡았습니다.",
+    "forms": [
+      "assignments"
+    ],
+    "list": "TSL",
+    "meaning_ko": "업무, 과제, 배정",
+    "pos": "n",
+    "rank": 100,
+    "sfi": 57.91,
+    "u": 61.78,
+    "word": "assignment"
+  }
+]
