@@ -4,6 +4,7 @@
 //   POST   /auth/login             { name, password }
 //   POST   /auth/logout
 //   GET    /auth/me                { user: SessionUser | null }
+//   POST   /auth/password          { current, next } → { ok: true } 다른 기기의 세션은 모두 끊는다 (지금 세션은 유지)
 //   POST   /admin/invites          { days?, maxUses? } → 초대 발급
 //   GET    /admin/invites          쓸 수 있는 초대 목록
 //   DELETE /admin/invites/:code
@@ -19,9 +20,16 @@ import {
   findActiveInvite,
   listActiveInvites,
 } from '../auth/invites.ts'
-import { type AppEnv, requireAdmin, type SessionUser } from '../auth/middleware.ts'
+import { type AppEnv, requireAdmin, requireUser, type SessionUser } from '../auth/middleware.ts'
 import { dummyVerify, hashPassword, verifyPassword } from '../auth/password.ts'
-import { clearSessionCookie, createSession, deleteSession, SESSION_COOKIE, setSessionCookie } from '../auth/session.ts'
+import {
+  clearSessionCookie,
+  createSession,
+  deleteSession,
+  hashToken,
+  SESSION_COOKIE,
+  setSessionCookie,
+} from '../auth/session.ts'
 import { createThrottle } from '../auth/throttle.ts'
 import { checkName, checkPassword, findUserByName, insertUser, PASSWORD_MAX } from '../auth/users.ts'
 
@@ -122,6 +130,42 @@ export const authRoutes = (cfg: Config, db: DatabaseSync) => {
   })
 
   r.get('/auth/me', c => c.json({ user: c.get('user') }))
+
+  r.use('/auth/password', requireUser)
+  r.post('/auth/password', async c => {
+    const body = await readBody(c)
+    const current = body?.current
+    const next = body?.next
+    if (typeof current !== 'string' || current === '') return c.json({ error: '지금 비밀번호를 입력하세요' }, 400)
+    const problem = checkPassword(next)
+    if (problem) return c.json({ error: problem }, 400)
+    const user = c.get('user')!
+    // 세션을 가진 사람이 지금 비밀번호를 맞혀 보지 못하게 로그인과 같은 제한을 둔다 (사용자별)
+    const key = `password|${user.id}`
+    const wait = throttle.blockedFor(key)
+    if (wait > 0) {
+      c.header('Retry-After', String(wait))
+      return c.json({ error: `시도가 너무 많습니다. ${Math.ceil(wait / 60)}분 뒤에 다시 시도하세요` }, 429)
+    }
+    const row = db.prepare('SELECT password_hash AS hash FROM users WHERE id = ?').get(user.id) as { hash: string }
+    if (current.length > PASSWORD_MAX || !(await verifyPassword(current, row.hash))) {
+      throttle.fail(key)
+      return c.json({ error: '지금 비밀번호가 올바르지 않습니다' }, 401)
+    }
+    throttle.reset(key)
+    const hash = await hashPassword(next as string)
+    const keep = hashToken(cfg, getCookie(c, SESSION_COOKIE)!)
+    db.exec('BEGIN IMMEDIATE')
+    try {
+      db.prepare('UPDATE users SET password_hash = ? WHERE id = ?').run(hash, user.id)
+      db.prepare('DELETE FROM sessions WHERE user_id = ? AND id != ?').run(user.id, keep)
+      db.exec('COMMIT')
+    } catch (err) {
+      if (db.isTransaction) db.exec('ROLLBACK')
+      throw err
+    }
+    return c.json({ ok: true })
+  })
 
   r.use('/admin/*', requireAdmin)
 

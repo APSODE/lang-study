@@ -36,6 +36,20 @@ export const safeTz = (tz: string | null | undefined): string => {
   }
 }
 
+/**
+ * 사용자가 고른 시간대 이름을 검사한다. IANA 이름(Asia/Seoul, UTC 등)이면 Intl 이 쓰는 정식 이름, 아니면 null.
+ * '+09:00' 같은 고정 오프셋은 받지 않는다 (서머타임 지역에서 하루 경계가 어긋난다).
+ */
+export const canonicalTz = (tz: unknown): string | null => {
+  if (typeof tz !== 'string' || tz.length === 0 || tz.length > 64 || !/^[A-Za-z][A-Za-z0-9_+\-/]*$/.test(tz)) return null
+  try {
+    const name = new Intl.DateTimeFormat('en-US', { timeZone: tz }).resolvedOptions().timeZone
+    return /^[A-Za-z]/.test(name) ? name : null
+  } catch {
+    return null
+  }
+}
+
 /** 그 순간의 tz 벽시계를 UTC 인 것처럼 읽은 ms (초 단위) */
 const wallAsUtc = (ms: number, tz: string): number => {
   const p: Record<string, number> = {}
@@ -52,14 +66,29 @@ export const dayKey = (ms: number, tz: string): string => keyOf(wallAsUtc(ms, tz
 /** 하루 전 학습일 이름 */
 export const prevDayKey = (key: string): string => keyOf(parseKey(key) - DAY_MS)
 
-/** ms 가 속한 학습일이 시작된 순간 (그날 tz 04:00) */
-export const dayStart = (ms: number, tz: string): number => {
-  const target = parseKey(dayKey(ms, tz)) + DAY_START_HOUR * 3600 * 1000
+/** n 일 뒤(음수면 앞) 학습일 이름 */
+export const shiftDayKey = (key: string, n: number): string => keyOf(parseKey(key) + n * DAY_MS)
+
+/** 학습일 이름이 가리키는 날이 시작되는 순간 (그날 tz 04:00) */
+export const keyStart = (key: string, tz: string): number => {
+  const target = parseKey(key) + DAY_START_HOUR * 3600 * 1000
   // 벽시계 → 순간: 오프셋을 두 번 맞추면 서머타임 경계에서도 맞는다
   const offset = (t: number) => wallAsUtc(t, tz) - Math.floor(t / 1000) * 1000
   const guess = target - offset(target)
   return target - offset(guess)
 }
+
+/** ms 가 속한 학습일이 시작된 순간 (그날 tz 04:00) */
+export const dayStart = (ms: number, tz: string): number => keyStart(dayKey(ms, tz), tz)
+
+/** 그 학습일이 속한 주의 월요일 학습일 이름 (주는 월요일 04:00 에 시작) */
+export const weekStartKey = (key: string): string => {
+  const dow = new Date(parseKey(key)).getUTCDay() // 0 일요일 .. 6 토요일
+  return shiftDayKey(key, -((dow + 6) % 7))
+}
+
+/** 그 학습일이 속한 달의 1일 학습일 이름 (달은 1일 04:00 에 시작) */
+export const monthStartKey = (key: string): string => `${key.slice(0, 8)}01`
 
 /**
  * 연속 학습일. keys 는 복습한 학습일 이름을 최근 것부터(중복 허용).

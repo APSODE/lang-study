@@ -8,8 +8,12 @@ import { requireJsonForMutations } from './auth/csrf.ts'
 import { type AppEnv, loadUser } from './auth/middleware.ts'
 import type { Config } from './config.ts'
 import { schemaVersion } from './db.ts'
+import { adminRoutes } from './routes/admin.ts'
 import { authRoutes } from './routes/auth.ts'
+import { meRoutes } from './routes/me.ts'
 import { noteRoutes } from './routes/notes.ts'
+import { socialRoutes } from './routes/social.ts'
+import { statsRoutes } from './routes/stats.ts'
 import { studyRoutes } from './routes/study.ts'
 
 export interface AppOptions {
@@ -29,6 +33,10 @@ export const createApp = (cfg: Config, db: DatabaseSync, opts: AppOptions = {}) 
   api.route('/', authRoutes(cfg, db))
   api.route('/', studyRoutes(db, { now: opts.now }))
   api.route('/', noteRoutes(db))
+  api.route('/', statsRoutes(db, { now: opts.now }))
+  api.route('/', socialRoutes(db, { now: opts.now }))
+  api.route('/', meRoutes(db))
+  api.route('/', adminRoutes(db, { now: opts.now }))
 
   const root = new Hono<AppEnv>()
   root.route('/api', api)
