@@ -6,3 +6,4 @@ data/
 *.sqlite-*
 secrets/
 tools/kanji/.cache/
+content-src/kanji/merged.json
