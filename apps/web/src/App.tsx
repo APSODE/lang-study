@@ -1,9 +1,13 @@
 import { useCallback, useEffect, useState } from 'react'
 import { api, type SessionUser } from './api.ts'
 import { AdminInvites } from './pages/AdminInvites.tsx'
+import { isTrack } from '@nakamura/core'
 import { Home } from './pages/Home.tsx'
 import { Join } from './pages/Join.tsx'
+import { KanaChart } from './pages/KanaChart.tsx'
 import { Login } from './pages/Login.tsx'
+import { Settings } from './pages/Settings.tsx'
+import { Study } from './pages/Study.tsx'
 import { Redirect, useRoute } from './router.ts'
 
 // 앱 껍데기: 로그인 상태(/api/auth/me)를 불러오고 해시 경로에 맞는 화면을 고른다.
@@ -49,5 +53,9 @@ export function App() {
   if (!user) return <Redirect to="/login" />
   if (route === '/admin/invites') return user.isAdmin ? <AdminInvites /> : <Redirect to="/" />
   if (route === '/') return <Home user={user} onLogout={() => setUser(null)} />
+  const study = route.match(/^\/study\/([^/]+)$/)
+  if (study) return isTrack(study[1]) ? <Study key={study[1]} track={study[1]} /> : <Redirect to="/" />
+  if (route === '/kana') return <KanaChart />
+  if (route === '/settings') return <Settings />
   return <Redirect to="/" />
 }

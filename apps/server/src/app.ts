@@ -9,8 +9,15 @@ import { type AppEnv, loadUser } from './auth/middleware.ts'
 import type { Config } from './config.ts'
 import { schemaVersion } from './db.ts'
 import { authRoutes } from './routes/auth.ts'
+import { noteRoutes } from './routes/notes.ts'
+import { studyRoutes } from './routes/study.ts'
 
-export const createApp = (cfg: Config, db: DatabaseSync) => {
+export interface AppOptions {
+  /** 현재 시각 (ms). 테스트에서 하루 경계 · 연속 학습일을 옮길 때 바꾼다. */
+  now?: () => number
+}
+
+export const createApp = (cfg: Config, db: DatabaseSync, opts: AppOptions = {}) => {
   const app = new Hono<AppEnv>()
   const api = new Hono<AppEnv>()
 
@@ -20,6 +27,8 @@ export const createApp = (cfg: Config, db: DatabaseSync) => {
   api.use('*', loadUser(db, cfg))
   api.get('/health', c => c.json({ ok: true, schema: schemaVersion(db) }))
   api.route('/', authRoutes(cfg, db))
+  api.route('/', studyRoutes(db, { now: opts.now }))
+  api.route('/', noteRoutes(db))
 
   const root = new Hono<AppEnv>()
   root.route('/api', api)

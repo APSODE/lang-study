@@ -5,18 +5,19 @@
   --card: #fff;
   --line: #e4e4e1;
   --accent: #c2410c;
+  --ok: #15803d;
   color-scheme: light dark;
   font-family: system-ui, 'Noto Sans KR', 'Noto Sans JP', sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #1a1a19; --fg: #ecebe8; --muted: #a8a8a4; --card: #262625; --line: #333331; }
+  :root { --bg: #1a1a19; --fg: #ecebe8; --muted: #a8a8a4; --card: #262625; --line: #333331; --ok: #4ade80; }
 }
 body { margin: 0; background: var(--bg); color: var(--fg); }
 main { max-width: 640px; margin: 0 auto; padding: 24px 16px; }
 h1 { color: var(--accent); margin: 0 0 4px; }
 .muted { color: var(--muted); }
 .tracks { list-style: none; padding: 0; display: grid; gap: 12px; }
-.tracks li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; justify-content: space-between; }
+.tracks li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 10px; }
 h2 { font-size: 1.1rem; margin: 28px 0 8px; }
 a { color: var(--accent); }
 .small { font-size: 0.875rem; }
@@ -45,3 +46,75 @@ button.danger { background: none; color: var(--accent); border: 1px solid var(--
 .invites li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; display: grid; gap: 8px; min-width: 0; }
 .invites .url { font-size: 0.8rem; overflow-wrap: anywhere; }
 .invites .actions { display: flex; gap: 8px; }
+
+/* 입력 공통: 휴대폰에서 확대되지 않게 16px 이상 */
+textarea, select { font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; width: 100%; box-sizing: border-box; }
+input[type='radio'] { width: auto; margin: 0; accent-color: var(--accent); }
+button.secondary { background: var(--card); color: var(--fg); border: 1px solid var(--line); }
+a.button {
+  display: inline-block; text-align: center; text-decoration: none; font-weight: 600; color: #fff;
+  background: var(--accent); border-radius: 8px; padding: 12px 16px;
+}
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.notice + .actions { margin-top: 16px; }
+
+/* 홈 */
+.streak { font-size: 1.05rem; }
+.track-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.track-stats { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+.links { display: flex; gap: 16px; flex-wrap: wrap; margin: 20px 0 12px; }
+
+/* 학습 */
+.study-bar { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.progress { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; margin: 6px 0 12px; }
+.progress > div { height: 100%; background: var(--accent); transition: width 0.2s; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.study-card { display: grid; gap: 8px; }
+.study-card p { margin: 0; }
+.prompt-label { text-align: center; font-size: 0.9rem; }
+.study-card .prompt-big { text-align: center; font-size: 4.5rem; line-height: 1.2; margin: 8px 0; overflow-wrap: anywhere; }
+.prompt-word { text-align: center; font-size: 2.2rem; font-weight: 600; overflow-wrap: anywhere; }
+.prompt-sentence { font-size: 1.2rem; line-height: 1.6; }
+.prompt-hint { text-align: center; }
+.prompt-listen { text-align: center; }
+button.big { font-size: 1.2rem; padding: 14px 24px; }
+.answer-form { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.answer-input { font-size: 1.5rem; text-align: center; padding: 12px; }
+.answer-input[readonly] { opacity: 0.8; }
+.choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.choices button {
+  background: var(--card); color: var(--fg); border: 1px solid var(--line); min-height: 64px;
+  display: flex; align-items: center; justify-content: center; gap: 8px; position: relative; font-size: 1.6rem; font-weight: normal;
+}
+.choices button:disabled { opacity: 1; }
+.choices .key { position: absolute; top: 4px; left: 8px; font-size: 0.75rem; color: var(--muted); }
+.choices .label { overflow-wrap: anywhere; }
+.choices button.right { border: 2px solid var(--ok); }
+.choices button.wrong { border: 2px solid var(--accent); }
+.result { margin: 12px 0; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); display: grid; gap: 6px; justify-items: start; }
+.result p { margin: 0; overflow-wrap: anywhere; }
+.result .verdict { font-weight: 700; font-size: 1.2rem; }
+.result.ok .verdict { color: var(--ok); }
+.result.bad .verdict { color: var(--accent); }
+.ratings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.ratings.single { grid-template-columns: 1fr; }
+.ratings button { min-height: 52px; }
+
+/* 50음도 */
+.tabs { display: flex; gap: 8px; margin: 12px 0; }
+.kana-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+.kana-cell {
+  background: var(--card); color: var(--fg); border: 1px solid var(--line); border-radius: 8px;
+  padding: 6px 0; display: grid; justify-items: center; font-weight: normal; min-height: 56px; min-width: 0;
+}
+.kana-cell.empty { background: none; border-color: transparent; }
+.kana-cell .char { font-size: 1.4rem; line-height: 1.3; }
+.kana-cell .romaji { font-size: 0.75rem; color: var(--muted); }
+
+/* 신고 대화상자 */
+.dialog { border: 1px solid var(--line); border-radius: 12px; background: var(--bg); color: var(--fg); padding: 16px; width: min(420px, calc(100vw - 32px)); box-sizing: border-box; }
+.dialog::backdrop { background: rgb(0 0 0 / 0.4); }
+.dialog h2 { margin: 0; }
+.dialog .form { margin: 0; }
+.reasons { border: 0; padding: 0; margin: 0; display: grid; gap: 10px; }
+.form label.radio { display: flex; align-items: center; gap: 10px; font-weight: normal; }

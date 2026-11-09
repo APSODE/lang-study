@@ -1,7 +1,7 @@
 // 콘텐츠 가져오기 · 내보내기 (DB ↔ content/<트랙>.json). docs/논의_정리.md "콘텐츠 흐름"
 // - DB 가 원본. git 의 content/ 는 공개된 노트의 검토된 사본이라 복구에도 쓴다.
 // - 필드 비교 · 저장은 키를 정렬한 JSON(canonical) 으로 한다.
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { basename, join } from 'node:path'
 import type { DatabaseSync } from 'node:sqlite'
 import { validateNote, type Note } from '@nakamura/core'
@@ -155,4 +155,22 @@ export const exportContent = (db: DatabaseSync, dir: string): ExportResult[] => 
     res.push({ track, file, count: notes.length, written: !same })
   }
   return res
+}
+
+/**
+ * 시작할 때: notes 가 비어 있고 dir 에 *.json 이 있으면 모두 공개 상태로 넣는다 (새로 배포해도 가나가 바로 준비된다).
+ * 이미 노트가 있으면 아무것도 하지 않는다 (DB 가 원본이므로 덮어쓰지 않는다). 넣지 않았으면 null.
+ */
+export const seedContentIfEmpty = (
+  db: DatabaseSync,
+  dir: string,
+): (ImportResult & { files: string[] }) | null => {
+  if ((db.prepare('SELECT count(*) AS n FROM notes').get() as { n: number }).n > 0) return null
+  if (!existsSync(dir)) return null
+  const files = readdirSync(dir)
+    .filter(f => f.endsWith('.json'))
+    .sort()
+    .map(f => join(dir, f))
+  if (files.length === 0) return null
+  return { ...importNotes(db, loadContentFiles(files), { status: 'published' }), files }
 }

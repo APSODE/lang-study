@@ -28,7 +28,7 @@ import { checkName, checkPassword, findUserByName, insertUser, PASSWORD_MAX } fr
 const INVITE_INVALID = '초대 링크가 만료되었거나 더 이상 쓸 수 없습니다'
 
 /** JSON 객체 본문. 형식이 틀리면 null. */
-const readBody = async (c: Context): Promise<Record<string, unknown> | null> => {
+export const readBody = async (c: Context): Promise<Record<string, unknown> | null> => {
   try {
     const body: unknown = await c.req.json()
     return body && typeof body === 'object' && !Array.isArray(body) ? (body as Record<string, unknown>) : null

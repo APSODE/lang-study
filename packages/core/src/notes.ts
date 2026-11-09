@@ -32,6 +32,8 @@ export interface KanjiFields {
   meanings_ko: string[]
   jlpt?: number
   strokes?: number
+  /** 신문 빈도 순위 (KANJIDIC2, 1 = 가장 흔함). 새 카드 순서에 쓴다 */
+  freq?: number
   examples?: { word: string; reading: string; meaning_ko: string }[]
   /** 한국 한자음, KANJIDIC2 korean_h. 여러 개면 ", " 로 잇는다 (예: "식, 사") */
   eum_ko?: string

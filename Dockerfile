@@ -10,6 +10,8 @@ COPY apps/web/package.json apps/web/
 RUN npm ci
 COPY packages packages
 COPY apps apps
+# 빈 DB 로 처음 띄우면 content/*.json 을 넣는다 (CONTENT_DIR)
+COPY content content
 RUN npm run build -w @nakamura/web && npm prune --omit=dev
 
 FROM node:26-bookworm-slim
@@ -24,7 +26,8 @@ ENV NODE_ENV=production \
     HOST=0.0.0.0 \
     PORT=8081 \
     DATA_DIR=/data \
-    WEB_DIST=/app/apps/web/dist
+    WEB_DIST=/app/apps/web/dist \
+    CONTENT_DIR=/app/content
 USER node
 VOLUME ["/data"]
 EXPOSE 8081

@@ -45,7 +45,7 @@ const SCHEMAS: Record<Track, Schema> = {
   },
   kanji: {
     required: { kanji: str, on: strArr, kun: strArr, meanings_ko: strArr },
-    optional: { jlpt: int(1, 5), strokes: int(1), examples, eum_ko: eumKo, hunum_ko: hunumKo, meanings_en: strArr },
+    optional: { jlpt: int(1, 5), strokes: int(1), freq: int(1), examples, eum_ko: eumKo, hunum_ko: hunumKo, meanings_en: strArr },
   },
   toeic: {
     required: { word: str, meaning_ko: str },

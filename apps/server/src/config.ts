@@ -15,6 +15,8 @@ export interface Config {
   /** 비어 있으면 DB → git 내보내기를 끈다 */
   gitRemote: string
   webDist: string
+  /** 시작할 때 notes 가 비어 있으면 여기의 *.json 을 넣는다 (기본: 저장소의 content/) */
+  contentDir: string
 }
 
 const normBase = (s: string): string => {
@@ -36,6 +38,7 @@ export const loadConfig = (env: NodeJS.ProcessEnv = process.env): Config => {
     sessionSecret: env.SESSION_SECRET || '',
     gitRemote: env.GIT_REMOTE || '',
     webDist: resolve(env.WEB_DIST || resolve(import.meta.dirname, '../../web/dist')),
+    contentDir: resolve(env.CONTENT_DIR || resolve(import.meta.dirname, '../../../content')),
   }
   if (env.NODE_ENV === 'production' && (cfg.sessionSecret === '' || cfg.sessionSecret === 'change-me')) {
     throw new Error('SESSION_SECRET 을 설정하세요 (openssl rand -hex 32)')

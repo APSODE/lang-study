@@ -32,6 +32,7 @@ docker compose up -d --build
 ```
 
 - 상태는 `DATA_DIR`(기본 `./data`) 하나: `db/app.sqlite`, `audio/`, `backups/`. 설정은 `.env` 만.
+- 빈 DB 로 처음 띄우면 `CONTENT_DIR`(기본 저장소의 `content/`, 이미지에는 `/app/content`)의 `*.json` 을 공개 상태로 넣는다. 노트가 하나라도 있으면 건드리지 않는다.
 - 1GB 서버(퀴즈 v2 와 같이): `deploy/server/compose.yml` + `deploy/server/push-image.sh <호스트>` — 서버에서 빌드하지 않는다.
 - 백업: `node apps/server/src/cli.ts backup` (실행 중에도 일관된 사본)
 - 이전: [deploy/move.md](deploy/move.md)

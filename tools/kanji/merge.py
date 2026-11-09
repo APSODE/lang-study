@@ -94,6 +94,8 @@ def to_note(e: dict) -> dict:
     }
     if 'strokes' in e:
         f['strokes'] = e['strokes']
+    if 'freq' in e:
+        f['freq'] = e['freq']
     if e.get('eum_ko'):
         f['eum_ko'] = e['eum_ko']
     if e.get('hunum_ko'):
