@@ -7,3 +7,5 @@ data/
 secrets/
 tools/kanji/.cache/
 content-src/kanji/merged.json
+tools/toeic/.cache/
+content-src/toeic/merged.json

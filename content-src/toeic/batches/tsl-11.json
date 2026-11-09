@@ -1,0 +1,1404 @@
+[
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "pastries"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1001,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "pastry"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "personalizes",
+      "personalized",
+      "personalizing",
+      "personalise",
+      "personalises",
+      "personalised",
+      "personalising"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1002,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "personalize"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1003,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "poorly"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1004,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "prestigious"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "pursers"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1005,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "purser"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "reassures",
+      "reassured",
+      "reassuring"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1006,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "reassure"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "resumes",
+      "resumed",
+      "resuming"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1007,
+    "sfi": 59.7,
+    "u": 93.4,
+    "word": "resume"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "reunions"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1008,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "reunion"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "revolutionizes",
+      "revolutionized",
+      "revolutionizing",
+      "revolutionise",
+      "revolutionises",
+      "revolutionised",
+      "revolutionising"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1009,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "revolutionize"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1010,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "seafood"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "signifies",
+      "signified",
+      "signifying"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1011,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "signify"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "slots",
+      "slotted",
+      "slotting"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1012,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "slot"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "steers",
+      "steered",
+      "steering"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1013,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "steer"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "sues",
+      "sued",
+      "suing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1014,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "sue"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1015,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "superb"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1016,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "traditionally"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1017,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "tremendous"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1018,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "underway"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1019,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "unpleasant"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "violins"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1020,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "violin"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "wards",
+      "warded",
+      "warding"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1021,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "ward"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1022,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "worthwhile"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "adapters"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1023,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "adapter"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1024,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "advisable"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "archives",
+      "archived",
+      "archiving"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1025,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "archive"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1026,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "artistic"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "assurances"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1027,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "assurance"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "athletics"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1028,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "athletic"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "attires",
+      "attired",
+      "attiring"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1029,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "attire"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "auditors"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1030,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "auditor"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "bankruptcies"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1031,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "bankruptcy"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "bulks",
+      "bulked",
+      "bulking"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1032,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "bulk"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "butters",
+      "buttered",
+      "buttering"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1033,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "butter"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "centimeters",
+      "centimetre",
+      "centimetres"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1034,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "centimeter"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "circulates",
+      "circulated",
+      "circulating"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1035,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "circulate"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "combs",
+      "combed",
+      "combing",
+      "combings"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1036,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "comb"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1037,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "comfortably"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "compliances"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1038,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "compliance"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "contractions"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1039,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "contraction"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "cookbooks"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1040,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "cookbook"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "cushions",
+      "cushioned",
+      "cushioning"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1041,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "cushion"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "doses",
+      "dosed",
+      "dosing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1042,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "dose"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "drums",
+      "drummed",
+      "drumming"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1043,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "drum"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "embeds",
+      "embedded",
+      "embedding",
+      "embeddings"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1044,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "embed"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "evacuates",
+      "evacuated",
+      "evacuating"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1045,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "evacuate"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "expedited"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1046,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "expedite"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "extinguishers"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1047,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "extinguisher"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "familiarities"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1048,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "familiarity"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "flaws",
+      "flawed"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1049,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "flaw"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "fluctuates",
+      "fluctuated",
+      "fluctuating"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1050,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "fluctuate"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1051,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "fluent"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1052,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "honestly"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "housekeeping"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1053,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "housekeep"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "hurricanes"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1054,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "hurricane"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1055,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "hygiene"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "integrals"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1056,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "integral"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1057,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "interactive"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "interferes",
+      "interfered",
+      "interfering"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1058,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "interfere"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "kilograms"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1059,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "kilogram"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "layoffs"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1060,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "layoff"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "lightweights"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1061,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "lightweight"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "merits",
+      "merited",
+      "meriting"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1062,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "merit"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "necklaces"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1063,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "necklace"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "needier",
+      "neediest"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1064,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "needy"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "overpaid",
+      "overpaying",
+      "overpays"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1065,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "overpay"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "pamphlets"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1066,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "pamphlet"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "partials"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1067,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "partial"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "penalizes",
+      "penalized",
+      "penalizing",
+      "penalise",
+      "penalises",
+      "penalised",
+      "penalising"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1068,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "penalize"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "pollutes",
+      "polluted",
+      "polluting"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1069,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "pollute"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "prescribes",
+      "prescribed",
+      "prescribing"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1070,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "prescribe"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1071,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "probable"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1072,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "prominent"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "rainfalls"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1073,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "rainfall"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "relocations"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1074,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "relocation"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "residences"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1075,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "residence"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "retrieves",
+      "retrieved",
+      "retrieving"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1076,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "retrieve"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "riders"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1077,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "rider"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "rubbers"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1078,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "rubber"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "rugs"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1079,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "rug"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1080,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "salespeople"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1081,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "sharply"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "similarities"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1082,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "similarity"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1083,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "someday"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "spectators"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1084,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "spectator"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "stereos"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1085,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "stereo"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "storerooms"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1086,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "storeroom"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "subsidizes",
+      "subsidized",
+      "subsidizing",
+      "subsidise",
+      "subsidises",
+      "subsidised",
+      "subsidising"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1087,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "subsidize"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1088,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "suspicious"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "tastier",
+      "tastiest"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1089,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "tasty"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1090,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "terrific"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1091,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "underground"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1092,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "unpaid"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "volleyballs"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1093,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "volleyball"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "wheelchairs"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1094,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "wheelchair"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1095,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "whoever"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "wools"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1096,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "wool"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "wrinkles",
+      "wrinkled",
+      "wrinkling"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1097,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "wrinkle"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "accuracies"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1098,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "accuracy"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1099,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "anyhow"
+  },
+  {
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "appetizers"
+    ],
+    "list": "TSL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 1100,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "appetizer"
+  }
+]

@@ -1,0 +1,12576 @@
+[
+  {
+    "forms": [
+      "misters"
+    ],
+    "list": "TSL",
+    "rank": 1,
+    "sfi": 71.28,
+    "u": 1342.2,
+    "word": "mister"
+  },
+  {
+    "forms": [
+      "vacations",
+      "vacationed",
+      "vacationing"
+    ],
+    "list": "TSL",
+    "rank": 2,
+    "sfi": 65.56,
+    "u": 359.64,
+    "word": "vacation"
+  },
+  {
+    "forms": [
+      "clients"
+    ],
+    "list": "TSL",
+    "rank": 3,
+    "sfi": 65.26,
+    "u": 335.37,
+    "word": "client"
+  },
+  {
+    "forms": [
+      "e-books",
+      "ebook",
+      "ebooks"
+    ],
+    "list": "TSL",
+    "rank": 4,
+    "sfi": 65.03,
+    "u": 318.45,
+    "word": "e-book"
+  },
+  {
+    "forms": [
+      "airports"
+    ],
+    "list": "TSL",
+    "rank": 5,
+    "sfi": 65.02,
+    "u": 317.72,
+    "word": "airport"
+  },
+  {
+    "forms": [
+      "memos"
+    ],
+    "list": "TSL",
+    "rank": 6,
+    "sfi": 64.07,
+    "u": 255.2,
+    "word": "memo"
+  },
+  {
+    "forms": [
+      "reservations"
+    ],
+    "list": "TSL",
+    "rank": 7,
+    "sfi": 63.98,
+    "u": 250.05,
+    "word": "reservation"
+  },
+  {
+    "list": "TSL",
+    "rank": 8,
+    "sfi": 63.89,
+    "u": 244.91,
+    "word": "logical"
+  },
+  {
+    "forms": [
+      "faxes",
+      "faxed",
+      "faxing"
+    ],
+    "list": "TSL",
+    "rank": 9,
+    "sfi": 63.78,
+    "u": 239.02,
+    "word": "fax"
+  },
+  {
+    "list": "TSL",
+    "rank": 10,
+    "sfi": 63.51,
+    "u": 224.31,
+    "word": "o'clock"
+  },
+  {
+    "list": "TSL",
+    "rank": 11,
+    "sfi": 62.82,
+    "u": 191.22,
+    "word": "sincerely"
+  },
+  {
+    "list": "TSL",
+    "rank": 12,
+    "sfi": 62.43,
+    "u": 175.04,
+    "word": "sometime"
+  },
+  {
+    "forms": [
+      "supervisors"
+    ],
+    "list": "TSL",
+    "rank": 13,
+    "sfi": 62.41,
+    "u": 174.3,
+    "word": "supervisor"
+  },
+  {
+    "forms": [
+      "refunds",
+      "refunded",
+      "refunding"
+    ],
+    "list": "TSL",
+    "rank": 14,
+    "sfi": 62.3,
+    "u": 169.89,
+    "word": "refund"
+  },
+  {
+    "list": "TSL",
+    "rank": 15,
+    "sfi": 62.13,
+    "u": 163.27,
+    "word": "goods"
+  },
+  {
+    "forms": [
+      "workshops"
+    ],
+    "list": "TSL",
+    "rank": 16,
+    "sfi": 62.07,
+    "u": 161.06,
+    "word": "workshop"
+  },
+  {
+    "forms": [
+      "downtowner"
+    ],
+    "list": "TSL",
+    "rank": 17,
+    "sfi": 61.95,
+    "u": 156.65,
+    "word": "downtown"
+  },
+  {
+    "forms": [
+      "deadlines"
+    ],
+    "list": "TSL",
+    "rank": 18,
+    "sfi": 61.91,
+    "u": 155.18,
+    "word": "deadline"
+  },
+  {
+    "forms": [
+      "invoices",
+      "invoiced",
+      "invoicing"
+    ],
+    "list": "TSL",
+    "rank": 19,
+    "sfi": 61.85,
+    "u": 152.97,
+    "word": "invoice"
+  },
+  {
+    "forms": [
+      "brochures"
+    ],
+    "list": "TSL",
+    "rank": 20,
+    "sfi": 61.68,
+    "u": 147.09,
+    "word": "brochure"
+  },
+  {
+    "list": "TSL",
+    "rank": 21,
+    "sfi": 61.65,
+    "u": 146.36,
+    "word": "noon"
+  },
+  {
+    "forms": [
+      "accountants"
+    ],
+    "list": "TSL",
+    "rank": 22,
+    "sfi": 61.57,
+    "u": 143.41,
+    "word": "accountant"
+  },
+  {
+    "forms": [
+      "clerks"
+    ],
+    "list": "TSL",
+    "rank": 23,
+    "sfi": 61.5,
+    "u": 141.21,
+    "word": "clerk"
+  },
+  {
+    "forms": [
+      "lobbies",
+      "lobbied",
+      "lobbying"
+    ],
+    "list": "TSL",
+    "rank": 24,
+    "sfi": 61.5,
+    "u": 141.21,
+    "word": "lobby"
+  },
+  {
+    "forms": [
+      "publishes",
+      "published",
+      "publishing"
+    ],
+    "list": "TSL",
+    "rank": 25,
+    "sfi": 61.45,
+    "u": 139.74,
+    "word": "publish"
+  },
+  {
+    "forms": [
+      "résumés"
+    ],
+    "list": "TSL",
+    "rank": 26,
+    "sfi": 57.53,
+    "u": 56.63,
+    "word": "résumé"
+  },
+  {
+    "forms": [
+      "encloses",
+      "enclosed",
+      "enclosing"
+    ],
+    "list": "TSL",
+    "rank": 27,
+    "sfi": 61.36,
+    "u": 136.79,
+    "word": "enclose"
+  },
+  {
+    "forms": [
+      "applicants"
+    ],
+    "list": "TSL",
+    "rank": 28,
+    "sfi": 61.27,
+    "u": 133.85,
+    "word": "applicant"
+  },
+  {
+    "forms": [
+      "seminars"
+    ],
+    "list": "TSL",
+    "rank": 29,
+    "sfi": 61.27,
+    "u": 133.85,
+    "word": "seminar"
+  },
+  {
+    "forms": [
+      "technicians"
+    ],
+    "list": "TSL",
+    "rank": 30,
+    "sfi": 61.1,
+    "u": 128.7,
+    "word": "technician"
+  },
+  {
+    "forms": [
+      "cloths"
+    ],
+    "list": "TSL",
+    "rank": 31,
+    "sfi": 60.79,
+    "u": 119.88,
+    "word": "cloth"
+  },
+  {
+    "forms": [
+      "fares",
+      "fared",
+      "faring"
+    ],
+    "list": "TSL",
+    "rank": 32,
+    "sfi": 60.65,
+    "u": 116.2,
+    "word": "fare"
+  },
+  {
+    "forms": [
+      "receipts",
+      "receipted",
+      "receipting"
+    ],
+    "list": "TSL",
+    "rank": 33,
+    "sfi": 60.71,
+    "u": 117.67,
+    "word": "receipt"
+  },
+  {
+    "forms": [
+      "travelers",
+      "traveller",
+      "travellers"
+    ],
+    "list": "TSL",
+    "rank": 34,
+    "sfi": 60.62,
+    "u": 115.47,
+    "word": "traveler"
+  },
+  {
+    "forms": [
+      "callers"
+    ],
+    "list": "TSL",
+    "rank": 35,
+    "sfi": 60.6,
+    "u": 114.73,
+    "word": "caller"
+  },
+  {
+    "forms": [
+      "subways"
+    ],
+    "list": "TSL",
+    "rank": 36,
+    "sfi": 60.6,
+    "u": 114.73,
+    "word": "subway"
+  },
+  {
+    "list": "TSL",
+    "rank": 37,
+    "sfi": 60.51,
+    "u": 112.52,
+    "word": "luggage"
+  },
+  {
+    "forms": [
+      "shipments"
+    ],
+    "list": "TSL",
+    "rank": 38,
+    "sfi": 60.37,
+    "u": 108.85,
+    "word": "shipment"
+  },
+  {
+    "forms": [
+      "infers",
+      "inferred",
+      "inferring"
+    ],
+    "list": "TSL",
+    "rank": 39,
+    "sfi": 60.28,
+    "u": 106.64,
+    "word": "infer"
+  },
+  {
+    "forms": [
+      "waiters"
+    ],
+    "list": "TSL",
+    "rank": 40,
+    "sfi": 60.28,
+    "u": 106.64,
+    "word": "waiter"
+  },
+  {
+    "forms": [
+      "rentals"
+    ],
+    "list": "TSL",
+    "rank": 41,
+    "sfi": 60.25,
+    "u": 105.91,
+    "word": "rental"
+  },
+  {
+    "forms": [
+      "warranties"
+    ],
+    "list": "TSL",
+    "rank": 42,
+    "sfi": 60.19,
+    "u": 104.43,
+    "word": "warranty"
+  },
+  {
+    "forms": [
+      "cafeterias"
+    ],
+    "list": "TSL",
+    "rank": 43,
+    "sfi": 60.16,
+    "u": 103.7,
+    "word": "cafeteria"
+  },
+  {
+    "forms": [
+      "chefs"
+    ],
+    "list": "TSL",
+    "rank": 44,
+    "sfi": 60.0,
+    "u": 100.02,
+    "word": "chef"
+  },
+  {
+    "forms": [
+      "elevators"
+    ],
+    "list": "TSL",
+    "rank": 45,
+    "sfi": 59.84,
+    "u": 96.34,
+    "word": "elevator"
+  },
+  {
+    "forms": [
+      "receptions"
+    ],
+    "list": "TSL",
+    "rank": 46,
+    "sfi": 59.84,
+    "u": 96.34,
+    "word": "reception"
+  },
+  {
+    "list": "TSL",
+    "rank": 47,
+    "word": "correctly"
+  },
+  {
+    "forms": [
+      "leases",
+      "leased",
+      "leasing"
+    ],
+    "list": "TSL",
+    "rank": 48,
+    "sfi": 59.63,
+    "u": 91.93,
+    "word": "lease"
+  },
+  {
+    "forms": [
+      "bicycles",
+      "bicycled",
+      "bicycling"
+    ],
+    "list": "TSL",
+    "rank": 49,
+    "sfi": 59.6,
+    "u": 91.2,
+    "word": "bicycle"
+  },
+  {
+    "forms": [
+      "notifies",
+      "notified",
+      "notifying"
+    ],
+    "list": "TSL",
+    "rank": 50,
+    "sfi": 59.6,
+    "u": 91.2,
+    "word": "notify"
+  },
+  {
+    "forms": [
+      "previews",
+      "previewed",
+      "previewing"
+    ],
+    "list": "TSL",
+    "rank": 51,
+    "sfi": 59.6,
+    "u": 91.2,
+    "word": "preview"
+  },
+  {
+    "forms": [
+      "attendants"
+    ],
+    "list": "TSL",
+    "rank": 52,
+    "sfi": 59.56,
+    "u": 90.46,
+    "word": "attendant"
+  },
+  {
+    "forms": [
+      "subscriptions"
+    ],
+    "list": "TSL",
+    "rank": 53,
+    "sfi": 59.56,
+    "u": 90.46,
+    "word": "subscription"
+  },
+  {
+    "list": "TSL",
+    "rank": 54,
+    "sfi": 59.49,
+    "u": 88.99,
+    "word": "convenient"
+  },
+  {
+    "forms": [
+      "manuals"
+    ],
+    "list": "TSL",
+    "rank": 55,
+    "sfi": 59.46,
+    "u": 88.25,
+    "word": "manual"
+  },
+  {
+    "forms": [
+      "clues",
+      "clued",
+      "cluing"
+    ],
+    "list": "TSL",
+    "rank": 56,
+    "sfi": 59.38,
+    "u": 86.78,
+    "word": "clue"
+  },
+  {
+    "forms": [
+      "garages",
+      "garaged",
+      "garaging"
+    ],
+    "list": "TSL",
+    "rank": 57,
+    "sfi": 59.42,
+    "u": 87.52,
+    "word": "garage"
+  },
+  {
+    "forms": [
+      "obtains",
+      "obtained",
+      "obtaining"
+    ],
+    "list": "TSL",
+    "rank": 58,
+    "sfi": 59.38,
+    "u": 86.78,
+    "word": "obtain"
+  },
+  {
+    "forms": [
+      "ovals"
+    ],
+    "list": "TSL",
+    "rank": 59,
+    "sfi": 59.38,
+    "u": 86.78,
+    "word": "oval"
+  },
+  {
+    "forms": [
+      "inventories"
+    ],
+    "list": "TSL",
+    "rank": 60,
+    "sfi": 59.27,
+    "u": 84.58,
+    "word": "inventory"
+  },
+  {
+    "forms": [
+      "outdoors"
+    ],
+    "list": "TSL",
+    "rank": 61,
+    "sfi": 59.27,
+    "u": 84.58,
+    "word": "outdoor"
+  },
+  {
+    "forms": [
+      "suitcases"
+    ],
+    "list": "TSL",
+    "rank": 62,
+    "sfi": 59.27,
+    "u": 84.58,
+    "word": "suitcase"
+  },
+  {
+    "forms": [
+      "destinations"
+    ],
+    "list": "TSL",
+    "rank": 63,
+    "sfi": 59.23,
+    "u": 83.84,
+    "word": "destination"
+  },
+  {
+    "forms": [
+      "occupations"
+    ],
+    "list": "TSL",
+    "rank": 64,
+    "sfi": 59.23,
+    "u": 83.84,
+    "word": "occupation"
+  },
+  {
+    "forms": [
+      "postpones",
+      "postponed",
+      "postponing"
+    ],
+    "list": "TSL",
+    "rank": 65,
+    "sfi": 59.23,
+    "u": 83.84,
+    "word": "postpone"
+  },
+  {
+    "forms": [
+      "contradicts",
+      "contradicted",
+      "contradicting"
+    ],
+    "list": "TSL",
+    "rank": 66,
+    "sfi": 59.16,
+    "u": 82.37,
+    "word": "contradict"
+  },
+  {
+    "forms": [
+      "umbrellas"
+    ],
+    "list": "TSL",
+    "rank": 67,
+    "sfi": 59.12,
+    "u": 81.64,
+    "word": "umbrella"
+  },
+  {
+    "forms": [
+      "inferences"
+    ],
+    "list": "TSL",
+    "rank": 68,
+    "sfi": 58.96,
+    "u": 78.69,
+    "word": "inference"
+  },
+  {
+    "forms": [
+      "cellphones",
+      "cell phone",
+      "cell phones"
+    ],
+    "list": "TSL",
+    "rank": 69,
+    "sfi": 58.92,
+    "u": 77.96,
+    "word": "cellphone"
+  },
+  {
+    "forms": [
+      "compacts",
+      "compacted",
+      "compacting",
+      "compacter"
+    ],
+    "list": "TSL",
+    "rank": 70,
+    "sfi": 58.67,
+    "u": 73.55,
+    "word": "compact"
+  },
+  {
+    "forms": [
+      "merchandises",
+      "merchandised",
+      "merchandising",
+      "merchandize",
+      "merchandizes",
+      "merchandized",
+      "merchandizing"
+    ],
+    "list": "TSL",
+    "rank": 71,
+    "sfi": 58.67,
+    "u": 73.55,
+    "word": "merchandise"
+  },
+  {
+    "forms": [
+      "receptionists"
+    ],
+    "list": "TSL",
+    "rank": 72,
+    "sfi": 58.62,
+    "u": 72.81,
+    "word": "receptionist"
+  },
+  {
+    "forms": [
+      "dentists"
+    ],
+    "list": "TSL",
+    "rank": 73,
+    "sfi": 58.58,
+    "u": 72.07,
+    "word": "dentist"
+  },
+  {
+    "forms": [
+      "identifications"
+    ],
+    "list": "TSL",
+    "rank": 74,
+    "sfi": 58.58,
+    "u": 72.07,
+    "word": "identification"
+  },
+  {
+    "forms": [
+      "coupons"
+    ],
+    "list": "TSL",
+    "rank": 75,
+    "sfi": 58.53,
+    "u": 71.34,
+    "word": "coupon"
+  },
+  {
+    "forms": [
+      "departs",
+      "departed",
+      "departing"
+    ],
+    "list": "TSL",
+    "rank": 76,
+    "sfi": 58.53,
+    "u": 71.34,
+    "word": "depart"
+  },
+  {
+    "forms": [
+      "reschedules",
+      "rescheduled",
+      "rescheduling"
+    ],
+    "list": "TSL",
+    "rank": 77,
+    "sfi": 58.53,
+    "u": 71.34,
+    "word": "reschedule"
+  },
+  {
+    "forms": [
+      "tactics"
+    ],
+    "list": "TSL",
+    "rank": 78,
+    "sfi": 58.49,
+    "u": 70.6,
+    "word": "tactic"
+  },
+  {
+    "forms": [
+      "renovations"
+    ],
+    "list": "TSL",
+    "rank": 79,
+    "sfi": 58.44,
+    "u": 69.87,
+    "word": "renovation"
+  },
+  {
+    "forms": [
+      "upgrades",
+      "upgraded",
+      "upgrading"
+    ],
+    "list": "TSL",
+    "rank": 80,
+    "sfi": 58.4,
+    "u": 69.13,
+    "word": "upgrade"
+  },
+  {
+    "forms": [
+      "precedes",
+      "preceded",
+      "preceding"
+    ],
+    "list": "TSL",
+    "rank": 81,
+    "sfi": 58.35,
+    "u": 68.4,
+    "word": "precede"
+  },
+  {
+    "forms": [
+      "replacements"
+    ],
+    "list": "TSL",
+    "rank": 82,
+    "sfi": 58.44,
+    "u": 69.87,
+    "word": "replacement"
+  },
+  {
+    "forms": [
+      "dines",
+      "dined",
+      "dining"
+    ],
+    "list": "TSL",
+    "rank": 83,
+    "sfi": 58.3,
+    "u": 67.66,
+    "word": "dine"
+  },
+  {
+    "forms": [
+      "passports"
+    ],
+    "list": "TSL",
+    "rank": 84,
+    "sfi": 58.3,
+    "u": 67.66,
+    "word": "passport"
+  },
+  {
+    "forms": [
+      "coworkers"
+    ],
+    "list": "TSL",
+    "rank": 85,
+    "sfi": 58.21,
+    "u": 66.19,
+    "word": "coworker"
+  },
+  {
+    "list": "TSL",
+    "rank": 86,
+    "sfi": 58.21,
+    "u": 66.19,
+    "word": "upcoming"
+  },
+  {
+    "forms": [
+      "cabinets"
+    ],
+    "list": "TSL",
+    "rank": 87,
+    "sfi": 58.16,
+    "u": 65.46,
+    "word": "cabinet"
+  },
+  {
+    "forms": [
+      "appliances"
+    ],
+    "list": "TSL",
+    "rank": 88,
+    "sfi": 58.11,
+    "u": 64.72,
+    "word": "appliance"
+  },
+  {
+    "list": "TSL",
+    "rank": 89,
+    "sfi": 58.11,
+    "u": 64.72,
+    "word": "explanatory"
+  },
+  {
+    "forms": [
+      "instructors"
+    ],
+    "list": "TSL",
+    "rank": 90,
+    "sfi": 58.06,
+    "u": 63.98,
+    "word": "instructor"
+  },
+  {
+    "forms": [
+      "keyboards",
+      "keyboarded",
+      "keyboarding"
+    ],
+    "list": "TSL",
+    "rank": 91,
+    "sfi": 58.11,
+    "u": 64.72,
+    "word": "keyboard"
+  },
+  {
+    "list": "TSL",
+    "rank": 92,
+    "sfi": 58.06,
+    "u": 63.98,
+    "word": "media"
+  },
+  {
+    "forms": [
+      "supermarkets"
+    ],
+    "list": "TSL",
+    "rank": 93,
+    "sfi": 58.06,
+    "u": 63.98,
+    "word": "supermarket"
+  },
+  {
+    "list": "TSL",
+    "rank": 94,
+    "sfi": 58.11,
+    "u": 64.72,
+    "word": "valid"
+  },
+  {
+    "forms": [
+      "admissions"
+    ],
+    "list": "TSL",
+    "rank": 95,
+    "sfi": 58.01,
+    "u": 63.25,
+    "word": "admission"
+  },
+  {
+    "forms": [
+      "laptops"
+    ],
+    "list": "TSL",
+    "rank": 96,
+    "sfi": 58.01,
+    "u": 63.25,
+    "word": "laptop"
+  },
+  {
+    "forms": [
+      "underlines",
+      "underlined",
+      "underlining"
+    ],
+    "list": "TSL",
+    "rank": 97,
+    "sfi": 58.01,
+    "u": 63.25,
+    "word": "underline"
+  },
+  {
+    "list": "TSL",
+    "rank": 98,
+    "sfi": 57.96,
+    "u": 62.51,
+    "word": "electrical"
+  },
+  {
+    "forms": [
+      "airplanes",
+      "aeroplane",
+      "aeroplanes"
+    ],
+    "list": "TSL",
+    "rank": 99,
+    "sfi": 57.91,
+    "u": 61.78,
+    "word": "airplane"
+  },
+  {
+    "forms": [
+      "assignments"
+    ],
+    "list": "TSL",
+    "rank": 100,
+    "sfi": 57.91,
+    "u": 61.78,
+    "word": "assignment"
+  },
+  {
+    "forms": [
+      "exits",
+      "exited",
+      "exiting"
+    ],
+    "list": "TSL",
+    "rank": 101,
+    "sfi": 57.91,
+    "u": 61.78,
+    "word": "exit"
+  },
+  {
+    "forms": [
+      "attendees"
+    ],
+    "list": "TSL",
+    "rank": 102,
+    "sfi": 57.86,
+    "u": 61.04,
+    "word": "attendee"
+  },
+  {
+    "forms": [
+      "cruises",
+      "cruised",
+      "cruising"
+    ],
+    "list": "TSL",
+    "rank": 103,
+    "sfi": 57.8,
+    "u": 60.31,
+    "word": "cruise"
+  },
+  {
+    "forms": [
+      "birthdays"
+    ],
+    "list": "TSL",
+    "rank": 104,
+    "word": "birthday"
+  },
+  {
+    "forms": [
+      "cafés",
+      "cafe",
+      "cafes"
+    ],
+    "list": "TSL",
+    "rank": 105,
+    "sfi": 57.8,
+    "u": 60.31,
+    "word": "café"
+  },
+  {
+    "list": "TSL",
+    "rank": 106,
+    "sfi": 57.75,
+    "u": 59.57,
+    "word": "comprehension"
+  },
+  {
+    "forms": [
+      "malls"
+    ],
+    "list": "TSL",
+    "rank": 107,
+    "sfi": 57.75,
+    "u": 59.57,
+    "word": "mall"
+  },
+  {
+    "forms": [
+      "medications"
+    ],
+    "list": "TSL",
+    "rank": 108,
+    "sfi": 57.75,
+    "u": 59.57,
+    "word": "medication"
+  },
+  {
+    "forms": [
+      "recycles",
+      "recycled",
+      "recycling"
+    ],
+    "list": "TSL",
+    "rank": 109,
+    "sfi": 57.75,
+    "u": 59.57,
+    "word": "recycle"
+  },
+  {
+    "forms": [
+      "renews",
+      "renewed",
+      "renewing"
+    ],
+    "list": "TSL",
+    "rank": 110,
+    "sfi": 57.75,
+    "u": 59.57,
+    "word": "renew"
+  },
+  {
+    "forms": [
+      "tenants",
+      "tenanted",
+      "tenanting"
+    ],
+    "list": "TSL",
+    "rank": 111,
+    "sfi": 57.75,
+    "u": 59.57,
+    "word": "tenant"
+  },
+  {
+    "forms": [
+      "sandwiches",
+      "sandwiched",
+      "sandwiching"
+    ],
+    "list": "TSL",
+    "rank": 112,
+    "sfi": 57.7,
+    "u": 58.84,
+    "word": "sandwich"
+  },
+  {
+    "forms": [
+      "departures"
+    ],
+    "list": "TSL",
+    "rank": 113,
+    "sfi": 57.64,
+    "u": 58.1,
+    "word": "departure"
+  },
+  {
+    "list": "TSL",
+    "rank": 114,
+    "sfi": 57.64,
+    "u": 58.1,
+    "word": "mini"
+  },
+  {
+    "list": "TSL",
+    "rank": 115,
+    "sfi": 57.59,
+    "u": 57.37,
+    "word": "fitness"
+  },
+  {
+    "forms": [
+      "inconveniences",
+      "inconvenienced",
+      "inconveniencing"
+    ],
+    "list": "TSL",
+    "rank": 116,
+    "sfi": 57.59,
+    "u": 57.37,
+    "word": "inconvenience"
+  },
+  {
+    "forms": [
+      "banquets",
+      "banqueting"
+    ],
+    "list": "TSL",
+    "rank": 117,
+    "sfi": 57.53,
+    "u": 56.63,
+    "word": "banquet"
+  },
+  {
+    "forms": [
+      "closets",
+      "closeted"
+    ],
+    "list": "TSL",
+    "rank": 118,
+    "sfi": 57.53,
+    "u": 56.63,
+    "word": "closet"
+  },
+  {
+    "list": "TSL",
+    "rank": 119,
+    "sfi": 57.53,
+    "u": 56.63,
+    "word": "unreal"
+  },
+  {
+    "forms": [
+      "distractors",
+      "distracter",
+      "distracters"
+    ],
+    "list": "TSL",
+    "rank": 120,
+    "sfi": 57.47,
+    "u": 55.89,
+    "word": "distractor"
+  },
+  {
+    "forms": [
+      "expires",
+      "expired",
+      "expiring"
+    ],
+    "list": "TSL",
+    "rank": 121,
+    "sfi": 57.47,
+    "u": 55.89,
+    "word": "expire"
+  },
+  {
+    "forms": [
+      "folders"
+    ],
+    "list": "TSL",
+    "rank": 122,
+    "sfi": 57.53,
+    "u": 56.63,
+    "word": "folder"
+  },
+  {
+    "forms": [
+      "photocopies",
+      "photocopied",
+      "photocopying"
+    ],
+    "list": "TSL",
+    "rank": 123,
+    "sfi": 57.47,
+    "u": 55.89,
+    "word": "photocopy"
+  },
+  {
+    "forms": [
+      "renovates",
+      "renovated",
+      "renovating"
+    ],
+    "list": "TSL",
+    "rank": 124,
+    "sfi": 57.47,
+    "u": 55.89,
+    "word": "renovate"
+  },
+  {
+    "forms": [
+      "sunnier",
+      "sunniest"
+    ],
+    "list": "TSL",
+    "rank": 125,
+    "sfi": 57.47,
+    "u": 55.89,
+    "word": "sunny"
+  },
+  {
+    "forms": [
+      "calendars"
+    ],
+    "list": "TSL",
+    "rank": 126,
+    "sfi": 57.42,
+    "u": 55.16,
+    "word": "calendar"
+  },
+  {
+    "forms": [
+      "donations"
+    ],
+    "list": "TSL",
+    "rank": 127,
+    "sfi": 57.42,
+    "u": 55.16,
+    "word": "donation"
+  },
+  {
+    "forms": [
+      "feedbacks"
+    ],
+    "list": "TSL",
+    "rank": 128,
+    "sfi": 57.42,
+    "u": 55.16,
+    "word": "feedback"
+  },
+  {
+    "list": "TSL",
+    "rank": 129,
+    "sfi": 57.42,
+    "u": 55.16,
+    "word": "shortly"
+  },
+  {
+    "forms": [
+      "snacks",
+      "snacked",
+      "snacking"
+    ],
+    "list": "TSL",
+    "rank": 130,
+    "sfi": 57.42,
+    "u": 55.16,
+    "word": "snack"
+  },
+  {
+    "forms": [
+      "warehouses",
+      "warehoused",
+      "warehousing"
+    ],
+    "list": "TSL",
+    "rank": 131,
+    "sfi": 57.42,
+    "u": 55.16,
+    "word": "warehouse"
+  },
+  {
+    "forms": [
+      "copiers"
+    ],
+    "list": "TSL",
+    "rank": 132,
+    "sfi": 57.36,
+    "u": 54.42,
+    "word": "copier"
+  },
+  {
+    "forms": [
+      "providers"
+    ],
+    "list": "TSL",
+    "rank": 133,
+    "sfi": 57.36,
+    "u": 54.42,
+    "word": "provider"
+  },
+  {
+    "forms": [
+      "beverages"
+    ],
+    "list": "TSL",
+    "rank": 134,
+    "sfi": 57.3,
+    "u": 53.69,
+    "word": "beverage"
+  },
+  {
+    "forms": [
+      "hungrier",
+      "hungriest"
+    ],
+    "list": "TSL",
+    "rank": 135,
+    "sfi": 57.24,
+    "u": 52.95,
+    "word": "hungry"
+  },
+  {
+    "forms": [
+      "inspections"
+    ],
+    "list": "TSL",
+    "rank": 136,
+    "sfi": 57.24,
+    "u": 52.95,
+    "word": "inspection"
+  },
+  {
+    "forms": [
+      "recipients"
+    ],
+    "list": "TSL",
+    "rank": 137,
+    "sfi": 57.24,
+    "u": 52.95,
+    "word": "recipient"
+  },
+  {
+    "forms": [
+      "aisles"
+    ],
+    "list": "TSL",
+    "rank": 138,
+    "sfi": 57.18,
+    "u": 52.22,
+    "word": "aisle"
+  },
+  {
+    "forms": [
+      "inspects",
+      "inspected",
+      "inspecting"
+    ],
+    "list": "TSL",
+    "rank": 139,
+    "sfi": 57.18,
+    "u": 52.22,
+    "word": "inspect"
+  },
+  {
+    "forms": [
+      "mechanics"
+    ],
+    "list": "TSL",
+    "rank": 140,
+    "sfi": 57.18,
+    "u": 52.22,
+    "word": "mechanic"
+  },
+  {
+    "forms": [
+      "mergers"
+    ],
+    "list": "TSL",
+    "rank": 141,
+    "sfi": 57.24,
+    "u": 52.95,
+    "word": "merger"
+  },
+  {
+    "list": "TSL",
+    "rank": 142,
+    "sfi": 57.18,
+    "u": 52.22,
+    "word": "soccer"
+  },
+  {
+    "forms": [
+      "sweaters"
+    ],
+    "list": "TSL",
+    "rank": 143,
+    "sfi": 57.12,
+    "u": 51.48,
+    "word": "sweater"
+  },
+  {
+    "forms": [
+      "ingredients"
+    ],
+    "list": "TSL",
+    "rank": 144,
+    "sfi": 57.12,
+    "u": 51.48,
+    "word": "ingredient"
+  },
+  {
+    "forms": [
+      "rewrites",
+      "rewrote",
+      "rewritten",
+      "rewriting"
+    ],
+    "list": "TSL",
+    "rank": 145,
+    "sfi": 57.12,
+    "u": 51.48,
+    "word": "rewrite"
+  },
+  {
+    "forms": [
+      "itineraries"
+    ],
+    "list": "TSL",
+    "rank": 146,
+    "sfi": 57.05,
+    "u": 50.75,
+    "word": "itinerary"
+  },
+  {
+    "forms": [
+      "workplaces"
+    ],
+    "list": "TSL",
+    "rank": 147,
+    "sfi": 57.05,
+    "u": 50.75,
+    "word": "workplace"
+  },
+  {
+    "forms": [
+      "architects",
+      "architected",
+      "architecting"
+    ],
+    "list": "TSL",
+    "rank": 148,
+    "sfi": 56.99,
+    "u": 50.01,
+    "word": "architect"
+  },
+  {
+    "forms": [
+      "conveniences"
+    ],
+    "list": "TSL",
+    "rank": 149,
+    "sfi": 56.99,
+    "u": 50.01,
+    "word": "convenience"
+  },
+  {
+    "list": "TSL",
+    "rank": 150,
+    "sfi": 56.99,
+    "u": 50.01,
+    "word": "eligible"
+  },
+  {
+    "forms": [
+      "indoors"
+    ],
+    "list": "TSL",
+    "rank": 151,
+    "sfi": 56.99,
+    "u": 50.01,
+    "word": "indoor"
+  },
+  {
+    "list": "TSL",
+    "rank": 152,
+    "sfi": 56.93,
+    "u": 49.28,
+    "word": "baggage"
+  },
+  {
+    "forms": [
+      "dials",
+      "dialed",
+      "dialing"
+    ],
+    "list": "TSL",
+    "rank": 153,
+    "sfi": 56.93,
+    "u": 49.28,
+    "word": "dial"
+  },
+  {
+    "forms": [
+      "containers"
+    ],
+    "list": "TSL",
+    "rank": 154,
+    "sfi": 56.86,
+    "u": 48.54,
+    "word": "container"
+  },
+  {
+    "forms": [
+      "drawers"
+    ],
+    "list": "TSL",
+    "rank": 155,
+    "sfi": 56.86,
+    "u": 48.54,
+    "word": "drawer"
+  },
+  {
+    "forms": [
+      "labs"
+    ],
+    "list": "TSL",
+    "rank": 156,
+    "sfi": 56.86,
+    "u": 48.54,
+    "word": "lab"
+  },
+  {
+    "forms": [
+      "submissions"
+    ],
+    "list": "TSL",
+    "rank": 157,
+    "sfi": 56.86,
+    "u": 48.54,
+    "word": "submission"
+  },
+  {
+    "forms": [
+      "bulletins"
+    ],
+    "list": "TSL",
+    "rank": 158,
+    "sfi": 56.79,
+    "u": 47.8,
+    "word": "bulletin"
+  },
+  {
+    "forms": [
+      "certificates",
+      "certificated",
+      "certificating"
+    ],
+    "list": "TSL",
+    "rank": 159,
+    "sfi": 56.79,
+    "u": 47.8,
+    "word": "certificate"
+  },
+  {
+    "forms": [
+      "gyms"
+    ],
+    "list": "TSL",
+    "rank": 160,
+    "sfi": 56.99,
+    "u": 50.01,
+    "word": "gym"
+  },
+  {
+    "forms": [
+      "highways"
+    ],
+    "list": "TSL",
+    "rank": 161,
+    "sfi": 56.79,
+    "u": 47.8,
+    "word": "highway"
+  },
+  {
+    "forms": [
+      "respondents"
+    ],
+    "list": "TSL",
+    "rank": 162,
+    "sfi": 56.79,
+    "u": 47.8,
+    "word": "respondent"
+  },
+  {
+    "forms": [
+      "jewellery"
+    ],
+    "list": "TSL",
+    "rank": 163,
+    "sfi": 56.73,
+    "u": 47.07,
+    "word": "jewelry"
+  },
+  {
+    "list": "TSL",
+    "rank": 164,
+    "sfi": 56.73,
+    "u": 47.07,
+    "word": "overtime"
+  },
+  {
+    "forms": [
+      "batteries"
+    ],
+    "list": "TSL",
+    "rank": 165,
+    "sfi": 56.66,
+    "u": 46.33,
+    "word": "battery"
+  },
+  {
+    "forms": [
+      "donates",
+      "donated",
+      "donating"
+    ],
+    "list": "TSL",
+    "rank": 166,
+    "sfi": 56.66,
+    "u": 46.33,
+    "word": "donate"
+  },
+  {
+    "list": "TSL",
+    "rank": 167,
+    "sfi": 56.66,
+    "u": 46.33,
+    "word": "outstanding"
+  },
+  {
+    "forms": [
+      "skims",
+      "skimmed",
+      "skimming"
+    ],
+    "list": "TSL",
+    "rank": 168,
+    "sfi": 56.66,
+    "u": 46.33,
+    "word": "skim"
+  },
+  {
+    "forms": [
+      "briefcases"
+    ],
+    "list": "TSL",
+    "rank": 169,
+    "sfi": 56.59,
+    "u": 45.6,
+    "word": "briefcase"
+  },
+  {
+    "forms": [
+      "desserts"
+    ],
+    "list": "TSL",
+    "rank": 170,
+    "sfi": 56.59,
+    "u": 45.6,
+    "word": "dessert"
+  },
+  {
+    "forms": [
+      "impacts",
+      "impacted",
+      "impacting"
+    ],
+    "list": "TSL",
+    "rank": 171,
+    "sfi": 56.59,
+    "u": 45.6,
+    "word": "impact"
+  },
+  {
+    "list": "TSL",
+    "rank": 172,
+    "sfi": 56.59,
+    "u": 45.6,
+    "word": "innovative"
+  },
+  {
+    "forms": [
+      "inquires",
+      "inquired",
+      "inquiring"
+    ],
+    "list": "TSL",
+    "rank": 173,
+    "sfi": 56.59,
+    "u": 45.6,
+    "word": "inquire"
+  },
+  {
+    "forms": [
+      "overnights"
+    ],
+    "list": "TSL",
+    "rank": 174,
+    "sfi": 56.59,
+    "u": 45.6,
+    "word": "overnight"
+  },
+  {
+    "forms": [
+      "venues"
+    ],
+    "list": "TSL",
+    "rank": 175,
+    "sfi": 56.59,
+    "u": 45.6,
+    "word": "venue"
+  },
+  {
+    "forms": [
+      "commuters"
+    ],
+    "list": "TSL",
+    "rank": 176,
+    "sfi": 56.59,
+    "u": 45.6,
+    "word": "commuter"
+  },
+  {
+    "forms": [
+      "logos"
+    ],
+    "list": "TSL",
+    "rank": 177,
+    "sfi": 56.52,
+    "u": 44.86,
+    "word": "logo"
+  },
+  {
+    "forms": [
+      "newsletters"
+    ],
+    "list": "TSL",
+    "rank": 178,
+    "sfi": 56.52,
+    "u": 44.86,
+    "word": "newsletter"
+  },
+  {
+    "forms": [
+      "advisors"
+    ],
+    "list": "TSL",
+    "rank": 179,
+    "sfi": 56.45,
+    "u": 44.13,
+    "word": "advisor"
+  },
+  {
+    "forms": [
+      "cartridges"
+    ],
+    "list": "TSL",
+    "rank": 180,
+    "sfi": 56.45,
+    "u": 44.13,
+    "word": "cartridge"
+  },
+  {
+    "forms": [
+      "cloudier",
+      "cloudiest"
+    ],
+    "list": "TSL",
+    "rank": 181,
+    "sfi": 56.45,
+    "u": 44.13,
+    "word": "cloudy"
+  },
+  {
+    "forms": [
+      "photographers"
+    ],
+    "list": "TSL",
+    "rank": 182,
+    "sfi": 56.45,
+    "u": 44.13,
+    "word": "photographer"
+  },
+  {
+    "forms": [
+      "shoppers"
+    ],
+    "list": "TSL",
+    "rank": 183,
+    "sfi": 56.45,
+    "u": 44.13,
+    "word": "shopper"
+  },
+  {
+    "forms": [
+      "tags",
+      "tagged",
+      "tagging"
+    ],
+    "list": "TSL",
+    "rank": 184,
+    "sfi": 56.45,
+    "u": 44.13,
+    "word": "tag"
+  },
+  {
+    "forms": [
+      "announcers"
+    ],
+    "list": "TSL",
+    "rank": 185,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "announcer"
+  },
+  {
+    "forms": [
+      "aspects"
+    ],
+    "list": "TSL",
+    "rank": 186,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "aspect"
+  },
+  {
+    "forms": [
+      "audits",
+      "audited",
+      "auditing"
+    ],
+    "list": "TSL",
+    "rank": 187,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "audit"
+  },
+  {
+    "forms": [
+      "contractors"
+    ],
+    "list": "TSL",
+    "rank": 188,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "contractor"
+  },
+  {
+    "forms": [
+      "downloads",
+      "downloaded",
+      "downloading"
+    ],
+    "list": "TSL",
+    "rank": 189,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "download"
+  },
+  {
+    "forms": [
+      "passwords"
+    ],
+    "list": "TSL",
+    "rank": 190,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "password"
+  },
+  {
+    "forms": [
+      "prohibits",
+      "prohibited",
+      "prohibiting"
+    ],
+    "list": "TSL",
+    "rank": 191,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "prohibit"
+  },
+  {
+    "forms": [
+      "stadiums"
+    ],
+    "list": "TSL",
+    "rank": 192,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "stadium"
+  },
+  {
+    "forms": [
+      "terminals"
+    ],
+    "list": "TSL",
+    "rank": 193,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "terminal"
+  },
+  {
+    "forms": [
+      "weekdays"
+    ],
+    "list": "TSL",
+    "rank": 194,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "weekday"
+  },
+  {
+    "forms": [
+      "bonuses"
+    ],
+    "list": "TSL",
+    "rank": 195,
+    "sfi": 56.3,
+    "u": 42.66,
+    "word": "bonus"
+  },
+  {
+    "forms": [
+      "carts",
+      "carted",
+      "carting"
+    ],
+    "list": "TSL",
+    "rank": 196,
+    "sfi": 56.3,
+    "u": 42.66,
+    "word": "cart"
+  },
+  {
+    "list": "TSL",
+    "rank": 197,
+    "sfi": 56.3,
+    "u": 42.66,
+    "word": "delicious"
+  },
+  {
+    "forms": [
+      "inks",
+      "inked",
+      "inking"
+    ],
+    "list": "TSL",
+    "rank": 198,
+    "sfi": 56.3,
+    "u": 42.66,
+    "word": "ink"
+  },
+  {
+    "forms": [
+      "supervises",
+      "supervised",
+      "supervising"
+    ],
+    "list": "TSL",
+    "rank": 199,
+    "sfi": 56.3,
+    "u": 42.66,
+    "word": "supervise"
+  },
+  {
+    "forms": [
+      "waitresses",
+      "waitressed",
+      "waitressing"
+    ],
+    "list": "TSL",
+    "rank": 200,
+    "sfi": 56.37,
+    "u": 43.39,
+    "word": "waitress"
+  },
+  {
+    "forms": [
+      "cleaners",
+      "cleanest"
+    ],
+    "list": "TSL",
+    "rank": 201,
+    "sfi": 56.22,
+    "u": 41.92,
+    "word": "cleaner"
+  },
+  {
+    "forms": [
+      "developers"
+    ],
+    "list": "TSL",
+    "rank": 202,
+    "sfi": 56.22,
+    "u": 41.92,
+    "word": "developer"
+  },
+  {
+    "forms": [
+      "headquarters",
+      "headquartered",
+      "headquartering"
+    ],
+    "list": "TSL",
+    "rank": 203,
+    "sfi": 56.22,
+    "u": 41.92,
+    "word": "headquarter"
+  },
+  {
+    "forms": [
+      "shuttles",
+      "shuttled",
+      "shuttling"
+    ],
+    "list": "TSL",
+    "rank": 204,
+    "sfi": 56.22,
+    "u": 41.92,
+    "word": "shuttle"
+  },
+  {
+    "list": "TSL",
+    "rank": 205,
+    "sfi": 56.22,
+    "u": 41.92,
+    "word": "stationery"
+  },
+  {
+    "forms": [
+      "subscribes",
+      "subscribed",
+      "subscribing"
+    ],
+    "list": "TSL",
+    "rank": 206,
+    "sfi": 56.22,
+    "u": 41.92,
+    "word": "subscribe"
+  },
+  {
+    "list": "TSL",
+    "rank": 207,
+    "sfi": 56.15,
+    "u": 41.19,
+    "word": "alike"
+  },
+  {
+    "forms": [
+      "flavors",
+      "flavored",
+      "flavoring",
+      "flavorings",
+      "flavour",
+      "flavours",
+      "flavoured",
+      "flavouring",
+      "flavourings"
+    ],
+    "list": "TSL",
+    "rank": 208,
+    "sfi": 56.15,
+    "u": 41.19,
+    "word": "flavor"
+  },
+  {
+    "forms": [
+      "picnics",
+      "picnicked",
+      "picnicking"
+    ],
+    "list": "TSL",
+    "rank": 209,
+    "sfi": 56.15,
+    "u": 41.19,
+    "word": "picnic"
+  },
+  {
+    "forms": [
+      "recipes"
+    ],
+    "list": "TSL",
+    "rank": 210,
+    "sfi": 56.15,
+    "u": 41.19,
+    "word": "recipe"
+  },
+  {
+    "forms": [
+      "refreshments"
+    ],
+    "list": "TSL",
+    "rank": 211,
+    "sfi": 56.15,
+    "u": 41.19,
+    "word": "refreshment"
+  },
+  {
+    "list": "TSL",
+    "rank": 212,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "administrative"
+  },
+  {
+    "forms": [
+      "authorized",
+      "authorizes",
+      "authorizing",
+      "authorise",
+      "authorises",
+      "authorised",
+      "authorising"
+    ],
+    "list": "TSL",
+    "rank": 213,
+    "sfi": 56.07,
+    "u": 40.45,
+    "word": "authorize"
+  },
+  {
+    "list": "TSL",
+    "rank": 214,
+    "sfi": 56.07,
+    "u": 40.45,
+    "word": "commonly"
+  },
+  {
+    "forms": [
+      "distributions"
+    ],
+    "list": "TSL",
+    "rank": 215,
+    "sfi": 56.07,
+    "u": 40.45,
+    "word": "distribution"
+  },
+  {
+    "forms": [
+      "sofas"
+    ],
+    "list": "TSL",
+    "rank": 216,
+    "sfi": 56.07,
+    "u": 40.45,
+    "word": "sofa"
+  },
+  {
+    "forms": [
+      "accommodates",
+      "accommodated",
+      "accommodating"
+    ],
+    "list": "TSL",
+    "rank": 217,
+    "sfi": 55.99,
+    "u": 39.71,
+    "word": "accommodate"
+  },
+  {
+    "list": "TSL",
+    "rank": 218,
+    "sfi": 55.99,
+    "u": 39.71,
+    "word": "affordable"
+  },
+  {
+    "forms": [
+      "annoys",
+      "annoyed",
+      "annoying"
+    ],
+    "list": "TSL",
+    "rank": 219,
+    "sfi": 55.99,
+    "u": 39.71,
+    "word": "annoy"
+  },
+  {
+    "forms": [
+      "commutes",
+      "commuted",
+      "commuting"
+    ],
+    "list": "TSL",
+    "rank": 220,
+    "sfi": 56.07,
+    "u": 40.45,
+    "word": "commute"
+  },
+  {
+    "forms": [
+      "coordinates",
+      "coordinated",
+      "coordinating"
+    ],
+    "list": "TSL",
+    "rank": 221,
+    "sfi": 56.07,
+    "u": 40.45,
+    "word": "coordinate"
+  },
+  {
+    "list": "TSL",
+    "rank": 222,
+    "sfi": 55.99,
+    "u": 39.71,
+    "word": "paperwork"
+  },
+  {
+    "forms": [
+      "quits",
+      "quitted",
+      "quitting"
+    ],
+    "list": "TSL",
+    "rank": 223,
+    "sfi": 55.99,
+    "u": 39.71,
+    "word": "quit"
+  },
+  {
+    "forms": [
+      "authorities"
+    ],
+    "list": "TSL",
+    "rank": 224,
+    "sfi": 55.91,
+    "u": 38.98,
+    "word": "authority"
+  },
+  {
+    "list": "TSL",
+    "rank": 225,
+    "sfi": 55.91,
+    "u": 38.98,
+    "word": "flu"
+  },
+  {
+    "forms": [
+      "captains",
+      "captained",
+      "captaining"
+    ],
+    "list": "TSL",
+    "rank": 226,
+    "sfi": 55.83,
+    "u": 38.24,
+    "word": "captain"
+  },
+  {
+    "forms": [
+      "installations"
+    ],
+    "list": "TSL",
+    "rank": 227,
+    "sfi": 55.83,
+    "u": 38.24,
+    "word": "installation"
+  },
+  {
+    "forms": [
+      "trainers"
+    ],
+    "list": "TSL",
+    "rank": 228,
+    "sfi": 55.83,
+    "u": 38.24,
+    "word": "trainer"
+  },
+  {
+    "forms": [
+      "availabilities"
+    ],
+    "list": "TSL",
+    "rank": 229,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "availability"
+  },
+  {
+    "forms": [
+      "bargains",
+      "bargained",
+      "bargaining"
+    ],
+    "list": "TSL",
+    "rank": 230,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "bargain"
+  },
+  {
+    "list": "TSL",
+    "rank": 231,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "complimentary"
+  },
+  {
+    "forms": [
+      "hikes",
+      "hiked",
+      "hiking"
+    ],
+    "list": "TSL",
+    "rank": 232,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "hike"
+  },
+  {
+    "forms": [
+      "midnights"
+    ],
+    "list": "TSL",
+    "rank": 233,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "midnight"
+  },
+  {
+    "forms": [
+      "productivities"
+    ],
+    "list": "TSL",
+    "rank": 234,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "productivity"
+  },
+  {
+    "forms": [
+      "rainier",
+      "rainiest"
+    ],
+    "list": "TSL",
+    "rank": 235,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "rainy"
+  },
+  {
+    "forms": [
+      "relocates",
+      "relocated",
+      "relocating"
+    ],
+    "list": "TSL",
+    "rank": 236,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "relocate"
+  },
+  {
+    "forms": [
+      "trainees"
+    ],
+    "list": "TSL",
+    "rank": 237,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "trainee"
+  },
+  {
+    "forms": [
+      "transactions"
+    ],
+    "list": "TSL",
+    "rank": 238,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "transaction"
+  },
+  {
+    "forms": [
+      "unhappier",
+      "unhappiest"
+    ],
+    "list": "TSL",
+    "rank": 239,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "unhappy"
+  },
+  {
+    "forms": [
+      "verifies",
+      "verified",
+      "verifying"
+    ],
+    "list": "TSL",
+    "rank": 240,
+    "sfi": 55.74,
+    "u": 37.51,
+    "word": "verify"
+  },
+  {
+    "forms": [
+      "automobiles"
+    ],
+    "list": "TSL",
+    "rank": 241,
+    "sfi": 55.66,
+    "u": 36.77,
+    "word": "automobile"
+  },
+  {
+    "forms": [
+      "couriers",
+      "couriered",
+      "couriering"
+    ],
+    "list": "TSL",
+    "rank": 242,
+    "sfi": 55.66,
+    "u": 36.77,
+    "word": "courier"
+  },
+  {
+    "list": "TSL",
+    "rank": 243,
+    "sfi": 55.66,
+    "u": 36.77,
+    "word": "incomplete"
+  },
+  {
+    "forms": [
+      "questionnaires"
+    ],
+    "list": "TSL",
+    "rank": 244,
+    "sfi": 55.66,
+    "u": 36.77,
+    "word": "questionnaire"
+  },
+  {
+    "forms": [
+      "baseballs"
+    ],
+    "list": "TSL",
+    "rank": 245,
+    "sfi": 55.57,
+    "u": 36.04,
+    "word": "baseball"
+  },
+  {
+    "forms": [
+      "docks",
+      "docked",
+      "docking",
+      "dockings"
+    ],
+    "list": "TSL",
+    "rank": 246,
+    "sfi": 55.57,
+    "u": 36.04,
+    "word": "dock"
+  },
+  {
+    "forms": [
+      "lamps"
+    ],
+    "list": "TSL",
+    "rank": 247,
+    "sfi": 55.57,
+    "u": 36.04,
+    "word": "lamp"
+  },
+  {
+    "list": "TSL",
+    "rank": 248,
+    "sfi": 55.57,
+    "u": 36.04,
+    "word": "lately"
+  },
+  {
+    "forms": [
+      "machineries"
+    ],
+    "list": "TSL",
+    "rank": 249,
+    "sfi": 55.57,
+    "u": 36.04,
+    "word": "machinery"
+  },
+  {
+    "forms": [
+      "presenters"
+    ],
+    "list": "TSL",
+    "rank": 250,
+    "sfi": 55.57,
+    "u": 36.04,
+    "word": "presenter"
+  },
+  {
+    "list": "TSL",
+    "rank": 251,
+    "sfi": 55.57,
+    "u": 36.04,
+    "word": "seldom"
+  },
+  {
+    "forms": [
+      "signatures"
+    ],
+    "list": "TSL",
+    "rank": 252,
+    "sfi": 55.57,
+    "u": 36.04,
+    "word": "signature"
+  },
+  {
+    "list": "TSL",
+    "rank": 253,
+    "sfi": 55.66,
+    "u": 36.77,
+    "word": "worldwide"
+  },
+  {
+    "forms": [
+      "carriers"
+    ],
+    "list": "TSL",
+    "rank": 254,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "carrier"
+  },
+  {
+    "forms": [
+      "designates",
+      "designated",
+      "designating"
+    ],
+    "list": "TSL",
+    "rank": 255,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "designate"
+  },
+  {
+    "forms": [
+      "exclusives"
+    ],
+    "list": "TSL",
+    "rank": 256,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "exclusive"
+  },
+  {
+    "forms": [
+      "groceries"
+    ],
+    "list": "TSL",
+    "rank": 257,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "grocery"
+  },
+  {
+    "list": "TSL",
+    "rank": 258,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "homework"
+  },
+  {
+    "forms": [
+      "memorandums",
+      "memoranda"
+    ],
+    "list": "TSL",
+    "rank": 259,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "memorandum"
+  },
+  {
+    "forms": [
+      "photocopiers"
+    ],
+    "list": "TSL",
+    "rank": 260,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "photocopier"
+  },
+  {
+    "forms": [
+      "suites"
+    ],
+    "list": "TSL",
+    "rank": 261,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "suite"
+  },
+  {
+    "list": "TSL",
+    "rank": 262,
+    "sfi": 55.57,
+    "u": 36.04,
+    "word": "thorough"
+  },
+  {
+    "forms": [
+      "bookstores"
+    ],
+    "list": "TSL",
+    "rank": 263,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "bookstore"
+  },
+  {
+    "forms": [
+      "caters",
+      "catered",
+      "catering",
+      "caterings"
+    ],
+    "list": "TSL",
+    "rank": 264,
+    "sfi": 55.48,
+    "u": 35.3,
+    "word": "cater"
+  },
+  {
+    "forms": [
+      "dentals"
+    ],
+    "list": "TSL",
+    "rank": 265,
+    "sfi": 55.39,
+    "u": 34.57,
+    "word": "dental"
+  },
+  {
+    "forms": [
+      "durations"
+    ],
+    "list": "TSL",
+    "rank": 266,
+    "sfi": 55.39,
+    "u": 34.57,
+    "word": "duration"
+  },
+  {
+    "forms": [
+      "lounges",
+      "lounged",
+      "lounging"
+    ],
+    "list": "TSL",
+    "rank": 267,
+    "sfi": 55.39,
+    "u": 34.57,
+    "word": "lounge"
+  },
+  {
+    "forms": [
+      "painters"
+    ],
+    "list": "TSL",
+    "rank": 268,
+    "sfi": 55.39,
+    "u": 34.57,
+    "word": "painter"
+  },
+  {
+    "forms": [
+      "patrons"
+    ],
+    "list": "TSL",
+    "rank": 269,
+    "sfi": 55.39,
+    "u": 34.57,
+    "word": "patron"
+  },
+  {
+    "forms": [
+      "prescriptions"
+    ],
+    "list": "TSL",
+    "rank": 270,
+    "sfi": 55.39,
+    "u": 34.57,
+    "word": "prescription"
+  },
+  {
+    "list": "TSL",
+    "rank": 271,
+    "sfi": 55.39,
+    "u": 34.57,
+    "word": "productive"
+  },
+  {
+    "forms": [
+      "salads"
+    ],
+    "list": "TSL",
+    "rank": 272,
+    "sfi": 55.39,
+    "u": 34.57,
+    "word": "salad"
+  },
+  {
+    "forms": [
+      "stacks",
+      "stacked",
+      "stacking"
+    ],
+    "list": "TSL",
+    "rank": 273,
+    "sfi": 55.39,
+    "u": 34.57,
+    "word": "stack"
+  },
+  {
+    "forms": [
+      "delegates",
+      "delegated",
+      "delegating"
+    ],
+    "list": "TSL",
+    "rank": 274,
+    "sfi": 55.29,
+    "u": 33.83,
+    "word": "delegate"
+  },
+  {
+    "forms": [
+      "salespersons"
+    ],
+    "list": "TSL",
+    "rank": 275,
+    "sfi": 55.29,
+    "u": 33.83,
+    "word": "salesperson"
+  },
+  {
+    "forms": [
+      "calculators"
+    ],
+    "list": "TSL",
+    "rank": 276,
+    "sfi": 55.2,
+    "u": 33.1,
+    "word": "calculator"
+  },
+  {
+    "forms": [
+      "completions"
+    ],
+    "list": "TSL",
+    "rank": 277,
+    "sfi": 55.2,
+    "u": 33.1,
+    "word": "completion"
+  },
+  {
+    "forms": [
+      "defects",
+      "defected",
+      "defecting"
+    ],
+    "list": "TSL",
+    "rank": 278,
+    "sfi": 55.2,
+    "u": 33.1,
+    "word": "defect"
+  },
+  {
+    "list": "TSL",
+    "rank": 279,
+    "sfi": 55.2,
+    "u": 33.1,
+    "word": "garbage"
+  },
+  {
+    "forms": [
+      "omits",
+      "omitting",
+      "omitted"
+    ],
+    "list": "TSL",
+    "rank": 280,
+    "sfi": 55.2,
+    "u": 33.1,
+    "word": "omit"
+  },
+  {
+    "list": "TSL",
+    "rank": 281,
+    "sfi": 55.2,
+    "u": 33.1,
+    "word": "spite"
+  },
+  {
+    "forms": [
+      "bathrooms"
+    ],
+    "list": "TSL",
+    "rank": 282,
+    "sfi": 55.1,
+    "u": 32.36,
+    "word": "bathroom"
+  },
+  {
+    "forms": [
+      "cabs"
+    ],
+    "list": "TSL",
+    "rank": 283,
+    "sfi": 55.1,
+    "u": 32.36,
+    "word": "cab"
+  },
+  {
+    "forms": [
+      "correspondences"
+    ],
+    "list": "TSL",
+    "rank": 284,
+    "sfi": 55.1,
+    "u": 32.36,
+    "word": "correspondence"
+  },
+  {
+    "forms": [
+      "ladders",
+      "laddered",
+      "laddering"
+    ],
+    "list": "TSL",
+    "rank": 285,
+    "sfi": 55.1,
+    "u": 32.36,
+    "word": "ladder"
+  },
+  {
+    "list": "TSL",
+    "rank": 286,
+    "sfi": 55.1,
+    "u": 32.36,
+    "word": "photography"
+  },
+  {
+    "forms": [
+      "sculptures",
+      "sculptured",
+      "sculpturing"
+    ],
+    "list": "TSL",
+    "rank": 287,
+    "sfi": 55.1,
+    "u": 32.36,
+    "word": "sculpture"
+  },
+  {
+    "forms": [
+      "anniversaries"
+    ],
+    "list": "TSL",
+    "rank": 288,
+    "sfi": 55.0,
+    "u": 31.62,
+    "word": "anniversary"
+  },
+  {
+    "forms": [
+      "buffets",
+      "buffeted",
+      "buffeting",
+      "buffetings"
+    ],
+    "list": "TSL",
+    "rank": 289,
+    "sfi": 55.1,
+    "u": 32.36,
+    "word": "buffet"
+  },
+  {
+    "list": "TSL",
+    "rank": 290,
+    "sfi": 55.0,
+    "u": 31.62,
+    "word": "defective"
+  },
+  {
+    "forms": [
+      "ice creams",
+      "ice-cream",
+      "ice-creams"
+    ],
+    "list": "TSL",
+    "rank": 291,
+    "sfi": 55.0,
+    "u": 31.62,
+    "word": "ice cream"
+  },
+  {
+    "forms": [
+      "leaks",
+      "leaked",
+      "leaking"
+    ],
+    "list": "TSL",
+    "rank": 292,
+    "sfi": 55.0,
+    "u": 31.62,
+    "word": "leak"
+  },
+  {
+    "forms": [
+      "occupancies"
+    ],
+    "list": "TSL",
+    "rank": 293,
+    "sfi": 55.0,
+    "u": 31.62,
+    "word": "occupancy"
+  },
+  {
+    "forms": [
+      "proficiencies"
+    ],
+    "list": "TSL",
+    "rank": 294,
+    "sfi": 55.0,
+    "u": 31.62,
+    "word": "proficiency"
+  },
+  {
+    "forms": [
+      "renewals"
+    ],
+    "list": "TSL",
+    "rank": 295,
+    "sfi": 55.0,
+    "u": 31.62,
+    "word": "renewal"
+  },
+  {
+    "list": "TSL",
+    "rank": 296,
+    "sfi": 55.0,
+    "u": 31.62,
+    "word": "urgent"
+  },
+  {
+    "list": "TSL",
+    "rank": 297,
+    "sfi": 54.9,
+    "u": 30.89,
+    "word": "annually"
+  },
+  {
+    "forms": [
+      "basketballs"
+    ],
+    "list": "TSL",
+    "rank": 298,
+    "sfi": 55.0,
+    "u": 31.62,
+    "word": "basketball"
+  },
+  {
+    "forms": [
+      "deletes",
+      "deleted",
+      "deleting"
+    ],
+    "list": "TSL",
+    "rank": 299,
+    "sfi": 54.9,
+    "u": 30.89,
+    "word": "delete"
+  },
+  {
+    "list": "TSL",
+    "rank": 300,
+    "sfi": 54.9,
+    "u": 30.89,
+    "word": "illogical"
+  },
+  {
+    "forms": [
+      "pets",
+      "petted",
+      "petting"
+    ],
+    "list": "TSL",
+    "rank": 301,
+    "sfi": 54.9,
+    "u": 30.89,
+    "word": "pet"
+  },
+  {
+    "forms": [
+      "textbooks"
+    ],
+    "list": "TSL",
+    "rank": 302,
+    "word": "textbook"
+  },
+  {
+    "list": "TSL",
+    "rank": 303,
+    "sfi": 54.79,
+    "u": 30.15,
+    "word": "accurately"
+  },
+  {
+    "forms": [
+      "cabins"
+    ],
+    "list": "TSL",
+    "rank": 304,
+    "sfi": 54.9,
+    "u": 30.89,
+    "word": "cabin"
+  },
+  {
+    "forms": [
+      "conductors"
+    ],
+    "list": "TSL",
+    "rank": 305,
+    "sfi": 54.79,
+    "u": 30.15,
+    "word": "conductor"
+  },
+  {
+    "forms": [
+      "inspectors"
+    ],
+    "list": "TSL",
+    "rank": 306,
+    "sfi": 54.79,
+    "u": 30.15,
+    "word": "inspector"
+  },
+  {
+    "forms": [
+      "interns",
+      "interned",
+      "interning"
+    ],
+    "list": "TSL",
+    "rank": 307,
+    "sfi": 54.79,
+    "u": 30.15,
+    "word": "intern"
+  },
+  {
+    "forms": [
+      "semesters"
+    ],
+    "list": "TSL",
+    "rank": 308,
+    "word": "semester"
+  },
+  {
+    "forms": [
+      "confirmations"
+    ],
+    "list": "TSL",
+    "rank": 309,
+    "sfi": 54.69,
+    "u": 29.42,
+    "word": "confirmation"
+  },
+  {
+    "forms": [
+      "congratulations"
+    ],
+    "list": "TSL",
+    "rank": 310,
+    "sfi": 54.69,
+    "u": 29.42,
+    "word": "congratulation"
+  },
+  {
+    "list": "TSL",
+    "rank": 311,
+    "sfi": 54.69,
+    "u": 29.42,
+    "word": "expertise"
+  },
+  {
+    "forms": [
+      "graphs",
+      "graphed",
+      "graphing"
+    ],
+    "list": "TSL",
+    "rank": 312,
+    "sfi": 54.69,
+    "u": 29.42,
+    "word": "graph"
+  },
+  {
+    "forms": [
+      "takers"
+    ],
+    "list": "TSL",
+    "rank": 313,
+    "sfi": 54.69,
+    "u": 29.42,
+    "word": "taker"
+  },
+  {
+    "forms": [
+      "utilities"
+    ],
+    "list": "TSL",
+    "rank": 314,
+    "sfi": 54.69,
+    "u": 29.42,
+    "word": "utility"
+  },
+  {
+    "forms": [
+      "vouchers"
+    ],
+    "list": "TSL",
+    "rank": 315,
+    "sfi": 54.69,
+    "u": 29.42,
+    "word": "voucher"
+  },
+  {
+    "forms": [
+      "bankers"
+    ],
+    "list": "TSL",
+    "rank": 316,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "banker"
+  },
+  {
+    "list": "TSL",
+    "rank": 317,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "behalf"
+  },
+  {
+    "forms": [
+      "minimizes",
+      "minimized",
+      "minimizing",
+      "minimise",
+      "minimises",
+      "minimised",
+      "minimising"
+    ],
+    "list": "TSL",
+    "rank": 318,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "minimize"
+  },
+  {
+    "list": "TSL",
+    "rank": 319,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "optional"
+  },
+  {
+    "forms": [
+      "paychecks"
+    ],
+    "list": "TSL",
+    "rank": 320,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "paycheck"
+  },
+  {
+    "forms": [
+      "politer",
+      "politest"
+    ],
+    "list": "TSL",
+    "rank": 321,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "polite"
+  },
+  {
+    "list": "TSL",
+    "rank": 322,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "protective"
+  },
+  {
+    "forms": [
+      "sellers"
+    ],
+    "list": "TSL",
+    "rank": 323,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "seller"
+  },
+  {
+    "forms": [
+      "sidewalks"
+    ],
+    "list": "TSL",
+    "rank": 324,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "sidewalk"
+  },
+  {
+    "forms": [
+      "sightseeing"
+    ],
+    "list": "TSL",
+    "rank": 325,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "sightsee"
+  },
+  {
+    "forms": [
+      "soups"
+    ],
+    "list": "TSL",
+    "rank": 326,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "soup"
+  },
+  {
+    "forms": [
+      "transits",
+      "transited",
+      "transiting"
+    ],
+    "list": "TSL",
+    "rank": 327,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "transit"
+  },
+  {
+    "forms": [
+      "wallets"
+    ],
+    "list": "TSL",
+    "rank": 328,
+    "sfi": 54.58,
+    "u": 28.68,
+    "word": "wallet"
+  },
+  {
+    "forms": [
+      "cashiers",
+      "cashiered",
+      "cashiering"
+    ],
+    "list": "TSL",
+    "rank": 329,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "cashier"
+  },
+  {
+    "forms": [
+      "casuals"
+    ],
+    "list": "TSL",
+    "rank": 330,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "casual"
+  },
+  {
+    "forms": [
+      "drills",
+      "drilled",
+      "drilling",
+      "drillings"
+    ],
+    "list": "TSL",
+    "rank": 331,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "drill"
+  },
+  {
+    "forms": [
+      "fountains"
+    ],
+    "list": "TSL",
+    "rank": 332,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "fountain"
+  },
+  {
+    "forms": [
+      "juices",
+      "juiced",
+      "juicing"
+    ],
+    "list": "TSL",
+    "rank": 333,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "juice"
+  },
+  {
+    "forms": [
+      "lanes"
+    ],
+    "list": "TSL",
+    "rank": 334,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "lane"
+  },
+  {
+    "list": "TSL",
+    "rank": 335,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "popularity"
+  },
+  {
+    "forms": [
+      "posters"
+    ],
+    "list": "TSL",
+    "rank": 336,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "poster"
+  },
+  {
+    "list": "TSL",
+    "rank": 337,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "promptly"
+  },
+  {
+    "forms": [
+      "retailers"
+    ],
+    "list": "TSL",
+    "rank": 338,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "retailer"
+  },
+  {
+    "forms": [
+      "vacancies"
+    ],
+    "list": "TSL",
+    "rank": 339,
+    "sfi": 54.46,
+    "u": 27.95,
+    "word": "vacancy"
+  },
+  {
+    "forms": [
+      "benches",
+      "benched",
+      "benching"
+    ],
+    "list": "TSL",
+    "rank": 340,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "bench"
+  },
+  {
+    "list": "TSL",
+    "rank": 341,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "cumulative"
+  },
+  {
+    "forms": [
+      "directories"
+    ],
+    "list": "TSL",
+    "rank": 342,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "directory"
+  },
+  {
+    "forms": [
+      "disposals"
+    ],
+    "list": "TSL",
+    "rank": 343,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "disposal"
+  },
+  {
+    "forms": [
+      "housekeepers"
+    ],
+    "list": "TSL",
+    "rank": 344,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "housekeeper"
+  },
+  {
+    "forms": [
+      "internships"
+    ],
+    "list": "TSL",
+    "rank": 345,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "internship"
+  },
+  {
+    "list": "TSL",
+    "rank": 346,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "knowledgeable"
+  },
+  {
+    "forms": [
+      "organizers",
+      "organiser",
+      "organisers"
+    ],
+    "list": "TSL",
+    "rank": 347,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "organizer"
+  },
+  {
+    "list": "TSL",
+    "rank": 348,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "overdue"
+  },
+  {
+    "forms": [
+      "predictions"
+    ],
+    "list": "TSL",
+    "rank": 349,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "prediction"
+  },
+  {
+    "forms": [
+      "subscribers"
+    ],
+    "list": "TSL",
+    "rank": 350,
+    "sfi": 54.35,
+    "u": 27.21,
+    "word": "subscriber"
+  },
+  {
+    "forms": [
+      "booklets"
+    ],
+    "list": "TSL",
+    "rank": 351,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "booklet"
+  },
+  {
+    "forms": [
+      "conditioners"
+    ],
+    "list": "TSL",
+    "rank": 352,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "conditioner"
+  },
+  {
+    "forms": [
+      "enrolls",
+      "enrolled",
+      "enrolling"
+    ],
+    "list": "TSL",
+    "rank": 353,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "enroll"
+  },
+  {
+    "forms": [
+      "frustrates",
+      "frustrated",
+      "frustrating"
+    ],
+    "list": "TSL",
+    "rank": 354,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "frustrate"
+  },
+  {
+    "forms": [
+      "garments"
+    ],
+    "list": "TSL",
+    "rank": 355,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "garment"
+  },
+  {
+    "forms": [
+      "orientations"
+    ],
+    "list": "TSL",
+    "rank": 356,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "orientation"
+  },
+  {
+    "forms": [
+      "outlets"
+    ],
+    "list": "TSL",
+    "rank": 357,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "outlet"
+  },
+  {
+    "forms": [
+      "packets"
+    ],
+    "list": "TSL",
+    "rank": 358,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "packet"
+  },
+  {
+    "forms": [
+      "plumbers"
+    ],
+    "list": "TSL",
+    "rank": 359,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "plumber"
+  },
+  {
+    "forms": [
+      "specifications"
+    ],
+    "list": "TSL",
+    "rank": 360,
+    "sfi": 54.23,
+    "u": 26.48,
+    "word": "specification"
+  },
+  {
+    "forms": [
+      "autos"
+    ],
+    "list": "TSL",
+    "rank": 361,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "auto"
+  },
+  {
+    "forms": [
+      "decorates",
+      "decorated",
+      "decorating"
+    ],
+    "list": "TSL",
+    "rank": 362,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "decorate"
+  },
+  {
+    "forms": [
+      "deductions"
+    ],
+    "list": "TSL",
+    "rank": 363,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "deduction"
+  },
+  {
+    "list": "TSL",
+    "rank": 364,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "definite"
+  },
+  {
+    "list": "TSL",
+    "rank": 365,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "economical"
+  },
+  {
+    "list": "TSL",
+    "rank": 366,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "efficiently"
+  },
+  {
+    "forms": [
+      "flyers"
+    ],
+    "list": "TSL",
+    "rank": 367,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "flyer"
+  },
+  {
+    "forms": [
+      "franchises",
+      "franchised",
+      "franchising"
+    ],
+    "list": "TSL",
+    "rank": 368,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "franchise"
+  },
+  {
+    "list": "TSL",
+    "rank": 369,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "generous"
+  },
+  {
+    "forms": [
+      "interrupts",
+      "interrupted",
+      "interrupting"
+    ],
+    "list": "TSL",
+    "rank": 370,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "interrupt"
+  },
+  {
+    "forms": [
+      "ovens"
+    ],
+    "list": "TSL",
+    "rank": 371,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "oven"
+  },
+  {
+    "forms": [
+      "pants",
+      "panted",
+      "panting"
+    ],
+    "list": "TSL",
+    "rank": 372,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "pant"
+  },
+  {
+    "list": "TSL",
+    "rank": 373,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "profitable"
+  },
+  {
+    "forms": [
+      "refrigerators"
+    ],
+    "list": "TSL",
+    "rank": 374,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "refrigerator"
+  },
+  {
+    "forms": [
+      "reimburses",
+      "reimbursed",
+      "reimbursing"
+    ],
+    "list": "TSL",
+    "rank": 375,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "reimburse"
+  },
+  {
+    "forms": [
+      "showrooms"
+    ],
+    "list": "TSL",
+    "rank": 376,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "showroom"
+  },
+  {
+    "forms": [
+      "vegetarians"
+    ],
+    "list": "TSL",
+    "rank": 377,
+    "sfi": 54.11,
+    "u": 25.74,
+    "word": "vegetarian"
+  },
+  {
+    "forms": [
+      "administrators"
+    ],
+    "list": "TSL",
+    "rank": 378,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "administrator"
+  },
+  {
+    "forms": [
+      "brokers",
+      "brokered",
+      "brokering"
+    ],
+    "list": "TSL",
+    "rank": 379,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "broker"
+  },
+  {
+    "forms": [
+      "cancellations"
+    ],
+    "list": "TSL",
+    "rank": 380,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "cancellation"
+  },
+  {
+    "list": "TSL",
+    "rank": 381,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "confidential"
+  },
+  {
+    "forms": [
+      "jets",
+      "jetted",
+      "jetting"
+    ],
+    "list": "TSL",
+    "rank": 382,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "jet"
+  },
+  {
+    "list": "TSL",
+    "rank": 383,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "realistic"
+  },
+  {
+    "list": "TSL",
+    "rank": 384,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "thoroughly"
+  },
+  {
+    "forms": [
+      "trashes",
+      "trashed",
+      "trashing"
+    ],
+    "list": "TSL",
+    "rank": 385,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "trash"
+  },
+  {
+    "forms": [
+      "usages"
+    ],
+    "list": "TSL",
+    "rank": 386,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "usage"
+  },
+  {
+    "forms": [
+      "windier",
+      "windiest"
+    ],
+    "list": "TSL",
+    "rank": 387,
+    "sfi": 53.98,
+    "u": 25.01,
+    "word": "windy"
+  },
+  {
+    "forms": [
+      "automates",
+      "automated",
+      "automating"
+    ],
+    "list": "TSL",
+    "rank": 388,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "automate"
+  },
+  {
+    "forms": [
+      "ferries",
+      "ferried",
+      "ferrying"
+    ],
+    "list": "TSL",
+    "rank": 389,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "ferry"
+  },
+  {
+    "forms": [
+      "finalizes",
+      "finalized",
+      "finalizing",
+      "finalise",
+      "finalises",
+      "finalised",
+      "finalising"
+    ],
+    "list": "TSL",
+    "rank": 390,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "finalize"
+  },
+  {
+    "forms": [
+      "incurs",
+      "incurred",
+      "incurring"
+    ],
+    "list": "TSL",
+    "rank": 391,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "incur"
+  },
+  {
+    "forms": [
+      "instructs",
+      "instructed",
+      "instructing"
+    ],
+    "list": "TSL",
+    "rank": 392,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "instruct"
+  },
+  {
+    "list": "TSL",
+    "rank": 393,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "loyal"
+  },
+  {
+    "forms": [
+      "luncheons"
+    ],
+    "list": "TSL",
+    "rank": 394,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "luncheon"
+  },
+  {
+    "forms": [
+      "microphones"
+    ],
+    "list": "TSL",
+    "rank": 395,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "microphone"
+  },
+  {
+    "forms": [
+      "overviews",
+      "overviewed"
+    ],
+    "list": "TSL",
+    "rank": 396,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "overview"
+  },
+  {
+    "forms": [
+      "projectors"
+    ],
+    "list": "TSL",
+    "rank": 397,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "projector"
+  },
+  {
+    "forms": [
+      "shortages"
+    ],
+    "list": "TSL",
+    "rank": 398,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "shortage"
+  },
+  {
+    "list": "TSL",
+    "rank": 399,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "spacious"
+  },
+  {
+    "forms": [
+      "accomplishments"
+    ],
+    "list": "TSL",
+    "rank": 400,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "accomplishment"
+  },
+  {
+    "forms": [
+      "accustoms",
+      "accustomed",
+      "accustoming"
+    ],
+    "list": "TSL",
+    "rank": 401,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "accustom"
+  },
+  {
+    "forms": [
+      "clinics"
+    ],
+    "list": "TSL",
+    "rank": 402,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "clinic"
+  },
+  {
+    "forms": [
+      "desktops"
+    ],
+    "list": "TSL",
+    "rank": 403,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "desktop"
+  },
+  {
+    "forms": [
+      "jogs",
+      "jogged",
+      "jogging",
+      "joggings"
+    ],
+    "list": "TSL",
+    "rank": 404,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "jog"
+  },
+  {
+    "list": "TSL",
+    "rank": 405,
+    "sfi": 53.85,
+    "u": 24.27,
+    "word": "leisure"
+  },
+  {
+    "forms": [
+      "naps",
+      "napped",
+      "napping"
+    ],
+    "list": "TSL",
+    "rank": 406,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "nap"
+  },
+  {
+    "forms": [
+      "reinforces",
+      "reinforced",
+      "reinforcing"
+    ],
+    "list": "TSL",
+    "rank": 407,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "reinforce"
+  },
+  {
+    "forms": [
+      "senders"
+    ],
+    "list": "TSL",
+    "rank": 408,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "sender"
+  },
+  {
+    "forms": [
+      "vacuums",
+      "vacuumed",
+      "vacuuming"
+    ],
+    "list": "TSL",
+    "rank": 409,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "vacuum"
+  },
+  {
+    "forms": [
+      "wirelesses"
+    ],
+    "list": "TSL",
+    "rank": 410,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "wireless"
+  },
+  {
+    "list": "TSL",
+    "rank": 411,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "yearly"
+  },
+  {
+    "forms": [
+      "appreciations"
+    ],
+    "list": "TSL",
+    "rank": 412,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "appreciation"
+  },
+  {
+    "forms": [
+      "cargoes",
+      "cargos"
+    ],
+    "list": "TSL",
+    "rank": 413,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "cargo"
+  },
+  {
+    "forms": [
+      "cooperates",
+      "cooperated",
+      "cooperating"
+    ],
+    "list": "TSL",
+    "rank": 414,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "cooperate"
+  },
+  {
+    "forms": [
+      "distracts",
+      "distracted",
+      "distracting"
+    ],
+    "list": "TSL",
+    "rank": 415,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "distract"
+  },
+  {
+    "forms": [
+      "dividends"
+    ],
+    "list": "TSL",
+    "rank": 416,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "dividend"
+  },
+  {
+    "forms": [
+      "exemptions"
+    ],
+    "list": "TSL",
+    "rank": 417,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "exemption"
+  },
+  {
+    "forms": [
+      "furnishes",
+      "furnished",
+      "furnishing",
+      "furnishings"
+    ],
+    "list": "TSL",
+    "rank": 418,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "furnish"
+  },
+  {
+    "list": "TSL",
+    "rank": 419,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "hourly"
+  },
+  {
+    "forms": [
+      "laundries"
+    ],
+    "list": "TSL",
+    "rank": 420,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "laundry"
+  },
+  {
+    "list": "TSL",
+    "rank": 421,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "mandatory"
+  },
+  {
+    "forms": [
+      "mechanicals"
+    ],
+    "list": "TSL",
+    "rank": 422,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "mechanical"
+  },
+  {
+    "forms": [
+      "pharmacies"
+    ],
+    "list": "TSL",
+    "rank": 423,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "pharmacy"
+  },
+  {
+    "list": "TSL",
+    "rank": 424,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "promotional"
+  },
+  {
+    "list": "TSL",
+    "rank": 425,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "quarterly"
+  },
+  {
+    "list": "TSL",
+    "rank": 426,
+    "sfi": 53.72,
+    "u": 23.53,
+    "word": "residential"
+  },
+  {
+    "forms": [
+      "scholarships"
+    ],
+    "list": "TSL",
+    "rank": 427,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "scholarship"
+  },
+  {
+    "forms": [
+      "seekers"
+    ],
+    "list": "TSL",
+    "rank": 428,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "seeker"
+  },
+  {
+    "list": "TSL",
+    "rank": 429,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "temporarily"
+  },
+  {
+    "forms": [
+      "towels"
+    ],
+    "list": "TSL",
+    "rank": 430,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "towel"
+  },
+  {
+    "list": "TSL",
+    "rank": 431,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "unattended"
+  },
+  {
+    "list": "TSL",
+    "rank": 432,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "accessible"
+  },
+  {
+    "forms": [
+      "afterwards"
+    ],
+    "list": "TSL",
+    "rank": 433,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "afterward"
+  },
+  {
+    "forms": [
+      "apologies"
+    ],
+    "list": "TSL",
+    "rank": 434,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "apology"
+  },
+  {
+    "forms": [
+      "assembles",
+      "assembled",
+      "assembling"
+    ],
+    "list": "TSL",
+    "rank": 435,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "assemble"
+  },
+  {
+    "forms": [
+      "automatics"
+    ],
+    "list": "TSL",
+    "rank": 436,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "automatic"
+  },
+  {
+    "forms": [
+      "boardrooms"
+    ],
+    "list": "TSL",
+    "rank": 437,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "boardroom"
+  },
+  {
+    "forms": [
+      "carpenters",
+      "carpentered",
+      "carpentering"
+    ],
+    "list": "TSL",
+    "rank": 438,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "carpenter"
+  },
+  {
+    "forms": [
+      "caterers"
+    ],
+    "list": "TSL",
+    "rank": 439,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "caterer"
+  },
+  {
+    "forms": [
+      "classifies",
+      "classified",
+      "classifying"
+    ],
+    "list": "TSL",
+    "rank": 440,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "classify"
+  },
+  {
+    "forms": [
+      "consultations"
+    ],
+    "list": "TSL",
+    "rank": 441,
+    "sfi": 53.58,
+    "u": 22.8,
+    "word": "consultation"
+  },
+  {
+    "forms": [
+      "durables"
+    ],
+    "list": "TSL",
+    "rank": 442,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "durable"
+  },
+  {
+    "forms": [
+      "gloves",
+      "gloved"
+    ],
+    "list": "TSL",
+    "rank": 443,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "glove"
+  },
+  {
+    "list": "TSL",
+    "rank": 444,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "hardware"
+  },
+  {
+    "forms": [
+      "malfunctions",
+      "malfunctioned",
+      "malfunctioning"
+    ],
+    "list": "TSL",
+    "rank": 445,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "malfunction"
+  },
+  {
+    "list": "TSL",
+    "rank": 446,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "outdated"
+  },
+  {
+    "list": "TSL",
+    "rank": 447,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "patience"
+  },
+  {
+    "forms": [
+      "postcards"
+    ],
+    "list": "TSL",
+    "rank": 448,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "postcard"
+  },
+  {
+    "list": "TSL",
+    "rank": 449,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "prospective"
+  },
+  {
+    "forms": [
+      "revisions"
+    ],
+    "list": "TSL",
+    "rank": 450,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "revision"
+  },
+  {
+    "list": "TSL",
+    "rank": 451,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "strictly"
+  },
+  {
+    "forms": [
+      "tomatoes"
+    ],
+    "list": "TSL",
+    "rank": 452,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "tomato"
+  },
+  {
+    "forms": [
+      "trays"
+    ],
+    "list": "TSL",
+    "rank": 453,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "tray"
+  },
+  {
+    "forms": [
+      "vendors"
+    ],
+    "list": "TSL",
+    "rank": 454,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "vendor"
+  },
+  {
+    "forms": [
+      "withdrawals"
+    ],
+    "list": "TSL",
+    "rank": 455,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "withdrawal"
+  },
+  {
+    "list": "TSL",
+    "rank": 456,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "anytime"
+  },
+  {
+    "forms": [
+      "badges"
+    ],
+    "list": "TSL",
+    "rank": 457,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "badge"
+  },
+  {
+    "forms": [
+      "brakes",
+      "braked",
+      "braking"
+    ],
+    "list": "TSL",
+    "rank": 458,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "brake"
+  },
+  {
+    "forms": [
+      "calculations"
+    ],
+    "list": "TSL",
+    "rank": 459,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "calculation"
+  },
+  {
+    "forms": [
+      "coordinators"
+    ],
+    "list": "TSL",
+    "rank": 460,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "coordinator"
+  },
+  {
+    "forms": [
+      "costlier",
+      "costliest"
+    ],
+    "list": "TSL",
+    "rank": 461,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "costly"
+  },
+  {
+    "forms": [
+      "equips",
+      "equipped",
+      "equipping"
+    ],
+    "list": "TSL",
+    "rank": 462,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "equip"
+  },
+  {
+    "forms": [
+      "excursions"
+    ],
+    "list": "TSL",
+    "rank": 463,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "excursion"
+  },
+  {
+    "list": "TSL",
+    "rank": 464,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "graphic"
+  },
+  {
+    "forms": [
+      "inexperienced"
+    ],
+    "list": "TSL",
+    "rank": 465,
+    "sfi": 53.44,
+    "u": 22.06,
+    "word": "inexperience"
+  },
+  {
+    "forms": [
+      "lengthier",
+      "lengthiest"
+    ],
+    "list": "TSL",
+    "rank": 466,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "lengthy"
+  },
+  {
+    "forms": [
+      "librarians"
+    ],
+    "list": "TSL",
+    "rank": 467,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "librarian"
+  },
+  {
+    "list": "TSL",
+    "rank": 468,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "meantime"
+  },
+  {
+    "forms": [
+      "merges",
+      "merged",
+      "merging"
+    ],
+    "list": "TSL",
+    "rank": 469,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "merge"
+  },
+  {
+    "forms": [
+      "performers"
+    ],
+    "list": "TSL",
+    "rank": 470,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "performer"
+  },
+  {
+    "forms": [
+      "pharmacists"
+    ],
+    "list": "TSL",
+    "rank": 471,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "pharmacist"
+  },
+  {
+    "forms": [
+      "pizzas"
+    ],
+    "list": "TSL",
+    "rank": 472,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "pizza"
+  },
+  {
+    "forms": [
+      "resignations"
+    ],
+    "list": "TSL",
+    "rank": 473,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "resignation"
+  },
+  {
+    "forms": [
+      "reviewers"
+    ],
+    "list": "TSL",
+    "rank": 474,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "reviewer"
+  },
+  {
+    "forms": [
+      "terminates",
+      "terminated",
+      "terminating"
+    ],
+    "list": "TSL",
+    "rank": 475,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "terminate"
+  },
+  {
+    "forms": [
+      "translations"
+    ],
+    "list": "TSL",
+    "rank": 476,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "translation"
+  },
+  {
+    "list": "TSL",
+    "rank": 477,
+    "sfi": 53.29,
+    "u": 21.33,
+    "word": "unfamiliar"
+  },
+  {
+    "forms": [
+      "actresses"
+    ],
+    "list": "TSL",
+    "rank": 478,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "actress"
+  },
+  {
+    "list": "TSL",
+    "rank": 479,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "adjacent"
+  },
+  {
+    "forms": [
+      "alternates",
+      "alternated",
+      "alternating"
+    ],
+    "list": "TSL",
+    "rank": 480,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "alternate"
+  },
+  {
+    "forms": [
+      "congratulates",
+      "congratulated",
+      "congratulating"
+    ],
+    "list": "TSL",
+    "rank": 481,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "congratulate"
+  },
+  {
+    "forms": [
+      "escorts",
+      "escorted",
+      "escorting"
+    ],
+    "list": "TSL",
+    "rank": 482,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "escort"
+  },
+  {
+    "list": "TSL",
+    "rank": 483,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "inexpensive"
+  },
+  {
+    "forms": [
+      "masks",
+      "masked",
+      "masking"
+    ],
+    "list": "TSL",
+    "rank": 484,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "mask"
+  },
+  {
+    "forms": [
+      "purchasers"
+    ],
+    "list": "TSL",
+    "rank": 485,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "purchaser"
+  },
+  {
+    "forms": [
+      "purses",
+      "pursed",
+      "pursing"
+    ],
+    "list": "TSL",
+    "rank": 486,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "purse"
+  },
+  {
+    "forms": [
+      "realtors"
+    ],
+    "list": "TSL",
+    "rank": 487,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "realtor"
+  },
+  {
+    "forms": [
+      "rearranges",
+      "rearranged",
+      "rearranging"
+    ],
+    "list": "TSL",
+    "rank": 488,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "rearrange"
+  },
+  {
+    "forms": [
+      "reopens",
+      "reopened",
+      "reopening"
+    ],
+    "list": "TSL",
+    "rank": 489,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "reopen"
+  },
+  {
+    "forms": [
+      "soaps",
+      "soaped",
+      "soaping"
+    ],
+    "list": "TSL",
+    "rank": 490,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "soap"
+  },
+  {
+    "forms": [
+      "spokespersons",
+      "spokespeople"
+    ],
+    "list": "TSL",
+    "rank": 491,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "spokesperson"
+  },
+  {
+    "forms": [
+      "superiors"
+    ],
+    "list": "TSL",
+    "rank": 492,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "superior"
+  },
+  {
+    "forms": [
+      "airfares"
+    ],
+    "list": "TSL",
+    "rank": 493,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "airfare"
+  },
+  {
+    "forms": [
+      "bakes",
+      "baked",
+      "baking"
+    ],
+    "list": "TSL",
+    "rank": 494,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "bake"
+  },
+  {
+    "forms": [
+      "businesspersons",
+      "businesspeople"
+    ],
+    "list": "TSL",
+    "rank": 495,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "businessperson"
+  },
+  {
+    "list": "TSL",
+    "rank": 496,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "considerably"
+  },
+  {
+    "list": "TSL",
+    "rank": 497,
+    "sfi": 53.14,
+    "u": 20.59,
+    "word": "faulty"
+  },
+  {
+    "forms": [
+      "hobbies"
+    ],
+    "list": "TSL",
+    "rank": 498,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "hobby"
+  },
+  {
+    "list": "TSL",
+    "rank": 499,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "informal"
+  },
+  {
+    "forms": [
+      "kilometers",
+      "kilometres",
+      "kilometre"
+    ],
+    "list": "TSL",
+    "rank": 500,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "kilometer"
+  },
+  {
+    "forms": [
+      "lawns"
+    ],
+    "list": "TSL",
+    "rank": 501,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "lawn"
+  },
+  {
+    "forms": [
+      "microscopes"
+    ],
+    "list": "TSL",
+    "rank": 502,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "microscope"
+  },
+  {
+    "forms": [
+      "misleads",
+      "misled",
+      "misleading"
+    ],
+    "list": "TSL",
+    "rank": 503,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "mislead"
+  },
+  {
+    "forms": [
+      "misplaces",
+      "misplaced",
+      "misplacing"
+    ],
+    "list": "TSL",
+    "rank": 504,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "misplace"
+  },
+  {
+    "forms": [
+      "newsstands"
+    ],
+    "list": "TSL",
+    "rank": 505,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "newsstand"
+  },
+  {
+    "forms": [
+      "overheads"
+    ],
+    "list": "TSL",
+    "rank": 506,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "overhead"
+  },
+  {
+    "forms": [
+      "portfolios"
+    ],
+    "list": "TSL",
+    "rank": 507,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "portfolio"
+  },
+  {
+    "forms": [
+      "racks",
+      "racked",
+      "racking"
+    ],
+    "list": "TSL",
+    "rank": 508,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "rack"
+  },
+  {
+    "forms": [
+      "remodels",
+      "remodeled",
+      "remodeling",
+      "remodelled",
+      "remodelling"
+    ],
+    "list": "TSL",
+    "rank": 509,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "remodel"
+  },
+  {
+    "list": "TSL",
+    "rank": 510,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "statistics"
+  },
+  {
+    "forms": [
+      "tunnels",
+      "tunneled",
+      "tunneling",
+      "tunnelled",
+      "tunnelling"
+    ],
+    "list": "TSL",
+    "rank": 511,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "tunnel"
+  },
+  {
+    "list": "TSL",
+    "rank": 512,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "unlimited"
+  },
+  {
+    "forms": [
+      "vitamins"
+    ],
+    "list": "TSL",
+    "rank": 513,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "vitamin"
+  },
+  {
+    "forms": [
+      "zoos"
+    ],
+    "list": "TSL",
+    "rank": 514,
+    "sfi": 52.98,
+    "u": 19.86,
+    "word": "zoo"
+  },
+  {
+    "forms": [
+      "alerts",
+      "alerted",
+      "alerting"
+    ],
+    "list": "TSL",
+    "rank": 515,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "alert"
+  },
+  {
+    "forms": [
+      "auditoriums"
+    ],
+    "list": "TSL",
+    "rank": 516,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "auditorium"
+  },
+  {
+    "forms": [
+      "celebrities"
+    ],
+    "list": "TSL",
+    "rank": 517,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "celebrity"
+  },
+  {
+    "forms": [
+      "deducts",
+      "deducted",
+      "deducting"
+    ],
+    "list": "TSL",
+    "rank": 518,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "deduct"
+  },
+  {
+    "forms": [
+      "disruptions"
+    ],
+    "list": "TSL",
+    "rank": 519,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "disruption"
+  },
+  {
+    "forms": [
+      "electricians"
+    ],
+    "list": "TSL",
+    "rank": 520,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "electrician"
+  },
+  {
+    "list": "TSL",
+    "rank": 521,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "enthusiastic"
+  },
+  {
+    "forms": [
+      "graduations"
+    ],
+    "list": "TSL",
+    "rank": 522,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "graduation"
+  },
+  {
+    "forms": [
+      "icier"
+    ],
+    "list": "TSL",
+    "rank": 523,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "icy"
+  },
+  {
+    "forms": [
+      "irregulars"
+    ],
+    "list": "TSL",
+    "rank": 524,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "irregular"
+  },
+  {
+    "forms": [
+      "logins",
+      "log in",
+      "logs in",
+      "logged in",
+      "logging in",
+      "loggings in"
+    ],
+    "list": "TSL",
+    "rank": 525,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "login"
+  },
+  {
+    "list": "TSL",
+    "rank": 526,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "managerial"
+  },
+  {
+    "forms": [
+      "minerals"
+    ],
+    "list": "TSL",
+    "rank": 527,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "mineral"
+  },
+  {
+    "forms": [
+      "motorcycles"
+    ],
+    "list": "TSL",
+    "rank": 528,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "motorcycle"
+  },
+  {
+    "forms": [
+      "necessities"
+    ],
+    "list": "TSL",
+    "rank": 529,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "necessity"
+  },
+  {
+    "forms": [
+      "planners"
+    ],
+    "list": "TSL",
+    "rank": 530,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "planner"
+  },
+  {
+    "forms": [
+      "programmers"
+    ],
+    "list": "TSL",
+    "rank": 531,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "programmer"
+  },
+  {
+    "forms": [
+      "proofreads",
+      "proofreading"
+    ],
+    "list": "TSL",
+    "rank": 532,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "proofread"
+  },
+  {
+    "forms": [
+      "recruiters"
+    ],
+    "list": "TSL",
+    "rank": 533,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "recruiter"
+  },
+  {
+    "forms": [
+      "remainders",
+      "remaindered",
+      "remaindering"
+    ],
+    "list": "TSL",
+    "rank": 534,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "remainder"
+  },
+  {
+    "forms": [
+      "statues"
+    ],
+    "list": "TSL",
+    "rank": 535,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "statue"
+  },
+  {
+    "list": "TSL",
+    "rank": 536,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "steadily"
+  },
+  {
+    "forms": [
+      "stockholders"
+    ],
+    "list": "TSL",
+    "rank": 537,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "stockholder"
+  },
+  {
+    "list": "TSL",
+    "rank": 538,
+    "sfi": 52.82,
+    "u": 19.12,
+    "word": "vacant"
+  },
+  {
+    "forms": [
+      "accessories"
+    ],
+    "list": "TSL",
+    "rank": 539,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "accessory"
+  },
+  {
+    "forms": [
+      "assemblies"
+    ],
+    "list": "TSL",
+    "rank": 540,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "assembly"
+  },
+  {
+    "forms": [
+      "baskets"
+    ],
+    "list": "TSL",
+    "rank": 541,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "basket"
+  },
+  {
+    "forms": [
+      "certifications"
+    ],
+    "list": "TSL",
+    "rank": 542,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "certification"
+  },
+  {
+    "forms": [
+      "closures"
+    ],
+    "list": "TSL",
+    "rank": 543,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "closure"
+  },
+  {
+    "forms": [
+      "dislikes",
+      "disliked",
+      "disliking"
+    ],
+    "list": "TSL",
+    "rank": 544,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "dislike"
+  },
+  {
+    "list": "TSL",
+    "rank": 545,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "downstairs"
+  },
+  {
+    "list": "TSL",
+    "rank": 546,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "expiration"
+  },
+  {
+    "forms": [
+      "headaches"
+    ],
+    "list": "TSL",
+    "rank": 547,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "headache"
+  },
+  {
+    "forms": [
+      "jams",
+      "jammed",
+      "jamming"
+    ],
+    "list": "TSL",
+    "rank": 548,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "jam"
+  },
+  {
+    "forms": [
+      "nails",
+      "nailed",
+      "nailing"
+    ],
+    "list": "TSL",
+    "rank": 549,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "nail"
+  },
+  {
+    "list": "TSL",
+    "rank": 550,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "optimistic"
+  },
+  {
+    "forms": [
+      "pedestrians"
+    ],
+    "list": "TSL",
+    "rank": 551,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "pedestrian"
+  },
+  {
+    "forms": [
+      "projections"
+    ],
+    "list": "TSL",
+    "rank": 552,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "projection"
+  },
+  {
+    "forms": [
+      "sleeves",
+      "sleeved"
+    ],
+    "list": "TSL",
+    "rank": 553,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "sleeve"
+  },
+  {
+    "forms": [
+      "suburbs"
+    ],
+    "list": "TSL",
+    "rank": 554,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "suburb"
+  },
+  {
+    "forms": [
+      "takeovers"
+    ],
+    "list": "TSL",
+    "rank": 555,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "takeover"
+  },
+  {
+    "list": "TSL",
+    "rank": 556,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "unsure"
+  },
+  {
+    "list": "TSL",
+    "rank": 557,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "upstairs"
+  },
+  {
+    "list": "TSL",
+    "rank": 558,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "verbal"
+  },
+  {
+    "forms": [
+      "visas"
+    ],
+    "list": "TSL",
+    "rank": 559,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "visa"
+  },
+  {
+    "list": "TSL",
+    "rank": 560,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "wildlife"
+  },
+  {
+    "forms": [
+      "workforces"
+    ],
+    "list": "TSL",
+    "rank": 561,
+    "sfi": 52.64,
+    "u": 18.39,
+    "word": "workforce"
+  },
+  {
+    "forms": [
+      "absents",
+      "absented",
+      "absenting"
+    ],
+    "list": "TSL",
+    "rank": 562,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "absent"
+  },
+  {
+    "forms": [
+      "accumulates",
+      "accumulated",
+      "accumulating"
+    ],
+    "list": "TSL",
+    "rank": 563,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "accumulate"
+  },
+  {
+    "forms": [
+      "appraisals"
+    ],
+    "list": "TSL",
+    "rank": 564,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "appraisal"
+  },
+  {
+    "forms": [
+      "apprentices",
+      "apprenticed",
+      "apprenticing"
+    ],
+    "list": "TSL",
+    "rank": 565,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "apprentice"
+  },
+  {
+    "forms": [
+      "businessmen"
+    ],
+    "list": "TSL",
+    "rank": 566,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "businessman"
+  },
+  {
+    "forms": [
+      "ceilings",
+      "ceilinged"
+    ],
+    "list": "TSL",
+    "rank": 567,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "ceiling"
+  },
+  {
+    "forms": [
+      "colourful"
+    ],
+    "list": "TSL",
+    "rank": 568,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "colorful"
+  },
+  {
+    "forms": [
+      "compensates",
+      "compensated",
+      "compensating"
+    ],
+    "list": "TSL",
+    "rank": 569,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "compensate"
+  },
+  {
+    "forms": [
+      "costumes",
+      "costumed",
+      "costuming"
+    ],
+    "list": "TSL",
+    "rank": 570,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "costume"
+  },
+  {
+    "forms": [
+      "editorials"
+    ],
+    "list": "TSL",
+    "rank": 571,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "editorial"
+  },
+  {
+    "list": "TSL",
+    "rank": 572,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "effectiveness"
+  },
+  {
+    "forms": [
+      "facilitates",
+      "facilitated",
+      "facilitating"
+    ],
+    "list": "TSL",
+    "rank": 573,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "facilitate"
+  },
+  {
+    "forms": [
+      "firefighters"
+    ],
+    "list": "TSL",
+    "rank": 574,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "firefighter"
+  },
+  {
+    "list": "TSL",
+    "rank": 575,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "gasoline"
+  },
+  {
+    "list": "TSL",
+    "rank": 576,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "inappropriate"
+  },
+  {
+    "forms": [
+      "internets"
+    ],
+    "list": "TSL",
+    "rank": 577,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "internet"
+  },
+  {
+    "forms": [
+      "landlords"
+    ],
+    "list": "TSL",
+    "rank": 578,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "landlord"
+  },
+  {
+    "forms": [
+      "layouts"
+    ],
+    "list": "TSL",
+    "rank": 579,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "layout"
+  },
+  {
+    "forms": [
+      "lunchtimes"
+    ],
+    "list": "TSL",
+    "rank": 580,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "lunchtime"
+  },
+  {
+    "forms": [
+      "payrolls"
+    ],
+    "list": "TSL",
+    "rank": 581,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "payroll"
+  },
+  {
+    "forms": [
+      "pharmaceuticals"
+    ],
+    "list": "TSL",
+    "rank": 582,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "pharmaceutical"
+  },
+  {
+    "list": "TSL",
+    "rank": 583,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "plausible"
+  },
+  {
+    "forms": [
+      "premiums"
+    ],
+    "list": "TSL",
+    "rank": 584,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "premium"
+  },
+  {
+    "list": "TSL",
+    "rank": 585,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "safely"
+  },
+  {
+    "forms": [
+      "simplifies",
+      "simplified",
+      "simplifying"
+    ],
+    "list": "TSL",
+    "rank": 586,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "simplify"
+  },
+  {
+    "forms": [
+      "specialties"
+    ],
+    "list": "TSL",
+    "rank": 587,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "specialty"
+  },
+  {
+    "forms": [
+      "techs"
+    ],
+    "list": "TSL",
+    "rank": 588,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "tech"
+  },
+  {
+    "list": "TSL",
+    "rank": 589,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "unexpected"
+  },
+  {
+    "list": "TSL",
+    "rank": 590,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "unspecified"
+  },
+  {
+    "forms": [
+      "adheres",
+      "adhered",
+      "adhering"
+    ],
+    "list": "TSL",
+    "rank": 591,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "adhere"
+  },
+  {
+    "forms": [
+      "bankrupts",
+      "bankrupted",
+      "bankrupting"
+    ],
+    "list": "TSL",
+    "rank": 592,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "bankrupt"
+  },
+  {
+    "forms": [
+      "cautions",
+      "cautioned",
+      "cautioning"
+    ],
+    "list": "TSL",
+    "rank": 593,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "caution"
+  },
+  {
+    "forms": [
+      "clips",
+      "clipped",
+      "clipping",
+      "clippings"
+    ],
+    "list": "TSL",
+    "rank": 594,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "clip"
+  },
+  {
+    "forms": [
+      "complies",
+      "complied",
+      "complying"
+    ],
+    "list": "TSL",
+    "rank": 595,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "comply"
+  },
+  {
+    "forms": [
+      "diners"
+    ],
+    "list": "TSL",
+    "rank": 596,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "diner"
+  },
+  {
+    "forms": [
+      "duplicates",
+      "duplicated",
+      "duplicating"
+    ],
+    "list": "TSL",
+    "rank": 597,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "duplicate"
+  },
+  {
+    "list": "TSL",
+    "rank": 598,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "eager"
+  },
+  {
+    "forms": [
+      "economists"
+    ],
+    "list": "TSL",
+    "rank": 599,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "economist"
+  },
+  {
+    "forms": [
+      "embassies"
+    ],
+    "list": "TSL",
+    "rank": 600,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "embassy"
+  },
+  {
+    "forms": [
+      "fastens",
+      "fastened",
+      "fastening",
+      "fastenings"
+    ],
+    "list": "TSL",
+    "rank": 601,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "fasten"
+  },
+  {
+    "list": "TSL",
+    "rank": 602,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "harmful"
+  },
+  {
+    "list": "TSL",
+    "rank": 603,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "informative"
+  },
+  {
+    "forms": [
+      "institutes",
+      "instituted",
+      "instituting"
+    ],
+    "list": "TSL",
+    "rank": 604,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "institute"
+  },
+  {
+    "forms": [
+      "kits",
+      "kitted",
+      "kiting"
+    ],
+    "list": "TSL",
+    "rank": 605,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "kit"
+  },
+  {
+    "list": "TSL",
+    "rank": 606,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "locally"
+  },
+  {
+    "forms": [
+      "mentors",
+      "mentored",
+      "mentoring"
+    ],
+    "list": "TSL",
+    "rank": 607,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "mentor"
+  },
+  {
+    "forms": [
+      "nominates",
+      "nominated",
+      "nominating"
+    ],
+    "list": "TSL",
+    "rank": 608,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "nominate"
+  },
+  {
+    "forms": [
+      "opts",
+      "opted",
+      "opting"
+    ],
+    "list": "TSL",
+    "rank": 609,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "opt"
+  },
+  {
+    "forms": [
+      "parades",
+      "paraded",
+      "parading"
+    ],
+    "list": "TSL",
+    "rank": 610,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "parade"
+  },
+  {
+    "forms": [
+      "physicians"
+    ],
+    "list": "TSL",
+    "rank": 611,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "physician"
+  },
+  {
+    "forms": [
+      "polishes",
+      "polished",
+      "polishing"
+    ],
+    "list": "TSL",
+    "rank": 612,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "polish"
+  },
+  {
+    "forms": [
+      "postages"
+    ],
+    "list": "TSL",
+    "rank": 613,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "postage"
+  },
+  {
+    "list": "TSL",
+    "rank": 614,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "recreational"
+  },
+  {
+    "forms": [
+      "rehearses",
+      "rehearsed",
+      "rehearsing"
+    ],
+    "list": "TSL",
+    "rank": 615,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "rehearse"
+  },
+  {
+    "forms": [
+      "removals"
+    ],
+    "list": "TSL",
+    "rank": 616,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "removal"
+  },
+  {
+    "list": "TSL",
+    "rank": 617,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "satisfactory"
+  },
+  {
+    "list": "TSL",
+    "rank": 618,
+    "sfi": 52.47,
+    "u": 17.65,
+    "word": "seasonal"
+  },
+  {
+    "list": "TSL",
+    "rank": 619,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "separately"
+  },
+  {
+    "forms": [
+      "turnovers"
+    ],
+    "list": "TSL",
+    "rank": 620,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "turnover"
+  },
+  {
+    "list": "TSL",
+    "rank": 621,
+    "sfi": 52.28,
+    "u": 16.92,
+    "word": "unnecessary"
+  },
+  {
+    "list": "TSL",
+    "rank": 622,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "accordingly"
+  },
+  {
+    "forms": [
+      "apples"
+    ],
+    "list": "TSL",
+    "rank": 623,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "apple"
+  },
+  {
+    "list": "TSL",
+    "rank": 624,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "applicable"
+  },
+  {
+    "forms": [
+      "auctions",
+      "auctioned",
+      "auctioning"
+    ],
+    "list": "TSL",
+    "rank": 625,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "auction"
+  },
+  {
+    "forms": [
+      "balconies"
+    ],
+    "list": "TSL",
+    "rank": 626,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "balcony"
+  },
+  {
+    "forms": [
+      "basements"
+    ],
+    "list": "TSL",
+    "rank": 627,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "basement"
+  },
+  {
+    "list": "TSL",
+    "rank": 628,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "beforehand"
+  },
+  {
+    "list": "TSL",
+    "rank": 629,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "culinary"
+  },
+  {
+    "forms": [
+      "documentaries"
+    ],
+    "list": "TSL",
+    "rank": 630,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "documentary"
+  },
+  {
+    "forms": [
+      "downturns"
+    ],
+    "list": "TSL",
+    "rank": 631,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "downturn"
+  },
+  {
+    "forms": [
+      "earthquakes"
+    ],
+    "list": "TSL",
+    "rank": 632,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "earthquake"
+  },
+  {
+    "list": "TSL",
+    "rank": 633,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "elegant"
+  },
+  {
+    "list": "TSL",
+    "rank": 634,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "excessive"
+  },
+  {
+    "forms": [
+      "generics"
+    ],
+    "list": "TSL",
+    "rank": 635,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "generic"
+  },
+  {
+    "forms": [
+      "jazzes",
+      "jazzed",
+      "jazzing"
+    ],
+    "list": "TSL",
+    "rank": 636,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "jazz"
+  },
+  {
+    "forms": [
+      "lifetimes"
+    ],
+    "list": "TSL",
+    "rank": 637,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "lifetime"
+  },
+  {
+    "forms": [
+      "massages",
+      "massaged",
+      "massaging"
+    ],
+    "list": "TSL",
+    "rank": 638,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "massage"
+  },
+  {
+    "forms": [
+      "maximizes",
+      "maximized",
+      "maximizing",
+      "maximise",
+      "maximises",
+      "maximised",
+      "maximising"
+    ],
+    "list": "TSL",
+    "rank": 639,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "maximize"
+  },
+  {
+    "forms": [
+      "milder",
+      "mildest"
+    ],
+    "list": "TSL",
+    "rank": 640,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "mild"
+  },
+  {
+    "list": "TSL",
+    "rank": 641,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "ongoing"
+  },
+  {
+    "list": "TSL",
+    "rank": 642,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "periodically"
+  },
+  {
+    "forms": [
+      "pies"
+    ],
+    "list": "TSL",
+    "rank": 643,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "pie"
+  },
+  {
+    "forms": [
+      "plugs",
+      "plugged",
+      "plugging"
+    ],
+    "list": "TSL",
+    "rank": 644,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "plug"
+  },
+  {
+    "forms": [
+      "recruitments"
+    ],
+    "list": "TSL",
+    "rank": 645,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "recruitment"
+  },
+  {
+    "forms": [
+      "referees",
+      "refereed",
+      "refereeing"
+    ],
+    "list": "TSL",
+    "rank": 646,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "referee"
+  },
+  {
+    "forms": [
+      "referrals"
+    ],
+    "list": "TSL",
+    "rank": 647,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "referral"
+  },
+  {
+    "forms": [
+      "renowned"
+    ],
+    "list": "TSL",
+    "rank": 648,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "renown"
+  },
+  {
+    "forms": [
+      "runners"
+    ],
+    "list": "TSL",
+    "rank": 649,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "runner"
+  },
+  {
+    "forms": [
+      "socks",
+      "socked",
+      "socking"
+    ],
+    "list": "TSL",
+    "rank": 650,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "sock"
+  },
+  {
+    "forms": [
+      "spammed",
+      "spamming"
+    ],
+    "list": "TSL",
+    "rank": 651,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "spam"
+  },
+  {
+    "forms": [
+      "surfs",
+      "surfed",
+      "surfing"
+    ],
+    "list": "TSL",
+    "rank": 652,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "surf"
+  },
+  {
+    "forms": [
+      "timetables",
+      "timetabled",
+      "timetabling"
+    ],
+    "list": "TSL",
+    "rank": 653,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "timetable"
+  },
+  {
+    "forms": [
+      "vases"
+    ],
+    "list": "TSL",
+    "rank": 654,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "vase"
+  },
+  {
+    "list": "TSL",
+    "rank": 655,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "aboard"
+  },
+  {
+    "forms": [
+      "advancements"
+    ],
+    "list": "TSL",
+    "rank": 656,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "advancement"
+  },
+  {
+    "forms": [
+      "advertisers"
+    ],
+    "list": "TSL",
+    "rank": 657,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "advertiser"
+  },
+  {
+    "list": "TSL",
+    "rank": 658,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "alternatively"
+  },
+  {
+    "forms": [
+      "amuses",
+      "amused",
+      "amusing"
+    ],
+    "list": "TSL",
+    "rank": 659,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "amuse"
+  },
+  {
+    "forms": [
+      "attorneys"
+    ],
+    "list": "TSL",
+    "rank": 660,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "attorney"
+  },
+  {
+    "forms": [
+      "authorizations",
+      "authorisation",
+      "authorisations"
+    ],
+    "list": "TSL",
+    "rank": 661,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "authorization"
+  },
+  {
+    "forms": [
+      "campuses"
+    ],
+    "list": "TSL",
+    "rank": 662,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "campus"
+  },
+  {
+    "forms": [
+      "candies",
+      "candied",
+      "candying"
+    ],
+    "list": "TSL",
+    "rank": 663,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "candy"
+  },
+  {
+    "forms": [
+      "certifies",
+      "certified",
+      "certifying"
+    ],
+    "list": "TSL",
+    "rank": 664,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "certify"
+  },
+  {
+    "forms": [
+      "checkouts"
+    ],
+    "list": "TSL",
+    "rank": 665,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "checkout"
+  },
+  {
+    "forms": [
+      "chemistries"
+    ],
+    "list": "TSL",
+    "rank": 666,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "chemistry"
+  },
+  {
+    "forms": [
+      "circulations"
+    ],
+    "list": "TSL",
+    "rank": 667,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "circulation"
+  },
+  {
+    "forms": [
+      "concierges"
+    ],
+    "list": "TSL",
+    "rank": 668,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "concierge"
+  },
+  {
+    "forms": [
+      "consents",
+      "consented",
+      "consenting"
+    ],
+    "list": "TSL",
+    "rank": 669,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "consent"
+  },
+  {
+    "list": "TSL",
+    "rank": 670,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "consistently"
+  },
+  {
+    "forms": [
+      "cookies"
+    ],
+    "list": "TSL",
+    "rank": 671,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "cookie"
+  },
+  {
+    "forms": [
+      "decks",
+      "decked",
+      "decking"
+    ],
+    "list": "TSL",
+    "rank": 672,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "deck"
+  },
+  {
+    "list": "TSL",
+    "rank": 673,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "descriptive"
+  },
+  {
+    "forms": [
+      "detaches",
+      "detached",
+      "detaching"
+    ],
+    "list": "TSL",
+    "rank": 674,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "detach"
+  },
+  {
+    "forms": [
+      "documentations"
+    ],
+    "list": "TSL",
+    "rank": 675,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "documentation"
+  },
+  {
+    "forms": [
+      "entrepreneurs"
+    ],
+    "list": "TSL",
+    "rank": 676,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "entrepreneur"
+  },
+  {
+    "list": "TSL",
+    "rank": 677,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "exceptional"
+  },
+  {
+    "forms": [
+      "familiarizes",
+      "familiarized",
+      "familiarizing",
+      "familiarise",
+      "familiarises",
+      "familiarised",
+      "familiarising"
+    ],
+    "list": "TSL",
+    "rank": 678,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "familiarize"
+  },
+  {
+    "forms": [
+      "hotlines"
+    ],
+    "list": "TSL",
+    "rank": 679,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "hotline"
+  },
+  {
+    "forms": [
+      "intonations"
+    ],
+    "list": "TSL",
+    "rank": 680,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "intonation"
+  },
+  {
+    "forms": [
+      "inventions"
+    ],
+    "list": "TSL",
+    "rank": 681,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "invention"
+  },
+  {
+    "forms": [
+      "irritates",
+      "irritated",
+      "irritating"
+    ],
+    "list": "TSL",
+    "rank": 682,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "irritate"
+  },
+  {
+    "forms": [
+      "lockers"
+    ],
+    "list": "TSL",
+    "rank": 683,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "locker"
+  },
+  {
+    "forms": [
+      "overlooks",
+      "overlooked",
+      "overlooking"
+    ],
+    "list": "TSL",
+    "rank": 684,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "overlook"
+  },
+  {
+    "forms": [
+      "patents",
+      "patented",
+      "patenting"
+    ],
+    "list": "TSL",
+    "rank": 685,
+    "sfi": 52.09,
+    "u": 16.18,
+    "word": "patent"
+  },
+  {
+    "forms": [
+      "payables"
+    ],
+    "list": "TSL",
+    "rank": 686,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "payable"
+  },
+  {
+    "forms": [
+      "preliminaries"
+    ],
+    "list": "TSL",
+    "rank": 687,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "preliminary"
+  },
+  {
+    "forms": [
+      "salesmen"
+    ],
+    "list": "TSL",
+    "rank": 688,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "salesman"
+  },
+  {
+    "forms": [
+      "saunas"
+    ],
+    "list": "TSL",
+    "rank": 689,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "sauna"
+  },
+  {
+    "list": "TSL",
+    "rank": 690,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "smoothly"
+  },
+  {
+    "list": "TSL",
+    "rank": 691,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "sunshine"
+  },
+  {
+    "forms": [
+      "tows",
+      "towed",
+      "towing"
+    ],
+    "list": "TSL",
+    "rank": 692,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "tow"
+  },
+  {
+    "forms": [
+      "translators"
+    ],
+    "list": "TSL",
+    "rank": 693,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "translator"
+  },
+  {
+    "forms": [
+      "tuitions"
+    ],
+    "list": "TSL",
+    "rank": 694,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "tuition"
+  },
+  {
+    "list": "TSL",
+    "rank": 695,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "unavailable"
+  },
+  {
+    "forms": [
+      "violations"
+    ],
+    "list": "TSL",
+    "rank": 696,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "violation"
+  },
+  {
+    "forms": [
+      "webpages",
+      "web-page",
+      "web-pages",
+      "web page",
+      "web pages"
+    ],
+    "list": "TSL",
+    "rank": 697,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "webpage"
+  },
+  {
+    "forms": [
+      "acceptances"
+    ],
+    "list": "TSL",
+    "rank": 698,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "acceptance"
+  },
+  {
+    "forms": [
+      "allocates",
+      "allocated",
+      "allocating"
+    ],
+    "list": "TSL",
+    "rank": 699,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "allocate"
+  },
+  {
+    "list": "TSL",
+    "rank": 700,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "ambitious"
+  },
+  {
+    "forms": [
+      "appendices",
+      "appendixes"
+    ],
+    "list": "TSL",
+    "rank": 701,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "appendix"
+  },
+  {
+    "forms": [
+      "booths"
+    ],
+    "list": "TSL",
+    "rank": 702,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "booth"
+  },
+  {
+    "forms": [
+      "clarifies",
+      "clarified",
+      "clarifying"
+    ],
+    "list": "TSL",
+    "rank": 703,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "clarify"
+  },
+  {
+    "forms": [
+      "classmates"
+    ],
+    "list": "TSL",
+    "rank": 704,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "classmate"
+  },
+  {
+    "forms": [
+      "compiles",
+      "compiled",
+      "compiling"
+    ],
+    "list": "TSL",
+    "rank": 705,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "compile"
+  },
+  {
+    "forms": [
+      "corrections"
+    ],
+    "list": "TSL",
+    "rank": 706,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "correction"
+  },
+  {
+    "forms": [
+      "customizes",
+      "customized",
+      "customizing",
+      "customise",
+      "customises",
+      "customised",
+      "customising"
+    ],
+    "list": "TSL",
+    "rank": 707,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "customize"
+  },
+  {
+    "forms": [
+      "dedications"
+    ],
+    "list": "TSL",
+    "rank": 708,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "dedication"
+  },
+  {
+    "forms": [
+      "diagnoses",
+      "diagnosed",
+      "diagnosing"
+    ],
+    "list": "TSL",
+    "rank": 709,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "diagnose"
+  },
+  {
+    "forms": [
+      "discontinues",
+      "discontinued",
+      "discontinuing"
+    ],
+    "list": "TSL",
+    "rank": 710,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "discontinue"
+  },
+  {
+    "forms": [
+      "dishwashers"
+    ],
+    "list": "TSL",
+    "rank": 711,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "dishwasher"
+  },
+  {
+    "forms": [
+      "droughts"
+    ],
+    "list": "TSL",
+    "rank": 712,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "drought"
+  },
+  {
+    "forms": [
+      "economizes",
+      "economized",
+      "economizing",
+      "economise",
+      "economises",
+      "economised",
+      "economising"
+    ],
+    "list": "TSL",
+    "rank": 713,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "economize"
+  },
+  {
+    "forms": [
+      "entrées",
+      "entree",
+      "entrees"
+    ],
+    "list": "TSL",
+    "rank": 714,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "entrée"
+  },
+  {
+    "forms": [
+      "fireworks"
+    ],
+    "list": "TSL",
+    "rank": 715,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "firework"
+  },
+  {
+    "forms": [
+      "freights",
+      "freighted",
+      "freighting"
+    ],
+    "list": "TSL",
+    "rank": 716,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "freight"
+  },
+  {
+    "forms": [
+      "fries",
+      "fried",
+      "frying"
+    ],
+    "list": "TSL",
+    "rank": 717,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "fry"
+  },
+  {
+    "forms": [
+      "gallons"
+    ],
+    "list": "TSL",
+    "rank": 718,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "gallon"
+  },
+  {
+    "forms": [
+      "gardeners"
+    ],
+    "list": "TSL",
+    "rank": 719,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "gardener"
+  },
+  {
+    "list": "TSL",
+    "rank": 720,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "ideally"
+  },
+  {
+    "list": "TSL",
+    "rank": 721,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "inclusive"
+  },
+  {
+    "list": "TSL",
+    "rank": 722,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "insufficient"
+  },
+  {
+    "list": "TSL",
+    "rank": 723,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "introductory"
+  },
+  {
+    "forms": [
+      "junks",
+      "junked",
+      "junking"
+    ],
+    "list": "TSL",
+    "rank": 724,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "junk"
+  },
+  {
+    "list": "TSL",
+    "rank": 725,
+    "word": "ma'am"
+  },
+  {
+    "forms": [
+      "mileages"
+    ],
+    "list": "TSL",
+    "rank": 726,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "mileage"
+  },
+  {
+    "forms": [
+      "noisier",
+      "noisiest"
+    ],
+    "list": "TSL",
+    "rank": 727,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "noisy"
+  },
+  {
+    "forms": [
+      "pans",
+      "panned",
+      "panning"
+    ],
+    "list": "TSL",
+    "rank": 728,
+    "sfi": 51.89,
+    "u": 15.44,
+    "word": "pan"
+  },
+  {
+    "forms": [
+      "parcels",
+      "parceled",
+      "parceling",
+      "parcelled",
+      "parcelling"
+    ],
+    "list": "TSL",
+    "rank": 729,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "parcel"
+  },
+  {
+    "forms": [
+      "pastas"
+    ],
+    "list": "TSL",
+    "rank": 730,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "pasta"
+  },
+  {
+    "forms": [
+      "periodicals"
+    ],
+    "list": "TSL",
+    "rank": 731,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "periodical"
+  },
+  {
+    "forms": [
+      "pills",
+      "pilled",
+      "pilling"
+    ],
+    "list": "TSL",
+    "rank": 732,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "pill"
+  },
+  {
+    "forms": [
+      "portables"
+    ],
+    "list": "TSL",
+    "rank": 733,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "portable"
+  },
+  {
+    "list": "TSL",
+    "rank": 734,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "punctual"
+  },
+  {
+    "forms": [
+      "recreations"
+    ],
+    "list": "TSL",
+    "rank": 735,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "recreation"
+  },
+  {
+    "forms": [
+      "relieves",
+      "relieved",
+      "relieving"
+    ],
+    "list": "TSL",
+    "rank": 736,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "relieve"
+  },
+  {
+    "forms": [
+      "reminders"
+    ],
+    "list": "TSL",
+    "rank": 737,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "reminder"
+  },
+  {
+    "forms": [
+      "rumors",
+      "rumored",
+      "rumoring",
+      "rumour",
+      "rumours",
+      "rumoured",
+      "rumouring"
+    ],
+    "list": "TSL",
+    "rank": 738,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "rumor"
+  },
+  {
+    "forms": [
+      "scarves"
+    ],
+    "list": "TSL",
+    "rank": 739,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "scarf"
+  },
+  {
+    "list": "TSL",
+    "rank": 740,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "seaside"
+  },
+  {
+    "forms": [
+      "shortens",
+      "shortened",
+      "shortening",
+      "shortenings"
+    ],
+    "list": "TSL",
+    "rank": 741,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "shorten"
+  },
+  {
+    "list": "TSL",
+    "rank": 742,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "specially"
+  },
+  {
+    "forms": [
+      "spills",
+      "spilled",
+      "spilling",
+      "spilt"
+    ],
+    "list": "TSL",
+    "rank": 743,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "spill"
+  },
+  {
+    "forms": [
+      "spouses"
+    ],
+    "list": "TSL",
+    "rank": 744,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "spouse"
+  },
+  {
+    "forms": [
+      "subtracts",
+      "subtracted",
+      "subtracting"
+    ],
+    "list": "TSL",
+    "rank": 745,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "subtract"
+  },
+  {
+    "forms": [
+      "tablets"
+    ],
+    "list": "TSL",
+    "rank": 746,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "tablet"
+  },
+  {
+    "forms": [
+      "tons"
+    ],
+    "list": "TSL",
+    "rank": 747,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "ton"
+  },
+  {
+    "forms": [
+      "vends",
+      "vended",
+      "vending"
+    ],
+    "list": "TSL",
+    "rank": 748,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "vend"
+  },
+  {
+    "list": "TSL",
+    "rank": 749,
+    "sfi": 51.68,
+    "u": 14.71,
+    "word": "yoga"
+  },
+  {
+    "forms": [
+      "accents",
+      "accented",
+      "accenting"
+    ],
+    "list": "TSL",
+    "rank": 750,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "accent"
+  },
+  {
+    "forms": [
+      "advisories"
+    ],
+    "list": "TSL",
+    "rank": 751,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "advisory"
+  },
+  {
+    "list": "TSL",
+    "rank": 752,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "asleep"
+  },
+  {
+    "list": "TSL",
+    "rank": 753,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "authentic"
+  },
+  {
+    "forms": [
+      "bakeries"
+    ],
+    "list": "TSL",
+    "rank": 754,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "bakery"
+  },
+  {
+    "forms": [
+      "cartons"
+    ],
+    "list": "TSL",
+    "rank": 755,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "carton"
+  },
+  {
+    "forms": [
+      "compartments",
+      "compartmented"
+    ],
+    "list": "TSL",
+    "rank": 756,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "compartment"
+  },
+  {
+    "forms": [
+      "compatibles"
+    ],
+    "list": "TSL",
+    "rank": 757,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "compatible"
+  },
+  {
+    "forms": [
+      "consumptions"
+    ],
+    "list": "TSL",
+    "rank": 758,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "consumption"
+  },
+  {
+    "list": "TSL",
+    "rank": 759,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "conveniently"
+  },
+  {
+    "forms": [
+      "cosmetics"
+    ],
+    "list": "TSL",
+    "rank": 760,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "cosmetic"
+  },
+  {
+    "forms": [
+      "courtesies"
+    ],
+    "list": "TSL",
+    "rank": 761,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "courtesy"
+  },
+  {
+    "list": "TSL",
+    "rank": 762,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "creativity"
+  },
+  {
+    "forms": [
+      "disagreements"
+    ],
+    "list": "TSL",
+    "rank": 763,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "disagreement"
+  },
+  {
+    "forms": [
+      "disappointments"
+    ],
+    "list": "TSL",
+    "rank": 764,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "disappointment"
+  },
+  {
+    "forms": [
+      "dissatisfied",
+      "dissatisfies",
+      "dissatisfying"
+    ],
+    "list": "TSL",
+    "rank": 765,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "dissatisfy"
+  },
+  {
+    "list": "TSL",
+    "rank": 766,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "enjoyable"
+  },
+  {
+    "forms": [
+      "faculties"
+    ],
+    "list": "TSL",
+    "rank": 767,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "faculty"
+  },
+  {
+    "forms": [
+      "favourable"
+    ],
+    "list": "TSL",
+    "rank": 768,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "favorable"
+  },
+  {
+    "forms": [
+      "foremen"
+    ],
+    "list": "TSL",
+    "rank": 769,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "foreman"
+  },
+  {
+    "forms": [
+      "forums",
+      "fora"
+    ],
+    "list": "TSL",
+    "rank": 770,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "forum"
+  },
+  {
+    "forms": [
+      "founders",
+      "foundered",
+      "foundering"
+    ],
+    "list": "TSL",
+    "rank": 771,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "founder"
+  },
+  {
+    "forms": [
+      "fundraises",
+      "fundraised",
+      "fundraising",
+      "fundraisings"
+    ],
+    "list": "TSL",
+    "rank": 772,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "fundraise"
+  },
+  {
+    "list": "TSL",
+    "rank": 773,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "graphics"
+  },
+  {
+    "forms": [
+      "handier",
+      "handiest"
+    ],
+    "list": "TSL",
+    "rank": 774,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "handy"
+  },
+  {
+    "list": "TSL",
+    "rank": 775,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "hazardous"
+  },
+  {
+    "list": "TSL",
+    "rank": 776,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "healthcare"
+  },
+  {
+    "list": "TSL",
+    "rank": 777,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "humidity"
+  },
+  {
+    "list": "TSL",
+    "rank": 778,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "influential"
+  },
+  {
+    "list": "TSL",
+    "rank": 779,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "nationwide"
+  },
+  {
+    "forms": [
+      "pads",
+      "padded",
+      "padding"
+    ],
+    "list": "TSL",
+    "rank": 780,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "pad"
+  },
+  {
+    "forms": [
+      "paraphrases",
+      "paraphrased",
+      "paraphrasing"
+    ],
+    "list": "TSL",
+    "rank": 781,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "paraphrase"
+  },
+  {
+    "forms": [
+      "placements"
+    ],
+    "list": "TSL",
+    "rank": 782,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "placement"
+  },
+  {
+    "list": "TSL",
+    "rank": 783,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "postal"
+  },
+  {
+    "forms": [
+      "publicities"
+    ],
+    "list": "TSL",
+    "rank": 784,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "publicity"
+  },
+  {
+    "forms": [
+      "renters"
+    ],
+    "list": "TSL",
+    "rank": 785,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "renter"
+  },
+  {
+    "list": "TSL",
+    "rank": 786,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "repairperson"
+  },
+  {
+    "list": "TSL",
+    "rank": 787,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "repeatedly"
+  },
+  {
+    "forms": [
+      "restrooms"
+    ],
+    "list": "TSL",
+    "rank": 788,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "restroom"
+  },
+  {
+    "list": "TSL",
+    "rank": 789,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "silently"
+  },
+  {
+    "forms": [
+      "spas"
+    ],
+    "list": "TSL",
+    "rank": 790,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "spa"
+  },
+  {
+    "forms": [
+      "spreadsheets"
+    ],
+    "list": "TSL",
+    "rank": 791,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "spreadsheet"
+  },
+  {
+    "forms": [
+      "staplers"
+    ],
+    "list": "TSL",
+    "rank": 792,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "stapler"
+  },
+  {
+    "forms": [
+      "streamlines",
+      "streamlined",
+      "streamlining"
+    ],
+    "list": "TSL",
+    "rank": 793,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "streamline"
+  },
+  {
+    "list": "TSL",
+    "rank": 794,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "substantially"
+  },
+  {
+    "forms": [
+      "tellers"
+    ],
+    "list": "TSL",
+    "rank": 795,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "teller"
+  },
+  {
+    "forms": [
+      "tidies",
+      "tidied",
+      "tidying",
+      "tidier",
+      "tidiest"
+    ],
+    "list": "TSL",
+    "rank": 796,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "tidy"
+  },
+  {
+    "forms": [
+      "tolls",
+      "tolled",
+      "tolling"
+    ],
+    "list": "TSL",
+    "rank": 797,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "toll"
+  },
+  {
+    "forms": [
+      "toners"
+    ],
+    "list": "TSL",
+    "rank": 798,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "toner"
+  },
+  {
+    "list": "TSL",
+    "rank": 799,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "urgently"
+  },
+  {
+    "forms": [
+      "walkways"
+    ],
+    "list": "TSL",
+    "rank": 800,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "walkway"
+  },
+  {
+    "forms": [
+      "absorbs",
+      "absorbed",
+      "absorbing"
+    ],
+    "list": "TSL",
+    "rank": 801,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "absorb"
+  },
+  {
+    "forms": [
+      "administers",
+      "administered",
+      "administering"
+    ],
+    "list": "TSL",
+    "rank": 802,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "administer"
+  },
+  {
+    "forms": [
+      "ampler"
+    ],
+    "list": "TSL",
+    "rank": 803,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "ample"
+  },
+  {
+    "forms": [
+      "antiques",
+      "antiqued",
+      "antiquing"
+    ],
+    "list": "TSL",
+    "rank": 804,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "antique"
+  },
+  {
+    "forms": [
+      "beans"
+    ],
+    "list": "TSL",
+    "rank": 805,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "bean"
+  },
+  {
+    "forms": [
+      "browses",
+      "browsed",
+      "browsing"
+    ],
+    "list": "TSL",
+    "rank": 806,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "browse"
+  },
+  {
+    "forms": [
+      "Bye",
+      "BYE"
+    ],
+    "list": "TSL",
+    "rank": 807,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "bye"
+  },
+  {
+    "list": "TSL",
+    "rank": 808,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "careless"
+  },
+  {
+    "forms": [
+      "collectors"
+    ],
+    "list": "TSL",
+    "rank": 809,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "collector"
+  },
+  {
+    "forms": [
+      "conforms",
+      "conformed",
+      "conforming"
+    ],
+    "list": "TSL",
+    "rank": 810,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "conform"
+  },
+  {
+    "forms": [
+      "congestions"
+    ],
+    "list": "TSL",
+    "rank": 811,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "congestion"
+  },
+  {
+    "forms": [
+      "contradictions"
+    ],
+    "list": "TSL",
+    "rank": 812,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "contradiction"
+  },
+  {
+    "forms": [
+      "contraries"
+    ],
+    "list": "TSL",
+    "rank": 813,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "contrary"
+  },
+  {
+    "forms": [
+      "diplomas"
+    ],
+    "list": "TSL",
+    "rank": 814,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "diploma"
+  },
+  {
+    "forms": [
+      "distributors"
+    ],
+    "list": "TSL",
+    "rank": 815,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "distributor"
+  },
+  {
+    "forms": [
+      "dives",
+      "diving",
+      "dived"
+    ],
+    "list": "TSL",
+    "rank": 816,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "dive"
+  },
+  {
+    "list": "TSL",
+    "rank": 817,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "energetic"
+  },
+  {
+    "list": "TSL",
+    "rank": 818,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "environmentally"
+  },
+  {
+    "forms": [
+      "escalators"
+    ],
+    "list": "TSL",
+    "rank": 819,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "escalator"
+  },
+  {
+    "forms": [
+      "exotics"
+    ],
+    "list": "TSL",
+    "rank": 820,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "exotic"
+  },
+  {
+    "forms": [
+      "fabrics"
+    ],
+    "list": "TSL",
+    "rank": 821,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "fabric"
+  },
+  {
+    "forms": [
+      "generalizations",
+      "generalisation",
+      "generalisations"
+    ],
+    "list": "TSL",
+    "rank": 822,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "generalization"
+  },
+  {
+    "list": "TSL",
+    "rank": 823,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "guidance"
+  },
+  {
+    "forms": [
+      "gums",
+      "gummed",
+      "gumming"
+    ],
+    "list": "TSL",
+    "rank": 824,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "gum"
+  },
+  {
+    "list": "TSL",
+    "rank": 825,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "hesitant"
+  },
+  {
+    "forms": [
+      "indicators"
+    ],
+    "list": "TSL",
+    "rank": 826,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "indicator"
+  },
+  {
+    "list": "TSL",
+    "rank": 827,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "individually"
+  },
+  {
+    "forms": [
+      "juniors"
+    ],
+    "list": "TSL",
+    "rank": 828,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "junior"
+  },
+  {
+    "forms": [
+      "lifestyles"
+    ],
+    "list": "TSL",
+    "rank": 829,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "lifestyle"
+  },
+  {
+    "list": "TSL",
+    "rank": 830,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "likewise"
+  },
+  {
+    "list": "TSL",
+    "rank": 831,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "morale"
+  },
+  {
+    "forms": [
+      "orchestras"
+    ],
+    "list": "TSL",
+    "rank": 832,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "orchestra"
+  },
+  {
+    "forms": [
+      "organisational"
+    ],
+    "list": "TSL",
+    "rank": 833,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "organizational"
+  },
+  {
+    "forms": [
+      "outlooks"
+    ],
+    "list": "TSL",
+    "rank": 834,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "outlook"
+  },
+  {
+    "list": "TSL",
+    "rank": 835,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "physics"
+  },
+  {
+    "forms": [
+      "poles",
+      "poled",
+      "poling"
+    ],
+    "list": "TSL",
+    "rank": 836,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "pole"
+  },
+  {
+    "forms": [
+      "puzzles",
+      "puzzled",
+      "puzzling"
+    ],
+    "list": "TSL",
+    "rank": 837,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "puzzle"
+  },
+  {
+    "forms": [
+      "reflexives"
+    ],
+    "list": "TSL",
+    "rank": 838,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "reflexive"
+  },
+  {
+    "forms": [
+      "snowiest"
+    ],
+    "list": "TSL",
+    "rank": 839,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "snowy"
+  },
+  {
+    "forms": [
+      "steaks"
+    ],
+    "list": "TSL",
+    "rank": 840,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "steak"
+  },
+  {
+    "forms": [
+      "stickers"
+    ],
+    "list": "TSL",
+    "rank": 841,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "sticker"
+  },
+  {
+    "forms": [
+      "telecommunications"
+    ],
+    "list": "TSL",
+    "rank": 842,
+    "sfi": 51.45,
+    "u": 13.97,
+    "word": "telecommunication"
+  },
+  {
+    "list": "TSL",
+    "rank": 843,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "timely"
+  },
+  {
+    "list": "TSL",
+    "rank": 844,
+    "sfi": 51.22,
+    "u": 13.24,
+    "word": "uncomfortable"
+  },
+  {
+    "forms": [
+      "amenities"
+    ],
+    "list": "TSL",
+    "rank": 845,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "amenity"
+  },
+  {
+    "forms": [
+      "approximates",
+      "approximated",
+      "approximating"
+    ],
+    "list": "TSL",
+    "rank": 846,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "approximate"
+  },
+  {
+    "forms": [
+      "awaits",
+      "awaited",
+      "awaiting"
+    ],
+    "list": "TSL",
+    "rank": 847,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "await"
+  },
+  {
+    "forms": [
+      "barbecues",
+      "barbecued",
+      "barbecuing",
+      "barbeque",
+      "barbeques",
+      "barbequed",
+      "barbequing"
+    ],
+    "list": "TSL",
+    "rank": 848,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "barbecue"
+  },
+  {
+    "forms": [
+      "beginners"
+    ],
+    "list": "TSL",
+    "rank": 849,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "beginner"
+  },
+  {
+    "list": "TSL",
+    "rank": 850,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "biology"
+  },
+  {
+    "forms": [
+      "blankets",
+      "blanketed",
+      "blanketing"
+    ],
+    "list": "TSL",
+    "rank": 851,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "blanket"
+  },
+  {
+    "forms": [
+      "chairpersons"
+    ],
+    "list": "TSL",
+    "rank": 852,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "chairperson"
+  },
+  {
+    "list": "TSL",
+    "rank": 853,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "charitable"
+  },
+  {
+    "forms": [
+      "checkups"
+    ],
+    "list": "TSL",
+    "rank": 854,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "checkup"
+  },
+  {
+    "forms": [
+      "coolers"
+    ],
+    "list": "TSL",
+    "rank": 855,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "cooler"
+  },
+  {
+    "forms": [
+      "cranes",
+      "craned",
+      "craning"
+    ],
+    "list": "TSL",
+    "rank": 856,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "crane"
+  },
+  {
+    "forms": [
+      "dealerships"
+    ],
+    "list": "TSL",
+    "rank": 857,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "dealership"
+  },
+  {
+    "list": "TSL",
+    "rank": 858,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "dependable"
+  },
+  {
+    "forms": [
+      "disconnects",
+      "disconnected",
+      "disconnecting"
+    ],
+    "list": "TSL",
+    "rank": 859,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "disconnect"
+  },
+  {
+    "forms": [
+      "disposes",
+      "disposed",
+      "disposing"
+    ],
+    "list": "TSL",
+    "rank": 860,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "dispose"
+  },
+  {
+    "forms": [
+      "disrupts",
+      "disrupted",
+      "disrupting"
+    ],
+    "list": "TSL",
+    "rank": 861,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "disrupt"
+  },
+  {
+    "forms": [
+      "dynamics"
+    ],
+    "list": "TSL",
+    "rank": 862,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "dynamic"
+  },
+  {
+    "list": "TSL",
+    "rank": 863,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "enthusiastically"
+  },
+  {
+    "forms": [
+      "freelances",
+      "freelanced",
+      "freelancing"
+    ],
+    "list": "TSL",
+    "rank": 864,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "freelance"
+  },
+  {
+    "forms": [
+      "grills",
+      "grilled",
+      "grilling",
+      "grille",
+      "grilles"
+    ],
+    "list": "TSL",
+    "rank": 865,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "grill"
+  },
+  {
+    "list": "TSL",
+    "rank": 866,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "habitual"
+  },
+  {
+    "list": "TSL",
+    "rank": 867,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "internationally"
+  },
+  {
+    "list": "TSL",
+    "rank": 868,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "invaluable"
+  },
+  {
+    "forms": [
+      "messengers"
+    ],
+    "list": "TSL",
+    "rank": 869,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "messenger"
+  },
+  {
+    "forms": [
+      "paperbacks"
+    ],
+    "list": "TSL",
+    "rank": 870,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "paperback"
+  },
+  {
+    "forms": [
+      "rebates",
+      "rebated",
+      "rebating"
+    ],
+    "list": "TSL",
+    "rank": 871,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "rebate"
+  },
+  {
+    "forms": [
+      "recurs",
+      "recurred",
+      "recurring"
+    ],
+    "list": "TSL",
+    "rank": 872,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "recur"
+  },
+  {
+    "forms": [
+      "reproduces",
+      "reproduced",
+      "reproducing"
+    ],
+    "list": "TSL",
+    "rank": 873,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "reproduce"
+  },
+  {
+    "forms": [
+      "sprays",
+      "sprayed",
+      "spraying",
+      "sprayings"
+    ],
+    "list": "TSL",
+    "rank": 874,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "spray"
+  },
+  {
+    "forms": [
+      "staples",
+      "stapled",
+      "stapling"
+    ],
+    "list": "TSL",
+    "rank": 875,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "staple"
+  },
+  {
+    "list": "TSL",
+    "rank": 876,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "strategic"
+  },
+  {
+    "forms": [
+      "stripes",
+      "striped",
+      "striping"
+    ],
+    "list": "TSL",
+    "rank": 877,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "stripe"
+  },
+  {
+    "forms": [
+      "teens"
+    ],
+    "list": "TSL",
+    "rank": 878,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "teen"
+  },
+  {
+    "forms": [
+      "tempts",
+      "tempted",
+      "tempting"
+    ],
+    "list": "TSL",
+    "rank": 879,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "tempt"
+  },
+  {
+    "forms": [
+      "timers"
+    ],
+    "list": "TSL",
+    "rank": 880,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "timer"
+  },
+  {
+    "forms": [
+      "unloads",
+      "unloaded",
+      "unloading"
+    ],
+    "list": "TSL",
+    "rank": 881,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "unload"
+  },
+  {
+    "list": "TSL",
+    "rank": 882,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "unusually"
+  },
+  {
+    "forms": [
+      "vacates",
+      "vacated",
+      "vacating"
+    ],
+    "list": "TSL",
+    "rank": 883,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "vacate"
+  },
+  {
+    "forms": [
+      "whales",
+      "whaling"
+    ],
+    "list": "TSL",
+    "rank": 884,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "whale"
+  },
+  {
+    "list": "TSL",
+    "rank": 885,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "wisely"
+  },
+  {
+    "forms": [
+      "amateurs"
+    ],
+    "list": "TSL",
+    "rank": 886,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "amateur"
+  },
+  {
+    "forms": [
+      "ambassadors"
+    ],
+    "list": "TSL",
+    "rank": 887,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "ambassador"
+  },
+  {
+    "list": "TSL",
+    "rank": 888,
+    "sfi": 47.12,
+    "u": 5.15,
+    "word": "anew"
+  },
+  {
+    "list": "TSL",
+    "rank": 889,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "architectural"
+  },
+  {
+    "forms": [
+      "attains",
+      "attained",
+      "attaining"
+    ],
+    "list": "TSL",
+    "rank": 890,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "attain"
+  },
+  {
+    "forms": [
+      "balloons",
+      "ballooned",
+      "ballooning"
+    ],
+    "list": "TSL",
+    "rank": 891,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "balloon"
+  },
+  {
+    "forms": [
+      "blueprints"
+    ],
+    "list": "TSL",
+    "rank": 892,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "blueprint"
+  },
+  {
+    "forms": [
+      "bugs",
+      "bugged",
+      "bugging"
+    ],
+    "list": "TSL",
+    "rank": 893,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "bug"
+  },
+  {
+    "list": "TSL",
+    "rank": 894,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "cautious"
+  },
+  {
+    "forms": [
+      "circuits",
+      "circuited",
+      "circuiting"
+    ],
+    "list": "TSL",
+    "rank": 895,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "circuit"
+  },
+  {
+    "forms": [
+      "claps",
+      "clapped",
+      "clapping"
+    ],
+    "list": "TSL",
+    "rank": 896,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "clap"
+  },
+  {
+    "list": "TSL",
+    "rank": 897,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "commerce"
+  },
+  {
+    "forms": [
+      "conveys",
+      "conveyed",
+      "conveying"
+    ],
+    "list": "TSL",
+    "rank": 898,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "convey"
+  },
+  {
+    "forms": [
+      "cords",
+      "corded",
+      "cording"
+    ],
+    "list": "TSL",
+    "rank": 899,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "cord"
+  },
+  {
+    "forms": [
+      "counselors",
+      "counsellor",
+      "counsellors"
+    ],
+    "list": "TSL",
+    "rank": 900,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "counselor"
+  },
+  {
+    "forms": [
+      "debits",
+      "debited",
+      "debiting"
+    ],
+    "list": "TSL",
+    "rank": 901,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "debit"
+  },
+  {
+    "list": "TSL",
+    "rank": 902,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "delicate"
+  },
+  {
+    "forms": [
+      "dependences"
+    ],
+    "list": "TSL",
+    "rank": 903,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "dependence"
+  },
+  {
+    "forms": [
+      "distractions"
+    ],
+    "list": "TSL",
+    "rank": 904,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "distraction"
+  },
+  {
+    "forms": [
+      "downsizes",
+      "downsized",
+      "downsizing",
+      "downsizings"
+    ],
+    "list": "TSL",
+    "rank": 905,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "downsize"
+  },
+  {
+    "forms": [
+      "elephants"
+    ],
+    "list": "TSL",
+    "rank": 906,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "elephant"
+  },
+  {
+    "forms": [
+      "enthusiasms"
+    ],
+    "list": "TSL",
+    "rank": 907,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "enthusiasm"
+  },
+  {
+    "forms": [
+      "enthusiasts"
+    ],
+    "list": "TSL",
+    "rank": 908,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "enthusiast"
+  },
+  {
+    "list": "TSL",
+    "rank": 909,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "evident"
+  },
+  {
+    "forms": [
+      "flexibilities"
+    ],
+    "list": "TSL",
+    "rank": 910,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "flexibility"
+  },
+  {
+    "list": "TSL",
+    "rank": 911,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "flextime"
+  },
+  {
+    "list": "TSL",
+    "rank": 912,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "fortunately"
+  },
+  {
+    "forms": [
+      "freighters"
+    ],
+    "list": "TSL",
+    "rank": 913,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "freighter"
+  },
+  {
+    "forms": [
+      "generators"
+    ],
+    "list": "TSL",
+    "rank": 914,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "generator"
+  },
+  {
+    "forms": [
+      "hallways"
+    ],
+    "list": "TSL",
+    "rank": 915,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "hallway"
+  },
+  {
+    "forms": [
+      "hamburgers"
+    ],
+    "list": "TSL",
+    "rank": 916,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "hamburger"
+  },
+  {
+    "forms": [
+      "hazards",
+      "hazarded",
+      "hazarding"
+    ],
+    "list": "TSL",
+    "rank": 917,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "hazard"
+  },
+  {
+    "forms": [
+      "homeowners"
+    ],
+    "list": "TSL",
+    "rank": 918,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "homeowner"
+  },
+  {
+    "forms": [
+      "imperatives"
+    ],
+    "list": "TSL",
+    "rank": 919,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "imperative"
+  },
+  {
+    "forms": [
+      "inflates",
+      "inflated",
+      "inflating"
+    ],
+    "list": "TSL",
+    "rank": 920,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "inflate"
+  },
+  {
+    "forms": [
+      "inserts",
+      "inserted",
+      "inserting"
+    ],
+    "list": "TSL",
+    "rank": 921,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "insert"
+  },
+  {
+    "forms": [
+      "lecturers"
+    ],
+    "list": "TSL",
+    "rank": 922,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "lecturer"
+  },
+  {
+    "list": "TSL",
+    "rank": 923,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "meaningful"
+  },
+  {
+    "forms": [
+      "memorizes",
+      "memorized",
+      "memorizing",
+      "memorise",
+      "memorises",
+      "memorised",
+      "memorising"
+    ],
+    "list": "TSL",
+    "rank": 924,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "memorize"
+  },
+  {
+    "forms": [
+      "merchants"
+    ],
+    "list": "TSL",
+    "rank": 925,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "merchant"
+  },
+  {
+    "forms": [
+      "modifications"
+    ],
+    "list": "TSL",
+    "rank": 926,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "modification"
+  },
+  {
+    "forms": [
+      "occupants"
+    ],
+    "list": "TSL",
+    "rank": 927,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "occupant"
+  },
+  {
+    "forms": [
+      "overcharges",
+      "overcharged",
+      "overcharging"
+    ],
+    "list": "TSL",
+    "rank": 928,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "overcharge"
+  },
+  {
+    "forms": [
+      "oversees",
+      "oversaw",
+      "overseen",
+      "overseeing"
+    ],
+    "list": "TSL",
+    "rank": 929,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "oversee"
+  },
+  {
+    "forms": [
+      "petitions",
+      "petitioned",
+      "petitioning"
+    ],
+    "list": "TSL",
+    "rank": 930,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "petition"
+  },
+  {
+    "forms": [
+      "pillows",
+      "pillowed",
+      "pillowing"
+    ],
+    "list": "TSL",
+    "rank": 931,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "pillow"
+  },
+  {
+    "list": "TSL",
+    "rank": 932,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "popcorn"
+  },
+  {
+    "forms": [
+      "potteries"
+    ],
+    "list": "TSL",
+    "rank": 933,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "pottery"
+  },
+  {
+    "list": "TSL",
+    "rank": 934,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "professionally"
+  },
+  {
+    "forms": [
+      "publicizes",
+      "publicized",
+      "publicizing",
+      "publicise",
+      "publicises",
+      "publicised",
+      "publicising"
+    ],
+    "list": "TSL",
+    "rank": 935,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "publicize"
+  },
+  {
+    "forms": [
+      "rays",
+      "rayed",
+      "raying"
+    ],
+    "list": "TSL",
+    "rank": 936,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "ray"
+  },
+  {
+    "forms": [
+      "redecorates",
+      "redecorated",
+      "redecorating"
+    ],
+    "list": "TSL",
+    "rank": 937,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "redecorate"
+  },
+  {
+    "forms": [
+      "refineries"
+    ],
+    "list": "TSL",
+    "rank": 938,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "refinery"
+  },
+  {
+    "forms": [
+      "refreshes",
+      "refreshed",
+      "refreshing"
+    ],
+    "list": "TSL",
+    "rank": 939,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "refresh"
+  },
+  {
+    "list": "TSL",
+    "rank": 940,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "refundable"
+  },
+  {
+    "forms": [
+      "reimbursements"
+    ],
+    "list": "TSL",
+    "rank": 941,
+    "sfi": 50.97,
+    "u": 12.5,
+    "word": "reimbursement"
+  },
+  {
+    "forms": [
+      "reliabilities"
+    ],
+    "list": "TSL",
+    "rank": 942,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "reliability"
+  },
+  {
+    "list": "TSL",
+    "rank": 943,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "reluctant"
+  },
+  {
+    "forms": [
+      "sewers"
+    ],
+    "list": "TSL",
+    "rank": 944,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "sewer"
+  },
+  {
+    "forms": [
+      "skates",
+      "skated",
+      "skating"
+    ],
+    "list": "TSL",
+    "rank": 945,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "skate"
+  },
+  {
+    "forms": [
+      "skateboards",
+      "skateboarded",
+      "skateboarding"
+    ],
+    "list": "TSL",
+    "rank": 946,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "skateboard"
+  },
+  {
+    "forms": [
+      "sleepier"
+    ],
+    "list": "TSL",
+    "rank": 947,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "sleepy"
+  },
+  {
+    "forms": [
+      "tailors",
+      "tailored",
+      "tailoring"
+    ],
+    "list": "TSL",
+    "rank": 948,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "tailor"
+  },
+  {
+    "forms": [
+      "terminations"
+    ],
+    "list": "TSL",
+    "rank": 949,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "termination"
+  },
+  {
+    "forms": [
+      "thefts"
+    ],
+    "list": "TSL",
+    "rank": 950,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "theft"
+  },
+  {
+    "forms": [
+      "thunderstorms"
+    ],
+    "list": "TSL",
+    "rank": 951,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "thunderstorm"
+  },
+  {
+    "forms": [
+      "transmissions"
+    ],
+    "list": "TSL",
+    "rank": 952,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "transmission"
+  },
+  {
+    "forms": [
+      "transmits",
+      "transmitted",
+      "transmitting"
+    ],
+    "list": "TSL",
+    "rank": 953,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "transmit"
+  },
+  {
+    "list": "TSL",
+    "rank": 954,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "unused"
+  },
+  {
+    "forms": [
+      "waives",
+      "waived",
+      "waiving"
+    ],
+    "list": "TSL",
+    "rank": 955,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "waive"
+  },
+  {
+    "forms": [
+      "yens"
+    ],
+    "list": "TSL",
+    "rank": 956,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "yen"
+  },
+  {
+    "forms": [
+      "activates",
+      "activated",
+      "activating"
+    ],
+    "list": "TSL",
+    "rank": 957,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "activate"
+  },
+  {
+    "list": "TSL",
+    "rank": 958,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "additionally"
+  },
+  {
+    "forms": [
+      "affirmatives"
+    ],
+    "list": "TSL",
+    "rank": 959,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "affirmative"
+  },
+  {
+    "forms": [
+      "bakers"
+    ],
+    "list": "TSL",
+    "rank": 960,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "baker"
+  },
+  {
+    "forms": [
+      "brainstorms",
+      "brainstormed",
+      "brainstorming"
+    ],
+    "list": "TSL",
+    "rank": 961,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "brainstorm"
+  },
+  {
+    "forms": [
+      "cages",
+      "caged",
+      "caging"
+    ],
+    "list": "TSL",
+    "rank": 962,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "cage"
+  },
+  {
+    "forms": [
+      "cinemas"
+    ],
+    "list": "TSL",
+    "rank": 963,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "cinema"
+  },
+  {
+    "forms": [
+      "collaborations"
+    ],
+    "list": "TSL",
+    "rank": 964,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "collaboration"
+  },
+  {
+    "forms": [
+      "condominiums"
+    ],
+    "list": "TSL",
+    "rank": 965,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "condominium"
+  },
+  {
+    "list": "TSL",
+    "rank": 966,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "consecutive"
+  },
+  {
+    "list": "TSL",
+    "rank": 967,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "cordless"
+  },
+  {
+    "list": "TSL",
+    "rank": 968,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "deluxe"
+  },
+  {
+    "forms": [
+      "desirables"
+    ],
+    "list": "TSL",
+    "rank": 969,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "desirable"
+  },
+  {
+    "forms": [
+      "discrepancies"
+    ],
+    "list": "TSL",
+    "rank": 970,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "discrepancy"
+  },
+  {
+    "forms": [
+      "dispatches",
+      "dispatched",
+      "dispatching"
+    ],
+    "list": "TSL",
+    "rank": 971,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "dispatch"
+  },
+  {
+    "forms": [
+      "drawbacks"
+    ],
+    "list": "TSL",
+    "rank": 972,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "drawback"
+  },
+  {
+    "forms": [
+      "dulls",
+      "dulled",
+      "dulling",
+      "duller",
+      "dullest"
+    ],
+    "list": "TSL",
+    "rank": 973,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "dull"
+  },
+  {
+    "list": "TSL",
+    "rank": 974,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "economically"
+  },
+  {
+    "list": "TSL",
+    "rank": 975,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "evenly"
+  },
+  {
+    "forms": [
+      "excellences"
+    ],
+    "list": "TSL",
+    "rank": 976,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "excellence"
+  },
+  {
+    "list": "TSL",
+    "rank": 977,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "exclusively"
+  },
+  {
+    "forms": [
+      "farewells"
+    ],
+    "list": "TSL",
+    "rank": 978,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "farewell"
+  },
+  {
+    "forms": [
+      "fatigues",
+      "fatigued",
+      "fatiguing"
+    ],
+    "list": "TSL",
+    "rank": 979,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "fatigue"
+  },
+  {
+    "forms": [
+      "fiscals"
+    ],
+    "list": "TSL",
+    "rank": 980,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "fiscal"
+  },
+  {
+    "forms": [
+      "fleets",
+      "fleeted",
+      "fleeting",
+      "fleeter",
+      "fleetest"
+    ],
+    "list": "TSL",
+    "rank": 981,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "fleet"
+  },
+  {
+    "forms": [
+      "flours",
+      "floured",
+      "flouring"
+    ],
+    "list": "TSL",
+    "rank": 982,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "flour"
+  },
+  {
+    "forms": [
+      "fogs",
+      "fogged",
+      "fogging"
+    ],
+    "list": "TSL",
+    "rank": 983,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "fog"
+  },
+  {
+    "list": "TSL",
+    "rank": 984,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "formally"
+  },
+  {
+    "forms": [
+      "grams"
+    ],
+    "list": "TSL",
+    "rank": 985,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "gram"
+  },
+  {
+    "forms": [
+      "handbooks"
+    ],
+    "list": "TSL",
+    "rank": 986,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "handbook"
+  },
+  {
+    "forms": [
+      "headphones"
+    ],
+    "list": "TSL",
+    "rank": 987,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "headphone"
+  },
+  {
+    "forms": [
+      "heaters"
+    ],
+    "list": "TSL",
+    "rank": 988,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "heater"
+  },
+  {
+    "forms": [
+      "helmets",
+      "helmeted"
+    ],
+    "list": "TSL",
+    "rank": 989,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "helmet"
+  },
+  {
+    "forms": [
+      "hikers"
+    ],
+    "list": "TSL",
+    "rank": 990,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "hiker"
+  },
+  {
+    "list": "TSL",
+    "rank": 991,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "homeless"
+  },
+  {
+    "forms": [
+      "lighters"
+    ],
+    "list": "TSL",
+    "rank": 992,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "lighter"
+  },
+  {
+    "list": "TSL",
+    "rank": 993,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "loudly"
+  },
+  {
+    "forms": [
+      "loyalties"
+    ],
+    "list": "TSL",
+    "rank": 994,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "loyalty"
+  },
+  {
+    "forms": [
+      "microwaves",
+      "microwaving"
+    ],
+    "list": "TSL",
+    "rank": 995,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "microwave"
+  },
+  {
+    "forms": [
+      "misidentifies",
+      "misidentified",
+      "misidentifying"
+    ],
+    "list": "TSL",
+    "rank": 996,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "misidentify"
+  },
+  {
+    "forms": [
+      "neater",
+      "neatest"
+    ],
+    "list": "TSL",
+    "rank": 997,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "neat"
+  },
+  {
+    "forms": [
+      "nominations"
+    ],
+    "list": "TSL",
+    "rank": 998,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "nomination"
+  },
+  {
+    "list": "TSL",
+    "rank": 999,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "officially"
+  },
+  {
+    "forms": [
+      "outfits",
+      "outfitted",
+      "outfitting"
+    ],
+    "list": "TSL",
+    "rank": 1000,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "outfit"
+  },
+  {
+    "forms": [
+      "pastries"
+    ],
+    "list": "TSL",
+    "rank": 1001,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "pastry"
+  },
+  {
+    "forms": [
+      "personalizes",
+      "personalized",
+      "personalizing",
+      "personalise",
+      "personalises",
+      "personalised",
+      "personalising"
+    ],
+    "list": "TSL",
+    "rank": 1002,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "personalize"
+  },
+  {
+    "list": "TSL",
+    "rank": 1003,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "poorly"
+  },
+  {
+    "list": "TSL",
+    "rank": 1004,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "prestigious"
+  },
+  {
+    "forms": [
+      "pursers"
+    ],
+    "list": "TSL",
+    "rank": 1005,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "purser"
+  },
+  {
+    "forms": [
+      "reassures",
+      "reassured",
+      "reassuring"
+    ],
+    "list": "TSL",
+    "rank": 1006,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "reassure"
+  },
+  {
+    "forms": [
+      "resumes",
+      "resumed",
+      "resuming"
+    ],
+    "list": "TSL",
+    "rank": 1007,
+    "sfi": 59.7,
+    "u": 93.4,
+    "word": "resume"
+  },
+  {
+    "forms": [
+      "reunions"
+    ],
+    "list": "TSL",
+    "rank": 1008,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "reunion"
+  },
+  {
+    "forms": [
+      "revolutionizes",
+      "revolutionized",
+      "revolutionizing",
+      "revolutionise",
+      "revolutionises",
+      "revolutionised",
+      "revolutionising"
+    ],
+    "list": "TSL",
+    "rank": 1009,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "revolutionize"
+  },
+  {
+    "list": "TSL",
+    "rank": 1010,
+    "sfi": 50.71,
+    "u": 11.77,
+    "word": "seafood"
+  },
+  {
+    "forms": [
+      "signifies",
+      "signified",
+      "signifying"
+    ],
+    "list": "TSL",
+    "rank": 1011,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "signify"
+  },
+  {
+    "forms": [
+      "slots",
+      "slotted",
+      "slotting"
+    ],
+    "list": "TSL",
+    "rank": 1012,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "slot"
+  },
+  {
+    "forms": [
+      "steers",
+      "steered",
+      "steering"
+    ],
+    "list": "TSL",
+    "rank": 1013,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "steer"
+  },
+  {
+    "forms": [
+      "sues",
+      "sued",
+      "suing"
+    ],
+    "list": "TSL",
+    "rank": 1014,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "sue"
+  },
+  {
+    "list": "TSL",
+    "rank": 1015,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "superb"
+  },
+  {
+    "list": "TSL",
+    "rank": 1016,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "traditionally"
+  },
+  {
+    "list": "TSL",
+    "rank": 1017,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "tremendous"
+  },
+  {
+    "list": "TSL",
+    "rank": 1018,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "underway"
+  },
+  {
+    "list": "TSL",
+    "rank": 1019,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "unpleasant"
+  },
+  {
+    "forms": [
+      "violins"
+    ],
+    "list": "TSL",
+    "rank": 1020,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "violin"
+  },
+  {
+    "forms": [
+      "wards",
+      "warded",
+      "warding"
+    ],
+    "list": "TSL",
+    "rank": 1021,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "ward"
+  },
+  {
+    "list": "TSL",
+    "rank": 1022,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "worthwhile"
+  },
+  {
+    "forms": [
+      "adapters"
+    ],
+    "list": "TSL",
+    "rank": 1023,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "adapter"
+  },
+  {
+    "list": "TSL",
+    "rank": 1024,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "advisable"
+  },
+  {
+    "forms": [
+      "archives",
+      "archived",
+      "archiving"
+    ],
+    "list": "TSL",
+    "rank": 1025,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "archive"
+  },
+  {
+    "list": "TSL",
+    "rank": 1026,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "artistic"
+  },
+  {
+    "forms": [
+      "assurances"
+    ],
+    "list": "TSL",
+    "rank": 1027,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "assurance"
+  },
+  {
+    "forms": [
+      "athletics"
+    ],
+    "list": "TSL",
+    "rank": 1028,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "athletic"
+  },
+  {
+    "forms": [
+      "attires",
+      "attired",
+      "attiring"
+    ],
+    "list": "TSL",
+    "rank": 1029,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "attire"
+  },
+  {
+    "forms": [
+      "auditors"
+    ],
+    "list": "TSL",
+    "rank": 1030,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "auditor"
+  },
+  {
+    "forms": [
+      "bankruptcies"
+    ],
+    "list": "TSL",
+    "rank": 1031,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "bankruptcy"
+  },
+  {
+    "forms": [
+      "bulks",
+      "bulked",
+      "bulking"
+    ],
+    "list": "TSL",
+    "rank": 1032,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "bulk"
+  },
+  {
+    "forms": [
+      "butters",
+      "buttered",
+      "buttering"
+    ],
+    "list": "TSL",
+    "rank": 1033,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "butter"
+  },
+  {
+    "forms": [
+      "centimeters",
+      "centimetre",
+      "centimetres"
+    ],
+    "list": "TSL",
+    "rank": 1034,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "centimeter"
+  },
+  {
+    "forms": [
+      "circulates",
+      "circulated",
+      "circulating"
+    ],
+    "list": "TSL",
+    "rank": 1035,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "circulate"
+  },
+  {
+    "forms": [
+      "combs",
+      "combed",
+      "combing",
+      "combings"
+    ],
+    "list": "TSL",
+    "rank": 1036,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "comb"
+  },
+  {
+    "list": "TSL",
+    "rank": 1037,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "comfortably"
+  },
+  {
+    "forms": [
+      "compliances"
+    ],
+    "list": "TSL",
+    "rank": 1038,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "compliance"
+  },
+  {
+    "forms": [
+      "contractions"
+    ],
+    "list": "TSL",
+    "rank": 1039,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "contraction"
+  },
+  {
+    "forms": [
+      "cookbooks"
+    ],
+    "list": "TSL",
+    "rank": 1040,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "cookbook"
+  },
+  {
+    "forms": [
+      "cushions",
+      "cushioned",
+      "cushioning"
+    ],
+    "list": "TSL",
+    "rank": 1041,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "cushion"
+  },
+  {
+    "forms": [
+      "doses",
+      "dosed",
+      "dosing"
+    ],
+    "list": "TSL",
+    "rank": 1042,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "dose"
+  },
+  {
+    "forms": [
+      "drums",
+      "drummed",
+      "drumming"
+    ],
+    "list": "TSL",
+    "rank": 1043,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "drum"
+  },
+  {
+    "forms": [
+      "embeds",
+      "embedded",
+      "embedding",
+      "embeddings"
+    ],
+    "list": "TSL",
+    "rank": 1044,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "embed"
+  },
+  {
+    "forms": [
+      "evacuates",
+      "evacuated",
+      "evacuating"
+    ],
+    "list": "TSL",
+    "rank": 1045,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "evacuate"
+  },
+  {
+    "forms": [
+      "expedited"
+    ],
+    "list": "TSL",
+    "rank": 1046,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "expedite"
+  },
+  {
+    "forms": [
+      "extinguishers"
+    ],
+    "list": "TSL",
+    "rank": 1047,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "extinguisher"
+  },
+  {
+    "forms": [
+      "familiarities"
+    ],
+    "list": "TSL",
+    "rank": 1048,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "familiarity"
+  },
+  {
+    "forms": [
+      "flaws",
+      "flawed"
+    ],
+    "list": "TSL",
+    "rank": 1049,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "flaw"
+  },
+  {
+    "forms": [
+      "fluctuates",
+      "fluctuated",
+      "fluctuating"
+    ],
+    "list": "TSL",
+    "rank": 1050,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "fluctuate"
+  },
+  {
+    "list": "TSL",
+    "rank": 1051,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "fluent"
+  },
+  {
+    "list": "TSL",
+    "rank": 1052,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "honestly"
+  },
+  {
+    "forms": [
+      "housekeeping"
+    ],
+    "list": "TSL",
+    "rank": 1053,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "housekeep"
+  },
+  {
+    "forms": [
+      "hurricanes"
+    ],
+    "list": "TSL",
+    "rank": 1054,
+    "sfi": 50.43,
+    "u": 11.03,
+    "word": "hurricane"
+  },
+  {
+    "list": "TSL",
+    "rank": 1055,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "hygiene"
+  },
+  {
+    "forms": [
+      "integrals"
+    ],
+    "list": "TSL",
+    "rank": 1056,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "integral"
+  },
+  {
+    "list": "TSL",
+    "rank": 1057,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "interactive"
+  },
+  {
+    "forms": [
+      "interferes",
+      "interfered",
+      "interfering"
+    ],
+    "list": "TSL",
+    "rank": 1058,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "interfere"
+  },
+  {
+    "forms": [
+      "kilograms"
+    ],
+    "list": "TSL",
+    "rank": 1059,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "kilogram"
+  },
+  {
+    "forms": [
+      "layoffs"
+    ],
+    "list": "TSL",
+    "rank": 1060,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "layoff"
+  },
+  {
+    "forms": [
+      "lightweights"
+    ],
+    "list": "TSL",
+    "rank": 1061,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "lightweight"
+  },
+  {
+    "forms": [
+      "merits",
+      "merited",
+      "meriting"
+    ],
+    "list": "TSL",
+    "rank": 1062,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "merit"
+  },
+  {
+    "forms": [
+      "necklaces"
+    ],
+    "list": "TSL",
+    "rank": 1063,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "necklace"
+  },
+  {
+    "forms": [
+      "needier",
+      "neediest"
+    ],
+    "list": "TSL",
+    "rank": 1064,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "needy"
+  },
+  {
+    "forms": [
+      "overpaid",
+      "overpaying",
+      "overpays"
+    ],
+    "list": "TSL",
+    "rank": 1065,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "overpay"
+  },
+  {
+    "forms": [
+      "pamphlets"
+    ],
+    "list": "TSL",
+    "rank": 1066,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "pamphlet"
+  },
+  {
+    "forms": [
+      "partials"
+    ],
+    "list": "TSL",
+    "rank": 1067,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "partial"
+  },
+  {
+    "forms": [
+      "penalizes",
+      "penalized",
+      "penalizing",
+      "penalise",
+      "penalises",
+      "penalised",
+      "penalising"
+    ],
+    "list": "TSL",
+    "rank": 1068,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "penalize"
+  },
+  {
+    "forms": [
+      "pollutes",
+      "polluted",
+      "polluting"
+    ],
+    "list": "TSL",
+    "rank": 1069,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "pollute"
+  },
+  {
+    "forms": [
+      "prescribes",
+      "prescribed",
+      "prescribing"
+    ],
+    "list": "TSL",
+    "rank": 1070,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "prescribe"
+  },
+  {
+    "list": "TSL",
+    "rank": 1071,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "probable"
+  },
+  {
+    "list": "TSL",
+    "rank": 1072,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "prominent"
+  },
+  {
+    "forms": [
+      "rainfalls"
+    ],
+    "list": "TSL",
+    "rank": 1073,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "rainfall"
+  },
+  {
+    "forms": [
+      "relocations"
+    ],
+    "list": "TSL",
+    "rank": 1074,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "relocation"
+  },
+  {
+    "forms": [
+      "residences"
+    ],
+    "list": "TSL",
+    "rank": 1075,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "residence"
+  },
+  {
+    "forms": [
+      "retrieves",
+      "retrieved",
+      "retrieving"
+    ],
+    "list": "TSL",
+    "rank": 1076,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "retrieve"
+  },
+  {
+    "forms": [
+      "riders"
+    ],
+    "list": "TSL",
+    "rank": 1077,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "rider"
+  },
+  {
+    "forms": [
+      "rubbers"
+    ],
+    "list": "TSL",
+    "rank": 1078,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "rubber"
+  },
+  {
+    "forms": [
+      "rugs"
+    ],
+    "list": "TSL",
+    "rank": 1079,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "rug"
+  },
+  {
+    "list": "TSL",
+    "rank": 1080,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "salespeople"
+  },
+  {
+    "list": "TSL",
+    "rank": 1081,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "sharply"
+  },
+  {
+    "forms": [
+      "similarities"
+    ],
+    "list": "TSL",
+    "rank": 1082,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "similarity"
+  },
+  {
+    "list": "TSL",
+    "rank": 1083,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "someday"
+  },
+  {
+    "forms": [
+      "spectators"
+    ],
+    "list": "TSL",
+    "rank": 1084,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "spectator"
+  },
+  {
+    "forms": [
+      "stereos"
+    ],
+    "list": "TSL",
+    "rank": 1085,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "stereo"
+  },
+  {
+    "forms": [
+      "storerooms"
+    ],
+    "list": "TSL",
+    "rank": 1086,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "storeroom"
+  },
+  {
+    "forms": [
+      "subsidizes",
+      "subsidized",
+      "subsidizing",
+      "subsidise",
+      "subsidises",
+      "subsidised",
+      "subsidising"
+    ],
+    "list": "TSL",
+    "rank": 1087,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "subsidize"
+  },
+  {
+    "list": "TSL",
+    "rank": 1088,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "suspicious"
+  },
+  {
+    "forms": [
+      "tastier",
+      "tastiest"
+    ],
+    "list": "TSL",
+    "rank": 1089,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "tasty"
+  },
+  {
+    "list": "TSL",
+    "rank": 1090,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "terrific"
+  },
+  {
+    "list": "TSL",
+    "rank": 1091,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "underground"
+  },
+  {
+    "list": "TSL",
+    "rank": 1092,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "unpaid"
+  },
+  {
+    "forms": [
+      "volleyballs"
+    ],
+    "list": "TSL",
+    "rank": 1093,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "volleyball"
+  },
+  {
+    "forms": [
+      "wheelchairs"
+    ],
+    "list": "TSL",
+    "rank": 1094,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "wheelchair"
+  },
+  {
+    "list": "TSL",
+    "rank": 1095,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "whoever"
+  },
+  {
+    "forms": [
+      "wools"
+    ],
+    "list": "TSL",
+    "rank": 1096,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "wool"
+  },
+  {
+    "forms": [
+      "wrinkles",
+      "wrinkled",
+      "wrinkling"
+    ],
+    "list": "TSL",
+    "rank": 1097,
+    "sfi": 50.13,
+    "u": 10.3,
+    "word": "wrinkle"
+  },
+  {
+    "forms": [
+      "accuracies"
+    ],
+    "list": "TSL",
+    "rank": 1098,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "accuracy"
+  },
+  {
+    "list": "TSL",
+    "rank": 1099,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "anyhow"
+  },
+  {
+    "forms": [
+      "appetizers"
+    ],
+    "list": "TSL",
+    "rank": 1100,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "appetizer"
+  },
+  {
+    "forms": [
+      "arcs",
+      "arced",
+      "arcing"
+    ],
+    "list": "TSL",
+    "rank": 1101,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "arc"
+  },
+  {
+    "forms": [
+      "auditions",
+      "auditioned",
+      "auditioning"
+    ],
+    "list": "TSL",
+    "rank": 1102,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "audition"
+  },
+  {
+    "forms": [
+      "backpacks",
+      "backpacked",
+      "backpacking"
+    ],
+    "list": "TSL",
+    "rank": 1103,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "backpack"
+  },
+  {
+    "forms": [
+      "ballrooms"
+    ],
+    "list": "TSL",
+    "rank": 1104,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "ballroom"
+  },
+  {
+    "list": "TSL",
+    "rank": 1105,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "beneficial"
+  },
+  {
+    "forms": [
+      "biographies"
+    ],
+    "list": "TSL",
+    "rank": 1106,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "biography"
+  },
+  {
+    "forms": [
+      "bounds",
+      "bounded",
+      "bounding"
+    ],
+    "list": "TSL",
+    "rank": 1107,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "bound"
+  },
+  {
+    "forms": [
+      "brooms"
+    ],
+    "list": "TSL",
+    "rank": 1108,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "broom"
+  },
+  {
+    "forms": [
+      "cheeseburgers"
+    ],
+    "list": "TSL",
+    "rank": 1109,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "cheeseburger"
+  },
+  {
+    "forms": [
+      "chillier",
+      "chilliest"
+    ],
+    "list": "TSL",
+    "rank": 1110,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "chilly"
+  },
+  {
+    "forms": [
+      "circuses"
+    ],
+    "list": "TSL",
+    "rank": 1111,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "circus"
+  },
+  {
+    "forms": [
+      "compliments",
+      "complimented",
+      "complimenting"
+    ],
+    "list": "TSL",
+    "rank": 1112,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "compliment"
+  },
+  {
+    "forms": [
+      "consignments"
+    ],
+    "list": "TSL",
+    "rank": 1113,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "consignment"
+  },
+  {
+    "forms": [
+      "continentals"
+    ],
+    "list": "TSL",
+    "rank": 1114,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "continental"
+  },
+  {
+    "forms": [
+      "copyrights",
+      "copyrighted",
+      "copyrighting"
+    ],
+    "list": "TSL",
+    "rank": 1115,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "copyright"
+  },
+  {
+    "list": "TSL",
+    "rank": 1116,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "countryside"
+  },
+  {
+    "forms": [
+      "demolishes",
+      "demolished",
+      "demolishing"
+    ],
+    "list": "TSL",
+    "rank": 1117,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "demolish"
+  },
+  {
+    "list": "TSL",
+    "rank": 1118,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "departmental"
+  },
+  {
+    "list": "TSL",
+    "rank": 1119,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "desperate"
+  },
+  {
+    "forms": [
+      "devastates",
+      "devastated",
+      "devastating"
+    ],
+    "list": "TSL",
+    "rank": 1120,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "devastate"
+  },
+  {
+    "forms": [
+      "diagnostics"
+    ],
+    "list": "TSL",
+    "rank": 1121,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "diagnostic"
+  },
+  {
+    "forms": [
+      "diagrams",
+      "diagrammed",
+      "diagramming"
+    ],
+    "list": "TSL",
+    "rank": 1122,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "diagram"
+  },
+  {
+    "forms": [
+      "diamonds"
+    ],
+    "list": "TSL",
+    "rank": 1123,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "diamond"
+  },
+  {
+    "forms": [
+      "disables",
+      "disabled",
+      "disabling"
+    ],
+    "list": "TSL",
+    "rank": 1124,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "disable"
+  },
+  {
+    "forms": [
+      "disgusts",
+      "disgusted",
+      "disgusting"
+    ],
+    "list": "TSL",
+    "rank": 1125,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "disgust"
+  },
+  {
+    "forms": [
+      "donuts",
+      "doughnuts",
+      "doughnut"
+    ],
+    "list": "TSL",
+    "rank": 1126,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "donut"
+  },
+  {
+    "forms": [
+      "doormen"
+    ],
+    "list": "TSL",
+    "rank": 1127,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "doorman"
+  },
+  {
+    "list": "TSL",
+    "rank": 1128,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "electronically"
+  },
+  {
+    "forms": [
+      "elevates",
+      "elevated",
+      "elevating"
+    ],
+    "list": "TSL",
+    "rank": 1129,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "elevate"
+  },
+  {
+    "forms": [
+      "engagements"
+    ],
+    "list": "TSL",
+    "rank": 1130,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "engagement"
+  },
+  {
+    "forms": [
+      "enrollments",
+      "enrolments",
+      "enrolment"
+    ],
+    "list": "TSL",
+    "rank": 1131,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "enrollment"
+  },
+  {
+    "forms": [
+      "euros"
+    ],
+    "list": "TSL",
+    "rank": 1132,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "euro"
+  },
+  {
+    "forms": [
+      "forbids",
+      "forbade",
+      "forbidding",
+      "forbidden"
+    ],
+    "list": "TSL",
+    "rank": 1133,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "forbid"
+  },
+  {
+    "forms": [
+      "forks",
+      "forked",
+      "forking"
+    ],
+    "list": "TSL",
+    "rank": 1134,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "fork"
+  },
+  {
+    "forms": [
+      "fosters",
+      "fostered",
+      "fostering"
+    ],
+    "list": "TSL",
+    "rank": 1135,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "foster"
+  },
+  {
+    "forms": [
+      "getaways"
+    ],
+    "list": "TSL",
+    "rank": 1136,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "getaway"
+  },
+  {
+    "forms": [
+      "gossips",
+      "gossiped",
+      "gossiping"
+    ],
+    "list": "TSL",
+    "rank": 1137,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "gossip"
+  },
+  {
+    "forms": [
+      "hackers"
+    ],
+    "list": "TSL",
+    "rank": 1138,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "hacker"
+  },
+  {
+    "list": "TSL",
+    "rank": 1139,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "hardworking"
+  },
+  {
+    "list": "TSL",
+    "rank": 1140,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "impatient"
+  },
+  {
+    "list": "TSL",
+    "rank": 1141,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "indirect"
+  },
+  {
+    "forms": [
+      "interpreters"
+    ],
+    "list": "TSL",
+    "rank": 1142,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "interpreter"
+  },
+  {
+    "forms": [
+      "intersections"
+    ],
+    "list": "TSL",
+    "rank": 1143,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "intersection"
+  },
+  {
+    "list": "TSL",
+    "rank": 1144,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "irrelevant"
+  },
+  {
+    "forms": [
+      "jean"
+    ],
+    "list": "TSL",
+    "rank": 1145,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "jeans"
+  },
+  {
+    "list": "TSL",
+    "rank": 1146,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "journalism"
+  },
+  {
+    "forms": [
+      "letterheads"
+    ],
+    "list": "TSL",
+    "rank": 1147,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "letterhead"
+  },
+  {
+    "forms": [
+      "lifeguards"
+    ],
+    "list": "TSL",
+    "rank": 1148,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "lifeguard"
+  },
+  {
+    "forms": [
+      "modems"
+    ],
+    "list": "TSL",
+    "rank": 1149,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "modem"
+  },
+  {
+    "forms": [
+      "monuments"
+    ],
+    "list": "TSL",
+    "rank": 1150,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "monument"
+  },
+  {
+    "forms": [
+      "mosquitoes"
+    ],
+    "list": "TSL",
+    "rank": 1151,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "mosquito"
+  },
+  {
+    "forms": [
+      "obligated",
+      "obligating",
+      "obligates"
+    ],
+    "list": "TSL",
+    "rank": 1152,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "obligate"
+  },
+  {
+    "forms": [
+      "obliges",
+      "obliged",
+      "obliging"
+    ],
+    "list": "TSL",
+    "rank": 1153,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "oblige"
+  },
+  {
+    "forms": [
+      "occurrences"
+    ],
+    "list": "TSL",
+    "rank": 1154,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "occurrence"
+  },
+  {
+    "list": "TSL",
+    "rank": 1155,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "operational"
+  },
+  {
+    "forms": [
+      "outages"
+    ],
+    "list": "TSL",
+    "rank": 1156,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "outage"
+  },
+  {
+    "forms": [
+      "overcrowds",
+      "overcrowded",
+      "overcrowding",
+      "overcrowdings"
+    ],
+    "list": "TSL",
+    "rank": 1157,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "overcrowd"
+  },
+  {
+    "forms": [
+      "paralegals"
+    ],
+    "list": "TSL",
+    "rank": 1158,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "paralegal"
+  },
+  {
+    "list": "TSL",
+    "rank": 1159,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "partially"
+  },
+  {
+    "forms": [
+      "peppers",
+      "peppered",
+      "peppering"
+    ],
+    "list": "TSL",
+    "rank": 1160,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "pepper"
+  },
+  {
+    "list": "TSL",
+    "rank": 1161,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "permanently"
+  },
+  {
+    "forms": [
+      "plows",
+      "plowed",
+      "plowing",
+      "plough",
+      "ploughed",
+      "ploughing",
+      "ploughs"
+    ],
+    "list": "TSL",
+    "rank": 1162,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "plow"
+  },
+  {
+    "forms": [
+      "queries",
+      "queried",
+      "querying"
+    ],
+    "list": "TSL",
+    "rank": 1163,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "query"
+  },
+  {
+    "forms": [
+      "railways"
+    ],
+    "list": "TSL",
+    "rank": 1164,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "railway"
+  },
+  {
+    "forms": [
+      "raincoats"
+    ],
+    "list": "TSL",
+    "rank": 1165,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "raincoat"
+  },
+  {
+    "forms": [
+      "reconsiders",
+      "reconsidered",
+      "reconsidering"
+    ],
+    "list": "TSL",
+    "rank": 1166,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "reconsider"
+  },
+  {
+    "forms": [
+      "redesigns",
+      "redesigned",
+      "redesigning"
+    ],
+    "list": "TSL",
+    "rank": 1167,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "redesign"
+  },
+  {
+    "forms": [
+      "rehearsals"
+    ],
+    "list": "TSL",
+    "rank": 1168,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "rehearsal"
+  },
+  {
+    "forms": [
+      "relaxations"
+    ],
+    "list": "TSL",
+    "rank": 1169,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "relaxation"
+  },
+  {
+    "forms": [
+      "repetitions"
+    ],
+    "list": "TSL",
+    "rank": 1170,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "repetition"
+  },
+  {
+    "forms": [
+      "retreats",
+      "retreated",
+      "retreating"
+    ],
+    "list": "TSL",
+    "rank": 1171,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "retreat"
+  },
+  {
+    "forms": [
+      "salons"
+    ],
+    "list": "TSL",
+    "rank": 1172,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "salon"
+  },
+  {
+    "forms": [
+      "satellites"
+    ],
+    "list": "TSL",
+    "rank": 1173,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "satellite"
+  },
+  {
+    "forms": [
+      "sceneries"
+    ],
+    "list": "TSL",
+    "rank": 1174,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "scenery"
+  },
+  {
+    "forms": [
+      "serials"
+    ],
+    "list": "TSL",
+    "rank": 1175,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "serial"
+  },
+  {
+    "forms": [
+      "sews",
+      "sewed",
+      "sewing",
+      "sewn"
+    ],
+    "list": "TSL",
+    "rank": 1176,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "sew"
+  },
+  {
+    "forms": [
+      "sketches",
+      "sketched",
+      "sketching"
+    ],
+    "list": "TSL",
+    "rank": 1177,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "sketch"
+  },
+  {
+    "forms": [
+      "smartphones"
+    ],
+    "list": "TSL",
+    "rank": 1178,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "smartphone"
+  },
+  {
+    "forms": [
+      "soars",
+      "soared",
+      "soaring"
+    ],
+    "list": "TSL",
+    "rank": 1179,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "soar"
+  },
+  {
+    "forms": [
+      "stimuli"
+    ],
+    "list": "TSL",
+    "rank": 1180,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "stimulus"
+  },
+  {
+    "forms": [
+      "stockbrokers"
+    ],
+    "list": "TSL",
+    "rank": 1181,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "stockbroker"
+  },
+  {
+    "forms": [
+      "tablecloths"
+    ],
+    "list": "TSL",
+    "rank": 1182,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "tablecloth"
+  },
+  {
+    "forms": [
+      "thirstier",
+      "thirstiest"
+    ],
+    "list": "TSL",
+    "rank": 1183,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "thirsty"
+  },
+  {
+    "forms": [
+      "thrills",
+      "thrilled",
+      "thrilling"
+    ],
+    "list": "TSL",
+    "rank": 1184,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "thrill"
+  },
+  {
+    "forms": [
+      "tiles",
+      "tiled",
+      "tiling"
+    ],
+    "list": "TSL",
+    "rank": 1185,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "tile"
+  },
+  {
+    "forms": [
+      "toiletries"
+    ],
+    "list": "TSL",
+    "rank": 1186,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "toiletry"
+  },
+  {
+    "forms": [
+      "trademarks"
+    ],
+    "list": "TSL",
+    "rank": 1187,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "trademark"
+  },
+  {
+    "list": "TSL",
+    "rank": 1188,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "tropical"
+  },
+  {
+    "forms": [
+      "tunas"
+    ],
+    "list": "TSL",
+    "rank": 1189,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "tuna"
+  },
+  {
+    "list": "TSL",
+    "rank": 1190,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "unemployed"
+  },
+  {
+    "forms": [
+      "validates",
+      "validated",
+      "validating"
+    ],
+    "list": "TSL",
+    "rank": 1191,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "validate"
+  },
+  {
+    "list": "TSL",
+    "rank": 1192,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "vanilla"
+  },
+  {
+    "list": "TSL",
+    "rank": 1193,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "willingness"
+  },
+  {
+    "forms": [
+      "wristwatches"
+    ],
+    "list": "TSL",
+    "rank": 1194,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "wristwatch"
+  },
+  {
+    "forms": [
+      "abides",
+      "abided",
+      "abiding"
+    ],
+    "list": "TSL",
+    "rank": 1195,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "abide"
+  },
+  {
+    "list": "TSL",
+    "rank": 1196,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "actively"
+  },
+  {
+    "forms": [
+      "allergies"
+    ],
+    "list": "TSL",
+    "rank": 1197,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "allergy"
+  },
+  {
+    "list": "TSL",
+    "rank": 1198,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "apprehensive"
+  },
+  {
+    "list": "TSL",
+    "rank": 1199,
+    "sfi": 49.8,
+    "u": 9.56,
+    "word": "automotive"
+  },
+  {
+    "list": "TSL",
+    "rank": 1200,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "bacteria"
+  },
+  {
+    "forms": [
+      "broadens",
+      "broadened",
+      "broadening",
+      "broadenings"
+    ],
+    "list": "TSL",
+    "rank": 1201,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "broaden"
+  },
+  {
+    "forms": [
+      "bulbs"
+    ],
+    "list": "TSL",
+    "rank": 1202,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "bulb"
+  },
+  {
+    "forms": [
+      "by-laws",
+      "by law",
+      "by laws"
+    ],
+    "list": "TSL",
+    "rank": 1203,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "by-law"
+  },
+  {
+    "forms": [
+      "cheers",
+      "cheered",
+      "cheering"
+    ],
+    "list": "TSL",
+    "rank": 1204,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "cheer"
+  },
+  {
+    "forms": [
+      "complications"
+    ],
+    "list": "TSL",
+    "rank": 1205,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "complication"
+  },
+  {
+    "list": "TSL",
+    "rank": 1206,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "considerate"
+  },
+  {
+    "forms": [
+      "daytimes"
+    ],
+    "list": "TSL",
+    "rank": 1207,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "daytime"
+  },
+  {
+    "forms": [
+      "decorations"
+    ],
+    "list": "TSL",
+    "rank": 1208,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "decoration"
+  },
+  {
+    "forms": [
+      "discards",
+      "discarded",
+      "discarding"
+    ],
+    "list": "TSL",
+    "rank": 1209,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "discard"
+  },
+  {
+    "list": "TSL",
+    "rank": 1210,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "drastically"
+  },
+  {
+    "forms": [
+      "erases",
+      "erased",
+      "erasing"
+    ],
+    "list": "TSL",
+    "rank": 1211,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "erase"
+  },
+  {
+    "forms": [
+      "explorers"
+    ],
+    "list": "TSL",
+    "rank": 1212,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "explorer"
+  },
+  {
+    "list": "TSL",
+    "rank": 1213,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "factual"
+  },
+  {
+    "forms": [
+      "fixtures"
+    ],
+    "list": "TSL",
+    "rank": 1214,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "fixture"
+  },
+  {
+    "list": "TSL",
+    "rank": 1215,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "footwear"
+  },
+  {
+    "forms": [
+      "genres"
+    ],
+    "list": "TSL",
+    "rank": 1216,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "genre"
+  },
+  {
+    "forms": [
+      "gymnasiums"
+    ],
+    "list": "TSL",
+    "rank": 1217,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "gymnasium"
+  },
+  {
+    "list": "TSL",
+    "rank": 1218,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "hereby"
+  },
+  {
+    "forms": [
+      "hesitations"
+    ],
+    "list": "TSL",
+    "rank": 1219,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "hesitation"
+  },
+  {
+    "list": "TSL",
+    "rank": 1220,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "homemade"
+  },
+  {
+    "forms": [
+      "hospitalities"
+    ],
+    "list": "TSL",
+    "rank": 1221,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "hospitality"
+  },
+  {
+    "forms": [
+      "incomings"
+    ],
+    "list": "TSL",
+    "rank": 1222,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "incoming"
+  },
+  {
+    "forms": [
+      "inductions"
+    ],
+    "list": "TSL",
+    "rank": 1223,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "induction"
+  },
+  {
+    "forms": [
+      "inspirations"
+    ],
+    "list": "TSL",
+    "rank": 1224,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "inspiration"
+  },
+  {
+    "list": "TSL",
+    "rank": 1225,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "intently"
+  },
+  {
+    "forms": [
+      "mowers"
+    ],
+    "list": "TSL",
+    "rank": 1226,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "mower"
+  },
+  {
+    "list": "TSL",
+    "rank": 1227,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "nutrition"
+  },
+  {
+    "forms": [
+      "restatements"
+    ],
+    "list": "TSL",
+    "rank": 1228,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "restatement"
+  },
+  {
+    "forms": [
+      "sedans"
+    ],
+    "list": "TSL",
+    "rank": 1229,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "sedan"
+  },
+  {
+    "forms": [
+      "sunscreens"
+    ],
+    "list": "TSL",
+    "rank": 1230,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "sunscreen"
+  },
+  {
+    "list": "TSL",
+    "rank": 1231,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "wellness"
+  },
+  {
+    "forms": [
+      "workbooks"
+    ],
+    "list": "TSL",
+    "rank": 1232,
+    "sfi": 49.46,
+    "u": 8.83,
+    "word": "workbook"
+  },
+  {
+    "forms": [
+      "bookcases"
+    ],
+    "list": "TSL",
+    "rank": 1233,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "bookcase"
+  },
+  {
+    "list": "TSL",
+    "rank": 1234,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "cleanliness"
+  },
+  {
+    "forms": [
+      "contestants"
+    ],
+    "list": "TSL",
+    "rank": 1235,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "contestant"
+  },
+  {
+    "forms": [
+      "ethic"
+    ],
+    "list": "TSL",
+    "rank": 1236,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "ethics"
+  },
+  {
+    "list": "TSL",
+    "rank": 1237,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "healthful"
+  },
+  {
+    "list": "TSL",
+    "rank": 1238,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "inefficient"
+  },
+  {
+    "forms": [
+      "liters",
+      "litres",
+      "litre"
+    ],
+    "list": "TSL",
+    "rank": 1239,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "liter"
+  },
+  {
+    "forms": [
+      "recessions"
+    ],
+    "list": "TSL",
+    "rank": 1240,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "recession"
+  },
+  {
+    "forms": [
+      "timelines"
+    ],
+    "list": "TSL",
+    "rank": 1241,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "timeline"
+  },
+  {
+    "list": "TSL",
+    "rank": 1242,
+    "sfi": 49.08,
+    "u": 8.09,
+    "word": "unreliable"
+  },
+  {
+    "forms": [
+      "acclaims",
+      "acclaimed",
+      "acclaiming"
+    ],
+    "list": "TSL",
+    "rank": 1243,
+    "sfi": 48.67,
+    "u": 7.35,
+    "word": "acclaim"
+  },
+  {
+    "forms": [
+      "chronics"
+    ],
+    "list": "TSL",
+    "rank": 1244,
+    "sfi": 48.67,
+    "u": 7.35,
+    "word": "chronic"
+  },
+  {
+    "forms": [
+      "deteriorates",
+      "deteriorated",
+      "deteriorating"
+    ],
+    "list": "TSL",
+    "rank": 1245,
+    "sfi": 48.67,
+    "u": 7.35,
+    "word": "deteriorate"
+  },
+  {
+    "forms": [
+      "resembles",
+      "resembled",
+      "resembling"
+    ],
+    "list": "TSL",
+    "rank": 1246,
+    "sfi": 48.67,
+    "u": 7.35,
+    "word": "resemble"
+  },
+  {
+    "list": "TSL",
+    "rank": 1247,
+    "sfi": 48.67,
+    "u": 7.35,
+    "word": "unauthorized"
+  },
+  {
+    "forms": [
+      "violates",
+      "violated",
+      "violating"
+    ],
+    "list": "TSL",
+    "rank": 1248,
+    "sfi": 48.67,
+    "u": 7.35,
+    "word": "violate"
+  },
+  {
+    "forms": [
+      "unplugs",
+      "unplugged",
+      "unplugging"
+    ],
+    "list": "TSL",
+    "rank": 1249,
+    "sfi": 48.21,
+    "u": 6.62,
+    "word": "unplug"
+  },
+  {
+    "forms": [
+      "videoconferences",
+      "videoconferencing"
+    ],
+    "list": "TSL",
+    "rank": 1250,
+    "sfi": 48.21,
+    "u": 6.62,
+    "word": "videoconference"
+  }
+]
