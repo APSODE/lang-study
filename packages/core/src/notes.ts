@@ -33,6 +33,12 @@ export interface KanjiFields {
   jlpt?: number
   strokes?: number
   examples?: { word: string; reading: string; meaning_ko: string }[]
+  /** 한국 한자음, KANJIDIC2 korean_h. 여러 개면 ", " 로 잇는다 (예: "식, 사") */
+  eum_ko?: string
+  /** 전통 훈음 하나 (예: "먹을 식"). 마지막 낱말은 eum_ko 의 음 중 하나. 国字 등 훈음이 없으면 필드를 뺀다 */
+  hunum_ko?: string
+  /** KANJIDIC2 영어 뜻. 검토 · 번역 참고용 */
+  meanings_en?: string[]
 }
 
 export interface ToeicFields {

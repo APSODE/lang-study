@@ -37,6 +37,17 @@ describe('validateNote', () => {
     expect(validateNote(null)).toHaveLength(1)
     expect(validateNote({ ...ka, fields: [] })).toHaveLength(1)
   })
+  it('한자 선택 필드: eum_ko · hunum_ko · meanings_en', () => {
+    const shoku = { kanji: '食', on: ['ショク'], kun: ['た.べる'], meanings_ko: ['먹다'] }
+    const note = (extra: Record<string, unknown>) => ({ id: 'kanji-食', track: 'kanji', fields: { ...shoku, ...extra } })
+    expect(validateNote(note({ eum_ko: '식, 사', hunum_ko: '먹을 식', meanings_en: ['eat', 'food'] }))).toEqual([])
+    expect(validateNote(note({ eum_ko: '식' }))).toEqual([])
+    expect(validateNote(note({ hunum_ko: '돌아올 회' }))).toEqual([])
+    for (const eum_ko of ['', '식,사', 'sik', '식사', ['식']]) expect(validateNote(note({ eum_ko })), String(eum_ko)).toHaveLength(1)
+    for (const hunum_ko of ['', '식', '먹을식', '먹을 식사', 'eat 식', ' 먹을 식']) expect(validateNote(note({ hunum_ko })), hunum_ko).toHaveLength(1)
+    expect(validateNote(note({ meanings_en: 'eat' }))).toHaveLength(1)
+    expect(validateNote(note({ meanings_en: [''] }))).toHaveLength(1)
+  })
 })
 
 describe('content/kana.json', () => {
