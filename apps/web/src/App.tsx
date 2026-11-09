@@ -1,31 +1,53 @@
-import { useEffect, useState } from 'react'
-import { DEFAULT_NEW_PER_DAY, TRACKS, type Track } from '@nakamura/core'
+import { useCallback, useEffect, useState } from 'react'
+import { api, type SessionUser } from './api.ts'
+import { AdminInvites } from './pages/AdminInvites.tsx'
+import { Home } from './pages/Home.tsx'
+import { Join } from './pages/Join.tsx'
+import { Login } from './pages/Login.tsx'
+import { Redirect, useRoute } from './router.ts'
 
-const TRACK_LABEL: Record<Track, string> = { kana: '가나', kanji: '한자', toeic: '토익' }
-
+// 앱 껍데기: 로그인 상태(/api/auth/me)를 불러오고 해시 경로에 맞는 화면을 고른다.
 export function App() {
-  const [health, setHealth] = useState<string>('확인 중…')
+  const route = useRoute()
+  // undefined = 확인 중, null = 로그인 안 됨
+  const [user, setUser] = useState<SessionUser | null | undefined>(undefined)
+  const [loadError, setLoadError] = useState('')
 
-  useEffect(() => {
-    // 상대 경로: BASE_PATH 아래에 배포돼도 그대로 동작한다
-    fetch('api/health')
-      .then(r => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((h: { schema: number }) => setHealth(`서버 연결됨 · DB 스키마 ${h.schema}`))
-      .catch(() => setHealth('서버에 연결할 수 없음'))
+  const loadMe = useCallback(() => {
+    setLoadError('')
+    api<{ user: SessionUser | null }>('auth/me')
+      .then(r => setUser(r.user))
+      .catch(err => setLoadError((err as Error).message))
   }, [])
 
-  return (
-    <main>
-      <h1>NakamuraProject</h1>
-      <p className="muted">{health}</p>
-      <ul className="tracks">
-        {TRACKS.map(t => (
-          <li key={t}>
-            <strong>{TRACK_LABEL[t]}</strong>
-            <span className="muted">하루 새 카드 {DEFAULT_NEW_PER_DAY}장</span>
-          </li>
-        ))}
-      </ul>
-    </main>
-  )
+  useEffect(loadMe, [loadMe])
+
+  if (user === undefined) {
+    return (
+      <main>
+        <h1>NakamuraProject</h1>
+        {loadError ? (
+          <>
+            <p className="error">{loadError}</p>
+            <button type="button" onClick={loadMe}>
+              다시 시도
+            </button>
+          </>
+        ) : (
+          <p className="muted">불러오는 중…</p>
+        )}
+      </main>
+    )
+  }
+
+  const join = route.match(/^\/join\/([^/]+)$/)
+  if (join) {
+    if (user) return <Redirect to="/" />
+    return <Join code={decodeURIComponent(join[1]!)} onLogin={setUser} />
+  }
+  if (route === '/login') return user ? <Redirect to="/" /> : <Login onLogin={setUser} />
+  if (!user) return <Redirect to="/login" />
+  if (route === '/admin/invites') return user.isAdmin ? <AdminInvites /> : <Redirect to="/" />
+  if (route === '/') return <Home user={user} onLogout={() => setUser(null)} />
+  return <Redirect to="/" />
 }

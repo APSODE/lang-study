@@ -17,3 +17,31 @@ h1 { color: var(--accent); margin: 0 0 4px; }
 .muted { color: var(--muted); }
 .tracks { list-style: none; padding: 0; display: grid; gap: 12px; }
 .tracks li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; justify-content: space-between; }
+h2 { font-size: 1.1rem; margin: 28px 0 8px; }
+a { color: var(--accent); }
+.small { font-size: 0.875rem; }
+.error { color: var(--accent); font-weight: 600; }
+.notice { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px 16px; }
+.topbar { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+
+/* 폼: 휴대폰 기준 한 줄에 하나, 입력칸은 가로 전체 */
+.form { display: grid; gap: 14px; margin: 16px 0; }
+.form label { display: grid; gap: 6px; font-weight: 600; min-width: 0; }
+.form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+input {
+  font: inherit; font-weight: normal; color: var(--fg); background: var(--card);
+  border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; width: 100%; box-sizing: border-box; min-width: 0;
+}
+input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+button {
+  font: inherit; font-weight: 600; color: #fff; background: var(--accent);
+  border: 0; border-radius: 8px; padding: 10px 16px; cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: default; }
+button.link { background: none; color: var(--accent); padding: 4px 0; font-weight: normal; }
+button.danger { background: none; color: var(--accent); border: 1px solid var(--line); }
+
+.invites { list-style: none; padding: 0; display: grid; gap: 12px; }
+.invites li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; display: grid; gap: 8px; min-width: 0; }
+.invites .url { font-size: 0.8rem; overflow-wrap: anywhere; }
+.invites .actions { display: flex; gap: 8px; }

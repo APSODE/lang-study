@@ -54,3 +54,15 @@ describe('HTTP', () => {
     expect((await app.request('/lang/api/nope')).status).toBe(404)
   })
 })
+
+describe('본문 크기 제한', () => {
+  it('64KB 를 넘는 요청은 413', async () => {
+    const { cfg, db } = setup()
+    const res = await createApp(cfg, db).request('/api/auth/login', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ name: 'a', password: 'x'.repeat(70 * 1024) }),
+    })
+    expect(res.status).toBe(413)
+  })
+})
