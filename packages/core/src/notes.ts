@@ -35,6 +35,8 @@ export interface KanjiFields {
   /** 신문 빈도 순위 (KANJIDIC2, 1 = 가장 흔함). 새 카드 순서에 쓴다 */
   freq?: number
   examples?: { word: string; reading: string; meaning_ko: string }[]
+  /** 예문 (일작 · 읽기 연습 재료). ja 에 이 한자가 들어 있고, kana 는 ja 전체의 읽기 */
+  sentences?: { ja: string; kana: string; ko: string }[]
   /** 한국 한자음, KANJIDIC2 korean_h. 여러 개면 ", " 로 잇는다 (예: "식, 사") */
   eum_ko?: string
   /** 전통 훈음 하나 (예: "먹을 식"). 마지막 낱말은 eum_ko 의 음 중 하나. 国字 등 훈음이 없으면 필드를 뺀다 */

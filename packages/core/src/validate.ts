@@ -26,6 +26,11 @@ const examples: FieldRule = v =>
     ? null
     : '{ word, reading, meaning_ko } 배열이어야 합니다'
 
+const sentences: FieldRule = v =>
+  Array.isArray(v) && v.every(e => isObj(e) && ['ja', 'kana', 'ko'].every(k => str(e[k]) === null))
+    ? null
+    : '{ ja, kana, ko } 배열이어야 합니다'
+
 // 한국 한자음: 한글 한 음절, 여러 개면 ", " 로 잇는다 (예: "식, 사")
 const eumKo: FieldRule = v =>
   typeof v === 'string' && /^[가-힣](, [가-힣])*$/.test(v) ? null : '한글 한 음절(여러 개면 ", " 로 구분)이어야 합니다'
@@ -45,7 +50,7 @@ const SCHEMAS: Record<Track, Schema> = {
   },
   kanji: {
     required: { kanji: str, on: strArr, kun: strArr, meanings_ko: strArr },
-    optional: { jlpt: int(1, 5), strokes: int(1), freq: int(1), examples, eum_ko: eumKo, hunum_ko: hunumKo, meanings_en: strArr },
+    optional: { jlpt: int(1, 5), strokes: int(1), freq: int(1), examples, sentences, eum_ko: eumKo, hunum_ko: hunumKo, meanings_en: strArr },
   },
   toeic: {
     required: { word: str, meaning_ko: str },
