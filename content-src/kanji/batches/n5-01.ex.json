@@ -1,0 +1,1582 @@
+[
+  {
+    "kanji": "日",
+    "examples": [
+      {
+        "word": "毎日",
+        "reading": "まいにち",
+        "meaning_ko": "매일"
+      },
+      {
+        "word": "日曜日",
+        "reading": "にちようび",
+        "meaning_ko": "일요일"
+      }
+    ],
+    "sentence": {
+      "ja": "毎日日本語の本を読みます。",
+      "kana": "まいにちにほんごのほんをよみます。",
+      "ko": "매일 일본어 책을 읽습니다."
+    }
+  },
+  {
+    "kanji": "一",
+    "examples": [
+      {
+        "word": "一つ",
+        "reading": "ひとつ",
+        "meaning_ko": "하나"
+      },
+      {
+        "word": "一人",
+        "reading": "ひとり",
+        "meaning_ko": "한 사람"
+      }
+    ],
+    "sentence": {
+      "ja": "わたしは一人で本を読みます。",
+      "kana": "わたしはひとりでほんをよみます。",
+      "ko": "나는 혼자서 책을 읽습니다."
+    }
+  },
+  {
+    "kanji": "国",
+    "examples": [
+      {
+        "word": "国",
+        "reading": "くに",
+        "meaning_ko": "나라"
+      },
+      {
+        "word": "外国",
+        "reading": "がいこく",
+        "meaning_ko": "외국"
+      }
+    ],
+    "sentence": {
+      "ja": "外国へ行きたいです。",
+      "kana": "がいこくへいきたいです。",
+      "ko": "외국에 가고 싶습니다."
+    }
+  },
+  {
+    "kanji": "人",
+    "examples": [
+      {
+        "word": "人",
+        "reading": "ひと",
+        "meaning_ko": "사람"
+      },
+      {
+        "word": "日本人",
+        "reading": "にほんじん",
+        "meaning_ko": "일본인"
+      }
+    ],
+    "sentence": {
+      "ja": "あの人は日本人です。",
+      "kana": "あのひとはにほんじんです。",
+      "ko": "저 사람은 일본인입니다."
+    }
+  },
+  {
+    "kanji": "年",
+    "examples": [
+      {
+        "word": "今年",
+        "reading": "ことし",
+        "meaning_ko": "올해"
+      },
+      {
+        "word": "来年",
+        "reading": "らいねん",
+        "meaning_ko": "내년"
+      }
+    ],
+    "sentence": {
+      "ja": "来年、日本へ行きます。",
+      "kana": "らいねん、にほんへいきます。",
+      "ko": "내년에 일본에 갑니다."
+    }
+  },
+  {
+    "kanji": "大",
+    "examples": [
+      {
+        "word": "大きい",
+        "reading": "おおきい",
+        "meaning_ko": "크다"
+      },
+      {
+        "word": "大学",
+        "reading": "だいがく",
+        "meaning_ko": "대학"
+      }
+    ],
+    "sentence": {
+      "ja": "この大学はとても大きいです。",
+      "kana": "このだいがくはとてもおおきいです。",
+      "ko": "이 대학은 아주 큽니다."
+    }
+  },
+  {
+    "kanji": "十",
+    "examples": [
+      {
+        "word": "十",
+        "reading": "じゅう",
+        "meaning_ko": "열"
+      },
+      {
+        "word": "十日",
+        "reading": "とおか",
+        "meaning_ko": "10일"
+      }
+    ],
+    "sentence": {
+      "ja": "学生が十人います。",
+      "kana": "がくせいがじゅうにんいます。",
+      "ko": "학생이 열 명 있습니다."
+    }
+  },
+  {
+    "kanji": "二",
+    "examples": [
+      {
+        "word": "二つ",
+        "reading": "ふたつ",
+        "meaning_ko": "둘"
+      },
+      {
+        "word": "二人",
+        "reading": "ふたり",
+        "meaning_ko": "두 사람"
+      }
+    ],
+    "sentence": {
+      "ja": "子どもが二人います。",
+      "kana": "こどもがふたりいます。",
+      "ko": "아이가 두 명 있습니다."
+    }
+  },
+  {
+    "kanji": "本",
+    "examples": [
+      {
+        "word": "本",
+        "reading": "ほん",
+        "meaning_ko": "책"
+      },
+      {
+        "word": "日本",
+        "reading": "にほん",
+        "meaning_ko": "일본"
+      }
+    ],
+    "sentence": {
+      "ja": "この本はおもしろいです。",
+      "kana": "このほんはおもしろいです。",
+      "ko": "이 책은 재미있습니다."
+    }
+  },
+  {
+    "kanji": "中",
+    "examples": [
+      {
+        "word": "中",
+        "reading": "なか",
+        "meaning_ko": "안"
+      },
+      {
+        "word": "中国",
+        "reading": "ちゅうごく",
+        "meaning_ko": "중국"
+      }
+    ],
+    "sentence": {
+      "ja": "かばんの中に本があります。",
+      "kana": "かばんのなかにほんがあります。",
+      "ko": "가방 안에 책이 있습니다."
+    }
+  },
+  {
+    "kanji": "長",
+    "examples": [
+      {
+        "word": "長い",
+        "reading": "ながい",
+        "meaning_ko": "길다"
+      },
+      {
+        "word": "社長",
+        "reading": "しゃちょう",
+        "meaning_ko": "사장"
+      }
+    ],
+    "sentence": {
+      "ja": "この川はとても長いです。",
+      "kana": "このかわはとてもながいです。",
+      "ko": "이 강은 아주 깁니다."
+    }
+  },
+  {
+    "kanji": "出",
+    "examples": [
+      {
+        "word": "出る",
+        "reading": "でる",
+        "meaning_ko": "나가다"
+      },
+      {
+        "word": "出口",
+        "reading": "でぐち",
+        "meaning_ko": "출구"
+      }
+    ],
+    "sentence": {
+      "ja": "毎日八時に出かけます。",
+      "kana": "まいにちはちじにでかけます。",
+      "ko": "매일 8시에 외출합니다."
+    }
+  },
+  {
+    "kanji": "三",
+    "examples": [
+      {
+        "word": "三つ",
+        "reading": "みっつ",
+        "meaning_ko": "셋"
+      },
+      {
+        "word": "三月",
+        "reading": "さんがつ",
+        "meaning_ko": "3월"
+      }
+    ],
+    "sentence": {
+      "ja": "りんごを三つください。",
+      "kana": "りんごをみっつください。",
+      "ko": "사과를 세 개 주세요."
+    }
+  },
+  {
+    "kanji": "時",
+    "examples": [
+      {
+        "word": "時間",
+        "reading": "じかん",
+        "meaning_ko": "시간"
+      },
+      {
+        "word": "時計",
+        "reading": "とけい",
+        "meaning_ko": "시계"
+      }
+    ],
+    "sentence": {
+      "ja": "今、何時ですか。",
+      "kana": "いま、なんじですか。",
+      "ko": "지금 몇 시입니까?"
+    }
+  },
+  {
+    "kanji": "行",
+    "examples": [
+      {
+        "word": "行く",
+        "reading": "いく",
+        "meaning_ko": "가다"
+      },
+      {
+        "word": "銀行",
+        "reading": "ぎんこう",
+        "meaning_ko": "은행"
+      }
+    ],
+    "sentence": {
+      "ja": "あした、山へ行きます。",
+      "kana": "あした、やまへいきます。",
+      "ko": "내일 산에 갑니다."
+    }
+  },
+  {
+    "kanji": "見",
+    "examples": [
+      {
+        "word": "見る",
+        "reading": "みる",
+        "meaning_ko": "보다"
+      },
+      {
+        "word": "見せる",
+        "reading": "みせる",
+        "meaning_ko": "보여 주다"
+      }
+    ],
+    "sentence": {
+      "ja": "毎日テレビを見ます。",
+      "kana": "まいにちテレビをみます。",
+      "ko": "매일 텔레비전을 봅니다."
+    }
+  },
+  {
+    "kanji": "月",
+    "examples": [
+      {
+        "word": "月",
+        "reading": "つき",
+        "meaning_ko": "달"
+      },
+      {
+        "word": "今月",
+        "reading": "こんげつ",
+        "meaning_ko": "이번 달"
+      }
+    ],
+    "sentence": {
+      "ja": "三月に日本へ行きます。",
+      "kana": "さんがつににほんへいきます。",
+      "ko": "3월에 일본에 갑니다."
+    }
+  },
+  {
+    "kanji": "後",
+    "examples": [
+      {
+        "word": "後ろ",
+        "reading": "うしろ",
+        "meaning_ko": "뒤"
+      },
+      {
+        "word": "午後",
+        "reading": "ごご",
+        "meaning_ko": "오후"
+      }
+    ],
+    "sentence": {
+      "ja": "学校の後ろに山があります。",
+      "kana": "がっこうのうしろにやまがあります。",
+      "ko": "학교 뒤에 산이 있습니다."
+    }
+  },
+  {
+    "kanji": "前",
+    "examples": [
+      {
+        "word": "前",
+        "reading": "まえ",
+        "meaning_ko": "앞"
+      },
+      {
+        "word": "名前",
+        "reading": "なまえ",
+        "meaning_ko": "이름"
+      }
+    ],
+    "sentence": {
+      "ja": "お名前は何ですか。",
+      "kana": "おなまえはなんですか。",
+      "ko": "성함이 무엇입니까?"
+    }
+  },
+  {
+    "kanji": "生",
+    "examples": [
+      {
+        "word": "先生",
+        "reading": "せんせい",
+        "meaning_ko": "선생님"
+      },
+      {
+        "word": "学生",
+        "reading": "がくせい",
+        "meaning_ko": "학생"
+      }
+    ],
+    "sentence": {
+      "ja": "わたしは大学生です。",
+      "kana": "わたしはだいがくせいです。",
+      "ko": "저는 대학생입니다."
+    }
+  },
+  {
+    "kanji": "五",
+    "examples": [
+      {
+        "word": "五つ",
+        "reading": "いつつ",
+        "meaning_ko": "다섯"
+      },
+      {
+        "word": "五月",
+        "reading": "ごがつ",
+        "meaning_ko": "5월"
+      }
+    ],
+    "sentence": {
+      "ja": "五月に友だちが来ます。",
+      "kana": "ごがつにともだちがきます。",
+      "ko": "5월에 친구가 옵니다."
+    }
+  },
+  {
+    "kanji": "間",
+    "examples": [
+      {
+        "word": "時間",
+        "reading": "じかん",
+        "meaning_ko": "시간"
+      },
+      {
+        "word": "間",
+        "reading": "あいだ",
+        "meaning_ko": "사이"
+      }
+    ],
+    "sentence": {
+      "ja": "今日は時間がありません。",
+      "kana": "きょうはじかんがありません。",
+      "ko": "오늘은 시간이 없습니다."
+    }
+  },
+  {
+    "kanji": "上",
+    "examples": [
+      {
+        "word": "上",
+        "reading": "うえ",
+        "meaning_ko": "위"
+      },
+      {
+        "word": "上手",
+        "reading": "じょうず",
+        "meaning_ko": "능숙함"
+      }
+    ],
+    "sentence": {
+      "ja": "つくえの上に本があります。",
+      "kana": "つくえのうえにほんがあります。",
+      "ko": "책상 위에 책이 있습니다."
+    }
+  },
+  {
+    "kanji": "東",
+    "examples": [
+      {
+        "word": "東",
+        "reading": "ひがし",
+        "meaning_ko": "동쪽"
+      },
+      {
+        "word": "東京",
+        "reading": "とうきょう",
+        "meaning_ko": "도쿄"
+      }
+    ],
+    "sentence": {
+      "ja": "学校の東に川があります。",
+      "kana": "がっこうのひがしにかわがあります。",
+      "ko": "학교 동쪽에 강이 있습니다."
+    }
+  },
+  {
+    "kanji": "四",
+    "examples": [
+      {
+        "word": "四つ",
+        "reading": "よっつ",
+        "meaning_ko": "넷"
+      },
+      {
+        "word": "四月",
+        "reading": "しがつ",
+        "meaning_ko": "4월"
+      }
+    ],
+    "sentence": {
+      "ja": "四月から大学生です。",
+      "kana": "しがつからだいがくせいです。",
+      "ko": "4월부터 대학생입니다."
+    }
+  },
+  {
+    "kanji": "今",
+    "examples": [
+      {
+        "word": "今",
+        "reading": "いま",
+        "meaning_ko": "지금"
+      },
+      {
+        "word": "今日",
+        "reading": "きょう",
+        "meaning_ko": "오늘"
+      }
+    ],
+    "sentence": {
+      "ja": "今日は学校が休みです。",
+      "kana": "きょうはがっこうがやすみです。",
+      "ko": "오늘은 학교가 쉽니다."
+    }
+  },
+  {
+    "kanji": "金",
+    "examples": [
+      {
+        "word": "お金",
+        "reading": "おかね",
+        "meaning_ko": "돈"
+      },
+      {
+        "word": "金曜日",
+        "reading": "きんようび",
+        "meaning_ko": "금요일"
+      }
+    ],
+    "sentence": {
+      "ja": "今、お金がありません。",
+      "kana": "いま、おかねがありません。",
+      "ko": "지금 돈이 없습니다."
+    }
+  },
+  {
+    "kanji": "九",
+    "examples": [
+      {
+        "word": "九つ",
+        "reading": "ここのつ",
+        "meaning_ko": "아홉"
+      },
+      {
+        "word": "九月",
+        "reading": "くがつ",
+        "meaning_ko": "9월"
+      }
+    ],
+    "sentence": {
+      "ja": "九時まで学校にいます。",
+      "kana": "くじまでがっこうにいます。",
+      "ko": "9시까지 학교에 있습니다."
+    }
+  },
+  {
+    "kanji": "入",
+    "examples": [
+      {
+        "word": "入る",
+        "reading": "はいる",
+        "meaning_ko": "들어가다"
+      },
+      {
+        "word": "入口",
+        "reading": "いりぐち",
+        "meaning_ko": "입구"
+      }
+    ],
+    "sentence": {
+      "ja": "毎日おふろに入ります。",
+      "kana": "まいにちおふろにはいります。",
+      "ko": "매일 목욕을 합니다."
+    }
+  },
+  {
+    "kanji": "学",
+    "examples": [
+      {
+        "word": "学校",
+        "reading": "がっこう",
+        "meaning_ko": "학교"
+      },
+      {
+        "word": "大学",
+        "reading": "だいがく",
+        "meaning_ko": "대학"
+      }
+    ],
+    "sentence": {
+      "ja": "毎日学校へ行きます。",
+      "kana": "まいにちがっこうへいきます。",
+      "ko": "매일 학교에 갑니다."
+    }
+  },
+  {
+    "kanji": "高",
+    "examples": [
+      {
+        "word": "高い",
+        "reading": "たかい",
+        "meaning_ko": "높다"
+      },
+      {
+        "word": "高校",
+        "reading": "こうこう",
+        "meaning_ko": "고등학교"
+      }
+    ],
+    "sentence": {
+      "ja": "この車は高いです。",
+      "kana": "このくるまはたかいです。",
+      "ko": "이 차는 비쌉니다."
+    }
+  },
+  {
+    "kanji": "円",
+    "examples": [
+      {
+        "word": "円",
+        "reading": "えん",
+        "meaning_ko": "엔"
+      },
+      {
+        "word": "百円",
+        "reading": "ひゃくえん",
+        "meaning_ko": "백 엔"
+      }
+    ],
+    "sentence": {
+      "ja": "このペンは百円です。",
+      "kana": "このペンはひゃくえんです。",
+      "ko": "이 펜은 100엔입니다."
+    }
+  },
+  {
+    "kanji": "子",
+    "examples": [
+      {
+        "word": "子ども",
+        "reading": "こども",
+        "meaning_ko": "아이"
+      },
+      {
+        "word": "女の子",
+        "reading": "おんなのこ",
+        "meaning_ko": "여자아이"
+      }
+    ],
+    "sentence": {
+      "ja": "女の子が本を読んでいます。",
+      "kana": "おんなのこがほんをよんでいます。",
+      "ko": "여자아이가 책을 읽고 있습니다."
+    }
+  },
+  {
+    "kanji": "外",
+    "examples": [
+      {
+        "word": "外",
+        "reading": "そと",
+        "meaning_ko": "밖"
+      },
+      {
+        "word": "外国",
+        "reading": "がいこく",
+        "meaning_ko": "외국"
+      }
+    ],
+    "sentence": {
+      "ja": "外で友だちと話します。",
+      "kana": "そとでともだちとはなします。",
+      "ko": "밖에서 친구와 이야기합니다."
+    }
+  },
+  {
+    "kanji": "八",
+    "examples": [
+      {
+        "word": "八つ",
+        "reading": "やっつ",
+        "meaning_ko": "여덟"
+      },
+      {
+        "word": "八月",
+        "reading": "はちがつ",
+        "meaning_ko": "8월"
+      }
+    ],
+    "sentence": {
+      "ja": "八時に学校へ行きます。",
+      "kana": "はちじにがっこうへいきます。",
+      "ko": "8시에 학교에 갑니다."
+    }
+  },
+  {
+    "kanji": "六",
+    "examples": [
+      {
+        "word": "六つ",
+        "reading": "むっつ",
+        "meaning_ko": "여섯"
+      },
+      {
+        "word": "六月",
+        "reading": "ろくがつ",
+        "meaning_ko": "6월"
+      }
+    ],
+    "sentence": {
+      "ja": "六月は雨がよくふります。",
+      "kana": "ろくがつはあめがよくふります。",
+      "ko": "6월에는 비가 자주 내립니다."
+    }
+  },
+  {
+    "kanji": "下",
+    "examples": [
+      {
+        "word": "下",
+        "reading": "した",
+        "meaning_ko": "아래"
+      },
+      {
+        "word": "地下鉄",
+        "reading": "ちかてつ",
+        "meaning_ko": "지하철"
+      }
+    ],
+    "sentence": {
+      "ja": "つくえの下にねこがいます。",
+      "kana": "つくえのしたにねこがいます。",
+      "ko": "책상 아래에 고양이가 있습니다."
+    }
+  },
+  {
+    "kanji": "来",
+    "examples": [
+      {
+        "word": "来る",
+        "reading": "くる",
+        "meaning_ko": "오다"
+      },
+      {
+        "word": "来週",
+        "reading": "らいしゅう",
+        "meaning_ko": "다음 주"
+      }
+    ],
+    "sentence": {
+      "ja": "あした友だちが来ます。",
+      "kana": "あしたともだちがきます。",
+      "ko": "내일 친구가 옵니다."
+    }
+  },
+  {
+    "kanji": "気",
+    "examples": [
+      {
+        "word": "天気",
+        "reading": "てんき",
+        "meaning_ko": "날씨"
+      },
+      {
+        "word": "元気",
+        "reading": "げんき",
+        "meaning_ko": "건강함"
+      }
+    ],
+    "sentence": {
+      "ja": "今日はいい天気です。",
+      "kana": "きょうはいいてんきです。",
+      "ko": "오늘은 날씨가 좋습니다."
+    }
+  },
+  {
+    "kanji": "小",
+    "examples": [
+      {
+        "word": "小さい",
+        "reading": "ちいさい",
+        "meaning_ko": "작다"
+      },
+      {
+        "word": "小学校",
+        "reading": "しょうがっこう",
+        "meaning_ko": "초등학교"
+      }
+    ],
+    "sentence": {
+      "ja": "わたしの車は小さいです。",
+      "kana": "わたしのくるまはちいさいです。",
+      "ko": "제 차는 작습니다."
+    }
+  },
+  {
+    "kanji": "七",
+    "examples": [
+      {
+        "word": "七つ",
+        "reading": "ななつ",
+        "meaning_ko": "일곱"
+      },
+      {
+        "word": "七月",
+        "reading": "しちがつ",
+        "meaning_ko": "7월"
+      }
+    ],
+    "sentence": {
+      "ja": "七月に山へ行きます。",
+      "kana": "しちがつにやまへいきます。",
+      "ko": "7월에 산에 갑니다."
+    }
+  },
+  {
+    "kanji": "山",
+    "examples": [
+      {
+        "word": "山",
+        "reading": "やま",
+        "meaning_ko": "산"
+      },
+      {
+        "word": "富士山",
+        "reading": "ふじさん",
+        "meaning_ko": "후지산"
+      }
+    ],
+    "sentence": {
+      "ja": "あの山はとても高いです。",
+      "kana": "あのやまはとてもたかいです。",
+      "ko": "저 산은 아주 높습니다."
+    }
+  },
+  {
+    "kanji": "話",
+    "examples": [
+      {
+        "word": "話す",
+        "reading": "はなす",
+        "meaning_ko": "말하다"
+      },
+      {
+        "word": "電話",
+        "reading": "でんわ",
+        "meaning_ko": "전화"
+      }
+    ],
+    "sentence": {
+      "ja": "友だちと電話で話します。",
+      "kana": "ともだちとでんわではなします。",
+      "ko": "친구와 전화로 이야기합니다."
+    }
+  },
+  {
+    "kanji": "女",
+    "examples": [
+      {
+        "word": "女",
+        "reading": "おんな",
+        "meaning_ko": "여자"
+      },
+      {
+        "word": "女の子",
+        "reading": "おんなのこ",
+        "meaning_ko": "여자아이"
+      }
+    ],
+    "sentence": {
+      "ja": "あの女の人は先生です。",
+      "kana": "あのおんなのひとはせんせいです。",
+      "ko": "저 여자분은 선생님입니다."
+    }
+  },
+  {
+    "kanji": "北",
+    "examples": [
+      {
+        "word": "北",
+        "reading": "きた",
+        "meaning_ko": "북쪽"
+      },
+      {
+        "word": "北口",
+        "reading": "きたぐち",
+        "meaning_ko": "북쪽 출구"
+      }
+    ],
+    "sentence": {
+      "ja": "学校は川の北にあります。",
+      "kana": "がっこうはかわのきたにあります。",
+      "ko": "학교는 강 북쪽에 있습니다."
+    }
+  },
+  {
+    "kanji": "午",
+    "examples": [
+      {
+        "word": "午後",
+        "reading": "ごご",
+        "meaning_ko": "오후"
+      },
+      {
+        "word": "午前",
+        "reading": "ごぜん",
+        "meaning_ko": "오전"
+      }
+    ],
+    "sentence": {
+      "ja": "午前十時に来てください。",
+      "kana": "ごぜんじゅうじにきてください。",
+      "ko": "오전 10시에 와 주세요."
+    }
+  },
+  {
+    "kanji": "百",
+    "examples": [
+      {
+        "word": "百",
+        "reading": "ひゃく",
+        "meaning_ko": "백"
+      },
+      {
+        "word": "三百",
+        "reading": "さんびゃく",
+        "meaning_ko": "삼백"
+      }
+    ],
+    "sentence": {
+      "ja": "このりんごは三百円です。",
+      "kana": "このりんごはさんびゃくえんです。",
+      "ko": "이 사과는 300엔입니다."
+    }
+  },
+  {
+    "kanji": "書",
+    "examples": [
+      {
+        "word": "書く",
+        "reading": "かく",
+        "meaning_ko": "쓰다"
+      },
+      {
+        "word": "辞書",
+        "reading": "じしょ",
+        "meaning_ko": "사전"
+      }
+    ],
+    "sentence": {
+      "ja": "ここに名前を書いてください。",
+      "kana": "ここになまえをかいてください。",
+      "ko": "여기에 이름을 써 주세요."
+    }
+  },
+  {
+    "kanji": "先",
+    "examples": [
+      {
+        "word": "先生",
+        "reading": "せんせい",
+        "meaning_ko": "선생님"
+      },
+      {
+        "word": "先週",
+        "reading": "せんしゅう",
+        "meaning_ko": "지난주"
+      }
+    ],
+    "sentence": {
+      "ja": "先生、これは何ですか。",
+      "kana": "せんせい、これはなんですか。",
+      "ko": "선생님, 이것은 무엇입니까?"
+    }
+  },
+  {
+    "kanji": "名",
+    "examples": [
+      {
+        "word": "名前",
+        "reading": "なまえ",
+        "meaning_ko": "이름"
+      },
+      {
+        "word": "有名",
+        "reading": "ゆうめい",
+        "meaning_ko": "유명함"
+      }
+    ],
+    "sentence": {
+      "ja": "この子の名前は何ですか。",
+      "kana": "このこのなまえはなんですか。",
+      "ko": "이 아이의 이름은 무엇입니까?"
+    }
+  },
+  {
+    "kanji": "川",
+    "examples": [
+      {
+        "word": "川",
+        "reading": "かわ",
+        "meaning_ko": "강"
+      },
+      {
+        "word": "小川",
+        "reading": "おがわ",
+        "meaning_ko": "시내"
+      }
+    ],
+    "sentence": {
+      "ja": "子どもたちが川であそびます。",
+      "kana": "こどもたちがかわであそびます。",
+      "ko": "아이들이 강에서 놉니다."
+    }
+  },
+  {
+    "kanji": "千",
+    "examples": [
+      {
+        "word": "千",
+        "reading": "せん",
+        "meaning_ko": "천"
+      },
+      {
+        "word": "三千",
+        "reading": "さんぜん",
+        "meaning_ko": "삼천"
+      }
+    ],
+    "sentence": {
+      "ja": "この本は千円です。",
+      "kana": "このほんはせんえんです。",
+      "ko": "이 책은 1000엔입니다."
+    }
+  },
+  {
+    "kanji": "水",
+    "examples": [
+      {
+        "word": "水",
+        "reading": "みず",
+        "meaning_ko": "물"
+      },
+      {
+        "word": "水曜日",
+        "reading": "すいようび",
+        "meaning_ko": "수요일"
+      }
+    ],
+    "sentence": {
+      "ja": "毎日水をたくさんのみます。",
+      "kana": "まいにちみずをたくさんのみます。",
+      "ko": "매일 물을 많이 마십니다."
+    }
+  },
+  {
+    "kanji": "半",
+    "examples": [
+      {
+        "word": "半分",
+        "reading": "はんぶん",
+        "meaning_ko": "절반"
+      },
+      {
+        "word": "三時半",
+        "reading": "さんじはん",
+        "meaning_ko": "3시 반"
+      }
+    ],
+    "sentence": {
+      "ja": "七時半に学校へ行きます。",
+      "kana": "しちじはんにがっこうへいきます。",
+      "ko": "7시 반에 학교에 갑니다."
+    }
+  },
+  {
+    "kanji": "男",
+    "examples": [
+      {
+        "word": "男",
+        "reading": "おとこ",
+        "meaning_ko": "남자"
+      },
+      {
+        "word": "男の子",
+        "reading": "おとこのこ",
+        "meaning_ko": "남자아이"
+      }
+    ],
+    "sentence": {
+      "ja": "男の子が三人います。",
+      "kana": "おとこのこがさんにんいます。",
+      "ko": "남자아이가 세 명 있습니다."
+    }
+  },
+  {
+    "kanji": "西",
+    "examples": [
+      {
+        "word": "西",
+        "reading": "にし",
+        "meaning_ko": "서쪽"
+      },
+      {
+        "word": "西口",
+        "reading": "にしぐち",
+        "meaning_ko": "서쪽 출구"
+      }
+    ],
+    "sentence": {
+      "ja": "山は学校の西にあります。",
+      "kana": "やまはがっこうのにしにあります。",
+      "ko": "산은 학교 서쪽에 있습니다."
+    }
+  },
+  {
+    "kanji": "電",
+    "examples": [
+      {
+        "word": "電車",
+        "reading": "でんしゃ",
+        "meaning_ko": "전철"
+      },
+      {
+        "word": "電話",
+        "reading": "でんわ",
+        "meaning_ko": "전화"
+      }
+    ],
+    "sentence": {
+      "ja": "電車で学校へ行きます。",
+      "kana": "でんしゃでがっこうへいきます。",
+      "ko": "전철로 학교에 갑니다."
+    }
+  },
+  {
+    "kanji": "校",
+    "examples": [
+      {
+        "word": "学校",
+        "reading": "がっこう",
+        "meaning_ko": "학교"
+      },
+      {
+        "word": "高校",
+        "reading": "こうこう",
+        "meaning_ko": "고등학교"
+      }
+    ],
+    "sentence": {
+      "ja": "わたしは高校生です。",
+      "kana": "わたしはこうこうせいです。",
+      "ko": "저는 고등학생입니다."
+    }
+  },
+  {
+    "kanji": "語",
+    "examples": [
+      {
+        "word": "日本語",
+        "reading": "にほんご",
+        "meaning_ko": "일본어"
+      },
+      {
+        "word": "英語",
+        "reading": "えいご",
+        "meaning_ko": "영어"
+      }
+    ],
+    "sentence": {
+      "ja": "日本語で話してください。",
+      "kana": "にほんごではなしてください。",
+      "ko": "일본어로 말해 주세요."
+    }
+  },
+  {
+    "kanji": "土",
+    "examples": [
+      {
+        "word": "土",
+        "reading": "つち",
+        "meaning_ko": "흙"
+      },
+      {
+        "word": "土曜日",
+        "reading": "どようび",
+        "meaning_ko": "토요일"
+      }
+    ],
+    "sentence": {
+      "ja": "木の下の土はやわらかいです。",
+      "kana": "きのしたのつちはやわらかいです。",
+      "ko": "나무 아래의 흙은 부드럽습니다."
+    }
+  },
+  {
+    "kanji": "木",
+    "examples": [
+      {
+        "word": "木",
+        "reading": "き",
+        "meaning_ko": "나무"
+      },
+      {
+        "word": "木曜日",
+        "reading": "もくようび",
+        "meaning_ko": "목요일"
+      }
+    ],
+    "sentence": {
+      "ja": "大きい木の下で休みます。",
+      "kana": "おおきいきのしたでやすみます。",
+      "ko": "큰 나무 아래에서 쉽니다."
+    }
+  },
+  {
+    "kanji": "聞",
+    "examples": [
+      {
+        "word": "聞く",
+        "reading": "きく",
+        "meaning_ko": "듣다"
+      },
+      {
+        "word": "新聞",
+        "reading": "しんぶん",
+        "meaning_ko": "신문"
+      }
+    ],
+    "sentence": {
+      "ja": "先生の話を聞きます。",
+      "kana": "せんせいのはなしをききます。",
+      "ko": "선생님의 이야기를 듣습니다."
+    }
+  },
+  {
+    "kanji": "食",
+    "examples": [
+      {
+        "word": "食べる",
+        "reading": "たべる",
+        "meaning_ko": "먹다"
+      },
+      {
+        "word": "食事",
+        "reading": "しょくじ",
+        "meaning_ko": "식사"
+      }
+    ],
+    "sentence": {
+      "ja": "友だちとすしを食べます。",
+      "kana": "ともだちとすしをたべます。",
+      "ko": "친구와 초밥을 먹습니다."
+    }
+  },
+  {
+    "kanji": "車",
+    "examples": [
+      {
+        "word": "車",
+        "reading": "くるま",
+        "meaning_ko": "자동차"
+      },
+      {
+        "word": "電車",
+        "reading": "でんしゃ",
+        "meaning_ko": "전철"
+      }
+    ],
+    "sentence": {
+      "ja": "父の車は白いです。",
+      "kana": "ちちのくるまはしろいです。",
+      "ko": "아버지의 차는 흽니다."
+    }
+  },
+  {
+    "kanji": "何",
+    "examples": [
+      {
+        "word": "何",
+        "reading": "なに",
+        "meaning_ko": "무엇"
+      },
+      {
+        "word": "何人",
+        "reading": "なんにん",
+        "meaning_ko": "몇 명"
+      }
+    ],
+    "sentence": {
+      "ja": "クラスに学生が何人いますか。",
+      "kana": "クラスにがくせいがなんにんいますか。",
+      "ko": "반에 학생이 몇 명 있습니까?"
+    }
+  },
+  {
+    "kanji": "南",
+    "examples": [
+      {
+        "word": "南",
+        "reading": "みなみ",
+        "meaning_ko": "남쪽"
+      },
+      {
+        "word": "南口",
+        "reading": "みなみぐち",
+        "meaning_ko": "남쪽 출구"
+      }
+    ],
+    "sentence": {
+      "ja": "南の国へ行きたいです。",
+      "kana": "みなみのくにへいきたいです。",
+      "ko": "남쪽 나라에 가고 싶습니다."
+    }
+  },
+  {
+    "kanji": "万",
+    "examples": [
+      {
+        "word": "万",
+        "reading": "まん",
+        "meaning_ko": "만"
+      },
+      {
+        "word": "一万円",
+        "reading": "いちまんえん",
+        "meaning_ko": "만 엔"
+      }
+    ],
+    "sentence": {
+      "ja": "このカメラは三万円です。",
+      "kana": "このカメラはさんまんえんです。",
+      "ko": "이 카메라는 3만 엔입니다."
+    }
+  },
+  {
+    "kanji": "毎",
+    "examples": [
+      {
+        "word": "毎日",
+        "reading": "まいにち",
+        "meaning_ko": "매일"
+      },
+      {
+        "word": "毎年",
+        "reading": "まいとし",
+        "meaning_ko": "매년"
+      }
+    ],
+    "sentence": {
+      "ja": "毎年、山へ行きます。",
+      "kana": "まいとし、やまへいきます。",
+      "ko": "매년 산에 갑니다."
+    }
+  },
+  {
+    "kanji": "白",
+    "examples": [
+      {
+        "word": "白い",
+        "reading": "しろい",
+        "meaning_ko": "희다"
+      },
+      {
+        "word": "白",
+        "reading": "しろ",
+        "meaning_ko": "흰색"
+      }
+    ],
+    "sentence": {
+      "ja": "白いシャツをかいました。",
+      "kana": "しろいシャツをかいました。",
+      "ko": "흰 셔츠를 샀습니다."
+    }
+  },
+  {
+    "kanji": "天",
+    "examples": [
+      {
+        "word": "天気",
+        "reading": "てんき",
+        "meaning_ko": "날씨"
+      },
+      {
+        "word": "天ぷら",
+        "reading": "てんぷら",
+        "meaning_ko": "튀김"
+      }
+    ],
+    "sentence": {
+      "ja": "あしたの天気は雨です。",
+      "kana": "あしたのてんきはあめです。",
+      "ko": "내일 날씨는 비입니다."
+    }
+  },
+  {
+    "kanji": "母",
+    "examples": [
+      {
+        "word": "母",
+        "reading": "はは",
+        "meaning_ko": "어머니"
+      },
+      {
+        "word": "お母さん",
+        "reading": "おかあさん",
+        "meaning_ko": "어머니"
+      }
+    ],
+    "sentence": {
+      "ja": "母と電話で話しました。",
+      "kana": "ははとでんわではなしました。",
+      "ko": "어머니와 전화로 이야기했습니다."
+    }
+  },
+  {
+    "kanji": "火",
+    "examples": [
+      {
+        "word": "火",
+        "reading": "ひ",
+        "meaning_ko": "불"
+      },
+      {
+        "word": "火曜日",
+        "reading": "かようび",
+        "meaning_ko": "화요일"
+      }
+    ],
+    "sentence": {
+      "ja": "火に気をつけてください。",
+      "kana": "ひにきをつけてください。",
+      "ko": "불을 조심하세요."
+    }
+  },
+  {
+    "kanji": "右",
+    "examples": [
+      {
+        "word": "右",
+        "reading": "みぎ",
+        "meaning_ko": "오른쪽"
+      },
+      {
+        "word": "右手",
+        "reading": "みぎて",
+        "meaning_ko": "오른손"
+      }
+    ],
+    "sentence": {
+      "ja": "右へ行ってください。",
+      "kana": "みぎへいってください。",
+      "ko": "오른쪽으로 가 주세요."
+    }
+  },
+  {
+    "kanji": "読",
+    "examples": [
+      {
+        "word": "読む",
+        "reading": "よむ",
+        "meaning_ko": "읽다"
+      },
+      {
+        "word": "読書",
+        "reading": "どくしょ",
+        "meaning_ko": "독서"
+      }
+    ],
+    "sentence": {
+      "ja": "電車の中で本を読みます。",
+      "kana": "でんしゃのなかでほんをよみます。",
+      "ko": "전철 안에서 책을 읽습니다."
+    }
+  },
+  {
+    "kanji": "友",
+    "examples": [
+      {
+        "word": "友だち",
+        "reading": "ともだち",
+        "meaning_ko": "친구"
+      },
+      {
+        "word": "友人",
+        "reading": "ゆうじん",
+        "meaning_ko": "벗"
+      }
+    ],
+    "sentence": {
+      "ja": "友だちと日本語で話します。",
+      "kana": "ともだちとにほんごではなします。",
+      "ko": "친구와 일본어로 이야기합니다."
+    }
+  },
+  {
+    "kanji": "左",
+    "examples": [
+      {
+        "word": "左",
+        "reading": "ひだり",
+        "meaning_ko": "왼쪽"
+      },
+      {
+        "word": "左手",
+        "reading": "ひだりて",
+        "meaning_ko": "왼손"
+      }
+    ],
+    "sentence": {
+      "ja": "学校は左にあります。",
+      "kana": "がっこうはひだりにあります。",
+      "ko": "학교는 왼쪽에 있습니다."
+    }
+  },
+  {
+    "kanji": "休",
+    "examples": [
+      {
+        "word": "休む",
+        "reading": "やすむ",
+        "meaning_ko": "쉬다"
+      },
+      {
+        "word": "休み",
+        "reading": "やすみ",
+        "meaning_ko": "휴일"
+      }
+    ],
+    "sentence": {
+      "ja": "あしたは学校を休みます。",
+      "kana": "あしたはがっこうをやすみます。",
+      "ko": "내일은 학교를 쉽니다."
+    }
+  },
+  {
+    "kanji": "父",
+    "examples": [
+      {
+        "word": "父",
+        "reading": "ちち",
+        "meaning_ko": "아버지"
+      },
+      {
+        "word": "お父さん",
+        "reading": "おとうさん",
+        "meaning_ko": "아버지"
+      }
+    ],
+    "sentence": {
+      "ja": "父は本をよく読みます。",
+      "kana": "ちちはほんをよくよみます。",
+      "ko": "아버지는 책을 자주 읽습니다."
+    }
+  },
+  {
+    "kanji": "雨",
+    "examples": [
+      {
+        "word": "雨",
+        "reading": "あめ",
+        "meaning_ko": "비"
+      },
+      {
+        "word": "大雨",
+        "reading": "おおあめ",
+        "meaning_ko": "큰비"
+      }
+    ],
+    "sentence": {
+      "ja": "今日は雨がふっています。",
+      "kana": "きょうはあめがふっています。",
+      "ko": "오늘은 비가 내리고 있습니다."
+    }
+  }
+]
