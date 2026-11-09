@@ -6,6 +6,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { getDrill, type KanaFields, type Note, type ToeicFields, type Track } from '@nakamura/core'
 import { api, ApiError } from '../api.ts'
+import { Icon } from '../components/Icon.tsx'
+import { ProgressBar } from '../components/ProgressBar.tsx'
 import { ReportDialog } from '../components/ReportDialog.tsx'
 import { DRILL_VIEWS } from '../drills/index.ts'
 import { speak } from '../speech.ts'
@@ -125,16 +127,35 @@ export function Study({ track }: { track: Track }) {
     next()
   }
 
+  // 집중 모드 머리글: ✕(홈으로) · 트랙 · 진행 · 신고. 탭 막대 · 사이드바는 App 이 그리지 않는다.
   const header = (
-    <header className="topbar">
-      <h1>{TRACK_LABEL[track]}</h1>
-      <a href="#/">홈</a>
+    <header className="focus-bar">
+      <a className="icon-btn" href="#/" aria-label="학습 끝내기">
+        <Icon name="close" />
+      </a>
+      <h1 className="focus-title">
+        {TRACK_LABEL[track]}
+        {items && items[idx] && (
+          <span className="muted small">
+            {' '}
+            {idx + 1} / {items.length}
+            {items[idx].isNew && ' · 새 카드'}
+          </span>
+        )}
+      </h1>
+      {items && items[idx] ? (
+        <button type="button" className="icon-btn" aria-label="문항 신고" title="문항 신고" onClick={() => setReporting(true)}>
+          <Icon name="flag" size={22} />
+        </button>
+      ) : (
+        <span className="icon-btn-space" aria-hidden="true" />
+      )}
     </header>
   )
 
   if (loadError) {
     return (
-      <main>
+      <main className="study">
         {header}
         <p className="error">{loadError}</p>
         <button type="button" onClick={() => void load()}>
@@ -145,7 +166,7 @@ export function Study({ track }: { track: Track }) {
   }
   if (items === null) {
     return (
-      <main>
+      <main className="study">
         {header}
         <p className="muted">불러오는 중…</p>
       </main>
@@ -153,7 +174,7 @@ export function Study({ track }: { track: Track }) {
   }
   if (!item) {
     return (
-      <main>
+      <main className="study">
         {header}
         <div className="notice">
           <p>
@@ -179,18 +200,7 @@ export function Study({ track }: { track: Track }) {
   return (
     <main className="study">
       {header}
-      <div className="study-bar">
-        <span className="muted small">
-          {idx + 1} / {items.length}
-          {item.isNew && ' · 새 카드'}
-        </span>
-        <button type="button" className="link small" onClick={() => setReporting(true)}>
-          🚩 신고
-        </button>
-      </div>
-      <div className="progress" aria-hidden="true">
-        <div style={{ width: `${(idx / items.length) * 100}%` }} />
-      </div>
+      <ProgressBar value={idx / items.length} label={`${items.length}장 중 ${idx}장 완료`} />
 
       {notice && <p className="muted small">{notice}</p>}
       <section className="card study-card">

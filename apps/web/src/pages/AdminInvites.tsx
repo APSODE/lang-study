@@ -63,13 +63,10 @@ export function AdminInvites() {
   }
 
   return (
-    <main>
-      <header className="topbar">
-        <h1>초대 링크</h1>
-        <a href="#/">홈</a>
-      </header>
+    <section className="admin-section">
+      <p className="muted small">초대 링크로만 가입할 수 있습니다. 링크를 만들어 친구에게 보내 주세요.</p>
 
-      <form className="form" onSubmit={create}>
+      <form className="form card" onSubmit={create}>
         <div className="row">
           <label>
             유효 기간(일)
@@ -93,7 +90,7 @@ export function AdminInvites() {
       </form>
       {error && <p className="error">{error}</p>}
 
-      <h2>사용 가능한 링크</h2>
+      <h2 className="section-title">사용 가능한 링크</h2>
       {invites === null ? (
         <p className="muted">불러오는 중…</p>
       ) : invites.length === 0 ? (
@@ -118,6 +115,6 @@ export function AdminInvites() {
           ))}
         </ul>
       )}
-    </main>
+    </section>
   )
 }

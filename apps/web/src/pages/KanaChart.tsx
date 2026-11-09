@@ -1,9 +1,12 @@
-// 가나 50음도 (#/kana). 노트의 order 로 자리를 정한다: 줄 = floor(order / 5), 칸 = order % 5.
+// 가나 50음도 (#/library/kana, 예전 #/kana). 노트의 order 로 자리를 정한다: 줄 = floor(order / 5), 칸 = order % 5.
 // 줄 0–10 기본, 11–15 탁음 · 반탁음, 16–26 요음 (packages/core/src/notes.ts KanaFields.order).
 // 칸을 누르면 소리를 들려준다.
 import { useEffect, useState } from 'react'
 import type { KanaFields, KanaScript } from '@nakamura/core'
 import { api } from '../api.ts'
+import { EmptyState } from '../components/EmptyState.tsx'
+import { Segmented } from '../components/Segmented.tsx'
+import { Skeleton } from '../components/Skeleton.tsx'
 import { speak } from '../speech.ts'
 
 const SECTIONS = [
@@ -33,38 +36,29 @@ export function KanaChart() {
   for (const f of notes ?? []) if (f.script === script && f.order !== undefined) cells.set(f.order, f)
 
   return (
-    <main>
-      <header className="topbar">
-        <h1>50음도</h1>
-        <a href="#/">홈</a>
-      </header>
-      <div className="tabs" role="tablist">
-        {TABS.map(([s, label]) => (
-          <button
-            key={s}
-            type="button"
-            role="tab"
-            aria-selected={script === s}
-            className={script === s ? '' : 'secondary'}
-            onClick={() => setScript(s)}
-          >
-            {label}
-          </button>
-        ))}
+    <div className="page kana-page">
+      <div className="page-tools">
+        <a className="back-link" href="#/library">
+          ← 자료
+        </a>
+        <Segmented label="문자" value={script} onChange={setScript} items={TABS.map(([value, label]) => ({ value, label }))} />
       </div>
+      <p className="muted small">글자를 누르면 소리를 들려줍니다.</p>
       {error && <p className="error">{error}</p>}
       {notes === null ? (
-        !error && <p className="muted">불러오는 중…</p>
+        !error && <Skeleton height={240} />
       ) : notes.length === 0 ? (
-        <p className="muted">준비 중</p>
+        <EmptyState icon="kana" title="준비 중">
+          가나 자료가 아직 없습니다.
+        </EmptyState>
       ) : (
         SECTIONS.map(sec => {
           const rows: number[] = []
           for (let r = sec.from; r <= sec.to; r++) if ([0, 1, 2, 3, 4].some(c => cells.has(r * 5 + c))) rows.push(r)
           if (rows.length === 0) return null
           return (
-            <section key={sec.title}>
-              <h2>{sec.title}</h2>
+            <section key={sec.title} className="kana-section">
+              <h2 className="section-title">{sec.title}</h2>
               <div className="kana-grid" lang="ja">
                 {rows.flatMap(r =>
                   [0, 1, 2, 3, 4].map(c => {
@@ -84,6 +78,6 @@ export function KanaChart() {
           )
         })
       )}
-    </main>
+    </div>
   )
 }
