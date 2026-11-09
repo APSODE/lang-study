@@ -1,0 +1,2475 @@
+[
+  {
+    "eum_ko": "연",
+    "freq": 1121,
+    "hunum_ko": "물따라갈 연",
+    "jlpt": 1,
+    "kanji": "沿",
+    "kun": [
+      "そ.う",
+      "-ぞ.い"
+    ],
+    "meanings_en": [
+      "run alongside",
+      "follow along",
+      "run along",
+      "lie along"
+    ],
+    "meanings_ko": [
+      "따르다",
+      "끼고 가다"
+    ],
+    "on": [
+      "エン"
+    ],
+    "strokes": 8
+  },
+  {
+    "eum_ko": "묘",
+    "freq": 1122,
+    "hunum_ko": "묘할 묘",
+    "jlpt": 1,
+    "kanji": "妙",
+    "kun": [
+      "たえ"
+    ],
+    "meanings_en": [
+      "exquisite",
+      "strange",
+      "queer",
+      "mystery",
+      "miracle",
+      "excellent",
+      "delicate",
+      "charming"
+    ],
+    "meanings_ko": [
+      "묘하다",
+      "이상하다",
+      "뛰어나다"
+    ],
+    "on": [
+      "ミョウ",
+      "ビョウ"
+    ],
+    "strokes": 7
+  },
+  {
+    "eum_ko": "창",
+    "freq": 1123,
+    "hunum_ko": "부를 창",
+    "jlpt": 1,
+    "kanji": "唱",
+    "kun": [
+      "とな.える"
+    ],
+    "meanings_en": [
+      "chant",
+      "recite",
+      "call upon",
+      "yell"
+    ],
+    "meanings_ko": [
+      "외치다",
+      "부르다",
+      "주장하다"
+    ],
+    "on": [
+      "ショウ"
+    ],
+    "strokes": 11
+  },
+  {
+    "eum_ko": "아, 옥",
+    "freq": 1126,
+    "hunum_ko": "언덕 아",
+    "jlpt": 1,
+    "kanji": "阿",
+    "kun": [
+      "おもね.る",
+      "くま"
+    ],
+    "meanings_en": [
+      "Africa",
+      "flatter",
+      "fawn upon",
+      "corner",
+      "nook",
+      "recess"
+    ],
+    "meanings_ko": [
+      "아첨하다",
+      "구석"
+    ],
+    "on": [
+      "ア",
+      "オ"
+    ],
+    "strokes": 8
+  },
+  {
+    "eum_ko": "삭, 색",
+    "freq": 1127,
+    "hunum_ko": "찾을 색",
+    "jlpt": 1,
+    "kanji": "索",
+    "kun": [],
+    "meanings_en": [
+      "cord",
+      "rope",
+      "searching",
+      "inquiring"
+    ],
+    "meanings_ko": [
+      "찾다",
+      "줄",
+      "밧줄"
+    ],
+    "on": [
+      "サク"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "성",
+    "freq": 1128,
+    "hunum_ko": "정성 성",
+    "jlpt": 1,
+    "kanji": "誠",
+    "kun": [
+      "まこと"
+    ],
+    "meanings_en": [
+      "sincerity",
+      "admonish",
+      "warn",
+      "prohibit",
+      "truth",
+      "fidelity"
+    ],
+    "meanings_ko": [
+      "정성",
+      "진실",
+      "성실하다"
+    ],
+    "on": [
+      "セイ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "습",
+    "freq": 1130,
+    "hunum_ko": "엄습할 습",
+    "jlpt": 1,
+    "kanji": "襲",
+    "kun": [
+      "おそ.う",
+      "かさ.ね"
+    ],
+    "meanings_en": [
+      "attack",
+      "advance on",
+      "succeed to",
+      "pile",
+      "heap"
+    ],
+    "meanings_ko": [
+      "습격하다",
+      "덮치다",
+      "잇다"
+    ],
+    "on": [
+      "シュウ"
+    ],
+    "strokes": 22
+  },
+  {
+    "eum_ko": "간",
+    "freq": 1135,
+    "hunum_ko": "간절할 간",
+    "jlpt": 1,
+    "kanji": "懇",
+    "kun": [
+      "ねんご.ろ"
+    ],
+    "meanings_en": [
+      "sociable",
+      "kind",
+      "courteous",
+      "hospitable",
+      "cordial"
+    ],
+    "meanings_ko": [
+      "친절하다",
+      "정성스럽다",
+      "친하다"
+    ],
+    "on": [
+      "コン"
+    ],
+    "strokes": 17
+  },
+  {
+    "eum_ko": "배",
+    "freq": 1137,
+    "hunum_ko": "배우 배",
+    "jlpt": 1,
+    "kanji": "俳",
+    "kun": [],
+    "meanings_en": [
+      "haiku",
+      "actor"
+    ],
+    "meanings_ko": [
+      "하이쿠",
+      "배우"
+    ],
+    "on": [
+      "ハイ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "병",
+    "freq": 1140,
+    "hunum_ko": "자루 병",
+    "jlpt": 1,
+    "kanji": "柄",
+    "kun": [
+      "がら",
+      "え",
+      "つか"
+    ],
+    "meanings_en": [
+      "design",
+      "pattern",
+      "build",
+      "nature",
+      "character",
+      "handle",
+      "crank",
+      "grip",
+      "knob",
+      "shaft"
+    ],
+    "meanings_ko": [
+      "무늬",
+      "됨됨이",
+      "자루",
+      "체격"
+    ],
+    "on": [
+      "ヘイ"
+    ],
+    "strokes": 9
+  },
+  {
+    "eum_ko": "경",
+    "freq": 1141,
+    "hunum_ko": "놀랄 경",
+    "jlpt": 1,
+    "kanji": "驚",
+    "kun": [
+      "おどろ.く",
+      "おどろ.かす"
+    ],
+    "meanings_en": [
+      "wonder",
+      "be surprised",
+      "frightened",
+      "amazed"
+    ],
+    "meanings_ko": [
+      "놀라다",
+      "놀라게 하다"
+    ],
+    "on": [
+      "キョウ"
+    ],
+    "strokes": 22
+  },
+  {
+    "eum_ko": "마",
+    "freq": 1142,
+    "hunum_ko": "삼 마",
+    "jlpt": 1,
+    "kanji": "麻",
+    "kun": [
+      "あさ"
+    ],
+    "meanings_en": [
+      "hemp",
+      "flax",
+      "numb"
+    ],
+    "meanings_ko": [
+      "삼",
+      "마비되다"
+    ],
+    "on": [
+      "マ",
+      "マア"
+    ],
+    "strokes": 11
+  },
+  {
+    "eum_ko": "리",
+    "freq": 1147,
+    "hunum_ko": "오얏 리",
+    "jlpt": 1,
+    "kanji": "李",
+    "kun": [
+      "すもも"
+    ],
+    "meanings_en": [
+      "plum"
+    ],
+    "meanings_ko": [
+      "자두"
+    ],
+    "on": [
+      "リ"
+    ],
+    "strokes": 7
+  },
+  {
+    "eum_ko": "호",
+    "freq": 1149,
+    "hunum_ko": "넓을 호",
+    "jlpt": 1,
+    "kanji": "浩",
+    "kun": [
+      "おおき.い",
+      "ひろ.い"
+    ],
+    "meanings_en": [
+      "wide expanse",
+      "abundance",
+      "vigorous"
+    ],
+    "meanings_ko": [
+      "넓다",
+      "크다"
+    ],
+    "on": [
+      "コウ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "제, 자",
+    "freq": 1151,
+    "hunum_ko": "약제 제",
+    "jlpt": 1,
+    "kanji": "剤",
+    "kun": [
+      "かる",
+      "けず.る"
+    ],
+    "meanings_en": [
+      "dose",
+      "medicine",
+      "drug"
+    ],
+    "meanings_ko": [
+      "약",
+      "약제"
+    ],
+    "on": [
+      "ザイ",
+      "スイ",
+      "セイ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "뢰",
+    "freq": 1152,
+    "hunum_ko": "여울 뢰",
+    "jlpt": 1,
+    "kanji": "瀬",
+    "kun": [
+      "せ"
+    ],
+    "meanings_en": [
+      "rapids",
+      "current",
+      "torrent",
+      "shallows",
+      "shoal"
+    ],
+    "meanings_ko": [
+      "여울",
+      "얕은 곳",
+      "기회"
+    ],
+    "on": [
+      "ライ"
+    ],
+    "strokes": 19
+  },
+  {
+    "eum_ko": "취, 축",
+    "freq": 1153,
+    "hunum_ko": "뜻 취",
+    "jlpt": 1,
+    "kanji": "趣",
+    "kun": [
+      "おもむき",
+      "おもむ.く"
+    ],
+    "meanings_en": [
+      "purport",
+      "gist",
+      "elegance",
+      "interest",
+      "proceed to",
+      "tend",
+      "become"
+    ],
+    "meanings_ko": [
+      "정취",
+      "취지",
+      "멋"
+    ],
+    "on": [
+      "シュ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "함",
+    "freq": 1154,
+    "hunum_ko": "빠질 함",
+    "jlpt": 1,
+    "kanji": "陥",
+    "kun": [
+      "おちい.る",
+      "おとしい.れる"
+    ],
+    "meanings_en": [
+      "collapse",
+      "fall into",
+      "cave in",
+      "fall (castle)",
+      "slide into"
+    ],
+    "meanings_ko": [
+      "빠지다",
+      "함락되다",
+      "빠뜨리다"
+    ],
+    "on": [
+      "カン"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "재, 자",
+    "freq": 1155,
+    "hunum_ko": "재계할 재",
+    "jlpt": 1,
+    "kanji": "斎",
+    "kun": [
+      "とき",
+      "つつし.む",
+      "ものいみ",
+      "い.む",
+      "いわ.う",
+      "いつ.く"
+    ],
+    "meanings_en": [
+      "purification",
+      "Buddhist food",
+      "room",
+      "worship",
+      "avoid",
+      "alike"
+    ],
+    "meanings_ko": [
+      "재계하다",
+      "방",
+      "서재"
+    ],
+    "on": [
+      "サイ"
+    ],
+    "strokes": 11
+  },
+  {
+    "eum_ko": "관",
+    "freq": 1156,
+    "hunum_ko": "꿸 관",
+    "jlpt": 1,
+    "kanji": "貫",
+    "kun": [
+      "つらぬ.く",
+      "ぬ.く",
+      "ぬき"
+    ],
+    "meanings_en": [
+      "pierce",
+      "8 1/3lbs",
+      "penetrate",
+      "brace"
+    ],
+    "meanings_ko": [
+      "꿰뚫다",
+      "관철하다"
+    ],
+    "on": [
+      "カン"
+    ],
+    "strokes": 11
+  },
+  {
+    "eum_ko": "선",
+    "freq": 1157,
+    "hunum_ko": "신선 선",
+    "jlpt": 1,
+    "kanji": "仙",
+    "kun": [],
+    "meanings_en": [
+      "hermit",
+      "wizard",
+      "cent"
+    ],
+    "meanings_ko": [
+      "신선"
+    ],
+    "on": [
+      "セン",
+      "セント"
+    ],
+    "strokes": 5
+  },
+  {
+    "eum_ko": "위",
+    "freq": 1158,
+    "hunum_ko": "위로할 위",
+    "jlpt": 1,
+    "kanji": "慰",
+    "kun": [
+      "なぐさ.める",
+      "なぐさ.む"
+    ],
+    "meanings_en": [
+      "consolation",
+      "amusement",
+      "seduce",
+      "cheer",
+      "make sport of",
+      "comfort",
+      "console"
+    ],
+    "meanings_ko": [
+      "위로하다",
+      "달래다"
+    ],
+    "on": [
+      "イ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "서",
+    "freq": 1160,
+    "hunum_ko": "차례 서",
+    "jlpt": 1,
+    "kanji": "序",
+    "kun": [
+      "つい.で",
+      "ついで"
+    ],
+    "meanings_en": [
+      "preface",
+      "beginning",
+      "order",
+      "precedence",
+      "occasion",
+      "chance",
+      "incidentally"
+    ],
+    "meanings_ko": [
+      "차례",
+      "순서",
+      "머리말",
+      "시작"
+    ],
+    "on": [
+      "ジョ"
+    ],
+    "strokes": 7
+  },
+  {
+    "eum_ko": "순",
+    "freq": 1162,
+    "hunum_ko": "열흘 순",
+    "jlpt": 1,
+    "kanji": "旬",
+    "kun": [],
+    "meanings_en": [
+      "decameron",
+      "ten-day period",
+      "season (for specific products)"
+    ],
+    "meanings_ko": [
+      "제철",
+      "열흘"
+    ],
+    "on": [
+      "ジュン",
+      "シュン"
+    ],
+    "strokes": 6
+  },
+  {
+    "eum_ko": "겸",
+    "freq": 1164,
+    "hunum_ko": "겸할 겸",
+    "jlpt": 1,
+    "kanji": "兼",
+    "kun": [
+      "か.ねる",
+      "-か.ねる"
+    ],
+    "meanings_en": [
+      "concurrently",
+      "and",
+      "beforehand",
+      "in advance"
+    ],
+    "meanings_ko": [
+      "겸하다",
+      "아울러"
+    ],
+    "on": [
+      "ケン"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "성",
+    "freq": 1165,
+    "hunum_ko": "성인 성",
+    "jlpt": 1,
+    "kanji": "聖",
+    "kun": [
+      "ひじり"
+    ],
+    "meanings_en": [
+      "holy",
+      "saint",
+      "sage",
+      "master",
+      "priest"
+    ],
+    "meanings_ko": [
+      "성스럽다",
+      "성인"
+    ],
+    "on": [
+      "セイ",
+      "ショウ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "지",
+    "freq": 1166,
+    "hunum_ko": "뜻 지",
+    "jlpt": 1,
+    "kanji": "旨",
+    "kun": [
+      "むね",
+      "うま.い"
+    ],
+    "meanings_en": [
+      "delicious",
+      "relish",
+      "show a liking for",
+      "purport",
+      "will",
+      "clever",
+      "expert"
+    ],
+    "meanings_ko": [
+      "취지",
+      "뜻",
+      "맛있다"
+    ],
+    "on": [
+      "シ"
+    ],
+    "strokes": 6
+  },
+  {
+    "eum_ko": "즉",
+    "freq": 1167,
+    "hunum_ko": "곧 즉",
+    "jlpt": 1,
+    "kanji": "即",
+    "kun": [
+      "つ.く",
+      "つ.ける",
+      "すなわ.ち"
+    ],
+    "meanings_en": [
+      "instant",
+      "namely",
+      "as is",
+      "conform",
+      "agree",
+      "adapt"
+    ],
+    "meanings_ko": [
+      "곧",
+      "즉시",
+      "즉"
+    ],
+    "on": [
+      "ソク"
+    ],
+    "strokes": 7
+  },
+  {
+    "eum_ko": "류",
+    "freq": 1169,
+    "hunum_ko": "버들 류",
+    "jlpt": 1,
+    "kanji": "柳",
+    "kun": [
+      "やなぎ"
+    ],
+    "meanings_en": [
+      "willow"
+    ],
+    "meanings_ko": [
+      "버드나무"
+    ],
+    "on": [
+      "リュウ"
+    ],
+    "strokes": 9
+  },
+  {
+    "eum_ko": "사",
+    "freq": 1170,
+    "hunum_ko": "집 사",
+    "jlpt": 1,
+    "kanji": "舎",
+    "kun": [
+      "やど.る"
+    ],
+    "meanings_en": [
+      "cottage",
+      "inn",
+      "hut",
+      "house",
+      "mansion"
+    ],
+    "meanings_ko": [
+      "집",
+      "숙소",
+      "건물"
+    ],
+    "on": [
+      "シャ",
+      "セキ"
+    ],
+    "strokes": 8
+  },
+  {
+    "eum_ko": "위",
+    "freq": 1171,
+    "hunum_ko": "거짓 위",
+    "jlpt": 1,
+    "kanji": "偽",
+    "kun": [
+      "いつわ.る",
+      "にせ",
+      "いつわ.り"
+    ],
+    "meanings_en": [
+      "falsehood",
+      "lie",
+      "deceive",
+      "pretend",
+      "counterfeit",
+      "forgery"
+    ],
+    "meanings_ko": [
+      "거짓",
+      "가짜",
+      "속이다"
+    ],
+    "on": [
+      "ギ",
+      "カ"
+    ],
+    "strokes": 11
+  },
+  {
+    "eum_ko": "교, 각",
+    "freq": 1172,
+    "hunum_ko": "견줄 교",
+    "jlpt": 1,
+    "kanji": "較",
+    "kun": [
+      "くら.べる"
+    ],
+    "meanings_en": [
+      "contrast",
+      "compare"
+    ],
+    "meanings_ko": [
+      "비교하다",
+      "견주다"
+    ],
+    "on": [
+      "カク",
+      "コウ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "패, 백",
+    "freq": 1173,
+    "hunum_ko": "으뜸 패",
+    "jlpt": 1,
+    "kanji": "覇",
+    "kun": [
+      "はたがしら"
+    ],
+    "meanings_en": [
+      "hegemony",
+      "supremacy",
+      "leadership",
+      "champion"
+    ],
+    "meanings_ko": [
+      "패권",
+      "으뜸",
+      "우승"
+    ],
+    "on": [
+      "ハ",
+      "ハク"
+    ],
+    "strokes": 19
+  },
+  {
+    "eum_ko": "상, 양",
+    "freq": 1178,
+    "hunum_ko": "자세할 상",
+    "jlpt": 1,
+    "kanji": "詳",
+    "kun": [
+      "くわ.しい",
+      "つまび.らか"
+    ],
+    "meanings_en": [
+      "detailed",
+      "full",
+      "minute",
+      "accurate",
+      "well-informed"
+    ],
+    "meanings_ko": [
+      "자세하다",
+      "상세하다"
+    ],
+    "on": [
+      "ショウ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "저, 지",
+    "freq": 1182,
+    "hunum_ko": "막을 저",
+    "jlpt": 1,
+    "kanji": "抵",
+    "kun": [],
+    "meanings_en": [
+      "resist",
+      "reach",
+      "touch"
+    ],
+    "meanings_ko": [
+      "저항하다",
+      "맞서다",
+      "닿다"
+    ],
+    "on": [
+      "テイ"
+    ],
+    "strokes": 8
+  },
+  {
+    "eum_ko": "협",
+    "freq": 1183,
+    "hunum_ko": "위협할 협",
+    "jlpt": 1,
+    "kanji": "脅",
+    "kun": [
+      "おびや.かす",
+      "おど.す",
+      "おど.かす"
+    ],
+    "meanings_en": [
+      "threaten",
+      "coerce"
+    ],
+    "meanings_ko": [
+      "위협하다",
+      "협박하다"
+    ],
+    "on": [
+      "キョウ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "무",
+    "freq": 1188,
+    "hunum_ko": "무성할 무",
+    "jlpt": 1,
+    "kanji": "茂",
+    "kun": [
+      "しげ.る"
+    ],
+    "meanings_en": [
+      "overgrown",
+      "grow thick",
+      "be luxuriant"
+    ],
+    "meanings_ko": [
+      "무성하다",
+      "우거지다"
+    ],
+    "on": [
+      "モ"
+    ],
+    "strokes": 8
+  },
+  {
+    "eum_ko": "희",
+    "freq": 1189,
+    "hunum_ko": "희생 희",
+    "jlpt": 1,
+    "kanji": "犠",
+    "kun": [
+      "いけにえ"
+    ],
+    "meanings_en": [
+      "sacrifice"
+    ],
+    "meanings_ko": [
+      "희생"
+    ],
+    "on": [
+      "ギ",
+      "キ"
+    ],
+    "strokes": 17
+  },
+  {
+    "eum_ko": "기",
+    "freq": 1190,
+    "hunum_ko": "기 기",
+    "jlpt": 1,
+    "kanji": "旗",
+    "kun": [
+      "はた"
+    ],
+    "meanings_en": [
+      "flag",
+      "banner",
+      "standard"
+    ],
+    "meanings_ko": [
+      "깃발",
+      "기"
+    ],
+    "on": [
+      "キ"
+    ],
+    "strokes": 14
+  },
+  {
+    "eum_ko": "거",
+    "freq": 1191,
+    "hunum_ko": "상거할 거",
+    "jlpt": 1,
+    "kanji": "距",
+    "kun": [
+      "へだ.たる",
+      "けづめ"
+    ],
+    "meanings_en": [
+      "long-distance",
+      "spur",
+      "fetlock"
+    ],
+    "meanings_ko": [
+      "떨어지다",
+      "거리"
+    ],
+    "on": [
+      "キョ"
+    ],
+    "strokes": 12
+  },
+  {
+    "eum_ko": "아",
+    "freq": 1192,
+    "hunum_ko": "맑을 아",
+    "jlpt": 1,
+    "kanji": "雅",
+    "kun": [
+      "みや.び"
+    ],
+    "meanings_en": [
+      "gracious",
+      "elegant",
+      "graceful",
+      "refined"
+    ],
+    "meanings_ko": [
+      "우아하다",
+      "고상하다"
+    ],
+    "on": [
+      "ガ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "식",
+    "freq": 1193,
+    "hunum_ko": "꾸밀 식",
+    "jlpt": 1,
+    "kanji": "飾",
+    "kun": [
+      "かざ.る",
+      "かざ.り"
+    ],
+    "meanings_en": [
+      "decorate",
+      "ornament",
+      "adorn",
+      "embellish"
+    ],
+    "meanings_ko": [
+      "꾸미다",
+      "장식"
+    ],
+    "on": [
+      "ショク"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "망",
+    "freq": 1194,
+    "hunum_ko": "그물 망",
+    "jlpt": 1,
+    "kanji": "網",
+    "kun": [
+      "あみ"
+    ],
+    "meanings_en": [
+      "netting",
+      "network"
+    ],
+    "meanings_ko": [
+      "그물",
+      "망"
+    ],
+    "on": [
+      "モウ"
+    ],
+    "strokes": 14
+  },
+  {
+    "eum_ko": "룡, 농",
+    "freq": 1195,
+    "hunum_ko": "용 룡",
+    "jlpt": 1,
+    "kanji": "竜",
+    "kun": [
+      "たつ",
+      "いせ"
+    ],
+    "meanings_en": [
+      "dragon",
+      "imperial"
+    ],
+    "meanings_ko": [
+      "용"
+    ],
+    "on": [
+      "リュウ",
+      "リョウ",
+      "ロウ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "시",
+    "freq": 1196,
+    "hunum_ko": "시 시",
+    "jlpt": 1,
+    "kanji": "詩",
+    "kun": [
+      "うた"
+    ],
+    "meanings_en": [
+      "poem",
+      "poetry"
+    ],
+    "meanings_ko": [
+      "시"
+    ],
+    "on": [
+      "シ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "번, 반",
+    "freq": 1198,
+    "hunum_ko": "번성할 번",
+    "jlpt": 1,
+    "kanji": "繁",
+    "kun": [
+      "しげ.る",
+      "しげ.く"
+    ],
+    "meanings_en": [
+      "luxuriant",
+      "thick",
+      "overgrown",
+      "frequency",
+      "complexity",
+      "trouble"
+    ],
+    "meanings_ko": [
+      "번성하다",
+      "무성하다",
+      "잦다",
+      "번잡하다"
+    ],
+    "on": [
+      "ハン"
+    ],
+    "strokes": 16
+  },
+  {
+    "eum_ko": "익",
+    "freq": 1201,
+    "hunum_ko": "날개 익",
+    "jlpt": 1,
+    "kanji": "翼",
+    "kun": [
+      "つばさ"
+    ],
+    "meanings_en": [
+      "wing",
+      "plane",
+      "flank"
+    ],
+    "meanings_ko": [
+      "날개"
+    ],
+    "on": [
+      "ヨク"
+    ],
+    "strokes": 17
+  },
+  {
+    "eum_ko": "석",
+    "freq": 1204,
+    "hunum_ko": "개펄 석",
+    "jlpt": 1,
+    "kanji": "潟",
+    "kun": [
+      "かた",
+      "-がた"
+    ],
+    "meanings_en": [
+      "lagoon"
+    ],
+    "meanings_ko": [
+      "석호",
+      "개펄"
+    ],
+    "on": [
+      "セキ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "적",
+    "freq": 1205,
+    "hunum_ko": "대적할 적",
+    "jlpt": 1,
+    "kanji": "敵",
+    "kun": [
+      "かたき",
+      "あだ",
+      "かな.う"
+    ],
+    "meanings_en": [
+      "enemy",
+      "foe",
+      "opponent"
+    ],
+    "meanings_ko": [
+      "적",
+      "원수",
+      "맞서다"
+    ],
+    "on": [
+      "テキ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "매",
+    "freq": 1206,
+    "hunum_ko": "매혹할 매",
+    "jlpt": 1,
+    "kanji": "魅",
+    "kun": [],
+    "meanings_en": [
+      "fascination",
+      "charm",
+      "bewitch"
+    ],
+    "meanings_ko": [
+      "매혹하다",
+      "홀리다",
+      "매력"
+    ],
+    "on": [
+      "ミ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "혐",
+    "freq": 1207,
+    "hunum_ko": "싫어할 혐",
+    "jlpt": 1,
+    "kanji": "嫌",
+    "kun": [
+      "きら.う",
+      "きら.い",
+      "いや"
+    ],
+    "meanings_en": [
+      "dislike",
+      "detest",
+      "hate"
+    ],
+    "meanings_ko": [
+      "싫어하다",
+      "싫다",
+      "꺼리다"
+    ],
+    "on": [
+      "ケン",
+      "ゲン"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "제, 자, 체, 채",
+    "freq": 1209,
+    "hunum_ko": "가지런할 제",
+    "jlpt": 1,
+    "kanji": "斉",
+    "kun": [
+      "そろ.う",
+      "ひと.しい",
+      "ひと.しく",
+      "あたる",
+      "はやい"
+    ],
+    "meanings_en": [
+      "adjusted",
+      "alike",
+      "equal",
+      "similar variety of"
+    ],
+    "meanings_ko": [
+      "가지런하다",
+      "같다",
+      "일제히"
+    ],
+    "on": [
+      "セイ",
+      "サイ"
+    ],
+    "strokes": 8
+  },
+  {
+    "eum_ko": "부",
+    "freq": 1212,
+    "hunum_ko": "펼 부",
+    "jlpt": 1,
+    "kanji": "敷",
+    "kun": [
+      "し.く",
+      "-し.き"
+    ],
+    "meanings_en": [
+      "spread",
+      "pave",
+      "sit",
+      "promulgate"
+    ],
+    "meanings_ko": [
+      "깔다",
+      "펴다"
+    ],
+    "on": [
+      "フ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "옹",
+    "freq": 1213,
+    "hunum_ko": "낄 옹",
+    "jlpt": 1,
+    "kanji": "擁",
+    "kun": [],
+    "meanings_en": [
+      "hug",
+      "embrace",
+      "possess",
+      "protect",
+      "lead"
+    ],
+    "meanings_ko": [
+      "안다",
+      "지키다",
+      "거느리다"
+    ],
+    "on": [
+      "ヨウ"
+    ],
+    "strokes": 16
+  },
+  {
+    "eum_ko": "권",
+    "freq": 1216,
+    "hunum_ko": "우리 권",
+    "jlpt": 1,
+    "kanji": "圏",
+    "kun": [
+      "かこ.い"
+    ],
+    "meanings_en": [
+      "sphere",
+      "circle",
+      "radius",
+      "range"
+    ],
+    "meanings_ko": [
+      "범위",
+      "권역",
+      "테두리"
+    ],
+    "on": [
+      "ケン"
+    ],
+    "strokes": 12
+  },
+  {
+    "eum_ko": "산",
+    "freq": 1218,
+    "hunum_ko": "실 산",
+    "jlpt": 1,
+    "kanji": "酸",
+    "kun": [
+      "す.い"
+    ],
+    "meanings_en": [
+      "acid",
+      "bitterness",
+      "sour",
+      "tart"
+    ],
+    "meanings_ko": [
+      "시다",
+      "산"
+    ],
+    "on": [
+      "サン"
+    ],
+    "strokes": 14
+  },
+  {
+    "eum_ko": "벌",
+    "freq": 1220,
+    "hunum_ko": "벌할 벌",
+    "jlpt": 1,
+    "kanji": "罰",
+    "kun": [
+      "ばっ.する"
+    ],
+    "meanings_en": [
+      "penalty",
+      "punishment"
+    ],
+    "meanings_ko": [
+      "벌",
+      "벌하다"
+    ],
+    "on": [
+      "バツ",
+      "バチ",
+      "ハツ"
+    ],
+    "strokes": 14
+  },
+  {
+    "eum_ko": "멸",
+    "freq": 1222,
+    "hunum_ko": "꺼질 멸",
+    "jlpt": 1,
+    "kanji": "滅",
+    "kun": [
+      "ほろ.びる",
+      "ほろ.ぶ",
+      "ほろ.ぼす"
+    ],
+    "meanings_en": [
+      "destroy",
+      "ruin",
+      "overthrow",
+      "perish"
+    ],
+    "meanings_ko": [
+      "멸망하다",
+      "멸하다",
+      "없어지다"
+    ],
+    "on": [
+      "メツ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "초",
+    "freq": 1224,
+    "hunum_ko": "주춧돌 초",
+    "jlpt": 1,
+    "kanji": "礎",
+    "kun": [
+      "いしずえ"
+    ],
+    "meanings_en": [
+      "cornerstone",
+      "foundation stone"
+    ],
+    "meanings_ko": [
+      "주춧돌",
+      "기초"
+    ],
+    "on": [
+      "ソ"
+    ],
+    "strokes": 18
+  },
+  {
+    "eum_ko": "부",
+    "freq": 1225,
+    "hunum_ko": "썩을 부",
+    "jlpt": 1,
+    "kanji": "腐",
+    "kun": [
+      "くさ.る",
+      "-くさ.る",
+      "くさ.れる",
+      "くさ.れ",
+      "くさ.らす",
+      "くさ.す"
+    ],
+    "meanings_en": [
+      "rot",
+      "decay",
+      "sour"
+    ],
+    "meanings_ko": [
+      "썩다",
+      "상하다"
+    ],
+    "on": [
+      "フ"
+    ],
+    "strokes": 14
+  },
+  {
+    "eum_ko": "각",
+    "freq": 1228,
+    "hunum_ko": "다리 각",
+    "jlpt": 1,
+    "kanji": "脚",
+    "kun": [
+      "あし"
+    ],
+    "meanings_en": [
+      "skids",
+      "leg",
+      "undercarriage",
+      "lower part",
+      "base"
+    ],
+    "meanings_ko": [
+      "다리",
+      "아랫부분"
+    ],
+    "on": [
+      "キャク",
+      "キャ",
+      "カク"
+    ],
+    "strokes": 11
+  },
+  {
+    "eum_ko": "조",
+    "freq": 1231,
+    "hunum_ko": "밀물 조",
+    "jlpt": 1,
+    "kanji": "潮",
+    "kun": [
+      "しお",
+      "うしお"
+    ],
+    "meanings_en": [
+      "tide",
+      "salt water",
+      "opportunity"
+    ],
+    "meanings_ko": [
+      "조수",
+      "바닷물",
+      "때"
+    ],
+    "on": [
+      "チョウ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "매",
+    "freq": 1232,
+    "hunum_ko": "매화 매",
+    "jlpt": 1,
+    "kanji": "梅",
+    "kun": [
+      "うめ"
+    ],
+    "meanings_en": [
+      "plum"
+    ],
+    "meanings_ko": [
+      "매화",
+      "매실"
+    ],
+    "on": [
+      "バイ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "진",
+    "freq": 1234,
+    "hunum_ko": "다할 진",
+    "jlpt": 1,
+    "kanji": "尽",
+    "kun": [
+      "つ.きる",
+      "つ.くす",
+      "つ.かす",
+      "-づ.く",
+      "-ず.く",
+      "ことごと.く"
+    ],
+    "meanings_en": [
+      "exhaust",
+      "use up",
+      "run out of",
+      "deplete",
+      "befriend",
+      "serve"
+    ],
+    "meanings_ko": [
+      "다하다",
+      "다 쓰다",
+      "애쓰다"
+    ],
+    "on": [
+      "ジン",
+      "サン"
+    ],
+    "strokes": 6
+  },
+  {
+    "eum_ko": "복",
+    "freq": 1236,
+    "hunum_ko": "종 복",
+    "jlpt": 1,
+    "kanji": "僕",
+    "kun": [
+      "しもべ"
+    ],
+    "meanings_en": [
+      "me",
+      "I (male)",
+      "servant",
+      "manservant"
+    ],
+    "meanings_ko": [
+      "나",
+      "하인"
+    ],
+    "on": [
+      "ボク"
+    ],
+    "strokes": 14
+  },
+  {
+    "eum_ko": "앵",
+    "freq": 1237,
+    "hunum_ko": "앵두 앵",
+    "jlpt": 1,
+    "kanji": "桜",
+    "kun": [
+      "さくら"
+    ],
+    "meanings_en": [
+      "cherry"
+    ],
+    "meanings_ko": [
+      "벚나무",
+      "벚꽃"
+    ],
+    "on": [
+      "オウ",
+      "ヨウ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "활, 골",
+    "freq": 1238,
+    "hunum_ko": "미끄러울 활",
+    "jlpt": 1,
+    "kanji": "滑",
+    "kun": [
+      "すべ.る",
+      "なめ.らか"
+    ],
+    "meanings_en": [
+      "slippery",
+      "slide",
+      "slip",
+      "fail exam"
+    ],
+    "meanings_ko": [
+      "미끄러지다",
+      "매끄럽다"
+    ],
+    "on": [
+      "カツ",
+      "コツ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "고",
+    "freq": 1239,
+    "hunum_ko": "외로울 고",
+    "jlpt": 1,
+    "kanji": "孤",
+    "kun": [],
+    "meanings_en": [
+      "orphan",
+      "alone"
+    ],
+    "meanings_ko": [
+      "외롭다",
+      "고아"
+    ],
+    "on": [
+      "コ"
+    ],
+    "strokes": 9
+  },
+  {
+    "eum_ko": "염",
+    "freq": 1242,
+    "hunum_ko": "불꽃 염",
+    "jlpt": 1,
+    "kanji": "炎",
+    "kun": [
+      "ほのお"
+    ],
+    "meanings_en": [
+      "inflammation",
+      "flame",
+      "blaze"
+    ],
+    "meanings_ko": [
+      "불꽃",
+      "염증"
+    ],
+    "on": [
+      "エン"
+    ],
+    "strokes": 8
+  },
+  {
+    "eum_ko": "배",
+    "freq": 1243,
+    "hunum_ko": "물어줄 배",
+    "jlpt": 1,
+    "kanji": "賠",
+    "kun": [],
+    "meanings_en": [
+      "compensation",
+      "indemnify"
+    ],
+    "meanings_ko": [
+      "배상하다",
+      "물어 주다"
+    ],
+    "on": [
+      "バイ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "구, 귀",
+    "freq": 1244,
+    "hunum_ko": "글귀 구",
+    "jlpt": 1,
+    "kanji": "句",
+    "kun": [],
+    "meanings_en": [
+      "phrase",
+      "clause",
+      "sentence",
+      "passage",
+      "paragraph",
+      "counter for haiku"
+    ],
+    "meanings_ko": [
+      "구절",
+      "글귀",
+      "하이쿠"
+    ],
+    "on": [
+      "ク"
+    ],
+    "strokes": 5
+  },
+  {
+    "eum_ko": "강",
+    "freq": 1246,
+    "hunum_ko": "강철 강",
+    "jlpt": 1,
+    "kanji": "鋼",
+    "kun": [
+      "はがね"
+    ],
+    "meanings_en": [
+      "steel"
+    ],
+    "meanings_ko": [
+      "강철"
+    ],
+    "on": [
+      "コウ"
+    ],
+    "strokes": 16
+  },
+  {
+    "eum_ko": "완",
+    "freq": 1247,
+    "hunum_ko": "완고할 완",
+    "jlpt": 1,
+    "kanji": "頑",
+    "kun": [
+      "かたく.な"
+    ],
+    "meanings_en": [
+      "stubborn",
+      "foolish",
+      "firmly"
+    ],
+    "meanings_ko": [
+      "완고하다",
+      "고집이 세다"
+    ],
+    "on": [
+      "ガン"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "쇄",
+    "freq": 1250,
+    "hunum_ko": "쇠사슬 쇄",
+    "jlpt": 1,
+    "kanji": "鎖",
+    "kun": [
+      "くさり",
+      "とざ.す"
+    ],
+    "meanings_en": [
+      "chain",
+      "irons",
+      "connection"
+    ],
+    "meanings_ko": [
+      "쇠사슬",
+      "사슬",
+      "잠그다"
+    ],
+    "on": [
+      "サ"
+    ],
+    "strokes": 18
+  },
+  {
+    "eum_ko": "채",
+    "freq": 1251,
+    "hunum_ko": "채색 채",
+    "jlpt": 1,
+    "kanji": "彩",
+    "kun": [
+      "いろど.る"
+    ],
+    "meanings_en": [
+      "coloring",
+      "paint",
+      "makeup"
+    ],
+    "meanings_ko": [
+      "채색하다",
+      "빛깔",
+      "꾸미다"
+    ],
+    "on": [
+      "サイ"
+    ],
+    "strokes": 11
+  },
+  {
+    "eum_ko": "마",
+    "freq": 1252,
+    "hunum_ko": "문지를 마",
+    "jlpt": 1,
+    "kanji": "摩",
+    "kun": [
+      "ま.する",
+      "さす.る",
+      "す.る"
+    ],
+    "meanings_en": [
+      "chafe",
+      "rub",
+      "polish",
+      "grind",
+      "scrape"
+    ],
+    "meanings_ko": [
+      "문지르다",
+      "비비다",
+      "닳다"
+    ],
+    "on": [
+      "マ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "려",
+    "freq": 1254,
+    "hunum_ko": "힘쓸 려",
+    "jlpt": 1,
+    "kanji": "励",
+    "kun": [
+      "はげ.む",
+      "はげ.ます"
+    ],
+    "meanings_en": [
+      "encourage",
+      "be diligent",
+      "inspire"
+    ],
+    "meanings_ko": [
+      "힘쓰다",
+      "격려하다"
+    ],
+    "on": [
+      "レイ"
+    ],
+    "strokes": 7
+  },
+  {
+    "eum_ko": "종, 총",
+    "freq": 1258,
+    "hunum_ko": "세로 종",
+    "jlpt": 1,
+    "kanji": "縦",
+    "kun": [
+      "たて"
+    ],
+    "meanings_en": [
+      "vertical",
+      "length",
+      "height",
+      "self-indulgent",
+      "wayward"
+    ],
+    "meanings_ko": [
+      "세로",
+      "길이",
+      "멋대로"
+    ],
+    "on": [
+      "ジュウ"
+    ],
+    "strokes": 16
+  },
+  {
+    "eum_ko": "휘",
+    "freq": 1259,
+    "hunum_ko": "빛날 휘",
+    "jlpt": 1,
+    "kanji": "輝",
+    "kun": [
+      "かがや.く"
+    ],
+    "meanings_en": [
+      "radiance",
+      "shine",
+      "sparkle",
+      "gleam",
+      "twinkle"
+    ],
+    "meanings_ko": [
+      "빛나다",
+      "반짝이다"
+    ],
+    "on": [
+      "キ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "축",
+    "freq": 1260,
+    "hunum_ko": "모을 축",
+    "jlpt": 1,
+    "kanji": "蓄",
+    "kun": [
+      "たくわ.える"
+    ],
+    "meanings_en": [
+      "amass",
+      "raise",
+      "hoard",
+      "store"
+    ],
+    "meanings_ko": [
+      "모으다",
+      "쌓다",
+      "저축하다"
+    ],
+    "on": [
+      "チク"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "축",
+    "freq": 1261,
+    "hunum_ko": "굴대 축",
+    "jlpt": 1,
+    "kanji": "軸",
+    "kun": [],
+    "meanings_en": [
+      "axis",
+      "pivot",
+      "stem",
+      "stalk",
+      "counter for book scrolls"
+    ],
+    "meanings_ko": [
+      "축",
+      "굴대",
+      "족자"
+    ],
+    "on": [
+      "ジク"
+    ],
+    "strokes": 12
+  },
+  {
+    "eum_ko": "순",
+    "freq": 1262,
+    "hunum_ko": "돌 순",
+    "jlpt": 1,
+    "kanji": "巡",
+    "kun": [
+      "めぐ.る",
+      "めぐ.り"
+    ],
+    "meanings_en": [
+      "patrol",
+      "go around",
+      "circumference"
+    ],
+    "meanings_ko": [
+      "돌다",
+      "순회하다"
+    ],
+    "on": [
+      "ジュン"
+    ],
+    "strokes": 6
+  },
+  {
+    "eum_ko": "가",
+    "freq": 1264,
+    "hunum_ko": "심을 가",
+    "jlpt": 1,
+    "kanji": "稼",
+    "kun": [
+      "かせ.ぐ"
+    ],
+    "meanings_en": [
+      "earnings",
+      "work",
+      "earn money"
+    ],
+    "meanings_ko": [
+      "벌다",
+      "일하다"
+    ],
+    "on": [
+      "カ"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "순",
+    "freq": 1265,
+    "hunum_ko": "눈깜짝일 순",
+    "jlpt": 1,
+    "kanji": "瞬",
+    "kun": [
+      "またた.く",
+      "まじろ.ぐ"
+    ],
+    "meanings_en": [
+      "wink",
+      "blink",
+      "twinkle"
+    ],
+    "meanings_ko": [
+      "깜박이다",
+      "순간"
+    ],
+    "on": [
+      "シュン"
+    ],
+    "strokes": 18
+  },
+  {
+    "eum_ko": "포",
+    "freq": 1268,
+    "hunum_ko": "대포 포",
+    "jlpt": 1,
+    "kanji": "砲",
+    "kun": [],
+    "meanings_en": [
+      "cannon",
+      "gun"
+    ],
+    "meanings_ko": [
+      "대포",
+      "포"
+    ],
+    "on": [
+      "ホウ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "분",
+    "freq": 1270,
+    "hunum_ko": "뿜을 분",
+    "jlpt": 1,
+    "kanji": "噴",
+    "kun": [
+      "ふ.く"
+    ],
+    "meanings_en": [
+      "erupt",
+      "spout",
+      "emit",
+      "flush out"
+    ],
+    "meanings_ko": [
+      "뿜다",
+      "분출하다"
+    ],
+    "on": [
+      "フン"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "과",
+    "freq": 1272,
+    "hunum_ko": "자랑할 과",
+    "jlpt": 1,
+    "kanji": "誇",
+    "kun": [
+      "ほこ.る"
+    ],
+    "meanings_en": [
+      "boast",
+      "be proud",
+      "pride",
+      "triumphantly"
+    ],
+    "meanings_ko": [
+      "자랑하다",
+      "뽐내다"
+    ],
+    "on": [
+      "コ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "상",
+    "freq": 1273,
+    "hunum_ko": "상서 상",
+    "jlpt": 1,
+    "kanji": "祥",
+    "kun": [
+      "さいわ.い",
+      "きざ.し",
+      "よ.い",
+      "つまび.らか"
+    ],
+    "meanings_en": [
+      "auspicious",
+      "happiness",
+      "blessedness",
+      "good omen",
+      "good fortune"
+    ],
+    "meanings_ko": [
+      "상서롭다",
+      "길조"
+    ],
+    "on": [
+      "ショウ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "생",
+    "freq": 1274,
+    "hunum_ko": "희생 생",
+    "jlpt": 1,
+    "kanji": "牲",
+    "kun": [],
+    "meanings_en": [
+      "animal sacrifice",
+      "offering"
+    ],
+    "meanings_ko": [
+      "희생",
+      "제물"
+    ],
+    "on": [
+      "セイ"
+    ],
+    "strokes": 9
+  },
+  {
+    "eum_ko": "질",
+    "freq": 1275,
+    "hunum_ko": "차례 질",
+    "jlpt": 1,
+    "kanji": "秩",
+    "kun": [],
+    "meanings_en": [
+      "regularity",
+      "salary",
+      "order"
+    ],
+    "meanings_ko": [
+      "차례",
+      "질서"
+    ],
+    "on": [
+      "チツ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "제",
+    "freq": 1276,
+    "hunum_ko": "임금 제",
+    "jlpt": 1,
+    "kanji": "帝",
+    "kun": [
+      "みかど"
+    ],
+    "meanings_en": [
+      "sovereign",
+      "the emperor",
+      "god",
+      "creator"
+    ],
+    "meanings_ko": [
+      "황제",
+      "임금"
+    ],
+    "on": [
+      "テイ"
+    ],
+    "strokes": 9
+  },
+  {
+    "eum_ko": "굉",
+    "freq": 1277,
+    "hunum_ko": "클 굉",
+    "jlpt": 1,
+    "kanji": "宏",
+    "kun": [
+      "ひろ.い"
+    ],
+    "meanings_en": [
+      "wide",
+      "large"
+    ],
+    "meanings_ko": [
+      "넓다",
+      "크다"
+    ],
+    "on": [
+      "コウ"
+    ],
+    "strokes": 7
+  },
+  {
+    "eum_ko": "사",
+    "freq": 1278,
+    "hunum_ko": "부추길 사",
+    "jlpt": 1,
+    "kanji": "唆",
+    "kun": [
+      "そそ.る",
+      "そそのか.す"
+    ],
+    "meanings_en": [
+      "tempt",
+      "seduce",
+      "instigate",
+      "promote"
+    ],
+    "meanings_ko": [
+      "부추기다",
+      "꼬드기다"
+    ],
+    "on": [
+      "サ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "조",
+    "freq": 1280,
+    "hunum_ko": "막힐 조",
+    "jlpt": 1,
+    "kanji": "阻",
+    "kun": [
+      "はば.む"
+    ],
+    "meanings_en": [
+      "thwart",
+      "separate from",
+      "prevent",
+      "obstruct",
+      "deter",
+      "impede"
+    ],
+    "meanings_ko": [
+      "막다",
+      "저지하다"
+    ],
+    "on": [
+      "ソ"
+    ],
+    "strokes": 8
+  },
+  {
+    "eum_ko": "태",
+    "freq": 1281,
+    "hunum_ko": "클 태",
+    "jlpt": 1,
+    "kanji": "泰",
+    "kun": [],
+    "meanings_en": [
+      "peaceful",
+      "calm",
+      "peace",
+      "easy",
+      "Thailand",
+      "extreme",
+      "excessive",
+      "great"
+    ],
+    "meanings_ko": [
+      "편안하다",
+      "크다"
+    ],
+    "on": [
+      "タイ"
+    ],
+    "strokes": 10
+  },
+  {
+    "eum_ko": "회",
+    "freq": 1282,
+    "hunum_ko": "재물 회",
+    "jlpt": 1,
+    "kanji": "賄",
+    "kun": [
+      "まかな.う"
+    ],
+    "meanings_en": [
+      "bribe",
+      "board",
+      "supply",
+      "finance"
+    ],
+    "meanings_ko": [
+      "뇌물",
+      "조달하다",
+      "꾸려 가다"
+    ],
+    "on": [
+      "ワイ"
+    ],
+    "strokes": 13
+  },
+  {
+    "eum_ko": "박, 복",
+    "freq": 1283,
+    "hunum_ko": "칠 박",
+    "jlpt": 1,
+    "kanji": "撲",
+    "kun": [],
+    "meanings_en": [
+      "slap",
+      "strike",
+      "hit",
+      "beat",
+      "tell",
+      "speak"
+    ],
+    "meanings_ko": [
+      "치다",
+      "때리다"
+    ],
+    "on": [
+      "ボク"
+    ],
+    "strokes": 15
+  },
+  {
+    "eum_ko": "굴",
+    "freq": 1285,
+    "hunum_ko": "굴 굴",
+    "jlpt": 1,
+    "kanji": "堀",
+    "kun": [
+      "ほり"
+    ],
+    "meanings_en": [
+      "ditch",
+      "moat",
+      "canal"
+    ],
+    "meanings_ko": [
+      "해자",
+      "도랑"
+    ],
+    "on": [
+      "クツ"
+    ],
+    "strokes": 11
+  },
+  {
+    "eum_ko": "국",
+    "freq": 1287,
+    "hunum_ko": "국화 국",
+    "jlpt": 1,
+    "kanji": "菊",
+    "kun": [],
+    "meanings_en": [
+      "chrysanthemum"
+    ],
+    "meanings_ko": [
+      "국화"
+    ],
+    "on": [
+      "キク"
+    ],
+    "strokes": 11
+  },
+  {
+    "eum_ko": "교",
+    "freq": 1288,
+    "hunum_ko": "목맬 교",
+    "jlpt": 1,
+    "kanji": "絞",
+    "kun": [
+      "しぼ.る",
+      "し.める",
+      "し.まる"
+    ],
+    "meanings_en": [
+      "strangle",
+      "constrict",
+      "wring"
+    ],
+    "meanings_ko": [
+      "짜다",
+      "조르다",
+      "좁히다"
+    ],
+    "on": [
+      "コウ"
+    ],
+    "strokes": 12
+  }
+]
