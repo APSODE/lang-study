@@ -1,0 +1,1267 @@
+[
+  {
+    "kanji": "鉱",
+    "examples": [
+      {
+        "word": "鉱物",
+        "reading": "こうぶつ",
+        "meaning_ko": "광물"
+      },
+      {
+        "word": "鉱山",
+        "reading": "こうざん",
+        "meaning_ko": "광산"
+      }
+    ],
+    "sentence": {
+      "ja": "この山には昔、鉱山がありました。",
+      "kana": "このやまにはむかし、こうざんがありました。",
+      "ko": "이 산에는 옛날에 광산이 있었습니다."
+    }
+  },
+  {
+    "kanji": "涙",
+    "examples": [
+      {
+        "word": "涙",
+        "reading": "なみだ",
+        "meaning_ko": "눈물"
+      }
+    ],
+    "sentence": {
+      "ja": "映画を見て涙が出ました。",
+      "kana": "えいがをみてなみだがでました。",
+      "ko": "영화를 보고 눈물이 났습니다."
+    }
+  },
+  {
+    "kanji": "匹",
+    "examples": [
+      {
+        "word": "一匹",
+        "reading": "いっぴき",
+        "meaning_ko": "한 마리"
+      },
+      {
+        "word": "三匹",
+        "reading": "さんびき",
+        "meaning_ko": "세 마리"
+      }
+    ],
+    "sentence": {
+      "ja": "家に猫が二匹います。",
+      "kana": "いえにねこがにひきいます。",
+      "ko": "집에 고양이가 두 마리 있습니다."
+    }
+  },
+  {
+    "kanji": "孫",
+    "examples": [
+      {
+        "word": "孫",
+        "reading": "まご",
+        "meaning_ko": "손자"
+      },
+      {
+        "word": "子孫",
+        "reading": "しそん",
+        "meaning_ko": "자손"
+      }
+    ],
+    "sentence": {
+      "ja": "祖母は孫と公園で遊びました。",
+      "kana": "そぼはまごとこうえんであそびました。",
+      "ko": "할머니는 손주와 공원에서 놀았습니다."
+    }
+  },
+  {
+    "kanji": "鋭",
+    "examples": [
+      {
+        "word": "鋭い",
+        "reading": "するどい",
+        "meaning_ko": "날카롭다"
+      },
+      {
+        "word": "鋭角",
+        "reading": "えいかく",
+        "meaning_ko": "예각"
+      }
+    ],
+    "sentence": {
+      "ja": "このナイフはとても鋭いです。",
+      "kana": "このナイフはとてもするどいです。",
+      "ko": "이 칼은 매우 날카롭습니다."
+    }
+  },
+  {
+    "kanji": "枝",
+    "examples": [
+      {
+        "word": "枝",
+        "reading": "えだ",
+        "meaning_ko": "나뭇가지"
+      },
+      {
+        "word": "小枝",
+        "reading": "こえだ",
+        "meaning_ko": "잔가지"
+      }
+    ],
+    "sentence": {
+      "ja": "木の枝に鳥がとまっています。",
+      "kana": "きのえだにとりがとまっています。",
+      "ko": "나뭇가지에 새가 앉아 있습니다."
+    }
+  },
+  {
+    "kanji": "塗",
+    "examples": [
+      {
+        "word": "塗る",
+        "reading": "ぬる",
+        "meaning_ko": "바르다"
+      },
+      {
+        "word": "塗料",
+        "reading": "とりょう",
+        "meaning_ko": "도료"
+      }
+    ],
+    "sentence": {
+      "ja": "パンにバターを塗ります。",
+      "kana": "パンにバターをぬります。",
+      "ko": "빵에 버터를 바릅니다."
+    }
+  },
+  {
+    "kanji": "軒",
+    "examples": [
+      {
+        "word": "一軒",
+        "reading": "いっけん",
+        "meaning_ko": "집 한 채"
+      },
+      {
+        "word": "軒下",
+        "reading": "のきした",
+        "meaning_ko": "처마 밑"
+      }
+    ],
+    "sentence": {
+      "ja": "この通りには店が三軒あります。",
+      "kana": "このとおりにはみせがさんけんあります。",
+      "ko": "이 거리에는 가게가 세 곳 있습니다."
+    }
+  },
+  {
+    "kanji": "毒",
+    "examples": [
+      {
+        "word": "毒",
+        "reading": "どく",
+        "meaning_ko": "독"
+      },
+      {
+        "word": "気の毒",
+        "reading": "きのどく",
+        "meaning_ko": "딱함"
+      }
+    ],
+    "sentence": {
+      "ja": "このきのこには毒があります。",
+      "kana": "このきのこにはどくがあります。",
+      "ko": "이 버섯에는 독이 있습니다."
+    }
+  },
+  {
+    "kanji": "叫",
+    "examples": [
+      {
+        "word": "叫ぶ",
+        "reading": "さけぶ",
+        "meaning_ko": "외치다"
+      },
+      {
+        "word": "叫び声",
+        "reading": "さけびごえ",
+        "meaning_ko": "외치는 소리"
+      }
+    ],
+    "sentence": {
+      "ja": "子どもが大きな声で叫びました。",
+      "kana": "こどもがおおきなこえでさけびました。",
+      "ko": "아이가 큰 소리로 외쳤습니다."
+    }
+  },
+  {
+    "kanji": "拝",
+    "examples": [
+      {
+        "word": "拝む",
+        "reading": "おがむ",
+        "meaning_ko": "절하다"
+      },
+      {
+        "word": "拝見",
+        "reading": "はいけん",
+        "meaning_ko": "삼가 봄"
+      }
+    ],
+    "sentence": {
+      "ja": "お手紙を拝見しました。",
+      "kana": "おてがみをはいけんしました。",
+      "ko": "편지를 삼가 읽었습니다."
+    }
+  },
+  {
+    "kanji": "氷",
+    "examples": [
+      {
+        "word": "氷",
+        "reading": "こおり",
+        "meaning_ko": "얼음"
+      },
+      {
+        "word": "氷山",
+        "reading": "ひょうざん",
+        "meaning_ko": "빙산"
+      }
+    ],
+    "sentence": {
+      "ja": "ジュースに氷を入れます。",
+      "kana": "ジュースにこおりをいれます。",
+      "ko": "주스에 얼음을 넣습니다."
+    }
+  },
+  {
+    "kanji": "乾",
+    "examples": [
+      {
+        "word": "乾く",
+        "reading": "かわく",
+        "meaning_ko": "마르다"
+      },
+      {
+        "word": "乾燥",
+        "reading": "かんそう",
+        "meaning_ko": "건조"
+      }
+    ],
+    "sentence": {
+      "ja": "洗濯物がよく乾きました。",
+      "kana": "せんたくものがよくかわきました。",
+      "ko": "빨래가 잘 말랐습니다."
+    }
+  },
+  {
+    "kanji": "棒",
+    "examples": [
+      {
+        "word": "棒",
+        "reading": "ぼう",
+        "meaning_ko": "막대기"
+      },
+      {
+        "word": "泥棒",
+        "reading": "どろぼう",
+        "meaning_ko": "도둑"
+      }
+    ],
+    "sentence": {
+      "ja": "昨日、となりの家に泥棒が入りました。",
+      "kana": "きのう、となりのいえにどろぼうがはいりました。",
+      "ko": "어제 이웃집에 도둑이 들었습니다."
+    }
+  },
+  {
+    "kanji": "祈",
+    "examples": [
+      {
+        "word": "祈る",
+        "reading": "いのる",
+        "meaning_ko": "빌다"
+      },
+      {
+        "word": "祈り",
+        "reading": "いのり",
+        "meaning_ko": "기도"
+      }
+    ],
+    "sentence": {
+      "ja": "みんなの健康を祈っています。",
+      "kana": "みんなのけんこうをいのっています。",
+      "ko": "모두의 건강을 빌고 있습니다."
+    }
+  },
+  {
+    "kanji": "拾",
+    "examples": [
+      {
+        "word": "拾う",
+        "reading": "ひろう",
+        "meaning_ko": "줍다"
+      }
+    ],
+    "sentence": {
+      "ja": "道で財布を拾いました。",
+      "kana": "みちでさいふをひろいました。",
+      "ko": "길에서 지갑을 주웠습니다."
+    }
+  },
+  {
+    "kanji": "粉",
+    "examples": [
+      {
+        "word": "粉",
+        "reading": "こな",
+        "meaning_ko": "가루"
+      },
+      {
+        "word": "小麦粉",
+        "reading": "こむぎこ",
+        "meaning_ko": "밀가루"
+      }
+    ],
+    "sentence": {
+      "ja": "小麦粉と卵でケーキを作ります。",
+      "kana": "こむぎことたまごでケーキをつくります。",
+      "ko": "밀가루와 달걀로 케이크를 만듭니다."
+    }
+  },
+  {
+    "kanji": "糸",
+    "examples": [
+      {
+        "word": "糸",
+        "reading": "いと",
+        "meaning_ko": "실"
+      },
+      {
+        "word": "毛糸",
+        "reading": "けいと",
+        "meaning_ko": "털실"
+      }
+    ],
+    "sentence": {
+      "ja": "針と糸でボタンをつけました。",
+      "kana": "はりといとでボタンをつけました。",
+      "ko": "바늘과 실로 단추를 달았습니다."
+    }
+  },
+  {
+    "kanji": "綿",
+    "examples": [
+      {
+        "word": "綿",
+        "reading": "めん",
+        "meaning_ko": "면"
+      },
+      {
+        "word": "木綿",
+        "reading": "もめん",
+        "meaning_ko": "무명"
+      }
+    ],
+    "sentence": {
+      "ja": "このシャツは綿でできています。",
+      "kana": "このシャツはめんでできています。",
+      "ko": "이 셔츠는 면으로 만들어져 있습니다."
+    }
+  },
+  {
+    "kanji": "汗",
+    "examples": [
+      {
+        "word": "汗",
+        "reading": "あせ",
+        "meaning_ko": "땀"
+      },
+      {
+        "word": "冷や汗",
+        "reading": "ひやあせ",
+        "meaning_ko": "식은땀"
+      }
+    ],
+    "sentence": {
+      "ja": "走ったので汗をたくさんかきました。",
+      "kana": "はしったのであせをたくさんかきました。",
+      "ko": "달렸기 때문에 땀을 많이 흘렸습니다."
+    }
+  },
+  {
+    "kanji": "銅",
+    "examples": [
+      {
+        "word": "銅",
+        "reading": "どう",
+        "meaning_ko": "구리"
+      },
+      {
+        "word": "銅メダル",
+        "reading": "どうメダル",
+        "meaning_ko": "동메달"
+      }
+    ],
+    "sentence": {
+      "ja": "彼は大会で銅メダルを取りました。",
+      "kana": "かれはたいかいでどうメダルをとりました。",
+      "ko": "그는 대회에서 동메달을 땄습니다."
+    }
+  },
+  {
+    "kanji": "湿",
+    "examples": [
+      {
+        "word": "湿気",
+        "reading": "しっけ",
+        "meaning_ko": "습기"
+      },
+      {
+        "word": "湿度",
+        "reading": "しつど",
+        "meaning_ko": "습도"
+      }
+    ],
+    "sentence": {
+      "ja": "今日は湿度が高いです。",
+      "kana": "きょうはしつどがたかいです。",
+      "ko": "오늘은 습도가 높습니다."
+    }
+  },
+  {
+    "kanji": "瓶",
+    "examples": [
+      {
+        "word": "瓶",
+        "reading": "びん",
+        "meaning_ko": "병"
+      },
+      {
+        "word": "花瓶",
+        "reading": "かびん",
+        "meaning_ko": "꽃병"
+      }
+    ],
+    "sentence": {
+      "ja": "花瓶に花を入れました。",
+      "kana": "かびんにはなをいれました。",
+      "ko": "꽃병에 꽃을 꽂았습니다."
+    }
+  },
+  {
+    "kanji": "咲",
+    "examples": [
+      {
+        "word": "咲く",
+        "reading": "さく",
+        "meaning_ko": "꽃이 피다"
+      }
+    ],
+    "sentence": {
+      "ja": "公園の桜がきれいに咲いています。",
+      "kana": "こうえんのさくらがきれいにさいています。",
+      "ko": "공원의 벚꽃이 예쁘게 피어 있습니다."
+    }
+  },
+  {
+    "kanji": "召",
+    "examples": [
+      {
+        "word": "召し上がる",
+        "reading": "めしあがる",
+        "meaning_ko": "드시다"
+      }
+    ],
+    "sentence": {
+      "ja": "どうぞ、たくさん召し上がってください。",
+      "kana": "どうぞ、たくさんめしあがってください。",
+      "ko": "자, 많이 드세요."
+    }
+  },
+  {
+    "kanji": "缶",
+    "examples": [
+      {
+        "word": "缶",
+        "reading": "かん",
+        "meaning_ko": "캔"
+      },
+      {
+        "word": "缶詰",
+        "reading": "かんづめ",
+        "meaning_ko": "통조림"
+      }
+    ],
+    "sentence": {
+      "ja": "空き缶はこちらに捨ててください。",
+      "kana": "あきかんはこちらにすててください。",
+      "ko": "빈 캔은 이쪽에 버려 주세요."
+    }
+  },
+  {
+    "kanji": "隻",
+    "examples": [
+      {
+        "word": "一隻",
+        "reading": "いっせき",
+        "meaning_ko": "배 한 척"
+      }
+    ],
+    "sentence": {
+      "ja": "港に船が一隻とまっています。",
+      "kana": "みなとにふねがいっせきとまっています。",
+      "ko": "항구에 배가 한 척 정박해 있습니다."
+    }
+  },
+  {
+    "kanji": "脂",
+    "examples": [
+      {
+        "word": "脂",
+        "reading": "あぶら",
+        "meaning_ko": "기름"
+      },
+      {
+        "word": "脂肪",
+        "reading": "しぼう",
+        "meaning_ko": "지방"
+      }
+    ],
+    "sentence": {
+      "ja": "この肉は脂が多いです。",
+      "kana": "このにくはあぶらがおおいです。",
+      "ko": "이 고기는 기름이 많습니다."
+    }
+  },
+  {
+    "kanji": "蒸",
+    "examples": [
+      {
+        "word": "蒸す",
+        "reading": "むす",
+        "meaning_ko": "찌다"
+      },
+      {
+        "word": "蒸し暑い",
+        "reading": "むしあつい",
+        "meaning_ko": "무덥다"
+      }
+    ],
+    "sentence": {
+      "ja": "今日はとても蒸し暑いです。",
+      "kana": "きょうはとてもむしあついです。",
+      "ko": "오늘은 매우 무덥습니다."
+    }
+  },
+  {
+    "kanji": "肌",
+    "examples": [
+      {
+        "word": "肌",
+        "reading": "はだ",
+        "meaning_ko": "피부"
+      }
+    ],
+    "sentence": {
+      "ja": "冬は肌が乾燥しやすいです。",
+      "kana": "ふゆははだがかんそうしやすいです。",
+      "ko": "겨울은 피부가 건조해지기 쉽습니다."
+    }
+  },
+  {
+    "kanji": "耕",
+    "examples": [
+      {
+        "word": "耕す",
+        "reading": "たがやす",
+        "meaning_ko": "갈다"
+      },
+      {
+        "word": "農耕",
+        "reading": "のうこう",
+        "meaning_ko": "농경"
+      }
+    ],
+    "sentence": {
+      "ja": "祖父は毎朝畑を耕します。",
+      "kana": "そふはまいあさはたけをたがやします。",
+      "ko": "할아버지는 매일 아침 밭을 갑니다."
+    }
+  },
+  {
+    "kanji": "鈍",
+    "examples": [
+      {
+        "word": "鈍い",
+        "reading": "にぶい",
+        "meaning_ko": "둔하다"
+      },
+      {
+        "word": "鈍感",
+        "reading": "どんかん",
+        "meaning_ko": "둔감"
+      }
+    ],
+    "sentence": {
+      "ja": "彼は少し鈍いところがあります。",
+      "kana": "かれはすこしにぶいところがあります。",
+      "ko": "그는 조금 둔한 데가 있습니다."
+    }
+  },
+  {
+    "kanji": "泥",
+    "examples": [
+      {
+        "word": "泥",
+        "reading": "どろ",
+        "meaning_ko": "진흙"
+      },
+      {
+        "word": "泥棒",
+        "reading": "どろぼう",
+        "meaning_ko": "도둑"
+      }
+    ],
+    "sentence": {
+      "ja": "雨の日に靴が泥だらけになりました。",
+      "kana": "あめのひにくつがどろだらけになりました。",
+      "ko": "비 오는 날 신발이 진흙투성이가 되었습니다."
+    }
+  },
+  {
+    "kanji": "隅",
+    "examples": [
+      {
+        "word": "隅",
+        "reading": "すみ",
+        "meaning_ko": "구석"
+      }
+    ],
+    "sentence": {
+      "ja": "部屋の隅にごみ箱があります。",
+      "kana": "へやのすみにごみばこがあります。",
+      "ko": "방 구석에 쓰레기통이 있습니다."
+    }
+  },
+  {
+    "kanji": "灯",
+    "examples": [
+      {
+        "word": "電灯",
+        "reading": "でんとう",
+        "meaning_ko": "전등"
+      },
+      {
+        "word": "灯台",
+        "reading": "とうだい",
+        "meaning_ko": "등대"
+      }
+    ],
+    "sentence": {
+      "ja": "部屋の電灯をつけてください。",
+      "kana": "へやのでんとうをつけてください。",
+      "ko": "방의 전등을 켜 주세요."
+    }
+  },
+  {
+    "kanji": "辛",
+    "examples": [
+      {
+        "word": "辛い",
+        "reading": "からい",
+        "meaning_ko": "맵다"
+      },
+      {
+        "word": "香辛料",
+        "reading": "こうしんりょう",
+        "meaning_ko": "향신료"
+      }
+    ],
+    "sentence": {
+      "ja": "このカレーは少し辛いです。",
+      "kana": "このカレーはすこしからいです。",
+      "ko": "이 카레는 조금 맵습니다."
+    }
+  },
+  {
+    "kanji": "磨",
+    "examples": [
+      {
+        "word": "磨く",
+        "reading": "みがく",
+        "meaning_ko": "닦다"
+      },
+      {
+        "word": "歯磨き",
+        "reading": "はみがき",
+        "meaning_ko": "양치질"
+      }
+    ],
+    "sentence": {
+      "ja": "寝る前に歯を磨きます。",
+      "kana": "ねるまえにはをみがきます。",
+      "ko": "자기 전에 이를 닦습니다."
+    }
+  },
+  {
+    "kanji": "麦",
+    "examples": [
+      {
+        "word": "小麦",
+        "reading": "こむぎ",
+        "meaning_ko": "밀"
+      },
+      {
+        "word": "麦茶",
+        "reading": "むぎちゃ",
+        "meaning_ko": "보리차"
+      }
+    ],
+    "sentence": {
+      "ja": "夏は冷たい麦茶をよく飲みます。",
+      "kana": "なつはつめたいむぎちゃをよくのみます。",
+      "ko": "여름에는 차가운 보리차를 자주 마십니다."
+    }
+  },
+  {
+    "kanji": "姓",
+    "examples": [
+      {
+        "word": "姓",
+        "reading": "せい",
+        "meaning_ko": "성"
+      },
+      {
+        "word": "姓名",
+        "reading": "せいめい",
+        "meaning_ko": "성명"
+      }
+    ],
+    "sentence": {
+      "ja": "ここに姓と名前を書いてください。",
+      "kana": "ここにせいとなまえをかいてください。",
+      "ko": "여기에 성과 이름을 써 주세요."
+    }
+  },
+  {
+    "kanji": "筒",
+    "examples": [
+      {
+        "word": "封筒",
+        "reading": "ふうとう",
+        "meaning_ko": "봉투"
+      },
+      {
+        "word": "筒",
+        "reading": "つつ",
+        "meaning_ko": "통"
+      }
+    ],
+    "sentence": {
+      "ja": "手紙を封筒に入れました。",
+      "kana": "てがみをふうとうにいれました。",
+      "ko": "편지를 봉투에 넣었습니다."
+    }
+  },
+  {
+    "kanji": "鼻",
+    "examples": [
+      {
+        "word": "鼻",
+        "reading": "はな",
+        "meaning_ko": "코"
+      },
+      {
+        "word": "鼻水",
+        "reading": "はなみず",
+        "meaning_ko": "콧물"
+      }
+    ],
+    "sentence": {
+      "ja": "かぜで鼻水が止まりません。",
+      "kana": "かぜではなみずがとまりません。",
+      "ko": "감기로 콧물이 멈추지 않습니다."
+    }
+  },
+  {
+    "kanji": "粒",
+    "examples": [
+      {
+        "word": "粒",
+        "reading": "つぶ",
+        "meaning_ko": "알갱이"
+      },
+      {
+        "word": "一粒",
+        "reading": "ひとつぶ",
+        "meaning_ko": "한 알"
+      }
+    ],
+    "sentence": {
+      "ja": "ご飯は一粒も残さずに食べましょう。",
+      "kana": "ごはんはひとつぶものこさずにたべましょう。",
+      "ko": "밥은 한 알도 남기지 말고 먹읍시다."
+    }
+  },
+  {
+    "kanji": "詞",
+    "examples": [
+      {
+        "word": "歌詞",
+        "reading": "かし",
+        "meaning_ko": "가사"
+      },
+      {
+        "word": "動詞",
+        "reading": "どうし",
+        "meaning_ko": "동사"
+      }
+    ],
+    "sentence": {
+      "ja": "この歌の歌詞を覚えました。",
+      "kana": "このうたのかしをおぼえました。",
+      "ko": "이 노래의 가사를 외웠습니다."
+    }
+  },
+  {
+    "kanji": "胃",
+    "examples": [
+      {
+        "word": "胃",
+        "reading": "い",
+        "meaning_ko": "위"
+      },
+      {
+        "word": "胃薬",
+        "reading": "いぐすり",
+        "meaning_ko": "위장약"
+      }
+    ],
+    "sentence": {
+      "ja": "食べすぎて胃が痛いです。",
+      "kana": "たべすぎていがいたいです。",
+      "ko": "과식해서 위가 아픕니다."
+    }
+  },
+  {
+    "kanji": "畳",
+    "examples": [
+      {
+        "word": "畳",
+        "reading": "たたみ",
+        "meaning_ko": "다다미"
+      },
+      {
+        "word": "畳む",
+        "reading": "たたむ",
+        "meaning_ko": "개다"
+      }
+    ],
+    "sentence": {
+      "ja": "洗濯物を畳んでください。",
+      "kana": "せんたくものをたたんでください。",
+      "ko": "빨래를 개어 주세요."
+    }
+  },
+  {
+    "kanji": "机",
+    "examples": [
+      {
+        "word": "机",
+        "reading": "つくえ",
+        "meaning_ko": "책상"
+      }
+    ],
+    "sentence": {
+      "ja": "机の上に本が三冊あります。",
+      "kana": "つくえのうえにほんがさんさつあります。",
+      "ko": "책상 위에 책이 세 권 있습니다."
+    }
+  },
+  {
+    "kanji": "膚",
+    "examples": [
+      {
+        "word": "皮膚",
+        "reading": "ひふ",
+        "meaning_ko": "피부"
+      }
+    ],
+    "sentence": {
+      "ja": "日焼けで皮膚が赤くなりました。",
+      "kana": "ひやけでひふがあかくなりました。",
+      "ko": "햇볕에 타서 피부가 빨개졌습니다."
+    }
+  },
+  {
+    "kanji": "濯",
+    "examples": [
+      {
+        "word": "洗濯",
+        "reading": "せんたく",
+        "meaning_ko": "세탁"
+      },
+      {
+        "word": "洗濯機",
+        "reading": "せんたくき",
+        "meaning_ko": "세탁기"
+      }
+    ],
+    "sentence": {
+      "ja": "毎週日曜日に洗濯をします。",
+      "kana": "まいしゅうにちようびにせんたくをします。",
+      "ko": "매주 일요일에 빨래를 합니다."
+    }
+  },
+  {
+    "kanji": "塔",
+    "examples": [
+      {
+        "word": "塔",
+        "reading": "とう",
+        "meaning_ko": "탑"
+      },
+      {
+        "word": "五重塔",
+        "reading": "ごじゅうのとう",
+        "meaning_ko": "오층탑"
+      }
+    ],
+    "sentence": {
+      "ja": "町の中心に高い塔があります。",
+      "kana": "まちのちゅうしんにたかいとうがあります。",
+      "ko": "마을 중심에 높은 탑이 있습니다."
+    }
+  },
+  {
+    "kanji": "沸",
+    "examples": [
+      {
+        "word": "沸く",
+        "reading": "わく",
+        "meaning_ko": "끓다"
+      },
+      {
+        "word": "沸かす",
+        "reading": "わかす",
+        "meaning_ko": "끓이다"
+      }
+    ],
+    "sentence": {
+      "ja": "お湯を沸かしてお茶を入れます。",
+      "kana": "おゆをわかしておちゃをいれます。",
+      "ko": "물을 끓여서 차를 탑니다."
+    }
+  },
+  {
+    "kanji": "灰",
+    "examples": [
+      {
+        "word": "灰",
+        "reading": "はい",
+        "meaning_ko": "재"
+      },
+      {
+        "word": "灰色",
+        "reading": "はいいろ",
+        "meaning_ko": "회색"
+      }
+    ],
+    "sentence": {
+      "ja": "今日の空は灰色です。",
+      "kana": "きょうのそらははいいろです。",
+      "ko": "오늘 하늘은 회색입니다."
+    }
+  },
+  {
+    "kanji": "菓",
+    "examples": [
+      {
+        "word": "お菓子",
+        "reading": "おかし",
+        "meaning_ko": "과자"
+      },
+      {
+        "word": "和菓子",
+        "reading": "わがし",
+        "meaning_ko": "화과자"
+      }
+    ],
+    "sentence": {
+      "ja": "子どもたちにお菓子を配りました。",
+      "kana": "こどもたちにおかしをくばりました。",
+      "ko": "아이들에게 과자를 나눠 주었습니다."
+    }
+  },
+  {
+    "kanji": "帽",
+    "examples": [
+      {
+        "word": "帽子",
+        "reading": "ぼうし",
+        "meaning_ko": "모자"
+      }
+    ],
+    "sentence": {
+      "ja": "外は暑いので帽子をかぶってください。",
+      "kana": "そとはあついのでぼうしをかぶってください。",
+      "ko": "밖은 더우니까 모자를 써 주세요."
+    }
+  },
+  {
+    "kanji": "枯",
+    "examples": [
+      {
+        "word": "枯れる",
+        "reading": "かれる",
+        "meaning_ko": "시들다"
+      },
+      {
+        "word": "枯れ葉",
+        "reading": "かれは",
+        "meaning_ko": "마른 잎"
+      }
+    ],
+    "sentence": {
+      "ja": "水をやらなかったので花が枯れました。",
+      "kana": "みずをやらなかったのではながかれました。",
+      "ko": "물을 주지 않아서 꽃이 시들었습니다."
+    }
+  },
+  {
+    "kanji": "涼",
+    "examples": [
+      {
+        "word": "涼しい",
+        "reading": "すずしい",
+        "meaning_ko": "시원하다"
+      }
+    ],
+    "sentence": {
+      "ja": "朝晩は涼しくなりました。",
+      "kana": "あさばんはすずしくなりました。",
+      "ko": "아침저녁으로 시원해졌습니다."
+    }
+  },
+  {
+    "kanji": "舟",
+    "examples": [
+      {
+        "word": "舟",
+        "reading": "ふね",
+        "meaning_ko": "작은 배"
+      }
+    ],
+    "sentence": {
+      "ja": "川で小さな舟に乗りました。",
+      "kana": "かわでちいさなふねにのりました。",
+      "ko": "강에서 작은 배를 탔습니다."
+    }
+  },
+  {
+    "kanji": "貝",
+    "examples": [
+      {
+        "word": "貝",
+        "reading": "かい",
+        "meaning_ko": "조개"
+      },
+      {
+        "word": "貝殻",
+        "reading": "かいがら",
+        "meaning_ko": "조개껍데기"
+      }
+    ],
+    "sentence": {
+      "ja": "海で貝を拾いました。",
+      "kana": "うみでかいをひろいました。",
+      "ko": "바다에서 조개를 주웠습니다."
+    }
+  },
+  {
+    "kanji": "符",
+    "examples": [
+      {
+        "word": "切符",
+        "reading": "きっぷ",
+        "meaning_ko": "표"
+      },
+      {
+        "word": "音符",
+        "reading": "おんぷ",
+        "meaning_ko": "음표"
+      }
+    ],
+    "sentence": {
+      "ja": "駅で切符を買いました。",
+      "kana": "えきできっぷをかいました。",
+      "ko": "역에서 표를 샀습니다."
+    }
+  },
+  {
+    "kanji": "憎",
+    "examples": [
+      {
+        "word": "憎む",
+        "reading": "にくむ",
+        "meaning_ko": "미워하다"
+      },
+      {
+        "word": "憎い",
+        "reading": "にくい",
+        "meaning_ko": "밉다"
+      }
+    ],
+    "sentence": {
+      "ja": "人を憎んではいけません。",
+      "kana": "ひとをにくんではいけません。",
+      "ko": "남을 미워해서는 안 됩니다."
+    }
+  },
+  {
+    "kanji": "皿",
+    "examples": [
+      {
+        "word": "皿",
+        "reading": "さら",
+        "meaning_ko": "접시"
+      },
+      {
+        "word": "灰皿",
+        "reading": "はいざら",
+        "meaning_ko": "재떨이"
+      }
+    ],
+    "sentence": {
+      "ja": "食事のあとで皿を洗います。",
+      "kana": "しょくじのあとでさらをあらいます。",
+      "ko": "식사 후에 접시를 씻습니다."
+    }
+  },
+  {
+    "kanji": "肯",
+    "examples": [
+      {
+        "word": "肯定",
+        "reading": "こうてい",
+        "meaning_ko": "긍정"
+      }
+    ],
+    "sentence": {
+      "ja": "彼はその意見を肯定しました。",
+      "kana": "かれはそのいけんをこうていしました。",
+      "ko": "그는 그 의견을 긍정했습니다."
+    }
+  },
+  {
+    "kanji": "燥",
+    "examples": [
+      {
+        "word": "乾燥",
+        "reading": "かんそう",
+        "meaning_ko": "건조"
+      },
+      {
+        "word": "乾燥機",
+        "reading": "かんそうき",
+        "meaning_ko": "건조기"
+      }
+    ],
+    "sentence": {
+      "ja": "冬は空気が乾燥しています。",
+      "kana": "ふゆはくうきがかんそうしています。",
+      "ko": "겨울은 공기가 건조합니다."
+    }
+  },
+  {
+    "kanji": "畜",
+    "examples": [
+      {
+        "word": "家畜",
+        "reading": "かちく",
+        "meaning_ko": "가축"
+      },
+      {
+        "word": "畜産",
+        "reading": "ちくさん",
+        "meaning_ko": "축산"
+      }
+    ],
+    "sentence": {
+      "ja": "この村では家畜を育てています。",
+      "kana": "このむらではかちくをそだてています。",
+      "ko": "이 마을에서는 가축을 기르고 있습니다."
+    }
+  },
+  {
+    "kanji": "挟",
+    "examples": [
+      {
+        "word": "挟む",
+        "reading": "はさむ",
+        "meaning_ko": "끼우다"
+      }
+    ],
+    "sentence": {
+      "ja": "パンにハムを挟みました。",
+      "kana": "パンにハムをはさみました。",
+      "ko": "빵에 햄을 끼웠습니다."
+    }
+  },
+  {
+    "kanji": "曇",
+    "examples": [
+      {
+        "word": "曇る",
+        "reading": "くもる",
+        "meaning_ko": "흐리다"
+      },
+      {
+        "word": "曇り",
+        "reading": "くもり",
+        "meaning_ko": "흐림"
+      }
+    ],
+    "sentence": {
+      "ja": "今朝から空が曇っています。",
+      "kana": "けさからそらがくもっています。",
+      "ko": "오늘 아침부터 하늘이 흐려 있습니다."
+    }
+  },
+  {
+    "kanji": "滴",
+    "examples": [
+      {
+        "word": "水滴",
+        "reading": "すいてき",
+        "meaning_ko": "물방울"
+      },
+      {
+        "word": "一滴",
+        "reading": "いってき",
+        "meaning_ko": "한 방울"
+      }
+    ],
+    "sentence": {
+      "ja": "窓に水滴がついています。",
+      "kana": "まどにすいてきがついています。",
+      "ko": "창문에 물방울이 맺혀 있습니다."
+    }
+  },
+  {
+    "kanji": "伺",
+    "examples": [
+      {
+        "word": "伺う",
+        "reading": "うかがう",
+        "meaning_ko": "여쭙다"
+      }
+    ],
+    "sentence": {
+      "ja": "明日の午後、事務所に伺います。",
+      "kana": "あしたのごご、じむしょにうかがいます。",
+      "ko": "내일 오후에 사무소로 찾아뵙겠습니다."
+    }
+  }
+]
