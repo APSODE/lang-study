@@ -8,8 +8,18 @@
 // 한자 카드는 답한 뒤 첫 예시 낱말 · 예문을 도움말로 보여 준다.
 // 작문 모드(#/study/<트랙>?mode=write&levels=…&learned=1, write 속성): 같은 화면 · 자기 평가 흐름으로 작문 큐만 푼다.
 //   큐를 다 풀면 같은 조건으로 다시 받고, ✕ 는 문제 고르기(#/write/<트랙>)로 돌아간다.
+// 친구가 만든 항목(#/study/deck:<키>): 같은 화면, 자기 평가 흐름. 답한 뒤 설명(note)을 보여 준다.
+// 친구가 만든 문제는 답한 뒤 "만든 사람" 을 같이 보여 준다 (QueueItem.author).
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { getDrill, type KanaFields, type KanjiFields, type Note, type ToeicFields, type Track } from '@nakamura/core'
+import {
+  getDrill,
+  type DeckFields,
+  type KanaFields,
+  type KanjiFields,
+  type Note,
+  type StudyKey,
+  type ToeicFields,
+} from '@nakamura/core'
 import { api, ApiError } from '../api.ts'
 import { Icon } from '../components/Icon.tsx'
 import { ExampleSentences, ExampleWords } from '../components/KanjiExamples.tsx'
@@ -17,7 +27,7 @@ import { ProgressBar } from '../components/ProgressBar.tsx'
 import { ReportDialog } from '../components/ReportDialog.tsx'
 import { DRILL_VIEWS } from '../drills/index.ts'
 import { speak } from '../speech.ts'
-import { type AnswerResult, type QueueItem, TRACK_LABEL, type WriteParams } from '../study.ts'
+import { type AnswerResult, guessLang, type QueueItem, type WriteParams } from '../study.ts'
 
 const BATCH = 20
 
@@ -41,14 +51,19 @@ const writeSentence = (item: QueueItem) =>
 const listenText = (item: QueueItem): [string, 'ja-JP' | 'en-US'] | null => {
   if (item.track === 'kana') return [(item.fields as KanaFields).char, 'ja-JP']
   if (item.track === 'toeic') return [(item.fields as ToeicFields).word, 'en-US']
+  if (item.track === 'deck') {
+    const back = (item.fields as DeckFields).back
+    const lang = guessLang(back)
+    return lang ? [back, lang === 'ja' ? 'ja-JP' : 'en-US'] : null
+  }
   const s = writeSentence(item)
   if (s) return [s.kana, 'ja-JP']
   return null
 }
 
 /** 큐 요청 경로 */
-const queuePath = (track: Track, write: WriteParams | undefined): string => {
-  let p = `study/queue?track=${track}&limit=${BATCH}`
+const queuePath = (track: StudyKey, write: WriteParams | undefined): string => {
+  let p = `study/queue?track=${encodeURIComponent(track)}&limit=${BATCH}`
   if (write) {
     p += '&mode=write'
     if (write.levels) p += `&levels=${write.levels.join(',')}`
@@ -57,7 +72,8 @@ const queuePath = (track: Track, write: WriteParams | undefined): string => {
   return p
 }
 
-export function Study({ track, write }: { track: Track; write?: WriteParams }) {
+/** track = 학습 키 (트랙 또는 항목 deck:<키>), title = 머리글 이름 (트랙 이름 · 항목 이름) */
+export function Study({ track, title, write }: { track: StudyKey; title: string; write?: WriteParams }) {
   const path = queuePath(track, write)
   const exitHref = write ? `#/write/${track}` : '#/'
   const [items, setItems] = useState<QueueItem[] | null>(null)
@@ -180,7 +196,7 @@ export function Study({ track, write }: { track: Track; write?: WriteParams }) {
         <Icon name="close" />
       </a>
       <h1 className="focus-title">
-        {write ? `작문 · ${TRACK_LABEL[track]}` : TRACK_LABEL[track]}
+        {write ? `작문 · ${title}` : title}
         {items && items[idx] && (
           <span className="muted small">
             {' '}
@@ -253,6 +269,8 @@ export function Study({ track, write }: { track: Track; write?: WriteParams }) {
 
   const View = DRILL_VIEWS[item.drillId]
   const listen = listenText(item)
+  const answerLang = item.track === 'toeic' ? 'en' : item.track === 'deck' ? guessLang(graded?.expected ?? '') : 'ja'
+  const deckNote = item.track === 'deck' ? (item.fields as DeckFields).note : undefined
   const sentence = writeSentence(item)
   const kf = item.track === 'kanji' ? (item.fields as KanjiFields) : null
   const aidWord = kf?.examples?.[0]
@@ -312,10 +330,12 @@ export function Study({ track, write }: { track: Track; write?: WriteParams }) {
             </>
           ) : (
             <p>
-              정답: <strong lang={item.track === 'toeic' ? 'en' : 'ja'}>{graded.expected}</strong>
+              정답: <strong lang={answerLang}>{graded.expected}</strong>
               {!graded.correct && <span className="muted"> · 내 답: {graded.response}</span>}
             </p>
           )}
+          {deckNote && <p className="small">{deckNote}</p>}
+          {item.author && <p className="muted small">만든 사람 · {item.author}</p>}
           {listen && (
             <button type="button" className="secondary" onClick={() => speak(listen[0], listen[1])}>
               🔊 듣기

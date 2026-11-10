@@ -1,17 +1,28 @@
-// 친구가 만든 문제의 필드 미리보기 (문제 만들기 · 관리 검토 대기가 같이 쓴다). 한자 · 토익만.
-import type { Track } from '@nakamura/core'
+// 친구가 만든 문제의 필드 미리보기 (문제 만들기 · 관리 검토 대기가 같이 쓴다). 한자 · 토익 · 항목 카드.
+import type { NoteTrack } from '@nakamura/core'
+import { guessLang } from '../study.ts'
 
 const list = (v: unknown, sep: string): string => (Array.isArray(v) ? v.join(sep) : typeof v === 'string' ? v : '')
 
-/** 노트의 대표 글자: 가나 char · 한자 kanji · 토익 word */
+/** 노트의 대표 글자: 가나 char · 한자 kanji · 토익 word · 항목 앞면 */
 export const noteMain = (fields: Record<string, unknown>): string => {
-  const v = fields.char ?? fields.kanji ?? fields.word
+  const v = fields.char ?? fields.kanji ?? fields.word ?? fields.front
   return typeof v === 'string' ? v : ''
 }
 
-export function NotePreview({ track, fields }: { track: Track; fields: Record<string, unknown> }) {
+/** 대표 글자의 lang 속성 */
+export const noteLang = (track: NoteTrack, fields: Record<string, unknown>): string | undefined =>
+  track === 'toeic' ? 'en' : track === 'deck' ? guessLang(noteMain(fields)) : 'ja'
+
+export function NotePreview({ track, fields }: { track: NoteTrack; fields: Record<string, unknown> }) {
   const rows: [string, string, string?][] =
-    track === 'kanji'
+    track === 'deck'
+      ? [
+          ['항목', list(fields.deck, '')],
+          ['뒷면', list(fields.back, ''), guessLang(list(fields.back, ''))],
+          ['설명', list(fields.note, '')],
+        ]
+      : track === 'kanji'
       ? [
           ['음독', list(fields.on, '、'), 'ja'],
           ['훈독', list(fields.kun, '、'), 'ja'],

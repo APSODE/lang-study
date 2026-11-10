@@ -4,15 +4,20 @@
 //   PATCH /admin/reports/:id   { status: 'resolved' | 'rejected' | 'open' } → Report
 //   GET   /admin/users         { users: { id, name, display, isAdmin, createdAt, lastStudiedDay, reviewsWeek, showProgress }[] }
 //                              name = 로그인 이름, display = 닉네임 ?? name. 신고의 userName · resolvedBy 는 보이는 이름.
-//   GET   /admin/drafts        { drafts: { id, track, fields, createdAt, uploader, uploaderId }[] } 친구가 만든 초안, 최근 것부터 (uploader = 보이는 이름)
+//   GET   /admin/drafts        { drafts: { id, track, fields, createdAt, uploader, uploaderId, batch }[],
+//                                batches: { id, track, deck, count, createdAt, uploader, uploaderId }[] }
+//                              친구가 만든 초안, 최근 것부터 (uploader = 보이는 이름). batch = 파일 묶음 id (직접 만든 것은 null).
+//                              batches = 검토 대기가 남은 파일 묶음 (count = 남은 수)
 //   POST  /admin/drafts/:id/publish   공개 (status published, 바로 학습에 들어간다) → { id, status }
 //   POST  /admin/drafts/:id/reject    반려 (status retired) → { id, status }. 사용자가 만든 초안이 아니면 404
+//   POST  /admin/batches/:id/publish  파일 묶음의 남은 초안을 모두 공개 → { batch, status, count }
+//   POST  /admin/batches/:id/reject   모두 반려 → { batch, status, count }. 남은 초안이 없으면 404
 import type { DatabaseSync } from 'node:sqlite'
 import { Hono } from 'hono'
 import type { Note } from '@nakamura/core'
 import { type AppEnv, requireAdmin } from '../auth/middleware.ts'
 import { userOverview } from '../social.ts'
-import { listDrafts, reviewDraft } from '../uploads.ts'
+import { listDraftBatches, listDrafts, reviewBatch, reviewDraft } from '../uploads.ts'
 import { readBody } from './auth.ts'
 
 export const REPORT_STATUSES = ['open', 'resolved', 'rejected'] as const
@@ -95,13 +100,19 @@ export const adminRoutes = (db: DatabaseSync, opts: { now?: () => number } = {})
 
   r.get('/admin/users', c => c.json({ users: userOverview(db, c.get('user')!.id, now()) }))
 
-  r.get('/admin/drafts', c => c.json({ drafts: listDrafts(db) }))
+  r.get('/admin/drafts', c => c.json({ drafts: listDrafts(db), batches: listDraftBatches(db) }))
 
   for (const action of ['publish', 'reject'] as const) {
     r.post(`/admin/drafts/:id/${action}`, c => {
       const id = c.req.param('id')
       if (!reviewDraft(db, id, action, c.get('user')!.id, now())) return c.json({ error: '검토 대기 중인 문제가 아닙니다' }, 404)
       return c.json({ id, status: action === 'publish' ? 'published' : 'retired' })
+    })
+    r.post(`/admin/batches/:id/${action}`, c => {
+      const batch = c.req.param('id')
+      const count = reviewBatch(db, batch, action, c.get('user')!.id, now())
+      if (count === 0) return c.json({ error: '검토 대기 중인 파일 묶음이 아닙니다' }, 404)
+      return c.json({ batch, status: action === 'publish' ? 'published' : 'retired', count })
     })
   }
 

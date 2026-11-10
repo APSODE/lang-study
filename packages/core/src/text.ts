@@ -21,5 +21,12 @@ export const normRomaji = (s: string): string => {
 /** 뜻 비교용: 공백 · 괄호 설명 제거 */
 export const normMeaning = (s: string): string => s.normalize('NFKC').replace(/\(.*?\)|（.*?）/g, '').replace(/\s+/g, '').trim()
 
+/**
+ * 자유 답 비교용 (항목 카드): NFKC, 소문자, 가타카나 → 히라가나, 공백 · 문장 부호 제거.
+ * 앞면 중복 판단(deckNoteId)에도 쓴다.
+ */
+export const normAnswer = (s: string): string =>
+  kataToHira(s.normalize('NFKC').toLowerCase()).replace(/[\s、。・「」『』！？!?.,:;'"‘’“”~〜…()（）\[\]-]/g, '')
+
 /** "a, b; c" → ['a','b','c'] */
 export const splitMeanings = (s: string): string[] => s.split(/[,;·/]/).map(x => x.trim()).filter(Boolean)

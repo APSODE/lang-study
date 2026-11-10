@@ -1,7 +1,11 @@
 // 학습 API. app.ts 에서 /api 아래에 붙인다. 모두 로그인 필요.
 //   GET  /study/summary                 트랙별 { track, notes, due, newLeft, newPerDay, learned, reviewsToday } + { day, streak, reviewsToday }
 //                                       + writing: { track: 'kanji', due, newLeft, newPerDay, learned } (작문 모드. 트랙 숫자에는 작문 카드가 빠진다)
+//                                       + decks: { key: 'deck:<키>', name, authors, notes, due, newLeft, newPerDay, learned, reviewsToday }[]
+//                                         (친구가 만든 항목, 공개된 카드가 있는 것만, 만든 순서)
 //   GET  /study/queue?track=&limit=     { items: QueueItem[] } (순서는 study/service.ts 맨 위 설명)
+//                                       track 은 트랙(kana · kanji · toeic) 또는 항목 학습 키 deck:<키>.
+//                                       QueueItem.author = 친구가 만든 노트의 만든 사람 (보이는 이름)
 //        &mode=write&levels=5,4&learnedOnly=1
 //                                       작문 모드: 복습할 작문 카드(레벨 무관) → 새 작문 카드(levels 의 JLPT 레벨만, learnedOnly 면 공부한 한자만)
 //   GET  /study/write/options?track=kanji
@@ -14,7 +18,7 @@
 // 하루 경계 · 연속 학습일은 사용자 시간대의 04:00 기준 (study/day.ts).
 import type { DatabaseSync } from 'node:sqlite'
 import { Hono } from 'hono'
-import { isTrack, writeTracks, type Track } from '@nakamura/core'
+import { isStudyKey, isTrack, writeTracks, type Track } from '@nakamura/core'
 import { type AppEnv, requireUser } from '../auth/middleware.ts'
 import {
   answerCard,
@@ -55,7 +59,7 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
 
   r.get('/study/queue', c => {
     const track = c.req.query('track')
-    if (!isTrack(track)) return c.json({ error: '알 수 없는 트랙입니다' }, 400)
+    if (!isStudyKey(track)) return c.json({ error: '알 수 없는 트랙입니다' }, 400)
     const raw = c.req.query('limit')
     const limit = raw === undefined ? 20 : Number(raw)
     if (!Number.isInteger(limit) || limit < 1 || limit > QUEUE_LIMIT_MAX) {
@@ -67,7 +71,7 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
     }
     const opts: QueueOptions = {}
     if (mode === 'write') {
-      if (!writeTracks().includes(track)) return c.json({ error: '작문 모드가 없는 트랙입니다' }, 400)
+      if (!isTrack(track) || !writeTracks().includes(track)) return c.json({ error: '작문 모드가 없는 트랙입니다' }, 400)
       opts.mode = 'write'
       const levels = c.req.query('levels')
       if (levels !== undefined) {

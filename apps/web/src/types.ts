@@ -1,9 +1,18 @@
 // 서버 API 응답 타입을 한곳에 모은다.
 // 학습(study/*) 타입은 study.ts 에 있고 여기서 다시 내보낸다. 나머지는 새 API 계약(통계 · 친구 · 프로필 · 관리)이다.
 // 아직 서버에 없는 API 는 404 를 돌려주며, 화면은 이를 "준비 중"으로 보여 준다(hooks.ts useApi 의 notReady).
-import type { FieldsByTrack, Track } from '@nakamura/core'
+import type { FieldsByTrack, NoteTrack, Track } from '@nakamura/core'
 
-export type { AnswerResult, QueueItem, StudySummary, TrackSummary, WriteLevel, WriteOptions, WriteSummary } from './study.ts'
+export type {
+  AnswerResult,
+  DeckSummary,
+  QueueItem,
+  StudySummary,
+  TrackSummary,
+  WriteLevel,
+  WriteOptions,
+  WriteSummary,
+} from './study.ts'
 
 // --- 통계 ---
 
@@ -31,9 +40,18 @@ export interface TrackStats {
   accuracy7d: number | null
 }
 
+/** 친구가 만든 항목의 카드 상태 */
+export interface DeckStats extends Omit<TrackStats, 'track'> {
+  /** 학습 키 'deck:<키>' */
+  key: string
+  name: string
+}
+
 /** GET stats/tracks */
 export interface TrackStatsResponse {
   tracks: TrackStats[]
+  /** 예전 서버는 없을 수 있다 */
+  decks?: DeckStats[]
 }
 
 // --- 친구 ---
@@ -134,7 +152,7 @@ export interface Report {
   resolvedAt: number | null
   /** 처리한 관리자 이름 */
   resolvedBy: string | null
-  note: { track: Track; fields: Record<string, unknown>; status: string } | null
+  note: { track: NoteTrack; fields: Record<string, unknown>; status: string } | null
 }
 
 /** GET admin/reports?status=… */
@@ -174,7 +192,7 @@ export const UPLOAD_STATUS_LABEL: Record<NoteStatus, string> = {
 /** POST notes 의 응답 · GET notes/mine 의 항목 */
 export interface UploadedNote {
   id: string
-  track: Track
+  track: NoteTrack
   fields: Record<string, unknown>
   status: NoteStatus
   createdAt: number
@@ -189,14 +207,54 @@ export interface MyNotesResponse {
 /** GET admin/drafts */
 export interface Draft {
   id: string
-  track: Track
+  track: NoteTrack
   fields: Record<string, unknown>
   createdAt: number
   /** 만든 사람의 보이는 이름 (사용자가 지워졌으면 null) */
+  uploader: string | null
+  uploaderId: number | null
+  /** 파일로 올렸으면 묶음 id, 직접 만들었으면 null */
+  batch: string | null
+}
+
+/** 검토 대기가 남은 파일 묶음 */
+export interface DraftBatch {
+  id: string
+  track: NoteTrack
+  /** 항목 파일이면 항목 이름 */
+  deck: string | null
+  /** 남은 검토 대기 수 */
+  count: number
+  createdAt: number
   uploader: string | null
   uploaderId: number | null
 }
 
 export interface DraftsResponse {
   drafts: Draft[]
+  batches: DraftBatch[]
+}
+
+// --- 파일 올리기 ---
+
+/** created 만듦 · invalid 검사 실패 · duplicate 파일 안 중복 또는 이미 있음 · limit 하루 제한을 넘어 건너뜀 */
+export type FileItemStatus = 'created' | 'invalid' | 'duplicate' | 'limit'
+
+export interface FileItemResult {
+  /** 파일 안 순서 (1부터) */
+  no: number
+  status: FileItemStatus
+  /** 대표 글자 (한자 · 단어 · 앞면) */
+  label: string
+  id?: string
+  errors?: string[]
+}
+
+/** POST notes/file */
+export interface FileUploadResult {
+  batch: string | null
+  track: NoteTrack
+  deck?: { key: string; name: string; isNew: boolean }
+  created: number
+  results: FileItemResult[]
 }

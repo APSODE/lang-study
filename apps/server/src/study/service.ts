@@ -18,6 +18,11 @@
 //     2. 새 작문 카드 — 고른 JLPT 레벨(levels)만, learnedOnly 면 보통 카드가 하나라도 있는 노트만. 순서는 카탈로그(쉬운 레벨 → 자주 쓰는 순).
 //        하루 새 문제 수는 따로 (user_track_settings 의 'write:<트랙>', 기본 10).
 //     3. learn ahead 는 보통 모드와 같다.
+//
+// 학습 키 (core deck.ts 의 StudyKey)
+//   고정 트랙(kana · kanji · toeic)은 트랙 이름, 친구가 만든 항목은 'deck:<항목 키>'. 큐 · 요약 · 하루 새 카드 수는 이 키별로 따로다.
+//   user_cards.track · user_track_settings.track 에 이 키를 넣는다 (항목 카드는 'deck:<키>', 노트의 track 은 'deck').
+//   항목의 하루 새 카드 수는 기본값(15)이다 (설정 화면은 고정 트랙만).
 import type { DatabaseSync } from 'node:sqlite'
 import {
   cardId as makeCardId,
@@ -25,6 +30,8 @@ import {
   DEFAULT_WRITE_NEW_PER_DAY,
   drillIdsOf,
   drillMode,
+  deckStudyKey,
+  isTrack,
   newCard,
   normMeaning,
   parseCard,
@@ -36,11 +43,15 @@ import {
   type KanaFields,
   type KanjiFields,
   type Note,
+  type NoteTrack,
+  type StudyKey,
   type StudyMode,
   type ToeicFields,
   type Track,
+  studyKeyOf,
 } from '@nakamura/core'
-import { type Catalog, type CatalogNote, publishedCatalog } from './catalog.ts'
+import { displayNames } from '../authors.ts'
+import { type Catalog, type CatalogNote, publishedCatalog, publishedDecks } from './catalog.ts'
 import { dayKey, dayStart, safeTz, streakOf } from './day.ts'
 
 export const NEW_PER_DAY_MAX = 100
@@ -53,15 +64,18 @@ export interface QueueItem {
   cardId: string
   noteId: string
   drillId: string
-  track: Track
+  /** 노트의 트랙 (항목 카드는 'deck') */
+  track: NoteTrack
   fields: Note['fields']
   isNew: boolean
   /** 고르기 연습 방식의 보기 (섞인 순서) */
   choices?: string[]
+  /** 친구가 만든 노트면 만든 사람의 보이는 이름 */
+  author?: string
 }
 
-export interface TrackSummary {
-  track: Track
+/** 학습 키 하나의 요약 */
+export interface KeySummary {
   /** 공개된 노트 수. 0 이면 준비 중 */
   notes: number
   due: number
@@ -69,6 +83,19 @@ export interface TrackSummary {
   newPerDay: number
   learned: number
   reviewsToday: number
+}
+
+export interface TrackSummary extends KeySummary {
+  track: Track
+}
+
+/** 친구가 만든 항목의 요약 */
+export interface DeckSummary extends KeySummary {
+  /** 학습 키 'deck:<키>' (큐 · 학습 화면 경로에 쓴다) */
+  key: string
+  name: string
+  /** 카드를 만든 사람들의 보이는 이름 (먼저 만든 순) */
+  authors: string[]
 }
 
 const count = (db: DatabaseSync, sql: string, ...params: (string | number)[]): number =>
@@ -112,8 +139,18 @@ export const setWriteNewPerDay = (db: DatabaseSync, userId: number, track: Track
   ).run(userId, writeKey(track), n)
 }
 
-const newPerDayOf = (db: DatabaseSync, userId: number, track: Track, mode: StudyMode): number =>
-  mode === 'write' ? getWriteNewPerDay(db, userId, track) : getNewPerDay(db, userId)[track]
+/** 항목의 하루 새 카드 수 (user_track_settings 의 'deck:<키>', 기본 15) */
+const deckNewPerDay = (db: DatabaseSync, userId: number, key: StudyKey): number =>
+  (
+    db.prepare('SELECT new_per_day AS n FROM user_track_settings WHERE user_id = ? AND track = ?').get(userId, key) as
+      | { n: number }
+      | undefined
+  )?.n ?? DEFAULT_NEW_PER_DAY
+
+const newPerDayOf = (db: DatabaseSync, userId: number, key: StudyKey, mode: StudyMode): number => {
+  if (!isTrack(key)) return deckNewPerDay(db, userId, key)
+  return mode === 'write' ? getWriteNewPerDay(db, userId, key) : getNewPerDay(db, userId)[key]
+}
 
 // --- 학습 모드 ---
 
@@ -146,7 +183,7 @@ interface Candidate {
 }
 
 /** 오늘 소개할 수 있는 새 카드를 순서대로 (오늘 남은 수는 여기서 자르지 않는다) */
-export const newCandidates = (db: DatabaseSync, userId: number, track: Track, start: number): Candidate[] => {
+export const newCandidates = (db: DatabaseSync, userId: number, track: StudyKey, start: number): Candidate[] => {
   const catalog = publishedCatalog(db, track)
   const seen = new Map<string, { drills: Set<string>; firstIntro: number }>()
   // 작문 카드는 보지 않는다: 작문만 한 노트도 보통 모드에서는 처음 보는 노트다
@@ -219,7 +256,7 @@ export const writeCandidates = (db: DatabaseSync, userId: number, track: Track, 
   return out
 }
 
-const introducedSince = (db: DatabaseSync, userId: number, track: Track, start: number, mode: StudyMode): number => {
+const introducedSince = (db: DatabaseSync, userId: number, track: StudyKey, start: number, mode: StudyMode): number => {
   const f = modeFilter(mode)
   return count(
     db,
@@ -232,7 +269,7 @@ const introducedSince = (db: DatabaseSync, userId: number, track: Track, start: 
 }
 
 /** 지금 복습할 카드 수 (그 모드만, 일시 중지 · 비공개 노트 제외) */
-const dueCount = (db: DatabaseSync, userId: number, track: Track, now: number, mode: StudyMode): number => {
+const dueCount = (db: DatabaseSync, userId: number, track: StudyKey, now: number, mode: StudyMode): number => {
   const f = modeFilter(mode, 'uc.drill_id')
   return count(
     db,
@@ -246,7 +283,7 @@ const dueCount = (db: DatabaseSync, userId: number, track: Track, now: number, m
 }
 
 /** 그 모드의 카드 수 (한 번이라도 본 카드) */
-const learnedCount = (db: DatabaseSync, userId: number, track: Track, mode: StudyMode): number => {
+const learnedCount = (db: DatabaseSync, userId: number, track: StudyKey, mode: StudyMode): number => {
   const f = modeFilter(mode)
   return count(db, `SELECT count(*) AS n FROM user_cards WHERE user_id = ? AND track = ? AND ${f.sql}`, userId, track, ...f.params)
 }
@@ -328,26 +365,35 @@ export interface QueueOptions extends WriteSelect {
 export const buildQueue = (
   db: DatabaseSync,
   userId: number,
-  track: Track,
+  track: StudyKey,
   limit: number,
   now: number,
   rng: Rng = Math.random,
   opts: QueueOptions = {},
 ): QueueItem[] => {
   const mode = opts.mode ?? 'normal'
+  if (mode === 'write' && !isTrack(track)) return []
   const catalog = publishedCatalog(db, track)
   const start = dayStart(now, userTz(db, userId))
+  let names: Map<number, string> | undefined
+  const authorOf = (entry: CatalogNote): string | undefined => {
+    if (entry.uploaderId === null) return undefined
+    names ??= displayNames(db)
+    return names.get(entry.uploaderId)
+  }
 
   const item = (entry: CatalogNote, drillId: string, isNew: boolean): QueueItem => {
     const choices = choicesFor(catalog, entry.note, drillId, rng)
+    const author = authorOf(entry)
     return {
       cardId: makeCardId(entry.note.id, drillId),
       noteId: entry.note.id,
       drillId,
-      track,
+      track: entry.note.track,
       fields: entry.note.fields,
       isNew,
       ...(choices ? { choices } : {}),
+      ...(author ? { author } : {}),
     }
   }
   /** 노트가 공개 상태이고 연습 방식이 아직 적용되는 카드만 */
@@ -370,7 +416,7 @@ export const buildQueue = (
   const quota = newPerDayOf(db, userId, track, mode) - introducedSince(db, userId, track, start, mode)
   const fresh =
     room > 0 && quota > 0
-      ? (mode === 'write' ? writeCandidates(db, userId, track, opts) : newCandidates(db, userId, track, start))
+      ? (mode === 'write' && isTrack(track) ? writeCandidates(db, userId, track, opts) : newCandidates(db, userId, track, start))
           .slice(0, Math.min(room, quota))
           .map(c => item(c.entry, c.drill.id, true))
       : []
@@ -382,14 +428,13 @@ export const buildQueue = (
 
 // --- 요약 ---
 
-/** 트랙 요약. due · newLeft · learned 는 보통 모드 카드만 (작문은 writeSummary). reviewsToday 는 그 트랙의 모든 복습. */
-export const trackSummary = (db: DatabaseSync, userId: number, track: Track, now: number, start: number): TrackSummary => {
+/** 학습 키 요약. due · newLeft · learned 는 보통 모드 카드만 (작문은 writeSummary). reviewsToday 는 그 키의 모든 복습. */
+const keySummary = (db: DatabaseSync, userId: number, track: StudyKey, now: number, start: number): KeySummary => {
   const catalog = publishedCatalog(db, track)
-  const newPerDay = getNewPerDay(db, userId)[track]
+  const newPerDay = newPerDayOf(db, userId, track, 'normal')
   const quota = Math.max(0, newPerDay - introducedSince(db, userId, track, start, 'normal'))
   const newLeft = quota === 0 ? 0 : Math.min(quota, newCandidates(db, userId, track, start).length)
   return {
-    track,
     notes: catalog.notes.length,
     due: dueCount(db, userId, track, now, 'normal'),
     newLeft,
@@ -405,6 +450,27 @@ export const trackSummary = (db: DatabaseSync, userId: number, track: Track, now
       now,
     ),
   }
+}
+
+export const trackSummary = (db: DatabaseSync, userId: number, track: Track, now: number, start: number): TrackSummary => ({
+  track,
+  ...keySummary(db, userId, track, now, start),
+})
+
+/** 공개된 카드가 있는 항목마다 요약 (만든 순서) */
+export const deckSummaries = (db: DatabaseSync, userId: number, now: number, start: number): DeckSummary[] => {
+  const decks = publishedDecks(db)
+  if (decks.length === 0) return []
+  const names = displayNames(db)
+  return decks.map(d => {
+    const key = deckStudyKey(d.key)
+    return {
+      key,
+      name: d.name,
+      authors: d.uploaderIds.flatMap(id => names.get(id) ?? []),
+      ...keySummary(db, userId, key, now, start),
+    }
+  })
 }
 
 export interface WriteSummary {
@@ -498,6 +564,7 @@ export const summary = (db: DatabaseSync, userId: number, now: number) => {
     ),
     tracks: TRACKS.map(t => trackSummary(db, userId, t, now, start)),
     writing: writeSummary(db, userId, 'kanji', now, start),
+    decks: deckSummaries(db, userId, now, start),
   }
 }
 
@@ -529,10 +596,13 @@ export const answerCard = (db: DatabaseSync, userId: number, input: AnswerInput,
   const noteId = input.cardId.slice(0, sep)
   const drillId = input.cardId.slice(sep + 1)
   const row = db.prepare("SELECT track, fields FROM notes WHERE id = ? AND status = 'published'").get(noteId) as
-    | { track: Track; fields: string }
+    | { track: NoteTrack; fields: string }
     | undefined
   if (!row) return NOT_FOUND
-  const entry = publishedCatalog(db, row.track).byId.get(noteId)
+  // 학습 키: 고정 트랙은 트랙, 항목 카드는 deck:<키>. user_cards.track 에 이 값을 넣는다.
+  const track = studyKeyOf({ id: noteId, track: row.track })
+  if (!track) return NOT_FOUND
+  const entry = publishedCatalog(db, track).byId.get(noteId)
   const drill = entry?.drills.find(d => d.id === drillId)
   if (!entry || !drill) return NOT_FOUND
 
@@ -542,7 +612,6 @@ export const answerCard = (db: DatabaseSync, userId: number, input: AnswerInput,
   const { expected } = checked
   const correct = checked.correct || (drill.selfGraded === true && input.selfCorrect === true)
   const rating = (correct ? (input.rating ?? 3) : 1) as Grade
-  const track = row.track
   const id = makeCardId(noteId, drillId)
 
   db.exec('BEGIN IMMEDIATE')

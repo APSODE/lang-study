@@ -2,8 +2,8 @@
 // 여기에는 화면과 무관한 부분(대상 트랙, 필요한 필드, 채점)만 둔다.
 // 화면(Prompt · Answer)은 apps/web 이 drill id 로 연결한다.
 // 발음 평가는 나중에 `speak` 연습 방식 + 서버 Assessor 로 추가한다 — 여기 구조는 바뀌지 않는다.
-import type { Note, Track } from './notes.ts'
-import { kataToHira, normMeaning, normReading, normRomaji, normSentence, splitMeanings } from './text.ts'
+import { isTrack, type DeckFields, type Note, type NoteTrack, type Track } from './notes.ts'
+import { kataToHira, normAnswer, normMeaning, normReading, normRomaji, normSentence, splitMeanings } from './text.ts'
 
 export interface CheckResult {
   correct: boolean
@@ -13,7 +13,7 @@ export interface CheckResult {
 
 export interface Drill {
   id: string
-  tracks: readonly Track[]
+  tracks: readonly NoteTrack[]
   /** 노트에 이 필드가 모두 비어 있지 않아야 카드가 생긴다 */
   requires: readonly string[]
   /** 사용자의 응답을 채점한다. 서버가 같은 함수로 다시 채점한다. */
@@ -48,7 +48,7 @@ export const allDrills = (): Drill[] => [...registry.values()]
 /** 그 모드의 연습 방식 id (등록 순서) */
 export const drillIdsOf = (mode: StudyMode): string[] => allDrills().filter(d => drillMode(d) === mode).map(d => d.id)
 /** 작문 모드가 있는 트랙 */
-export const writeTracks = (): Track[] => [...new Set(allDrills().filter(d => d.mode === 'write').flatMap(d => d.tracks))]
+export const writeTracks = (): Track[] => [...new Set(allDrills().filter(d => d.mode === 'write').flatMap(d => d.tracks))].filter(isTrack)
 
 const filled = (v: unknown): boolean =>
   v !== undefined && v !== null && v !== '' && !(Array.isArray(v) && v.length === 0)
@@ -170,5 +170,20 @@ registerDrill({
     // 대소문자 · 악센트(résumé ↔ resume) 차이는 무시한다
     const plain = (x: string) => x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase()
     return { correct: plain(response) === plain(word), expected: word }
+  },
+})
+
+// 항목(사용자가 만든 덱): 앞면을 보고 뒷면을 쓴다. 뒷면 전체 또는 '/' · ';' 로 나눈 답 중 하나와 같으면 정답
+// (공백 · 문장 부호 · 대소문자 · 히라가나/가타카나 차이는 무시). 답이 여러 가지로 나올 수 있어 자기 평가.
+registerDrill({
+  id: 'deck-recall',
+  tracks: ['deck'],
+  requires: ['front', 'back'],
+  selfGraded: true,
+  check(note, response) {
+    const { back } = f<DeckFields>(note)
+    const r = normAnswer(response)
+    const answers = [back, ...back.split(/[/;]/)].map(normAnswer).filter(Boolean)
+    return { correct: r !== '' && answers.includes(r), expected: back }
   },
 })

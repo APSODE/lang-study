@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { api } from '../api.ts'
 import { EmptyState, LoadError } from '../components/EmptyState.tsx'
+import { noteLang } from '../components/NotePreview.tsx'
 import { Segmented } from '../components/Segmented.tsx'
 import { Skeleton } from '../components/Skeleton.tsx'
 import { fmtDateTime } from '../format.ts'
@@ -27,7 +28,7 @@ const FILTERS: { value: ReportFilter; label: string }[] = [
 const mainField = (note: Report['note']): string => {
   if (!note) return ''
   const f = note.fields
-  const v = f.char ?? f.kanji ?? f.word
+  const v = f.char ?? f.kanji ?? f.word ?? f.front
   return typeof v === 'string' ? v : ''
 }
 
@@ -75,7 +76,7 @@ export function AdminReports() {
                     {r.note ? (
                       <>
                         <span className="badge">{TRACK_LABEL[r.note.track] ?? r.note.track}</span>
-                        <strong className="report-main" lang={r.note.track === 'toeic' ? 'en' : 'ja'}>
+                        <strong className="report-main" lang={noteLang(r.note.track, r.note.fields)}>
                           {main || r.noteId}
                         </strong>
                       </>

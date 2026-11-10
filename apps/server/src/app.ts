@@ -25,8 +25,10 @@ export const createApp = (cfg: Config, db: DatabaseSync, opts: AppOptions = {}) 
   const app = new Hono<AppEnv>()
   const api = new Hono<AppEnv>()
 
-  // 본문은 작은 JSON 뿐이다. 콘텐츠 업로드 · 녹음처럼 큰 요청은 해당 라우트에서 따로 늘린다.
-  api.use('*', bodyLimit({ maxSize: 64 * 1024, onError: c => c.json({ error: '요청이 너무 큽니다' }, 413) }))
+  // 본문은 작은 JSON 뿐이다. 파일 올리기(POST /notes/file, 문제 200개)만 1MB 까지 받는다.
+  const tooLarge = bodyLimit({ maxSize: 64 * 1024, onError: c => c.json({ error: '요청이 너무 큽니다' }, 413) })
+  const fileLimit = bodyLimit({ maxSize: 1024 * 1024, onError: c => c.json({ error: '파일이 너무 큽니다 (1MB 까지)' }, 413) })
+  api.use('*', (c, next) => (c.req.method === 'POST' && c.req.path.endsWith('/api/notes/file') ? fileLimit : tooLarge)(c, next))
   api.use('*', requireJsonForMutations)
   api.use('*', loadUser(db, cfg))
   api.get('/health', c => c.json({ ok: true, schema: schemaVersion(db) }))

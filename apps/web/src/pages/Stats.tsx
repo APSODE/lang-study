@@ -1,4 +1,4 @@
-// 기록 (#/stats): 최근 12주 학습 히트맵 · 합계 · 트랙별 카드 단계.
+// 기록 (#/stats): 최근 12주 학습 히트맵 · 합계 · 트랙별 카드 단계 (친구가 만든 항목도 이어서).
 // stats/activity · stats/tracks 가 아직 없으면(404) 각 카드에 "준비 중"을 보여 준다.
 import { type ReactNode, useState } from 'react'
 import { Card } from '../components/Card.tsx'
@@ -9,7 +9,7 @@ import { Stat } from '../components/Stat.tsx'
 import { addDays, dayLabel, fmtNum, fmtPct, weekdayMon0 } from '../format.ts'
 import { useApi } from '../hooks.ts'
 import { TRACK_LABEL } from '../study.ts'
-import type { ActivityDay, ActivityResponse, TrackStats, TrackStatsResponse } from '../types.ts'
+import type { ActivityDay, ActivityResponse, DeckStats, TrackStats, TrackStatsResponse } from '../types.ts'
 
 const DAYS = 84
 const WEEKS = 12
@@ -131,12 +131,12 @@ const STAGES = [
   ['unseen', '안 본 카드'],
 ] as const
 
-function TrackBreakdown({ t }: { t: TrackStats }) {
+function TrackBreakdown({ t, label }: { t: TrackStats | DeckStats; label: string }) {
   if (t.notes === 0 || t.cards === 0) {
     return (
       <li className="breakdown">
         <div className="breakdown-head">
-          <strong>{TRACK_LABEL[t.track]}</strong>
+          <strong>{label}</strong>
           <span className="muted small">준비 중</span>
         </div>
       </li>
@@ -145,7 +145,7 @@ function TrackBreakdown({ t }: { t: TrackStats }) {
   return (
     <li className="breakdown">
       <div className="breakdown-head">
-        <strong>{TRACK_LABEL[t.track]}</strong>
+        <strong>{label}</strong>
         <span className="muted small">
           카드 {fmtNum(t.cards)}장 · 7일 정답률 {fmtPct(t.accuracy7d)}
         </span>
@@ -194,7 +194,10 @@ export function Stats() {
         {tracks.data ? (
           <ul className="breakdowns">
             {tracks.data.tracks.map(t => (
-              <TrackBreakdown key={t.track} t={t} />
+              <TrackBreakdown key={t.track} t={t} label={TRACK_LABEL[t.track]} />
+            ))}
+            {tracks.data.decks?.map(d => (
+              <TrackBreakdown key={d.key} t={d} label={d.name} />
             ))}
           </ul>
         ) : tracks.error ? (

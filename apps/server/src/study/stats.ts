@@ -1,8 +1,8 @@
-// 학습 통계: 날마다 복습 수(활동 달력) · 트랙별 카드 상태. 라우트는 routes/stats.ts.
+// 학습 통계: 날마다 복습 수(활동 달력) · 트랙별 · 항목별 카드 상태. 라우트는 routes/stats.ts.
 // 날짜는 모두 사용자 시간대의 학습일(04:00 경계, study/day.ts).
 import type { DatabaseSync } from 'node:sqlite'
-import { TRACKS, type Track } from '@nakamura/core'
-import { publishedCatalog } from './catalog.ts'
+import { deckStudyKey, TRACKS, type StudyKey, type Track } from '@nakamura/core'
+import { publishedCatalog, publishedDecks } from './catalog.ts'
 import { dayKey, keyStart, shiftDayKey } from './day.ts'
 import { userTz } from './service.ts'
 
@@ -58,8 +58,8 @@ export interface CardBuckets {
   mature: number
 }
 
-/** 한 사용자 · 한 트랙의 카드 상태. 공개되지 않았거나 연습 방식이 더 이상 적용되지 않는 카드 · 일시 중지 카드는 세지 않는다. */
-export const cardBuckets = (db: DatabaseSync, userId: number, track: Track): CardBuckets => {
+/** 한 사용자 · 한 학습 키(트랙 · 항목)의 카드 상태. 공개되지 않았거나 연습 방식이 더 이상 적용되지 않는 카드 · 일시 중지 카드는 세지 않는다. */
+export const cardBuckets = (db: DatabaseSync, userId: number, track: StudyKey): CardBuckets => {
   const catalog = publishedCatalog(db, track)
   const total = catalog.notes.reduce((n, c) => n + c.drills.length, 0)
   const rows = db
@@ -98,10 +98,11 @@ export interface TrackStats extends CardBuckets {
   accuracy7d: number | null
 }
 
-export const trackStats = (db: DatabaseSync, userId: number, now: number): TrackStats[] => {
+/** 최근 7 학습일 학습 키(user_cards.track)별 정답 비율 */
+const accuracyByKey = (db: DatabaseSync, userId: number, now: number): Map<string, number> => {
   const tz = userTz(db, userId)
   const from = keyStart(shiftDayKey(dayKey(now, tz), -(ACCURACY_DAYS - 1)), tz)
-  const acc = new Map(
+  return new Map(
     (
       db
         .prepare(
@@ -116,10 +117,33 @@ export const trackStats = (db: DatabaseSync, userId: number, now: number): Track
         .all(userId, from, now) as { track: string; n: number; c: number }[]
     ).map(r => [r.track, r.c / r.n]),
   )
+}
+
+export const trackStats = (db: DatabaseSync, userId: number, now: number): TrackStats[] => {
+  const acc = accuracyByKey(db, userId, now)
   return TRACKS.map(track => ({
     track,
     notes: publishedCatalog(db, track).notes.length,
     ...cardBuckets(db, userId, track),
     accuracy7d: acc.get(track) ?? null,
   }))
+}
+
+export interface DeckStats extends CardBuckets {
+  /** 학습 키 'deck:<키>' */
+  key: string
+  name: string
+  notes: number
+  accuracy7d: number | null
+}
+
+/** 공개된 카드가 있는 항목마다 카드 상태 (만든 순서) */
+export const deckStats = (db: DatabaseSync, userId: number, now: number): DeckStats[] => {
+  const decks = publishedDecks(db)
+  if (decks.length === 0) return []
+  const acc = accuracyByKey(db, userId, now)
+  return decks.map(d => {
+    const key = deckStudyKey(d.key)
+    return { key, name: d.name, notes: d.notes, ...cardBuckets(db, userId, key), accuracy7d: acc.get(key) ?? null }
+  })
 }

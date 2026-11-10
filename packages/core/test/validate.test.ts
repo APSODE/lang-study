@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { drillsFor, kataToHira, validateNote, type KanaFields, type Note } from '../src/index.ts'
+import { deckKey, deckNoteId, drillsFor, kataToHira, validateNote, type KanaFields, type Note } from '../src/index.ts'
 
 const ka = { id: 'kana-hira-ka', track: 'kana', fields: { char: 'か', romaji: 'ka', script: 'hiragana', row: 'ka' } }
 
@@ -47,6 +47,18 @@ describe('validateNote', () => {
     for (const hunum_ko of ['', '식', '먹을식', '먹을 식사', 'eat 식', ' 먹을 식']) expect(validateNote(note({ hunum_ko })), hunum_ko).toHaveLength(1)
     expect(validateNote(note({ meanings_en: 'eat' }))).toHaveLength(1)
     expect(validateNote(note({ meanings_en: [''] }))).toHaveLength(1)
+  })
+  it('항목(deck): id 는 deck-<이름 키>-…, 이름은 정리된 40자 이하', () => {
+    const fields = { deck: '회화', front: '안녕', back: 'こんにちは' }
+    const id = deckNoteId('회화', '안녕')
+    expect(validateNote({ id, track: 'deck', fields })).toEqual([])
+    expect(validateNote({ id, track: 'deck', fields: { ...fields, note: '인사' } })).toEqual([])
+    expect(validateNote({ id: deckNoteId('여행', '안녕'), track: 'deck', fields }).join()).toMatch(/항목 이름과 맞지 않습니다/)
+    expect(validateNote({ id: `deck-${deckKey('회화')}-X`, track: 'deck', fields }).join()).toMatch(/항목 이름과 맞지 않습니다/)
+    expect(validateNote({ id, track: 'deck', fields: { ...fields, deck: ' 회화' } }).join()).toMatch(/fields\.deck/)
+    expect(validateNote({ id, track: 'deck', fields: { ...fields, deck: 'x'.repeat(41) } }).join()).toMatch(/fields\.deck/)
+    expect(validateNote({ id, track: 'deck', fields: { ...fields, back: '' } })).toEqual(['fields.back: 비어 있지 않은 문자열이어야 합니다'])
+    expect(validateNote({ id, track: 'deck', fields: { ...fields, hint: 'x' } })).toEqual(['알 수 없는 필드: fields.hint'])
   })
 })
 

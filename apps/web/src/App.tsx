@@ -1,5 +1,5 @@
 import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
-import { isTrack, writeTracks } from '@nakamura/core'
+import { isDeckStudyKey, isTrack, writeTracks } from '@nakamura/core'
 import { api, type SessionUser } from './api.ts'
 import { Shell, SummaryContext } from './components/Shell.tsx'
 import { useApi } from './hooks.ts'
@@ -24,6 +24,7 @@ import type { StudySummary } from './types.ts'
 // 경로: #/ · #/stats · #/friends · #/library(/kana|/kanji|/create) · #/settings · #/admin(/invites|/reports|/drafts|/users)
 //       #/study/<트랙> (껍데기 없이 집중 모드) · #/login · #/join/<code>. 예전 #/kana 는 #/library/kana 로 보낸다.
 //       #/write/<트랙> 작문 문제 고르기 → #/study/<트랙>?mode=write&levels=5,4&learned=1 (작문 집중 모드)
+//       #/study/deck:<키> 친구가 만든 항목 학습 (집중 모드, 이름은 요약의 decks 에서)
 export function App() {
   const fullRoute = useRoute()
   // 해시 뒤 '?…' 는 화면 매개변수. 화면 고르기 · 메뉴 표시는 경로만 본다.
@@ -81,12 +82,16 @@ export function App() {
   const study = route.match(/^\/study\/([^/]+)$/)
   if (study) {
     const track = study[1]
+    if (isDeckStudyKey(track)) {
+      const name = summary.data?.decks?.find(d => d.key === track)?.name ?? TRACK_LABEL.deck
+      return <Study key={track} track={track} title={name} />
+    }
     if (!isTrack(track)) return <Redirect to="/" />
     if (params.get('mode') === 'write') {
       if (!writeTracks().includes(track)) return <Redirect to="/" />
-      return <Study key={fullRoute} track={track} write={parseWriteParams(params)} />
+      return <Study key={fullRoute} track={track} title={TRACK_LABEL[track]} write={parseWriteParams(params)} />
     }
-    return <Study key={track} track={track} />
+    return <Study key={track} track={track} title={TRACK_LABEL[track]} />
   }
 
   const shell = (title: string, page: ReactNode) => (

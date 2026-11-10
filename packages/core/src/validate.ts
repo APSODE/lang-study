@@ -4,7 +4,9 @@
 //   - 앞부분은 노트의 track 과 같아야 한다.
 //   - 이름은 공백과 ':' 를 쓸 수 없다 (카드 id 가 `<노트 id>:<연습 방식 id>` 이므로).
 // 필드: 트랙별로 정해진 키만 허용한다 (오타로 생긴 키를 잡기 위해). 새 필드는 notes.ts 와 여기에 같이 추가한다.
-import { KANA_SCRIPTS, isTrack, type Track } from './notes.ts'
+// 항목(deck) 노트: id 가 deck-<항목 이름의 키>-… 여야 한다 (학습 키를 id 에서 읽으므로, deck.ts).
+import { DECK_NAME_MAX, deckKey, deckKeyOfNoteId, normDeckName } from './deck.ts'
+import { KANA_SCRIPTS, isNoteTrack, type NoteTrack } from './notes.ts'
 
 export const NOTE_ID_RE = /^([a-z]+)-[^\s:]+$/
 
@@ -38,12 +40,17 @@ const eumKo: FieldRule = v =>
 const hunumKo: FieldRule = v =>
   typeof v === 'string' && /^[가-힣]+( [가-힣]+)* [가-힣]$/.test(v) ? null : '"<훈> <음>" 형식이어야 합니다 (예: "먹을 식")'
 
+const deckName: FieldRule = v =>
+  typeof v === 'string' && v !== '' && v.length <= DECK_NAME_MAX && normDeckName(v) === v
+    ? null
+    : `앞뒤 공백 없는 ${DECK_NAME_MAX}자 이하 이름이어야 합니다`
+
 interface Schema {
   required: Record<string, FieldRule>
   optional: Record<string, FieldRule>
 }
 
-const SCHEMAS: Record<Track, Schema> = {
+const SCHEMAS: Record<NoteTrack, Schema> = {
   kana: {
     required: { char: str, romaji, script: oneOf(KANA_SCRIPTS), row: romaji },
     optional: { dakuon: bool, yoon: bool, hint: str, order: int(0) },
@@ -56,6 +63,10 @@ const SCHEMAS: Record<Track, Schema> = {
     required: { word: str, meaning_ko: str },
     optional: { pos: str, example_en: str, example_ko: str, list: oneOf(['TSL', 'NGSL']) },
   },
+  deck: {
+    required: { deck: deckName, front: str, back: str },
+    optional: { note: str },
+  },
 }
 
 /** 문제점 목록을 돌려준다. 빈 배열이면 통과. */
@@ -65,19 +76,23 @@ export const validateNote = (note: unknown): string[] => {
   for (const k of Object.keys(note)) if (!['id', 'track', 'fields'].includes(k)) errs.push(`알 수 없는 키: ${k}`)
 
   const { id, track, fields } = note
-  if (!isTrack(track)) {
+  if (!isNoteTrack(track)) {
     errs.push(`알 수 없는 트랙: ${JSON.stringify(track)}`)
   }
   if (typeof id !== 'string' || !NOTE_ID_RE.test(id)) {
     errs.push(`id 형식이 틀립니다 (<트랙>-<이름>, 공백 · ':' 불가): ${JSON.stringify(id)}`)
-  } else if (isTrack(track) && id.match(NOTE_ID_RE)![1] !== track) {
+  } else if (isNoteTrack(track) && id.match(NOTE_ID_RE)![1] !== track) {
     errs.push(`id 앞부분이 트랙(${track})과 다릅니다: ${id}`)
   }
   if (!isObj(fields)) {
     errs.push('fields 는 객체여야 합니다')
     return errs
   }
-  if (!isTrack(track)) return errs
+  if (!isNoteTrack(track)) return errs
+  if (track === 'deck' && typeof id === 'string' && deckName(fields.deck) === null) {
+    const key = deckKey(fields.deck as string)
+    if (deckKeyOfNoteId(id) !== key) errs.push(`id 가 항목 이름과 맞지 않습니다 (deck-${key}-<영숫자 소문자>): ${id}`)
+  }
 
   const { required, optional } = SCHEMAS[track]
   for (const [k, rule] of Object.entries(required)) {

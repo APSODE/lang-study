@@ -1,5 +1,7 @@
-// 홈 (#/): 인사 · 오늘 진행 고리 · 연속 학습일과 최근 7일 · 이어서 학습 · 트랙 카드(+ 작문) · 이번 주 순위.
+// 홈 (#/): 인사 · 오늘 진행 고리 · 연속 학습일과 최근 7일 · 이어서 학습 · 트랙 카드(+ 작문) · 만든 항목 카드 · 이번 주 순위.
+// 만든 항목: 친구가 파일로 만든 항목(덱)마다 카드 하나 (요약의 decks, 공개된 카드가 있는 항목만).
 // 요약(study/summary)은 App 이 불러와 SummaryContext 로 준다. 통계 · 순위 API 가 아직 없으면(404) 그 부분만 숨긴다.
+import type { ReactNode } from 'react'
 import { TRACKS, type Track } from '@nakamura/core'
 import type { SessionUser } from '../api.ts'
 import { Card } from '../components/Card.tsx'
@@ -11,9 +13,11 @@ import { useSummary } from '../components/Shell.tsx'
 import { Skeleton } from '../components/Skeleton.tsx'
 import { dayLabel, fmtNum, localToday, weekdayLabel } from '../format.ts'
 import { useApi } from '../hooks.ts'
-import { TRACK_LABEL } from '../study.ts'
+import { authorsLabel, TRACK_LABEL } from '../study.ts'
 import type {
   ActivityResponse,
+  DeckStats,
+  DeckSummary,
   LeaderboardResponse,
   TrackStats,
   TrackStatsResponse,
@@ -33,18 +37,21 @@ const MEDAL = ['🥇', '🥈', '🥉'] as const
 
 function TodayCard({
   tracks,
+  decks,
   writing,
   reviewsToday,
   streak,
 }: {
   tracks: TrackSummary[]
+  decks: DeckSummary[]
   writing: WriteSummary | undefined
   reviewsToday: number
   streak: number
 }) {
   const activity = useApi<ActivityResponse>('stats/activity?days=7')
   // 작문은 고르는 모드라 새 문제는 빼고 밀린 복습만 오늘 할 일에 넣는다
-  const left = tracks.reduce((n, t) => n + (t.notes > 0 ? t.due + t.newLeft : 0), 0) + (writing?.due ?? 0)
+  const left =
+    [...tracks, ...decks].reduce((n, t) => n + (t.notes > 0 ? t.due + t.newLeft : 0), 0) + (writing?.due ?? 0)
   const planned = reviewsToday + left
   const ratio = planned === 0 ? 0 : reviewsToday / planned
 
@@ -83,15 +90,66 @@ function TodayCard({
 }
 
 function TrackCard({ t, stats }: { t: TrackSummary; stats: TrackStats | undefined }) {
+  return (
+    <StudyCard
+      head={
+        <>
+          <span className={`track-badge track-${t.track}`} aria-hidden="true" lang="ja">
+            {t.track === 'kana' ? 'あ' : t.track === 'kanji' ? '字' : 'A'}
+          </span>
+          <strong>{TRACK_LABEL[t.track]}</strong>
+        </>
+      }
+      name={TRACK_LABEL[t.track]}
+      t={t}
+      stats={stats}
+      href={`#/study/${t.track}`}
+    />
+  )
+}
+
+/** 친구가 만든 항목: 트랙 카드와 같은 모양, 이름 아래 만든 사람 */
+function DeckCard({ d, stats }: { d: DeckSummary; stats: DeckStats | undefined }) {
+  return (
+    <StudyCard
+      head={
+        <>
+          <span className="track-badge" aria-hidden="true">
+            {[...d.name][0]}
+          </span>
+          <span className="track-name">
+            <strong>{d.name}</strong>
+            {d.authors.length > 0 && <span className="muted small">만든 사람 {authorsLabel(d.authors)}</span>}
+          </span>
+        </>
+      }
+      name={d.name}
+      t={d}
+      stats={stats}
+      href={`#/study/${d.key}`}
+    />
+  )
+}
+
+function StudyCard({
+  head,
+  name,
+  t,
+  stats,
+  href,
+}: {
+  head: ReactNode
+  name: string
+  t: TrackSummary | DeckSummary
+  stats: { cards: number; unseen: number } | undefined
+  href: string
+}) {
   const ready = t.notes > 0
   const todo = t.due + t.newLeft
   return (
     <li className="card track-card">
       <div className="track-head">
-        <span className={`track-badge track-${t.track}`} aria-hidden="true" lang="ja">
-          {t.track === 'kana' ? 'あ' : t.track === 'kanji' ? '字' : 'A'}
-        </span>
-        <strong>{TRACK_LABEL[t.track]}</strong>
+        {head}
         {ready && <span className="muted small push">배운 카드 {fmtNum(t.learned)}장</span>}
       </div>
       {!ready ? (
@@ -116,14 +174,14 @@ function TrackCard({ t, stats }: { t: TrackSummary; stats: TrackStats | undefine
             <div className="track-progress">
               <ProgressBar
                 value={(stats.cards - stats.unseen) / stats.cards}
-                label={`${TRACK_LABEL[t.track]} 진도 ${stats.cards - stats.unseen} / ${stats.cards}`}
+                label={`${name} 진도 ${stats.cards - stats.unseen} / ${stats.cards}`}
               />
               <span className="muted small">
                 {fmtNum(stats.cards - stats.unseen)} / {fmtNum(stats.cards)}장
               </span>
             </div>
           )}
-          <a className={`button${todo > 0 ? '' : ' secondary'}`} href={`#/study/${t.track}`}>
+          <a className={`button${todo > 0 ? '' : ' secondary'}`} href={href}>
             {todo > 0 ? '학습 시작' : '오늘 끝 · 더 보기'}
           </a>
         </>
@@ -218,9 +276,13 @@ export function Home({ user }: { user: SessionUser }) {
   const stats = useApi<TrackStatsResponse>('stats/tracks')
   const s = summary.data
   const statsOf = (t: Track) => stats.data?.tracks.find(x => x.track === t)
+  const decks = s?.decks ?? []
 
-  // 이어서 학습: 지금 할 카드(복습 + 새 카드)가 가장 많은 트랙
-  const next = s?.tracks
+  // 이어서 학습: 지금 할 카드(복습 + 새 카드)가 가장 많은 트랙 · 항목
+  const next = [
+    ...(s?.tracks ?? []).map(t => ({ ...t, href: `#/study/${t.track}`, label: TRACK_LABEL[t.track] })),
+    ...decks.map(d => ({ ...d, href: `#/study/${d.key}`, label: d.name })),
+  ]
     .filter(t => t.notes > 0 && t.due + t.newLeft > 0)
     .sort((a, b) => b.due + b.newLeft - (a.due + a.newLeft))[0]
 
@@ -245,12 +307,12 @@ export function Home({ user }: { user: SessionUser }) {
         )
       ) : (
         <>
-          <TodayCard tracks={s.tracks} writing={s.writing} reviewsToday={s.reviewsToday} streak={s.streak} />
+          <TodayCard tracks={s.tracks} decks={decks} writing={s.writing} reviewsToday={s.reviewsToday} streak={s.streak} />
 
           {next ? (
-            <a className="button big continue" href={`#/study/${next.track}`}>
+            <a className="button big continue" href={next.href}>
               <Icon name="play" size={20} />
-              이어서 학습 · {TRACK_LABEL[next.track]} {fmtNum(next.due + next.newLeft)}장
+              이어서 학습 · {next.label} {fmtNum(next.due + next.newLeft)}장
             </a>
           ) : (
             <p className="done-note">오늘 할 카드를 모두 끝냈어요. 내일 또 만나요!</p>
@@ -269,6 +331,17 @@ export function Home({ user }: { user: SessionUser }) {
               />
             )}
           </ul>
+
+          {decks.length > 0 && (
+            <>
+              <h2 className="section-title">만든 항목</h2>
+              <ul className="track-grid">
+                {decks.map(d => (
+                  <DeckCard key={d.key} d={d} stats={stats.data?.decks?.find(x => x.key === d.key)} />
+                ))}
+              </ul>
+            </>
+          )}
         </>
       )}
 

@@ -1,17 +1,21 @@
 // 학습 API 타입 (apps/server/src/routes/study.ts 와 맞춘다)
-import type { Note, Track } from '@nakamura/core'
+import type { Note, NoteTrack, Track } from '@nakamura/core'
 
-export const TRACK_LABEL: Record<Track, string> = { kana: '가나', kanji: '한자', toeic: '토익' }
+/** 트랙 이름. deck 은 친구가 만든 항목(앞면 · 뒷면 카드) */
+export const TRACK_LABEL: Record<NoteTrack, string> = { kana: '가나', kanji: '한자', toeic: '토익', deck: '항목' }
 
 export interface QueueItem {
   cardId: string
   noteId: string
   drillId: string
-  track: Track
+  /** 노트의 트랙 (항목 카드는 'deck') */
+  track: NoteTrack
   fields: Note['fields']
   isNew: boolean
   /** 고르기 연습 방식의 보기 */
   choices?: string[]
+  /** 친구가 만든 문제면 만든 사람 (보이는 이름) */
+  author?: string
 }
 
 export interface AnswerResult {
@@ -44,13 +48,38 @@ export interface WriteSummary {
   learned: number
 }
 
+/** 친구가 만든 항목 하나의 요약 (공개된 카드가 있는 항목만) */
+export interface DeckSummary {
+  /** 학습 키 'deck:<키>'. 학습 화면은 #/study/<key> */
+  key: string
+  name: string
+  /** 카드를 만든 사람들 (먼저 만든 순) */
+  authors: string[]
+  notes: number
+  due: number
+  newLeft: number
+  newPerDay: number
+  learned: number
+  reviewsToday: number
+}
+
 export interface StudySummary {
   day: string
   streak: number
   reviewsToday: number
   tracks: TrackSummary[]
   writing: WriteSummary
+  /** 친구가 만든 항목 (만든 순서). 예전 서버는 없을 수 있다 */
+  decks?: DeckSummary[]
 }
+
+/** 만든 사람 표시: "하나", "하나 외 2명" */
+export const authorsLabel = (authors: string[]): string =>
+  authors.length === 0 ? '' : authors.length === 1 ? authors[0]! : `${authors[0]} 외 ${authors.length - 1}명`
+
+/** 글자로 언어 짐작 (항목 카드의 lang 속성 · 듣기). 가나가 있으면 일본어, 로마자뿐이면 영어 */
+export const guessLang = (s: string): 'ja' | 'en' | undefined =>
+  /[\p{Script=Hiragana}\p{Script=Katakana}]/u.test(s) ? 'ja' : /^[\x20-\x7e]*[A-Za-z][\x20-\x7e]*$/.test(s) ? 'en' : undefined
 
 export interface WriteLevel {
   /** JLPT 레벨 (5 = N5) */

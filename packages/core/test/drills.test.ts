@@ -1,5 +1,18 @@
 import { describe, expect, it } from 'vitest'
-import { drillIdsOf, drillMode, drillsFor, getDrill, writeTracks, type Note } from '../src/index.ts'
+import {
+  deckKey,
+  deckKeyOfNoteId,
+  deckNoteId,
+  drillIdsOf,
+  drillMode,
+  drillsFor,
+  getDrill,
+  isStudyKey,
+  isTrack,
+  studyKeyOf,
+  writeTracks,
+  type Note,
+} from '../src/index.ts'
 
 const ka: Note = { id: 'kana-ka', track: 'kana', fields: { char: 'か', romaji: 'ka', script: 'hiragana', row: 'k' } }
 const shi: Note = { id: 'kana-shi', track: 'kana', fields: { char: 'シ', romaji: 'shi', script: 'katakana', row: 's' } }
@@ -94,5 +107,59 @@ describe('일작 (kanji-write)', () => {
     expect(run('ともだちとすしをたべる').correct).toBe(false)
     expect(run('').correct).toBe(false)
     expect(run('。、 ').correct).toBe(false)
+  })
+})
+
+describe('항목 (deck-recall)', () => {
+  const card: Note = {
+    id: deckNoteId('회화', '잘 먹겠습니다'),
+    track: 'deck',
+    fields: { deck: '회화', front: '잘 먹겠습니다', back: 'いただきます', note: '식사 전 인사' },
+  }
+  const multi: Note = { id: deckNoteId('영어', 'big'), track: 'deck', fields: { deck: '영어', front: 'big', back: 'Large / huge; Great Britain' } }
+
+  it('앞면 · 뒷면이 있으면 deck-recall 카드 하나, 자기 평가', () => {
+    expect(drillsFor(card).map(d => d.id)).toEqual(['deck-recall'])
+    expect(getDrill('deck-recall')!.selfGraded).toBe(true)
+    expect(drillMode(getDrill('deck-recall')!)).toBe('normal')
+    expect(writeTracks()).toEqual(['kanji'])
+  })
+  it('공백 · 문장 부호 · 가타카나/히라가나 · 대소문자는 무시', () => {
+    expect(check('deck-recall', card, 'いただきます')).toBe(true)
+    expect(check('deck-recall', card, ' イタダキマス。')).toBe(true)
+    expect(check('deck-recall', card, 'いただきま')).toBe(false)
+    expect(check('deck-recall', card, '')).toBe(false)
+    expect(check('deck-recall', card, '。')).toBe(false)
+    expect(getDrill('deck-recall')!.check(card, 'x').expected).toBe('いただきます')
+  })
+  it("'/' · ';' 로 나눈 답 중 하나면 정답, 쉼표로는 나누지 않는다", () => {
+    expect(check('deck-recall', multi, 'large')).toBe(true)
+    expect(check('deck-recall', multi, 'HUGE')).toBe(true)
+    expect(check('deck-recall', multi, 'great britain')).toBe(true)
+    expect(check('deck-recall', multi, 'Large / huge; Great Britain')).toBe(true)
+    expect(check('deck-recall', multi, 'great')).toBe(false)
+  })
+})
+
+describe('항목 키 · 학습 키', () => {
+  it('이름은 공백 · 대소문자를 무시하고 같은 키, 앞면은 문장 부호 · 공백 차이를 무시', () => {
+    expect(deckKey('Travel  English')).toBe(deckKey(' travel english '))
+    expect(deckKey('Travel English')).not.toBe(deckKey('Travel Japanese'))
+    expect(deckKey('회화')).toMatch(/^[0-9a-z]{11}$/)
+    expect(deckNoteId('회화', '잘 먹겠습니다!')).toBe(deckNoteId('회화', '잘먹겠습니다'))
+    expect(deckNoteId('회화', '잘 먹겠습니다')).not.toBe(deckNoteId('회화', '잘 먹었습니다'))
+    expect(deckNoteId('회화', 'x')).toMatch(new RegExp(`^deck-${deckKey('회화')}-[0-9a-z]{11}$`))
+  })
+  it('studyKeyOf · isStudyKey', () => {
+    const id = deckNoteId('회화', 'x')
+    expect(deckKeyOfNoteId(id)).toBe(deckKey('회화'))
+    expect(studyKeyOf({ id, track: 'deck' })).toBe(`deck:${deckKey('회화')}`)
+    expect(studyKeyOf({ id: 'deck-bad id', track: 'deck' })).toBeNull()
+    expect(studyKeyOf({ id: 'kanji-食', track: 'kanji' })).toBe('kanji')
+    expect(isStudyKey('kana')).toBe(true)
+    expect(isStudyKey(`deck:${deckKey('회화')}`)).toBe(true)
+    expect(isStudyKey('deck')).toBe(false)
+    expect(isStudyKey('deck:ABC')).toBe(false)
+    expect(isTrack('deck')).toBe(false)
   })
 })

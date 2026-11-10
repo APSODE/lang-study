@@ -174,6 +174,7 @@ describe('검토 대기 (관리자)', () => {
       createdAt: T0,
       uploader: '하나',
       uploaderId: hana.id,
+      batch: null,
     })
 
     // 공개 전 학습 큐 · 공개 목록에 없다 (캐시를 한 번 채워 둔다)

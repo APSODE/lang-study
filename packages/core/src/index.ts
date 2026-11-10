@@ -1,5 +1,6 @@
 export * from './notes.ts'
 export * from './text.ts'
 export * from './drills.ts'
+export * from './deck.ts'
 export * from './srs.ts'
 export * from './validate.ts'
