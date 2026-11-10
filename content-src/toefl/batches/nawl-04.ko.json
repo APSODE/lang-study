@@ -1,0 +1,1782 @@
+[
+  {
+    "band": 10,
+    "example_en": "During the seminar, one student raised an objection to the author's main argument.",
+    "example_ko": "세미나 중에 한 학생이 저자의 주된 주장에 반론을 제기했다.",
+    "forms": [
+      "objections"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "반론, 이의",
+    "pos": "n",
+    "rank": 480,
+    "sfi": 54.944,
+    "u": 31.0,
+    "word": "objection"
+  },
+  {
+    "band": 10,
+    "example_en": "Red light has a longer wavelength than blue light in the visible spectrum.",
+    "example_ko": "가시광선 스펙트럼에서 빨간빛은 파란빛보다 파장이 길다.",
+    "forms": [
+      "wavelengths"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "파장",
+    "pos": "n",
+    "rank": 482,
+    "sfi": 54.94,
+    "u": 31.0,
+    "word": "wavelength"
+  },
+  {
+    "band": 10,
+    "example_en": "Questions about consciousness have long belonged to the realm of philosophy.",
+    "example_ko": "의식에 관한 질문은 오랫동안 철학의 영역에 속해 왔다.",
+    "forms": [
+      "realms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "영역, 분야",
+    "pos": "n",
+    "rank": 485,
+    "sfi": 54.899,
+    "u": 31.0,
+    "word": "realm"
+  },
+  {
+    "band": 10,
+    "example_en": "Successful replication of the experiment by another laboratory confirmed the original findings.",
+    "example_ko": "다른 연구실에서 실험을 성공적으로 재현하여 원래 결과가 확인되었다.",
+    "forms": [
+      "replications"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "재현, 복제",
+    "pos": "n",
+    "rank": 486,
+    "sfi": 54.871,
+    "u": 31.0,
+    "word": "replication"
+  },
+  {
+    "band": 10,
+    "example_en": "Rainfall across the entire river basin eventually drains into a single lake.",
+    "example_ko": "강 유역 전체에 내린 비는 결국 하나의 호수로 흘러든다.",
+    "forms": [
+      "basins",
+      "basined"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "유역, 분지",
+    "pos": "n",
+    "rank": 487,
+    "sfi": 54.858,
+    "u": 31.0,
+    "word": "basin"
+  },
+  {
+    "band": 10,
+    "example_en": "Interestingly, the plants grew faster in the shade than in direct sunlight.",
+    "example_ko": "흥미롭게도 그 식물들은 직사광선보다 그늘에서 더 빨리 자랐다.",
+    "list": "NAWL",
+    "meaning_ko": "흥미롭게도",
+    "pos": "adv",
+    "rank": 489,
+    "sfi": 54.84,
+    "u": 30.0,
+    "word": "interestingly"
+  },
+  {
+    "band": 10,
+    "example_en": "Students drew a grid on the map to record the location of each sample.",
+    "example_ko": "학생들은 각 표본의 위치를 기록하려고 지도 위에 격자를 그렸다.",
+    "forms": [
+      "grids"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "격자, 전력망",
+    "pos": "n",
+    "rank": 491,
+    "sfi": 54.826,
+    "u": 30.0,
+    "word": "grid"
+  },
+  {
+    "band": 10,
+    "example_en": "The university revised its science curriculum to include more laboratory work.",
+    "example_ko": "그 대학은 실험 수업을 늘리도록 과학 교육과정을 개정했다.",
+    "forms": [
+      "curriculums",
+      "curricula"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "교육과정",
+    "pos": "n",
+    "rank": 492,
+    "sfi": 54.807,
+    "u": 30.0,
+    "word": "curriculum"
+  },
+  {
+    "band": 10,
+    "example_en": "In physics, displacement measures the change in an object's position from its starting point.",
+    "example_ko": "물리학에서 변위는 물체의 위치가 출발점에서 얼마나 바뀌었는지를 나타낸다.",
+    "forms": [
+      "displacements"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "변위, 이동, 강제 이주",
+    "pos": "n",
+    "rank": 493,
+    "sfi": 54.804,
+    "u": 30.0,
+    "word": "displacement"
+  },
+  {
+    "band": 10,
+    "example_en": "Your essay needs a coherent argument that connects each paragraph to the thesis.",
+    "example_ko": "에세이에는 각 단락을 논지와 이어 주는 일관성 있는 주장이 필요하다.",
+    "list": "NAWL",
+    "meaning_ko": "일관성 있다, 논리 정연하다",
+    "pos": "adj",
+    "rank": 494,
+    "sfi": 54.801,
+    "u": 30.0,
+    "word": "coherent"
+  },
+  {
+    "band": 10,
+    "example_en": "Researchers must standardize their procedures so that results can be compared across studies.",
+    "example_ko": "연구자들은 여러 연구의 결과를 비교할 수 있도록 절차를 표준화해야 한다.",
+    "forms": [
+      "standardizes",
+      "standardized",
+      "standardizing",
+      "standardise",
+      "standardises",
+      "standardised",
+      "standardising"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "표준화하다",
+    "pos": "v",
+    "rank": 495,
+    "sfi": 54.795,
+    "u": 30.0,
+    "word": "standardize"
+  },
+  {
+    "band": 10,
+    "example_en": "Agriculture allowed an early civilization to develop along the river valley.",
+    "example_ko": "농업 덕분에 강 유역을 따라 초기 문명이 발달할 수 있었다.",
+    "forms": [
+      "civilizations",
+      "civilisation",
+      "civilisations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "문명",
+    "pos": "n",
+    "rank": 496,
+    "sfi": 54.785,
+    "u": 30.0,
+    "word": "civilization"
+  },
+  {
+    "band": 10,
+    "example_en": "Students responded positively to the new online tutoring program.",
+    "example_ko": "학생들은 새 온라인 개인 지도 프로그램에 긍정적으로 반응했다.",
+    "list": "NAWL",
+    "meaning_ko": "긍정적으로, 확실히",
+    "pos": "adv",
+    "rank": 497,
+    "sfi": 54.762,
+    "u": 30.0,
+    "word": "positively"
+  },
+  {
+    "band": 10,
+    "example_en": "Antibiotics are effective against a bacterial infection but not against a virus.",
+    "example_ko": "항생제는 세균 감염에는 효과가 있지만 바이러스에는 효과가 없다.",
+    "forms": [
+      "bacterials"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "세균의, 박테리아의",
+    "pos": "adj",
+    "rank": 498,
+    "sfi": 54.733,
+    "u": 30.0,
+    "word": "bacterial"
+  },
+  {
+    "band": 11,
+    "example_en": "A vitamin D deficiency can weaken bones over a long period of time.",
+    "example_ko": "비타민 D 결핍은 오랜 기간에 걸쳐 뼈를 약하게 할 수 있다.",
+    "forms": [
+      "deficiencies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "결핍, 부족, 결함",
+    "pos": "n",
+    "rank": 499,
+    "sfi": 54.723,
+    "u": 30.0,
+    "word": "deficiency"
+  },
+  {
+    "band": 11,
+    "example_en": "The committee agreed that the student's complaint about grading was legitimate.",
+    "example_ko": "위원회는 성적에 관한 그 학생의 불만이 정당하다고 인정했다.",
+    "forms": [
+      "legitimates",
+      "legitimated",
+      "legitimating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "정당하다, 합법적이다",
+    "pos": "adj",
+    "rank": 500,
+    "sfi": 54.705,
+    "u": 30.0,
+    "word": "legitimate"
+  },
+  {
+    "band": 11,
+    "example_en": "Over time, scientists continued to sophisticate their methods for dating ancient rocks.",
+    "example_ko": "시간이 흐르면서 과학자들은 고대 암석의 연대를 측정하는 방법을 계속 정교하게 했다.",
+    "forms": [
+      "sophisticated",
+      "sophisticating",
+      "sophisticates"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "정교하게 하다, 세련되게 하다",
+    "pos": "v",
+    "rank": 501,
+    "sfi": 54.672,
+    "u": 29.0,
+    "word": "sophisticate"
+  },
+  {
+    "band": 11,
+    "example_en": "Higher temperatures accelerate the rate of most chemical reactions.",
+    "example_ko": "높은 온도는 대부분의 화학 반응 속도를 가속한다.",
+    "forms": [
+      "accelerates",
+      "accelerated",
+      "accelerating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "가속하다, 촉진하다",
+    "pos": "v",
+    "rank": 502,
+    "sfi": 54.671,
+    "u": 29.0,
+    "word": "accelerate"
+  },
+  {
+    "band": 11,
+    "example_en": "The bacteria showed exponential growth during the first few hours of the experiment.",
+    "example_ko": "그 세균은 실험 첫 몇 시간 동안 기하급수적인 증가를 보였다.",
+    "forms": [
+      "exponentials"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "기하급수적인, 지수의",
+    "pos": "adj",
+    "rank": 503,
+    "sfi": 54.668,
+    "u": 29.0,
+    "word": "exponential"
+  },
+  {
+    "band": 11,
+    "example_en": "Humans are socially complex animals that depend on cooperation within groups.",
+    "example_ko": "인간은 집단 안의 협력에 의존하는 사회적으로 복잡한 동물이다.",
+    "list": "NAWL",
+    "meaning_ko": "사회적으로",
+    "pos": "adv",
+    "rank": 505,
+    "sfi": 54.632,
+    "u": 29.0,
+    "word": "socially"
+  },
+  {
+    "band": 11,
+    "example_en": "The doctor monitored the progression of the disease over several months.",
+    "example_ko": "의사는 몇 달에 걸쳐 그 병의 진행을 관찰했다.",
+    "forms": [
+      "progressions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "진행, 진전",
+    "pos": "n",
+    "rank": 508,
+    "sfi": 54.61,
+    "u": 29.0,
+    "word": "progression"
+  },
+  {
+    "band": 11,
+    "example_en": "The professor argued that the essence of science is testing ideas against evidence.",
+    "example_ko": "교수는 과학의 본질이 증거로 생각을 검증하는 것이라고 주장했다.",
+    "forms": [
+      "essences"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "본질, 정수",
+    "pos": "n",
+    "rank": 509,
+    "sfi": 54.607,
+    "u": 29.0,
+    "word": "essence"
+  },
+  {
+    "band": 11,
+    "example_en": "Calculate the volume of a cylinder by multiplying its base area by its height.",
+    "example_ko": "밑넓이에 높이를 곱해 원기둥의 부피를 구하세요.",
+    "forms": [
+      "cylinders"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "원기둥, 실린더",
+    "pos": "n",
+    "rank": 510,
+    "sfi": 54.606,
+    "u": 29.0,
+    "word": "cylinder"
+  },
+  {
+    "band": 11,
+    "example_en": "Table salt is a chemical compound made of sodium and chlorine.",
+    "example_ko": "식탁용 소금은 나트륨과 염소로 이루어진 화합물이다.",
+    "forms": [
+      "sodiums"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "나트륨",
+    "pos": "n",
+    "rank": 512,
+    "sfi": 54.597,
+    "u": 29.0,
+    "word": "sodium"
+  },
+  {
+    "band": 11,
+    "example_en": "The forest in this region is predominantly made up of oak and maple trees.",
+    "example_ko": "이 지역의 숲은 주로 참나무와 단풍나무로 이루어져 있다.",
+    "list": "NAWL",
+    "meaning_ko": "주로, 대부분",
+    "pos": "adv",
+    "rank": 513,
+    "sfi": 54.591,
+    "u": 29.0,
+    "word": "predominantly"
+  },
+  {
+    "band": 11,
+    "example_en": "The oscillation of a pendulum slows gradually because of air resistance.",
+    "example_ko": "진자의 진동은 공기 저항 때문에 점점 느려진다.",
+    "forms": [
+      "oscillations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "진동",
+    "pos": "n",
+    "rank": 514,
+    "sfi": 54.585,
+    "u": 29.0,
+    "word": "oscillation"
+  },
+  {
+    "band": 11,
+    "example_en": "Each nerve impulse travels along the axon as an electrical signal.",
+    "example_ko": "각 신경 자극은 전기 신호의 형태로 축삭을 따라 이동한다.",
+    "forms": [
+      "impulses"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "자극, 충동, 충격량",
+    "pos": "n",
+    "rank": 515,
+    "sfi": 54.585,
+    "u": 29.0,
+    "word": "impulse"
+  },
+  {
+    "band": 11,
+    "example_en": "One theorist proposed that language develops mainly through social interaction.",
+    "example_ko": "한 이론가는 언어가 주로 사회적 상호작용을 통해 발달한다고 제안했다.",
+    "forms": [
+      "theorists"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "이론가",
+    "pos": "n",
+    "rank": 516,
+    "sfi": 54.58,
+    "u": 29.0,
+    "word": "theorist"
+  },
+  {
+    "band": 11,
+    "example_en": "In this experiment, researchers manipulate the amount of light each plant receives.",
+    "example_ko": "이 실험에서 연구자들은 각 식물이 받는 빛의 양을 조작한다.",
+    "forms": [
+      "manipulates",
+      "manipulated",
+      "manipulating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "조작하다, 다루다",
+    "pos": "v",
+    "rank": 517,
+    "sfi": 54.561,
+    "u": 29.0,
+    "word": "manipulate"
+  },
+  {
+    "band": 11,
+    "example_en": "The two nations formed a military alliance to protect their trade routes.",
+    "example_ko": "두 나라는 무역로를 지키려고 군사 동맹을 맺었다.",
+    "forms": [
+      "alliances"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "동맹, 연합",
+    "pos": "n",
+    "rank": 518,
+    "sfi": 54.553,
+    "u": 29.0,
+    "word": "alliance"
+  },
+  {
+    "band": 11,
+    "example_en": "As the solution cooled, a small salt crystal formed at the bottom of the beaker.",
+    "example_ko": "용액이 식자 비커 바닥에 작은 소금 결정이 생겼다.",
+    "forms": [
+      "crystals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "결정, 수정",
+    "pos": "n",
+    "rank": 519,
+    "sfi": 54.546,
+    "u": 28.0,
+    "word": "crystal"
+  },
+  {
+    "band": 11,
+    "example_en": "More importantly, the study was repeated with a much larger sample.",
+    "example_ko": "더 중요한 것은 그 연구가 훨씬 큰 표본으로 반복되었다는 점이다.",
+    "list": "NAWL",
+    "meaning_ko": "중요하게, 중요한 것은",
+    "pos": "adv",
+    "rank": 520,
+    "sfi": 54.544,
+    "u": 28.0,
+    "word": "importantly"
+  },
+  {
+    "band": 11,
+    "example_en": "The theory of continental drift explains why similar fossils appear on distant continents.",
+    "example_ko": "대륙 이동설은 비슷한 화석이 멀리 떨어진 대륙들에서 나타나는 이유를 설명한다.",
+    "forms": [
+      "drifts",
+      "drifted",
+      "drifting",
+      "driftin"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "이동, 표류하다",
+    "pos": "n, v",
+    "rank": 522,
+    "sfi": 54.515,
+    "u": 28.0,
+    "word": "drift"
+  },
+  {
+    "band": 11,
+    "example_en": "The biologists observed how long each bird spent building its nest.",
+    "example_ko": "생물학자들은 새들이 각자 둥지를 짓는 데 얼마나 오래 걸리는지 관찰했다.",
+    "forms": [
+      "nests",
+      "nested",
+      "nesting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "둥지, 둥지를 틀다",
+    "pos": "n, v",
+    "rank": 523,
+    "sfi": 54.507,
+    "u": 28.0,
+    "word": "nest"
+  },
+  {
+    "band": 11,
+    "example_en": "The fossil shows that this species once lived in a warm, shallow sea.",
+    "example_ko": "그 화석은 이 종이 한때 따뜻하고 얕은 바다에 살았음을 보여 준다.",
+    "forms": [
+      "fossils"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "화석",
+    "pos": "n",
+    "rank": 524,
+    "sfi": 54.503,
+    "u": 28.0,
+    "word": "fossil"
+  },
+  {
+    "band": 11,
+    "example_en": "Some bacteria have become resistant to the most common antibiotics.",
+    "example_ko": "일부 세균은 가장 흔한 항생제에 내성이 생겼다.",
+    "list": "NAWL",
+    "meaning_ko": "내성이 있다, 저항력이 있다",
+    "pos": "adj",
+    "rank": 525,
+    "sfi": 54.502,
+    "u": 28.0,
+    "word": "resistant"
+  },
+  {
+    "band": 11,
+    "example_en": "The architecture students built a three-dimensional model of the new library.",
+    "example_ko": "건축학과 학생들은 새 도서관의 3차원 모형을 만들었다.",
+    "forms": [
+      "dimensionals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "차원의, 입체의",
+    "pos": "adj",
+    "rank": 526,
+    "sfi": 54.502,
+    "u": 28.0,
+    "word": "dimensional"
+  },
+  {
+    "band": 11,
+    "example_en": "The study examined whether harsher punishment actually reduces crime rates.",
+    "example_ko": "그 연구는 더 엄한 처벌이 실제로 범죄율을 낮추는지 조사했다.",
+    "forms": [
+      "punishments"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "처벌, 벌",
+    "pos": "n",
+    "rank": 527,
+    "sfi": 54.498,
+    "u": 28.0,
+    "word": "punishment"
+  },
+  {
+    "band": 11,
+    "example_en": "In her lecture, the professor analyzed the rhetoric of political speeches.",
+    "example_ko": "강의에서 교수는 정치 연설의 수사법을 분석했다.",
+    "forms": [
+      "rhetorics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "수사법, 수사학",
+    "pos": "n",
+    "rank": 528,
+    "sfi": 54.488,
+    "u": 28.0,
+    "word": "rhetoric"
+  },
+  {
+    "band": 11,
+    "example_en": "Each artifact found at the site was carefully labeled and photographed.",
+    "example_ko": "그 유적지에서 발견된 유물마다 꼼꼼히 이름표를 붙이고 사진을 찍었다.",
+    "forms": [
+      "artifacts",
+      "artefact",
+      "artefacts"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "유물, 인공물",
+    "pos": "n",
+    "rank": 529,
+    "sfi": 54.477,
+    "u": 28.0,
+    "word": "artifact"
+  },
+  {
+    "band": 11,
+    "example_en": "Medical students practice surgical techniques on models before working with patients.",
+    "example_ko": "의대생들은 환자를 대하기 전에 모형으로 수술 기법을 연습한다.",
+    "forms": [
+      "surgicals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "수술의, 외과의",
+    "pos": "adj",
+    "rank": 531,
+    "sfi": 54.461,
+    "u": 28.0,
+    "word": "surgical"
+  },
+  {
+    "band": 11,
+    "example_en": "Playing the piano requires careful coordination between the eyes and hands.",
+    "example_ko": "피아노 연주에는 눈과 손의 세심한 협응이 필요하다.",
+    "forms": [
+      "coordinations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "조정, 협응, 협력",
+    "pos": "n",
+    "rank": 532,
+    "sfi": 54.455,
+    "u": 28.0,
+    "word": "coordination"
+  },
+  {
+    "band": 11,
+    "example_en": "The country experienced a turbulent period of political change after the war.",
+    "example_ko": "그 나라는 전쟁 후 정치적 변화의 격동기를 겪었다.",
+    "list": "NAWL",
+    "meaning_ko": "격동의, 난류의",
+    "pos": "adj",
+    "rank": 533,
+    "sfi": 54.437,
+    "u": 28.0,
+    "word": "turbulent"
+  },
+  {
+    "band": 11,
+    "example_en": "Quantum mechanics describes how particles behave at extremely small scales.",
+    "example_ko": "양자 역학은 입자가 극히 작은 규모에서 어떻게 행동하는지를 설명한다.",
+    "list": "NAWL",
+    "meaning_ko": "양자, 양자의",
+    "pos": "n, adj",
+    "rank": 534,
+    "sfi": 54.436,
+    "u": 28.0,
+    "word": "quantum"
+  },
+  {
+    "band": 11,
+    "example_en": "Layers of sediment build up slowly at the bottom of the ocean.",
+    "example_ko": "퇴적물 층은 바다 밑바닥에 천천히 쌓인다.",
+    "forms": [
+      "sediments",
+      "sedimented",
+      "sedimenting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "퇴적물, 침전물",
+    "pos": "n",
+    "rank": 535,
+    "sfi": 54.403,
+    "u": 28.0,
+    "word": "sediment"
+  },
+  {
+    "band": 11,
+    "example_en": "Wetland programs aim to conserve habitats for migrating birds.",
+    "example_ko": "습지 보호 사업은 철새의 서식지를 보존하는 것을 목표로 한다.",
+    "forms": [
+      "conserves",
+      "conserved",
+      "conserving"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "보존하다, 절약하다",
+    "pos": "v",
+    "rank": 537,
+    "sfi": 54.358,
+    "u": 27.0,
+    "word": "conserve"
+  },
+  {
+    "band": 11,
+    "example_en": "The professor assigned a short primer on statistics before the first lab session.",
+    "example_ko": "교수는 첫 실험 수업 전에 통계학에 관한 짧은 입문서를 과제로 냈다.",
+    "forms": [
+      "primers"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "입문서, 기초 지침서",
+    "pos": "n",
+    "rank": 538,
+    "sfi": 54.348,
+    "u": 27.0,
+    "word": "primer"
+  },
+  {
+    "band": 11,
+    "example_en": "Many students find it difficult to grasp the concept of infinity.",
+    "example_ko": "많은 학생이 무한이라는 개념을 이해하기 어려워한다.",
+    "forms": [
+      "grasps",
+      "grasped",
+      "grasping"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "이해하다, 파악하다",
+    "pos": "v",
+    "rank": 539,
+    "sfi": 54.345,
+    "u": 27.0,
+    "word": "grasp"
+  },
+  {
+    "band": 11,
+    "example_en": "Each field of science has its own terminology that new students must learn.",
+    "example_ko": "과학의 각 분야에는 신입생이 익혀야 하는 고유한 용어가 있다.",
+    "forms": [
+      "terminologies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "용어, 전문 용어",
+    "pos": "n",
+    "rank": 541,
+    "sfi": 54.32,
+    "u": 27.0,
+    "word": "terminology"
+  },
+  {
+    "band": 11,
+    "example_en": "Dense vegetation along the riverbank helps prevent soil erosion.",
+    "example_ko": "강둑을 따라 자란 빽빽한 초목은 토양 침식을 막는 데 도움이 된다.",
+    "list": "NAWL",
+    "meaning_ko": "초목, 식생, 식물",
+    "pos": "n",
+    "rank": 542,
+    "sfi": 54.315,
+    "u": 27.0,
+    "word": "vegetation"
+  },
+  {
+    "band": 11,
+    "example_en": "The sum of the angles in any triangle is always 180 degrees.",
+    "example_ko": "어떤 삼각형이든 세 각의 합은 항상 180도이다.",
+    "forms": [
+      "triangles"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "삼각형",
+    "pos": "n",
+    "rank": 543,
+    "sfi": 54.284,
+    "u": 27.0,
+    "word": "triangle"
+  },
+  {
+    "band": 11,
+    "example_en": "The computer can execute thousands of instructions in less than a second.",
+    "example_ko": "그 컴퓨터는 1초도 안 되는 사이에 수천 개의 명령을 실행할 수 있다.",
+    "forms": [
+      "executes",
+      "executed",
+      "executing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "실행하다, 수행하다",
+    "pos": "v",
+    "rank": 545,
+    "sfi": 54.26,
+    "u": 27.0,
+    "word": "execute"
+  },
+  {
+    "band": 11,
+    "example_en": "The summer program offers an intensive course in academic writing.",
+    "example_ko": "여름 프로그램은 학술적 글쓰기를 집중적으로 다루는 강좌를 제공한다.",
+    "list": "NAWL",
+    "meaning_ko": "집중적인, 집약적인",
+    "pos": "adj",
+    "rank": 546,
+    "sfi": 54.231,
+    "u": 26.0,
+    "word": "intensive"
+  },
+  {
+    "band": 11,
+    "example_en": "Historians try to reconstruct daily life in ancient cities from written records.",
+    "example_ko": "역사학자들은 문헌 기록을 바탕으로 고대 도시의 일상생활을 재구성하려고 한다.",
+    "forms": [
+      "reconstructs",
+      "reconstructed",
+      "reconstructing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "재구성하다, 복원하다",
+    "pos": "v",
+    "rank": 547,
+    "sfi": 54.215,
+    "u": 26.0,
+    "word": "reconstruct"
+  },
+  {
+    "band": 11,
+    "example_en": "Broadly speaking, the results support the original hypothesis.",
+    "example_ko": "대체로 말해 그 결과는 원래 가설을 뒷받침한다.",
+    "list": "NAWL",
+    "meaning_ko": "대체로, 폭넓게",
+    "pos": "adv",
+    "rank": 548,
+    "sfi": 54.209,
+    "u": 26.0,
+    "word": "broadly"
+  },
+  {
+    "band": 12,
+    "example_en": "Regular exercise can increase the rate of metabolism in the human body.",
+    "example_ko": "규칙적인 운동은 인체의 신진대사 속도를 높일 수 있다.",
+    "forms": [
+      "metabolisms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "신진대사, 대사",
+    "pos": "n",
+    "rank": 549,
+    "sfi": 54.205,
+    "u": 26.0,
+    "word": "metabolism"
+  },
+  {
+    "band": 12,
+    "example_en": "The printing press was a revolutionary invention that changed how knowledge spread.",
+    "example_ko": "인쇄기는 지식이 퍼지는 방식을 바꾼 혁명적인 발명품이었다.",
+    "forms": [
+      "revolutionaries"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "혁명적인, 혁명의",
+    "pos": "adj",
+    "rank": 550,
+    "sfi": 54.203,
+    "u": 26.0,
+    "word": "revolutionary"
+  },
+  {
+    "band": 12,
+    "example_en": "The case study presents an ethical dilemma faced by doctors with limited resources.",
+    "example_ko": "그 사례 연구는 자원이 부족한 의사들이 마주하는 윤리적 딜레마를 제시한다.",
+    "forms": [
+      "dilemmas"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "딜레마, 진퇴양난",
+    "pos": "n",
+    "rank": 552,
+    "sfi": 54.174,
+    "u": 26.0,
+    "word": "dilemma"
+  },
+  {
+    "band": 12,
+    "example_en": "The motif of a long journey appears in many ancient myths.",
+    "example_ko": "긴 여정이라는 모티프는 많은 고대 신화에 나타난다.",
+    "forms": [
+      "motifs"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "모티프, 주제, 무늬",
+    "pos": "n",
+    "rank": 553,
+    "sfi": 54.158,
+    "u": 26.0,
+    "word": "motif"
+  },
+  {
+    "band": 12,
+    "example_en": "Historians still debate the main motive behind the emperor's decision.",
+    "example_ko": "역사학자들은 황제의 결정 뒤에 숨은 주된 동기를 아직도 논쟁한다.",
+    "forms": [
+      "motives"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "동기, 이유",
+    "pos": "n",
+    "rank": 554,
+    "sfi": 54.153,
+    "u": 26.0,
+    "word": "motive"
+  },
+  {
+    "band": 12,
+    "example_en": "The researchers noticed a subtle difference between the two groups of samples.",
+    "example_ko": "연구자들은 두 표본 집단 사이의 미묘한 차이를 알아차렸다.",
+    "forms": [
+      "subtler",
+      "subtlest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "미묘하다, 섬세하다",
+    "pos": "adj",
+    "rank": 555,
+    "sfi": 54.148,
+    "u": 26.0,
+    "word": "subtle"
+  },
+  {
+    "band": 12,
+    "example_en": "A water molecule contains two hydrogen atoms and one oxygen atom.",
+    "example_ko": "물 분자에는 수소 원자 두 개와 산소 원자 한 개가 있다.",
+    "forms": [
+      "hydrogens"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "수소",
+    "pos": "n",
+    "rank": 558,
+    "sfi": 54.123,
+    "u": 26.0,
+    "word": "hydrogen"
+  },
+  {
+    "band": 12,
+    "example_en": "She spent three years writing her dissertation on urban migration.",
+    "example_ko": "그녀는 도시 이주에 관한 학위 논문을 쓰는 데 3년을 보냈다.",
+    "forms": [
+      "dissertations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "학위 논문, 논문",
+    "pos": "n",
+    "rank": 559,
+    "sfi": 54.116,
+    "u": 26.0,
+    "word": "dissertation"
+  },
+  {
+    "band": 12,
+    "example_en": "Young children are more susceptible to infections than healthy adults.",
+    "example_ko": "어린아이들은 건강한 성인보다 감염에 더 취약하다.",
+    "forms": [
+      "susceptibles"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "취약하다, 영향을 받기 쉽다",
+    "pos": "adj",
+    "rank": 560,
+    "sfi": 54.112,
+    "u": 26.0,
+    "word": "susceptible"
+  },
+  {
+    "band": 12,
+    "example_en": "Smoking greatly increases the risk of coronary heart disease.",
+    "example_ko": "흡연은 관상동맥 심장병의 위험을 크게 높인다.",
+    "list": "NAWL",
+    "meaning_ko": "관상동맥의, 심장의",
+    "pos": "adj",
+    "rank": 562,
+    "sfi": 54.101,
+    "u": 26.0,
+    "word": "coronary"
+  },
+  {
+    "band": 12,
+    "example_en": "The breakdown of glucose releases energy that cells can use.",
+    "example_ko": "포도당의 분해는 세포가 쓸 수 있는 에너지를 방출한다.",
+    "forms": [
+      "breakdowns"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "분해, 붕괴, 고장",
+    "pos": "n",
+    "rank": 563,
+    "sfi": 54.084,
+    "u": 26.0,
+    "word": "breakdown"
+  },
+  {
+    "band": 12,
+    "example_en": "The researchers inject a harmless dye to track blood flow through the brain.",
+    "example_ko": "연구자들은 뇌를 지나는 혈류를 추적하려고 무해한 염료를 주입한다.",
+    "forms": [
+      "injects",
+      "injected",
+      "injecting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "주입하다, 주사하다",
+    "pos": "v",
+    "rank": 564,
+    "sfi": 54.077,
+    "u": 26.0,
+    "word": "inject"
+  },
+  {
+    "band": 12,
+    "example_en": "An object's momentum depends on both its mass and its velocity.",
+    "example_ko": "물체의 운동량은 질량과 속도 모두에 따라 달라진다.",
+    "forms": [
+      "momentums",
+      "momenta"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "운동량, 추진력, 탄력",
+    "pos": "n",
+    "rank": 566,
+    "sfi": 54.043,
+    "u": 25.0,
+    "word": "momentum"
+  },
+  {
+    "band": 12,
+    "example_en": "Polar regions receive far less direct sunlight than areas near the equator.",
+    "example_ko": "극지 지역은 적도 근처 지역보다 직사광선을 훨씬 적게 받는다.",
+    "forms": [
+      "polars"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "극지의, 극성의",
+    "pos": "adj",
+    "rank": 567,
+    "sfi": 54.032,
+    "u": 25.0,
+    "word": "polar"
+  },
+  {
+    "band": 12,
+    "example_en": "Historians sometimes work backward from a known event to find its causes.",
+    "example_ko": "역사학자들은 때때로 알려진 사건에서 거꾸로 거슬러 올라가 그 원인을 찾는다.",
+    "forms": [
+      "backwards"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "거꾸로, 뒤로, 후진적인",
+    "pos": "adv, adj",
+    "rank": 568,
+    "sfi": 54.031,
+    "u": 25.0,
+    "word": "backward"
+  },
+  {
+    "band": 12,
+    "example_en": "To find the area, multiply the length of the rectangle by its width.",
+    "example_ko": "넓이를 구하려면 직사각형의 가로 길이에 세로 길이를 곱하세요.",
+    "forms": [
+      "multiplies",
+      "multiplied",
+      "multiplying"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "곱하다, 증식하다, 늘어나다",
+    "pos": "v",
+    "rank": 569,
+    "sfi": 54.019,
+    "u": 25.0,
+    "word": "multiply"
+  },
+  {
+    "band": 12,
+    "example_en": "Philosophers have long debated whether morality depends on culture or on reason.",
+    "example_ko": "철학자들은 도덕이 문화에 달려 있는지 이성에 달려 있는지를 오랫동안 논쟁해 왔다.",
+    "forms": [
+      "moralities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "도덕, 도덕성",
+    "pos": "n",
+    "rank": 570,
+    "sfi": 54.008,
+    "u": 25.0,
+    "word": "morality"
+  },
+  {
+    "band": 12,
+    "example_en": "The course focuses on communicative skills such as group discussion and presentation.",
+    "example_ko": "그 강좌는 조별 토론과 발표 같은 의사소통 능력에 중점을 둔다.",
+    "list": "NAWL",
+    "meaning_ko": "의사소통의, 소통하는",
+    "pos": "adj",
+    "rank": 571,
+    "sfi": 54.003,
+    "u": 25.0,
+    "word": "communicative"
+  },
+  {
+    "band": 12,
+    "example_en": "The study found that physically active students reported lower levels of stress.",
+    "example_ko": "그 연구에 따르면 신체적으로 활동적인 학생들이 스트레스를 덜 느낀다고 응답했다.",
+    "list": "NAWL",
+    "meaning_ko": "신체적으로, 물리적으로",
+    "pos": "adv",
+    "rank": 572,
+    "sfi": 53.993,
+    "u": 25.0,
+    "word": "physically"
+  },
+  {
+    "band": 12,
+    "example_en": "The region remained politically unstable for several decades after independence.",
+    "example_ko": "그 지역은 독립 후 수십 년 동안 정치적으로 불안정했다.",
+    "list": "NAWL",
+    "meaning_ko": "정치적으로",
+    "pos": "adv",
+    "rank": 574,
+    "sfi": 53.986,
+    "u": 25.0,
+    "word": "politically"
+  },
+  {
+    "band": 12,
+    "example_en": "The invasion of a non-native plant species can threaten local ecosystems.",
+    "example_ko": "외래 식물 종의 침입은 지역 생태계를 위협할 수 있다.",
+    "forms": [
+      "invasions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "침입, 침략",
+    "pos": "n",
+    "rank": 575,
+    "sfi": 53.966,
+    "u": 25.0,
+    "word": "invasion"
+  },
+  {
+    "band": 12,
+    "example_en": "Rapid population growth inevitably places pressure on local water supplies.",
+    "example_ko": "급속한 인구 증가는 필연적으로 지역의 물 공급에 부담을 준다.",
+    "list": "NAWL",
+    "meaning_ko": "필연적으로, 불가피하게",
+    "pos": "adv",
+    "rank": 576,
+    "sfi": 53.959,
+    "u": 25.0,
+    "word": "inevitably"
+  },
+  {
+    "band": 12,
+    "example_en": "The lecture compared the development of capitalism in Europe and East Asia.",
+    "example_ko": "그 강의는 유럽과 동아시아의 자본주의 발전 과정을 비교했다.",
+    "forms": [
+      "capitalisms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "자본주의",
+    "pos": "n",
+    "rank": 577,
+    "sfi": 53.954,
+    "u": 25.0,
+    "word": "capitalism"
+  },
+  {
+    "band": 12,
+    "example_en": "The second design was inferior to the first because it used more energy.",
+    "example_ko": "두 번째 설계는 에너지를 더 많이 써서 첫 번째 설계보다 열등했다.",
+    "forms": [
+      "inferiors"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "열등하다, 하위의",
+    "pos": "adj",
+    "rank": 579,
+    "sfi": 53.928,
+    "u": 25.0,
+    "word": "inferior"
+  },
+  {
+    "band": 12,
+    "example_en": "Every quotation in your paper must include the page number of the source.",
+    "example_ko": "논문의 모든 인용문에는 출처의 쪽 번호를 밝혀야 한다.",
+    "forms": [
+      "quotations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "인용문, 인용",
+    "pos": "n",
+    "rank": 581,
+    "sfi": 53.914,
+    "u": 25.0,
+    "word": "quotation"
+  },
+  {
+    "band": 12,
+    "example_en": "Modern aircraft use composite materials that are both light and strong.",
+    "example_ko": "현대 항공기는 가볍고도 튼튼한 복합 재료를 사용한다.",
+    "list": "NAWL",
+    "meaning_ko": "복합의, 합성의",
+    "pos": "adj",
+    "rank": 582,
+    "sfi": 53.91,
+    "u": 25.0,
+    "word": "composite"
+  },
+  {
+    "band": 12,
+    "example_en": "Historically, fertile river valleys have supported the largest human settlements.",
+    "example_ko": "역사적으로 비옥한 강 유역은 가장 큰 인간 정착지를 뒷받침해 왔다.",
+    "list": "NAWL",
+    "meaning_ko": "역사적으로",
+    "pos": "adv",
+    "rank": 583,
+    "sfi": 53.895,
+    "u": 25.0,
+    "word": "historically"
+  },
+  {
+    "band": 12,
+    "example_en": "Each nerve is a bundle of fibers that carry signals through the body.",
+    "example_ko": "각 신경은 몸 전체로 신호를 전달하는 섬유 다발이다.",
+    "forms": [
+      "bundles",
+      "bundled",
+      "bundling"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "다발, 묶음, 묶다",
+    "pos": "n, v",
+    "rank": 585,
+    "sfi": 53.882,
+    "u": 24.0,
+    "word": "bundle"
+  },
+  {
+    "band": 12,
+    "example_en": "The textbook begins with elementary concepts before moving on to advanced topics.",
+    "example_ko": "그 교과서는 고급 주제로 넘어가기 전에 기초 개념부터 시작한다.",
+    "list": "NAWL",
+    "meaning_ko": "기초의, 초보의, 초등의",
+    "pos": "adj",
+    "rank": 586,
+    "sfi": 53.881,
+    "u": 24.0,
+    "word": "elementary"
+  },
+  {
+    "band": 12,
+    "example_en": "In a capitalist economy, most businesses are owned by private individuals.",
+    "example_ko": "자본주의 경제에서는 대부분의 기업을 개인이 소유한다.",
+    "forms": [
+      "capitalists"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "자본주의의, 자본가",
+    "pos": "adj, n",
+    "rank": 587,
+    "sfi": 53.876,
+    "u": 24.0,
+    "word": "capitalist"
+  },
+  {
+    "band": 12,
+    "example_en": "Anthropologists studied the initiation ceremony that marks the passage into adulthood.",
+    "example_ko": "인류학자들은 성인으로 넘어가는 과정을 나타내는 입문 의식을 연구했다.",
+    "forms": [
+      "initiations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "개시, 착수, 입문 의식",
+    "pos": "n",
+    "rank": 591,
+    "sfi": 53.836,
+    "u": 24.0,
+    "word": "initiation"
+  },
+  {
+    "band": 12,
+    "example_en": "As the ship sailed away, it slowly disappeared below the horizon.",
+    "example_ko": "배는 멀어지면서 수평선 아래로 서서히 사라졌다.",
+    "forms": [
+      "horizons"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "수평선, 지평선, 시야",
+    "pos": "n",
+    "rank": 592,
+    "sfi": 53.834,
+    "u": 24.0,
+    "word": "horizon"
+  },
+  {
+    "band": 12,
+    "example_en": "The ruler expanded the empire by conquering several neighboring kingdoms.",
+    "example_ko": "그 통치자는 이웃 왕국 몇 곳을 정복해 제국을 넓혔다.",
+    "forms": [
+      "rulers"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "통치자, 자",
+    "pos": "n",
+    "rank": 594,
+    "sfi": 53.831,
+    "u": 24.0,
+    "word": "ruler"
+  },
+  {
+    "band": 12,
+    "example_en": "In an ideal gas, molecules move freely and rarely interact with each other.",
+    "example_ko": "이상 기체에서 분자는 자유롭게 움직이며 서로 거의 상호 작용하지 않는다.",
+    "list": "NAWL",
+    "meaning_ko": "자유롭게",
+    "pos": "adv",
+    "rank": 595,
+    "sfi": 53.817,
+    "u": 24.0,
+    "word": "freely"
+  },
+  {
+    "band": 12,
+    "example_en": "The Earth takes about 24 hours to rotate once on its axis.",
+    "example_ko": "지구가 자전축을 중심으로 한 번 회전하는 데는 약 24시간이 걸린다.",
+    "forms": [
+      "rotates",
+      "rotated",
+      "rotating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "회전하다, 교대하다",
+    "pos": "v",
+    "rank": 596,
+    "sfi": 53.812,
+    "u": 24.0,
+    "word": "rotate"
+  },
+  {
+    "band": 12,
+    "example_en": "Coffee became a valuable commodity in global trade during the colonial era.",
+    "example_ko": "커피는 식민지 시대에 세계 무역에서 귀중한 상품이 되었다.",
+    "forms": [
+      "commodities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "상품, 원자재",
+    "pos": "n",
+    "rank": 597,
+    "sfi": 53.805,
+    "u": 24.0,
+    "word": "commodity"
+  },
+  {
+    "band": 12,
+    "example_en": "Plant species change noticeably as elevation increases on the mountain.",
+    "example_ko": "산에서 고도가 높아질수록 식물 종이 눈에 띄게 달라진다.",
+    "forms": [
+      "elevations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "고도, 해발, 높이",
+    "pos": "n",
+    "rank": 598,
+    "sfi": 53.792,
+    "u": 24.0,
+    "word": "elevation"
+  },
+  {
+    "band": 13,
+    "example_en": "Teachers should intervene early when a student begins to fall behind.",
+    "example_ko": "교사는 학생이 뒤처지기 시작할 때 일찍 개입해야 한다.",
+    "forms": [
+      "intervenes",
+      "intervened",
+      "intervening"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "개입하다, 끼어들다",
+    "pos": "v",
+    "rank": 599,
+    "sfi": 53.781,
+    "u": 24.0,
+    "word": "intervene"
+  },
+  {
+    "band": 13,
+    "example_en": "The atomic number of an element equals the number of protons in its nucleus.",
+    "example_ko": "원소의 원자 번호는 원자핵 속 양성자 수와 같다.",
+    "forms": [
+      "atomics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "원자의",
+    "pos": "adj",
+    "rank": 601,
+    "sfi": 53.775,
+    "u": 24.0,
+    "word": "atomic"
+  },
+  {
+    "band": 13,
+    "example_en": "What seems like a trivial detail can sometimes change the outcome of an experiment.",
+    "example_ko": "사소해 보이는 세부 사항이 때로는 실험 결과를 바꿀 수 있다.",
+    "forms": [
+      "trivials"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "사소하다, 하찮다",
+    "pos": "adj",
+    "rank": 602,
+    "sfi": 53.767,
+    "u": 24.0,
+    "word": "trivial"
+  },
+  {
+    "band": 13,
+    "example_en": "The author takes a critical stance toward modern consumer culture.",
+    "example_ko": "저자는 현대 소비문화에 대해 비판적인 입장을 취한다.",
+    "forms": [
+      "stances",
+      "stanced",
+      "stancing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "입장, 태도, 자세",
+    "pos": "n",
+    "rank": 603,
+    "sfi": 53.756,
+    "u": 24.0,
+    "word": "stance"
+  },
+  {
+    "band": 13,
+    "example_en": "Tree roots help stabilize the soil on steep hillsides.",
+    "example_ko": "나무뿌리는 가파른 산비탈의 흙을 안정시키는 데 도움을 준다.",
+    "forms": [
+      "stabilizes",
+      "stabilized",
+      "stabilizing",
+      "stabilise",
+      "stabilises",
+      "stabilised",
+      "stabilising"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "안정시키다, 안정되다",
+    "pos": "v",
+    "rank": 604,
+    "sfi": 53.738,
+    "u": 24.0,
+    "word": "stabilize"
+  },
+  {
+    "band": 13,
+    "example_en": "The invention of writing had a profound effect on human societies.",
+    "example_ko": "문자의 발명은 인간 사회에 깊은 영향을 미쳤다.",
+    "forms": [
+      "profounder",
+      "profoundest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "깊다, 심오하다",
+    "pos": "adj",
+    "rank": 605,
+    "sfi": 53.723,
+    "u": 24.0,
+    "word": "profound"
+  },
+  {
+    "band": 13,
+    "example_en": "Photosynthesis is the process whereby plants convert sunlight into chemical energy.",
+    "example_ko": "광합성은 그것에 의해 식물이 햇빛을 화학 에너지로 바꾸는 과정이다.",
+    "list": "NAWL",
+    "meaning_ko": "그것에 의해, 그에 따라",
+    "pos": "adv",
+    "rank": 606,
+    "sfi": 53.717,
+    "u": 24.0,
+    "word": "whereby"
+  },
+  {
+    "band": 13,
+    "example_en": "Scientists believe that birds share a common ancestor with certain dinosaurs.",
+    "example_ko": "과학자들은 새가 특정 공룡과 공통 조상을 가진다고 본다.",
+    "forms": [
+      "ancestors"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "조상, 선조",
+    "pos": "n",
+    "rank": 607,
+    "sfi": 53.712,
+    "u": 24.0,
+    "word": "ancestor"
+  },
+  {
+    "band": 13,
+    "example_en": "Advances in genetics have changed how doctors diagnose inherited diseases.",
+    "example_ko": "유전학의 발전은 의사들이 유전 질환을 진단하는 방식을 바꾸었다.",
+    "list": "NAWL",
+    "meaning_ko": "유전학",
+    "pos": "n",
+    "rank": 608,
+    "sfi": 53.705,
+    "u": 23.0,
+    "word": "genetics"
+  },
+  {
+    "band": 13,
+    "example_en": "Each proton in the nucleus carries a positive electric charge.",
+    "example_ko": "원자핵 속 각 양성자는 양전하를 띤다.",
+    "forms": [
+      "protons"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "양성자",
+    "pos": "n",
+    "rank": 609,
+    "sfi": 53.672,
+    "u": 23.0,
+    "word": "proton"
+  },
+  {
+    "band": 13,
+    "example_en": "Excess phosphate from farm fertilizers can cause algae to grow rapidly in lakes.",
+    "example_ko": "농장 비료에서 나온 과도한 인산염은 호수에서 조류가 빠르게 자라게 할 수 있다.",
+    "forms": [
+      "phosphates"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "인산염",
+    "pos": "n",
+    "rank": 610,
+    "sfi": 53.639,
+    "u": 23.0,
+    "word": "phosphate"
+  },
+  {
+    "band": 13,
+    "example_en": "On the moon, gravity is only about one sixth as strong as on Earth.",
+    "example_ko": "달의 중력은 지구의 약 6분의 1밖에 되지 않는다.",
+    "forms": [
+      "gravities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "중력",
+    "pos": "n",
+    "rank": 611,
+    "sfi": 53.636,
+    "u": 23.0,
+    "word": "gravity"
+  },
+  {
+    "band": 13,
+    "example_en": "Air pollution is closely linked to respiratory illnesses such as asthma.",
+    "example_ko": "대기 오염은 천식 같은 호흡기 질환과 밀접하게 관련되어 있다.",
+    "list": "NAWL",
+    "meaning_ko": "호흡기의, 호흡의",
+    "pos": "adj",
+    "rank": 614,
+    "sfi": 53.617,
+    "u": 23.0,
+    "word": "respiratory"
+  },
+  {
+    "band": 13,
+    "example_en": "The elimination of waste products is a key function of the kidneys.",
+    "example_ko": "노폐물 제거는 신장의 핵심 기능이다.",
+    "forms": [
+      "eliminations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "제거, 배제, 탈락",
+    "pos": "n",
+    "rank": 615,
+    "sfi": 53.61,
+    "u": 23.0,
+    "word": "elimination"
+  },
+  {
+    "band": 13,
+    "example_en": "The historian argued that widespread corruption gradually weakened the government.",
+    "example_ko": "그 역사학자는 만연한 부패가 정부를 점차 약화시켰다고 주장했다.",
+    "forms": [
+      "corruptions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "부패, 타락",
+    "pos": "n",
+    "rank": 617,
+    "sfi": 53.582,
+    "u": 23.0,
+    "word": "corruption"
+  },
+  {
+    "band": 13,
+    "example_en": "The meaning of this passage remains obscure even to experienced scholars.",
+    "example_ko": "이 구절의 의미는 노련한 학자들에게도 여전히 모호하다.",
+    "forms": [
+      "obscures",
+      "obscured",
+      "obscuring"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "모호하다, 가리다",
+    "pos": "adj, v",
+    "rank": 619,
+    "sfi": 53.555,
+    "u": 23.0,
+    "word": "obscure"
+  },
+  {
+    "band": 13,
+    "example_en": "Psychologists study how childhood trauma affects behavior later in life.",
+    "example_ko": "심리학자들은 어린 시절의 트라우마가 이후 삶의 행동에 어떤 영향을 미치는지 연구한다.",
+    "forms": [
+      "traumas"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "외상, 트라우마, 정신적 충격",
+    "pos": "n",
+    "rank": 622,
+    "sfi": 53.505,
+    "u": 22.0,
+    "word": "trauma"
+  },
+  {
+    "band": 13,
+    "example_en": "Warm air moves upward because it is less dense than cool air.",
+    "example_ko": "따뜻한 공기는 차가운 공기보다 밀도가 낮아서 위쪽으로 이동한다.",
+    "forms": [
+      "upwards"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "위쪽으로, 상승하는",
+    "pos": "adv, adj",
+    "rank": 623,
+    "sfi": 53.504,
+    "u": 22.0,
+    "word": "upward"
+  },
+  {
+    "band": 13,
+    "example_en": "The country's gross domestic product rose steadily during the decade.",
+    "example_ko": "그 나라의 국내 총생산은 그 10년 동안 꾸준히 늘었다.",
+    "forms": [
+      "grosses",
+      "grossed",
+      "grossing",
+      "grosser",
+      "grossest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "총계의, 전체의",
+    "pos": "adj",
+    "rank": 624,
+    "sfi": 53.493,
+    "u": 22.0,
+    "word": "gross"
+  },
+  {
+    "band": 13,
+    "example_en": "Scientists use optical instruments such as microscopes to study tiny organisms.",
+    "example_ko": "과학자들은 아주 작은 생물을 연구하려고 현미경 같은 광학 기구를 사용한다.",
+    "forms": [
+      "opticals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "광학의, 시각의",
+    "pos": "adj",
+    "rank": 625,
+    "sfi": 53.472,
+    "u": 22.0,
+    "word": "optical"
+  },
+  {
+    "band": 13,
+    "example_en": "The lecture traced the rise of the communist movement in the early twentieth century.",
+    "example_ko": "그 강의는 20세기 초 공산주의 운동이 성장한 과정을 짚어 보았다.",
+    "forms": [
+      "communists"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "공산주의의, 공산주의자",
+    "pos": "adj, n",
+    "rank": 626,
+    "sfi": 53.467,
+    "u": 22.0,
+    "word": "communist"
+  },
+  {
+    "band": 13,
+    "example_en": "Africa is the second largest continent in both area and population.",
+    "example_ko": "아프리카는 면적과 인구 모두에서 두 번째로 큰 대륙이다.",
+    "forms": [
+      "continents"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "대륙",
+    "pos": "n",
+    "rank": 627,
+    "sfi": 53.458,
+    "u": 22.0,
+    "word": "continent"
+  },
+  {
+    "band": 13,
+    "example_en": "The committee concluded that solar power was a viable option for the campus.",
+    "example_ko": "위원회는 태양광 발전이 캠퍼스에 실행 가능한 선택지라고 결론지었다.",
+    "forms": [
+      "viables"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "실행 가능하다, 생존 가능하다",
+    "pos": "adj",
+    "rank": 629,
+    "sfi": 53.435,
+    "u": 22.0,
+    "word": "viable"
+  },
+  {
+    "band": 13,
+    "example_en": "Some salamanders can regrow a lost limb after an injury.",
+    "example_ko": "어떤 도롱뇽은 다쳐서 잃은 팔다리를 다시 자라게 할 수 있다.",
+    "forms": [
+      "limbs",
+      "limbed"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "팔다리, 사지",
+    "pos": "n",
+    "rank": 630,
+    "sfi": 53.429,
+    "u": 22.0,
+    "word": "limb"
+  },
+  {
+    "band": 13,
+    "example_en": "Researchers often presume that participants answer survey questions honestly.",
+    "example_ko": "연구자들은 흔히 참가자들이 설문 질문에 정직하게 답한다고 가정한다.",
+    "forms": [
+      "presumes",
+      "presumed",
+      "presuming"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "가정하다, 추정하다",
+    "pos": "v",
+    "rank": 632,
+    "sfi": 53.406,
+    "u": 22.0,
+    "word": "presume"
+  },
+  {
+    "band": 13,
+    "example_en": "Classical economics assumes the rationality of consumers when they make choices.",
+    "example_ko": "고전 경제학은 소비자가 선택할 때 합리성을 지닌다고 가정한다.",
+    "forms": [
+      "rationalities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "합리성",
+    "pos": "n",
+    "rank": 633,
+    "sfi": 53.385,
+    "u": 22.0,
+    "word": "rationality"
+  },
+  {
+    "band": 13,
+    "example_en": "The study tested whether a common stereotype about gender affected math scores.",
+    "example_ko": "그 연구는 성별에 관한 흔한 고정관념이 수학 점수에 영향을 미쳤는지 검증했다.",
+    "forms": [
+      "stereotypes",
+      "stereotyped",
+      "stereotyping"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "고정관념, 정형화하다",
+    "pos": "n, v",
+    "rank": 634,
+    "sfi": 53.371,
+    "u": 22.0,
+    "word": "stereotype"
+  }
+]
