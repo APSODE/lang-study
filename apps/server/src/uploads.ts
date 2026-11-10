@@ -381,6 +381,32 @@ export const myUploads = (db: DatabaseSync, userId: number): UploadedNote[] =>
       .all(uploadSource(userId), LIST_MAX) as unknown as NoteRow[]
   ).map(toUploaded)
 
+export interface MyUploadSummary {
+  draft: number
+  published: number
+  retired: number
+  /** 오늘(04:00 기준) 만든 수와 하루 제한: 직접 만들기(single) · 파일 올리기(file) */
+  today: { single: number; singleMax: number; file: number; fileMax: number }
+}
+
+/** 내가 만든 문제의 상태별 개수 · 오늘 만든 수 (홈의 "올린 문제 현황") */
+export const myUploadSummary = (db: DatabaseSync, userId: number, now: number): MyUploadSummary => {
+  const counts = { draft: 0, published: 0, retired: 0 }
+  const rows = db
+    .prepare('SELECT status, count(*) AS n FROM notes WHERE source = ? GROUP BY status')
+    .all(uploadSource(userId)) as { status: string; n: number }[]
+  for (const r of rows) if (r.status in counts) counts[r.status as keyof typeof counts] = r.n
+  return {
+    ...counts,
+    today: {
+      single: uploadsToday(db, userId, now, 'single'),
+      singleMax: UPLOAD_PER_DAY,
+      file: uploadsToday(db, userId, now, 'file'),
+      fileMax: FILE_PER_DAY,
+    },
+  }
+}
+
 export interface Draft {
   id: string
   track: NoteTrack

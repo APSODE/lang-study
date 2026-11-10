@@ -1,7 +1,8 @@
-// 자료 · 문제 만들기 (#/library/create): 한자 · 토익 문제를 만들어 보내면 관리자가 검토한 뒤 모두의 학습에 들어간다.
+// 문제 만들기 (#/create, 아래 탭 "만들기". 예전 #/library/create 도 여기로): 한자 · 토익 문제를 만들어 보내면 관리자가 검토한 뒤 모두의 학습에 들어간다.
 // 서버가 검사하고(문제가 있으면 목록을 돌려준다) 초안으로 저장한다. 하루 20개까지. 아래에 내가 만든 문제와 상태.
+// #/create?mine=1 (홈의 "올린 문제 현황"에서): 목록을 불러오면 "내가 만든 문제"로 스크롤한다.
 // "파일 올리기" 탭: JSON 파일로 새 항목(앞면 · 뒷면 카드)이나 한자 · 토익 문제를 한 번에 올린다 (UploadFile.tsx).
-import { type FormEvent, useState } from 'react'
+import { type FormEvent, useEffect, useRef, useState } from 'react'
 import { api, ApiError } from '../api.ts'
 import { EmptyState, LoadError } from '../components/EmptyState.tsx'
 import { NotePreview, noteLang, noteMain } from '../components/NotePreview.tsx'
@@ -59,7 +60,7 @@ const splitList = (s: string): string[] =>
 const EMPTY_KANJI = { kanji: '', on: '', kun: '', meanings: '', hunum: '', jlpt: '' }
 const EMPTY_TOEIC = { word: '', pos: '', meaning: '', exampleEn: '', exampleKo: '' }
 
-export function CreateNote() {
+export function CreateNote({ showMine = false }: { showMine?: boolean }) {
   const [mode, setMode] = useState<CreateMode>('form')
   const [track, setTrack] = useState<CreateTrack>('kanji')
   const [kanji, setKanji] = useState(EMPTY_KANJI)
@@ -68,6 +69,11 @@ export function CreateNote() {
   const [sent, setSent] = useState('')
   const [busy, setBusy] = useState(false)
   const mine = useApi<MyNotesResponse>('notes/mine')
+  const mineRef = useRef<HTMLHeadingElement>(null)
+  const loaded = mine.data !== null
+  useEffect(() => {
+    if (showMine && loaded) mineRef.current?.scrollIntoView({ block: 'start' })
+  }, [showMine, loaded])
 
   const fields = (): Record<string, unknown> =>
     track === 'kanji'
@@ -235,7 +241,9 @@ export function CreateNote() {
         </>
       )}
 
-      <h2>내가 만든 문제</h2>
+      <h2 ref={mineRef} className="scroll-target">
+        내가 만든 문제
+      </h2>
       {mine.data ? (
         mine.data.notes.length === 0 ? (
           <EmptyState title="아직 만든 문제가 없습니다">위에서 첫 문제를 만들어 보세요.</EmptyState>

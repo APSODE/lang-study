@@ -204,6 +204,14 @@ export interface MyNotesResponse {
   notes: UploadedNote[]
 }
 
+/** GET notes/mine/summary: 내가 만든 문제의 상태별 개수 · 오늘(04:00 기준) 만든 수와 하루 제한 */
+export interface MyUploadSummary {
+  draft: number
+  published: number
+  retired: number
+  today: { single: number; singleMax: number; file: number; fileMax: number }
+}
+
 /** GET admin/drafts */
 export interface Draft {
   id: string

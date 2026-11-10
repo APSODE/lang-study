@@ -1,10 +1,13 @@
-// 홈 (#/): 인사 · 오늘 진행 고리 · 연속 학습일과 최근 7일 · 이어서 학습 · 트랙 카드(+ 작문) · 만든 항목 카드 · 이번 주 순위.
+// 홈 (#/): 인사 · 오늘 진행 고리 · 연속 학습일과 최근 7일 · 이어서 학습 · 트랙 카드(+ 작문) · 만든 항목 카드 · 올린 문제 현황 · 이번 주 순위.
 // 만든 항목: 친구가 파일로 만든 항목(덱)마다 카드 하나 (요약의 decks, 공개된 카드가 있는 항목만).
+// 올린 문제 현황: 내가 만든 문제의 검토 대기 · 공개 · 반려 수와 오늘 더 만들 수 있는 수 (notes/mine/summary).
+//   하나도 안 만들었으면 만들기 탭으로 가는 한 줄만. 누르면 #/create?mine=1 (내가 만든 문제 목록).
 // 요약(study/summary)은 App 이 불러와 SummaryContext 로 준다. 통계 · 순위 API 가 아직 없으면(404) 그 부분만 숨긴다.
 import type { ReactNode } from 'react'
 import { TRACKS, type Track } from '@nakamura/core'
 import type { SessionUser } from '../api.ts'
 import { Card } from '../components/Card.tsx'
+import { Stat } from '../components/Stat.tsx'
 import { LoadError } from '../components/EmptyState.tsx'
 import { Icon } from '../components/Icon.tsx'
 import { ProgressBar } from '../components/ProgressBar.tsx'
@@ -19,6 +22,7 @@ import type {
   DeckStats,
   DeckSummary,
   LeaderboardResponse,
+  MyUploadSummary,
   TrackStats,
   TrackStatsResponse,
   TrackSummary,
@@ -232,6 +236,41 @@ function WriteCard({ w, ready }: { w: WriteSummary; ready: boolean }) {
   )
 }
 
+/** 올린 문제 현황. 불러오는 중 · 실패면 아무것도 보이지 않는다 */
+function MyUploads() {
+  const { data } = useApi<MyUploadSummary>('notes/mine/summary')
+  if (!data) return null
+  if (data.draft + data.published + data.retired === 0) {
+    return (
+      <p className="muted small home-invite">
+        한자 · 토익 문제를 직접 만들어 친구들과 같이 공부해 보세요. <a href="#/create">만들기</a>
+      </p>
+    )
+  }
+  const { single, singleMax, file, fileMax } = data.today
+  return (
+    <Card
+      title="올린 문제 현황"
+      className="my-uploads"
+      action={
+        <a className="more" href="#/create?mine=1">
+          내가 만든 문제 <Icon name="chevron" size={16} />
+        </a>
+      }
+    >
+      <div className="stats-row three">
+        <Stat value={fmtNum(data.draft)} label="검토 대기" />
+        <Stat value={fmtNum(data.published)} label="공개" />
+        <Stat value={fmtNum(data.retired)} label="반려" />
+      </div>
+      <p className="muted small">
+        오늘 더 만들 수 있어요 · 직접 {fmtNum(Math.max(0, singleMax - single))} / {fmtNum(singleMax)}개 · 파일{' '}
+        {fmtNum(Math.max(0, fileMax - file))} / {fmtNum(fileMax)}개
+      </p>
+    </Card>
+  )
+}
+
 function WeekRanking() {
   const board = useApi<LeaderboardResponse>('social/leaderboard?period=week')
   if (board.notReady || board.error) return null
@@ -345,6 +384,7 @@ export function Home({ user }: { user: SessionUser }) {
         </>
       )}
 
+      <MyUploads />
       <WeekRanking />
     </div>
   )

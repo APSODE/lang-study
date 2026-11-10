@@ -25,6 +25,7 @@ interface NavItem {
 export const NAV: NavItem[] = [
   { href: '#/', label: '홈', icon: 'home', match: r => r === '/' },
   { href: '#/stats', label: '기록', icon: 'stats', match: r => r.startsWith('/stats') },
+  { href: '#/create', label: '만들기', icon: 'create', match: r => r === '/create' },
   { href: '#/friends', label: '친구', icon: 'friends', match: r => r.startsWith('/friends') },
   { href: '#/library', label: '자료', icon: 'library', match: r => r.startsWith('/library') || r === '/kana' },
   { href: '#/settings', label: '설정', icon: 'settings', match: r => r.startsWith('/settings') },

@@ -21,8 +21,8 @@ import { parseWriteParams, TRACK_LABEL } from './study.ts'
 import type { StudySummary } from './types.ts'
 
 // 앱 껍데기: 로그인 상태(/api/auth/me)를 불러오고 해시 경로에 맞는 화면을 고른다.
-// 경로: #/ · #/stats · #/friends · #/library(/kana|/kanji|/create) · #/settings · #/admin(/invites|/reports|/drafts|/users)
-//       #/study/<트랙> (껍데기 없이 집중 모드) · #/login · #/join/<code>. 예전 #/kana 는 #/library/kana 로 보낸다.
+// 경로: #/ · #/stats · #/create(?mine=1) · #/friends · #/library(/kana|/kanji) · #/settings · #/admin(/invites|/reports|/drafts|/users)
+//       #/study/<트랙> (껍데기 없이 집중 모드) · #/login · #/join/<code>. 예전 #/kana 는 #/library/kana, #/library/create 는 #/create 로 보낸다.
 //       #/write/<트랙> 작문 문제 고르기 → #/study/<트랙>?mode=write&levels=5,4&learned=1 (작문 집중 모드)
 //       #/study/deck:<키> 친구가 만든 항목 학습 (집중 모드, 이름은 요약의 decks 에서)
 export function App() {
@@ -115,8 +115,10 @@ export function App() {
       return shell('50음도', <KanaChart />)
     case '/library/kanji':
       return shell('한자 목록', <KanjiList />)
+    case '/create':
+      return shell('문제 만들기', <CreateNote showMine={params.get('mine') === '1'} />)
     case '/library/create':
-      return shell('문제 만들기', <CreateNote />)
+      return <Redirect to={`/create${fullRoute.slice(route.length)}`} />
     case '/kana':
       return <Redirect to="/library/kana" />
     case '/settings':

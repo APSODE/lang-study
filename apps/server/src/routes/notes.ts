@@ -8,14 +8,16 @@
 //                            → 200 { batch, track, deck?: { key, name, isNew }, created, results: { no, status, label, id?, errors? }[] }
 //                              status: created(초안으로 만듦) · invalid(검사 실패) · duplicate(파일 안 중복 · 이미 있음) · limit(하루 제한 넘음)
 //                            400 { error } 파일 형식 · 항목 이름 · 개수(파일 하나 200개) 문제 · 429 오늘 파일로 더 만들 수 없음(하루 200개)
-//   GET  /notes/mine         { notes: UploadedNote[] } 내가 만든 문제 (최근 것부터, 상태 포함)
+//   GET  /notes/mine         { notes: UploadedNote[] } 내가 만든 문제 (최근 것부터 200개, 상태 포함)
+//   GET  /notes/mine/summary { draft, published, retired, today: { single, singleMax, file, fileMax } }
+//                            내가 만든 문제의 상태별 개수(전체) · 오늘(04:00 기준) 만든 수와 하루 제한 (직접 20 · 파일 200)
 // UploadedNote = { id, track, fields, status: 'draft' | 'published' | 'retired', createdAt, updatedAt }. 규칙은 uploads.ts.
 import type { DatabaseSync } from 'node:sqlite'
 import { Hono } from 'hono'
 import { isTrack } from '@nakamura/core'
 import { type AppEnv, requireUser } from '../auth/middleware.ts'
 import { publishedCatalog } from '../study/catalog.ts'
-import { createFromFile, createUpload, myUploads } from '../uploads.ts'
+import { createFromFile, createUpload, myUploadSummary, myUploads } from '../uploads.ts'
 import { readBody } from './auth.ts'
 
 export const noteRoutes = (db: DatabaseSync, opts: { now?: () => number } = {}) => {
@@ -46,5 +48,6 @@ export const noteRoutes = (db: DatabaseSync, opts: { now?: () => number } = {}) 
   })
 
   r.get('/notes/mine', c => c.json({ notes: myUploads(db, c.get('user')!.id) }))
+  r.get('/notes/mine/summary', c => c.json(myUploadSummary(db, c.get('user')!.id, now())))
   return r
 }

@@ -213,3 +213,53 @@ describe('검토 대기 (관리자)', () => {
     expect((await hana.send('POST', '/notes', { track: 'toeic', fields: TOEIC })).status).toBe(409)
   })
 })
+
+describe('올린 문제 현황 (GET /notes/mine/summary)', () => {
+  it('로그인 필요', async () => {
+    const { req } = setup({ kana: false })
+    expect((await req('GET', '/notes/mine/summary')).status).toBe(401)
+  })
+
+  it('상태별 개수 · 오늘 만든 수와 하루 제한 (직접 · 파일 따로, 04:00 에 풀린다)', async () => {
+    const { clock, db, user } = setup({ kana: false })
+    const admin = await user('boss', { admin: true })
+    const hana = await user('hana')
+    const mina = await user('mina')
+    const empty = { draft: 0, published: 0, retired: 0, today: { single: 0, singleMax: 20, file: 0, fileMax: 200 } }
+    expect(await hana.get('/notes/mine/summary')).toEqual(empty)
+
+    clock.now = kst('2026-11-09T05:00:00')
+    for (const ch of [...'一二三']) {
+      expect((await hana.send('POST', '/notes', { track: 'kanji', fields: kanjiOf(ch) })).status).toBe(201)
+    }
+    const file = await hana.send('POST', '/notes/file', { track: 'kanji', notes: [...'四五六七'].map(kanjiOf) })
+    expect((await file.json()).created).toBe(4)
+    // 다른 사람이 만든 것 · 가져오기로 들어온 것은 세지 않는다
+    expect((await mina.send('POST', '/notes', { track: 'kanji', fields: kanjiOf('八') })).status).toBe(201)
+    db.prepare("INSERT INTO notes(id, track, fields, status, source, created_at, updated_at) VALUES ('kanji-九', 'kanji', '{}', 'draft', 'ai', ?, ?)").run(
+      clock.now,
+      clock.now,
+    )
+
+    expect((await admin.send('POST', `/admin/drafts/${encodeURIComponent('kanji-一')}/publish`, {})).status).toBe(200)
+    expect((await admin.send('POST', `/admin/drafts/${encodeURIComponent('kanji-二')}/publish`, {})).status).toBe(200)
+    expect((await admin.send('POST', `/admin/drafts/${encodeURIComponent('kanji-四')}/reject`, {})).status).toBe(200)
+
+    expect(await hana.get('/notes/mine/summary')).toEqual({
+      draft: 4,
+      published: 2,
+      retired: 1,
+      today: { single: 3, singleMax: 20, file: 4, fileMax: 200 },
+    })
+    expect((await mina.get('/notes/mine/summary')).today.single).toBe(1)
+
+    // 다음 날 04:00 이 지나면 오늘 수만 0 으로
+    clock.now = kst('2026-11-10T04:00:00')
+    expect(await hana.get('/notes/mine/summary')).toEqual({
+      draft: 4,
+      published: 2,
+      retired: 1,
+      today: { single: 0, singleMax: 20, file: 0, fileMax: 200 },
+    })
+  })
+})
