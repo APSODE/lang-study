@@ -13,6 +13,9 @@ export type Period = (typeof PERIODS)[number]
 
 interface UserRow {
   id: number
+  /** 로그인 이름 */
+  login: string
+  /** 보이는 이름 (닉네임 ?? 로그인 이름). 리더보드 · 친구에는 이것을 name 으로 낸다 */
   name: string
   tz: string
   isAdmin: number
@@ -23,7 +26,8 @@ interface UserRow {
 const allUsers = (db: DatabaseSync): UserRow[] =>
   db
     .prepare(
-      'SELECT id, name, tz, is_admin AS isAdmin, show_progress AS showProgress, created_at AS createdAt FROM users ORDER BY id',
+      `SELECT id, name AS login, coalesce(display_name, name) AS name, tz, is_admin AS isAdmin, show_progress AS showProgress,
+              created_at AS createdAt FROM users ORDER BY id`,
     )
     .all() as unknown as UserRow[]
 
@@ -129,7 +133,10 @@ export const friends = (db: DatabaseSync, viewerId: number, now: number): Friend
 
 export interface UserOverview {
   id: number
+  /** 로그인 이름 */
   name: string
+  /** 보이는 이름 (닉네임 ?? 로그인 이름) */
+  display: string
   isAdmin: boolean
   createdAt: number
   lastStudiedDay: string | null
@@ -142,7 +149,8 @@ export const userOverview = (db: DatabaseSync, viewerId: number, now: number): U
   const week = reviewsBetween(db, periodStart(db, viewerId, 'week', now), now)
   return allUsers(db).map(u => ({
     id: u.id,
-    name: u.name,
+    name: u.login,
+    display: u.name,
     isAdmin: u.isAdmin === 1,
     createdAt: u.createdAt,
     lastStudiedDay: lastStudiedDay(db, u, now),

@@ -72,7 +72,7 @@ describe('초대 가입', () => {
 
     const res = await req('POST', '/auth/signup', { invite: code, name: '하나', password: 'password1' })
     expect(res.status).toBe(200)
-    expect(await res.json()).toEqual({ user: { id: expect.any(Number), name: '하나', isAdmin: false } })
+    expect(await res.json()).toEqual({ user: { id: expect.any(Number), name: '하나', display: '하나', isAdmin: false } })
     const cookie = sessionCookie(res)!
     expect(cookie).toBeTruthy()
     expect(await (await req('GET', '/auth/me', undefined, cookie)).json()).toMatchObject({ user: { name: '하나' } })
@@ -146,7 +146,7 @@ describe('로그인 · 로그아웃', () => {
     // 이름은 대소문자 구분 없이 찾는다
     const ok = await req('POST', '/auth/login', { name: 'boss', password: 'right-password' })
     expect(ok.status).toBe(200)
-    expect(await ok.json()).toEqual({ user: { id: expect.any(Number), name: 'Boss', isAdmin: true } })
+    expect(await ok.json()).toEqual({ user: { id: expect.any(Number), name: 'Boss', display: 'Boss', isAdmin: true } })
   })
 
   it('10번 틀리면 429, 다른 이름은 영향 없음', async () => {

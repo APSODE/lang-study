@@ -1,7 +1,8 @@
 // 서버 API 호출. 상대 경로(api/...)라 BASE_PATH 아래에 배포돼도 그대로 동작한다.
 // 상태를 바꾸는 요청은 항상 Content-Type: application/json 으로 보낸다 (서버의 CSRF 방어).
 
-export type SessionUser = { id: number; name: string; isAdmin: boolean }
+/** name = 로그인 이름, display = 보이는 이름 (닉네임 ?? 로그인 이름) */
+export type SessionUser = { id: number; name: string; display: string; isAdmin: boolean }
 
 export class ApiError extends Error {
   status: number

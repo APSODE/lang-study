@@ -470,3 +470,73 @@ describe('한자 새 카드 순서', () => {
     expect(publishedCatalog(db, 'kanji').notes.map(n => n.note.id)).toEqual(['kanji-日', 'kanji-一', 'kanji-楽', 'kanji-議', 'kanji-枠'])
   })
 })
+
+describe('일작 (kanji-write, 자기 평가)', () => {
+  const EAT: Note = {
+    id: 'kanji-食',
+    track: 'kanji',
+    fields: {
+      kanji: '食',
+      on: ['ショク'],
+      kun: ['た.べる'],
+      meanings_ko: ['먹다'],
+      jlpt: 5,
+      hunum_ko: '먹을 식',
+      sentences: [{ ja: '友だちとすしを食べます。', kana: 'ともだちとすしをたべます。', ko: '친구와 초밥을 먹습니다.' }],
+    },
+  }
+  const WRITE = 'kanji-食:kanji-write'
+  const READ = 'kanji-食:kanji-reading'
+
+  it('큐는 한자를 여전히 kanji-reading 으로 처음 소개한다', async () => {
+    const { login } = setup({ kana: false, extra: [EAT] })
+    const u = await login()
+    expect((await u.queue('kanji')).map(i => i.cardId)).toEqual([READ])
+  })
+
+  it('자동 채점: 한자 표기 · 가나 전체 모두 정답', async () => {
+    const { login } = setup({ kana: false, extra: [EAT] })
+    const u = await login()
+    const r = await (await u.answer(WRITE, 'ともだちとすしをたべます', { rating: 4 })).json()
+    expect(r).toMatchObject({ correct: true, expected: '友だちとすしを食べます。', rating: 4 })
+  })
+
+  it('틀린 답 + selfCorrect: true 는 맞힌 것으로 (평가는 보낸 값, 기본 좋음)', async () => {
+    const { db, login } = setup({ kana: false, extra: [EAT] })
+    const u = await login()
+    const r = await (await u.answer(WRITE, '友達とすしを食べます', { selfCorrect: true, rating: 2 })).json()
+    expect(r).toMatchObject({ correct: true, rating: 2, expected: '友だちとすしを食べます。' })
+    expect(db.prepare('SELECT rating, correct, response FROM review_logs').get()).toEqual({
+      rating: 2,
+      correct: 1,
+      response: '友達とすしを食べます',
+    })
+    db.prepare('DELETE FROM user_cards').run()
+    const d = await (await u.answer(WRITE, '友達とすしを食べます', { selfCorrect: true })).json()
+    expect(d).toMatchObject({ correct: true, rating: 3 })
+  })
+
+  it('selfCorrect: false 이거나 없으면 다시(Again)', async () => {
+    const { login } = setup({ kana: false, extra: [EAT] })
+    const u = await login()
+    expect(await (await u.answer(WRITE, '友達', { selfCorrect: false, rating: 4 })).json()).toMatchObject({ correct: false, rating: 1 })
+    expect(await (await u.answer(WRITE, '友達', { rating: 4 })).json()).toMatchObject({ correct: false, rating: 1 })
+  })
+
+  it('자기 평가가 아닌 연습 방식은 selfCorrect 를 무시한다 (kanji-reading · kana)', async () => {
+    const { db, login } = setup({ extra: [EAT] })
+    const u = await login()
+    const r = await (await u.answer(READ, 'のむ', { selfCorrect: true, rating: 4 })).json()
+    expect(r).toMatchObject({ correct: false, rating: 1 })
+    const k = await (await u.answer('kana-hira-ka:kana-to-romaji', 'ga', { selfCorrect: true, rating: 3 })).json()
+    expect(k).toMatchObject({ correct: false, rating: 1 })
+    expect(db.prepare('SELECT count(*) AS n FROM review_logs WHERE correct = 1').get()).toEqual({ n: 0 })
+  })
+
+  it('selfCorrect 형식이 틀리면 400', async () => {
+    const { login } = setup({ kana: false, extra: [EAT] })
+    const u = await login()
+    expect((await u.answer(WRITE, 'x', { selfCorrect: 'yes' })).status).toBe(400)
+    expect((await u.answer(WRITE, 'x', { selfCorrect: 1 })).status).toBe(400)
+  })
+})

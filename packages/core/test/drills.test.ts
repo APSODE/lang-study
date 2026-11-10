@@ -50,3 +50,42 @@ describe('채점', () => {
     expect(check('toeic-cloze', cv, 'resumes')).toBe(false)
   })
 })
+
+describe('일작 (kanji-write)', () => {
+  const withSentence: Note = {
+    id: 'kanji-食',
+    track: 'kanji',
+    fields: {
+      ...(eat.fields as object),
+      sentences: [{ ja: '友だちとすしを食べます。', kana: 'ともだちとすしをたべます。', ko: '친구와 초밥을 먹습니다.' }],
+    } as Note['fields'],
+  }
+  const run = (r: string) => getDrill('kanji-write')!.check(withSentence, r)
+
+  it('예문이 있을 때만, 다른 한자 연습 방식 뒤에 생긴다 (첫 소개는 kanji-reading)', () => {
+    expect(drillsFor(eat).map(d => d.id)).toEqual(['kanji-reading', 'kanji-meaning'])
+    expect(drillsFor(withSentence).map(d => d.id)).toEqual(['kanji-reading', 'kanji-meaning', 'kanji-write'])
+    expect(getDrill('kanji-write')!.selfGraded).toBe(true)
+    expect(getDrill('kanji-reading')!.selfGraded).toBeUndefined()
+  })
+  it('정답 표시는 한자 표기 ja', () => {
+    expect(run('x').expected).toBe('友だちとすしを食べます。')
+  })
+  it('한자 표기와 같으면 정답: 공백 · 문장 부호 · 전각은 무시', () => {
+    expect(run('友だちとすしを食べます。').correct).toBe(true)
+    expect(run('友だちとすしを食べます').correct).toBe(true)
+    expect(run(' 友だち と すしを 食べます！').correct).toBe(true)
+    expect(run('友だちと　すしを食べます?').correct).toBe(true)
+  })
+  it('가나 전체와 같으면 정답: 가타카나로 써도', () => {
+    expect(run('ともだちとすしをたべます').correct).toBe(true)
+    expect(run('トモダチトスシヲタベマス。').correct).toBe(true)
+    expect(run('ﾄﾓﾀﾞﾁﾄｽｼｦﾀﾍﾞﾏｽ').correct).toBe(true)
+  })
+  it('다른 표현 · 빈 답은 틀림 (자기 평가로 넘어간다)', () => {
+    expect(run('友達とすしを食べます。').correct).toBe(false)
+    expect(run('ともだちとすしをたべる').correct).toBe(false)
+    expect(run('').correct).toBe(false)
+    expect(run('。、 ').correct).toBe(false)
+  })
+})

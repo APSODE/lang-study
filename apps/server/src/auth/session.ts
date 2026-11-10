@@ -25,6 +25,8 @@ export const hashToken = (cfg: Config, token: string): string =>
 export interface SessionRow {
   userId: number
   name: string
+  /** 보이는 이름 (닉네임 ?? 로그인 이름) */
+  display: string
   isAdmin: boolean
   expiresAt: number
 }
@@ -54,10 +56,10 @@ export const findSession = (
   const id = hashToken(cfg, token)
   const row = db
     .prepare(
-      `SELECT u.id AS userId, u.name AS name, u.is_admin AS isAdmin, s.expires_at AS expiresAt
+      `SELECT u.id AS userId, u.name AS name, coalesce(u.display_name, u.name) AS display, u.is_admin AS isAdmin, s.expires_at AS expiresAt
          FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.id = ?`,
     )
-    .get(id) as { userId: number; name: string; isAdmin: number; expiresAt: number } | undefined
+    .get(id) as { userId: number; name: string; display: string; isAdmin: number; expiresAt: number } | undefined
   if (!row) return null
   if (row.expiresAt <= now) {
     db.prepare('DELETE FROM sessions WHERE id = ?').run(id)

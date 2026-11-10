@@ -3,7 +3,7 @@
 //   POST   /auth/signup            { invite, name, password } → 가입 후 로그인
 //   POST   /auth/login             { name, password }
 //   POST   /auth/logout
-//   GET    /auth/me                { user: SessionUser | null }
+//   GET    /auth/me                { user: SessionUser | null }  SessionUser = { id, name(로그인 이름), display(닉네임 ?? name), isAdmin }
 //   POST   /auth/password          { current, next } → { ok: true } 다른 기기의 세션은 모두 끊는다 (지금 세션은 유지)
 //   POST   /admin/invites          { days?, maxUses? } → 초대 발급
 //   GET    /admin/invites          쓸 수 있는 초대 목록
@@ -31,7 +31,7 @@ import {
   setSessionCookie,
 } from '../auth/session.ts'
 import { createThrottle } from '../auth/throttle.ts'
-import { checkName, checkPassword, findUserByName, insertUser, PASSWORD_MAX } from '../auth/users.ts'
+import { checkName, checkPassword, findUserByName, insertUser, nameTaken, PASSWORD_MAX } from '../auth/users.ts'
 
 const INVITE_INVALID = '초대 링크가 만료되었거나 더 이상 쓸 수 없습니다'
 
@@ -75,7 +75,8 @@ export const authRoutes = (cfg: Config, db: DatabaseSync) => {
     if (problem) return c.json({ error: problem }, 400)
     // 아래 두 검사는 해시 계산 전에 빨리 거르는 용도. 확정은 트랜잭션 안에서 다시 한다.
     if (!findActiveInvite(db, invite)) return c.json({ error: INVITE_INVALID }, 410)
-    if (findUserByName(db, name as string)) return c.json({ error: '이미 쓰고 있는 이름입니다' }, 409)
+    // 다른 사람의 닉네임과도 겹치면 안 된다 (보이는 이름이 같아지므로)
+    if (nameTaken(db, name as string)) return c.json({ error: '이미 쓰고 있는 이름입니다' }, 409)
 
     const hash = await hashPassword(password as string)
     const now = Date.now()
@@ -86,7 +87,7 @@ export const authRoutes = (cfg: Config, db: DatabaseSync) => {
         db.exec('ROLLBACK')
         return c.json({ error: INVITE_INVALID }, 410)
       }
-      if (findUserByName(db, name as string)) {
+      if (nameTaken(db, name as string)) {
         db.exec('ROLLBACK')
         return c.json({ error: '이미 쓰고 있는 이름입니다' }, 409)
       }
@@ -96,7 +97,7 @@ export const authRoutes = (cfg: Config, db: DatabaseSync) => {
       if (db.isTransaction) db.exec('ROLLBACK')
       throw err
     }
-    return logIn(c, { id, name: name as string, isAdmin: false })
+    return logIn(c, { id, name: name as string, display: name as string, isAdmin: false })
   })
 
   r.post('/auth/login', async c => {
@@ -119,7 +120,7 @@ export const authRoutes = (cfg: Config, db: DatabaseSync) => {
       return c.json({ error: '이름 또는 비밀번호가 올바르지 않습니다' }, 401)
     }
     throttle.reset(key)
-    return logIn(c, { id: user.id, name: user.name, isAdmin: user.isAdmin })
+    return logIn(c, { id: user.id, name: user.name, display: user.display, isAdmin: user.isAdmin })
   })
 
   r.post('/auth/logout', c => {

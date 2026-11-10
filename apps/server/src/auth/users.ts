@@ -18,18 +18,38 @@ export const checkPassword = (password: unknown): string | null =>
 
 export interface UserRow {
   id: number
+  /** 로그인 이름 */
   name: string
+  /** 보이는 이름: 닉네임이 있으면 닉네임, 없으면 로그인 이름 */
+  display: string
   passwordHash: string
   isAdmin: boolean
 }
 
+/** 보이는 이름 SQL 식 (users 별칭 u) */
+export const displaySql = (alias = 'u'): string => `coalesce(${alias}.display_name, ${alias}.name)`
+
 /** 이름으로 찾는다 (대소문자 구분 없음) */
 export const findUserByName = (db: DatabaseSync, name: string): UserRow | null => {
   const row = db
-    .prepare('SELECT id, name, password_hash AS passwordHash, is_admin AS isAdmin FROM users WHERE name = ? COLLATE NOCASE')
-    .get(name) as { id: number; name: string; passwordHash: string; isAdmin: number } | undefined
+    .prepare(
+      `SELECT id, name, ${displaySql('users')} AS display, password_hash AS passwordHash, is_admin AS isAdmin
+         FROM users WHERE name = ? COLLATE NOCASE`,
+    )
+    .get(name) as { id: number; name: string; display: string; passwordHash: string; isAdmin: number } | undefined
   return row ? { ...row, isAdmin: row.isAdmin === 1 } : null
 }
+
+/**
+ * 이 이름을 다른 사용자가 로그인 이름이나 닉네임으로 쓰고 있는지 (대소문자 구분 없음).
+ * 가입 이름 · 닉네임 모두 이걸로 검사해서, 보이는 이름이 서로 겹치지 않게 한다. exceptUserId 는 자기 자신.
+ */
+export const nameTaken = (db: DatabaseSync, name: string, exceptUserId?: number): boolean =>
+  db
+    .prepare(
+      'SELECT 1 FROM users WHERE (name = ? COLLATE NOCASE OR lower(display_name) = lower(?)) AND id != ? LIMIT 1',
+    )
+    .get(name, name, exceptUserId ?? -1) !== undefined
 
 export const insertUser = (
   db: DatabaseSync,

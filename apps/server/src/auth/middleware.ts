@@ -8,7 +8,8 @@ import { createMiddleware } from 'hono/factory'
 import type { Config } from '../config.ts'
 import { clearSessionCookie, findSession, SESSION_COOKIE, setSessionCookie } from './session.ts'
 
-export type SessionUser = { id: number; name: string; isAdmin: boolean }
+/** name = 로그인 이름, display = 보이는 이름 (닉네임 ?? 로그인 이름) */
+export type SessionUser = { id: number; name: string; display: string; isAdmin: boolean }
 
 export type AppEnv = { Variables: { user: SessionUser | null } }
 
@@ -19,8 +20,8 @@ export const loadUser = (db: DatabaseSync, cfg: Config) =>
     if (token) {
       const found = findSession(db, cfg, token)
       if (found) {
-        const { userId, name, isAdmin } = found.session
-        c.set('user', { id: userId, name, isAdmin })
+        const { userId, name, display, isAdmin } = found.session
+        c.set('user', { id: userId, name, display, isAdmin })
         if (found.renewed) setSessionCookie(c, cfg, token)
       } else {
         clearSessionCookie(c, cfg)

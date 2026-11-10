@@ -1,4 +1,4 @@
-// 설정 (#/settings): 프로필(진도 공개 · 시간대) · 학습(트랙별 하루 새 카드) · 비밀번호 변경 · 정보.
+// 설정 (#/settings): 프로필(닉네임 · 진도 공개 · 시간대) · 학습(트랙별 하루 새 카드) · 비밀번호 변경 · 정보.
 // me/profile · auth/password 가 아직 없으면(404) 그 부분만 "준비 중"으로 보여 준다.
 import { type FormEvent, useEffect, useState } from 'react'
 import { TRACKS, type Track } from '@nakamura/core'
@@ -46,7 +46,72 @@ const browserZone = (): string | null => {
   }
 }
 
-function ProfileSection({ user }: { user: SessionUser }) {
+/** 닉네임: 비우고 저장하면 지운다 (로그인 이름이 보인다). 로그인 이름은 바뀌지 않는다. */
+function NicknameForm({
+  profile,
+  onSaved,
+}: {
+  profile: Profile
+  onSaved: (p: Profile) => void
+}) {
+  const [draft, setDraft] = useState(profile.displayName ?? '')
+  const [busy, setBusy] = useState(false)
+  const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null)
+
+  useEffect(() => setDraft(profile.displayName ?? ''), [profile.displayName])
+
+  const next = draft.trim()
+  const unchanged = next === (profile.displayName ?? '')
+
+  const save = async (e: FormEvent) => {
+    e.preventDefault()
+    if (unchanged) return
+    setBusy(true)
+    setMsg(null)
+    try {
+      const p = await api<Profile>('me/profile', { method: 'PUT', body: { displayName: next === '' ? null : next } })
+      onSaved(p)
+      setMsg({ ok: true, text: p.displayName ? '닉네임을 바꿨습니다.' : '닉네임을 지웠습니다. 로그인 이름이 보입니다.' })
+    } catch (err) {
+      setMsg({ ok: false, text: (err as Error).message })
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <form className="form" onSubmit={save}>
+      <label>
+        닉네임
+        <input
+          value={draft}
+          onChange={e => {
+            setMsg(null)
+            setDraft(e.target.value)
+          }}
+          placeholder={profile.name}
+          maxLength={20}
+          autoComplete="nickname"
+          autoCapitalize="none"
+          spellCheck={false}
+        />
+        <span className="muted small">친구 · 순위 화면에 보이는 이름 (2~20자 한글 · 영문 · 숫자 · _ · -). 비우면 로그인 이름이 보입니다.</span>
+      </label>
+      {msg && (
+        <p className={msg.ok ? 'muted small' : 'error'} role="status">
+          {msg.text}
+        </p>
+      )}
+      <div className="actions">
+        <button type="submit" disabled={busy || unchanged}>
+          {busy ? '저장 중…' : '닉네임 저장'}
+        </button>
+      </div>
+    </form>
+  )
+}
+
+function ProfileSection({ user, onUserChange }: { user: SessionUser; onUserChange?: (u: SessionUser) => void }) {
   const profile = useApi<Profile>('me/profile')
   const [busy, setBusy] = useState(false)
   const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null)
@@ -76,7 +141,7 @@ function ProfileSection({ user }: { user: SessionUser }) {
     <Card title="프로필">
       <dl className="kv">
         <div>
-          <dt>이름</dt>
+          <dt>로그인 이름</dt>
           <dd>
             {user.name}
             {user.isAdmin && <span className="badge">관리자</span>}
@@ -89,6 +154,15 @@ function ProfileSection({ user }: { user: SessionUser }) {
           </div>
         )}
       </dl>
+      {p && (
+        <NicknameForm
+          profile={p}
+          onSaved={next => {
+            profile.setData(next)
+            onUserChange?.({ ...user, display: next.display })
+          }}
+        />
+      )}
       {p ? (
         <div className="form">
           <label className="switch-row">
@@ -319,10 +393,19 @@ function AboutSection({ onLogout }: { onLogout: () => void }) {
   )
 }
 
-export function Settings({ user, onLogout }: { user: SessionUser; onLogout: () => void }) {
+export function Settings({
+  user,
+  onLogout,
+  onUserChange,
+}: {
+  user: SessionUser
+  onLogout: () => void
+  /** 닉네임을 바꾸면 위 막대 · 인사말도 바로 바뀌게 */
+  onUserChange?: (u: SessionUser) => void
+}) {
   return (
     <div className="page settings-page">
-      <ProfileSection user={user} />
+      <ProfileSection user={user} onUserChange={onUserChange} />
       <StudySection />
       <PasswordSection />
       <AboutSection onLogout={onLogout} />

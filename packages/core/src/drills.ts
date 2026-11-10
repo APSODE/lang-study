@@ -3,7 +3,7 @@
 // 화면(Prompt · Answer)은 apps/web 이 drill id 로 연결한다.
 // 발음 평가는 나중에 `speak` 연습 방식 + 서버 Assessor 로 추가한다 — 여기 구조는 바뀌지 않는다.
 import type { Note, Track } from './notes.ts'
-import { kataToHira, normMeaning, normReading, normRomaji, splitMeanings } from './text.ts'
+import { kataToHira, normMeaning, normReading, normRomaji, normSentence, splitMeanings } from './text.ts'
 
 export interface CheckResult {
   correct: boolean
@@ -18,6 +18,11 @@ export interface Drill {
   requires: readonly string[]
   /** 사용자의 응답을 채점한다. 서버가 같은 함수로 다시 채점한다. */
   check(note: Note, response: string): CheckResult
+  /**
+   * 자기 평가: check 가 틀렸다고 해도 사용자가 모범 답안과 비교해 "맞았어요" 를 고를 수 있다.
+   * 답이 여러 가지로 나올 수 있는 연습 방식(일작)에만 둔다. 서버는 이 표시가 있는 연습 방식에서만 selfCorrect 를 받는다.
+   */
+  selfGraded?: true
 }
 
 const registry = new Map<string, Drill>()
@@ -104,6 +109,24 @@ registerDrill({
     const { meanings_ko } = f<{ meanings_ko: string[] }>(note)
     const r = normMeaning(response)
     return { correct: r !== '' && meanings_ko.some(m => normMeaning(m) === r), expected: meanings_ko.join(', ') }
+  },
+})
+
+// 한자: 일작 (예문의 한국어 → 일본어). 첫 소개 연습 방식이 되지 않게 다른 한자 연습 방식 뒤에 등록한다.
+// 한자 표기(ja) 또는 전체 가나(kana)와 같으면 정답. 그 밖의 표현은 사용자가 모범 답안과 비교해 스스로 채점한다.
+registerDrill({
+  id: 'kanji-write',
+  tracks: ['kanji'],
+  requires: ['kanji', 'sentences'],
+  selfGraded: true,
+  check(note, response) {
+    const { sentences = [] } = f<{ sentences?: { ja: string; kana: string }[] }>(note)
+    const s = sentences[0]
+    if (!s) return { correct: false, expected: '' }
+    const r = normSentence(response)
+    const correct =
+      r !== '' && (r === normSentence(s.ja) || kataToHira(r) === kataToHira(normSentence(s.kana)))
+    return { correct, expected: s.ja }
   },
 })
 

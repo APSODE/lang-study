@@ -37,9 +37,10 @@ export function AdminUsers() {
               <tr key={u.id}>
                 <th scope="row">
                   <span className="cell-name">
-                    {u.name}
+                    {u.display}
                     {u.isAdmin && <span className="badge">관리자</span>}
                   </span>
+                  {u.display !== u.name && <span className="muted small block">로그인 {u.name}</span>}
                   <span className="muted small block">가입 {fmtDate(u.createdAt)}</span>
                 </th>
                 <td>{relativeDay(u.lastStudiedDay, today)}</td>

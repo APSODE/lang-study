@@ -7,6 +7,9 @@ export const kataToHira = (s: string): string =>
 /** 읽기 비교용: 히라가나로, 공백 · 훈독 구분자(. -) 제거 */
 export const normReading = (s: string): string => kataToHira(s.normalize('NFKC')).replace(/[\s.\-]/g, '')
 
+/** 문장 비교용 (일작): NFKC, 공백 · 문장 부호(、。！？!?.,) 제거. 가나 비교는 여기에 kataToHira 를 더 한다 */
+export const normSentence = (s: string): string => s.normalize('NFKC').replace(/[\s、。！？!?.,]/g, '')
+
 /** 로마자 비교용: 소문자, 공백 · 기호 제거, 훈령식 · 헵번식 차이 흡수 */
 export const normRomaji = (s: string): string => {
   const t = s.normalize('NFKC').toLowerCase().replace(/[^a-z]/g, '')

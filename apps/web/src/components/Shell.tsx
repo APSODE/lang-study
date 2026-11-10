@@ -79,12 +79,12 @@ function UserMenu({ user, route, onLogout }: { user: SessionUser; route: string;
         aria-expanded={open}
         onClick={() => setOpen(o => !o)}
       >
-        {user.name.slice(0, 1).toUpperCase()}
+        {user.display.slice(0, 1).toUpperCase()}
       </button>
       {open && (
         <div className="menu" role="menu">
           <p className="menu-name">
-            <strong>{user.name}</strong>
+            <strong>{user.display}</strong>
             {user.isAdmin && <span className="badge">관리자</span>}
           </p>
           {user.isAdmin && (
@@ -154,10 +154,10 @@ export function Shell({
         </ul>
         <div className="side-user">
           <span className="avatar" aria-hidden="true">
-            {user.name.slice(0, 1).toUpperCase()}
+            {user.display.slice(0, 1).toUpperCase()}
           </span>
           <span className="side-user-name">
-            <strong>{user.name}</strong>
+            <strong>{user.display}</strong>
             {user.isAdmin && <span className="muted small">관리자</span>}
           </span>
           <button type="button" className="icon-btn" aria-label="로그아웃" title="로그아웃" onClick={() => void logout(onLogout)}>

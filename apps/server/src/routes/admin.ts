@@ -2,7 +2,8 @@
 // (초대 발급은 routes/auth.ts)
 //   GET   /admin/reports?status=open|resolved|rejected|all   { reports: Report[] } 최근 것부터 최대 200개 (기본 open)
 //   PATCH /admin/reports/:id   { status: 'resolved' | 'rejected' | 'open' } → Report
-//   GET   /admin/users         { users: { id, name, isAdmin, createdAt, lastStudiedDay, reviewsWeek, showProgress }[] }
+//   GET   /admin/users         { users: { id, name, display, isAdmin, createdAt, lastStudiedDay, reviewsWeek, showProgress }[] }
+//                              name = 로그인 이름, display = 닉네임 ?? name. 신고의 userName · resolvedBy 는 보이는 이름.
 import type { DatabaseSync } from 'node:sqlite'
 import { Hono } from 'hono'
 import type { Note } from '@nakamura/core'
@@ -35,8 +36,8 @@ interface ReportRow extends Omit<Report, 'note'> {
   noteStatus: string | null
 }
 
-const REPORT_SELECT = `SELECT r.id, r.note_id AS noteId, r.card_id AS cardId, u.name AS userName, r.reason, r.body, r.status,
-       r.created_at AS createdAt, r.resolved_at AS resolvedAt, a.name AS resolvedBy,
+const REPORT_SELECT = `SELECT r.id, r.note_id AS noteId, r.card_id AS cardId, coalesce(u.display_name, u.name) AS userName, r.reason, r.body, r.status,
+       r.created_at AS createdAt, r.resolved_at AS resolvedAt, coalesce(a.display_name, a.name) AS resolvedBy,
        n.track AS track, n.fields AS fields, n.status AS noteStatus
   FROM reports r
   JOIN users u ON u.id = r.user_id

@@ -1,16 +1,16 @@
 // 한자 목록 (#/library/kanji): JLPT 급수별(N5 → N1) 묶음, 검색, 누르면 자세히 보기 시트.
 // 검색은 한자 · 한국어 뜻 · 훈음 · 읽기(가나 또는 로마자)로 한다.
-import { type ReactNode, useDeferredValue, useMemo, useState } from 'react'
+import { useDeferredValue, useMemo, useState } from 'react'
 import type { KanjiFields } from '@nakamura/core'
 import { toHiragana } from 'wanakana'
 import { EmptyState, LoadError } from '../components/EmptyState.tsx'
 import { Icon } from '../components/Icon.tsx'
+import { ExampleSentences, ExampleWords, Reading } from '../components/KanjiExamples.tsx'
 import { Segmented } from '../components/Segmented.tsx'
 import { Sheet } from '../components/Sheet.tsx'
 import { Skeleton } from '../components/Skeleton.tsx'
 import { fmtNum } from '../format.ts'
 import { useApi } from '../hooks.ts'
-import { canSpeak, speak } from '../speech.ts'
 import type { NotesResponse } from '../types.ts'
 import { KANJI_CREDITS } from './Library.tsx'
 
@@ -63,19 +63,6 @@ function Kun({ r }: { r: string }) {
   )
 }
 
-function Reading({ text, children }: { text: string; children: ReactNode }) {
-  return canSpeak() ? (
-    <button type="button" className="reading" onClick={() => speak(text, 'ja-JP')} aria-label={`${text} 듣기`}>
-      <span lang="ja">{children}</span>
-      <Icon name="speaker" size={16} />
-    </button>
-  ) : (
-    <span className="reading" lang="ja">
-      {children}
-    </span>
-  )
-}
-
 function KanjiDetail({ f, onClose }: { f: KanjiFields; onClose: () => void }) {
   return (
     <Sheet title={`${f.kanji} 자세히`} onClose={onClose}>
@@ -125,17 +112,14 @@ function KanjiDetail({ f, onClose }: { f: KanjiFields; onClose: () => void }) {
         )}
         {f.examples && f.examples.length > 0 && (
           <section>
-            <h3>예시</h3>
-            <ul className="examples">
-              {f.examples.map(ex => (
-                <li key={ex.word}>
-                  <Reading text={ex.reading}>
-                    {ex.word} <span className="muted small">{ex.reading}</span>
-                  </Reading>
-                  <span className="small">{ex.meaning_ko}</span>
-                </li>
-              ))}
-            </ul>
+            <h3>예시 낱말</h3>
+            <ExampleWords list={f.examples} />
+          </section>
+        )}
+        {f.sentences && f.sentences.length > 0 && (
+          <section>
+            <h3>예문</h3>
+            <ExampleSentences list={f.sentences} />
           </section>
         )}
       </div>

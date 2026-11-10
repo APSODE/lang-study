@@ -43,6 +43,7 @@ export type LeaderboardPeriod = 'week' | 'month'
 export interface LeaderboardEntry {
   rank: number
   userId: number
+  /** 보이는 이름 (닉네임 ?? 로그인 이름) */
   name: string
   reviews: number
   streak: number
@@ -65,6 +66,7 @@ export interface FriendTrack {
 
 export interface Friend {
   userId: number
+  /** 보이는 이름 (닉네임 ?? 로그인 이름) */
   name: string
   streak: number
   reviewsWeek: number
@@ -81,7 +83,12 @@ export interface FriendsResponse {
 
 /** GET / PUT me/profile */
 export interface Profile {
+  /** 로그인 이름 (바뀌지 않는다) */
   name: string
+  /** 닉네임. 없으면 null */
+  displayName: string | null
+  /** 보이는 이름 (displayName ?? name) */
+  display: string
   isAdmin: boolean
   showProgress: boolean
   tz: string
@@ -137,7 +144,10 @@ export interface ReportsResponse {
 
 export interface AdminUser {
   id: number
+  /** 로그인 이름 */
   name: string
+  /** 보이는 이름 (닉네임 ?? 로그인 이름) */
+  display: string
   isAdmin: boolean
   createdAt: number
   lastStudiedDay: string | null

@@ -323,6 +323,11 @@ export interface AnswerInput {
   durationMs: number | null
   /** 맞혔을 때 사용자가 고른 평가 (2 어려움 · 3 좋음 · 4 쉬움). 없으면 좋음. */
   rating: 2 | 3 | 4 | null
+  /**
+   * 자기 평가 (일작처럼 selfGraded 연습 방식만): check 가 틀렸다고 해도 사용자가 모범 답안과 비교해 맞았다고 고른 경우.
+   * 다른 연습 방식에서는 무시한다 — 클라이언트가 정답을 꾸밀 수 없게.
+   */
+  selfCorrect?: boolean
 }
 
 export type AnswerOutcome =
@@ -346,7 +351,10 @@ export const answerCard = (db: DatabaseSync, userId: number, input: AnswerInput,
   if (!entry || !drill) return NOT_FOUND
 
   // 클라이언트가 보낸 정답 여부는 받지 않는다. 틀리면 평가는 무조건 다시(Again).
-  const { correct, expected } = drill.check(entry.note, input.response)
+  // 예외는 자기 평가 연습 방식(selfGraded)의 selfCorrect 뿐이다.
+  const checked = drill.check(entry.note, input.response)
+  const { expected } = checked
+  const correct = checked.correct || (drill.selfGraded === true && input.selfCorrect === true)
   const rating = (correct ? (input.rating ?? 3) : 1) as Grade
   const track = row.track
   const id = makeCardId(noteId, drillId)

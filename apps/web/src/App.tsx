@@ -99,7 +99,7 @@ export function App() {
     case '/kana':
       return <Redirect to="/library/kana" />
     case '/settings':
-      return shell('설정', <Settings user={user} onLogout={() => setUser(null)} />)
+      return shell('설정', <Settings user={user} onLogout={() => setUser(null)} onUserChange={setUser} />)
   }
 
   const admin = route.match(/^\/admin(?:\/(invites|reports|users))?$/)

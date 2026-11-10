@@ -169,7 +169,7 @@ export function Home({ user }: { user: SessionUser }) {
       <section className="hello">
         <p className="hello-date muted">{dayLabel(s?.day ?? localToday())}</p>
         <p className="hello-text">
-          {greeting()}, <strong>{user.name}</strong>님
+          {greeting()}, <strong>{user.display}</strong>님
         </p>
       </section>
 

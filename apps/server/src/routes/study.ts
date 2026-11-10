@@ -1,7 +1,8 @@
 // 학습 API. app.ts 에서 /api 아래에 붙인다. 모두 로그인 필요.
 //   GET  /study/summary                 트랙별 { track, notes, due, newLeft, newPerDay, learned, reviewsToday } + { day, streak, reviewsToday }
 //   GET  /study/queue?track=&limit=     { items: QueueItem[] } (순서는 study/service.ts 맨 위 설명)
-//   POST /study/answer                  { cardId, response, durationMs?, rating? } → { correct, expected, rating, due }
+//   POST /study/answer                  { cardId, response, durationMs?, rating?, selfCorrect? } → { correct, expected, rating, due }
+//                                       selfCorrect 는 자기 평가 연습 방식(kanji-write)에서만 쓴다. 다른 연습 방식은 무시.
 //   GET  /study/settings                { newPerDay: { kana, kanji, toeic } }
 //   PUT  /study/settings                { newPerDay: { kana?, kanji?, toeic? } } (0–100 정수)
 //   POST /reports                       { noteId, cardId?, reason, body? } → 201 { id }
@@ -47,7 +48,7 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
   r.post('/study/answer', async c => {
     const body = await readBody(c)
     if (!body) return c.json({ error: '요청 형식이 올바르지 않습니다' }, 400)
-    const { cardId, response, durationMs, rating } = body
+    const { cardId, response, durationMs, rating, selfCorrect } = body
     if (typeof cardId !== 'string' || cardId === '' || cardId.length > 200) {
       return c.json({ error: 'cardId 가 없습니다' }, 400)
     }
@@ -57,6 +58,9 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
     if (rating !== undefined && rating !== null && rating !== 2 && rating !== 3 && rating !== 4) {
       return c.json({ error: 'rating 은 2(어려움) · 3(좋음) · 4(쉬움) 중 하나여야 합니다' }, 400)
     }
+    if (selfCorrect !== undefined && selfCorrect !== null && typeof selfCorrect !== 'boolean') {
+      return c.json({ error: 'selfCorrect 는 true 또는 false 여야 합니다' }, 400)
+    }
     const duration =
       typeof durationMs === 'number' && Number.isFinite(durationMs) && durationMs >= 0
         ? Math.min(Math.round(durationMs), DURATION_MAX)
@@ -64,7 +68,13 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
     const out = answerCard(
       db,
       c.get('user')!.id,
-      { cardId, response, durationMs: duration, rating: (rating ?? null) as 2 | 3 | 4 | null },
+      {
+        cardId,
+        response,
+        durationMs: duration,
+        rating: (rating ?? null) as 2 | 3 | 4 | null,
+        selfCorrect: selfCorrect === true,
+      },
       now(),
     )
     if (!out.ok) return c.json({ error: out.error }, out.status)

@@ -85,8 +85,8 @@ describe('사용자 목록', () => {
     log(db, hana.id, T0)
     const { users } = await admin.get('/admin/users')
     expect(users).toEqual([
-      { id: admin.id, name: 'boss', isAdmin: true, createdAt: expect.any(Number), lastStudiedDay: null, reviewsWeek: 0, showProgress: true },
-      { id: hana.id, name: 'hana', isAdmin: false, createdAt: expect.any(Number), lastStudiedDay: '2026-11-09', reviewsWeek: 1, showProgress: false },
+      { id: admin.id, name: 'boss', display: 'boss', isAdmin: true, createdAt: expect.any(Number), lastStudiedDay: null, reviewsWeek: 0, showProgress: true },
+      { id: hana.id, name: 'hana', display: 'hana', isAdmin: false, createdAt: expect.any(Number), lastStudiedDay: '2026-11-09', reviewsWeek: 1, showProgress: false },
     ])
   })
 })
