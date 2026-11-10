@@ -72,6 +72,47 @@ const SAMPLES = [
   },
 ] as const
 
+const GUIDE_URL = `${import.meta.env.BASE_URL}ai-guide.md`
+
+/** AI 에게 줄 문제 양식 (마크다운). 펼칠 때 한 번 불러온다. 보기 · 받기 · 복사 */
+function AiGuide() {
+  const [text, setText] = useState<string | null>(null)
+  const [failed, setFailed] = useState(false)
+  const [copied, setCopied] = useState(false)
+  const load = () => {
+    if (text !== null) return
+    fetch(GUIDE_URL)
+      .then(r => (r.ok ? r.text() : Promise.reject(new Error(String(r.status)))))
+      .then(setText, () => setFailed(true))
+  }
+  const copy = () => {
+    if (!text) return
+    navigator.clipboard?.writeText(text).then(
+      () => {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 1500)
+      },
+      () => setCopied(false),
+    )
+  }
+  return (
+    <details className="aid" onToggle={e => (e.currentTarget as HTMLDetailsElement).open && load()}>
+      <summary className="small muted">AI 에게 줄 문제 양식 (마크다운)</summary>
+      <p className="small muted">ChatGPT · Claude 같은 AI 에게 이 양식을 주고 원하는 주제를 말하면, 올릴 수 있는 JSON 을 만들어 줘요.</p>
+      <div className="actions">
+        <a className="small" href={GUIDE_URL} download="문제_만들기_가이드.md">
+          양식 받기 (.md)
+        </a>
+        <button type="button" className="small" onClick={copy} disabled={!text}>
+          {copied ? '복사했어요' : '전체 복사'}
+        </button>
+      </div>
+      {failed ? <p className="small muted">양식을 불러오지 못했어요. 받기 링크를 눌러 보세요.</p> : null}
+      {text ? <pre className="json-sample guide-md">{text}</pre> : null}
+    </details>
+  )
+}
+
 const sampleHref = (data: unknown) => `data:application/json;charset=utf-8,${encodeURIComponent(`${JSON.stringify(data, null, 2)}\n`)}`
 
 const STATUS_LABEL: Record<FileItemStatus, string> = {
@@ -214,6 +255,7 @@ export function UploadFile({ readable, onUploaded }: { readable: (m: string) => 
           </div>
         ))}
       </details>
+      <AiGuide />
 
       <label>
         JSON 파일
