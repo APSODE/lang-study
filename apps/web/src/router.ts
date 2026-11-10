@@ -1,4 +1,4 @@
-// 해시 라우팅 (#/login, #/join/<code>, #/, #/stats, #/friends, #/library[/kana|/kanji], #/settings, #/admin[/invites|/reports|/users], #/study/<트랙>[?mode=write&…], #/write/<트랙>). 경로 목록은 App.tsx.
+// 해시 라우팅 (#/login, #/join/<code>, #/, #/stats, #/friends, #/library[/kana|/kanji|/create], #/settings, #/admin[/invites|/reports|/drafts|/users], #/study/<트랙>[?mode=write&…], #/write/<트랙>). 경로 목록은 App.tsx.
 // 해시 뒤의 '?…' 는 화면 매개변수다 (splitRoute 로 경로와 나눈다).
 // 정적 파일을 base './' 로 내므로 경로 라우팅 대신 해시를 쓴다. 새 의존성 없이 hashchange 만 듣는다.
 import { useEffect, useSyncExternalStore } from 'react'

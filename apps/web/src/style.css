@@ -548,6 +548,14 @@ button.reading .icon { color: var(--muted); }
 .status-resolved { background: var(--ok-soft); color: var(--ok); }
 .status-rejected { background: var(--hover); color: var(--muted); }
 
+/* 친구 문제 만들기 · 검토 대기: 필드 미리보기, 서버 검사 오류 목록 */
+.note-preview { display: grid; gap: 4px; margin: 0; }
+.note-preview > div { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 8px; }
+.note-preview dt { color: var(--muted); font-size: 0.875rem; }
+.note-preview dd { margin: 0; overflow-wrap: anywhere; }
+.form-errors { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+.ok-text { color: var(--ok); font-weight: 600; margin: 0; }
+
 /* --- 학습 (집중 모드: 껍데기 없음) ------------------------------------------ */
 main.study { padding-top: calc(8px + var(--safe-top)); padding-bottom: calc(24px + var(--safe-bottom)); }
 .focus-bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: 8px; margin-bottom: 8px; }

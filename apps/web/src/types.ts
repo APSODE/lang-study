@@ -159,3 +159,44 @@ export interface AdminUser {
 export interface AdminUsersResponse {
   users: AdminUser[]
 }
+
+// --- 친구 문제 만들기 ---
+
+/** 노트 상태: 초안(검토 중) · 공개 · 퇴출(반려) */
+export type NoteStatus = 'draft' | 'published' | 'retired'
+
+export const UPLOAD_STATUS_LABEL: Record<NoteStatus, string> = {
+  draft: '검토 중',
+  published: '공개',
+  retired: '반려',
+}
+
+/** POST notes 의 응답 · GET notes/mine 의 항목 */
+export interface UploadedNote {
+  id: string
+  track: Track
+  fields: Record<string, unknown>
+  status: NoteStatus
+  createdAt: number
+  updatedAt: number
+}
+
+/** GET notes/mine */
+export interface MyNotesResponse {
+  notes: UploadedNote[]
+}
+
+/** GET admin/drafts */
+export interface Draft {
+  id: string
+  track: Track
+  fields: Record<string, unknown>
+  createdAt: number
+  /** 만든 사람의 보이는 이름 (사용자가 지워졌으면 null) */
+  uploader: string | null
+  uploaderId: number | null
+}
+
+export interface DraftsResponse {
+  drafts: Draft[]
+}

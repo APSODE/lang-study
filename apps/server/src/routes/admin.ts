@@ -4,11 +4,15 @@
 //   PATCH /admin/reports/:id   { status: 'resolved' | 'rejected' | 'open' } → Report
 //   GET   /admin/users         { users: { id, name, display, isAdmin, createdAt, lastStudiedDay, reviewsWeek, showProgress }[] }
 //                              name = 로그인 이름, display = 닉네임 ?? name. 신고의 userName · resolvedBy 는 보이는 이름.
+//   GET   /admin/drafts        { drafts: { id, track, fields, createdAt, uploader, uploaderId }[] } 친구가 만든 초안, 최근 것부터 (uploader = 보이는 이름)
+//   POST  /admin/drafts/:id/publish   공개 (status published, 바로 학습에 들어간다) → { id, status }
+//   POST  /admin/drafts/:id/reject    반려 (status retired) → { id, status }. 사용자가 만든 초안이 아니면 404
 import type { DatabaseSync } from 'node:sqlite'
 import { Hono } from 'hono'
 import type { Note } from '@nakamura/core'
 import { type AppEnv, requireAdmin } from '../auth/middleware.ts'
 import { userOverview } from '../social.ts'
+import { listDrafts, reviewDraft } from '../uploads.ts'
 import { readBody } from './auth.ts'
 
 export const REPORT_STATUSES = ['open', 'resolved', 'rejected'] as const
@@ -90,6 +94,16 @@ export const adminRoutes = (db: DatabaseSync, opts: { now?: () => number } = {})
   })
 
   r.get('/admin/users', c => c.json({ users: userOverview(db, c.get('user')!.id, now()) }))
+
+  r.get('/admin/drafts', c => c.json({ drafts: listDrafts(db) }))
+
+  for (const action of ['publish', 'reject'] as const) {
+    r.post(`/admin/drafts/:id/${action}`, c => {
+      const id = c.req.param('id')
+      if (!reviewDraft(db, id, action, c.get('user')!.id, now())) return c.json({ error: '검토 대기 중인 문제가 아닙니다' }, 404)
+      return c.json({ id, status: action === 'publish' ? 'published' : 'retired' })
+    })
+  }
 
   return r
 }

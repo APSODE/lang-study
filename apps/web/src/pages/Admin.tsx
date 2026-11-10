@@ -1,10 +1,11 @@
-// 관리 (#/admin/invites · #/admin/reports · #/admin/users). 관리자만 (App 이 막는다).
+// 관리 (#/admin/invites · #/admin/reports · #/admin/drafts · #/admin/users). 관리자만 (App 이 막는다).
 import { Segmented } from '../components/Segmented.tsx'
+import { AdminDrafts } from './AdminDrafts.tsx'
 import { AdminInvites } from './AdminInvites.tsx'
 import { AdminReports } from './AdminReports.tsx'
 import { AdminUsers } from './AdminUsers.tsx'
 
-export type AdminTab = 'invites' | 'reports' | 'users'
+export type AdminTab = 'invites' | 'reports' | 'drafts' | 'users'
 
 export function Admin({ tab }: { tab: AdminTab }) {
   return (
@@ -15,11 +16,13 @@ export function Admin({ tab }: { tab: AdminTab }) {
         items={[
           { value: 'invites', label: '초대', href: '#/admin/invites' },
           { value: 'reports', label: '신고', href: '#/admin/reports' },
+          { value: 'drafts', label: '검토 대기', href: '#/admin/drafts' },
           { value: 'users', label: '사용자', href: '#/admin/users' },
         ]}
       />
       {tab === 'invites' && <AdminInvites />}
       {tab === 'reports' && <AdminReports />}
+      {tab === 'drafts' && <AdminDrafts />}
       {tab === 'users' && <AdminUsers />}
     </div>
   )
