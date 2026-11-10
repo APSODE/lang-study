@@ -6,6 +6,8 @@ import type { FieldsByTrack, NoteTrack, Track } from '@nakamura/core'
 export type {
   AnswerResult,
   DeckSummary,
+  LevelSummary,
+  Mastery,
   QueueItem,
   StudySummary,
   TrackSummary,
@@ -66,6 +68,9 @@ export interface LeaderboardEntry {
   reviews: number
   streak: number
   isMe: boolean
+  /** 레벨 · 칭호 (예전 서버는 없을 수 있다) */
+  level?: number
+  title?: string
 }
 
 /** GET social/leaderboard?period=week|month */
@@ -90,6 +95,9 @@ export interface Friend {
   reviewsWeek: number
   lastStudiedDay: string | null
   tracks: FriendTrack[]
+  /** 레벨 · 칭호 (예전 서버는 없을 수 있다) */
+  level?: number
+  title?: string
 }
 
 /** GET social/friends */

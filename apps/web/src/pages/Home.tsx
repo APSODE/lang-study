@@ -1,15 +1,19 @@
-// 홈 (#/): 인사 · 오늘 진행 고리 · 연속 학습일과 최근 7일 · 이어서 학습 · 트랙 카드(+ 작문) · 만든 항목 카드 · 올린 문제 현황 · 이번 주 순위.
+// 홈 (#/): 인사 · 레벨 카드 · 오늘 진행 고리 · 연속 학습일과 최근 7일 · 이어서 학습 · 트랙 카드(+ 작문) · 만든 항목 카드 · 올린 문제 현황 · 이번 주 순위.
 // 만든 항목: 친구가 파일로 만든 항목(덱)마다 카드 하나 (요약의 decks, 공개된 카드가 있는 항목만).
 // 올린 문제 현황: 내가 만든 문제의 검토 대기 · 공개 · 반려 수와 오늘 더 만들 수 있는 수 (notes/mine/summary).
 //   하나도 안 만들었으면 만들기 탭으로 가는 한 줄만. 누르면 #/create?mine=1 (내가 만든 문제 목록).
+// 레벨 카드: 레벨 · 칭호 · 다음 레벨까지 막대 · 오늘 얻은 XP (요약의 level). 마지막으로 본 레벨을 이 기기 localStorage 에 두고,
+//   그보다 오르면 한 번 축하 줄을 보여 준다 (처음 보면 저장만, 저장소를 못 쓰면 축하 없이).
+// 트랙 · 항목 카드 아래 실력: 익힌 노트 수 (한자는 "익힌 한자 N자" + 정복한 JLPT 단계).
 // 요약(study/summary)은 App 이 불러와 SummaryContext 로 준다. 통계 · 순위 API 가 아직 없으면(404) 그 부분만 숨긴다.
-import type { ReactNode } from 'react'
+import { type ReactNode, useEffect, useState } from 'react'
 import { TRACKS, type Track } from '@nakamura/core'
 import type { SessionUser } from '../api.ts'
 import { Card } from '../components/Card.tsx'
 import { Stat } from '../components/Stat.tsx'
 import { LoadError } from '../components/EmptyState.tsx'
 import { Icon } from '../components/Icon.tsx'
+import { LevelBadge } from '../components/LevelBadge.tsx'
 import { ProgressBar } from '../components/ProgressBar.tsx'
 import { Ring } from '../components/Ring.tsx'
 import { useSummary } from '../components/Shell.tsx'
@@ -22,6 +26,8 @@ import type {
   DeckStats,
   DeckSummary,
   LeaderboardResponse,
+  LevelSummary,
+  Mastery,
   MyUploadSummary,
   TrackStats,
   TrackStatsResponse,
@@ -38,6 +44,70 @@ const greeting = (): string => {
 }
 
 const MEDAL = ['🥇', '🥈', '🥉'] as const
+
+const LEVEL_SEEN_KEY = 'nk.level.seen'
+
+/** 마지막으로 본 레벨보다 올랐으면 true. 지금 레벨을 저장한다. 저장소를 못 쓰면 false */
+const checkLevelUp = (level: number): boolean => {
+  try {
+    const raw = window.localStorage.getItem(LEVEL_SEEN_KEY)
+    const seen = raw === null ? NaN : Number(raw)
+    if (raw === null || seen !== level) window.localStorage.setItem(LEVEL_SEEN_KEY, String(level))
+    return Number.isFinite(seen) && level > seen
+  } catch {
+    return false
+  }
+}
+
+function LevelCard({ lv }: { lv: LevelSummary }) {
+  const [levelUp, setLevelUp] = useState(false)
+  useEffect(() => {
+    if (checkLevelUp(lv.level)) setLevelUp(true)
+  }, [lv.level])
+  const span = lv.nextLevelXp - lv.levelXp
+  const into = lv.xp - lv.levelXp
+  return (
+    <Card className="level-card">
+      {levelUp && (
+        <div className="level-up" role="status">
+          <span>
+            <span aria-hidden="true">🎉</span> 레벨 업! <strong>Lv {lv.level}</strong> 달성
+          </span>
+          <button type="button" className="link" onClick={() => setLevelUp(false)}>
+            확인
+          </button>
+        </div>
+      )}
+      <div className="level-head">
+        <span className="level-num">Lv {lv.level}</span>
+        <span className="level-title">{lv.title}</span>
+      </div>
+      <ProgressBar value={span > 0 ? into / span : 0} label={`다음 레벨까지 ${fmtNum(lv.nextLevelXp - lv.xp)} XP 남음`} />
+      <p className="level-meta muted small">
+        <span>다음 레벨까지 {fmtNum(lv.nextLevelXp - lv.xp)} XP</span>
+        <span>오늘 +{fmtNum(lv.xpToday)} XP</span>
+      </p>
+    </Card>
+  )
+}
+
+/** 트랙 · 항목 카드의 실력 한 줄 */
+function MasteryLine({ m, kanji }: { m: Mastery; kanji: boolean }) {
+  return (
+    <p className="track-mastery muted small">
+      {kanji ? (
+        <>
+          익힌 한자 <strong>{fmtNum(m.mastered)}</strong>자
+          {m.jlpt !== null && <span className="badge">N{m.jlpt} 한자 정복</span>}
+        </>
+      ) : (
+        <>
+          익힌 <strong>{fmtNum(m.mastered)}</strong>개 / 전체 {fmtNum(m.total)}개
+        </>
+      )}
+    </p>
+  )
+}
 
 function TodayCard({
   tracks,
@@ -108,6 +178,7 @@ function TrackCard({ t, stats }: { t: TrackSummary; stats: TrackStats | undefine
       t={t}
       stats={stats}
       href={`#/study/${t.track}`}
+      kanji={t.track === 'kanji'}
     />
   )
 }
@@ -141,12 +212,14 @@ function StudyCard({
   t,
   stats,
   href,
+  kanji = false,
 }: {
   head: ReactNode
   name: string
   t: TrackSummary | DeckSummary
   stats: { cards: number; unseen: number } | undefined
   href: string
+  kanji?: boolean
 }) {
   const ready = t.notes > 0
   const todo = t.due + t.newLeft
@@ -185,6 +258,7 @@ function StudyCard({
               </span>
             </div>
           )}
+          {t.mastery && <MasteryLine m={t.mastery} kanji={kanji} />}
           <a className={`button${todo > 0 ? '' : ' secondary'}`} href={href}>
             {todo > 0 ? '학습 시작' : '오늘 끝 · 더 보기'}
           </a>
@@ -298,6 +372,7 @@ function WeekRanking() {
             <li key={e.userId} className={`${e.isMe ? 'me' : ''}${i === 3 ? ' gap' : ''}`}>
               <span className="rank">{e.rank <= 3 ? MEDAL[e.rank - 1] : e.rank}</span>
               <span className="rank-name">
+                {e.level !== undefined && <LevelBadge level={e.level} title={e.title} />}
                 {e.name}
                 {e.isMe && <span className="me-tag">나</span>}
               </span>
@@ -346,6 +421,7 @@ export function Home({ user }: { user: SessionUser }) {
         )
       ) : (
         <>
+          {s.level && <LevelCard lv={s.level} />}
           <TodayCard tracks={s.tracks} decks={decks} writing={s.writing} reviewsToday={s.reviewsToday} streak={s.streak} />
 
           {next ? (

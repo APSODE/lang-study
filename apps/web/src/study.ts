@@ -28,6 +28,27 @@ export interface AnswerResult {
   due: number
 }
 
+/** 트랙 · 항목 실력: 익힌 노트(복습 간격 21일 이상 카드가 있는 노트) 수 */
+export interface Mastery {
+  mastered: number
+  total: number
+  /** 한자만: 쉬운 단계부터 80% 이상 익힌 가장 높은 JLPT 단계 (5 = N5). 없으면 null */
+  jlpt: number | null
+}
+
+/** 레벨 (활동 XP). 칭호는 서버(core level.ts)가 준다 */
+export interface LevelSummary {
+  level: number
+  title: string
+  xp: number
+  /** 지금 레벨이 시작된 누적 XP */
+  levelXp: number
+  /** 다음 레벨이 되는 누적 XP */
+  nextLevelXp: number
+  /** 오늘 얻은 XP */
+  xpToday: number
+}
+
 export interface TrackSummary {
   track: Track
   /** 공개된 노트 수. 0 이면 준비 중 */
@@ -37,6 +58,8 @@ export interface TrackSummary {
   newPerDay: number
   learned: number
   reviewsToday: number
+  /** 예전 서버는 없을 수 있다 */
+  mastery?: Mastery
 }
 
 /** 작문 모드 요약 (한자 일작). 트랙 요약의 숫자에는 작문 카드가 들어가지 않는다 */
@@ -63,12 +86,16 @@ export interface DeckSummary {
   newPerDay: number
   learned: number
   reviewsToday: number
+  /** 예전 서버는 없을 수 있다 */
+  mastery?: Mastery
 }
 
 export interface StudySummary {
   day: string
   streak: number
   reviewsToday: number
+  /** 예전 서버는 없을 수 있다 */
+  level?: LevelSummary
   tracks: TrackSummary[]
   writing: WriteSummary
   /** 친구가 만든 항목 (만든 순서). 예전 서버는 없을 수 있다 */

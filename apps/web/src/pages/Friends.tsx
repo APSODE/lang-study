@@ -1,4 +1,4 @@
-// 친구 (#/friends): 이번 주 / 이번 달 순위 · 친구별 진도.
+// 친구 (#/friends): 이번 주 / 이번 달 순위 · 친구별 진도. 순위 · 친구 카드에 레벨 배지(칭호는 친구 카드에 한 줄, 순위에서는 배지 title).
 // 친구 진도의 막대는 트랙의 전체 카드 수(stats/tracks 의 cards — 모두 같은 공개 노트를 본다)에 대한 비율이다.
 // stats/tracks 가 없으면 친구들 중 가장 많이 배운 수를 기준으로 그린다.
 import { useState } from 'react'
@@ -6,6 +6,7 @@ import { TRACKS, type Track } from '@nakamura/core'
 import type { SessionUser } from '../api.ts'
 import { Card } from '../components/Card.tsx'
 import { EmptyState, LoadError } from '../components/EmptyState.tsx'
+import { LevelBadge } from '../components/LevelBadge.tsx'
 import { Segmented } from '../components/Segmented.tsx'
 import { useSummary } from '../components/Shell.tsx'
 import { Skeleton } from '../components/Skeleton.tsx'
@@ -45,6 +46,7 @@ function Leaderboard() {
                   {e.rank <= 3 ? MEDAL[e.rank - 1] : e.rank}
                 </span>
                 <span className="rank-name">
+                  {e.level !== undefined && <LevelBadge level={e.level} title={e.title} />}
                   {e.name}
                   {e.isMe && <span className="me-tag">나</span>}
                 </span>
@@ -75,6 +77,12 @@ function FriendCard({ f, today, totals }: { f: Friend; today: string; totals: Pa
         </span>
         <span className="friend-name">
           <strong>{f.name}</strong>
+          {f.level !== undefined && (
+            <span className="friend-title small">
+              <LevelBadge level={f.level} />
+              {f.title}
+            </span>
+          )}
           <span className="muted small">
             마지막 학습 {relativeDay(f.lastStudiedDay, today)} · 이번 주 {fmtNum(f.reviewsWeek)}장
           </span>
