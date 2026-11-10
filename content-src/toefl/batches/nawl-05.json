@@ -3,6 +3,18 @@
     "band": 13,
     "example_en": "",
     "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 635,
+    "sfi": 53.344,
+    "u": 22.0,
+    "word": "slavery"
+  },
+  {
+    "band": 13,
+    "example_en": "",
+    "example_ko": "",
     "forms": [
       "anthropologies"
     ],
@@ -225,18 +237,6 @@
     "sfi": 52.95,
     "u": 20.0,
     "word": "psychologist"
-  },
-  {
-    "band": 14,
-    "example_en": "",
-    "example_ko": "",
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 661,
-    "sfi": 52.946,
-    "u": 20.0,
-    "word": "trans"
   },
   {
     "band": 14,
@@ -1812,38 +1812,5 @@
     "sfi": 50.634,
     "u": 12.0,
     "word": "sub"
-  },
-  {
-    "band": 16,
-    "example_en": "",
-    "example_ko": "",
-    "forms": [
-      "blanks",
-      "blanked",
-      "blanking",
-      "blanker"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 791,
-    "sfi": 50.569,
-    "u": 11.0,
-    "word": "blank"
-  },
-  {
-    "band": 16,
-    "example_en": "",
-    "example_ko": "",
-    "forms": [
-      "chlorides"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 792,
-    "sfi": 50.526,
-    "u": 11.0,
-    "word": "chloride"
   }
 ]

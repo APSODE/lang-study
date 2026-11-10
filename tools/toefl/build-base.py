@@ -43,6 +43,9 @@ SOURCES = {
 
 BATCH_TARGET = 120
 
+# 낱말이 아니라 코퍼스의 접두사 조각인 표제어 — 단어 카드로 쓸 수 없어 묶음에서 뺀다 (base.json 에는 남긴다)
+DROP = {'par', 'ex', 'mid', 'non', 'pre', 'trans', 'semi', 'multi', 'micro', 'neo'}
+
 # 교육용 표의 표제어가 빈도 표와 다른 것: 빈도 표 표제어 → 교육용 표 표제어
 FORMS_ALIAS = {'headquarters': 'headquarter'}
 
@@ -154,7 +157,8 @@ def main() -> None:
         return w in toeic or FORMS_ALIAS.get(w, w) in toeic
 
     overlap = [e for e in entries if dup(e)]
-    todo = [e for e in entries if not dup(e)]
+    dropped = [e for e in entries if not dup(e) and e['word'].lower() in DROP]
+    todo = [e for e in entries if not dup(e) and e['word'].lower() not in DROP]
 
     n_batches = max(1, round(len(todo) / BATCH_TARGET))
     size, extra = divmod(len(todo), n_batches)
@@ -178,6 +182,7 @@ def main() -> None:
         print(f'{name} sha256={hashlib.sha256((CACHE / name).read_bytes()).hexdigest()}')
     print(f'NAWL 단어 {len(entries)}개 (원본 {len(rows) - 1}줄)')
     print(f'토익과 겹쳐 묶음에서 뺀 단어 {len(overlap)}개: ' + ', '.join(f"{e['word']}({e['rank']})" for e in overlap))
+    print(f'접두사 조각이라 뺀 단어 {len(dropped)}개: ' + ', '.join(e['word'] for e in dropped))
     print(f'묶음 {n_batches}개, 단어 {len(todo)}개: ' + ' '.join(names))
     if quirks:
         print(f'데이터 특이사항 {len(quirks)}건:')

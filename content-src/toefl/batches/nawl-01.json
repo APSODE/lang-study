@@ -81,23 +81,6 @@
     "example_en": "",
     "example_ko": "",
     "forms": [
-      "pars",
-      "parred",
-      "parring"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 13,
-    "sfi": 62.339,
-    "u": 171.0,
-    "word": "par"
-  },
-  {
-    "band": 1,
-    "example_en": "",
-    "example_ko": "",
-    "forms": [
       "ions"
     ],
     "list": "NAWL",
@@ -1824,20 +1807,5 @@
     "sfi": 58.113,
     "u": 65.0,
     "word": "conceptual"
-  },
-  {
-    "band": 4,
-    "example_en": "",
-    "example_ko": "",
-    "forms": [
-      "detections"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 155,
-    "sfi": 58.103,
-    "u": 65.0,
-    "word": "detection"
   }
 ]

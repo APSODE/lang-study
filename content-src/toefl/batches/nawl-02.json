@@ -4,6 +4,21 @@
     "example_en": "",
     "example_ko": "",
     "forms": [
+      "detections"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 155,
+    "sfi": 58.103,
+    "u": 65.0,
+    "word": "detection"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
       "interacts",
       "interacted",
       "interacting"
@@ -60,21 +75,6 @@
     "sfi": 58.038,
     "u": 64.0,
     "word": "conception"
-  },
-  {
-    "band": 4,
-    "example_en": "",
-    "example_ko": "",
-    "forms": [
-      "exes"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 162,
-    "sfi": 58.029,
-    "u": 64.0,
-    "word": "ex"
   },
   {
     "band": 4,
@@ -194,18 +194,6 @@
     "sfi": 57.91,
     "u": 62.0,
     "word": "oral"
-  },
-  {
-    "band": 4,
-    "example_en": "",
-    "example_ko": "",
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 174,
-    "sfi": 57.909,
-    "u": 62.0,
-    "word": "mid"
   },
   {
     "band": 4,
@@ -889,18 +877,6 @@
     "sfi": 57.265,
     "u": 53.0,
     "word": "emission"
-  },
-  {
-    "band": 5,
-    "example_en": "",
-    "example_ko": "",
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 233,
-    "sfi": 57.257,
-    "u": 53.0,
-    "word": "non"
   },
   {
     "band": 5,
@@ -1736,18 +1712,6 @@
     "list": "NAWL",
     "meaning_ko": "",
     "pos": "",
-    "rank": 303,
-    "sfi": 56.759,
-    "u": 47.0,
-    "word": "pre"
-  },
-  {
-    "band": 7,
-    "example_en": "",
-    "example_ko": "",
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
     "rank": 306,
     "sfi": 56.734,
     "u": 47.0,
@@ -1797,5 +1761,41 @@
     "sfi": 56.714,
     "u": 47.0,
     "word": "symbolic"
+  },
+  {
+    "band": 7,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "utilizes",
+      "utilized",
+      "utilizing",
+      "utilise",
+      "utilises",
+      "utilised",
+      "utilising"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 310,
+    "sfi": 56.699,
+    "u": 47.0,
+    "word": "utilize"
+  },
+  {
+    "band": 7,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "physiologicals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 311,
+    "sfi": 56.681,
+    "u": 47.0,
+    "word": "physiological"
   }
 ]

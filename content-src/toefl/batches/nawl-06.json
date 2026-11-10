@@ -4,6 +4,39 @@
     "example_en": "",
     "example_ko": "",
     "forms": [
+      "blanks",
+      "blanked",
+      "blanking",
+      "blanker"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 791,
+    "sfi": 50.569,
+    "u": 11.0,
+    "word": "blank"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "chlorides"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 792,
+    "sfi": 50.526,
+    "u": 11.0,
+    "word": "chloride"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
       "sensibles"
     ],
     "list": "NAWL",
@@ -616,18 +649,6 @@
     "sfi": 48.592,
     "u": 7.0,
     "word": "powder"
-  },
-  {
-    "band": 18,
-    "example_en": "",
-    "example_ko": "",
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 847,
-    "sfi": 48.505,
-    "u": 7.0,
-    "word": "micro"
   },
   {
     "band": 18,
@@ -1499,18 +1520,6 @@
     "band": 19,
     "example_en": "",
     "example_ko": "",
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 924,
-    "sfi": 44.497,
-    "u": 3.0,
-    "word": "semi"
-  },
-  {
-    "band": 19,
-    "example_en": "",
-    "example_ko": "",
     "forms": [
       "slashes",
       "slashed",
@@ -1536,18 +1545,6 @@
     "sfi": 44.415,
     "u": 3.0,
     "word": "ridiculous"
-  },
-  {
-    "band": 19,
-    "example_en": "",
-    "example_ko": "",
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 927,
-    "sfi": 44.385,
-    "u": 3.0,
-    "word": "multi"
   },
   {
     "band": 19,
@@ -1720,18 +1717,6 @@
     "sfi": 43.128,
     "u": 2.0,
     "word": "incredibly"
-  },
-  {
-    "band": 19,
-    "example_en": "",
-    "example_ko": "",
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 944,
-    "sfi": 43.106,
-    "u": 2.0,
-    "word": "neo"
   },
   {
     "band": 19,

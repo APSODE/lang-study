@@ -4,23 +4,6 @@
     "example_en": "",
     "example_ko": "",
     "forms": [
-      "pronounces",
-      "pronounced",
-      "pronouncing"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 478,
-    "sfi": 54.951,
-    "u": 31.0,
-    "word": "pronounce"
-  },
-  {
-    "band": 10,
-    "example_en": "",
-    "example_ko": "",
-    "forms": [
       "objections"
     ],
     "list": "NAWL",
@@ -1795,17 +1778,5 @@
     "sfi": 53.371,
     "u": 22.0,
     "word": "stereotype"
-  },
-  {
-    "band": 13,
-    "example_en": "",
-    "example_ko": "",
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 635,
-    "sfi": 53.344,
-    "u": 22.0,
-    "word": "slavery"
   }
 ]

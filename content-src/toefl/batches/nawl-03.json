@@ -3,42 +3,6 @@
     "band": 7,
     "example_en": "",
     "example_ko": "",
-    "forms": [
-      "utilizes",
-      "utilized",
-      "utilizing",
-      "utilise",
-      "utilises",
-      "utilised",
-      "utilising"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 310,
-    "sfi": 56.699,
-    "u": 47.0,
-    "word": "utilize"
-  },
-  {
-    "band": 7,
-    "example_en": "",
-    "example_ko": "",
-    "forms": [
-      "physiologicals"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "",
-    "pos": "",
-    "rank": 311,
-    "sfi": 56.681,
-    "u": 47.0,
-    "word": "physiological"
-  },
-  {
-    "band": 7,
-    "example_en": "",
-    "example_ko": "",
     "list": "NAWL",
     "meaning_ko": "",
     "pos": "",
@@ -1823,5 +1787,22 @@
     "sfi": 54.954,
     "u": 31.0,
     "word": "philosopher"
+  },
+  {
+    "band": 10,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "pronounces",
+      "pronounced",
+      "pronouncing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 478,
+    "sfi": 54.951,
+    "u": 31.0,
+    "word": "pronounce"
   }
 ]

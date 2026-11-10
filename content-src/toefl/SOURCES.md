@@ -67,3 +67,7 @@ obtain(2), distribution(3), aspect(5), dynamic(6), impact(7), publish(9), author
 
 - 토플 단어 목록 · 순위: New Academic Word List 1.2, Browne, C., Culligan, B. & Phillips, J., CC BY-SA 4.0 (newgeneralservicelist.com)
 - 토플 노트(품사 · 한국어 뜻 · 예문 포함): NakamuraProject, CC BY-SA 4.0
+
+## 접두사 조각 제외 (2026-11-10)
+
+par, ex, mid, non, pre, trans, micro, semi, multi, neo 는 코퍼스의 접두사 조각이라 단어 카드로 쓸 수 없어 묶음에서 뺐다(`tools/toefl/build-base.py` 의 DROP, base.json 에는 남김). 묶음 단어 717개.
