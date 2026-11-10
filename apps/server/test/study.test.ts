@@ -362,11 +362,11 @@ describe('설정', () => {
   it('기본 15, 바꾸기, 검사', async () => {
     const { login } = setup()
     const u = await login()
-    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15 } })
+    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15 }, writeNewPerDay: 10 })
     const ok = await u.send('PUT', '/study/settings', { newPerDay: { kana: 30, toeic: 0 } })
     expect(ok.status).toBe(200)
-    expect(await ok.json()).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0 } })
-    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0 } })
+    expect(await ok.json()).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0 }, writeNewPerDay: 10 })
+    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0 }, writeNewPerDay: 10 })
     expect((await u.send('PUT', '/study/settings', { newPerDay: { kana: 100 } })).status).toBe(200)
     for (const bad of [
       {},
@@ -538,5 +538,165 @@ describe('일작 (kanji-write, 자기 평가)', () => {
     const u = await login()
     expect((await u.answer(WRITE, 'x', { selfCorrect: 'yes' })).status).toBe(400)
     expect((await u.answer(WRITE, 'x', { selfCorrect: 1 })).status).toBe(400)
+  })
+})
+
+describe('작문 모드 (mode=write)', () => {
+  const kj = (k: string, jlpt: number, freq: number, sentence = true): Note => ({
+    id: `kanji-${k}`,
+    track: 'kanji',
+    fields: {
+      kanji: k,
+      on: ['オン'],
+      kun: [],
+      meanings_ko: ['뜻'],
+      jlpt,
+      freq,
+      ...(sentence ? { sentences: [{ ja: `${k}です。`, kana: 'です。', ko: `${k} 입니다.` }] } : {}),
+    },
+  })
+  // 카탈로그 순서: 日(N5) 一(N5) 楽(N4) 議(N3) 枠(N1, 예문 없음)
+  const NOTES = [kj('一', 5, 2), kj('日', 5, 1), kj('楽', 4, 373), kj('議', 3, 50), kj('枠', 1, 900, false)]
+  const W = (k: string) => `kanji-${k}:kanji-write`
+  const R = (k: string) => `kanji-${k}:kanji-reading`
+
+  const start = async () => {
+    const t = setup({ kana: false, extra: NOTES })
+    const u = await t.login()
+    const wq = async (q = '') => (await u.get(`/study/queue?track=kanji&mode=write&limit=100${q}`)).items as QueueItem[]
+    return { ...t, u, wq }
+  }
+
+  it('보통 한자 큐 · 요약에는 작문 카드가 없다 (다음 날 후속 카드에도)', async () => {
+    const { db, clock, u } = await start()
+    expect((await u.queue('kanji')).map(i => i.cardId)).toEqual([R('日'), R('一'), R('楽'), R('議'), R('枠')])
+    for (const k of ['日', '一']) expect((await u.answer(R(k), 'オン')).status).toBe(200)
+    db.prepare('UPDATE user_cards SET due = ?').run(T0 + 30 * 24 * HOUR)
+    clock.now = kst('2026-11-10T09:00:00')
+    const items = await u.queue('kanji')
+    expect(items.some(i => i.drillId === 'kanji-write')).toBe(false)
+    expect(items.filter(i => i.noteId === 'kanji-日').map(i => i.drillId)).toEqual(['kanji-meaning'])
+    const kanji = (await u.get('/study/summary')).tracks[1]
+    expect(kanji).toMatchObject({ track: 'kanji', newLeft: 5, learned: 2, due: 0 }) // 새 노트 3 + 후속 2 (작문 빼고)
+  })
+
+  it('작문 카드만 한 노트도 보통 모드에서는 처음 보는 노트 (reading 으로 소개)', async () => {
+    const { u } = await start()
+    expect((await u.answer(W('日'), '日です')).status).toBe(200)
+    expect((await u.queue('kanji'))[0]!.cardId).toBe(R('日'))
+    const s = await u.get('/study/summary')
+    expect(s.tracks[1]).toMatchObject({ learned: 0, due: 0, newLeft: 5 })
+    expect(s.writing).toMatchObject({ track: 'kanji', learned: 1, newLeft: 3, newPerDay: 10 })
+  })
+
+  it('새 작문 문제: 레벨 · 공부한 한자만 조건, 순서는 쉬운 레벨 → 자주 쓰는 순', async () => {
+    const { u, wq } = await start()
+    expect((await wq()).map(i => i.cardId)).toEqual([W('日'), W('一'), W('楽'), W('議')]) // 예문 없는 枠 은 없다
+    expect((await wq()).every(i => i.isNew && i.drillId === 'kanji-write')).toBe(true)
+    expect((await wq('&levels=4,3')).map(i => i.cardId)).toEqual([W('楽'), W('議')])
+    expect((await wq('&levels=5&learnedOnly=1')).map(i => i.cardId)).toEqual([])
+    expect((await u.answer(R('一'), 'オン')).status).toBe(200)
+    expect((await u.answer(R('議'), 'オン')).status).toBe(200)
+    expect((await wq('&levels=5&learnedOnly=1')).map(i => i.cardId)).toEqual([W('一')])
+    expect((await wq('&learnedOnly=1')).map(i => i.cardId)).toEqual([W('一'), W('議')])
+    expect((await wq('&levels=5&learnedOnly=0')).map(i => i.cardId)).toEqual([W('日'), W('一')])
+  })
+
+  it('복습할 작문 카드는 고른 레벨과 상관없이 먼저 나온다', async () => {
+    const { db, clock, wq, u } = await start()
+    expect((await u.answer(W('議'), '議です')).status).toBe(200)
+    setDue(db, W('議'), T0 + 1000)
+    clock.now = T0 + 5000
+    const items = await wq('&levels=5')
+    expect(items.map(i => [i.cardId, i.isNew])).toEqual([
+      [W('議'), false],
+      [W('日'), true],
+      [W('一'), true],
+    ])
+    // 보통 큐에는 나오지 않는다
+    expect((await u.queue('kanji')).some(i => i.cardId === W('議'))).toBe(false)
+    expect((await u.get('/study/summary')).writing).toMatchObject({ due: 1, learned: 1 })
+    expect((await u.get('/study/summary')).tracks[1]).toMatchObject({ due: 0 })
+  })
+
+  it('하루 새 문제 수는 보통 한자와 따로 (409)', async () => {
+    const { db, u, wq } = await start()
+    await u.send('PUT', '/study/settings', { newPerDay: { kanji: 1 }, writeNewPerDay: 2 })
+    expect((await wq()).map(i => i.cardId)).toEqual([W('日'), W('一')])
+    expect((await u.answer(W('日'), 'x', { selfCorrect: true })).status).toBe(200)
+    expect((await u.answer(W('一'), '一です')).status).toBe(200)
+    const over = await u.answer(W('楽'), '楽です')
+    expect(over.status).toBe(409)
+    expect((await over.json()).error).toContain('작문')
+    expect((await wq()).filter(i => i.isNew)).toEqual([])
+    // 작문 카드 2장은 보통 한자 수에 들어가지 않는다
+    expect((await u.queue('kanji')).map(i => i.cardId)).toEqual([R('日')])
+    expect((await u.answer(R('日'), 'オン')).status).toBe(200)
+    expect((await u.answer(R('一'), 'オン')).status).toBe(409)
+    // 보통 한자 수를 다 써도 작문 복습은 된다
+    expect((await u.answer(W('日'), '日です')).status).toBe(200)
+    expect(db.prepare("SELECT count(*) AS n FROM user_cards WHERE drill_id = 'kanji-write'").get()).toEqual({ n: 2 })
+    const s = await u.get('/study/summary')
+    expect(s.writing).toEqual({ track: 'kanji', due: 0, newLeft: 0, newPerDay: 2, learned: 2 })
+    expect(s.tracks[1]).toMatchObject({ newLeft: 0, newPerDay: 1, learned: 1 })
+  })
+
+  it('고르기 화면 수: 레벨별 total · learned · introduced', async () => {
+    const { u } = await start()
+    expect((await u.answer(R('日'), 'オン')).status).toBe(200)
+    expect((await u.answer(R('楽'), 'オン')).status).toBe(200)
+    expect((await u.answer(W('日'), '日です')).status).toBe(200)
+    expect((await u.answer(W('一'), '一です')).status).toBe(200)
+    expect(await u.get('/study/write/options?track=kanji')).toEqual({
+      levels: [
+        { jlpt: 5, total: 2, learned: 1, introduced: 2, learnedFresh: 0 },
+        { jlpt: 4, total: 1, learned: 1, introduced: 0, learnedFresh: 1 },
+        { jlpt: 3, total: 1, learned: 0, introduced: 0, learnedFresh: 0 },
+      ],
+      newPerDay: 10,
+      newLeft: 2,
+      due: 0,
+    })
+    expect(await u.get('/study/write/options')).toMatchObject({ newLeft: 2 }) // track 기본 kanji
+  })
+
+  it('입력 검사 (400)', async () => {
+    const { u } = await start()
+    for (const q of [
+      'track=kanji&mode=read',
+      'track=kana&mode=write',
+      'track=kanji&mode=write&levels=',
+      'track=kanji&mode=write&levels=0',
+      'track=kanji&mode=write&levels=6',
+      'track=kanji&mode=write&levels=5,x',
+      'track=kanji&mode=write&levels=4.5',
+      'track=kanji&mode=write&learnedOnly=yes',
+      'track=kanji&levels=5',
+      'track=kanji&learnedOnly=1',
+    ]) {
+      expect((await u.get(`/study/queue?${q}`)).error, q).toBeTruthy()
+    }
+    expect((await u.get('/study/queue?track=kanji&mode=write&levels=5,5,4&learnedOnly=true')).items).toBeTruthy()
+    expect((await u.get('/study/queue?track=kanji&mode=normal')).items).toHaveLength(5)
+    expect((await u.get('/study/write/options?track=kana')).error).toBeTruthy()
+    expect((await u.get('/study/write/options?track=nope')).error).toBeTruthy()
+  })
+
+  it('설정: writeNewPerDay 0–100 정수', async () => {
+    const { u } = await start()
+    const ok = await u.send('PUT', '/study/settings', { writeNewPerDay: 0 })
+    expect(ok.status).toBe(200)
+    expect(await ok.json()).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15 }, writeNewPerDay: 0 })
+    expect((await u.send('PUT', '/study/settings', { writeNewPerDay: 100 })).status).toBe(200)
+    for (const bad of [-1, 101, 1.5, '3', null, true]) {
+      expect((await u.send('PUT', '/study/settings', { writeNewPerDay: bad })).status, String(bad)).toBe(400)
+    }
+    // 하나라도 틀리면 아무것도 바뀌지 않는다
+    expect((await u.send('PUT', '/study/settings', { newPerDay: { kanji: 3 }, writeNewPerDay: -1 })).status).toBe(400)
+    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15 }, writeNewPerDay: 100 })
+    // 쓰기 0 이면 새 작문 문제가 없다
+    await u.send('PUT', '/study/settings', { writeNewPerDay: 0 })
+    expect((await u.get('/study/queue?track=kanji&mode=write')).items).toEqual([])
+    expect((await u.get('/study/summary')).writing).toMatchObject({ newLeft: 0, newPerDay: 0 })
   })
 })

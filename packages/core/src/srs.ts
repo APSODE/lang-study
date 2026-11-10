@@ -6,6 +6,8 @@ export type { Card as SrsCard, Grade }
 
 /** 하루 신규 카드 기본값. 사용자별 · 트랙별로 바꿀 수 있다. 복습 카드는 제한하지 않는다. */
 export const DEFAULT_NEW_PER_DAY = 15
+/** 작문 모드(연습 방식 mode: 'write')의 하루 새 문제 기본값. 트랙 기본값과 따로 센다. */
+export const DEFAULT_WRITE_NEW_PER_DAY = 10
 
 const scheduler = fsrs({ enable_fuzz: true })
 

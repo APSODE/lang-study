@@ -6,6 +6,8 @@
 //     "틀렸어요" → 그대로 보낸다(다시). "맞았어요" → 어려움 / 좋음 / 쉬움을 고르면 selfCorrect 와 함께 보낸다.
 // 서버가 같은 check 로 다시 채점하므로 화면의 채점은 빠른 표시용일 뿐이다. 큐를 다 풀면 다시 받아 온다.
 // 한자 카드는 답한 뒤 첫 예시 낱말 · 예문을 도움말로 보여 준다.
+// 작문 모드(#/study/<트랙>?mode=write&levels=…&learned=1, write 속성): 같은 화면 · 자기 평가 흐름으로 작문 큐만 푼다.
+//   큐를 다 풀면 같은 조건으로 다시 받고, ✕ 는 문제 고르기(#/write/<트랙>)로 돌아간다.
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { getDrill, type KanaFields, type KanjiFields, type Note, type ToeicFields, type Track } from '@nakamura/core'
 import { api, ApiError } from '../api.ts'
@@ -15,7 +17,7 @@ import { ProgressBar } from '../components/ProgressBar.tsx'
 import { ReportDialog } from '../components/ReportDialog.tsx'
 import { DRILL_VIEWS } from '../drills/index.ts'
 import { speak } from '../speech.ts'
-import { type AnswerResult, type QueueItem, TRACK_LABEL } from '../study.ts'
+import { type AnswerResult, type QueueItem, TRACK_LABEL, type WriteParams } from '../study.ts'
 
 const BATCH = 20
 
@@ -44,7 +46,20 @@ const listenText = (item: QueueItem): [string, 'ja-JP' | 'en-US'] | null => {
   return null
 }
 
-export function Study({ track }: { track: Track }) {
+/** 큐 요청 경로 */
+const queuePath = (track: Track, write: WriteParams | undefined): string => {
+  let p = `study/queue?track=${track}&limit=${BATCH}`
+  if (write) {
+    p += '&mode=write'
+    if (write.levels) p += `&levels=${write.levels.join(',')}`
+    if (write.learnedOnly) p += '&learnedOnly=1'
+  }
+  return p
+}
+
+export function Study({ track, write }: { track: Track; write?: WriteParams }) {
+  const path = queuePath(track, write)
+  const exitHref = write ? `#/write/${track}` : '#/'
   const [items, setItems] = useState<QueueItem[] | null>(null)
   const [idx, setIdx] = useState(0)
   const [graded, setGraded] = useState<Graded | null>(null)
@@ -61,7 +76,7 @@ export function Study({ track }: { track: Track }) {
   const load = useCallback(async () => {
     setLoadError('')
     try {
-      const r = await api<{ items: QueueItem[] }>(`study/queue?track=${track}&limit=${BATCH}`)
+      const r = await api<{ items: QueueItem[] }>(path)
       setItems(r.items)
       setIdx(0)
       setGraded(null)
@@ -69,7 +84,7 @@ export function Study({ track }: { track: Track }) {
     } catch (err) {
       setLoadError((err as Error).message)
     }
-  }, [track])
+  }, [path])
 
   useEffect(() => {
     void load()
@@ -105,7 +120,13 @@ export function Study({ track }: { track: Track }) {
       return r
     } catch (err) {
       if (err instanceof ApiError && (err.status === 409 || err.status === 404)) {
-        setNotice(err.status === 409 ? '오늘 볼 새 카드를 모두 봤습니다. 그 카드는 건너뜁니다.' : '없어진 카드라 건너뜁니다.')
+        setNotice(
+          err.status === 409
+            ? write
+              ? '오늘 볼 새 작문 문제를 모두 봤습니다. 그 문제는 건너뜁니다.'
+              : '오늘 볼 새 카드를 모두 봤습니다. 그 카드는 건너뜁니다.'
+            : '없어진 카드라 건너뜁니다.',
+        )
         return 'skip'
       }
       setError((err as Error).message)
@@ -155,16 +176,16 @@ export function Study({ track }: { track: Track }) {
   // 집중 모드 머리글: ✕(홈으로) · 트랙 · 진행 · 신고. 탭 막대 · 사이드바는 App 이 그리지 않는다.
   const header = (
     <header className="focus-bar">
-      <a className="icon-btn" href="#/" aria-label="학습 끝내기">
+      <a className="icon-btn" href={exitHref} aria-label="학습 끝내기">
         <Icon name="close" />
       </a>
       <h1 className="focus-title">
-        {TRACK_LABEL[track]}
+        {write ? `작문 · ${TRACK_LABEL[track]}` : TRACK_LABEL[track]}
         {items && items[idx] && (
           <span className="muted small">
             {' '}
             {idx + 1} / {items.length}
-            {items[idx].isNew && ' · 새 카드'}
+            {items[idx].isNew && (write ? ' · 새 문제' : ' · 새 카드')}
           </span>
         )}
       </h1>
@@ -203,12 +224,23 @@ export function Study({ track }: { track: Track }) {
         {header}
         <div className="notice">
           <p>
-            <strong>지금 할 카드가 없습니다.</strong>
+            <strong>{write ? '지금 할 작문 문제가 없습니다.' : '지금 할 카드가 없습니다.'}</strong>
           </p>
-          <p className="muted">{answered > 0 ? `이번에 ${answered}장 답했습니다. 수고했어요!` : '복습할 카드와 오늘의 새 카드를 모두 봤습니다.'}</p>
+          <p className="muted">
+            {answered > 0
+              ? `이번에 ${answered}${write ? '문제' : '장'} 답했습니다. 수고했어요!`
+              : write
+                ? '복습할 문제와 고른 조건의 오늘 새 문제를 모두 봤습니다.'
+                : '복습할 카드와 오늘의 새 카드를 모두 봤습니다.'}
+          </p>
         </div>
         <div className="actions">
-          <a className="button" href="#/">
+          {write && (
+            <a className="button" href={exitHref}>
+              문제 고르기
+            </a>
+          )}
+          <a className={write ? 'button secondary' : 'button'} href="#/">
             홈으로
           </a>
           <button type="button" className="secondary" onClick={() => void load()}>

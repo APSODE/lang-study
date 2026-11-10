@@ -1,4 +1,4 @@
-// 홈 (#/): 인사 · 오늘 진행 고리 · 연속 학습일과 최근 7일 · 이어서 학습 · 트랙 카드 · 이번 주 순위.
+// 홈 (#/): 인사 · 오늘 진행 고리 · 연속 학습일과 최근 7일 · 이어서 학습 · 트랙 카드(+ 작문) · 이번 주 순위.
 // 요약(study/summary)은 App 이 불러와 SummaryContext 로 준다. 통계 · 순위 API 가 아직 없으면(404) 그 부분만 숨긴다.
 import { TRACKS, type Track } from '@nakamura/core'
 import type { SessionUser } from '../api.ts'
@@ -12,7 +12,14 @@ import { Skeleton } from '../components/Skeleton.tsx'
 import { dayLabel, fmtNum, localToday, weekdayLabel } from '../format.ts'
 import { useApi } from '../hooks.ts'
 import { TRACK_LABEL } from '../study.ts'
-import type { ActivityResponse, LeaderboardResponse, TrackStats, TrackStatsResponse, TrackSummary } from '../types.ts'
+import type {
+  ActivityResponse,
+  LeaderboardResponse,
+  TrackStats,
+  TrackStatsResponse,
+  TrackSummary,
+  WriteSummary,
+} from '../types.ts'
 
 const greeting = (): string => {
   const h = new Date().getHours()
@@ -24,9 +31,20 @@ const greeting = (): string => {
 
 const MEDAL = ['🥇', '🥈', '🥉'] as const
 
-function TodayCard({ tracks, reviewsToday, streak }: { tracks: TrackSummary[]; reviewsToday: number; streak: number }) {
+function TodayCard({
+  tracks,
+  writing,
+  reviewsToday,
+  streak,
+}: {
+  tracks: TrackSummary[]
+  writing: WriteSummary | undefined
+  reviewsToday: number
+  streak: number
+}) {
   const activity = useApi<ActivityResponse>('stats/activity?days=7')
-  const left = tracks.reduce((n, t) => n + (t.notes > 0 ? t.due + t.newLeft : 0), 0)
+  // 작문은 고르는 모드라 새 문제는 빼고 밀린 복습만 오늘 할 일에 넣는다
+  const left = tracks.reduce((n, t) => n + (t.notes > 0 ? t.due + t.newLeft : 0), 0) + (writing?.due ?? 0)
   const planned = reviewsToday + left
   const ratio = planned === 0 ? 0 : reviewsToday / planned
 
@@ -114,6 +132,48 @@ function TrackCard({ t, stats }: { t: TrackSummary; stats: TrackStats | undefine
   )
 }
 
+/** 작문(일본어 일작): 문제 고르기 화면으로 간다. 한자 트랙과 따로 센다. */
+function WriteCard({ w, ready }: { w: WriteSummary; ready: boolean }) {
+  const todo = w.due + w.newLeft
+  return (
+    <li className="card track-card">
+      <div className="track-head">
+        <span className="track-badge track-write" aria-hidden="true" lang="ja">
+          作
+        </span>
+        <span className="track-name">
+          <strong>작문</strong>
+          <span className="muted small">일본어 일작</span>
+        </span>
+        {ready && <span className="muted small push">푼 문제 {fmtNum(w.learned)}개</span>}
+      </div>
+      {!ready ? (
+        <p className="muted">준비 중</p>
+      ) : (
+        <>
+          <div className="track-stats">
+            <span>
+              <strong>{fmtNum(w.due)}</strong>
+              <span className="muted small">복습</span>
+            </span>
+            <span>
+              <strong>{fmtNum(w.newLeft)}</strong>
+              <span className="muted small">새 문제</span>
+            </span>
+            <span>
+              <strong>{fmtNum(w.newPerDay)}</strong>
+              <span className="muted small">하루 새 문제</span>
+            </span>
+          </div>
+          <a className={`button${todo > 0 ? '' : ' secondary'}`} href={`#/write/${w.track}`}>
+            문제 고르기
+          </a>
+        </>
+      )}
+    </li>
+  )
+}
+
 function WeekRanking() {
   const board = useApi<LeaderboardResponse>('social/leaderboard?period=week')
   if (board.notReady || board.error) return null
@@ -185,7 +245,7 @@ export function Home({ user }: { user: SessionUser }) {
         )
       ) : (
         <>
-          <TodayCard tracks={s.tracks} reviewsToday={s.reviewsToday} streak={s.streak} />
+          <TodayCard tracks={s.tracks} writing={s.writing} reviewsToday={s.reviewsToday} streak={s.streak} />
 
           {next ? (
             <a className="button big continue" href={`#/study/${next.track}`}>
@@ -202,6 +262,12 @@ export function Home({ user }: { user: SessionUser }) {
               const t = s.tracks.find(x => x.track === track)
               return t ? <TrackCard key={track} t={t} stats={statsOf(track)} /> : null
             })}
+            {s.writing && (
+              <WriteCard
+                w={s.writing}
+                ready={(s.tracks.find(x => x.track === s.writing.track)?.notes ?? 0) > 0}
+              />
+            )}
           </ul>
         </>
       )}

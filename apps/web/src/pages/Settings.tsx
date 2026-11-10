@@ -1,4 +1,4 @@
-// 설정 (#/settings): 프로필(닉네임 · 진도 공개 · 시간대) · 학습(트랙별 하루 새 카드) · 비밀번호 변경 · 정보.
+// 설정 (#/settings): 프로필(닉네임 · 진도 공개 · 시간대) · 학습(트랙별 하루 새 카드 · 작문 하루 새 문제) · 비밀번호 변경 · 정보.
 // me/profile · auth/password 가 아직 없으면(404) 그 부분만 "준비 중"으로 보여 준다.
 import { type FormEvent, useEffect, useState } from 'react'
 import { TRACKS, type Track } from '@nakamura/core'
@@ -15,6 +15,10 @@ import { TRACK_LABEL } from '../study.ts'
 import type { Profile } from '../types.ts'
 
 type NewPerDay = Record<Track, number>
+interface StudySettings {
+  newPerDay: NewPerDay
+  writeNewPerDay: number
+}
 const MAX = 100
 
 const COMMON_ZONES: [string, string][] = [
@@ -202,15 +206,15 @@ function ProfileSection({ user, onUserChange }: { user: SessionUser; onUserChang
 }
 
 function StudySection() {
-  const [values, setValues] = useState<NewPerDay | null>(null)
+  const [values, setValues] = useState<StudySettings | null>(null)
   const [error, setError] = useState('')
   const [saved, setSaved] = useState(false)
   const [busy, setBusy] = useState(false)
   const summary = useSummary()
 
   useEffect(() => {
-    api<{ newPerDay: NewPerDay }>('study/settings')
-      .then(r => setValues(r.newPerDay))
+    api<StudySettings>('study/settings')
+      .then(setValues)
       .catch(err => setError((err as Error).message))
   }, [])
 
@@ -221,8 +225,8 @@ function StudySection() {
     setError('')
     setSaved(false)
     try {
-      const r = await api<{ newPerDay: NewPerDay }>('study/settings', { method: 'PUT', body: { newPerDay: values } })
-      setValues(r.newPerDay)
+      const r = await api<StudySettings>('study/settings', { method: 'PUT', body: values })
+      setValues(r)
       setSaved(true)
       summary.reload()
     } catch (err) {
@@ -249,16 +253,33 @@ function StudySection() {
                   min={0}
                   max={MAX}
                   step={1}
-                  value={values[t]}
+                  value={values.newPerDay[t]}
                   onChange={e => {
                     setSaved(false)
-                    setValues({ ...values, [t]: Math.trunc(Number(e.target.value)) })
+                    setValues({ ...values, newPerDay: { ...values.newPerDay, [t]: Math.trunc(Number(e.target.value)) } })
                   }}
                   required
                 />
               </label>
             ))}
           </div>
+          <label>
+            작문 하루 새 문제
+            <input
+              type="number"
+              inputMode="numeric"
+              min={0}
+              max={MAX}
+              step={1}
+              value={values.writeNewPerDay}
+              onChange={e => {
+                setSaved(false)
+                setValues({ ...values, writeNewPerDay: Math.trunc(Number(e.target.value)) })
+              }}
+              required
+            />
+            <span className="muted small">일본어 일작에서 하루에 새로 볼 문제 수. 한자 트랙의 새 카드 수와 따로 셉니다.</span>
+          </label>
           {error && <p className="error">{error}</p>}
           <div className="actions">
             <button type="submit" disabled={busy}>

@@ -33,11 +33,62 @@ export interface TrackSummary {
   reviewsToday: number
 }
 
+/** 작문 모드 요약 (한자 일작). 트랙 요약의 숫자에는 작문 카드가 들어가지 않는다 */
+export interface WriteSummary {
+  track: Track
+  due: number
+  /** 오늘 남은 새 문제 (레벨 조건 없이) */
+  newLeft: number
+  newPerDay: number
+  /** 한 번이라도 푼 작문 문제 수 */
+  learned: number
+}
+
 export interface StudySummary {
   day: string
   streak: number
   reviewsToday: number
   tracks: TrackSummary[]
+  writing: WriteSummary
+}
+
+export interface WriteLevel {
+  /** JLPT 레벨 (5 = N5) */
+  jlpt: number
+  /** 작문 문제가 있는(예문이 있는) 한자 수 */
+  total: number
+  /** 그중 공부한(보통 카드가 있는) 한자 */
+  learned: number
+  /** 그중 작문 문제를 이미 본 한자 */
+  introduced: number
+  /** 공부했고 작문 문제는 아직 안 본 한자 */
+  learnedFresh: number
+}
+
+/** GET study/write/options?track= */
+export interface WriteOptions {
+  levels: WriteLevel[]
+  newPerDay: number
+  /** 오늘 남은 새 문제 (레벨 조건 없이) */
+  newLeft: number
+  due: number
+}
+
+/** 작문 학습 조건 (#/study/<트랙>?mode=write&levels=5,4&learned=1) */
+export interface WriteParams {
+  /** null = 모든 레벨 */
+  levels: number[] | null
+  learnedOnly: boolean
+}
+
+export const writeStudyPath = (track: Track, p: WriteParams): string =>
+  `/study/${track}?mode=write${p.levels ? `&levels=${p.levels.join(',')}` : ''}${p.learnedOnly ? '&learned=1' : ''}`
+
+/** 해시 매개변수 → 작문 조건. 레벨이 하나도 맞지 않으면 null (모든 레벨) */
+export const parseWriteParams = (q: URLSearchParams): WriteParams => {
+  const raw = q.get('levels')
+  const levels = raw ? [...new Set(raw.split(',').map(Number))].filter(n => Number.isInteger(n) && n >= 1 && n <= 5) : []
+  return { levels: levels.length ? levels : null, learnedOnly: q.get('learned') === '1' }
 }
 
 export const REPORT_REASONS = [

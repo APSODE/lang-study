@@ -10,10 +10,21 @@
 //        후속 카드끼리는 연습 방식 순서 → 노트 순서 (romaji-to-kana 를 먼저 모두, 그다음 kana-listen).
 //   3. 1 · 2 가 모두 비었을 때만: 20분 안에 돌아올 카드(방금 틀린 카드 등)를 미리 낸다 (Anki 의 learn ahead).
 //   각 구간 안에서 같은 노트의 카드가 붙어 있으면 다른 노트 카드를 사이에 끼운다.
+//
+// 학습 모드 (core 의 Drill.mode)
+//   보통(normal): mode 가 없는 연습 방식만. 위 순서 그대로.
+//   작문(write):   mode 'write' 연습 방식만 (지금은 kanji-write). 보통 큐 · 요약 · 하루 새 카드 수에 섞이지 않는다.
+//     1. 복습할 작문 카드 — 고른 레벨과 상관없이 모두 (SRS 일정을 깨지 않게).
+//     2. 새 작문 카드 — 고른 JLPT 레벨(levels)만, learnedOnly 면 보통 카드가 하나라도 있는 노트만. 순서는 카탈로그(쉬운 레벨 → 자주 쓰는 순).
+//        하루 새 문제 수는 따로 (user_track_settings 의 'write:<트랙>', 기본 10).
+//     3. learn ahead 는 보통 모드와 같다.
 import type { DatabaseSync } from 'node:sqlite'
 import {
   cardId as makeCardId,
   DEFAULT_NEW_PER_DAY,
+  DEFAULT_WRITE_NEW_PER_DAY,
+  drillIdsOf,
+  drillMode,
   newCard,
   normMeaning,
   parseCard,
@@ -23,7 +34,9 @@ import {
   type Drill,
   type Grade,
   type KanaFields,
+  type KanjiFields,
   type Note,
+  type StudyMode,
   type ToeicFields,
   type Track,
 } from '@nakamura/core'
@@ -83,6 +96,48 @@ export const setNewPerDay = (db: DatabaseSync, userId: number, values: Partial<R
   for (const [track, n] of Object.entries(values)) up.run(userId, track, n)
 }
 
+/** 작문 모드의 하루 새 문제 수. user_track_settings 에 'write:<트랙>' 키로 둔다 (트랙 키와 겹치지 않는다). */
+const writeKey = (track: Track): string => `write:${track}`
+
+export const getWriteNewPerDay = (db: DatabaseSync, userId: number, track: Track): number =>
+  (
+    db.prepare('SELECT new_per_day AS n FROM user_track_settings WHERE user_id = ? AND track = ?').get(userId, writeKey(track)) as
+      | { n: number }
+      | undefined
+  )?.n ?? DEFAULT_WRITE_NEW_PER_DAY
+
+export const setWriteNewPerDay = (db: DatabaseSync, userId: number, track: Track, n: number): void => {
+  db.prepare(
+    'INSERT INTO user_track_settings(user_id, track, new_per_day) VALUES (?, ?, ?) ON CONFLICT(user_id, track) DO UPDATE SET new_per_day = excluded.new_per_day',
+  ).run(userId, writeKey(track), n)
+}
+
+const newPerDayOf = (db: DatabaseSync, userId: number, track: Track, mode: StudyMode): number =>
+  mode === 'write' ? getWriteNewPerDay(db, userId, track) : getNewPerDay(db, userId)[track]
+
+// --- 학습 모드 ---
+
+/** user_cards 의 drill_id 를 모드로 거르는 SQL 조각과 매개변수 */
+const modeFilter = (mode: StudyMode, col = 'drill_id'): { sql: string; params: string[] } => {
+  const ids = drillIdsOf('write')
+  if (ids.length === 0) return { sql: mode === 'write' ? '0' : '1', params: [] }
+  return { sql: `${col} ${mode === 'write' ? 'IN' : 'NOT IN'} (${ids.map(() => '?').join(', ')})`, params: ids }
+}
+
+/** 노트의 연습 방식 중 그 모드의 것 (레지스트리 순서) */
+const modeDrills = (entry: CatalogNote, mode: StudyMode): Drill[] => entry.drills.filter(d => drillMode(d) === mode)
+
+/** 작문 문제 고르기에 쓰는 레벨. 한자는 JLPT (5 = N5). 레벨이 없는 트랙 · 노트는 undefined */
+const levelOf = (note: Note): number | undefined => (note.track === 'kanji' ? (note.fields as KanjiFields).jlpt : undefined)
+
+/** 작문 큐에서 새 문제를 고르는 조건 */
+export interface WriteSelect {
+  /** 이 레벨의 노트만. 없으면 모두 */
+  levels?: number[]
+  /** 보통 카드가 하나라도 있는(공부한) 노트만 */
+  learnedOnly?: boolean
+}
+
 // --- 새 카드 후보 ---
 
 interface Candidate {
@@ -94,9 +149,13 @@ interface Candidate {
 export const newCandidates = (db: DatabaseSync, userId: number, track: Track, start: number): Candidate[] => {
   const catalog = publishedCatalog(db, track)
   const seen = new Map<string, { drills: Set<string>; firstIntro: number }>()
+  // 작문 카드는 보지 않는다: 작문만 한 노트도 보통 모드에서는 처음 보는 노트다
+  const normal = modeFilter('normal')
   const rows = db
-    .prepare('SELECT note_id AS noteId, drill_id AS drillId, introduced_at AS at FROM user_cards WHERE user_id = ? AND track = ?')
-    .all(userId, track) as { noteId: string; drillId: string; at: number }[]
+    .prepare(
+      `SELECT note_id AS noteId, drill_id AS drillId, introduced_at AS at FROM user_cards WHERE user_id = ? AND track = ? AND ${normal.sql}`,
+    )
+    .all(userId, track, ...normal.params) as { noteId: string; drillId: string; at: number }[]
   for (const r of rows) {
     const s = seen.get(r.noteId) ?? { drills: new Set<string>(), firstIntro: r.at }
     s.drills.add(r.drillId)
@@ -107,11 +166,12 @@ export const newCandidates = (db: DatabaseSync, userId: number, track: Track, st
   const fresh: Candidate[] = []
   const follow: (Candidate & { k: number })[] = []
   for (const entry of catalog.notes) {
+    const drills = modeDrills(entry, 'normal')
     const s = seen.get(entry.note.id)
     if (!s) {
-      if (entry.drills[0]) fresh.push({ entry, drill: entry.drills[0] })
+      if (drills[0]) fresh.push({ entry, drill: drills[0] })
     } else if (s.firstIntro < start) {
-      entry.drills.forEach((d, k) => {
+      drills.forEach((d, k) => {
         if (!s.drills.has(d.id)) follow.push({ entry, drill: d, k })
       })
     }
@@ -131,8 +191,65 @@ export const newCandidates = (db: DatabaseSync, userId: number, track: Track, st
   return out
 }
 
-const introducedSince = (db: DatabaseSync, userId: number, track: Track, start: number): number =>
-  count(db, 'SELECT count(*) AS n FROM user_cards WHERE user_id = ? AND track = ? AND introduced_at >= ?', userId, track, start)
+/**
+ * 작문 모드의 새 문제 후보 (카탈로그 순서: 한자는 쉬운 레벨 → 자주 쓰는 순).
+ * 같은 날 보통 카드로 처음 본 노트도 낸다 — 작문은 문제를 직접 고르는 모드라서.
+ */
+export const writeCandidates = (db: DatabaseSync, userId: number, track: Track, sel: WriteSelect = {}): Candidate[] => {
+  const catalog = publishedCatalog(db, track)
+  const write = modeFilter('write')
+  const rows = db
+    .prepare(`SELECT note_id AS noteId, card_id AS cardId, ${write.sql} AS w FROM user_cards WHERE user_id = ? AND track = ?`)
+    .all(...write.params, userId, track) as { noteId: string; cardId: string; w: number }[]
+  const learned = new Set(rows.filter(r => !r.w).map(r => r.noteId))
+  const have = new Set(rows.filter(r => r.w).map(r => r.cardId))
+  const levels = sel.levels ? new Set(sel.levels) : null
+
+  const out: Candidate[] = []
+  for (const entry of catalog.notes) {
+    const drills = modeDrills(entry, 'write')
+    if (drills.length === 0) continue
+    if (levels) {
+      const lv = levelOf(entry.note)
+      if (lv === undefined || !levels.has(lv)) continue
+    }
+    if (sel.learnedOnly && !learned.has(entry.note.id)) continue
+    for (const d of drills) if (!have.has(makeCardId(entry.note.id, d.id))) out.push({ entry, drill: d })
+  }
+  return out
+}
+
+const introducedSince = (db: DatabaseSync, userId: number, track: Track, start: number, mode: StudyMode): number => {
+  const f = modeFilter(mode)
+  return count(
+    db,
+    `SELECT count(*) AS n FROM user_cards WHERE user_id = ? AND track = ? AND introduced_at >= ? AND ${f.sql}`,
+    userId,
+    track,
+    start,
+    ...f.params,
+  )
+}
+
+/** 지금 복습할 카드 수 (그 모드만, 일시 중지 · 비공개 노트 제외) */
+const dueCount = (db: DatabaseSync, userId: number, track: Track, now: number, mode: StudyMode): number => {
+  const f = modeFilter(mode, 'uc.drill_id')
+  return count(
+    db,
+    `SELECT count(*) AS n FROM user_cards uc JOIN notes n ON n.id = uc.note_id
+     WHERE uc.user_id = ? AND uc.track = ? AND uc.suspended = 0 AND uc.due <= ? AND n.status = 'published' AND ${f.sql}`,
+    userId,
+    track,
+    now,
+    ...f.params,
+  )
+}
+
+/** 그 모드의 카드 수 (한 번이라도 본 카드) */
+const learnedCount = (db: DatabaseSync, userId: number, track: Track, mode: StudyMode): number => {
+  const f = modeFilter(mode)
+  return count(db, `SELECT count(*) AS n FROM user_cards WHERE user_id = ? AND track = ? AND ${f.sql}`, userId, track, ...f.params)
+}
 
 // --- 보기 ---
 
@@ -203,6 +320,11 @@ interface CardRow {
   drillId: string
 }
 
+export interface QueueOptions extends WriteSelect {
+  /** 기본 'normal' */
+  mode?: StudyMode
+}
+
 export const buildQueue = (
   db: DatabaseSync,
   userId: number,
@@ -210,7 +332,9 @@ export const buildQueue = (
   limit: number,
   now: number,
   rng: Rng = Math.random,
+  opts: QueueOptions = {},
 ): QueueItem[] => {
+  const mode = opts.mode ?? 'normal'
   const catalog = publishedCatalog(db, track)
   const start = dayStart(now, userTz(db, userId))
 
@@ -232,50 +356,45 @@ export const buildQueue = (
       const entry = catalog.byId.get(r.noteId)
       return entry && entry.drills.some(d => d.id === r.drillId) ? [item(entry, r.drillId, false)] : []
     })
+  // 작문 복습은 고른 레벨과 상관없이 모두 낸다 (SRS 일정을 깨지 않게)
+  const f = modeFilter(mode, 'uc.drill_id')
   const dueSql = `SELECT uc.card_id AS cardId, uc.note_id AS noteId, uc.drill_id AS drillId
      FROM user_cards uc JOIN notes n ON n.id = uc.note_id
-     WHERE uc.user_id = ? AND uc.track = ? AND uc.suspended = 0 AND uc.due <= ? AND n.status = 'published'
+     WHERE uc.user_id = ? AND uc.track = ? AND uc.suspended = 0 AND uc.due <= ? AND n.status = 'published' AND ${f.sql}
      ORDER BY uc.due, uc.card_id LIMIT ?`
+  const dueRows = (until: number) => db.prepare(dueSql).all(userId, track, until, ...f.params, limit) as unknown as CardRow[]
 
-  const due = fromRows(db.prepare(dueSql).all(userId, track, now, limit) as unknown as CardRow[])
+  const due = fromRows(dueRows(now))
 
   const room = limit - due.length
-  const quota = getNewPerDay(db, userId)[track] - introducedSince(db, userId, track, start)
+  const quota = newPerDayOf(db, userId, track, mode) - introducedSince(db, userId, track, start, mode)
   const fresh =
     room > 0 && quota > 0
-      ? newCandidates(db, userId, track, start)
+      ? (mode === 'write' ? writeCandidates(db, userId, track, opts) : newCandidates(db, userId, track, start))
           .slice(0, Math.min(room, quota))
           .map(c => item(c.entry, c.drill.id, true))
       : []
 
   let ahead: QueueItem[] = []
-  if (due.length === 0 && fresh.length === 0) {
-    ahead = fromRows(db.prepare(dueSql).all(userId, track, now + LEARN_AHEAD_MS, limit) as unknown as CardRow[])
-  }
+  if (due.length === 0 && fresh.length === 0) ahead = fromRows(dueRows(now + LEARN_AHEAD_MS))
   return [...declump(due), ...declump(fresh), ...declump(ahead)]
 }
 
 // --- 요약 ---
 
+/** 트랙 요약. due · newLeft · learned 는 보통 모드 카드만 (작문은 writeSummary). reviewsToday 는 그 트랙의 모든 복습. */
 export const trackSummary = (db: DatabaseSync, userId: number, track: Track, now: number, start: number): TrackSummary => {
   const catalog = publishedCatalog(db, track)
   const newPerDay = getNewPerDay(db, userId)[track]
-  const quota = Math.max(0, newPerDay - introducedSince(db, userId, track, start))
+  const quota = Math.max(0, newPerDay - introducedSince(db, userId, track, start, 'normal'))
   const newLeft = quota === 0 ? 0 : Math.min(quota, newCandidates(db, userId, track, start).length)
   return {
     track,
     notes: catalog.notes.length,
-    due: count(
-      db,
-      `SELECT count(*) AS n FROM user_cards uc JOIN notes n ON n.id = uc.note_id
-       WHERE uc.user_id = ? AND uc.track = ? AND uc.suspended = 0 AND uc.due <= ? AND n.status = 'published'`,
-      userId,
-      track,
-      now,
-    ),
+    due: dueCount(db, userId, track, now, 'normal'),
     newLeft,
     newPerDay,
-    learned: count(db, 'SELECT count(*) AS n FROM user_cards WHERE user_id = ? AND track = ?', userId, track),
+    learned: learnedCount(db, userId, track, 'normal'),
     reviewsToday: count(
       db,
       `SELECT count(*) AS n FROM review_logs r JOIN user_cards uc ON uc.user_id = r.user_id AND uc.card_id = r.card_id
@@ -285,6 +404,72 @@ export const trackSummary = (db: DatabaseSync, userId: number, track: Track, now
       start,
       now,
     ),
+  }
+}
+
+export interface WriteSummary {
+  track: Track
+  due: number
+  /** 오늘 남은 새 문제 (레벨 · 공부한 한자 조건 없이 셌을 때) */
+  newLeft: number
+  newPerDay: number
+  /** 한 번이라도 푼 작문 카드 수 */
+  learned: number
+}
+
+export const writeSummary = (db: DatabaseSync, userId: number, track: Track, now: number, start: number): WriteSummary => {
+  const newPerDay = getWriteNewPerDay(db, userId, track)
+  const quota = Math.max(0, newPerDay - introducedSince(db, userId, track, start, 'write'))
+  return {
+    track,
+    due: dueCount(db, userId, track, now, 'write'),
+    newLeft: quota === 0 ? 0 : Math.min(quota, writeCandidates(db, userId, track).length),
+    newPerDay,
+    learned: learnedCount(db, userId, track, 'write'),
+  }
+}
+
+export interface WriteLevel {
+  /** JLPT 레벨 (5 = N5) */
+  jlpt: number
+  /** 작문 문제가 있는(예문이 있는) 공개 노트 수 */
+  total: number
+  /** 그중 보통 카드가 하나라도 있는(공부한) 노트 */
+  learned: number
+  /** 그중 작문 카드가 이미 있는 노트 */
+  introduced: number
+  /** 공부했고 작문 카드는 아직 없는 노트 ("공부한 한자만" 일 때 새 문제 수) */
+  learnedFresh: number
+}
+
+/** 작문 문제 고르기 화면: 레벨별 수 (N5 → N1) + 오늘 남은 새 문제 · 복습 */
+export const writeOptions = (db: DatabaseSync, userId: number, track: Track, now: number) => {
+  const start = dayStart(now, userTz(db, userId))
+  const catalog = publishedCatalog(db, track)
+  const write = modeFilter('write')
+  const rows = db
+    .prepare(`SELECT DISTINCT note_id AS noteId, ${write.sql} AS w FROM user_cards WHERE user_id = ? AND track = ?`)
+    .all(...write.params, userId, track) as { noteId: string; w: number }[]
+  const learned = new Set(rows.filter(r => !r.w).map(r => r.noteId))
+  const introduced = new Set(rows.filter(r => r.w).map(r => r.noteId))
+  const byLevel = new Map<number, WriteLevel>()
+  for (const entry of catalog.notes) {
+    const lv = levelOf(entry.note)
+    if (lv === undefined || modeDrills(entry, 'write').length === 0) continue
+    const l = byLevel.get(lv) ?? { jlpt: lv, total: 0, learned: 0, introduced: 0, learnedFresh: 0 }
+    const id = entry.note.id
+    l.total++
+    if (learned.has(id)) l.learned++
+    if (introduced.has(id)) l.introduced++
+    if (learned.has(id) && !introduced.has(id)) l.learnedFresh++
+    byLevel.set(lv, l)
+  }
+  const s = writeSummary(db, userId, track, now, start)
+  return {
+    levels: [...byLevel.values()].sort((a, b) => b.jlpt - a.jlpt),
+    newPerDay: s.newPerDay,
+    newLeft: s.newLeft,
+    due: s.due,
   }
 }
 
@@ -312,6 +497,7 @@ export const summary = (db: DatabaseSync, userId: number, now: number) => {
       now,
     ),
     tracks: TRACKS.map(t => trackSummary(db, userId, t, now, start)),
+    writing: writeSummary(db, userId, 'kanji', now, start),
   }
 }
 
@@ -365,10 +551,16 @@ export const answerCard = (db: DatabaseSync, userId: number, input: AnswerInput,
       | { fsrs: string }
       | undefined
     if (!cur) {
+      // 하루 새 카드 수는 모드별로 따로 센다 (작문 카드는 트랙 수에 들어가지 않는다)
+      const mode = drillMode(drill)
       const start = dayStart(now, userTz(db, userId))
-      if (introducedSince(db, userId, track, start) >= getNewPerDay(db, userId)[track]) {
+      if (introducedSince(db, userId, track, start, mode) >= newPerDayOf(db, userId, track, mode)) {
         db.exec('ROLLBACK')
-        return { ok: false, status: 409, error: '오늘 볼 새 카드를 모두 봤습니다' }
+        return {
+          ok: false,
+          status: 409,
+          error: mode === 'write' ? '오늘 볼 새 작문 문제를 모두 봤습니다' : '오늘 볼 새 카드를 모두 봤습니다',
+        }
       }
     }
     const next = review(cur ? parseCard(cur.fsrs) : newCard(new Date(now)), rating, new Date(now)).card

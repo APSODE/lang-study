@@ -23,7 +23,19 @@ export interface Drill {
    * 답이 여러 가지로 나올 수 있는 연습 방식(일작)에만 둔다. 서버는 이 표시가 있는 연습 방식에서만 selfCorrect 를 받는다.
    */
   selfGraded?: true
+  /**
+   * 학습 모드. 비우면 보통 학습(트랙 큐), 'write' 면 작문 모드에서만 나온다.
+   * 작문 카드는 트랙의 보통 큐 · 하루 새 카드 수와 따로 센다 (서버 study/service.ts).
+   * 나중에 토익 영작도 같은 표시만 달면 작문 모드에 붙는다.
+   */
+  mode?: 'write'
 }
+
+/** 학습 모드: 'normal' = 연습 방식에 mode 가 없는 것, 'write' = 작문 */
+export const STUDY_MODES = ['normal', 'write'] as const
+export type StudyMode = (typeof STUDY_MODES)[number]
+export const isStudyMode = (v: unknown): v is StudyMode => typeof v === 'string' && (STUDY_MODES as readonly string[]).includes(v)
+export const drillMode = (d: Drill): StudyMode => d.mode ?? 'normal'
 
 const registry = new Map<string, Drill>()
 
@@ -33,6 +45,10 @@ export const registerDrill = (d: Drill): void => {
 }
 export const getDrill = (id: string): Drill | undefined => registry.get(id)
 export const allDrills = (): Drill[] => [...registry.values()]
+/** 그 모드의 연습 방식 id (등록 순서) */
+export const drillIdsOf = (mode: StudyMode): string[] => allDrills().filter(d => drillMode(d) === mode).map(d => d.id)
+/** 작문 모드가 있는 트랙 */
+export const writeTracks = (): Track[] => [...new Set(allDrills().filter(d => d.mode === 'write').flatMap(d => d.tracks))]
 
 const filled = (v: unknown): boolean =>
   v !== undefined && v !== null && v !== '' && !(Array.isArray(v) && v.length === 0)
@@ -112,13 +128,14 @@ registerDrill({
   },
 })
 
-// 한자: 일작 (예문의 한국어 → 일본어). 첫 소개 연습 방식이 되지 않게 다른 한자 연습 방식 뒤에 등록한다.
+// 한자: 일작 (예문의 한국어 → 일본어). 작문 모드(mode: 'write')라 보통 한자 큐에는 나오지 않는다.
 // 한자 표기(ja) 또는 전체 가나(kana)와 같으면 정답. 그 밖의 표현은 사용자가 모범 답안과 비교해 스스로 채점한다.
 registerDrill({
   id: 'kanji-write',
   tracks: ['kanji'],
   requires: ['kanji', 'sentences'],
   selfGraded: true,
+  mode: 'write',
   check(note, response) {
     const { sentences = [] } = f<{ sentences?: { ja: string; kana: string }[] }>(note)
     const s = sentences[0]

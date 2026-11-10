@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { drillsFor, getDrill, type Note } from '../src/index.ts'
+import { drillIdsOf, drillMode, drillsFor, getDrill, writeTracks, type Note } from '../src/index.ts'
 
 const ka: Note = { id: 'kana-ka', track: 'kana', fields: { char: 'か', romaji: 'ka', script: 'hiragana', row: 'k' } }
 const shi: Note = { id: 'kana-shi', track: 'kana', fields: { char: 'シ', romaji: 'shi', script: 'katakana', row: 's' } }
@@ -67,6 +67,13 @@ describe('일작 (kanji-write)', () => {
     expect(drillsFor(withSentence).map(d => d.id)).toEqual(['kanji-reading', 'kanji-meaning', 'kanji-write'])
     expect(getDrill('kanji-write')!.selfGraded).toBe(true)
     expect(getDrill('kanji-reading')!.selfGraded).toBeUndefined()
+  })
+  it('작문 모드: kanji-write 만 mode write, 나머지는 보통 학습', () => {
+    expect(drillMode(getDrill('kanji-write')!)).toBe('write')
+    expect(drillMode(getDrill('kanji-reading')!)).toBe('normal')
+    expect(drillIdsOf('write')).toEqual(['kanji-write'])
+    expect(drillIdsOf('normal')).not.toContain('kanji-write')
+    expect(writeTracks()).toEqual(['kanji'])
   })
   it('정답 표시는 한자 표기 ja', () => {
     expect(run('x').expected).toBe('友だちとすしを食べます。')

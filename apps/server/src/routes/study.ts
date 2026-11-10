@@ -1,23 +1,42 @@
 // 학습 API. app.ts 에서 /api 아래에 붙인다. 모두 로그인 필요.
 //   GET  /study/summary                 트랙별 { track, notes, due, newLeft, newPerDay, learned, reviewsToday } + { day, streak, reviewsToday }
+//                                       + writing: { track: 'kanji', due, newLeft, newPerDay, learned } (작문 모드. 트랙 숫자에는 작문 카드가 빠진다)
 //   GET  /study/queue?track=&limit=     { items: QueueItem[] } (순서는 study/service.ts 맨 위 설명)
+//        &mode=write&levels=5,4&learnedOnly=1
+//                                       작문 모드: 복습할 작문 카드(레벨 무관) → 새 작문 카드(levels 의 JLPT 레벨만, learnedOnly 면 공부한 한자만)
+//   GET  /study/write/options?track=kanji
+//                                       { levels: { jlpt, total, learned, introduced, learnedFresh }[], newPerDay, newLeft, due }
 //   POST /study/answer                  { cardId, response, durationMs?, rating?, selfCorrect? } → { correct, expected, rating, due }
 //                                       selfCorrect 는 자기 평가 연습 방식(kanji-write)에서만 쓴다. 다른 연습 방식은 무시.
-//   GET  /study/settings                { newPerDay: { kana, kanji, toeic } }
-//   PUT  /study/settings                { newPerDay: { kana?, kanji?, toeic? } } (0–100 정수)
+//   GET  /study/settings                { newPerDay: { kana, kanji, toeic }, writeNewPerDay }
+//   PUT  /study/settings                { newPerDay?: { kana?, kanji?, toeic? }, writeNewPerDay? } (0–100 정수, 둘 중 하나는 있어야 한다)
 //   POST /reports                       { noteId, cardId?, reason, body? } → 201 { id }
 // 하루 경계 · 연속 학습일은 사용자 시간대의 04:00 기준 (study/day.ts).
 import type { DatabaseSync } from 'node:sqlite'
 import { Hono } from 'hono'
-import { isTrack, type Track } from '@nakamura/core'
+import { isTrack, writeTracks, type Track } from '@nakamura/core'
 import { type AppEnv, requireUser } from '../auth/middleware.ts'
-import { answerCard, buildQueue, getNewPerDay, NEW_PER_DAY_MAX, setNewPerDay, summary } from '../study/service.ts'
+import {
+  answerCard,
+  buildQueue,
+  getNewPerDay,
+  getWriteNewPerDay,
+  NEW_PER_DAY_MAX,
+  type QueueOptions,
+  setNewPerDay,
+  setWriteNewPerDay,
+  summary,
+  writeOptions,
+} from '../study/service.ts'
 import { readBody } from './auth.ts'
 
 export const REPORT_REASONS = ['wrong_answer', 'typo', 'audio', 'other'] as const
 export const REPORT_BODY_MAX = 1000
 const RESPONSE_MAX = 200
 const QUEUE_LIMIT_MAX = 100
+/** 작문 하루 새 문제 설정 · 요약이 가리키는 트랙 (지금은 한자 일작뿐) */
+const WRITE_TRACK: Track = 'kanji'
+const LEVELS = [1, 2, 3, 4, 5]
 /** 한 카드에 이보다 오래 걸린 기록은 자리를 비운 것으로 보고 자른다 */
 const DURATION_MAX = 10 * 60 * 1000
 
@@ -42,7 +61,37 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
     if (!Number.isInteger(limit) || limit < 1 || limit > QUEUE_LIMIT_MAX) {
       return c.json({ error: `limit 은 1–${QUEUE_LIMIT_MAX} 정수여야 합니다` }, 400)
     }
-    return c.json({ items: buildQueue(db, c.get('user')!.id, track, limit, now()) })
+    const mode = c.req.query('mode')
+    if (mode !== undefined && mode !== 'normal' && mode !== 'write') {
+      return c.json({ error: 'mode 는 write 만 쓸 수 있습니다' }, 400)
+    }
+    const opts: QueueOptions = {}
+    if (mode === 'write') {
+      if (!writeTracks().includes(track)) return c.json({ error: '작문 모드가 없는 트랙입니다' }, 400)
+      opts.mode = 'write'
+      const levels = c.req.query('levels')
+      if (levels !== undefined) {
+        const list = levels.split(',').map(Number)
+        if (levels === '' || list.some(n => !LEVELS.includes(n))) {
+          return c.json({ error: 'levels 는 1–5 를 쉼표로 이은 값이어야 합니다 (예: 5,4)' }, 400)
+        }
+        opts.levels = [...new Set(list)]
+      }
+      const learned = c.req.query('learnedOnly')
+      if (learned !== undefined) {
+        if (!['1', '0', 'true', 'false'].includes(learned)) return c.json({ error: 'learnedOnly 는 1 또는 0 이어야 합니다' }, 400)
+        opts.learnedOnly = learned === '1' || learned === 'true'
+      }
+    } else if (c.req.query('levels') !== undefined || c.req.query('learnedOnly') !== undefined) {
+      return c.json({ error: 'levels · learnedOnly 는 작문 모드(mode=write)에서만 씁니다' }, 400)
+    }
+    return c.json({ items: buildQueue(db, c.get('user')!.id, track, limit, now(), Math.random, opts) })
+  })
+
+  r.get('/study/write/options', c => {
+    const track = c.req.query('track') ?? WRITE_TRACK
+    if (!isTrack(track) || !writeTracks().includes(track)) return c.json({ error: '작문 모드가 없는 트랙입니다' }, 400)
+    return c.json(writeOptions(db, c.get('user')!.id, track, now()))
   })
 
   r.post('/study/answer', async c => {
@@ -82,25 +131,47 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
     return c.json({ correct, expected, rating: given, due })
   })
 
-  r.get('/study/settings', c => c.json({ newPerDay: getNewPerDay(db, c.get('user')!.id) }))
+  const settingsOf = (userId: number) => ({
+    newPerDay: getNewPerDay(db, userId),
+    writeNewPerDay: getWriteNewPerDay(db, userId, WRITE_TRACK),
+  })
+
+  r.get('/study/settings', c => c.json(settingsOf(c.get('user')!.id)))
 
   r.put('/study/settings', async c => {
     const body = await readBody(c)
-    const values = body?.newPerDay
-    if (!values || typeof values !== 'object' || Array.isArray(values)) {
-      return c.json({ error: 'newPerDay 객체가 필요합니다' }, 400)
+    if (!body || (body.newPerDay === undefined && body.writeNewPerDay === undefined)) {
+      return c.json({ error: 'newPerDay 객체 또는 writeNewPerDay 가 필요합니다' }, 400)
     }
+    const values = body.newPerDay
     const next: Partial<Record<Track, number>> = {}
-    for (const [k, v] of Object.entries(values)) {
-      if (!isTrack(k)) return c.json({ error: `알 수 없는 트랙입니다: ${k}` }, 400)
-      if (!Number.isInteger(v) || (v as number) < 0 || (v as number) > NEW_PER_DAY_MAX) {
-        return c.json({ error: `하루 새 카드는 0–${NEW_PER_DAY_MAX} 정수여야 합니다` }, 400)
+    if (values !== undefined) {
+      if (!values || typeof values !== 'object' || Array.isArray(values)) {
+        return c.json({ error: 'newPerDay 객체가 필요합니다' }, 400)
       }
-      next[k] = v as number
+      for (const [k, v] of Object.entries(values)) {
+        if (!isTrack(k)) return c.json({ error: `알 수 없는 트랙입니다: ${k}` }, 400)
+        if (!Number.isInteger(v) || (v as number) < 0 || (v as number) > NEW_PER_DAY_MAX) {
+          return c.json({ error: `하루 새 카드는 0–${NEW_PER_DAY_MAX} 정수여야 합니다` }, 400)
+        }
+        next[k] = v as number
+      }
+    }
+    const write = body.writeNewPerDay
+    if (write !== undefined && (!Number.isInteger(write) || (write as number) < 0 || (write as number) > NEW_PER_DAY_MAX)) {
+      return c.json({ error: `작문 하루 새 문제는 0–${NEW_PER_DAY_MAX} 정수여야 합니다` }, 400)
     }
     const userId = c.get('user')!.id
-    setNewPerDay(db, userId, next)
-    return c.json({ newPerDay: getNewPerDay(db, userId) })
+    db.exec('BEGIN IMMEDIATE')
+    try {
+      setNewPerDay(db, userId, next)
+      if (write !== undefined) setWriteNewPerDay(db, userId, WRITE_TRACK, write as number)
+      db.exec('COMMIT')
+    } catch (err) {
+      if (db.isTransaction) db.exec('ROLLBACK')
+      throw err
+    }
+    return c.json(settingsOf(userId))
   })
 
   r.post('/reports', async c => {

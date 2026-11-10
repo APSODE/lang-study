@@ -387,6 +387,7 @@ input.switch:focus-visible { outline: 2px solid var(--accent); outline-offset: 2
 .track-stats strong { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
 .track-progress { display: flex; align-items: center; gap: 10px; }
 .track-progress > .muted { flex: none; font-variant-numeric: tabular-nums; }
+.track-name { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
 
 /* 넓은 화면: 오늘 카드와 이번 주 순위를 나란히 */
 @media (min-width: 1024px) {
@@ -504,6 +505,23 @@ button.reading .icon { color: var(--muted); }
 .sentence-text { flex: 1; min-width: 0; display: grid; gap: 2px; }
 .sentence-text p { margin: 0; overflow-wrap: anywhere; line-height: 1.5; }
 .sentence-ja { font-size: 1.2rem; }
+
+/* --- 작문 문제 고르기 ------------------------------------------------------ */
+.level-chips { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 136px), 1fr)); }
+.level-chip {
+  width: 100%; min-height: 72px; padding: 10px 12px; box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+  background: var(--card); color: var(--fg); border: 1px solid var(--line); border-radius: var(--radius-sm); font-weight: normal; text-align: left;
+}
+.level-chip[aria-pressed='true'] { background: var(--accent-soft); border: 2px solid var(--accent); padding: 9px 11px; }
+.level-name { display: flex; align-items: center; justify-content: space-between; width: 100%; font-weight: 700; font-size: 1.15rem; }
+.level-chip[aria-pressed='true'] .level-name { color: var(--accent); }
+@media (hover: hover) { .level-chip[aria-pressed='false']:hover { background: var(--hover); } }
+.write-select .card .form { margin: 12px 0 0; }
+.write-start { display: grid; gap: 8px; }
+.write-start p { margin: 0; }
+.write-summary { font-size: 1.05rem; }
+.write-summary strong { font-variant-numeric: tabular-nums; }
+.write-start > button { width: 100%; }
 
 /* --- 설정 ----------------------------------------------------------------- */
 .settings-page .card .form { margin: 12px 0 0; }

@@ -1,5 +1,5 @@
 import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
-import { isTrack } from '@nakamura/core'
+import { isTrack, writeTracks } from '@nakamura/core'
 import { api, type SessionUser } from './api.ts'
 import { Shell, SummaryContext } from './components/Shell.tsx'
 import { useApi } from './hooks.ts'
@@ -14,14 +14,19 @@ import { Login } from './pages/Login.tsx'
 import { Settings } from './pages/Settings.tsx'
 import { Stats } from './pages/Stats.tsx'
 import { Study } from './pages/Study.tsx'
-import { Redirect, useRoute } from './router.ts'
+import { WriteSelect } from './pages/WriteSelect.tsx'
+import { Redirect, splitRoute, useRoute } from './router.ts'
+import { parseWriteParams, TRACK_LABEL } from './study.ts'
 import type { StudySummary } from './types.ts'
 
 // 앱 껍데기: 로그인 상태(/api/auth/me)를 불러오고 해시 경로에 맞는 화면을 고른다.
 // 경로: #/ · #/stats · #/friends · #/library(/kana|/kanji) · #/settings · #/admin(/invites|/reports|/users)
 //       #/study/<트랙> (껍데기 없이 집중 모드) · #/login · #/join/<code>. 예전 #/kana 는 #/library/kana 로 보낸다.
+//       #/write/<트랙> 작문 문제 고르기 → #/study/<트랙>?mode=write&levels=5,4&learned=1 (작문 집중 모드)
 export function App() {
-  const route = useRoute()
+  const fullRoute = useRoute()
+  // 해시 뒤 '?…' 는 화면 매개변수. 화면 고르기 · 메뉴 표시는 경로만 본다.
+  const [route, params] = splitRoute(fullRoute)
   // undefined = 확인 중, null = 로그인 안 됨
   const [user, setUser] = useState<SessionUser | null | undefined>(undefined)
   const [loadError, setLoadError] = useState('')
@@ -40,10 +45,10 @@ export function App() {
   const prevRoute = useRef(route)
   const { reload } = summary
   useEffect(() => {
-    if (prevRoute.current === route) return
-    prevRoute.current = route
-    if (!route.startsWith('/study/')) reload()
-  }, [route, reload])
+    if (prevRoute.current === fullRoute) return
+    prevRoute.current = fullRoute
+    if (!fullRoute.startsWith('/study/')) reload()
+  }, [fullRoute, reload])
 
   if (user === undefined) {
     return (
@@ -73,7 +78,15 @@ export function App() {
 
   // 학습은 집중 모드: 탭 막대 · 사이드바 없이 화면 전체를 쓴다
   const study = route.match(/^\/study\/([^/]+)$/)
-  if (study) return isTrack(study[1]) ? <Study key={study[1]} track={study[1]} /> : <Redirect to="/" />
+  if (study) {
+    const track = study[1]
+    if (!isTrack(track)) return <Redirect to="/" />
+    if (params.get('mode') === 'write') {
+      if (!writeTracks().includes(track)) return <Redirect to="/" />
+      return <Study key={fullRoute} track={track} write={parseWriteParams(params)} />
+    }
+    return <Study key={track} track={track} />
+  }
 
   const shell = (title: string, page: ReactNode) => (
     <SummaryContext.Provider value={summary}>
@@ -100,6 +113,13 @@ export function App() {
       return <Redirect to="/library/kana" />
     case '/settings':
       return shell('설정', <Settings user={user} onLogout={() => setUser(null)} onUserChange={setUser} />)
+  }
+
+  const write = route.match(/^\/write\/([^/]+)$/)
+  if (write) {
+    const track = write[1]
+    if (!isTrack(track) || !writeTracks().includes(track)) return <Redirect to="/" />
+    return shell(`작문 · ${TRACK_LABEL[track]}`, <WriteSelect key={track} track={track} />)
   }
 
   const admin = route.match(/^\/admin(?:\/(invites|reports|users))?$/)

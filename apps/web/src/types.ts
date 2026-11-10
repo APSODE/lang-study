@@ -3,7 +3,7 @@
 // 아직 서버에 없는 API 는 404 를 돌려주며, 화면은 이를 "준비 중"으로 보여 준다(hooks.ts useApi 의 notReady).
 import type { FieldsByTrack, Track } from '@nakamura/core'
 
-export type { AnswerResult, QueueItem, StudySummary, TrackSummary } from './study.ts'
+export type { AnswerResult, QueueItem, StudySummary, TrackSummary, WriteLevel, WriteOptions, WriteSummary } from './study.ts'
 
 // --- 통계 ---
 
