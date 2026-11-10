@@ -3,7 +3,7 @@
 // 기간(주 · 달)은 보는 사람의 시간대로 자른다: 주는 월요일 04:00, 달은 1일 04:00 에 시작.
 // 연속 학습일 · 마지막 학습일은 각 사용자 자신의 시간대로 센다 (study/summary 와 같은 값).
 import type { DatabaseSync } from 'node:sqlite'
-import { TRACKS, type Track } from '@nakamura/core'
+import { TRACKS, type TitleLang, type Track } from '@nakamura/core'
 import { dayKey, keyStart, monthStartKey, safeTz, weekStartKey } from './study/day.ts'
 import { streak, userTz } from './study/service.ts'
 import { userLevel } from './study/level.ts'
@@ -59,7 +59,7 @@ const lastStudiedDay = (db: DatabaseSync, user: UserRow, now: number): string | 
   return row.t === null ? null : dayKey(row.t, safeTz(user.tz))
 }
 
-const pickLevel = ({ level, title }: { level: number; title: string }) => ({ level, title })
+const pickLevel = ({ level, title, titleLang }: { level: number; title: string; titleLang: TitleLang }) => ({ level, title, titleLang })
 
 const streakOfUser = (db: DatabaseSync, user: UserRow, now: number): number => streak(db, user.id, now, safeTz(user.tz))
 
@@ -74,7 +74,9 @@ export interface LeaderboardEntry {
   isMe: boolean
   /** 레벨 · 칭호 (친구에게도 보인다) */
   level: number
+  /** 그 사람이 고른(또는 자동) 언어의 칭호 */
   title: string
+  titleLang: TitleLang
 }
 
 /**
@@ -87,8 +89,14 @@ export const leaderboard = (db: DatabaseSync, viewerId: number, period: Period, 
   const rows = allUsers(db)
     .filter(u => u.showProgress === 1 || u.id === viewerId)
     .map(u => {
-      const { level, title } = userLevel(db, u.id, now)
-      return { userId: u.id, name: u.name, reviews: reviews.get(u.id) ?? 0, streak: streakOfUser(db, u, now), isMe: u.id === viewerId, level, title }
+      return {
+        userId: u.id,
+        name: u.name,
+        reviews: reviews.get(u.id) ?? 0,
+        streak: streakOfUser(db, u, now),
+        isMe: u.id === viewerId,
+        ...pickLevel(userLevel(db, u.id, now)),
+      }
     })
     .sort((a, b) => b.reviews - a.reviews || b.streak - a.streak || byName(a, b))
   const entries: LeaderboardEntry[] = []
@@ -117,7 +125,9 @@ export interface Friend {
   lastStudiedDay: string | null
   tracks: FriendTrack[]
   level: number
+  /** 그 사람이 고른(또는 자동) 언어의 칭호 */
   title: string
+  titleLang: TitleLang
 }
 
 /** 진도를 공개한 다른 사용자. 최근에 공부한 사람부터 (안 한 사람은 끝), 그다음 이름 순. */

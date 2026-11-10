@@ -1,5 +1,5 @@
 // 학습 API 타입 (apps/server/src/routes/study.ts 와 맞춘다)
-import type { Note, NoteTrack, Track } from '@nakamura/core'
+import type { Note, NoteTrack, TitleLang, Track } from '@nakamura/core'
 
 /** 트랙 이름. deck 은 친구가 만든 항목(앞면 · 뒷면 카드) */
 export const TRACK_LABEL: Record<NoteTrack, string> = { kana: '가나', kanji: '한자', toeic: '토익', toefl: '토플', deck: '항목' }
@@ -40,6 +40,8 @@ export interface Mastery {
 export interface LevelSummary {
   level: number
   title: string
+  /** 칭호 언어 (설정 · 자동 판정 결과, 예전 서버는 없을 수 있다) */
+  titleLang?: TitleLang
   xp: number
   /** 지금 레벨이 시작된 누적 XP */
   levelXp: number

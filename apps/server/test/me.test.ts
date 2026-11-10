@@ -6,7 +6,7 @@ describe('내 정보', () => {
     const { db, user } = setup({ kana: false })
     const u = await user('hana')
     const createdAt = (db.prepare('SELECT created_at AS t FROM users WHERE id = ?').get(u.id) as { t: number }).t
-    expect(await u.get('/me/profile')).toEqual({ name: 'hana', displayName: null, display: 'hana', isAdmin: false, showProgress: true, tz: 'Asia/Seoul', createdAt })
+    expect(await u.get('/me/profile')).toEqual({ name: 'hana', displayName: null, display: 'hana', isAdmin: false, showProgress: true, tz: 'Asia/Seoul', titleLang: 'auto', createdAt })
 
     let res = await u.send('PUT', '/me/profile', { showProgress: false })
     expect(res.status).toBe(200)

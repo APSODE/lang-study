@@ -1,6 +1,6 @@
 // 학습 API. app.ts 에서 /api 아래에 붙인다. 모두 로그인 필요.
 //   GET  /study/summary                 트랙별 { track, notes, due, newLeft, newPerDay, learned, reviewsToday, mastery: { mastered, total, jlpt } }
-//                                       + { day, streak, reviewsToday, level: { level, title, xp, levelXp, nextLevelXp, xpToday } } (study/level.ts)
+//                                       + { day, streak, reviewsToday, level: { level, title, titleLang, xp, levelXp, nextLevelXp, xpToday } } (study/level.ts)
 //                                       + writing: { track: 'kanji', due, newLeft, newPerDay, learned } (작문 모드. 트랙 숫자에는 작문 카드가 빠진다)
 //                                       + decks: { key: 'deck:<키>', name, authors, notes, due, newLeft, newPerDay, learned, reviewsToday }[]
 //                                         (친구가 만든 항목, 공개된 카드가 있는 것만, 만든 순서)

@@ -1,7 +1,7 @@
 // 서버 API 응답 타입을 한곳에 모은다.
 // 학습(study/*) 타입은 study.ts 에 있고 여기서 다시 내보낸다. 나머지는 새 API 계약(통계 · 친구 · 프로필 · 관리)이다.
 // 아직 서버에 없는 API 는 404 를 돌려주며, 화면은 이를 "준비 중"으로 보여 준다(hooks.ts useApi 의 notReady).
-import type { FieldsByTrack, NoteTrack, Track } from '@nakamura/core'
+import type { FieldsByTrack, NoteTrack, TitleLang, TitlePref, Track } from '@nakamura/core'
 
 export type {
   AnswerResult,
@@ -68,9 +68,10 @@ export interface LeaderboardEntry {
   reviews: number
   streak: number
   isMe: boolean
-  /** 레벨 · 칭호 (예전 서버는 없을 수 있다) */
+  /** 레벨 · 칭호 (예전 서버는 없을 수 있다). 칭호는 그 사람이 고른(또는 자동) 언어 */
   level?: number
   title?: string
+  titleLang?: TitleLang
 }
 
 /** GET social/leaderboard?period=week|month */
@@ -95,9 +96,10 @@ export interface Friend {
   reviewsWeek: number
   lastStudiedDay: string | null
   tracks: FriendTrack[]
-  /** 레벨 · 칭호 (예전 서버는 없을 수 있다) */
+  /** 레벨 · 칭호 (예전 서버는 없을 수 있다). 칭호는 그 사람이 고른(또는 자동) 언어 */
   level?: number
   title?: string
+  titleLang?: TitleLang
 }
 
 /** GET social/friends */
@@ -118,6 +120,8 @@ export interface Profile {
   isAdmin: boolean
   showProgress: boolean
   tz: string
+  /** 칭호 언어: auto = 복습을 더 많이 한 언어 (예전 서버는 없을 수 있다) */
+  titleLang?: TitlePref
   /** 가입 시각 (ms) */
   createdAt: number
 }

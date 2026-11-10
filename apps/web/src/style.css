@@ -92,7 +92,7 @@ a { color: var(--accent); }
 
 /* 폼: 휴대폰 기준 한 줄에 하나, 입력칸은 가로 전체. 입력 글자는 16px 이상(휴대폰 확대 방지) */
 .form { display: grid; gap: 14px; margin: 16px 0; }
-.form label { display: grid; gap: 6px; font-weight: 600; min-width: 0; }
+.form label, .form .field { display: grid; gap: 6px; font-weight: 600; min-width: 0; }
 .form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .form .row-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 input, textarea, select {

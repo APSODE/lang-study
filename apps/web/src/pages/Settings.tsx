@@ -1,12 +1,13 @@
-// 설정 (#/settings): 프로필(닉네임 · 진도 공개 · 시간대) · 학습(트랙별 하루 새 카드 · 작문 하루 새 문제) · 비밀번호 변경 · 정보.
+// 설정 (#/settings): 프로필(닉네임 · 진도 공개 · 칭호 언어 · 시간대) · 학습(트랙별 하루 새 카드 · 작문 하루 새 문제) · 비밀번호 변경 · 정보.
 // me/profile · auth/password 가 아직 없으면(404) 그 부분만 "준비 중"으로 보여 준다.
 import { type FormEvent, useEffect, useState } from 'react'
-import { TRACKS, type Track } from '@nakamura/core'
+import { TRACKS, type TitlePref, type Track } from '@nakamura/core'
 import { version } from '../../package.json'
 import { api, ApiError, type SessionUser } from '../api.ts'
 import { Card } from '../components/Card.tsx'
 import { LoadError } from '../components/EmptyState.tsx'
 import { Icon } from '../components/Icon.tsx'
+import { Segmented } from '../components/Segmented.tsx'
 import { useSummary } from '../components/Shell.tsx'
 import { Skeleton } from '../components/Skeleton.tsx'
 import { fmtDate } from '../format.ts'
@@ -20,6 +21,12 @@ interface StudySettings {
   writeNewPerDay: number
 }
 const MAX = 100
+
+const TITLE_PREFS: { value: TitlePref; label: string }[] = [
+  { value: 'auto', label: '자동' },
+  { value: 'ja', label: '일본어' },
+  { value: 'en', label: '영어' },
+]
 
 const COMMON_ZONES: [string, string][] = [
   ['Asia/Seoul', '서울'],
@@ -121,15 +128,15 @@ function ProfileSection({ user, onUserChange }: { user: SessionUser; onUserChang
   const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null)
   const summary = useSummary()
 
-  const save = async (patch: Partial<Pick<Profile, 'showProgress' | 'tz'>>) => {
+  const save = async (patch: Partial<Pick<Profile, 'showProgress' | 'tz' | 'titleLang'>>) => {
     setBusy(true)
     setMsg(null)
     try {
       const p = await api<Profile>('me/profile', { method: 'PUT', body: patch })
       profile.setData(p)
       setMsg({ ok: true, text: '저장했습니다.' })
-      // 시간대가 바뀌면 하루 경계 · 연속 학습일이 바뀐다
-      if (patch.tz !== undefined) summary.reload()
+      // 시간대가 바뀌면 하루 경계 · 연속 학습일이, 칭호 언어가 바뀌면 홈 레벨 카드의 칭호가 바뀐다
+      if (patch.tz !== undefined || patch.titleLang !== undefined) summary.reload()
     } catch (err) {
       setMsg({ ok: false, text: (err as Error).message })
     } finally {
@@ -183,6 +190,20 @@ function ProfileSection({ user, onUserChange }: { user: SessionUser; onUserChang
               onChange={e => void save({ showProgress: e.target.checked })}
             />
           </label>
+          {p.titleLang !== undefined && (
+            <div className="field">
+              <span>칭호</span>
+              <Segmented
+                label="칭호 언어"
+                value={p.titleLang}
+                onChange={v => {
+                  if (!busy && v !== p.titleLang) void save({ titleLang: v })
+                }}
+                items={TITLE_PREFS}
+              />
+              <span className="muted small">자동은 복습을 더 많이 한 언어(일본어 · 영어)의 칭호를 씁니다. 친구에게도 이 칭호가 보입니다.</span>
+            </div>
+          )}
           <label>
             시간대
             <select value={p.tz} disabled={busy} onChange={e => void save({ tz: e.target.value })}>

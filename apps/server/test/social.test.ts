@@ -121,6 +121,7 @@ describe('친구 진도', () => {
       name: 'yuki',
       level: 1,
       title: '「あ」부터 시작한 새싹 🌱',
+      titleLang: 'ja',
       streak: 1,
       reviewsWeek: 2,
       lastStudiedDay: '2026-11-09',

@@ -52,6 +52,62 @@ describe('레벨 (활동 XP)', () => {
   })
 })
 
+describe('칭호 언어 (일본어 · 영어)', () => {
+  /** 영어 단어 노트 (토익) — 복습 기록이 영어 XP 로 잡히도록 */
+  const toeic = (db: any, id: string) =>
+    db
+      .prepare("INSERT INTO notes(id, track, fields, status, source, created_at, updated_at) VALUES (?, 'toeic', '{}', 'published', 'test', ?, ?)")
+      .run(id, T0 - DAY, T0 - DAY)
+
+  it('자동: 복습 XP 가 더 많은 언어, 같으면 일본어 (항목 · 보너스는 판정에서 뺀다)', async () => {
+    const { db, user } = setup()
+    const hana = await user('hana')
+    toeic(db, 'toeic-a')
+    toeic(db, 'toeic-b')
+    log(db, hana.id, T0, true, 'kana-hira-a:kana-to-romaji') // 일본어 3
+    log(db, hana.id, T0, true, 'toeic-a:toeic-meaning') // 영어 3 → 같음 → 일본어
+    // 항목 노트 기록과 공개한 내 문제(+5)는 언어 판정에 안 들어간다
+    db.prepare("INSERT INTO notes(id, track, fields, status, source, created_at, updated_at) VALUES ('deck-x-1', 'deck', '{}', 'published', ?, ?, ?)").run(
+      `upload:${hana.id}`,
+      T0,
+      T0,
+    )
+    log(db, hana.id, T0, true, 'deck-x-1:deck-meaning')
+    let s = await hana.get('/study/summary')
+    expect(s.level).toMatchObject({ titleLang: 'ja', title: '「あ」부터 시작한 새싹 🌱', xp: 14 })
+    log(db, hana.id, T0, true, 'toeic-b:toeic-meaning') // 영어 6 > 일본어 3
+    s = await hana.get('/study/summary')
+    expect(s.level).toMatchObject({ titleLang: 'en', title: 'ABC 떼고 온 새싹 🌱', xp: 17 })
+  })
+
+  it('설정한 언어가 저장되고, 친구 · 순위에는 그 사람이 고른 칭호가 나온다', async () => {
+    const { db, user } = setup()
+    const hana = await user('hana')
+    const yuki = await user('yuki')
+    log(db, yuki.id, T0, true, 'kana-hira-a:kana-to-romaji') // 자동이면 일본어
+    let res = await yuki.send('PUT', '/me/profile', { titleLang: 'en' })
+    expect(res.status).toBe(200)
+    expect(await res.json()).toMatchObject({ titleLang: 'en' })
+    expect(await yuki.get('/me/profile')).toMatchObject({ titleLang: 'en' })
+    expect((await yuki.get('/study/summary')).level).toMatchObject({ titleLang: 'en', title: 'ABC 떼고 온 새싹 🌱' })
+
+    const { friends } = await hana.get('/social/friends')
+    expect(friends.map((f: any) => [f.name, f.titleLang, f.title])).toEqual([['yuki', 'en', 'ABC 떼고 온 새싹 🌱']])
+    const { entries } = await hana.get('/social/leaderboard')
+    expect(entries.map((e: any) => [e.name, e.titleLang, e.title])).toEqual([
+      ['yuki', 'en', 'ABC 떼고 온 새싹 🌱'],
+      ['hana', 'ja', '「あ」부터 시작한 새싹 🌱'],
+    ])
+
+    // 자동으로 되돌리기 · 잘못된 값
+    expect((await yuki.send('PUT', '/me/profile', { titleLang: 'kr' })).status).toBe(400)
+    expect((await yuki.send('PUT', '/me/profile', { titleLang: null })).status).toBe(400)
+    res = await yuki.send('PUT', '/me/profile', { titleLang: 'auto' })
+    expect(await res.json()).toMatchObject({ titleLang: 'auto' })
+    expect((await yuki.get('/study/summary')).level).toMatchObject({ titleLang: 'ja' })
+  })
+})
+
 describe('트랙별 실력', () => {
   it('간격 21일 이상 카드가 있는 노트를 익힌 것으로 센다', async () => {
     const { db, user } = setup()

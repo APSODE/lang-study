@@ -5,8 +5,22 @@
 //     (모든 시간대 오프셋이 15분의 배수라서 같은 15분 안의 기록은 같은 학습일이다) — 기록 수가 많아도 dayKey 호출은 적다.
 //   - 공개된 내가 만든 문제(notes.source = 'upload:<id>', status published) 개당 +5. 오늘 얻은 몫은 updated_at 으로 어림한다.
 //   - "그날 할 복습을 다 비운 날 +10" 은 기록으로 알 수 없어서 뺐다 (그날 due 였던 카드 목록이 남지 않는다).
+// 칭호는 일본어 · 영어 두 벌. users.title_lang 이 auto 면 복습 XP(가나 · 한자 vs 토익 · 토플, 항목 · 보너스 제외)가 더 많은 쪽, 같으면 일본어.
 import type { DatabaseSync } from 'node:sqlite'
-import { levelInfo, streakBonuses, XP, type KanjiFields, type LevelInfo, type StudyKey } from '@nakamura/core'
+import {
+  isTitlePref,
+  isTrack,
+  levelInfo,
+  streakBonuses,
+  titleLangFor,
+  TRACK_TITLE_LANG,
+  XP,
+  type KanjiFields,
+  type LevelInfo,
+  type StudyKey,
+  type TitleLang,
+  type TitlePref,
+} from '@nakamura/core'
 import { publishedCatalog } from './catalog.ts'
 import { dayKey, dayStart, prevDayKey, safeTz } from './day.ts'
 
@@ -25,22 +39,34 @@ export interface UserLevel extends LevelInfo {
 const tzOf = (db: DatabaseSync, userId: number): string =>
   safeTz((db.prepare('SELECT tz FROM users WHERE id = ?').get(userId) as { tz: string } | undefined)?.tz)
 
-/** [전체, start 이후] 복습 XP (now 까지) */
-const reviewXp = (db: DatabaseSync, userId: number, start: number, now: number): [number, number] => {
-  const r = db
+/** [전체, start 이후, 언어별 전체] 복습 XP (now 까지). 언어별은 카드의 노트 트랙으로 나눈다 (항목 · 지워진 노트는 빠진다) */
+const reviewXp = (db: DatabaseSync, userId: number, start: number, now: number): [number, number, Record<TitleLang, number>] => {
+  const rows = db
     .prepare(
-      `SELECT total(CASE WHEN first THEN ? WHEN correct THEN ? ELSE ? END) AS all_,
+      `SELECT n.track AS track,
+              total(CASE WHEN first THEN ? WHEN correct THEN ? ELSE ? END) AS all_,
               total(CASE WHEN t < ? THEN 0 WHEN first THEN ? WHEN correct THEN ? ELSE ? END) AS today
-         FROM (SELECT correct, reviewed_at AS t,
+         FROM (SELECT correct, reviewed_at AS t, card_id,
                       row_number() OVER (PARTITION BY card_id ORDER BY reviewed_at, id) = 1 AS first
-                 FROM review_logs WHERE user_id = ?)
-        WHERE t <= ?`,
+                 FROM review_logs WHERE user_id = ?) l
+         LEFT JOIN notes n ON n.id = substr(l.card_id, 1, instr(l.card_id, ':') - 1)
+        WHERE t <= ?
+        GROUP BY n.track`,
     )
-    .get(XP.newCard, XP.reviewCorrect, XP.reviewWrong, start, XP.newCard, XP.reviewCorrect, XP.reviewWrong, userId, now) as {
+    .all(XP.newCard, XP.reviewCorrect, XP.reviewWrong, start, XP.newCard, XP.reviewCorrect, XP.reviewWrong, userId, now) as {
+    track: string | null
     all_: number
     today: number
+  }[]
+  let all = 0
+  let today = 0
+  const byLang: Record<TitleLang, number> = { ja: 0, en: 0 }
+  for (const r of rows) {
+    all += r.all_
+    today += r.today
+    if (r.track !== null && isTrack(r.track)) byLang[TRACK_TITLE_LANG[r.track]] += r.all_
   }
-  return [r.all_, r.today]
+  return [all, today, byLang]
 }
 
 /** [전체, 오늘] 연속 학습일 보너스 */
@@ -73,16 +99,27 @@ const noteXp = (db: DatabaseSync, userId: number, start: number): [number, numbe
   return [r.n * XP.publishedNote, r.today * XP.publishedNote]
 }
 
-export const userXp = (db: DatabaseSync, userId: number, now: number): { xp: number; xpToday: number } => {
+export const userXp = (
+  db: DatabaseSync,
+  userId: number,
+  now: number,
+): { xp: number; xpToday: number; reviewXpByLang: Record<TitleLang, number> } => {
   const tz = tzOf(db, userId)
   const start = dayStart(now, tz)
-  const parts = [reviewXp(db, userId, start, now), streakXp(db, userId, tz, now), noteXp(db, userId, start)]
-  return { xp: parts.reduce((n, p) => n + p[0], 0), xpToday: parts.reduce((n, p) => n + p[1], 0) }
+  const review = reviewXp(db, userId, start, now)
+  const parts = [review, streakXp(db, userId, tz, now), noteXp(db, userId, start)]
+  return { xp: parts.reduce((n, p) => n + p[0], 0), xpToday: parts.reduce((n, p) => n + p[1], 0), reviewXpByLang: review[2] }
+}
+
+/** 칭호 언어 설정 (users.title_lang, 모르는 값은 auto) */
+export const titlePrefOf = (db: DatabaseSync, userId: number): TitlePref => {
+  const v = (db.prepare('SELECT title_lang AS v FROM users WHERE id = ?').get(userId) as { v: string } | undefined)?.v
+  return isTitlePref(v) ? v : 'auto'
 }
 
 export const userLevel = (db: DatabaseSync, userId: number, now: number): UserLevel => {
-  const { xp, xpToday } = userXp(db, userId, now)
-  return { ...levelInfo(xp), xpToday }
+  const { xp, xpToday, reviewXpByLang } = userXp(db, userId, now)
+  return { ...levelInfo(xp, titleLangFor(titlePrefOf(db, userId), reviewXpByLang)), xpToday }
 }
 
 // --- 트랙별 실력 ---

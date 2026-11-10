@@ -1,4 +1,5 @@
 // 레벨 · 칭호 (docs/레벨_작업.md). 메인 레벨 = 활동 XP. XP 계산 자체는 서버가 복습 기록에서 한다 (apps/server/src/study/level.ts).
+import type { Track } from './notes.ts'
 
 /** XP 규칙 */
 export const XP = {
@@ -26,8 +27,19 @@ export const levelForXp = (xp: number): number => {
   return n
 }
 
-/** 칭호 표: 이 레벨부터 (큰 것부터 찾는다) */
-export const TITLES: readonly { from: number; title: string }[] = [
+/** 칭호 언어. 레벨은 하나, 칭호만 일본어 · 영어 두 벌 */
+export const TITLE_LANGS = ['ja', 'en'] as const
+export type TitleLang = (typeof TITLE_LANGS)[number]
+/** 사용자 설정: auto = 복습 XP 가 더 많은 쪽 */
+export const TITLE_PREFS = ['auto', 'ja', 'en'] as const
+export type TitlePref = (typeof TITLE_PREFS)[number]
+export const isTitlePref = (v: unknown): v is TitlePref => typeof v === 'string' && (TITLE_PREFS as readonly string[]).includes(v)
+
+/** 트랙 → 칭호 언어 (항목 · 보너스는 언어 판정에서 뺀다) */
+export const TRACK_TITLE_LANG: Readonly<Record<Track, TitleLang>> = { kana: 'ja', kanji: 'ja', toeic: 'en', toefl: 'en' }
+
+/** 일본어 칭호 표: 이 레벨부터 (큰 것부터 찾는다) */
+export const TITLES_JA: readonly { from: number; title: string }[] = [
   { from: 1, title: '「あ」부터 시작한 새싹 🌱' },
   { from: 3, title: '가타카나 보면 멈칫하는 사람' },
   { from: 5, title: '편의점 いらっしゃいませ 알아들음' },
@@ -39,18 +51,50 @@ export const TITLES: readonly { from: number; title: string }[] = [
   { from: 25, title: '애니 자막 반쯤 끈 사람 📺' },
   { from: 30, title: '일드 무자막 도전자' },
   { from: 35, title: '한자 2000자 탐험가 🧭' },
-  { from: 40, title: '토익 · 토플까지 씹어먹는 단어 사냥꾼' },
+  { from: 40, title: '오사카 사투리도 알아듣는 사람 🐙' },
   { from: 50, title: '나카무라 그 자체 👑' },
 ]
 
-export const titleForLevel = (level: number): string => {
-  for (let i = TITLES.length - 1; i >= 0; i--) if (level >= TITLES[i]!.from) return TITLES[i]!.title
-  return TITLES[0]!.title
+/** 영어 칭호 표 */
+export const TITLES_EN: readonly { from: number; title: string }[] = [
+  { from: 1, title: 'ABC 떼고 온 새싹 🌱' },
+  { from: 3, title: '"Fine, thank you. And you?" 자동 반사' },
+  { from: 5, title: '카페 영어 주문 성공자 ☕' },
+  { from: 7, title: '미드 자막을 영어로 바꿔 본 사람' },
+  { from: 10, title: '단어장 형광펜 장인 🖍️' },
+  { from: 13, title: '토익 LC 에서 졸지 않는 사람' },
+  { from: 16, title: '메일 끝에 "Best regards" 쓰는 사람' },
+  { from: 20, title: '토익 접수 버튼 앞에서 고민 중' },
+  { from: 25, title: '해외 직구 문의 메일 혼자 보내는 사람 📦' },
+  { from: 30, title: '영어 원서 첫 장 넘긴 사람 📖' },
+  { from: 35, title: '아카데믹 단어 탐험가 🧭' },
+  { from: 40, title: '토플 스피킹 타이머도 안 무서운 사람 ⏱️' },
+  { from: 50, title: '원어민 코스프레 장인 👑' },
+]
+
+/** 예전 이름 (일본어 칭호 표) */
+export const TITLES = TITLES_JA
+
+const TITLE_TABLES: Readonly<Record<TitleLang, readonly { from: number; title: string }[]>> = { ja: TITLES_JA, en: TITLES_EN }
+
+export const titleForLevel = (level: number, lang: TitleLang = 'ja'): string => {
+  const table = TITLE_TABLES[lang]
+  for (let i = table.length - 1; i >= 0; i--) if (level >= table[i]!.from) return table[i]!.title
+  return table[0]!.title
 }
+
+/** 자동 판정: 복습 XP 가 더 많은 언어, 같으면 일본어 */
+export const autoTitleLang = (xp: Readonly<Record<TitleLang, number>>): TitleLang => (xp.en > xp.ja ? 'en' : 'ja')
+
+/** 설정 + 언어별 복습 XP → 쓸 칭호 언어 */
+export const titleLangFor = (pref: TitlePref, xp: Readonly<Record<TitleLang, number>>): TitleLang =>
+  pref === 'auto' ? autoTitleLang(xp) : pref
 
 export interface LevelInfo {
   level: number
   title: string
+  /** title 의 언어 */
+  titleLang: TitleLang
   /** 누적 XP */
   xp: number
   /** 지금 레벨이 시작된 누적 XP */
@@ -59,9 +103,9 @@ export interface LevelInfo {
   nextLevelXp: number
 }
 
-export const levelInfo = (xp: number): LevelInfo => {
+export const levelInfo = (xp: number, titleLang: TitleLang = 'ja'): LevelInfo => {
   const level = levelForXp(xp)
-  return { level, title: titleForLevel(level), xp, levelXp: xpForLevel(level), nextLevelXp: xpForLevel(level + 1) }
+  return { level, title: titleForLevel(level, titleLang), titleLang, xp, levelXp: xpForLevel(level), nextLevelXp: xpForLevel(level + 1) }
 }
 
 /**
