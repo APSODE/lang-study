@@ -1,0 +1,1844 @@
+[
+  {
+    "band": 16,
+    "example_en": "Please fill in each blank on the worksheet before the next lecture.",
+    "example_ko": "다음 강의 전까지 학습지의 각 빈칸을 채우세요.",
+    "forms": [
+      "blanks",
+      "blanked",
+      "blanking",
+      "blanker"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "빈칸, 비어 있다",
+    "pos": "n, adj",
+    "rank": 791,
+    "sfi": 50.569,
+    "u": 11.0,
+    "word": "blank"
+  },
+  {
+    "band": 16,
+    "example_en": "Sodium chloride dissolves easily in water and forms a clear solution.",
+    "example_ko": "염화나트륨은 물에 쉽게 녹아 투명한 용액을 만든다.",
+    "forms": [
+      "chlorides"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "염화물",
+    "pos": "n",
+    "rank": 792,
+    "sfi": 50.526,
+    "u": 11.0,
+    "word": "chloride"
+  },
+  {
+    "band": 16,
+    "example_en": "Dividing the project into smaller tasks is a sensible way to manage your time.",
+    "example_ko": "과제를 더 작은 일로 나누는 것은 시간을 관리하는 합리적인 방법이다.",
+    "forms": [
+      "sensibles"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "합리적이다, 분별 있다",
+    "pos": "adj",
+    "rank": 793,
+    "sfi": 50.508,
+    "u": 11.0,
+    "word": "sensible"
+  },
+  {
+    "band": 16,
+    "example_en": "In this region, women traditionally weave cloth from cotton grown in nearby fields.",
+    "example_ko": "이 지역에서 여성들은 전통적으로 근처 밭에서 기른 목화로 천을 짠다.",
+    "forms": [
+      "weaves",
+      "wove",
+      "weaving",
+      "woven",
+      "weaved",
+      "weavings"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "짜다, 엮다",
+    "pos": "v",
+    "rank": 794,
+    "sfi": 50.467,
+    "u": 11.0,
+    "word": "weave"
+  },
+  {
+    "band": 16,
+    "example_en": "A white precipitate formed at the bottom of the test tube after mixing.",
+    "example_ko": "섞은 뒤 시험관 바닥에 흰 침전물이 생겼다.",
+    "forms": [
+      "precipitates",
+      "precipitated",
+      "precipitating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "침전물, 침전시키다, 촉발하다",
+    "pos": "n, v",
+    "rank": 796,
+    "sfi": 50.42,
+    "u": 11.0,
+    "word": "precipitate"
+  },
+  {
+    "band": 17,
+    "example_en": "Recovery from the injury was slow and painful for many of the patients.",
+    "example_ko": "많은 환자에게 그 부상에서 회복하는 과정은 느리고 고통스러웠다.",
+    "list": "NAWL",
+    "meaning_ko": "고통스럽다, 아프다",
+    "pos": "adj",
+    "rank": 797,
+    "sfi": 50.411,
+    "u": 11.0,
+    "word": "painful"
+  },
+  {
+    "band": 17,
+    "example_en": "Rapid industrialization changed where people lived and how they worked in the nineteenth century.",
+    "example_ko": "급속한 산업화는 19세기에 사람들이 사는 곳과 일하는 방식을 바꾸었다.",
+    "forms": [
+      "industrializations",
+      "industrialisation"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "산업화, 공업화",
+    "pos": "n",
+    "rank": 798,
+    "sfi": 50.403,
+    "u": 11.0,
+    "word": "industrialization"
+  },
+  {
+    "band": 17,
+    "example_en": "Net income equals total revenue minus all operating costs and taxes.",
+    "example_ko": "순이익은 총수입에서 모든 운영비와 세금을 뺀 것과 같다.",
+    "forms": [
+      "minuses"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "~을 뺀, 빼기, 마이너스",
+    "pos": "prep, n",
+    "rank": 801,
+    "sfi": 50.361,
+    "u": 11.0,
+    "word": "minus"
+  },
+  {
+    "band": 17,
+    "example_en": "Heat moves through the metal rod by conduction from the hot end.",
+    "example_ko": "열은 전도에 의해 금속 막대의 뜨거운 끝에서부터 이동한다.",
+    "list": "NAWL",
+    "meaning_ko": "전도",
+    "pos": "n",
+    "rank": 802,
+    "sfi": 50.328,
+    "u": 11.0,
+    "word": "conduction"
+  },
+  {
+    "band": 17,
+    "example_en": "The lecture audio will be posted online so students can review it later.",
+    "example_ko": "강의 음성은 학생들이 나중에 복습할 수 있도록 온라인에 올라간다.",
+    "list": "NAWL",
+    "meaning_ko": "음성, 오디오, 음향",
+    "pos": "n",
+    "rank": 803,
+    "sfi": 50.308,
+    "u": 11.0,
+    "word": "audio"
+  },
+  {
+    "band": 17,
+    "example_en": "Each facet of the problem must be considered before we propose a solution.",
+    "example_ko": "해결책을 제안하기 전에 문제의 각 측면을 고려해야 한다.",
+    "forms": [
+      "facets",
+      "faceted",
+      "faceting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "측면, 면",
+    "pos": "n",
+    "rank": 805,
+    "sfi": 50.286,
+    "u": 11.0,
+    "word": "facet"
+  },
+  {
+    "band": 17,
+    "example_en": "Scientists can splice a gene from one organism into the DNA of another.",
+    "example_ko": "과학자들은 한 생물의 유전자를 다른 생물의 DNA에 접합할 수 있다.",
+    "forms": [
+      "splices",
+      "spliced",
+      "splicing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "접합하다, 이어 붙이다",
+    "pos": "v",
+    "rank": 806,
+    "sfi": 50.174,
+    "u": 10.0,
+    "word": "splice"
+  },
+  {
+    "band": 17,
+    "example_en": "In most elections, the incumbent has an advantage because voters already know the name.",
+    "example_ko": "대부분의 선거에서 현직자는 유권자들이 이미 이름을 알기 때문에 유리하다.",
+    "forms": [
+      "incumbents"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "현직자, 재임 중인",
+    "pos": "n, adj",
+    "rank": 807,
+    "sfi": 50.169,
+    "u": 10.0,
+    "word": "incumbent"
+  },
+  {
+    "band": 17,
+    "example_en": "Tropical rainforests contain much of the planet's biodiversity despite covering a small area.",
+    "example_ko": "열대 우림은 작은 면적을 차지하지만 지구 생물 다양성의 상당 부분을 품고 있다.",
+    "list": "NAWL",
+    "meaning_ko": "생물 다양성",
+    "pos": "n",
+    "rank": 808,
+    "sfi": 50.153,
+    "u": 10.0,
+    "word": "biodiversity"
+  },
+  {
+    "band": 17,
+    "example_en": "Learners remember more when each chunk of information is short and meaningful.",
+    "example_ko": "학습자는 각 정보 덩어리가 짧고 의미 있을 때 더 많이 기억한다.",
+    "forms": [
+      "chunks",
+      "chunked",
+      "chunking"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "덩어리, 묶음",
+    "pos": "n",
+    "rank": 809,
+    "sfi": 50.02,
+    "u": 10.0,
+    "word": "chunk"
+  },
+  {
+    "band": 17,
+    "example_en": "The credibility of a source depends partly on the author's expertise and evidence.",
+    "example_ko": "출처의 신뢰성은 부분적으로 저자의 전문성과 근거에 달려 있다.",
+    "list": "NAWL",
+    "meaning_ko": "신뢰성, 신빙성",
+    "pos": "n",
+    "rank": 810,
+    "sfi": 49.993,
+    "u": 10.0,
+    "word": "credibility"
+  },
+  {
+    "band": 17,
+    "example_en": "If you struggle with calculus, a tutor at the learning center can help.",
+    "example_ko": "미적분이 어렵다면 학습 센터의 튜터가 도와줄 수 있다.",
+    "forms": [
+      "tutors",
+      "tutored",
+      "tutoring"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "튜터, 개인 지도 교사, 개인 지도하다",
+    "pos": "n, v",
+    "rank": 811,
+    "sfi": 49.932,
+    "u": 10.0,
+    "word": "tutor"
+  },
+  {
+    "band": 17,
+    "example_en": "The professor's review session was super helpful before the final exam.",
+    "example_ko": "교수님의 복습 시간은 기말고사 전에 아주 도움이 되었다.",
+    "forms": [
+      "supers"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "아주, 굉장히",
+    "pos": "adv",
+    "rank": 812,
+    "sfi": 49.916,
+    "u": 10.0,
+    "word": "super"
+  },
+  {
+    "band": 17,
+    "example_en": "The shark uses its tail fin to push itself forward through the water.",
+    "example_ko": "상어는 꼬리 지느러미를 사용해 물속에서 앞으로 나아간다.",
+    "forms": [
+      "fins",
+      "finned",
+      "finning"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "지느러미",
+    "pos": "n",
+    "rank": 813,
+    "sfi": 49.87,
+    "u": 10.0,
+    "word": "fin"
+  },
+  {
+    "band": 17,
+    "example_en": "Aluminum is light and resists corrosion, so it is widely used in aircraft.",
+    "example_ko": "알루미늄은 가볍고 부식에 강해서 항공기에 널리 쓰인다.",
+    "forms": [
+      "aluminium"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "알루미늄",
+    "pos": "n",
+    "rank": 814,
+    "sfi": 49.867,
+    "u": 10.0,
+    "word": "aluminum"
+  },
+  {
+    "band": 17,
+    "example_en": "Under the new policy, students are liable for any damage to library equipment.",
+    "example_ko": "새 정책에 따라 학생들은 도서관 장비의 모든 손상에 대해 책임이 있다.",
+    "forms": [
+      "liables"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "책임이 있다, ~하기 쉽다",
+    "pos": "adj",
+    "rank": 816,
+    "sfi": 49.828,
+    "u": 10.0,
+    "word": "liable"
+  },
+  {
+    "band": 17,
+    "example_en": "Many ancient Greek statues were carved from white marble found in local quarries.",
+    "example_ko": "많은 고대 그리스 조각상은 그 지역 채석장에서 나온 흰 대리석으로 조각되었다.",
+    "forms": [
+      "marbles",
+      "marbled"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "대리석, 구슬",
+    "pos": "n",
+    "rank": 817,
+    "sfi": 49.802,
+    "u": 10.0,
+    "word": "marble"
+  },
+  {
+    "band": 17,
+    "example_en": "Heavy pesticide use can harm bees and other helpful insects on farms.",
+    "example_ko": "살충제를 많이 쓰면 농장의 벌과 다른 이로운 곤충이 해를 입을 수 있다.",
+    "forms": [
+      "pesticides"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "살충제, 농약",
+    "pos": "n",
+    "rank": 818,
+    "sfi": 49.732,
+    "u": 9.0,
+    "word": "pesticide"
+  },
+  {
+    "band": 17,
+    "example_en": "Technically, a tomato is a fruit because it develops from the flower's ovary.",
+    "example_ko": "엄밀히 말하면 토마토는 꽃의 씨방에서 발달하므로 과일이다.",
+    "list": "NAWL",
+    "meaning_ko": "엄밀히 말하면, 기술적으로",
+    "pos": "adv",
+    "rank": 819,
+    "sfi": 49.646,
+    "u": 9.0,
+    "word": "technically"
+  },
+  {
+    "band": 17,
+    "example_en": "The theory was once on the fringe of mainstream science but is now widely accepted.",
+    "example_ko": "그 이론은 한때 주류 과학의 주변부에 있었지만 지금은 널리 받아들여진다.",
+    "forms": [
+      "fringes",
+      "fringed",
+      "fringing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "주변부, 가장자리, 비주류의",
+    "pos": "n, adj",
+    "rank": 820,
+    "sfi": 49.598,
+    "u": 9.0,
+    "word": "fringe"
+  },
+  {
+    "band": 17,
+    "example_en": "A marine biologist studied how rising water temperatures affect coral reefs.",
+    "example_ko": "한 해양 생물학자가 수온 상승이 산호초에 어떤 영향을 주는지 연구했다.",
+    "forms": [
+      "biologists"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "생물학자",
+    "pos": "n",
+    "rank": 822,
+    "sfi": 49.565,
+    "u": 9.0,
+    "word": "biologist"
+  },
+  {
+    "band": 17,
+    "example_en": "In poetry, a single word can carry a strong emotional connotation for readers.",
+    "example_ko": "시에서는 낱말 하나가 독자에게 강한 정서적 함축을 지닐 수 있다.",
+    "forms": [
+      "connotations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "함축, 함축된 의미",
+    "pos": "n",
+    "rank": 823,
+    "sfi": 49.558,
+    "u": 9.0,
+    "word": "connotation"
+  },
+  {
+    "band": 17,
+    "example_en": "Rich soil deposited in the river delta makes the area ideal for farming.",
+    "example_ko": "강 삼각주에 쌓인 비옥한 흙 덕분에 그 지역은 농사에 알맞다.",
+    "forms": [
+      "deltas"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "삼각주, 델타",
+    "pos": "n",
+    "rank": 824,
+    "sfi": 49.534,
+    "u": 9.0,
+    "word": "delta"
+  },
+  {
+    "band": 17,
+    "example_en": "The snake swallows its prey whole and digests it slowly over several days.",
+    "example_ko": "뱀은 먹이를 통째로 삼키고 며칠에 걸쳐 천천히 소화한다.",
+    "forms": [
+      "snakes",
+      "snaked",
+      "snaking"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "뱀",
+    "pos": "n",
+    "rank": 826,
+    "sfi": 49.471,
+    "u": 9.0,
+    "word": "snake"
+  },
+  {
+    "band": 17,
+    "example_en": "The fruit's soft flesh protects the seeds until animals eat and spread them.",
+    "example_ko": "열매의 부드러운 과육은 동물이 먹고 퍼뜨릴 때까지 씨앗을 보호한다.",
+    "forms": [
+      "fleshes",
+      "fleshed",
+      "fleshing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "과육, 살, 육체",
+    "pos": "n",
+    "rank": 827,
+    "sfi": 49.42,
+    "u": 9.0,
+    "word": "flesh"
+  },
+  {
+    "band": 17,
+    "example_en": "In many folk tales, a ghost returns to warn the living about danger.",
+    "example_ko": "많은 민담에서 유령은 산 사람에게 위험을 경고하러 돌아온다.",
+    "forms": [
+      "ghosts",
+      "ghosted",
+      "ghosting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "유령",
+    "pos": "n",
+    "rank": 828,
+    "sfi": 49.342,
+    "u": 9.0,
+    "word": "ghost"
+  },
+  {
+    "band": 17,
+    "example_en": "Red blood cells are produced in the bone marrow of large bones.",
+    "example_ko": "적혈구는 큰 뼈의 골수에서 만들어진다.",
+    "forms": [
+      "marrows"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "골수",
+    "pos": "n",
+    "rank": 829,
+    "sfi": 49.339,
+    "u": 9.0,
+    "word": "marrow"
+  },
+  {
+    "band": 17,
+    "example_en": "The surgeon explained the risks of the operation to the medical students.",
+    "example_ko": "외과 의사는 의대생들에게 수술의 위험성을 설명했다.",
+    "forms": [
+      "surgeons"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "외과 의사",
+    "pos": "n",
+    "rank": 830,
+    "sfi": 49.328,
+    "u": 9.0,
+    "word": "surgeon"
+  },
+  {
+    "band": 17,
+    "example_en": "Birds build nests by instinct, without ever being taught how to do it.",
+    "example_ko": "새는 배운 적 없이 본능에 따라 둥지를 짓는다.",
+    "forms": [
+      "instincts"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "본능, 직감",
+    "pos": "n",
+    "rank": 831,
+    "sfi": 49.319,
+    "u": 9.0,
+    "word": "instinct"
+  },
+  {
+    "band": 17,
+    "example_en": "Many countries tried to industrialize quickly after the Second World War.",
+    "example_ko": "많은 나라가 제2차 세계 대전 이후 빠르게 산업화하려고 했다.",
+    "forms": [
+      "industrializes",
+      "industrialized",
+      "industrializing",
+      "industrialise",
+      "industrialises",
+      "industrialised",
+      "industrialising"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "산업화하다, 공업화하다",
+    "pos": "v",
+    "rank": 832,
+    "sfi": 49.284,
+    "u": 8.0,
+    "word": "industrialize"
+  },
+  {
+    "band": 17,
+    "example_en": "To add these fractions, first find a common denominator for both of them.",
+    "example_ko": "이 분수들을 더하려면 먼저 둘의 공통 분모를 구하세요.",
+    "forms": [
+      "denominators"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "분모",
+    "pos": "n",
+    "rank": 833,
+    "sfi": 49.23,
+    "u": 8.0,
+    "word": "denominator"
+  },
+  {
+    "band": 17,
+    "example_en": "Water is called a universal solvent because it dissolves so many substances.",
+    "example_ko": "물은 매우 많은 물질을 녹이기 때문에 만능 용매라고 불린다.",
+    "forms": [
+      "solvents"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "용매, 지불 능력이 있다",
+    "pos": "n, adj",
+    "rank": 836,
+    "sfi": 49.177,
+    "u": 8.0,
+    "word": "solvent"
+  },
+  {
+    "band": 17,
+    "example_en": "The ancient text was carved into a large stone slab near the temple.",
+    "example_ko": "그 고대 글은 신전 근처의 큰 석판에 새겨져 있었다.",
+    "forms": [
+      "slabs",
+      "slabed",
+      "slabing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "석판, 판",
+    "pos": "n",
+    "rank": 838,
+    "sfi": 49.101,
+    "u": 8.0,
+    "word": "slab"
+  },
+  {
+    "band": 17,
+    "example_en": "Farmers plant several crops as a hedge against poor weather in any one season.",
+    "example_ko": "농부들은 어느 한 철의 나쁜 날씨에 대한 대비책으로 여러 작물을 심는다.",
+    "forms": [
+      "hedges",
+      "hedged",
+      "hedging"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "대비책, 산울타리, 얼버무리다",
+    "pos": "n, v",
+    "rank": 839,
+    "sfi": 48.823,
+    "u": 8.0,
+    "word": "hedge"
+  },
+  {
+    "band": 17,
+    "example_en": "Several planets can be seen with the naked eye on a clear night.",
+    "example_ko": "맑은 밤에는 몇몇 행성을 맨눈으로 볼 수 있다.",
+    "list": "NAWL",
+    "meaning_ko": "맨, 벌거벗은, 드러난",
+    "pos": "adj",
+    "rank": 843,
+    "sfi": 48.731,
+    "u": 7.0,
+    "word": "naked"
+  },
+  {
+    "band": 17,
+    "example_en": "The author criticizes society's indifference to the suffering of the poor.",
+    "example_ko": "저자는 가난한 이들의 고통에 대한 사회의 무관심을 비판한다.",
+    "forms": [
+      "indifferences"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "무관심",
+    "pos": "n",
+    "rank": 844,
+    "sfi": 48.72,
+    "u": 7.0,
+    "word": "indifference"
+  },
+  {
+    "band": 18,
+    "example_en": "Grind the dried leaves into a fine powder before adding them to the solution.",
+    "example_ko": "말린 잎을 용액에 넣기 전에 고운 가루로 빻으세요.",
+    "forms": [
+      "powders",
+      "powdered",
+      "powdering"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "가루, 분말",
+    "pos": "n",
+    "rank": 846,
+    "sfi": 48.592,
+    "u": 7.0,
+    "word": "powder"
+  },
+  {
+    "band": 18,
+    "example_en": "When the solute dissolves completely, the mixture becomes a uniform solution.",
+    "example_ko": "용질이 완전히 녹으면 혼합물은 균일한 용액이 된다.",
+    "forms": [
+      "solutes"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "용질",
+    "pos": "n",
+    "rank": 849,
+    "sfi": 48.377,
+    "u": 7.0,
+    "word": "solute"
+  },
+  {
+    "band": 18,
+    "example_en": "The biology lab includes a frog dissection to show students the internal organs.",
+    "example_ko": "생물학 실험에는 학생들에게 내부 기관을 보여 주기 위한 개구리 해부가 포함된다.",
+    "forms": [
+      "dissections"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "해부, 세밀한 분석",
+    "pos": "n",
+    "rank": 850,
+    "sfi": 48.318,
+    "u": 7.0,
+    "word": "dissection"
+  },
+  {
+    "band": 18,
+    "example_en": "Some governments censor news reports that criticize their policies.",
+    "example_ko": "일부 정부는 자신들의 정책을 비판하는 뉴스 보도를 검열한다.",
+    "forms": [
+      "censors",
+      "censored",
+      "censoring",
+      "censorings"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "검열하다, 검열관",
+    "pos": "v, n",
+    "rank": 851,
+    "sfi": 48.281,
+    "u": 7.0,
+    "word": "censor"
+  },
+  {
+    "band": 18,
+    "example_en": "The novel's portrayal of factory life shocked many readers at the time.",
+    "example_ko": "그 소설의 공장 생활 묘사는 당시 많은 독자에게 충격을 주었다.",
+    "forms": [
+      "portrayals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "묘사",
+    "pos": "n",
+    "rank": 852,
+    "sfi": 48.265,
+    "u": 7.0,
+    "word": "portrayal"
+  },
+  {
+    "band": 18,
+    "example_en": "Humans can grasp small tools because the thumb can touch each of the other fingers.",
+    "example_ko": "인간은 엄지가 다른 손가락 각각에 닿을 수 있어서 작은 도구를 쥘 수 있다.",
+    "forms": [
+      "thumbs",
+      "thumbed",
+      "thumbing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "엄지, 엄지손가락",
+    "pos": "n",
+    "rank": 854,
+    "sfi": 48.036,
+    "u": 6.0,
+    "word": "thumb"
+  },
+  {
+    "band": 18,
+    "example_en": "Acidic rain can slowly dissolve limestone buildings and damage forest soil.",
+    "example_ko": "산성비는 석회암 건물을 서서히 녹이고 숲의 토양을 손상시킬 수 있다.",
+    "forms": [
+      "acidics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "산성의",
+    "pos": "adj",
+    "rank": 855,
+    "sfi": 48.035,
+    "u": 6.0,
+    "word": "acidic"
+  },
+  {
+    "band": 18,
+    "example_en": "Tectonic uplift slowly raised the ancient seabed thousands of meters above sea level.",
+    "example_ko": "지각 융기로 고대의 해저가 해수면보다 수천 미터 위로 서서히 솟아올랐다.",
+    "forms": [
+      "uplifts",
+      "uplifted",
+      "uplifting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "융기, 들어 올리다, 향상",
+    "pos": "n, v",
+    "rank": 856,
+    "sfi": 48.006,
+    "u": 6.0,
+    "word": "uplift"
+  },
+  {
+    "band": 18,
+    "example_en": "Flip a coin 100 times and record how often it lands on heads.",
+    "example_ko": "동전을 100번 던져 앞면이 몇 번 나오는지 기록하세요.",
+    "forms": [
+      "flips",
+      "flipped",
+      "flipping"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "뒤집다, (동전을) 던지다",
+    "pos": "v",
+    "rank": 857,
+    "sfi": 48.002,
+    "u": 6.0,
+    "word": "flip"
+  },
+  {
+    "band": 18,
+    "example_en": "Two triangles are congruent if all their sides and angles are equal.",
+    "example_ko": "두 삼각형의 모든 변과 각이 같으면 두 삼각형은 합동이다.",
+    "list": "NAWL",
+    "meaning_ko": "합동이다, 일치하다",
+    "pos": "adj",
+    "rank": 858,
+    "sfi": 47.982,
+    "u": 6.0,
+    "word": "congruent"
+  },
+  {
+    "band": 18,
+    "example_en": "If you skip the lab session, you must complete a makeup assignment.",
+    "example_ko": "실험 수업을 빼먹으면 보충 과제를 해야 한다.",
+    "forms": [
+      "skips",
+      "skipped",
+      "skipping"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "건너뛰다, 거르다, 빼먹다",
+    "pos": "v",
+    "rank": 861,
+    "sfi": 47.907,
+    "u": 6.0,
+    "word": "skip"
+  },
+  {
+    "band": 18,
+    "example_en": "The museum displays a bronze sword used by soldiers in the ancient kingdom.",
+    "example_ko": "박물관에는 고대 왕국의 병사들이 쓰던 청동 검이 전시되어 있다.",
+    "forms": [
+      "swords",
+      "sworded",
+      "swording"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "검, 칼",
+    "pos": "n",
+    "rank": 863,
+    "sfi": 47.832,
+    "u": 6.0,
+    "word": "sword"
+  },
+  {
+    "band": 18,
+    "example_en": "Early photographic images required people to sit still for several minutes.",
+    "example_ko": "초기 사진 이미지는 사람들이 몇 분 동안 가만히 앉아 있어야 했다.",
+    "forms": [
+      "photographics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "사진의",
+    "pos": "adj",
+    "rank": 864,
+    "sfi": 47.808,
+    "u": 6.0,
+    "word": "photographic"
+  },
+  {
+    "band": 18,
+    "example_en": "The price of oil is usually measured per barrel in international markets.",
+    "example_ko": "국제 시장에서 석유 가격은 보통 배럴당으로 매긴다.",
+    "forms": [
+      "barrels",
+      "barrelled",
+      "barrelling",
+      "barreled",
+      "barreling"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "배럴, 통",
+    "pos": "n",
+    "rank": 866,
+    "sfi": 47.735,
+    "u": 6.0,
+    "word": "barrel"
+  },
+  {
+    "band": 18,
+    "example_en": "The data fit the model nicely, so the researchers accepted their hypothesis.",
+    "example_ko": "자료가 모형에 잘 들어맞아서 연구자들은 가설을 받아들였다.",
+    "list": "NAWL",
+    "meaning_ko": "잘, 훌륭하게",
+    "pos": "adv",
+    "rank": 868,
+    "sfi": 47.725,
+    "u": 6.0,
+    "word": "nicely"
+  },
+  {
+    "band": 18,
+    "example_en": "Stir the mixture until no lump of flour remains in the bowl.",
+    "example_ko": "그릇에 밀가루 덩어리가 남지 않을 때까지 혼합물을 저으세요.",
+    "forms": [
+      "lumps",
+      "lumped",
+      "lumping"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "덩어리, 혹, 한데 묶다",
+    "pos": "n, v",
+    "rank": 869,
+    "sfi": 47.72,
+    "u": 6.0,
+    "word": "lump"
+  },
+  {
+    "band": 18,
+    "example_en": "There will be a short quiz on chapter three at the start of Friday's class.",
+    "example_ko": "금요일 수업 시작 때 3장에 대한 짧은 쪽지 시험이 있다.",
+    "forms": [
+      "quizs",
+      "quizzes",
+      "quizzed",
+      "quizzing",
+      "quizzings"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "쪽지 시험, 퀴즈",
+    "pos": "n",
+    "rank": 870,
+    "sfi": 47.681,
+    "u": 6.0,
+    "word": "quiz"
+  },
+  {
+    "band": 18,
+    "example_en": "The invention of the printing press was a watershed in the history of education.",
+    "example_ko": "인쇄기의 발명은 교육의 역사에서 분수령이었다.",
+    "forms": [
+      "watersheds"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "분수령, 전환점, 유역",
+    "pos": "n",
+    "rank": 871,
+    "sfi": 47.662,
+    "u": 6.0,
+    "word": "watershed"
+  },
+  {
+    "band": 18,
+    "example_en": "Iron will oxidize and form rust when exposed to air and moisture.",
+    "example_ko": "철은 공기와 수분에 노출되면 산화하여 녹이 생긴다.",
+    "forms": [
+      "oxidizes",
+      "oxidized",
+      "oxidizing",
+      "oxidise",
+      "oxidises",
+      "oxidised",
+      "oxidising"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "산화하다, 산화시키다",
+    "pos": "v",
+    "rank": 873,
+    "sfi": 47.402,
+    "u": 5.0,
+    "word": "oxidize"
+  },
+  {
+    "band": 18,
+    "example_en": "Mercury is a metal that stays liquid at room temperature.",
+    "example_ko": "수은은 상온에서 액체 상태를 유지하는 금속이다.",
+    "list": "NAWL",
+    "meaning_ko": "수은, 수성",
+    "pos": "n",
+    "rank": 874,
+    "sfi": 47.366,
+    "u": 5.0,
+    "word": "mercury"
+  },
+  {
+    "band": 18,
+    "example_en": "The city experienced phenomenal growth as factories attracted workers from rural areas.",
+    "example_ko": "공장이 농촌 지역의 노동자들을 끌어들이면서 그 도시는 경이적인 성장을 겪었다.",
+    "forms": [
+      "phenomenals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "경이적이다, 놀랍다",
+    "pos": "adj",
+    "rank": 877,
+    "sfi": 47.322,
+    "u": 5.0,
+    "word": "phenomenal"
+  },
+  {
+    "band": 18,
+    "example_en": "A multinational corporation may move production to countries with lower labor costs.",
+    "example_ko": "다국적 기업은 인건비가 더 낮은 나라로 생산을 옮길 수 있다.",
+    "forms": [
+      "multinationals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "다국적의, 다국적 기업",
+    "pos": "adj, n",
+    "rank": 878,
+    "sfi": 47.306,
+    "u": 5.0,
+    "word": "multinational"
+  },
+  {
+    "band": 18,
+    "example_en": "Place a comma after the introductory phrase in each of these sentences.",
+    "example_ko": "이 문장들 각각에서 도입구 뒤에 쉼표를 넣으세요.",
+    "forms": [
+      "commas"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "쉼표",
+    "pos": "n",
+    "rank": 879,
+    "sfi": 47.236,
+    "u": 5.0,
+    "word": "comma"
+  },
+  {
+    "band": 18,
+    "example_en": "The researchers observed a bizarre behavior in which the fish swam upside down.",
+    "example_ko": "연구자들은 물고기가 거꾸로 헤엄치는 기이한 행동을 관찰했다.",
+    "list": "NAWL",
+    "meaning_ko": "기이하다, 별나다",
+    "pos": "adj",
+    "rank": 880,
+    "sfi": 47.216,
+    "u": 5.0,
+    "word": "bizarre"
+  },
+  {
+    "band": 18,
+    "example_en": "Schools help socialize children into the values and norms of their culture.",
+    "example_ko": "학교는 아이들을 자기 문화의 가치와 규범에 맞게 사회화하는 데 도움을 준다.",
+    "forms": [
+      "socializes",
+      "socialized",
+      "socializing",
+      "socialise",
+      "socialises",
+      "socialised",
+      "socialising"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "사회화하다, 어울리다, 교제하다",
+    "pos": "v",
+    "rank": 882,
+    "sfi": 47.163,
+    "u": 5.0,
+    "word": "socialize"
+  },
+  {
+    "band": 18,
+    "example_en": "A novice often focuses on surface details, while an expert sees deeper patterns.",
+    "example_ko": "초보자는 흔히 겉으로 드러난 세부에 집중하는 반면 전문가는 더 깊은 패턴을 본다.",
+    "forms": [
+      "novices"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "초보자, 초심자",
+    "pos": "n",
+    "rank": 883,
+    "sfi": 47.123,
+    "u": 5.0,
+    "word": "novice"
+  },
+  {
+    "band": 18,
+    "example_en": "Access to clean water varies enormously from one region to another.",
+    "example_ko": "깨끗한 물에 대한 접근성은 지역마다 엄청나게 다르다.",
+    "list": "NAWL",
+    "meaning_ko": "엄청나게, 대단히",
+    "pos": "adv",
+    "rank": 884,
+    "sfi": 47.123,
+    "u": 5.0,
+    "word": "enormously"
+  },
+  {
+    "band": 18,
+    "example_en": "Climbers attach a rope to the rock so they are safe if they slip.",
+    "example_ko": "등반가들은 미끄러져도 안전하도록 바위에 밧줄을 고정한다.",
+    "forms": [
+      "ropes",
+      "roped",
+      "roping"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "밧줄",
+    "pos": "n",
+    "rank": 885,
+    "sfi": 47.082,
+    "u": 5.0,
+    "word": "rope"
+  },
+  {
+    "band": 18,
+    "example_en": "The team designed a clever experiment to separate the two possible causes.",
+    "example_ko": "그 팀은 두 가지 가능한 원인을 구별하기 위해 기발한 실험을 설계했다.",
+    "forms": [
+      "cleverer",
+      "cleverest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "기발하다, 영리하다",
+    "pos": "adj",
+    "rank": 887,
+    "sfi": 47.03,
+    "u": 5.0,
+    "word": "clever"
+  },
+  {
+    "band": 18,
+    "example_en": "One mole of any substance contains the same number of particles.",
+    "example_ko": "어떤 물질이든 1몰에는 같은 수의 입자가 들어 있다.",
+    "forms": [
+      "moles"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "몰, 두더지, 점",
+    "pos": "n",
+    "rank": 888,
+    "sfi": 46.893,
+    "u": 5.0,
+    "word": "mole"
+  },
+  {
+    "band": 18,
+    "example_en": "Students collected rainwater in a bucket to measure the weekly rainfall.",
+    "example_ko": "학생들은 주간 강우량을 측정하려고 양동이에 빗물을 모았다.",
+    "forms": [
+      "buckets"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "양동이",
+    "pos": "n",
+    "rank": 890,
+    "sfi": 46.689,
+    "u": 5.0,
+    "word": "bucket"
+  },
+  {
+    "band": 18,
+    "example_en": "If you cannot attend your lab section, you may swap with another student.",
+    "example_ko": "실험 분반에 참석할 수 없으면 다른 학생과 바꿀 수 있다.",
+    "forms": [
+      "swaps",
+      "swapped",
+      "swapping"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "바꾸다, 교환하다, 교환",
+    "pos": "v, n",
+    "rank": 891,
+    "sfi": 46.674,
+    "u": 5.0,
+    "word": "swap"
+  },
+  {
+    "band": 18,
+    "example_en": "The engineers measured the deflection of the beam under a heavy load.",
+    "example_ko": "공학자들은 무거운 하중을 받는 보의 휨을 측정했다.",
+    "forms": [
+      "deflections"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "휨, 편향, 빗나감",
+    "pos": "n",
+    "rank": 894,
+    "sfi": 46.573,
+    "u": 5.0,
+    "word": "deflection"
+  },
+  {
+    "band": 19,
+    "example_en": "Some insects deceive predators by looking like dangerous species.",
+    "example_ko": "어떤 곤충은 위험한 종처럼 보여서 포식자를 속인다.",
+    "forms": [
+      "deceives",
+      "deceived",
+      "deceiving"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "속이다, 기만하다",
+    "pos": "v",
+    "rank": 895,
+    "sfi": 46.559,
+    "u": 5.0,
+    "word": "deceive"
+  },
+  {
+    "band": 19,
+    "example_en": "Check the syllabus for the due dates of all major assignments.",
+    "example_ko": "모든 주요 과제의 마감일은 강의 계획서에서 확인하세요.",
+    "forms": [
+      "syllabi",
+      "syllabuses"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "강의 계획서, 교과 과정",
+    "pos": "n",
+    "rank": 896,
+    "sfi": 46.543,
+    "u": 5.0,
+    "word": "syllabus"
+  },
+  {
+    "band": 19,
+    "example_en": "In this problem, calculate the factorial of each number from one to ten.",
+    "example_ko": "이 문제에서는 1부터 10까지 각 수의 계승을 구하세요.",
+    "forms": [
+      "factorials"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "계승, 팩토리얼",
+    "pos": "n",
+    "rank": 898,
+    "sfi": 46.511,
+    "u": 4.0,
+    "word": "factorial"
+  },
+  {
+    "band": 19,
+    "example_en": "A lever allows a small force to lift a much heavier object.",
+    "example_ko": "지렛대를 쓰면 작은 힘으로 훨씬 무거운 물체를 들어 올릴 수 있다.",
+    "forms": [
+      "levers",
+      "levered",
+      "levering"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "지렛대, 레버",
+    "pos": "n",
+    "rank": 899,
+    "sfi": 46.508,
+    "u": 4.0,
+    "word": "lever"
+  },
+  {
+    "band": 19,
+    "example_en": "Participants chose one descriptor, such as 'calm' or 'anxious,' to rate their mood.",
+    "example_ko": "참가자들은 '차분함'이나 '불안함' 같은 기술어 하나를 골라 기분을 평가했다.",
+    "forms": [
+      "descriptors"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "기술어, 설명하는 말",
+    "pos": "n",
+    "rank": 900,
+    "sfi": 46.495,
+    "u": 4.0,
+    "word": "descriptor"
+  },
+  {
+    "band": 19,
+    "example_en": "Water flows through porous rock layers underneath the desert surface.",
+    "example_ko": "물은 사막 표면 아래의 다공성 암석층을 통해 흐른다.",
+    "list": "NAWL",
+    "meaning_ko": "~의 아래에, 밑에",
+    "pos": "prep, adv",
+    "rank": 902,
+    "sfi": 46.213,
+    "u": 4.0,
+    "word": "underneath"
+  },
+  {
+    "band": 19,
+    "example_en": "A nuclear reactor uses the heat from splitting atoms to generate electricity.",
+    "example_ko": "원자로는 원자가 쪼개질 때 나오는 열을 이용해 전기를 만든다.",
+    "forms": [
+      "reactors"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "원자로, 반응기",
+    "pos": "n",
+    "rank": 903,
+    "sfi": 46.161,
+    "u": 4.0,
+    "word": "reactor"
+  },
+  {
+    "band": 19,
+    "example_en": "Farmers apply herbicide to control weeds that compete with crops for water.",
+    "example_ko": "농부들은 물을 두고 작물과 경쟁하는 잡초를 억제하려고 제초제를 뿌린다.",
+    "forms": [
+      "herbicides"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "제초제",
+    "pos": "n",
+    "rank": 904,
+    "sfi": 46.057,
+    "u": 4.0,
+    "word": "herbicide"
+  },
+  {
+    "band": 19,
+    "example_en": "Students who cheat on an exam may be suspended from the university.",
+    "example_ko": "시험에서 부정행위를 한 학생은 대학에서 정학 처분을 받을 수 있다.",
+    "forms": [
+      "cheats",
+      "cheated",
+      "cheating",
+      "cheatings"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "부정행위를 하다, 속이다",
+    "pos": "v",
+    "rank": 906,
+    "sfi": 46.023,
+    "u": 4.0,
+    "word": "cheat"
+  },
+  {
+    "band": 19,
+    "example_en": "The treaty limited the number of missile sites each country could build.",
+    "example_ko": "그 조약은 각 나라가 건설할 수 있는 미사일 기지의 수를 제한했다.",
+    "forms": [
+      "missiles"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "미사일",
+    "pos": "n",
+    "rank": 907,
+    "sfi": 45.967,
+    "u": 4.0,
+    "word": "missile"
+  },
+  {
+    "band": 19,
+    "example_en": "Early humans could rub two sticks together to start a fire.",
+    "example_ko": "초기 인류는 두 막대를 비벼 불을 피울 수 있었다.",
+    "forms": [
+      "rubs",
+      "rubbed",
+      "rubbing",
+      "rubbings"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "문지르다, 비비다",
+    "pos": "v",
+    "rank": 908,
+    "sfi": 45.945,
+    "u": 4.0,
+    "word": "rub"
+  },
+  {
+    "band": 19,
+    "example_en": "Meteorologists use radar to track storms as they move across the region.",
+    "example_ko": "기상학자들은 폭풍이 지역을 가로질러 이동하는 것을 레이더로 추적한다.",
+    "forms": [
+      "radars"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "레이더",
+    "pos": "n",
+    "rank": 909,
+    "sfi": 45.872,
+    "u": 4.0,
+    "word": "radar"
+  },
+  {
+    "band": 19,
+    "example_en": "Students in the religion course compare passages of scripture from different traditions.",
+    "example_ko": "종교 강좌의 학생들은 여러 전통의 경전 구절을 비교한다.",
+    "forms": [
+      "scriptures"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "경전, 성서",
+    "pos": "n",
+    "rank": 911,
+    "sfi": 45.819,
+    "u": 4.0,
+    "word": "scripture"
+  },
+  {
+    "band": 19,
+    "example_en": "You may write about whichever of the two novels you found more interesting.",
+    "example_ko": "두 소설 중 더 흥미롭다고 느낀 어느 쪽이든 골라 써도 된다.",
+    "forms": [
+      "whichevers"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "어느 것이든, 어느 쪽이든",
+    "pos": "pron",
+    "rank": 913,
+    "sfi": 45.489,
+    "u": 4.0,
+    "word": "whichever"
+  },
+  {
+    "band": 19,
+    "example_en": "The detective in the novel identifies the gun by examining a single bullet.",
+    "example_ko": "소설 속 형사는 총알 하나를 살펴보고 총을 알아낸다.",
+    "forms": [
+      "bullets"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "총알, 탄환, 글머리 기호",
+    "pos": "n",
+    "rank": 914,
+    "sfi": 45.326,
+    "u": 3.0,
+    "word": "bullet"
+  },
+  {
+    "band": 19,
+    "example_en": "Use the machine to punch holes in your notes before putting them in the binder.",
+    "example_ko": "바인더에 넣기 전에 기계로 노트에 구멍을 뚫으세요.",
+    "forms": [
+      "punches",
+      "punched",
+      "punching"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "구멍을 뚫다, 주먹으로 치다",
+    "pos": "v",
+    "rank": 915,
+    "sfi": 45.325,
+    "u": 3.0,
+    "word": "punch"
+  },
+  {
+    "band": 19,
+    "example_en": "She plans to apply for a postgraduate program in environmental science next year.",
+    "example_ko": "그녀는 내년에 환경 과학 대학원 과정에 지원할 계획이다.",
+    "forms": [
+      "postgraduates"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "대학원의, 대학원생",
+    "pos": "adj, n",
+    "rank": 916,
+    "sfi": 45.287,
+    "u": 3.0,
+    "word": "postgraduate"
+  },
+  {
+    "band": 19,
+    "example_en": "Each artwork in the gallery reflects the artist's interest in urban life.",
+    "example_ko": "미술관의 각 예술 작품은 도시 생활에 대한 작가의 관심을 반영한다.",
+    "forms": [
+      "artworks"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "예술 작품, 삽화",
+    "pos": "n",
+    "rank": 917,
+    "sfi": 45.22,
+    "u": 3.0,
+    "word": "artwork"
+  },
+  {
+    "band": 19,
+    "example_en": "The governor granted a pardon to the prisoner after new evidence appeared.",
+    "example_ko": "주지사는 새로운 증거가 나온 뒤 그 죄수에게 사면을 내렸다.",
+    "forms": [
+      "pardons",
+      "pardoned",
+      "pardoning"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "사면, 사면하다, 용서",
+    "pos": "n, v",
+    "rank": 918,
+    "sfi": 45.047,
+    "u": 3.0,
+    "word": "pardon"
+  },
+  {
+    "band": 19,
+    "example_en": "The rainfall gauge measures precipitation to the nearest millimeter.",
+    "example_ko": "강우량계는 강수량을 밀리미터 단위까지 측정한다.",
+    "forms": [
+      "millimeters",
+      "millimetres",
+      "millimetre"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "밀리미터",
+    "pos": "n",
+    "rank": 919,
+    "sfi": 44.916,
+    "u": 3.0,
+    "word": "millimeter"
+  },
+  {
+    "band": 19,
+    "example_en": "The fossil record shows an incredible variety of life forms over time.",
+    "example_ko": "화석 기록은 오랜 시간에 걸친 생명체의 놀라운 다양성을 보여 준다.",
+    "forms": [
+      "incredibles"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "놀랍다, 믿을 수 없다",
+    "pos": "adj",
+    "rank": 920,
+    "sfi": 44.861,
+    "u": 3.0,
+    "word": "incredible"
+  },
+  {
+    "band": 19,
+    "example_en": "We are now halfway through the semester, so midterm grades will be posted soon.",
+    "example_ko": "이제 학기의 중간에 와 있으므로 중간 성적이 곧 게시된다.",
+    "forms": [
+      "halfways"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "중간에, 절반쯤",
+    "pos": "adv",
+    "rank": 921,
+    "sfi": 44.848,
+    "u": 3.0,
+    "word": "halfway"
+  },
+  {
+    "band": 19,
+    "example_en": "The Big Bang theory explains how the universe expanded from a hot, dense state.",
+    "example_ko": "빅뱅(대폭발) 이론은 우주가 뜨겁고 밀도 높은 상태에서 어떻게 팽창했는지 설명한다.",
+    "forms": [
+      "bangs",
+      "banged",
+      "banging"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "대폭발, 쾅 소리, 쾅 치다",
+    "pos": "n, v",
+    "rank": 923,
+    "sfi": 44.77,
+    "u": 3.0,
+    "word": "bang"
+  },
+  {
+    "band": 19,
+    "example_en": "The state government plans to slash funding for public universities next year.",
+    "example_ko": "주 정부는 내년에 공립 대학 지원금을 대폭 삭감할 계획이다.",
+    "forms": [
+      "slashes",
+      "slashed",
+      "slashing",
+      "slashings"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "대폭 삭감하다, 베다, 사선",
+    "pos": "v, n",
+    "rank": 925,
+    "sfi": 44.465,
+    "u": 3.0,
+    "word": "slash"
+  },
+  {
+    "band": 19,
+    "example_en": "Critics called the proposal ridiculous because it ignored basic economic principles.",
+    "example_ko": "비평가들은 그 제안이 기본적인 경제 원리를 무시했기 때문에 터무니없다고 했다.",
+    "list": "NAWL",
+    "meaning_ko": "터무니없다, 우스꽝스럽다",
+    "pos": "adj",
+    "rank": 926,
+    "sfi": 44.415,
+    "u": 3.0,
+    "word": "ridiculous"
+  },
+  {
+    "band": 19,
+    "example_en": "Participants joined the study of their own volition and could leave at any time.",
+    "example_ko": "참가자들은 자신의 의지로 연구에 참여했으며 언제든 그만둘 수 있었다.",
+    "forms": [
+      "volitions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "의지, 자유 의지",
+    "pos": "n",
+    "rank": 929,
+    "sfi": 44.333,
+    "u": 3.0,
+    "word": "volition"
+  },
+  {
+    "band": 19,
+    "example_en": "The last question on the exam was tricky because it combined two different concepts.",
+    "example_ko": "시험의 마지막 문제는 서로 다른 두 개념을 합쳐 놓아서 까다로웠다.",
+    "forms": [
+      "trickier",
+      "trickiest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "까다롭다, 교묘하다",
+    "pos": "adj",
+    "rank": 930,
+    "sfi": 43.896,
+    "u": 2.0,
+    "word": "tricky"
+  },
+  {
+    "band": 19,
+    "example_en": "Volcanic eruptions release aerosol particles that can cool the climate for several years.",
+    "example_ko": "화산 폭발은 몇 년 동안 기후를 식힐 수 있는 에어로졸 입자를 방출한다.",
+    "forms": [
+      "aerosols"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "에어로졸, 연무제",
+    "pos": "n",
+    "rank": 933,
+    "sfi": 43.708,
+    "u": 2.0,
+    "word": "aerosol"
+  },
+  {
+    "band": 19,
+    "example_en": "Researchers compared how expert and beginner chess players remember board positions.",
+    "example_ko": "연구자들은 체스 고수와 초보자가 판의 배치를 어떻게 기억하는지 비교했다.",
+    "list": "NAWL",
+    "meaning_ko": "체스",
+    "pos": "n",
+    "rank": 935,
+    "sfi": 43.564,
+    "u": 2.0,
+    "word": "chess"
+  },
+  {
+    "band": 19,
+    "example_en": "The first trial went terribly because the samples had been contaminated.",
+    "example_ko": "샘플이 오염되어서 첫 시행은 형편없이 끝났다.",
+    "list": "NAWL",
+    "meaning_ko": "형편없이, 몹시",
+    "pos": "adv",
+    "rank": 936,
+    "sfi": 43.525,
+    "u": 2.0,
+    "word": "terribly"
+  },
+  {
+    "band": 19,
+    "example_en": "The recording was so noisy that most of the speech was unintelligible.",
+    "example_ko": "녹음이 너무 시끄러워서 대부분의 말을 알아들을 수 없었다.",
+    "forms": [
+      "unintelligibles"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "알아들을 수 없다, 이해할 수 없다",
+    "pos": "adj",
+    "rank": 937,
+    "sfi": 43.512,
+    "u": 2.0,
+    "word": "unintelligible"
+  },
+  {
+    "band": 19,
+    "example_en": "The pottery found at the site dates from circa 1500 BCE.",
+    "example_ko": "그 유적지에서 발견된 도자기는 기원전 약 1500년경의 것이다.",
+    "list": "NAWL",
+    "meaning_ko": "약, ~경",
+    "pos": "prep",
+    "rank": 938,
+    "sfi": 43.488,
+    "u": 2.0,
+    "word": "circa"
+  },
+  {
+    "band": 19,
+    "example_en": "The ancient scroll was so fragile that scholars studied it using digital images.",
+    "example_ko": "그 고대 두루마리는 너무 약해서 학자들은 디지털 이미지로 연구했다.",
+    "forms": [
+      "scrolls",
+      "scrolled",
+      "scrolling"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "두루마리, 스크롤하다",
+    "pos": "n, v",
+    "rank": 939,
+    "sfi": 43.465,
+    "u": 2.0,
+    "word": "scroll"
+  },
+  {
+    "band": 19,
+    "example_en": "The research conference received sponsorship from several local organizations.",
+    "example_ko": "그 연구 학회는 지역 단체 여러 곳의 후원을 받았다.",
+    "forms": [
+      "sponsorships"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "후원",
+    "pos": "n",
+    "rank": 940,
+    "sfi": 43.286,
+    "u": 2.0,
+    "word": "sponsorship"
+  },
+  {
+    "band": 19,
+    "example_en": "In academic writing, a connector such as 'however' signals a contrast between ideas.",
+    "example_ko": "학술적 글쓰기에서 '그러나' 같은 연결어는 생각 사이의 대조를 나타낸다.",
+    "forms": [
+      "connectors"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "연결어, 연결 장치",
+    "pos": "n",
+    "rank": 941,
+    "sfi": 43.196,
+    "u": 2.0,
+    "word": "connector"
+  },
+  {
+    "band": 19,
+    "example_en": "Some plants produce a nasty taste that discourages animals from eating them.",
+    "example_ko": "어떤 식물은 동물이 먹지 못하게 하는 고약한 맛을 낸다.",
+    "forms": [
+      "nastier",
+      "nastiest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "고약하다, 불쾌하다, 심하다",
+    "pos": "adj",
+    "rank": 942,
+    "sfi": 43.172,
+    "u": 2.0,
+    "word": "nasty"
+  },
+  {
+    "band": 19,
+    "example_en": "Some bacteria can survive in incredibly hot water near deep-sea vents.",
+    "example_ko": "어떤 세균은 심해 열수구 근처의 믿을 수 없을 만큼 뜨거운 물에서도 살 수 있다.",
+    "list": "NAWL",
+    "meaning_ko": "믿을 수 없을 만큼, 엄청나게",
+    "pos": "adv",
+    "rank": 943,
+    "sfi": 43.128,
+    "u": 2.0,
+    "word": "incredibly"
+  },
+  {
+    "band": 19,
+    "example_en": "Each entrant in the essay contest must submit their work by Friday.",
+    "example_ko": "에세이 대회의 각 참가자는 금요일까지 작품을 제출해야 한다.",
+    "forms": [
+      "entrants"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "참가자, 신규 진입자",
+    "pos": "n",
+    "rank": 945,
+    "sfi": 42.98,
+    "u": 2.0,
+    "word": "entrant"
+  },
+  {
+    "band": 19,
+    "example_en": "The hawk uses its sharp eyesight to spot small animals from high above.",
+    "example_ko": "매는 날카로운 시력으로 높은 곳에서 작은 동물을 찾아낸다.",
+    "forms": [
+      "hawks",
+      "hawked",
+      "hawking"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "매",
+    "pos": "n",
+    "rank": 946,
+    "sfi": 42.937,
+    "u": 2.0,
+    "word": "hawk"
+  },
+  {
+    "band": 19,
+    "example_en": "Please read the handout on citation styles before you begin your research paper.",
+    "example_ko": "연구 논문을 쓰기 시작하기 전에 인용 양식에 관한 유인물을 읽으세요.",
+    "forms": [
+      "handouts"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "유인물, 배포 자료",
+    "pos": "n",
+    "rank": 947,
+    "sfi": 42.85,
+    "u": 2.0,
+    "word": "handout"
+  },
+  {
+    "band": 19,
+    "example_en": "The student's presentation ended with loud applause from classmates and faculty.",
+    "example_ko": "그 학생의 발표는 동료 학생들과 교수진의 큰 박수로 끝났다.",
+    "list": "NAWL",
+    "meaning_ko": "박수",
+    "pos": "n",
+    "rank": 950,
+    "sfi": 42.343,
+    "u": 2.0,
+    "word": "applause"
+  },
+  {
+    "band": 19,
+    "example_en": "One demonstrator told reporters that the protest was about rising tuition fees.",
+    "example_ko": "한 시위자는 기자들에게 이번 시위가 등록금 인상 때문이라고 말했다.",
+    "forms": [
+      "demonstrators"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "시위자, 시연자",
+    "pos": "n",
+    "rank": 951,
+    "sfi": 42.26,
+    "u": 2.0,
+    "word": "demonstrator"
+  },
+  {
+    "band": 19,
+    "example_en": "When you sneeze, tiny droplets can carry viruses several meters through the air.",
+    "example_ko": "재채기를 하면 작은 비말이 바이러스를 공기 중으로 몇 미터나 실어 나를 수 있다.",
+    "forms": [
+      "sneezes",
+      "sneezed",
+      "sneezing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "재채기하다, 재채기",
+    "pos": "v, n",
+    "rank": 954,
+    "sfi": 40.815,
+    "u": 1.0,
+    "word": "sneeze"
+  },
+  {
+    "band": 19,
+    "example_en": "Dogs sniff the ground to gather information about other animals nearby.",
+    "example_ko": "개는 근처의 다른 동물에 대한 정보를 얻으려고 땅의 냄새를 맡는다.",
+    "forms": [
+      "sniffs",
+      "sniffed",
+      "sniffing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "냄새를 맡다, 킁킁거리다",
+    "pos": "v",
+    "rank": 955,
+    "sfi": 40.694,
+    "u": 1.0,
+    "word": "sniff"
+  },
+  {
+    "band": 19,
+    "example_en": "This plant is a descendent of wild grasses that grew in the region long ago.",
+    "example_ko": "이 식물은 오래전 그 지역에서 자라던 야생 풀의 후손이다.",
+    "forms": [
+      "descendents"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "후손, 자손",
+    "pos": "n",
+    "rank": 957,
+    "sfi": 38.92,
+    "u": 1.0,
+    "word": "descendent"
+  }
+]
