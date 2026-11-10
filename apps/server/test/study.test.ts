@@ -432,11 +432,12 @@ describe('하루 경계 · 연속 학습일 · 요약', () => {
 
     const s = await u.get('/study/summary')
     expect(s).toMatchObject({ day: '2026-11-09', streak: 1, reviewsToday: 4 })
+    const NONE = { mastered: 0, total: 0, jlpt: null }
     expect(s.tracks).toEqual([
-      { track: 'kana', notes: 208, due: 2, newLeft: 2, newPerDay: 5, learned: 3, reviewsToday: 4 },
-      { track: 'kanji', notes: 0, due: 0, newLeft: 0, newPerDay: 15, learned: 0, reviewsToday: 0 },
-      { track: 'toeic', notes: 0, due: 0, newLeft: 0, newPerDay: 15, learned: 0, reviewsToday: 0 },
-      { track: 'toefl', notes: 0, due: 0, newLeft: 0, newPerDay: 15, learned: 0, reviewsToday: 0 },
+      { track: 'kana', notes: 208, due: 2, newLeft: 2, newPerDay: 5, learned: 3, reviewsToday: 4, mastery: { mastered: 0, total: 208, jlpt: null } },
+      { track: 'kanji', notes: 0, due: 0, newLeft: 0, newPerDay: 15, learned: 0, reviewsToday: 0, mastery: NONE },
+      { track: 'toeic', notes: 0, due: 0, newLeft: 0, newPerDay: 15, learned: 0, reviewsToday: 0, mastery: NONE },
+      { track: 'toefl', notes: 0, due: 0, newLeft: 0, newPerDay: 15, learned: 0, reviewsToday: 0, mastery: NONE },
     ])
     // 다른 사용자는 따로
     const v = await login('dul')

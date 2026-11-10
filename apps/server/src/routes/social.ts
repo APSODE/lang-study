@@ -1,6 +1,7 @@
 // 같이 쓰는 기능 API. app.ts 에서 /api 아래에 붙인다. 모두 로그인 필요.
-//   GET /social/leaderboard?period=week|month   { period, start, entries: { rank, userId, name, reviews, streak, isMe }[] }
-//   GET /social/friends                         { friends: { userId, name, streak, reviewsWeek, lastStudiedDay, tracks }[] }
+//   GET /social/leaderboard?period=week|month   { period, start, entries: { rank, userId, name, reviews, streak, isMe, level, title }[] }
+//   GET /social/friends                         { friends: { userId, name, level, title, streak, reviewsWeek, lastStudiedDay, tracks }[] }
+// level · title 은 레벨 · 칭호 (study/level.ts). 공개한 사람에게만 나오므로 친구에게 보인다.
 // name 은 보이는 이름 (닉네임 ?? 로그인 이름).
 // 진도 공개를 끈 사용자(show_progress = 0)는 다른 사람에게 보이지 않는다. 자기 리더보드 자리는 보인다.
 import type { DatabaseSync } from 'node:sqlite'

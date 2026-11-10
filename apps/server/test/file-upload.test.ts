@@ -287,7 +287,7 @@ describe('항목 학습', () => {
     await admin.send('POST', `/admin/batches/${up.batch}/publish`, {})
     const s = await hana.get('/study/summary')
     expect(s.decks).toEqual([
-      { key, name: DECK, authors: ['하나'], notes: 3, due: 0, newLeft: 3, newPerDay: 15, learned: 0, reviewsToday: 0 },
+      { key, name: DECK, authors: ['하나'], notes: 3, due: 0, newLeft: 3, newPerDay: 15, learned: 0, reviewsToday: 0, mastery: { mastered: 0, total: 3, jlpt: null } },
     ])
     // 고정 트랙 요약에는 섞이지 않는다
     expect(s.tracks.map((t: { track: string }) => t.track)).toEqual(['kana', 'kanji', 'toeic', 'toefl'])

@@ -6,6 +6,7 @@ import type { DatabaseSync } from 'node:sqlite'
 import { TRACKS, type Track } from '@nakamura/core'
 import { dayKey, keyStart, monthStartKey, safeTz, weekStartKey } from './study/day.ts'
 import { streak, userTz } from './study/service.ts'
+import { userLevel } from './study/level.ts'
 import { cardBuckets } from './study/stats.ts'
 
 export const PERIODS = ['week', 'month'] as const
@@ -58,6 +59,8 @@ const lastStudiedDay = (db: DatabaseSync, user: UserRow, now: number): string | 
   return row.t === null ? null : dayKey(row.t, safeTz(user.tz))
 }
 
+const pickLevel = ({ level, title }: { level: number; title: string }) => ({ level, title })
+
 const streakOfUser = (db: DatabaseSync, user: UserRow, now: number): number => streak(db, user.id, now, safeTz(user.tz))
 
 // --- 리더보드 ---
@@ -69,6 +72,9 @@ export interface LeaderboardEntry {
   reviews: number
   streak: number
   isMe: boolean
+  /** 레벨 · 칭호 (친구에게도 보인다) */
+  level: number
+  title: string
 }
 
 /**
@@ -80,7 +86,10 @@ export const leaderboard = (db: DatabaseSync, viewerId: number, period: Period, 
   const reviews = reviewsBetween(db, start, now)
   const rows = allUsers(db)
     .filter(u => u.showProgress === 1 || u.id === viewerId)
-    .map(u => ({ userId: u.id, name: u.name, reviews: reviews.get(u.id) ?? 0, streak: streakOfUser(db, u, now), isMe: u.id === viewerId }))
+    .map(u => {
+      const { level, title } = userLevel(db, u.id, now)
+      return { userId: u.id, name: u.name, reviews: reviews.get(u.id) ?? 0, streak: streakOfUser(db, u, now), isMe: u.id === viewerId, level, title }
+    })
     .sort((a, b) => b.reviews - a.reviews || b.streak - a.streak || byName(a, b))
   const entries: LeaderboardEntry[] = []
   rows.forEach((r, i) => {
@@ -107,6 +116,8 @@ export interface Friend {
   reviewsWeek: number
   lastStudiedDay: string | null
   tracks: FriendTrack[]
+  level: number
+  title: string
 }
 
 /** 진도를 공개한 다른 사용자. 최근에 공부한 사람부터 (안 한 사람은 끝), 그다음 이름 순. */
@@ -117,6 +128,7 @@ export const friends = (db: DatabaseSync, viewerId: number, now: number): Friend
     .map(u => ({
       userId: u.id,
       name: u.name,
+      ...pickLevel(userLevel(db, u.id, now)),
       streak: streakOfUser(db, u, now),
       reviewsWeek: week.get(u.id) ?? 0,
       lastStudiedDay: lastStudiedDay(db, u, now),

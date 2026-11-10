@@ -57,6 +57,7 @@ import {
 import { displayNames } from '../authors.ts'
 import { type Catalog, type CatalogNote, publishedCatalog, publishedDecks } from './catalog.ts'
 import { dayKey, dayStart, safeTz, streakOf } from './day.ts'
+import { mastery, type Mastery, userLevel } from './level.ts'
 
 export const NEW_PER_DAY_MAX = 100
 /** 할 카드가 없을 때 미리 낼 범위 */
@@ -89,6 +90,8 @@ export interface KeySummary {
   newPerDay: number
   learned: number
   reviewsToday: number
+  /** 실력: 익힌 노트 수 · 전체 · (한자) 정복한 JLPT 단계 (study/level.ts) */
+  mastery: Mastery
 }
 
 export interface TrackSummary extends KeySummary {
@@ -537,6 +540,7 @@ const keySummary = (db: DatabaseSync, userId: number, track: StudyKey, now: numb
       start,
       now,
     ),
+    mastery: mastery(db, userId, track),
   }
 }
 
@@ -643,6 +647,7 @@ export const summary = (db: DatabaseSync, userId: number, now: number) => {
   return {
     day: dayKey(now, tz),
     streak: streak(db, userId, now, tz),
+    level: userLevel(db, userId, now),
     reviewsToday: count(
       db,
       'SELECT count(*) AS n FROM review_logs WHERE user_id = ? AND reviewed_at >= ? AND reviewed_at <= ?',
