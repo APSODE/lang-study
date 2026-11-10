@@ -787,3 +787,119 @@ describe('작문 모드 (mode=write)', () => {
     expect((await u.get('/study/summary')).writing).toMatchObject({ newLeft: 0, newPerDay: 0 })
   })
 })
+
+describe('예시 낱말 (kanji-word-meaning · kanji-word-reading)', () => {
+  type Ex = { word: string; reading: string; meaning_ko: string }
+  const kj = (k: string, freq: number, examples: Ex[]): Note => ({
+    id: `kanji-${k}`,
+    track: 'kanji',
+    fields: { kanji: k, on: ['オン'], kun: [], meanings_ko: ['뜻'], jlpt: 5, freq, examples },
+  })
+  const NOTES = [
+    kj('学', 1, [
+      { word: '学生', reading: 'がくせい', meaning_ko: '학생' },
+      { word: '大学', reading: 'だいがく', meaning_ko: '대학' },
+    ]),
+    kj('生', 2, [
+      { word: '先生', reading: 'せんせい', meaning_ko: '선생님' },
+      { word: '学生', reading: 'がくせい', meaning_ko: '학생' },
+    ]),
+    kj('日', 3, [
+      { word: '一日', reading: 'ついたち', meaning_ko: '초하루' },
+      { word: '日本', reading: 'にほん', meaning_ko: '일본' },
+    ]),
+    kj('一', 4, [
+      { word: '一日', reading: 'いちにち', meaning_ko: '하루' },
+      { word: '一つ', reading: 'ひとつ', meaning_ko: '하나' },
+    ]),
+    kj('山', 5, [{ word: '山', reading: 'やま', meaning_ko: '산' }]),
+  ]
+  const M = (k: string) => `kanji-${k}:kanji-word-meaning`
+  const RD = (k: string) => `kanji-${k}:kanji-word-reading`
+  const ex = (k: string, i: number) => (NOTES.find(n => n.id === `kanji-${k}`)!.fields as { examples: Ex[] }).examples[i]!
+
+  it('보기: 4개, 중복 없음, 정답 하나 (같은 낱말 · 같은 읽기 · 같은 뜻은 보기에 없다)', () => {
+    const { db } = setup({ kana: false, extra: NOTES })
+    const cat = publishedCatalog(db, 'kanji')
+    for (const entry of cat.notes) {
+      const exs = (entry.note.fields as { examples: Ex[] }).examples
+      for (let i = 0; i < exs.length; i++) {
+        for (let n = 0; n < 20; n++) {
+          const m = choicesFor(cat, entry.note, 'kanji-word-meaning', Math.random, i)!
+          expect(m).toHaveLength(4)
+          expect(new Set(m).size).toBe(4)
+          expect(m.filter(c => c === exs[i]!.meaning_ko)).toHaveLength(1)
+          const r = choicesFor(cat, entry.note, 'kanji-word-reading', Math.random, i)!
+          expect(r).toHaveLength(4)
+          expect(new Set(r).size).toBe(4)
+          expect(r.filter(c => c === exs[i]!.reading)).toHaveLength(1)
+          // 一日: 다른 노트의 같은 낱말(ついたち ↔ いちにち)은 읽기 보기에 넣지 않는다
+          if (exs[i]!.word === '一日') expect(r).toEqual(expect.not.arrayContaining([exs[i]!.reading === 'いちにち' ? 'ついたち' : 'いちにち']))
+        }
+      }
+    }
+  })
+
+  it('읽기 보기는 같은 한자가 들어 있는 낱말을 먼저 고른다', () => {
+    const { db } = setup({ kana: false, extra: NOTES })
+    const cat = publishedCatalog(db, 'kanji')
+    // 学生(がくせい): 学 · 生 이 들어 있는 낱말은 大学 · 先生 (学生 은 같은 낱말이라 뺀다)
+    const r = choicesFor(cat, cat.byId.get('kanji-学')!.note, 'kanji-word-reading', Math.random, 0)!
+    expect(r).toEqual(expect.arrayContaining(['がくせい', 'だいがく', 'せんせい']))
+  })
+
+  it('뜻 카드는 다음 날 후속으로, 읽기 카드는 뜻 카드를 맞힌 다음 날부터. 낱말은 복습마다 돌아가며 고르고 서버가 같은 낱말로 채점한다', async () => {
+    const { db, clock, login } = setup({ kana: false, extra: NOTES })
+    const u = await login()
+    await u.send('PUT', '/study/settings', { newPerDay: { kanji: 100 } })
+    const day1 = await u.queue('kanji')
+    expect(day1.every(i => i.drillId === 'kanji-reading')).toBe(true)
+    for (const i of day1) await u.answer(i.cardId, 'オン')
+    db.prepare('UPDATE user_cards SET due = ?').run(T0 + 60 * 24 * HOUR)
+
+    // 2일째: 후속은 연습 방식 순서 (뜻 → 예시 뜻). 예시 읽기는 아직 없다
+    clock.now = kst('2026-11-10T09:00:00')
+    let q = await u.queue('kanji')
+    expect(q.map(i => i.drillId)).toEqual([...Array(5).fill('kanji-meaning'), ...Array(5).fill('kanji-word-meaning')])
+    const m = q.find(i => i.cardId === M('学'))!
+    expect(m.example).toBe(0)
+    expect(m.choices).toContain('학생')
+    expect(q.find(i => i.cardId === M('日'))!.example).toBe(0)
+    // 学 는 맞히고, 日 는 틀린다
+    let res = await u.answer(M('学'), '학생')
+    expect(await res.json()).toMatchObject({ correct: true, expected: '학생' })
+    res = await u.answer(M('日'), '하루')
+    expect(await res.json()).toMatchObject({ correct: false, expected: '초하루' })
+    expect(q.some(i => i.drillId === 'kanji-word-reading')).toBe(false)
+
+    // 같은 날 다시 불러도 읽기 카드는 없다 (뜻 카드를 오늘 처음 봤으므로)
+    q = await u.queue('kanji')
+    expect(q.some(i => i.drillId === 'kanji-word-reading')).toBe(false)
+
+    // 3일째: 맞힌 学 만 읽기 카드가 생긴다
+    db.prepare('UPDATE user_cards SET due = ?').run(T0 + 60 * 24 * HOUR)
+    clock.now = kst('2026-11-11T09:00:00')
+    q = await u.queue('kanji')
+    expect(q.filter(i => i.drillId === 'kanji-word-reading').map(i => i.cardId)).toEqual([RD('学')])
+    const rd = q.find(i => i.cardId === RD('学'))!
+    expect(rd.example).toBe(0)
+    expect(rd.choices).toContain('がくせい')
+    expect(await (await u.answer(RD('学'), 'がくせい')).json()).toMatchObject({ correct: true, expected: 'がくせい' })
+
+    // 복습: 学 뜻 카드는 한 번 봤으므로 이제 1번 낱말(大学). 서버도 1번으로 채점한다
+    setDue(db, M('学'), clock.now - 1000)
+    q = await u.queue('kanji')
+    const again = q.find(i => i.cardId === M('学'))!
+    expect(again.isNew).toBe(false)
+    expect(again.example).toBe(1)
+    expect(again.choices).toContain(ex('学', 1).meaning_ko)
+    expect(await (await u.answer(M('学'), '학생')).json()).toMatchObject({ correct: false, expected: '대학' })
+  })
+
+  it('작문 모드에는 나오지 않는다', async () => {
+    const { login } = setup({ kana: false, extra: NOTES })
+    const u = await login()
+    const items = (await u.get('/study/queue?track=kanji&mode=write&limit=100')).items as QueueItem[]
+    expect(items.some(i => i.drillId.startsWith('kanji-word'))).toBe(false)
+  })
+})

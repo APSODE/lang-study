@@ -14,6 +14,8 @@ export interface QueueItem {
   isNew: boolean
   /** 고르기 연습 방식의 보기 */
   choices?: string[]
+  /** 예시 낱말 연습 방식(kanji-word-*): 낼 예시 낱말의 순번 (fields.examples[example]) */
+  example?: number
   /** 친구가 만든 문제면 만든 사람 (보이는 이름) */
   author?: string
 }

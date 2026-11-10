@@ -5,6 +5,14 @@
 import { isTrack, WORD_TRACKS, type DeckFields, type Note, type NoteTrack, type Track } from './notes.ts'
 import { kataToHira, normAnswer, normMeaning, normReading, normRomaji, normSentence, splitMeanings } from './text.ts'
 
+/**
+ * 채점에 필요한 카드 상태. 예시 낱말 연습 방식(kanji-word-*)은 노트의 예시 낱말 중 어느 것을 냈는지(example)를 받는다.
+ * 서버는 카드의 복습 횟수로 같은 값을 다시 계산하므로(exampleIndex) 클라이언트가 바꿀 수 없다.
+ */
+export interface CheckContext {
+  example?: number
+}
+
 export interface CheckResult {
   correct: boolean
   /** 정답으로 보여줄 값 */
@@ -17,7 +25,7 @@ export interface Drill {
   /** 노트에 이 필드가 모두 비어 있지 않아야 카드가 생긴다 */
   requires: readonly string[]
   /** 사용자의 응답을 채점한다. 서버가 같은 함수로 다시 채점한다. */
-  check(note: Note, response: string): CheckResult
+  check(note: Note, response: string, ctx?: CheckContext): CheckResult
   /**
    * 자기 평가: check 가 틀렸다고 해도 사용자가 모범 답안과 비교해 "맞았어요" 를 고를 수 있다.
    * 답이 여러 가지로 나올 수 있는 연습 방식(일작)에만 둔다. 서버는 이 표시가 있는 연습 방식에서만 selfCorrect 를 받는다.
@@ -29,6 +37,10 @@ export interface Drill {
    * 나중에 토익 영작도 같은 표시만 달면 작문 모드에 붙는다.
    */
   mode?: 'write'
+  /**
+   * 선행 연습 방식 id. 같은 노트의 그 카드를 전날까지 소개했고 한 번이라도 맞혔을 때만 이 카드가 새 카드로 나온다 (서버 newCandidates).
+   */
+  after?: string
 }
 
 /** 학습 모드: 'normal' = 연습 방식에 mode 가 없는 것, 'write' = 작문 */
@@ -144,6 +156,49 @@ registerDrill({
     const correct =
       r !== '' && (r === normSentence(s.ja) || kataToHira(r) === kataToHira(normSentence(s.kana)))
     return { correct, expected: s.ja }
+  },
+})
+
+/**
+ * 예시 낱말 연습 방식이 낼 낱말의 순번: 카드의 복습 횟수(reps)로 돌아가며 고른다 (처음 = 0번).
+ * 서버가 큐를 만들 때와 채점할 때 같은 값을 쓴다.
+ */
+export const exampleIndex = (note: Note, reps: number): number => {
+  const n = f<{ examples?: unknown[] }>(note).examples?.length ?? 0
+  return n === 0 ? 0 : ((reps % n) + n) % n
+}
+
+type KanjiExample = { word: string; reading: string; meaning_ko: string }
+const exampleOf = (note: Note, ctx?: CheckContext): KanjiExample | undefined => {
+  const list = f<{ examples?: KanjiExample[] }>(note).examples ?? []
+  const i = ctx?.example ?? 0
+  return Number.isInteger(i) && i >= 0 ? list[i] : undefined
+}
+
+// 한자 예시 낱말 1단계: 후리가나가 달린 낱말을 보고 뜻 고르기 (보기는 서버 choicesFor)
+registerDrill({
+  id: 'kanji-word-meaning',
+  tracks: ['kanji'],
+  requires: ['kanji', 'examples'],
+  check(note, response, ctx) {
+    const ex = exampleOf(note, ctx)
+    if (!ex) return { correct: false, expected: '' }
+    const r = normMeaning(response)
+    return { correct: r !== '' && r === normMeaning(ex.meaning_ko), expected: ex.meaning_ko }
+  },
+})
+
+// 한자 예시 낱말 2단계: 후리가나 없이 낱말을 보고 읽기 고르기. 같은 낱말의 뜻 카드를 맞힌 뒤에 나온다 (after)
+registerDrill({
+  id: 'kanji-word-reading',
+  tracks: ['kanji'],
+  requires: ['kanji', 'examples'],
+  after: 'kanji-word-meaning',
+  check(note, response, ctx) {
+    const ex = exampleOf(note, ctx)
+    if (!ex) return { correct: false, expected: '' }
+    const r = normReading(response)
+    return { correct: r !== '' && r === normReading(ex.reading), expected: ex.reading }
   },
 })
 

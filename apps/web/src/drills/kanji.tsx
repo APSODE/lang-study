@@ -2,7 +2,7 @@
 import { type KeyboardEvent, useEffect, useRef, useState } from 'react'
 import type { KanjiFields } from '@nakamura/core'
 import { bind, toHiragana, unbind } from 'wanakana'
-import { TextAnswer } from './inputs.tsx'
+import { ChoiceAnswer, TextAnswer } from './inputs.tsx'
 import type { DrillProps } from './types.ts'
 
 /** 읽기: 로마자로 치면 히라가나로 바뀐다. 음독 · 훈독 중 하나면 정답. */
@@ -29,6 +29,53 @@ export function KanjiMeaning({ item, result, onSubmit }: DrillProps) {
         {f.kanji}
       </p>
       <TextAnswer answered={result !== null} onSubmit={onSubmit} placeholder="뜻 (한국어)" lang="ko" />
+    </>
+  )
+}
+
+/** 예시 낱말 1단계: 후리가나(ruby)가 달린 낱말을 보고 뜻 고르기 */
+export function KanjiWordMeaning({ item, result, onSubmit }: DrillProps) {
+  const ex = (item.fields as KanjiFields).examples?.[item.example ?? 0]
+  if (!ex || !item.choices?.length) return <p className="muted">예시 낱말이 없는 카드입니다.</p>
+  return (
+    <>
+      <p className="prompt-label muted">뜻을 고르세요</p>
+      <p className="prompt-word" lang="ja">
+        <ruby>
+          {ex.word}
+          <rt>{ex.reading}</rt>
+        </ruby>
+      </p>
+      <ChoiceAnswer
+        choices={item.choices}
+        answered={result !== null}
+        picked={result?.response}
+        expected={result?.expected}
+        onSubmit={onSubmit}
+        lang="ko"
+      />
+    </>
+  )
+}
+
+/** 예시 낱말 2단계: 후리가나 없이 낱말을 보고 읽기 고르기 */
+export function KanjiWordReading({ item, result, onSubmit }: DrillProps) {
+  const ex = (item.fields as KanjiFields).examples?.[item.example ?? 0]
+  if (!ex || !item.choices?.length) return <p className="muted">예시 낱말이 없는 카드입니다.</p>
+  return (
+    <>
+      <p className="prompt-label muted">읽기를 고르세요</p>
+      <p className="prompt-word" lang="ja">
+        {ex.word}
+      </p>
+      <ChoiceAnswer
+        choices={item.choices}
+        answered={result !== null}
+        picked={result?.response}
+        expected={result?.expected}
+        onSubmit={onSubmit}
+        lang="ja"
+      />
     </>
   )
 }

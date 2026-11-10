@@ -6,6 +6,7 @@ import {
   drillIdsOf,
   drillMode,
   drillsFor,
+  exampleIndex,
   getDrill,
   isStudyKey,
   isTrack,
@@ -204,5 +205,49 @@ describe('항목 키 · 학습 키', () => {
     expect(isStudyKey('deck')).toBe(false)
     expect(isStudyKey('deck:ABC')).toBe(false)
     expect(isTrack('deck')).toBe(false)
+  })
+})
+
+describe('예시 낱말 (kanji-word-meaning · kanji-word-reading)', () => {
+  const study: Note = {
+    id: 'kanji-学',
+    track: 'kanji',
+    fields: {
+      kanji: '学',
+      on: ['ガク'],
+      kun: ['まな.ぶ'],
+      meanings_ko: ['배우다'],
+      examples: [
+        { word: '学生', reading: 'がくせい', meaning_ko: '학생' },
+        { word: '大学', reading: 'だいがく', meaning_ko: '대학 (교)' },
+      ],
+    },
+  }
+  const run = (drill: string, r: string, example?: number) => getDrill(drill)!.check(study, r, { example })
+
+  it('예시 낱말이 있을 때만, 다른 한자 연습 방식 뒤에 (보통 모드, 읽기는 뜻 카드가 선행)', () => {
+    expect(drillsFor(eat).map(d => d.id)).toEqual(['kanji-reading', 'kanji-meaning'])
+    expect(drillsFor(study).map(d => d.id)).toEqual(['kanji-reading', 'kanji-meaning', 'kanji-word-meaning', 'kanji-word-reading'])
+    expect(drillIdsOf('normal')).toContain('kanji-word-reading')
+    expect(drillIdsOf('write')).toEqual(['kanji-write'])
+    expect(getDrill('kanji-word-reading')!.after).toBe('kanji-word-meaning')
+  })
+  it('뜻: 고른 순번의 낱말 뜻만 정답 (괄호 · 공백 무시)', () => {
+    expect(run('kanji-word-meaning', '학생')).toEqual({ correct: true, expected: '학생' })
+    expect(run('kanji-word-meaning', '학생', 0).correct).toBe(true)
+    expect(run('kanji-word-meaning', '대학', 0).correct).toBe(false)
+    expect(run('kanji-word-meaning', '대학', 1)).toEqual({ correct: true, expected: '대학 (교)' })
+    expect(run('kanji-word-meaning', '', 1).correct).toBe(false)
+    expect(run('kanji-word-meaning', '학생', 5)).toEqual({ correct: false, expected: '' })
+  })
+  it('읽기: 고른 순번의 낱말 읽기만 정답 (가타카나도 같게)', () => {
+    expect(run('kanji-word-reading', 'がくせい', 0)).toEqual({ correct: true, expected: 'がくせい' })
+    expect(run('kanji-word-reading', 'ガクセイ', 0).correct).toBe(true)
+    expect(run('kanji-word-reading', 'だいがく', 0).correct).toBe(false)
+    expect(run('kanji-word-reading', 'だいがく', 1).correct).toBe(true)
+  })
+  it('exampleIndex: 복습 횟수로 돌아가며 고른다', () => {
+    expect([0, 1, 2, 3].map(r => exampleIndex(study, r))).toEqual([0, 1, 0, 1])
+    expect(exampleIndex(eat, 3)).toBe(0)
   })
 })

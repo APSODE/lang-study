@@ -8,6 +8,8 @@
 //      - 그 노트의 나머지 연습 방식(후속 카드)은 소개한 다음 학습일부터 나온다 (같은 날 정답을 보여 주지 않게).
 //      - 후속 카드가 쌓이지 않도록 "새 노트 1 : 후속 2" 비율로 섞는다 (노트 하나가 카드 3장이므로 이 비율이 균형).
 //        후속 카드끼리는 연습 방식 순서 → 노트 순서 (romaji-to-kana 를 먼저 모두, 그다음 kana-listen).
+//      - 선행 연습 방식(Drill.after)이 있는 후속 카드는 그 카드를 전날까지 소개했고 한 번이라도 맞혔을 때만
+//        (kanji-word-reading 은 kanji-word-meaning 을 맞힌 뒤).
 //   3. 1 · 2 가 모두 비었을 때만: 20분 안에 돌아올 카드(방금 틀린 카드 등)를 미리 낸다 (Anki 의 learn ahead).
 //   각 구간 안에서 같은 노트의 카드가 붙어 있으면 다른 노트 카드를 사이에 끼운다.
 //
@@ -31,9 +33,11 @@ import {
   drillIdsOf,
   drillMode,
   deckStudyKey,
+  exampleIndex,
   isTrack,
   newCard,
   normMeaning,
+  normReading,
   parseCard,
   review,
   serializeCard,
@@ -70,6 +74,8 @@ export interface QueueItem {
   isNew: boolean
   /** 고르기 연습 방식의 보기 (섞인 순서) */
   choices?: string[]
+  /** 예시 낱말 연습 방식(kanji-word-*): 낼 예시 낱말의 순번 (fields.examples[example]). core exampleIndex */
+  example?: number
   /** 친구가 만든 노트면 만든 사람의 보이는 이름 */
   author?: string
 }
@@ -200,6 +206,18 @@ export const newCandidates = (db: DatabaseSync, userId: number, track: StudyKey,
     seen.set(r.noteId, s)
   }
 
+  // 선행 연습 방식(Drill.after)을 맞힌 카드: 전날까지 소개했고 한 번이라도 정답
+  const passed = new Set(
+    (
+      db
+        .prepare(
+          `SELECT DISTINCT uc.card_id AS cardId FROM user_cards uc JOIN review_logs r ON r.user_id = uc.user_id AND r.card_id = uc.card_id
+           WHERE uc.user_id = ? AND uc.track = ? AND uc.introduced_at < ? AND r.correct = 1`,
+        )
+        .all(userId, track, start) as { cardId: string }[]
+    ).map(r => r.cardId),
+  )
+
   const fresh: Candidate[] = []
   const follow: (Candidate & { k: number })[] = []
   for (const entry of catalog.notes) {
@@ -209,7 +227,9 @@ export const newCandidates = (db: DatabaseSync, userId: number, track: StudyKey,
       if (drills[0]) fresh.push({ entry, drill: drills[0] })
     } else if (s.firstIntro < start) {
       drills.forEach((d, k) => {
-        if (!s.drills.has(d.id)) follow.push({ entry, drill: d, k })
+        if (s.drills.has(d.id)) return
+        if (d.after && !passed.has(makeCardId(entry.note.id, d.after))) return
+        follow.push({ entry, drill: d, k })
       })
     }
   }
@@ -303,12 +323,76 @@ const shuffle = <T>(xs: T[], rng: Rng): T[] => {
 const kanaSound = (f: KanaFields): string => (f.romaji === 'wo' ? 'o' : f.romaji)
 const kanaGroup = (f: KanaFields): string => (f.yoon ? 'yoon' : f.dakuon ? 'dakuon' : 'basic')
 
+type Example = NonNullable<KanjiFields['examples']>[number]
+/** 한자 카탈로그의 모든 예시 낱말 (보기 재료). 카탈로그마다 한 번만 만든다 */
+const examplePool = new WeakMap<Catalog, Example[]>()
+const allExamples = (catalog: Catalog): Example[] => {
+  let pool = examplePool.get(catalog)
+  if (!pool) {
+    pool = catalog.notes.flatMap(c => (c.note.fields as KanjiFields).examples ?? [])
+    examplePool.set(catalog, pool)
+  }
+  return pool
+}
+const isKanjiChar = (c: string): boolean => /[\u3400-\u9fff\uf900-\ufaff々]/u.test(c)
+
+/**
+ * 예시 낱말 보기: 정답(그 순번의 예시 낱말)과 다른 예시 낱말 3개 (섞음).
+ *   뜻: 아무 예시 낱말의 뜻. normMeaning 이 같은 것은 한 번만, 정답과 같은 것은 뺀다.
+ *   읽기: 비슷한 것을 먼저 — (1) 같은 한자가 들어 있고 글자 수가 같은 낱말 → (2) 같은 한자 → (3) 글자 수가 같은 것 → (4) 나머지.
+ *         normReading 이 정답과 같은 것, 같은 낱말(표기가 같은데 읽기만 다른 것)은 뺀다.
+ */
+const exampleChoices = (catalog: Catalog, note: Note, drillId: string, example: number, rng: Rng): string[] | undefined => {
+  const ex = (note.fields as KanjiFields).examples?.[example]
+  if (!ex) return undefined
+  const pool = shuffle(allExamples(catalog), rng)
+  if (drillId === 'kanji-word-meaning') {
+    const seen = new Set([normMeaning(ex.meaning_ko)])
+    const picked: string[] = []
+    for (const e of pool) {
+      const k = normMeaning(e.meaning_ko)
+      if (!k || seen.has(k)) continue
+      seen.add(k)
+      picked.push(e.meaning_ko)
+      if (picked.length === 3) break
+    }
+    return picked.length ? shuffle([ex.meaning_ko, ...picked], rng) : undefined
+  }
+  const answer = normReading(ex.reading)
+  const kanji = new Set([...ex.word].filter(isKanjiChar))
+  const len = [...answer].length
+  const tier = (e: Example): number => {
+    const share = [...e.word].some(c => kanji.has(c))
+    const same = [...normReading(e.reading)].length === len
+    return share && same ? 0 : share ? 1 : same ? 2 : 3
+  }
+  const ranked = pool.map(e => ({ e, t: tier(e) })).sort((a, b) => a.t - b.t)
+  const seen = new Set([answer])
+  const picked: string[] = []
+  for (const { e } of ranked) {
+    const k = normReading(e.reading)
+    if (!k || seen.has(k) || e.word === ex.word) continue
+    seen.add(k)
+    picked.push(e.reading)
+    if (picked.length === 3) break
+  }
+  return picked.length ? shuffle([ex.reading, ...picked], rng) : undefined
+}
+
 /**
  * 고르기 연습 방식의 보기 4개 (정답 포함, 섞음). 고르기가 아니거나 보기를 만들 수 없으면 undefined.
  *   kana-listen: 같은 문자 체계, 같은 묶음(기본 · 탁음 · 요음)을 먼저, 모자라면 다른 묶음에서. 소리가 같은 글자는 뺀다.
  *   toeic-meaning(토익 · 토플): 같은 트랙(catalog)의 다른 단어 뜻 3개 (정답과 뜻이 같은 것은 뺀다). 보기가 2개 미만이면 입력식으로 둔다.
+ *   kanji-word-meaning · kanji-word-reading: example 번 예시 낱말 기준 (exampleChoices).
  */
-export const choicesFor = (catalog: Catalog, note: Note, drillId: string, rng: Rng = Math.random): string[] | undefined => {
+export const choicesFor = (
+  catalog: Catalog,
+  note: Note,
+  drillId: string,
+  rng: Rng = Math.random,
+  example = 0,
+): string[] | undefined => {
+  if (drillId === 'kanji-word-meaning' || drillId === 'kanji-word-reading') return exampleChoices(catalog, note, drillId, example, rng)
   if (drillId === 'kana-listen') {
     const a = note.fields as KanaFields
     const pool = catalog.notes
@@ -355,6 +439,7 @@ interface CardRow {
   cardId: string
   noteId: string
   drillId: string
+  fsrs: string
 }
 
 export interface QueueOptions extends WriteSelect {
@@ -382,8 +467,10 @@ export const buildQueue = (
     return names.get(entry.uploaderId)
   }
 
-  const item = (entry: CatalogNote, drillId: string, isNew: boolean): QueueItem => {
-    const choices = choicesFor(catalog, entry.note, drillId, rng)
+  const item = (entry: CatalogNote, drillId: string, isNew: boolean, reps = 0): QueueItem => {
+    const usesExample = drillId === 'kanji-word-meaning' || drillId === 'kanji-word-reading'
+    const example = usesExample ? exampleIndex(entry.note, reps) : undefined
+    const choices = choicesFor(catalog, entry.note, drillId, rng, example)
     const author = authorOf(entry)
     return {
       cardId: makeCardId(entry.note.id, drillId),
@@ -393,6 +480,7 @@ export const buildQueue = (
       fields: entry.note.fields,
       isNew,
       ...(choices ? { choices } : {}),
+      ...(example !== undefined ? { example } : {}),
       ...(author ? { author } : {}),
     }
   }
@@ -400,11 +488,11 @@ export const buildQueue = (
   const fromRows = (rows: CardRow[]): QueueItem[] =>
     rows.flatMap(r => {
       const entry = catalog.byId.get(r.noteId)
-      return entry && entry.drills.some(d => d.id === r.drillId) ? [item(entry, r.drillId, false)] : []
+      return entry && entry.drills.some(d => d.id === r.drillId) ? [item(entry, r.drillId, false, parseCard(r.fsrs).reps)] : []
     })
   // 작문 복습은 고른 레벨과 상관없이 모두 낸다 (SRS 일정을 깨지 않게)
   const f = modeFilter(mode, 'uc.drill_id')
-  const dueSql = `SELECT uc.card_id AS cardId, uc.note_id AS noteId, uc.drill_id AS drillId
+  const dueSql = `SELECT uc.card_id AS cardId, uc.note_id AS noteId, uc.drill_id AS drillId, uc.fsrs AS fsrs
      FROM user_cards uc JOIN notes n ON n.id = uc.note_id
      WHERE uc.user_id = ? AND uc.track = ? AND uc.suspended = 0 AND uc.due <= ? AND n.status = 'published' AND ${f.sql}
      ORDER BY uc.due, uc.card_id LIMIT ?`
@@ -608,10 +696,6 @@ export const answerCard = (db: DatabaseSync, userId: number, input: AnswerInput,
 
   // 클라이언트가 보낸 정답 여부는 받지 않는다. 틀리면 평가는 무조건 다시(Again).
   // 예외는 자기 평가 연습 방식(selfGraded)의 selfCorrect 뿐이다.
-  const checked = drill.check(entry.note, input.response)
-  const { expected } = checked
-  const correct = checked.correct || (drill.selfGraded === true && input.selfCorrect === true)
-  const rating = (correct ? (input.rating ?? 3) : 1) as Grade
   const id = makeCardId(noteId, drillId)
 
   db.exec('BEGIN IMMEDIATE')
@@ -619,6 +703,12 @@ export const answerCard = (db: DatabaseSync, userId: number, input: AnswerInput,
     const cur = db.prepare('SELECT fsrs FROM user_cards WHERE user_id = ? AND card_id = ?').get(userId, id) as
       | { fsrs: string }
       | undefined
+    const curCard = cur ? parseCard(cur.fsrs) : undefined
+    // 예시 낱말 연습 방식은 큐와 같은 순번(복습 횟수로 계산)의 낱말로 채점한다
+    const checked = drill.check(entry.note, input.response, { example: exampleIndex(entry.note, curCard?.reps ?? 0) })
+    const { expected } = checked
+    const correct = checked.correct || (drill.selfGraded === true && input.selfCorrect === true)
+    const rating = (correct ? (input.rating ?? 3) : 1) as Grade
     if (!cur) {
       // 하루 새 카드 수는 모드별로 따로 센다 (작문 카드는 트랙 수에 들어가지 않는다)
       const mode = drillMode(drill)
@@ -632,7 +722,7 @@ export const answerCard = (db: DatabaseSync, userId: number, input: AnswerInput,
         }
       }
     }
-    const next = review(cur ? parseCard(cur.fsrs) : newCard(new Date(now)), rating, new Date(now)).card
+    const next = review(curCard ?? newCard(new Date(now)), rating, new Date(now)).card
     const due = next.due.getTime()
     if (cur) {
       db.prepare('UPDATE user_cards SET fsrs = ?, due = ? WHERE user_id = ? AND card_id = ?').run(

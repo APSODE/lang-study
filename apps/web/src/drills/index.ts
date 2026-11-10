@@ -2,7 +2,7 @@
 // 새 연습 방식은 core 에 registerDrill 하고 여기에 화면을 하나 추가한다.
 import { DeckRecall } from './deck.tsx'
 import { KanaListen, KanaToRomaji, RomajiToKana } from './kana.tsx'
-import { KanjiMeaning, KanjiReading, KanjiWrite } from './kanji.tsx'
+import { KanjiMeaning, KanjiReading, KanjiWordMeaning, KanjiWordReading, KanjiWrite } from './kanji.tsx'
 import { ToeicCloze, ToeicMeaning, WordSpell } from './toeic.tsx'
 import type { DrillComponent } from './types.ts'
 
@@ -13,6 +13,8 @@ export const DRILL_VIEWS: Record<string, DrillComponent> = {
   'kanji-reading': KanjiReading,
   'kanji-meaning': KanjiMeaning,
   'kanji-write': KanjiWrite,
+  'kanji-word-meaning': KanjiWordMeaning,
+  'kanji-word-reading': KanjiWordReading,
   'toeic-meaning': ToeicMeaning,
   'toeic-cloze': ToeicCloze,
   'word-spell': WordSpell,

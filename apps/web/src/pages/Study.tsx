@@ -157,7 +157,7 @@ export function Study({ track, title, write }: { track: StudyKey; title: string;
     setNotice('')
     const note = { id: item.noteId, track: item.track, fields: item.fields } as Note
     const drill = getDrill(item.drillId)
-    const local = drill?.check(note, response)
+    const local = drill?.check(note, response, { example: item.example })
     if (local?.correct) {
       setGraded({ correct: true, expected: local.expected, response, sent: false })
       return
@@ -274,7 +274,8 @@ export function Study({ track, title, write }: { track: StudyKey; title: string;
   const deckNote = item.track === 'deck' ? (item.fields as DeckFields).note : undefined
   const sentence = writeSentence(item)
   const kf = item.track === 'kanji' ? (item.fields as KanjiFields) : null
-  const aidWord = kf?.examples?.[0]
+  // 예시 낱말 연습 방식은 문제로 낸 낱말 (낱말 · 읽기 · 뜻)
+  const aidWord = kf?.examples?.[item.example ?? 0]
   // 일작은 예문 자체가 문제라 예문 도움말은 빼고 낱말만
   const aidSentence = item.drillId === 'kanji-write' ? undefined : kf?.sentences?.[0]
   const verdict = graded?.selfPending
