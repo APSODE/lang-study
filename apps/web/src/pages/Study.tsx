@@ -13,6 +13,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import {
   getDrill,
+  isWordTrack,
   type DeckFields,
   type KanaFields,
   type KanjiFields,
@@ -50,7 +51,7 @@ const writeSentence = (item: QueueItem) =>
 /** 답한 뒤 들려줄 텍스트 */
 const listenText = (item: QueueItem): [string, 'ja-JP' | 'en-US'] | null => {
   if (item.track === 'kana') return [(item.fields as KanaFields).char, 'ja-JP']
-  if (item.track === 'toeic') return [(item.fields as ToeicFields).word, 'en-US']
+  if (isWordTrack(item.track)) return [(item.fields as ToeicFields).word, 'en-US']
   if (item.track === 'deck') {
     const back = (item.fields as DeckFields).back
     const lang = guessLang(back)
@@ -269,7 +270,7 @@ export function Study({ track, title, write }: { track: StudyKey; title: string;
 
   const View = DRILL_VIEWS[item.drillId]
   const listen = listenText(item)
-  const answerLang = item.track === 'toeic' ? 'en' : item.track === 'deck' ? guessLang(graded?.expected ?? '') : 'ja'
+  const answerLang = isWordTrack(item.track) ? 'en' : item.track === 'deck' ? guessLang(graded?.expected ?? '') : 'ja'
   const deckNote = item.track === 'deck' ? (item.fields as DeckFields).note : undefined
   const sentence = writeSentence(item)
   const kf = item.track === 'kanji' ? (item.fields as KanjiFields) : null

@@ -31,6 +31,18 @@ describe('drillsFor', () => {
     // example_en 이 없으면 빈칸 문제는 생기지 않는다
     expect(drillsFor(bare).map(d => d.id)).toEqual(['toeic-meaning'])
   })
+  it('토플은 토익 연습 방식(뜻 · 빈칸)을 같은 id 로 쓴다', () => {
+    const hyp: Note = {
+      id: 'toefl-hypothesis',
+      track: 'toefl',
+      fields: { word: 'hypothesis', meaning_ko: '가설', example_en: 'The data support the hypothesis.', list: 'NAWL' },
+    }
+    expect(drillsFor(hyp).map(d => d.id)).toEqual(['toeic-meaning', 'toeic-cloze'])
+    expect(check('toeic-meaning', hyp, '가설')).toBe(true)
+    expect(check('toeic-cloze', hyp, 'Hypothesis')).toBe(true)
+    expect(isTrack('toefl')).toBe(true)
+    expect(writeTracks()).not.toContain('toefl')
+  })
 })
 
 describe('채점', () => {

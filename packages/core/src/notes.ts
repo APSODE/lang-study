@@ -1,7 +1,12 @@
 // 노트: 내용 하나. 트랙마다 필드가 다르다. (docs/논의_정리.md "데이터 모델")
 /** 고정 트랙 (홈 · 설정 · 통계 · 친구 진도에 하나씩 나온다) */
-export const TRACKS = ['kana', 'kanji', 'toeic'] as const
+export const TRACKS = ['kana', 'kanji', 'toeic', 'toefl'] as const
 export type Track = (typeof TRACKS)[number]
+
+/** 영어 단어 트랙 (토익 · 토플). 필드(ToeicFields)와 연습 방식(toeic-meaning · toeic-cloze)을 같이 쓴다 */
+export const WORD_TRACKS = ['toeic', 'toefl'] as const
+export type WordTrack = (typeof WORD_TRACKS)[number]
+export const isWordTrack = (v: unknown): v is WordTrack => typeof v === 'string' && (WORD_TRACKS as readonly string[]).includes(v)
 
 /**
  * 사용자가 만든 항목(덱)의 노트 트랙. 앞면 · 뒷면 카드이고, 항목 이름마다 따로 학습한다 (deck.ts).
@@ -54,13 +59,15 @@ export interface KanjiFields {
   meanings_en?: string[]
 }
 
+/** 영어 단어 (토익 · 토플 공통) */
 export interface ToeicFields {
   word: string
   pos?: string
   meaning_ko: string
   example_en?: string
   example_ko?: string
-  list?: 'TSL' | 'NGSL'
+  /** 출처 단어 목록: 토익 TSL · NGSL, 토플 NAWL (New Academic Word List) */
+  list?: 'TSL' | 'NGSL' | 'NAWL'
 }
 
 export interface DeckFields {
@@ -78,6 +85,7 @@ export interface FieldsByTrack {
   kana: KanaFields
   kanji: KanjiFields
   toeic: ToeicFields
+  toefl: ToeicFields
   deck: DeckFields
 }
 

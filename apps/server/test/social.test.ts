@@ -126,6 +126,7 @@ describe('친구 진도', () => {
         { track: 'kana', learned: 2, mature: 1 },
         { track: 'kanji', learned: 0, mature: 0 },
         { track: 'toeic', learned: 0, mature: 0 },
+        { track: 'toefl', learned: 0, mature: 0 },
       ],
     })
     // ken 은 지난주 일요일에 해서 이번 주 0 회, 연속 1일 (어제)

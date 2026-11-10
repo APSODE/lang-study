@@ -1,6 +1,6 @@
 // 친구가 만든 문제 (docs/논의_정리.md "친구 문제 만들기" · "파일 올리기").
 // - 사용자가 칸을 채워 보내면 초안(status draft, source upload:<user id>)으로 저장하고 수정 이력을 남긴다.
-// - 파일 올리기: { track, notes } (한자 · 토익) 또는 { deck, cards } (항목 = 앞면 · 뒷면 카드). 항목마다 검사해
+// - 파일 올리기: { track, notes } (한자 · 토익 · 토플) 또는 { deck, cards } (항목 = 앞면 · 뒷면 카드). 항목마다 검사해
 //   통과한 것만 초안으로 넣고 나머지는 항목별 사유(검사 실패 · 중복 · 하루 제한)를 돌려준다. 한 번에 올린 것은 같은 묶음(upload_batch).
 // - 관리자가 공개하면 status published 가 되어 catalog 캐시(공개 노트 개수 · 수정 시각)가 바뀌고 모두의 학습에 들어간다.
 //   파일로 올린 것은 묶음째 공개 · 반려할 수 있다.
@@ -16,7 +16,7 @@ import { userTz } from './study/service.ts'
 export { uploadSource }
 
 /** 만들 수 있는 트랙 */
-export const UPLOAD_TRACKS = ['kanji', 'toeic'] as const
+export const UPLOAD_TRACKS = ['kanji', 'toeic', 'toefl'] as const
 export type UploadTrack = (typeof UPLOAD_TRACKS)[number]
 export const isUploadTrack = (v: unknown): v is UploadTrack => (UPLOAD_TRACKS as readonly unknown[]).includes(v)
 
@@ -39,13 +39,14 @@ const CARD_NOTE_MAX = 500
 const UPLOAD_FIELDS: Record<UploadTrack, { required: string[]; optional: string[] }> = {
   kanji: { required: ['kanji', 'on', 'kun', 'meanings_ko'], optional: ['hunum_ko', 'jlpt'] },
   toeic: { required: ['word', 'meaning_ko', 'example_en', 'example_ko'], optional: ['pos'] },
+  toefl: { required: ['word', 'meaning_ko', 'example_en', 'example_ko'], optional: ['pos'] },
 }
 
-/** 노트 id: 한자 kanji-<글자>, 토익 toeic-<단어 소문자, 공백 → '-', 아포스트로피 제거> */
+/** 노트 id: 한자 kanji-<글자>, 토익 · 토플 toeic-|toefl-<단어 소문자, 공백 → '-', 아포스트로피 제거> */
 export const uploadNoteId = (track: UploadTrack, fields: Record<string, unknown>): string => {
   if (track === 'kanji') return `kanji-${typeof fields.kanji === 'string' ? fields.kanji : ''}`
   const word = typeof fields.word === 'string' ? fields.word : ''
-  return `toeic-${word.toLowerCase().replace(/['’]/g, '').replace(/\s+/g, '-')}`
+  return `${track}-${word.toLowerCase().replace(/['’]/g, '').replace(/\s+/g, '-')}`
 }
 
 /** 앞뒤 공백 정리. 빈 선택 칸(빈 문자열 · null)은 뺀다. 배열은 항목마다 정리하고 빈 항목을 뺀다. */
@@ -243,7 +244,7 @@ export interface FileUploadResult {
 
 export type FileOutcome = { ok: true; result: FileUploadResult } | { ok: false; status: 400 | 429; error: string }
 
-const FILE_FORMAT = '파일은 { "track": "kanji" | "toeic", "notes": [...] } 또는 { "deck": "항목 이름", "cards": [...] } 형식이어야 합니다'
+const FILE_FORMAT = '파일은 { "track": "kanji" | "toeic" | "toefl", "notes": [...] } 또는 { "deck": "항목 이름", "cards": [...] } 형식이어야 합니다'
 
 /** 항목 키가 같은 노트가 있으면 그 항목 이름 (가장 먼저 만든 것) */
 const existingDeckName = (db: DatabaseSync, key: string): string | null => {

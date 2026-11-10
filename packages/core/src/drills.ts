@@ -2,7 +2,7 @@
 // 여기에는 화면과 무관한 부분(대상 트랙, 필요한 필드, 채점)만 둔다.
 // 화면(Prompt · Answer)은 apps/web 이 drill id 로 연결한다.
 // 발음 평가는 나중에 `speak` 연습 방식 + 서버 Assessor 로 추가한다 — 여기 구조는 바뀌지 않는다.
-import { isTrack, type DeckFields, type Note, type NoteTrack, type Track } from './notes.ts'
+import { isTrack, WORD_TRACKS, type DeckFields, type Note, type NoteTrack, type Track } from './notes.ts'
 import { kataToHira, normAnswer, normMeaning, normReading, normRomaji, normSentence, splitMeanings } from './text.ts'
 
 export interface CheckResult {
@@ -147,10 +147,10 @@ registerDrill({
   },
 })
 
-// 토익: 뜻 (고르기 · 입력 공통)
+// 영어 단어(토익 · 토플): 뜻 (고르기 · 입력 공통). 토플도 같은 연습 방식을 쓰고, id 는 기존 카드 기록을 위해 그대로 둔다
 registerDrill({
   id: 'toeic-meaning',
-  tracks: ['toeic'],
+  tracks: WORD_TRACKS,
   requires: ['word', 'meaning_ko'],
   check(note, response) {
     const { meaning_ko } = f<{ meaning_ko: string }>(note)
@@ -160,10 +160,10 @@ registerDrill({
   },
 })
 
-// 토익: 예문 빈칸
+// 영어 단어(토익 · 토플): 예문 빈칸
 registerDrill({
   id: 'toeic-cloze',
-  tracks: ['toeic'],
+  tracks: WORD_TRACKS,
   requires: ['word', 'example_en'],
   check(note, response) {
     const { word } = f<{ word: string }>(note)

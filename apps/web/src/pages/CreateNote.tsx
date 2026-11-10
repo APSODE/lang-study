@@ -1,7 +1,7 @@
-// 문제 만들기 (#/create, 아래 탭 "만들기". 예전 #/library/create 도 여기로): 한자 · 토익 문제를 만들어 보내면 관리자가 검토한 뒤 모두의 학습에 들어간다.
+// 문제 만들기 (#/create, 아래 탭 "만들기". 예전 #/library/create 도 여기로): 한자 · 토익 · 토플 문제를 만들어 보내면 관리자가 검토한 뒤 모두의 학습에 들어간다.
 // 서버가 검사하고(문제가 있으면 목록을 돌려준다) 초안으로 저장한다. 하루 20개까지. 아래에 내가 만든 문제와 상태.
 // #/create?mine=1 (홈의 "올린 문제 현황"에서): 목록을 불러오면 "내가 만든 문제"로 스크롤한다.
-// "파일 올리기" 탭: JSON 파일로 새 항목(앞면 · 뒷면 카드)이나 한자 · 토익 문제를 한 번에 올린다 (UploadFile.tsx).
+// "파일 올리기" 탭: JSON 파일로 새 항목(앞면 · 뒷면 카드)이나 한자 · 토익 · 토플 문제를 한 번에 올린다 (UploadFile.tsx).
 import { type FormEvent, useEffect, useRef, useState } from 'react'
 import { api, ApiError } from '../api.ts'
 import { EmptyState, LoadError } from '../components/EmptyState.tsx'
@@ -14,7 +14,8 @@ import { TRACK_LABEL } from '../study.ts'
 import { type MyNotesResponse, type NoteStatus, UPLOAD_STATUS_LABEL, type UploadedNote } from '../types.ts'
 import { UploadFile } from './UploadFile.tsx'
 
-type CreateTrack = 'kanji' | 'toeic'
+/** 토플은 토익과 같은 칸(단어 · 뜻 · 예문)을 쓴다 */
+type CreateTrack = 'kanji' | 'toeic' | 'toefl'
 type CreateMode = 'form' | 'file'
 
 const MODE_ITEMS: { value: CreateMode; label: string }[] = [
@@ -25,6 +26,7 @@ const MODE_ITEMS: { value: CreateMode; label: string }[] = [
 const TRACK_ITEMS: { value: CreateTrack; label: string }[] = [
   { value: 'kanji', label: '한자' },
   { value: 'toeic', label: '토익' },
+  { value: 'toefl', label: '토플' },
 ]
 
 /** 상태 배지 색: 관리 · 신고의 열림 / 해결 / 반려와 같은 모양을 쓴다 */

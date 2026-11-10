@@ -1,6 +1,6 @@
 // 노트 검사. 가져오기(파일 · 업로드 · AI 생성)는 DB 에 넣기 전에 반드시 이걸 거친다.
 //
-// id 규칙: `<트랙>-<이름>` (예: kana-hira-ka, kanji-食, toeic-invoice)
+// id 규칙: `<트랙>-<이름>` (예: kana-hira-ka, kanji-食, toeic-invoice, toefl-hypothesis)
 //   - 앞부분은 노트의 track 과 같아야 한다.
 //   - 이름은 공백과 ':' 를 쓸 수 없다 (카드 id 가 `<노트 id>:<연습 방식 id>` 이므로).
 // 필드: 트랙별로 정해진 키만 허용한다 (오타로 생긴 키를 잡기 위해). 새 필드는 notes.ts 와 여기에 같이 추가한다.
@@ -62,6 +62,11 @@ const SCHEMAS: Record<NoteTrack, Schema> = {
   toeic: {
     required: { word: str, meaning_ko: str },
     optional: { pos: str, example_en: str, example_ko: str, list: oneOf(['TSL', 'NGSL']) },
+  },
+  // 토플: 토익과 같은 필드, 단어 목록은 NAWL (토익 목록과 겹치는 단어를 옮겨 올 수 있게 TSL · NGSL 도 받는다)
+  toefl: {
+    required: { word: str, meaning_ko: str },
+    optional: { pos: str, example_en: str, example_ko: str, list: oneOf(['NAWL', 'NGSL', 'TSL']) },
   },
   deck: {
     required: { deck: deckName, front: str, back: str },

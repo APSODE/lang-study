@@ -81,7 +81,7 @@ describe('트랙별 카드 상태', () => {
     const u = await user('hana')
     const total = publishedCatalog(db, 'kana').notes.reduce((n, c) => n + c.drills.length, 0)
     const { tracks } = await u.get('/stats/tracks')
-    expect(tracks.map((t: { track: string }) => t.track)).toEqual(['kana', 'kanji', 'toeic'])
+    expect(tracks.map((t: { track: string }) => t.track)).toEqual(['kana', 'kanji', 'toeic', 'toefl'])
     expect(tracks[0]).toEqual({
       track: 'kana',
       notes: 208,

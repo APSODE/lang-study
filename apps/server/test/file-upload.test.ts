@@ -77,6 +77,23 @@ describe('파일 올리기: 한자 · 토익', () => {
     expect(body.results[1].errors).toEqual(['fields.example_en: 예문에 단어가 들어 있어야 합니다'])
   })
 
+  it('토플 파일 (토익과 같은 형식, track: "toefl")', async () => {
+    const { user } = setup({ kana: false })
+    const hana = await user('hana')
+    const res = await hana.send('POST', '/notes/file', {
+      track: 'toefl',
+      notes: [
+        { word: 'hypothesis', pos: 'n', meaning_ko: '가설', example_en: 'The data support the hypothesis.', example_ko: '자료가 가설을 뒷받침한다.' },
+        { word: 'erosion', meaning_ko: '침식', example_en: 'Wind wears rock.', example_ko: '바람이 바위를 깎는다.' },
+      ],
+    })
+    expect(res.status).toBe(200)
+    const body = await res.json()
+    expect(body).toMatchObject({ track: 'toefl', created: 1 })
+    expect((body.results as Result[]).map(r => r.status)).toEqual(['created', 'invalid'])
+    expect(body.results[0].id).toBe('toefl-hypothesis')
+  })
+
   it('파일 형식이 틀리면 400 (아무것도 만들지 않는다)', async () => {
     const { db, user } = setup({ kana: false })
     const hana = await user('hana')
@@ -273,7 +290,7 @@ describe('항목 학습', () => {
       { key, name: DECK, authors: ['하나'], notes: 3, due: 0, newLeft: 3, newPerDay: 15, learned: 0, reviewsToday: 0 },
     ])
     // 고정 트랙 요약에는 섞이지 않는다
-    expect(s.tracks.map((t: { track: string }) => t.track)).toEqual(['kana', 'kanji', 'toeic'])
+    expect(s.tracks.map((t: { track: string }) => t.track)).toEqual(['kana', 'kanji', 'toeic', 'toefl'])
 
     const items = (await hana.get(`/study/queue?track=${encodeURIComponent(key)}`)).items
     expect(items.map((i: { drillId: string }) => i.drillId)).toEqual(['deck-recall', 'deck-recall', 'deck-recall'])
@@ -310,7 +327,7 @@ describe('항목 학습', () => {
     expect(stats.decks).toEqual([
       expect.objectContaining({ key, name: DECK, notes: 3, cards: 3, unseen: 0, accuracy7d: 2 / 3 }),
     ])
-    expect(stats.tracks).toHaveLength(3)
+    expect(stats.tracks).toHaveLength(4)
   })
 
   it('하루 새 카드 수는 항목마다 따로 (기본 15)', async () => {

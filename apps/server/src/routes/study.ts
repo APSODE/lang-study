@@ -4,7 +4,7 @@
 //                                       + decks: { key: 'deck:<키>', name, authors, notes, due, newLeft, newPerDay, learned, reviewsToday }[]
 //                                         (친구가 만든 항목, 공개된 카드가 있는 것만, 만든 순서)
 //   GET  /study/queue?track=&limit=     { items: QueueItem[] } (순서는 study/service.ts 맨 위 설명)
-//                                       track 은 트랙(kana · kanji · toeic) 또는 항목 학습 키 deck:<키>.
+//                                       track 은 트랙(kana · kanji · toeic · toefl) 또는 항목 학습 키 deck:<키>.
 //                                       QueueItem.author = 친구가 만든 노트의 만든 사람 (보이는 이름)
 //        &mode=write&levels=5,4&learnedOnly=1
 //                                       작문 모드: 복습할 작문 카드(레벨 무관) → 새 작문 카드(levels 의 JLPT 레벨만, learnedOnly 면 공부한 한자만)
@@ -12,8 +12,8 @@
 //                                       { levels: { jlpt, total, learned, introduced, learnedFresh }[], newPerDay, newLeft, due }
 //   POST /study/answer                  { cardId, response, durationMs?, rating?, selfCorrect? } → { correct, expected, rating, due }
 //                                       selfCorrect 는 자기 평가 연습 방식(kanji-write)에서만 쓴다. 다른 연습 방식은 무시.
-//   GET  /study/settings                { newPerDay: { kana, kanji, toeic }, writeNewPerDay }
-//   PUT  /study/settings                { newPerDay?: { kana?, kanji?, toeic? }, writeNewPerDay? } (0–100 정수, 둘 중 하나는 있어야 한다)
+//   GET  /study/settings                { newPerDay: { kana, kanji, toeic, toefl }, writeNewPerDay }
+//   PUT  /study/settings                { newPerDay?: { kana?, kanji?, toeic?, toefl? }, writeNewPerDay? } (0–100 정수, 둘 중 하나는 있어야 한다)
 //   POST /reports                       { noteId, cardId?, reason, body? } → 201 { id }
 // 하루 경계 · 연속 학습일은 사용자 시간대의 04:00 기준 (study/day.ts).
 import type { DatabaseSync } from 'node:sqlite'

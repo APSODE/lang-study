@@ -1,9 +1,9 @@
 // 노트 조회 · 친구 문제 만들기 (로그인 필요).
 //   GET  /notes?track=kana   { notes: { id, fields }[] } 공개 노트 (학습 순서). 가나 표 같은 화면이 쓴다.
-//   POST /notes              { track: 'kanji' | 'toeic', fields } → 201 UploadedNote (status draft, 관리자가 공개하면 학습에 들어간다)
+//   POST /notes              { track: 'kanji' | 'toeic' | 'toefl', fields } → 201 UploadedNote (status draft, 관리자가 공개하면 학습에 들어간다)
 //                            400 { error, errors: string[] } 검사 실패 · 409 같은 id 의 노트가 이미 있음 · 429 하루 제한(20개, 04:00 기준)
 //   POST /notes/file         파일 올리기. 본문 = 파일 내용 그대로:
-//                              { track: 'kanji' | 'toeic', notes: fields[] }   (fields 는 POST /notes 와 같다)
+//                              { track: 'kanji' | 'toeic' | 'toefl', notes: fields[] }   (fields 는 POST /notes 와 같다)
 //                              { deck: '항목 이름', cards: { front, back, note? }[] }
 //                            → 200 { batch, track, deck?: { key, name, isNew }, created, results: { no, status, label, id?, errors? }[] }
 //                              status: created(초안으로 만듦) · invalid(검사 실패) · duplicate(파일 안 중복 · 이미 있음) · limit(하루 제한 넘음)

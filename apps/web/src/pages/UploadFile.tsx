@@ -1,6 +1,6 @@
 // 문제 만들기 · 파일 올리기: JSON 파일 하나로 문제를 여러 개 올린다 (서버 POST notes/file, 규칙은 apps/server/src/uploads.ts).
 //   새 항목(덱):  { "deck": "항목 이름", "cards": [{ "front", "back", "note"? }] }  이름이 같은 항목이 있으면 그 항목에 더한다.
-//   한자 · 토익: { "track": "kanji" | "toeic", "notes": [ 직접 만들기와 같은 칸 ] }
+//   한자 · 토익 · 토플: { "track": "kanji" | "toeic" | "toefl", "notes": [ 직접 만들기와 같은 칸 ] }
 // 파일을 고르면 브라우저에서 읽어 종류 · 개수를 먼저 보여 주고, 올리면 항목마다 결과(만듦 · 오류 · 중복 · 하루 제한)를 보여 준다.
 import { type ChangeEvent, useState } from 'react'
 import { api, ApiError } from '../api.ts'
@@ -53,6 +53,23 @@ const SAMPLES = [
       ],
     },
   },
+  {
+    key: 'toefl',
+    title: '토플',
+    file: '토플-예시.json',
+    data: {
+      track: 'toefl',
+      notes: [
+        {
+          word: 'hypothesis',
+          pos: 'n',
+          meaning_ko: '가설',
+          example_en: 'The results support the hypothesis.',
+          example_ko: '결과가 그 가설을 뒷받침한다.',
+        },
+      ],
+    },
+  },
 ] as const
 
 const sampleHref = (data: unknown) => `data:application/json;charset=utf-8,${encodeURIComponent(`${JSON.stringify(data, null, 2)}\n`)}`
@@ -65,7 +82,7 @@ const STATUS_LABEL: Record<FileItemStatus, string> = {
 }
 
 interface Preview {
-  /** '항목 「이름」' · '한자' · '토익' */
+  /** '항목 「이름」' · '한자' · '토익' · '토플' */
   title: string
   count: number
   /** 앞쪽 몇 개의 대표 글자 */
@@ -90,7 +107,7 @@ const describe = (data: unknown): Preview | string => {
     head = x => str(x.front)
     if (!Array.isArray(list)) return 'cards 는 카드 배열이어야 해요.'
   } else if ('track' in o || 'notes' in o) {
-    if (o.track !== 'kanji' && o.track !== 'toeic') return 'track 은 "kanji" 또는 "toeic" 이어야 해요.'
+    if (o.track !== 'kanji' && o.track !== 'toeic' && o.track !== 'toefl') return 'track 은 "kanji" · "toeic" · "toefl" 중 하나여야 해요.'
     title = TRACK_LABEL[o.track]
     list = o.notes
     head = x => str(x.kanji ?? x.word)
@@ -178,9 +195,9 @@ export function UploadFile({ readable, onUploaded }: { readable: (m: string) => 
             항목이 이미 있으면 거기에 카드가 더해져요. 답이 여러 개면 <code>/</code> 로 나눠 적어요.
           </li>
           <li>
-            <strong>한자 · 토익</strong>: <code>track</code> 에 <code>"kanji"</code> 또는 <code>"toeic"</code>, <code>notes</code> 에 직접 만들기와 같은
+            <strong>한자 · 토익 · 토플</strong>: <code>track</code> 에 <code>"kanji"</code> · <code>"toeic"</code> · <code>"toefl"</code> 중 하나, <code>notes</code> 에 직접 만들기와 같은
             칸. 한자는 <code>kanji</code> · <code>on</code>(가타카나 배열) · <code>kun</code>(히라가나 배열) · <code>meanings_ko</code>(뜻 배열) ·{' '}
-            <code>hunum_ko</code>(선택) · <code>jlpt</code>(1–5, 선택), 토익은 <code>word</code> · <code>meaning_ko</code> · <code>example_en</code>(단어
+            <code>hunum_ko</code>(선택) · <code>jlpt</code>(1–5, 선택), 토익 · 토플은 <code>word</code> · <code>meaning_ko</code> · <code>example_en</code>(단어
             포함) · <code>example_ko</code> · <code>pos</code>(선택).
           </li>
           <li>이미 있는 문제 · 파일 안에서 겹치는 문제는 건너뛰어요. 잘못된 문제만 빠지고 나머지는 올라가니, 고친 뒤 같은 파일을 다시 올려도 돼요.</li>

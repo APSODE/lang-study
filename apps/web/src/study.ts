@@ -2,7 +2,7 @@
 import type { Note, NoteTrack, Track } from '@nakamura/core'
 
 /** 트랙 이름. deck 은 친구가 만든 항목(앞면 · 뒷면 카드) */
-export const TRACK_LABEL: Record<NoteTrack, string> = { kana: '가나', kanji: '한자', toeic: '토익', deck: '항목' }
+export const TRACK_LABEL: Record<NoteTrack, string> = { kana: '가나', kanji: '한자', toeic: '토익', toefl: '토플', deck: '항목' }
 
 export interface QueueItem {
   cardId: string

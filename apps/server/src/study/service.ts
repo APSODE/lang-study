@@ -20,7 +20,7 @@
 //     3. learn ahead 는 보통 모드와 같다.
 //
 // 학습 키 (core deck.ts 의 StudyKey)
-//   고정 트랙(kana · kanji · toeic)은 트랙 이름, 친구가 만든 항목은 'deck:<항목 키>'. 큐 · 요약 · 하루 새 카드 수는 이 키별로 따로다.
+//   고정 트랙(kana · kanji · toeic · toefl)은 트랙 이름, 친구가 만든 항목은 'deck:<항목 키>'. 큐 · 요약 · 하루 새 카드 수는 이 키별로 따로다.
 //   user_cards.track · user_track_settings.track 에 이 키를 넣는다 (항목 카드는 'deck:<키>', 노트의 track 은 'deck').
 //   항목의 하루 새 카드 수는 기본값(15)이다 (설정 화면은 고정 트랙만).
 import type { DatabaseSync } from 'node:sqlite'
@@ -306,7 +306,7 @@ const kanaGroup = (f: KanaFields): string => (f.yoon ? 'yoon' : f.dakuon ? 'daku
 /**
  * 고르기 연습 방식의 보기 4개 (정답 포함, 섞음). 고르기가 아니거나 보기를 만들 수 없으면 undefined.
  *   kana-listen: 같은 문자 체계, 같은 묶음(기본 · 탁음 · 요음)을 먼저, 모자라면 다른 묶음에서. 소리가 같은 글자는 뺀다.
- *   toeic-meaning: 다른 단어의 뜻 3개 (정답과 뜻이 같은 것은 뺀다). 보기가 2개 미만이면 입력식으로 둔다.
+ *   toeic-meaning(토익 · 토플): 같은 트랙(catalog)의 다른 단어 뜻 3개 (정답과 뜻이 같은 것은 뺀다). 보기가 2개 미만이면 입력식으로 둔다.
  */
 export const choicesFor = (catalog: Catalog, note: Note, drillId: string, rng: Rng = Math.random): string[] | undefined => {
   if (drillId === 'kana-listen') {

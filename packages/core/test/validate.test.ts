@@ -19,6 +19,17 @@ describe('validateNote', () => {
       [],
     )
   })
+  it('토플: 토익과 같은 필드, 단어 목록 NAWL', () => {
+    const hyp = { id: 'toefl-hypothesis', track: 'toefl', fields: { word: 'hypothesis', pos: 'n', meaning_ko: '가설', list: 'NAWL' } }
+    expect(validateNote(hyp)).toEqual([])
+    expect(validateNote({ ...hyp, fields: { ...hyp.fields, example_en: 'The data support the hypothesis.', example_ko: '자료가 가설을 뒷받침한다.' } })).toEqual([])
+    expect(validateNote({ ...hyp, fields: { ...hyp.fields, list: 'AWL' } })[0]).toMatch(/fields\.list/)
+    expect(validateNote({ ...hyp, fields: { word: 'hypothesis' } })[0]).toMatch(/meaning_ko/)
+    expect(validateNote({ ...hyp, fields: { ...hyp.fields, kanji: '仮' } })[0]).toMatch(/알 수 없는 필드/)
+    expect(validateNote({ ...hyp, id: 'toeic-hypothesis' })[0]).toMatch(/트랙/)
+    // 토익은 NAWL 을 받지 않는다
+    expect(validateNote({ ...hyp, id: 'toeic-hypothesis', track: 'toeic' })[0]).toMatch(/fields\.list/)
+  })
   it('id 형식', () => {
     expect(validateNote({ ...ka, id: 'kana hira ka' })).toHaveLength(1)
     expect(validateNote({ ...ka, id: 'kana-hira:ka' })).toHaveLength(1)
@@ -26,7 +37,7 @@ describe('validateNote', () => {
     expect(validateNote({ ...ka, id: 7 })).toHaveLength(1)
   })
   it('트랙 · 필드', () => {
-    expect(validateNote({ ...ka, track: 'toefl' }).join()).toMatch(/트랙/)
+    expect(validateNote({ ...ka, track: 'ielts' }).join()).toMatch(/트랙/)
     expect(validateNote({ ...ka, fields: { ...ka.fields, script: 'kanji' } })).toHaveLength(1)
     expect(validateNote({ ...ka, fields: { ...ka.fields, romaji: '' } })).toHaveLength(1)
     expect(validateNote({ ...ka, fields: { char: 'か', romaji: 'ka', script: 'hiragana' } })[0]).toMatch(/row/)

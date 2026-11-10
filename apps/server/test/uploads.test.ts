@@ -63,6 +63,24 @@ describe('문제 만들기', () => {
     expect(note.fields.pos).toBeUndefined()
   })
 
+  it('토플: 토익과 같은 칸 · 같은 id 규칙 (toefl-<단어>), 토익의 같은 단어와 따로', async () => {
+    const { user } = setup({ kana: false })
+    const hana = await user('hana')
+    let res = await hana.send('POST', '/notes', { track: 'toefl', fields: TOEIC })
+    expect(res.status).toBe(201)
+    const note = await res.json()
+    expect(note).toMatchObject({ id: 'toefl-know-how', track: 'toefl', status: 'draft' })
+    expect(note.fields).toEqual(TOEIC)
+    expect((await hana.send('POST', '/notes', { track: 'toeic', fields: TOEIC })).status).toBe(201)
+    expect((await hana.send('POST', '/notes', { track: 'toefl', fields: TOEIC })).status).toBe(409)
+    // 토플도 예문에 단어가 있어야 하고, 만들기에서 받지 않는 필드(list)는 오류
+    res = await hana.send('POST', '/notes', { track: 'toefl', fields: { ...TOEIC, word: 'erosion', example_en: 'Wind wears rock.' } })
+    expect(res.status).toBe(400)
+    expect((await res.json()).errors).toContain('fields.example_en: 예문에 단어가 들어 있어야 합니다')
+    res = await hana.send('POST', '/notes', { track: 'toefl', fields: { ...TOEIC, word: 'erosion', example_en: 'Erosion.', list: 'NAWL' } })
+    expect(res.status).toBe(400)
+  })
+
   it('검사 실패는 400 과 문제 목록', async () => {
     const { db, user } = setup({ kana: false })
     const hana = await user('hana')
