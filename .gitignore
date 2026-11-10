@@ -9,3 +9,5 @@ tools/kanji/.cache/
 content-src/kanji/merged.json
 tools/toeic/.cache/
 content-src/toeic/merged.json
+tools/toefl/.cache/
+content-src/toefl/merged.json

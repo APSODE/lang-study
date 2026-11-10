@@ -1,0 +1,1801 @@
+[
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "interacts",
+      "interacted",
+      "interacting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 156,
+    "sfi": 58.098,
+    "u": 65.0,
+    "word": "interact"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "neurals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 157,
+    "sfi": 58.082,
+    "u": 64.0,
+    "word": "neural"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "enzymes"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 160,
+    "sfi": 58.051,
+    "u": 64.0,
+    "word": "enzyme"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "conceptions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 161,
+    "sfi": 58.038,
+    "u": 64.0,
+    "word": "conception"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "exes"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 162,
+    "sfi": 58.029,
+    "u": 64.0,
+    "word": "ex"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "ideologies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 163,
+    "sfi": 58.025,
+    "u": 63.0,
+    "word": "ideology"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "sperms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 164,
+    "sfi": 58.012,
+    "u": 63.0,
+    "word": "sperm"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 165,
+    "sfi": 58.011,
+    "u": 63.0,
+    "word": "quantitative"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "spheres"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 166,
+    "sfi": 57.993,
+    "u": 63.0,
+    "word": "sphere"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "instabilities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 167,
+    "sfi": 57.974,
+    "u": 63.0,
+    "word": "instability"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "mediates",
+      "mediated",
+      "mediating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 168,
+    "sfi": 57.953,
+    "u": 62.0,
+    "word": "mediate"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "computations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 172,
+    "sfi": 57.915,
+    "u": 62.0,
+    "word": "computation"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "orals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 173,
+    "sfi": 57.91,
+    "u": 62.0,
+    "word": "oral"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 174,
+    "sfi": 57.909,
+    "u": 62.0,
+    "word": "mid"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "variants"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 176,
+    "sfi": 57.888,
+    "u": 61.0,
+    "word": "variant"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 177,
+    "sfi": 57.866,
+    "u": 61.0,
+    "word": "evolutionary"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "collectives"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 179,
+    "sfi": 57.824,
+    "u": 61.0,
+    "word": "collective"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 180,
+    "sfi": 57.817,
+    "u": 60.0,
+    "word": "arbitrary"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "fractions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 181,
+    "sfi": 57.805,
+    "u": 60.0,
+    "word": "fraction"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "estimations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 182,
+    "sfi": 57.802,
+    "u": 60.0,
+    "word": "estimation"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "nonlinears"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 183,
+    "sfi": 57.795,
+    "u": 60.0,
+    "word": "nonlinear"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "deviations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 184,
+    "sfi": 57.786,
+    "u": 60.0,
+    "word": "deviation"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "morphologies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 188,
+    "sfi": 57.76,
+    "u": 60.0,
+    "word": "morphology"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 189,
+    "sfi": 57.75,
+    "u": 60.0,
+    "word": "thereby"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 190,
+    "sfi": 57.747,
+    "u": 60.0,
+    "word": "syntax"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "separations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 192,
+    "sfi": 57.743,
+    "u": 59.0,
+    "word": "separation"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "convergences"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 193,
+    "sfi": 57.738,
+    "u": 59.0,
+    "word": "convergence"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 194,
+    "sfi": 57.734,
+    "u": 59.0,
+    "word": "sufficiently"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "interfaces",
+      "interfaced",
+      "interfacing",
+      "interfacings"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 196,
+    "sfi": 57.726,
+    "u": 59.0,
+    "word": "interface"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "radiations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 197,
+    "sfi": 57.725,
+    "u": 59.0,
+    "word": "radiation"
+  },
+  {
+    "band": 4,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "verticals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 198,
+    "sfi": 57.724,
+    "u": 59.0,
+    "word": "vertical"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "acutest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 200,
+    "sfi": 57.723,
+    "u": 59.0,
+    "word": "acute"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "complements",
+      "complemented",
+      "complementing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 202,
+    "sfi": 57.666,
+    "u": 58.0,
+    "word": "complement"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "leafs",
+      "leafed",
+      "leafing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 203,
+    "sfi": 57.651,
+    "u": 58.0,
+    "word": "leaf"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "aggregates",
+      "aggregated",
+      "aggregating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 205,
+    "sfi": 57.643,
+    "u": 58.0,
+    "word": "aggregate"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "equalities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 206,
+    "sfi": 57.621,
+    "u": 58.0,
+    "word": "equality"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 207,
+    "sfi": 57.611,
+    "u": 58.0,
+    "word": "corpus"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "organs"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 208,
+    "sfi": 57.603,
+    "u": 58.0,
+    "word": "organ"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "gradients"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 209,
+    "sfi": 57.599,
+    "u": 58.0,
+    "word": "gradient"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "methodologies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 210,
+    "sfi": 57.595,
+    "u": 57.0,
+    "word": "methodology"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "entities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 211,
+    "sfi": 57.57,
+    "u": 57.0,
+    "word": "entity"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "tumors",
+      "tumour",
+      "tumours"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 212,
+    "sfi": 57.567,
+    "u": 57.0,
+    "word": "tumor"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "fibers",
+      "fibres",
+      "fibre"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 213,
+    "sfi": 57.559,
+    "u": 57.0,
+    "word": "fiber"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "paradigms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 214,
+    "sfi": 57.547,
+    "u": 57.0,
+    "word": "paradigm"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "psychologies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 215,
+    "sfi": 57.534,
+    "u": 57.0,
+    "word": "psychology"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 216,
+    "sfi": 57.52,
+    "u": 56.0,
+    "word": "infinite"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 217,
+    "sfi": 57.487,
+    "u": 56.0,
+    "word": "diverse"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "continuities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 219,
+    "sfi": 57.449,
+    "u": 56.0,
+    "word": "continuity"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "variabilities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 220,
+    "sfi": 57.431,
+    "u": 55.0,
+    "word": "variability"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "outers"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 221,
+    "sfi": 57.423,
+    "u": 55.0,
+    "word": "outer"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "notations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 222,
+    "sfi": 57.412,
+    "u": 55.0,
+    "word": "notation"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "probes",
+      "probed",
+      "probing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 223,
+    "sfi": 57.391,
+    "u": 55.0,
+    "word": "probe"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "migrations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 224,
+    "sfi": 57.39,
+    "u": 55.0,
+    "word": "migration"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "mathematicals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 225,
+    "sfi": 57.388,
+    "u": 55.0,
+    "word": "mathematical"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "likelihoods"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 226,
+    "sfi": 57.367,
+    "u": 55.0,
+    "word": "likelihood"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "comparables"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 227,
+    "sfi": 57.333,
+    "u": 54.0,
+    "word": "comparable"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "magnitudes"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 228,
+    "sfi": 57.307,
+    "u": 54.0,
+    "word": "magnitude"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "arrays",
+      "arrayed",
+      "arraying"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 229,
+    "sfi": 57.299,
+    "u": 54.0,
+    "word": "array"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "inclusions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 230,
+    "sfi": 57.292,
+    "u": 54.0,
+    "word": "inclusion"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "emissions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 231,
+    "sfi": 57.265,
+    "u": 53.0,
+    "word": "emission"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 233,
+    "sfi": 57.257,
+    "u": 53.0,
+    "word": "non"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "consciousnesses"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 234,
+    "sfi": 57.241,
+    "u": 53.0,
+    "word": "consciousness"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 235,
+    "sfi": 57.234,
+    "u": 53.0,
+    "word": "simultaneously"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "disturbances"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 236,
+    "sfi": 57.225,
+    "u": 53.0,
+    "word": "disturbance"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "hierarchies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 237,
+    "sfi": 57.217,
+    "u": 53.0,
+    "word": "hierarchy"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "rotations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 238,
+    "sfi": 57.191,
+    "u": 52.0,
+    "word": "rotation"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "validities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 239,
+    "sfi": 57.181,
+    "u": 52.0,
+    "word": "validity"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "periodics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 240,
+    "sfi": 57.181,
+    "u": 52.0,
+    "word": "periodic"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "archaeologies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 241,
+    "sfi": 57.178,
+    "u": 52.0,
+    "word": "archaeology"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "atoms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 242,
+    "sfi": 57.173,
+    "u": 52.0,
+    "word": "atom"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "partitions",
+      "partitioned",
+      "partitioning"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 244,
+    "sfi": 57.154,
+    "u": 52.0,
+    "word": "partition"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "initiates",
+      "initiated",
+      "initiating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 245,
+    "sfi": 57.151,
+    "u": 52.0,
+    "word": "initiate"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "autonomies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 246,
+    "sfi": 57.139,
+    "u": 52.0,
+    "word": "autonomy"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "inhibits",
+      "inhibited",
+      "inhibiting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 247,
+    "sfi": 57.126,
+    "u": 52.0,
+    "word": "inhibit"
+  },
+  {
+    "band": 5,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "consonants"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 248,
+    "sfi": 57.118,
+    "u": 51.0,
+    "word": "consonant"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "scenarios"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 250,
+    "sfi": 57.103,
+    "u": 51.0,
+    "word": "scenario"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "conditionals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 251,
+    "sfi": 57.096,
+    "u": 51.0,
+    "word": "conditional"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 253,
+    "sfi": 57.08,
+    "u": 51.0,
+    "word": "discrete"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "classrooms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 254,
+    "sfi": 57.072,
+    "u": 51.0,
+    "word": "classroom"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "morphologicals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 255,
+    "sfi": 57.069,
+    "u": 51.0,
+    "word": "morphological"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "laterals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 256,
+    "sfi": 57.063,
+    "u": 51.0,
+    "word": "lateral"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "injections"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 257,
+    "sfi": 57.053,
+    "u": 51.0,
+    "word": "injection"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "insects"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 259,
+    "sfi": 57.042,
+    "u": 51.0,
+    "word": "insect"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 261,
+    "sfi": 57.014,
+    "u": 50.0,
+    "word": "calculus"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "longitudinals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 263,
+    "sfi": 56.996,
+    "u": 50.0,
+    "word": "longitudinal"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "neutrals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 264,
+    "sfi": 56.985,
+    "u": 50.0,
+    "word": "neutral"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "marginals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 265,
+    "sfi": 56.96,
+    "u": 50.0,
+    "word": "marginal"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "characterizations",
+      "characterisation",
+      "characterisations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 267,
+    "sfi": 56.957,
+    "u": 50.0,
+    "word": "characterization"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "ethicals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 268,
+    "sfi": 56.936,
+    "u": 49.0,
+    "word": "ethical"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "composers"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 271,
+    "sfi": 56.92,
+    "u": 49.0,
+    "word": "composer"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "singulars"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 272,
+    "sfi": 56.917,
+    "u": 49.0,
+    "word": "singular"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "converges",
+      "converged",
+      "converging"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 273,
+    "sfi": 56.913,
+    "u": 49.0,
+    "word": "converge"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "foetal"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 274,
+    "sfi": 56.908,
+    "u": 49.0,
+    "word": "fetal"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 276,
+    "sfi": 56.895,
+    "u": 49.0,
+    "word": "implicit"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "spans",
+      "spanned",
+      "spanning"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 277,
+    "sfi": 56.893,
+    "u": 49.0,
+    "word": "span"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "oxygens"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 278,
+    "sfi": 56.89,
+    "u": 49.0,
+    "word": "oxygen"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "formulations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 279,
+    "sfi": 56.885,
+    "u": 49.0,
+    "word": "formulation"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "dialects"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 280,
+    "sfi": 56.884,
+    "u": 49.0,
+    "word": "dialect"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "colonies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 281,
+    "sfi": 56.871,
+    "u": 49.0,
+    "word": "colony"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 282,
+    "sfi": 56.868,
+    "u": 49.0,
+    "word": "immune"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "loops",
+      "looped",
+      "looping"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 283,
+    "sfi": 56.846,
+    "u": 48.0,
+    "word": "loop"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "algebras"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 284,
+    "sfi": 56.842,
+    "u": 48.0,
+    "word": "algebra"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "derivatives"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 285,
+    "sfi": 56.84,
+    "u": 48.0,
+    "word": "derivative"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "diffusions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 288,
+    "sfi": 56.827,
+    "u": 48.0,
+    "word": "diffusion"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "specimens"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 289,
+    "sfi": 56.813,
+    "u": 48.0,
+    "word": "specimen"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "asserts",
+      "asserted",
+      "asserting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 290,
+    "sfi": 56.805,
+    "u": 48.0,
+    "word": "assert"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "widespreads"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 291,
+    "sfi": 56.802,
+    "u": 48.0,
+    "word": "widespread"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "competences"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 292,
+    "sfi": 56.8,
+    "u": 48.0,
+    "word": "competence"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "residuals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 293,
+    "sfi": 56.798,
+    "u": 48.0,
+    "word": "residual"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "fusions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 294,
+    "sfi": 56.797,
+    "u": 48.0,
+    "word": "fusion"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "conservations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 295,
+    "sfi": 56.79,
+    "u": 48.0,
+    "word": "conservation"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "constrains",
+      "constrained",
+      "constraining"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 296,
+    "sfi": 56.789,
+    "u": 48.0,
+    "word": "constrain"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "virtues"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 297,
+    "sfi": 56.788,
+    "u": 48.0,
+    "word": "virtue"
+  },
+  {
+    "band": 6,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "differentiates",
+      "differentiated",
+      "differentiating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 298,
+    "sfi": 56.788,
+    "u": 48.0,
+    "word": "differentiate"
+  },
+  {
+    "band": 7,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 299,
+    "sfi": 56.785,
+    "u": 48.0,
+    "word": "amino"
+  },
+  {
+    "band": 7,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "philosophicals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 302,
+    "sfi": 56.777,
+    "u": 48.0,
+    "word": "philosophical"
+  },
+  {
+    "band": 7,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 303,
+    "sfi": 56.759,
+    "u": 47.0,
+    "word": "pre"
+  },
+  {
+    "band": 7,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 306,
+    "sfi": 56.734,
+    "u": 47.0,
+    "word": "indigenous"
+  },
+  {
+    "band": 7,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "renders",
+      "rendered",
+      "rendering",
+      "renderings"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 307,
+    "sfi": 56.724,
+    "u": 47.0,
+    "word": "render"
+  },
+  {
+    "band": 7,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 308,
+    "sfi": 56.717,
+    "u": 47.0,
+    "word": "independently"
+  },
+  {
+    "band": 7,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "symbolics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 309,
+    "sfi": 56.714,
+    "u": 47.0,
+    "word": "symbolic"
+  }
+]

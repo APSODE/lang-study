@@ -1,0 +1,1849 @@
+[
+  {
+    "band": 13,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "anthropologies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 638,
+    "sfi": 53.282,
+    "u": 21.0,
+    "word": "anthropology"
+  },
+  {
+    "band": 13,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "antibiotics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 639,
+    "sfi": 53.276,
+    "u": 21.0,
+    "word": "antibiotic"
+  },
+  {
+    "band": 13,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "portrays",
+      "portrayed",
+      "portraying"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 640,
+    "sfi": 53.275,
+    "u": 21.0,
+    "word": "portray"
+  },
+  {
+    "band": 13,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "sexualities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 641,
+    "sfi": 53.225,
+    "u": 21.0,
+    "word": "sexuality"
+  },
+  {
+    "band": 13,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "axioms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 643,
+    "sfi": 53.221,
+    "u": 21.0,
+    "word": "axiom"
+  },
+  {
+    "band": 13,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "pests"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 644,
+    "sfi": 53.215,
+    "u": 21.0,
+    "word": "pest"
+  },
+  {
+    "band": 13,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "fractures",
+      "fractured",
+      "fracturing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 645,
+    "sfi": 53.209,
+    "u": 21.0,
+    "word": "fracture"
+  },
+  {
+    "band": 13,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "transplants",
+      "transplanted",
+      "transplanting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 646,
+    "sfi": 53.206,
+    "u": 21.0,
+    "word": "transplant"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "epidemics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 649,
+    "sfi": 53.131,
+    "u": 21.0,
+    "word": "epidemic"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "inversions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 650,
+    "sfi": 53.107,
+    "u": 20.0,
+    "word": "inversion"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "epidemiologies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 653,
+    "sfi": 53.092,
+    "u": 20.0,
+    "word": "epidemiology"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "dissolves",
+      "dissolved",
+      "dissolving"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 654,
+    "sfi": 53.089,
+    "u": 20.0,
+    "word": "dissolve"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 656,
+    "sfi": 53.026,
+    "u": 20.0,
+    "word": "nonetheless"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 658,
+    "sfi": 52.98,
+    "u": 20.0,
+    "word": "infectious"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "psychologists"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 660,
+    "sfi": 52.95,
+    "u": 20.0,
+    "word": "psychologist"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 661,
+    "sfi": 52.946,
+    "u": 20.0,
+    "word": "trans"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "irrigations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 662,
+    "sfi": 52.903,
+    "u": 20.0,
+    "word": "irrigation"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "diaries"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 663,
+    "sfi": 52.865,
+    "u": 19.0,
+    "word": "diary"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "treaties"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 664,
+    "sfi": 52.86,
+    "u": 19.0,
+    "word": "treaty"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "rehabilitations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 665,
+    "sfi": 52.856,
+    "u": 19.0,
+    "word": "rehabilitation"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "illusions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 666,
+    "sfi": 52.847,
+    "u": 19.0,
+    "word": "illusion"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "bats",
+      "batted",
+      "batting",
+      "battings"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 667,
+    "sfi": 52.83,
+    "u": 19.0,
+    "word": "bat"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 668,
+    "sfi": 52.828,
+    "u": 19.0,
+    "word": "optimum"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "fevers",
+      "fevered"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 669,
+    "sfi": 52.821,
+    "u": 19.0,
+    "word": "fever"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "paradoxes"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 670,
+    "sfi": 52.818,
+    "u": 19.0,
+    "word": "paradox"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "kidneys"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 671,
+    "sfi": 52.784,
+    "u": 19.0,
+    "word": "kidney"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "predators"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 672,
+    "sfi": 52.749,
+    "u": 19.0,
+    "word": "predator"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "migrates",
+      "migrated",
+      "migrating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 673,
+    "sfi": 52.697,
+    "u": 19.0,
+    "word": "migrate"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "infinities",
+      "infinitys"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 674,
+    "sfi": 52.696,
+    "u": 19.0,
+    "word": "infinity"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "shallows",
+      "shallowed",
+      "shallowing",
+      "shallower",
+      "shallowest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 675,
+    "sfi": 52.691,
+    "u": 19.0,
+    "word": "shallow"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 676,
+    "sfi": 52.651,
+    "u": 18.0,
+    "word": "fundamentally"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "synthetics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 677,
+    "sfi": 52.608,
+    "u": 18.0,
+    "word": "synthetic"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 678,
+    "sfi": 52.6,
+    "u": 18.0,
+    "word": "hepatitis"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "bubbles",
+      "bubbled",
+      "bubbling"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 680,
+    "sfi": 52.573,
+    "u": 18.0,
+    "word": "bubble"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "brackets",
+      "bracketed",
+      "bracketted"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 681,
+    "sfi": 52.56,
+    "u": 18.0,
+    "word": "bracket"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "elasticities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 682,
+    "sfi": 52.537,
+    "u": 18.0,
+    "word": "elasticity"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "cures",
+      "cured",
+      "curing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 683,
+    "sfi": 52.528,
+    "u": 18.0,
+    "word": "cure"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 684,
+    "sfi": 52.518,
+    "u": 18.0,
+    "word": "contradictory"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "sensations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 685,
+    "sfi": 52.51,
+    "u": 18.0,
+    "word": "sensation"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "sustainables"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 686,
+    "sfi": 52.488,
+    "u": 18.0,
+    "word": "sustainable"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "elastics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 687,
+    "sfi": 52.487,
+    "u": 18.0,
+    "word": "elastic"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "dictates",
+      "dictated",
+      "dictating"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 689,
+    "sfi": 52.435,
+    "u": 18.0,
+    "word": "dictate"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "inclines",
+      "inclined",
+      "inclining"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 691,
+    "sfi": 52.424,
+    "u": 17.0,
+    "word": "incline"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "enforcements"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 693,
+    "sfi": 52.394,
+    "u": 17.0,
+    "word": "enforcement"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "preys",
+      "preyed",
+      "preying"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 694,
+    "sfi": 52.389,
+    "u": 17.0,
+    "word": "prey"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "cyclics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 695,
+    "sfi": 52.389,
+    "u": 17.0,
+    "word": "cyclic"
+  },
+  {
+    "band": 14,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "frictions"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 697,
+    "sfi": 52.36,
+    "u": 17.0,
+    "word": "friction"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "parentheses"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 698,
+    "sfi": 52.347,
+    "u": 17.0,
+    "word": "parenthesis"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "nobles",
+      "nobler",
+      "noblest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 699,
+    "sfi": 52.34,
+    "u": 17.0,
+    "word": "noble"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 700,
+    "sfi": 52.332,
+    "u": 17.0,
+    "word": "potassium"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 701,
+    "sfi": 52.33,
+    "u": 17.0,
+    "word": "reactive"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 702,
+    "sfi": 52.314,
+    "u": 17.0,
+    "word": "genetically"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "wisdoms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 704,
+    "sfi": 52.306,
+    "u": 17.0,
+    "word": "wisdom"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "cruder",
+      "crudest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 705,
+    "sfi": 52.289,
+    "u": 17.0,
+    "word": "crude"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "realisms"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 706,
+    "sfi": 52.282,
+    "u": 17.0,
+    "word": "realism"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 707,
+    "sfi": 52.25,
+    "u": 17.0,
+    "word": "deliberately"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "chemotherapies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 708,
+    "sfi": 52.248,
+    "u": 17.0,
+    "word": "chemotherapy"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "surpluses"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 709,
+    "sfi": 52.24,
+    "u": 17.0,
+    "word": "surplus"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "capillaries"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 710,
+    "sfi": 52.236,
+    "u": 17.0,
+    "word": "capillary"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "directives"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 711,
+    "sfi": 52.227,
+    "u": 17.0,
+    "word": "directive"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "globalizations",
+      "globalisation",
+      "globalisations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 712,
+    "sfi": 52.189,
+    "u": 17.0,
+    "word": "globalization"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "aliens"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 713,
+    "sfi": 52.156,
+    "u": 16.0,
+    "word": "alien"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "monopolies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 715,
+    "sfi": 52.128,
+    "u": 16.0,
+    "word": "monopoly"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "inverts",
+      "inverted",
+      "inverting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 717,
+    "sfi": 52.083,
+    "u": 16.0,
+    "word": "invert"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "threads",
+      "threaded",
+      "threading"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 718,
+    "sfi": 52.077,
+    "u": 16.0,
+    "word": "thread"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "clays"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 719,
+    "sfi": 52.029,
+    "u": 16.0,
+    "word": "clay"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "dyes",
+      "dyed",
+      "dyeing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 720,
+    "sfi": 52.027,
+    "u": 16.0,
+    "word": "dye"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "transcribes",
+      "transcribed",
+      "transcribing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 721,
+    "sfi": 52.012,
+    "u": 16.0,
+    "word": "transcribe"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "dilutes",
+      "diluted",
+      "diluting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 722,
+    "sfi": 52.011,
+    "u": 16.0,
+    "word": "dilute"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "tribes"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 723,
+    "sfi": 51.989,
+    "u": 16.0,
+    "word": "tribe"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "damps",
+      "damped",
+      "damping",
+      "dampest"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 724,
+    "sfi": 51.978,
+    "u": 16.0,
+    "word": "damp"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 726,
+    "sfi": 51.896,
+    "u": 15.0,
+    "word": "critically"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "secretes",
+      "secreted",
+      "secreting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 727,
+    "sfi": 51.868,
+    "u": 15.0,
+    "word": "secrete"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "hips",
+      "hipped"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 728,
+    "sfi": 51.859,
+    "u": 15.0,
+    "word": "hip"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "plantations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 729,
+    "sfi": 51.848,
+    "u": 15.0,
+    "word": "plantation"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "prejudices",
+      "prejudiced",
+      "prejudicing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 730,
+    "sfi": 51.8,
+    "u": 15.0,
+    "word": "prejudice"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 731,
+    "sfi": 51.795,
+    "u": 15.0,
+    "word": "onwards"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "antis"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 732,
+    "sfi": 51.771,
+    "u": 15.0,
+    "word": "anti"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "helixes",
+      "helices"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 733,
+    "sfi": 51.735,
+    "u": 15.0,
+    "word": "helix"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "dominations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 735,
+    "sfi": 51.657,
+    "u": 15.0,
+    "word": "domination"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "undergraduates"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 736,
+    "sfi": 51.633,
+    "u": 15.0,
+    "word": "undergraduate"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "solubles"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 737,
+    "sfi": 51.627,
+    "u": 15.0,
+    "word": "soluble"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 738,
+    "sfi": 51.607,
+    "u": 14.0,
+    "word": "innate"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "dioxides"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 739,
+    "sfi": 51.598,
+    "u": 14.0,
+    "word": "dioxide"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "goats"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 740,
+    "sfi": 51.538,
+    "u": 14.0,
+    "word": "goat"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "emits",
+      "emitted",
+      "emitting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 741,
+    "sfi": 51.536,
+    "u": 14.0,
+    "word": "emit"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "confounds",
+      "confounded",
+      "confounding"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 742,
+    "sfi": 51.531,
+    "u": 14.0,
+    "word": "confound"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 743,
+    "sfi": 51.528,
+    "u": 14.0,
+    "word": "competent"
+  },
+  {
+    "band": 15,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "degrades",
+      "degraded",
+      "degrading"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 744,
+    "sfi": 51.515,
+    "u": 14.0,
+    "word": "degrade"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "fungi"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 748,
+    "sfi": 51.493,
+    "u": 14.0,
+    "word": "fungus"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "reservoirs"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 749,
+    "sfi": 51.49,
+    "u": 14.0,
+    "word": "reservoir"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "footnotes",
+      "footnoted",
+      "footnoting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 750,
+    "sfi": 51.484,
+    "u": 14.0,
+    "word": "footnote"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 751,
+    "sfi": 51.446,
+    "u": 14.0,
+    "word": "bodily"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "niché",
+      "niches",
+      "nichés"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 752,
+    "sfi": 51.415,
+    "u": 14.0,
+    "word": "niche"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 753,
+    "sfi": 51.407,
+    "u": 14.0,
+    "word": "vague"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "affirms",
+      "affirmed",
+      "affirming"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 754,
+    "sfi": 51.347,
+    "u": 14.0,
+    "word": "affirm"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 755,
+    "sfi": 51.297,
+    "u": 13.0,
+    "word": "urine"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "antiquities"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 758,
+    "sfi": 51.252,
+    "u": 13.0,
+    "word": "antiquity"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "toxics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 760,
+    "sfi": 51.236,
+    "u": 13.0,
+    "word": "toxic"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "yeasts"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 761,
+    "sfi": 51.228,
+    "u": 13.0,
+    "word": "yeast"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "punishes",
+      "punished",
+      "punishing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 762,
+    "sfi": 51.174,
+    "u": 13.0,
+    "word": "punish"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "bleeds",
+      "bled",
+      "bleeding",
+      "bleedin"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 764,
+    "sfi": 51.17,
+    "u": 13.0,
+    "word": "bleed"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "republics"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 766,
+    "sfi": 51.139,
+    "u": 13.0,
+    "word": "republic"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "processors"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 767,
+    "sfi": 51.123,
+    "u": 13.0,
+    "word": "processor"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 768,
+    "sfi": 51.122,
+    "u": 13.0,
+    "word": "goodness"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "legends"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 771,
+    "sfi": 51.016,
+    "u": 13.0,
+    "word": "legend"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "drains",
+      "drained",
+      "draining"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 773,
+    "sfi": 50.892,
+    "u": 12.0,
+    "word": "drain"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "abdominals"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 774,
+    "sfi": 50.888,
+    "u": 12.0,
+    "word": "abdominal"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "precipitations"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 778,
+    "sfi": 50.865,
+    "u": 12.0,
+    "word": "precipitation"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "invades",
+      "invaded",
+      "invading"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 779,
+    "sfi": 50.843,
+    "u": 12.0,
+    "word": "invade"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "interviewers"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 780,
+    "sfi": 50.812,
+    "u": 12.0,
+    "word": "interviewer"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 783,
+    "sfi": 50.778,
+    "u": 12.0,
+    "word": "supposedly"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "guts",
+      "gutted",
+      "gutting"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 784,
+    "sfi": 50.773,
+    "u": 12.0,
+    "word": "gut"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "swells",
+      "swelled",
+      "swelling",
+      "swollen"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 785,
+    "sfi": 50.746,
+    "u": 12.0,
+    "word": "swell"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "emperors"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 786,
+    "sfi": 50.699,
+    "u": 12.0,
+    "word": "emperor"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "altitudes"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 787,
+    "sfi": 50.681,
+    "u": 12.0,
+    "word": "altitude"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "gauges",
+      "gauged",
+      "gauging",
+      "gage",
+      "gages",
+      "gaged",
+      "gaging"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 788,
+    "sfi": 50.665,
+    "u": 12.0,
+    "word": "gauge"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "transparencies"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 789,
+    "sfi": 50.636,
+    "u": 12.0,
+    "word": "transparency"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "subs",
+      "subbed",
+      "subbing"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 790,
+    "sfi": 50.634,
+    "u": 12.0,
+    "word": "sub"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "blanks",
+      "blanked",
+      "blanking",
+      "blanker"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 791,
+    "sfi": 50.569,
+    "u": 11.0,
+    "word": "blank"
+  },
+  {
+    "band": 16,
+    "example_en": "",
+    "example_ko": "",
+    "forms": [
+      "chlorides"
+    ],
+    "list": "NAWL",
+    "meaning_ko": "",
+    "pos": "",
+    "rank": 792,
+    "sfi": 50.526,
+    "u": 11.0,
+    "word": "chloride"
+  }
+]
