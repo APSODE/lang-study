@@ -1,5 +1,5 @@
 // 토익 연습 방식 화면 (콘텐츠가 들어오면 바로 쓸 수 있게 단순하게)
-import type { ToeicFields } from '@nakamura/core'
+import { spellMask, type ToeicFields } from '@nakamura/core'
 import { speak } from '../speech.ts'
 import { ChoiceAnswer, TextAnswer } from './inputs.tsx'
 import type { DrillProps } from './types.ts'
@@ -49,6 +49,24 @@ export function ToeicCloze({ item, result, onSubmit }: DrillProps) {
       </p>
       {f.example_ko && <p className="prompt-hint muted">{f.example_ko}</p>}
       <TextAnswer answered={result !== null} onSubmit={onSubmit} placeholder="단어 (영어)" lang="en" />
+    </>
+  )
+}
+
+/** 철자 채우기: 뜻과 일부를 가린 단어(core spellMask)를 보고 단어 전체를 쓴다. */
+export function WordSpell({ item, result, onSubmit }: DrillProps) {
+  const f = item.fields as ToeicFields
+  return (
+    <>
+      <p className="prompt-label muted">빈칸을 채워 단어를 완성하세요</p>
+      <p className="prompt-hint" lang="ko">
+        {f.meaning_ko}
+        {f.pos && <span className="muted small"> {f.pos}</span>}
+      </p>
+      <p className="prompt-spell" lang="en">
+        {spellMask(f.word)}
+      </p>
+      <TextAnswer answered={result !== null} onSubmit={onSubmit} placeholder="단어 전체 (영어)" lang="en" />
     </>
   )
 }

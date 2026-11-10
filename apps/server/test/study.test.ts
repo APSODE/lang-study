@@ -61,6 +61,7 @@ const right = (db: DatabaseSync, cardId: string): string => {
   const f = JSON.parse((db.prepare('SELECT fields FROM notes WHERE id = ?').get(noteId) as { fields: string }).fields)
   if (drillId === 'kana-to-romaji') return (f as KanaFields).romaji
   if (drillId === 'toeic-meaning') return f.meaning_ko
+  if (drillId === 'toeic-cloze' || drillId === 'word-spell') return f.word
   return (f as KanaFields).char
 }
 
@@ -231,7 +232,7 @@ describe('큐', () => {
     expect(m.choices).toHaveLength(4)
     expect([...m.choices!].sort()).toEqual(['가설', '논문', '침식', '효소'].sort())
     // 예문이 있으면 빈칸 카드도 생긴다 (새 노트는 첫 연습 방식부터 소개하므로 카탈로그로 확인)
-    expect(publishedCatalog(db, 'toefl').byId.get('toefl-hypothesis')!.drills.map(d => d.id)).toEqual(['toeic-meaning', 'toeic-cloze'])
+    expect(publishedCatalog(db, 'toefl').byId.get('toefl-hypothesis')!.drills.map(d => d.id)).toEqual(['toeic-meaning', 'toeic-cloze', 'word-spell'])
     // 토익 큐에는 토플 단어가 없다
     expect((await u.queue('toeic')).every(i => i.noteId.startsWith('toeic-'))).toBe(true)
 
@@ -241,6 +242,53 @@ describe('큐', () => {
     const s = await u.get('/study/summary')
     expect(s.tracks.find((t: { track: string }) => t.track === 'toefl')).toMatchObject({ notes: 4, learned: 1 })
     expect(s.tracks.find((t: { track: string }) => t.track === 'toeic')).toMatchObject({ notes: 3, learned: 0 })
+  })
+})
+
+describe('철자 채우기 (word-spell)', () => {
+  const word = (track: 'toeic' | 'toefl', w: string, meaning_ko: string, example_en?: string): Note => ({
+    id: `${track}-${w}`,
+    track,
+    fields: { word: w, meaning_ko, ...(track === 'toefl' ? { list: 'NAWL' } : {}), ...(example_en ? { example_en } : {}) },
+  })
+
+  it('토익 · 토플 단어 모두에 붙고, 뜻 카드를 본 다음 날 뜻 · 빈칸 뒤에 후속 카드로 나온다', async () => {
+    const { db, clock, login } = setup({
+      kana: false,
+      extra: [
+        word('toeic', 'invoice', '송장', 'Please send the invoice.'),
+        word('toeic', 'refund', '환불'),
+        word('toefl', 'erosion', '침식'),
+      ],
+    })
+    expect(publishedCatalog(db, 'toeic').byId.get('toeic-refund')!.drills.map(d => d.id)).toEqual(['toeic-meaning', 'word-spell'])
+    expect(publishedCatalog(db, 'toefl').byId.get('toefl-erosion')!.drills.map(d => d.id)).toEqual(['toeic-meaning', 'word-spell'])
+    const u = await login()
+
+    // 첫날: 새 노트는 뜻 카드로만 소개
+    const day1 = await u.queue('toeic')
+    expect(day1.map(i => i.cardId).sort()).toEqual(['toeic-invoice:toeic-meaning', 'toeic-refund:toeic-meaning'])
+    for (const i of day1) expect((await u.answer(i.cardId, right(db, i.cardId))).status).toBe(200)
+    db.prepare('UPDATE user_cards SET due = ?').run(T0 + 30 * 24 * HOUR)
+    clock.now = kst('2026-11-10T09:00:00')
+
+    // 다음 날: 후속 카드는 연습 방식 순서(빈칸 → 철자)
+    const day2 = (await u.queue('toeic')).map(i => i.cardId)
+    expect(day2).toEqual(['toeic-invoice:toeic-cloze', 'toeic-refund:word-spell', 'toeic-invoice:word-spell'])
+
+    let res = await u.answer('toeic-refund:word-spell', 'Refund ')
+    expect(await res.json()).toMatchObject({ correct: true, expected: 'refund' })
+    res = await u.answer('toeic-invoice:word-spell', 'invoic')
+    expect(await res.json()).toMatchObject({ correct: false, expected: 'invoice', rating: 1 })
+
+    // 토플도 같은 방식
+    for (const i of await u.queue('toefl')) await u.answer(i.cardId, right(db, i.cardId))
+    db.prepare("UPDATE user_cards SET due = ? WHERE track = 'toefl'").run(T0 + 60 * 24 * HOUR)
+    clock.now = kst('2026-11-11T09:00:00')
+    const toefl = await u.queue('toefl')
+    expect(toefl.map(i => i.cardId)).toEqual(['toefl-erosion:word-spell'])
+    res = await u.answer('toefl-erosion:word-spell', 'erosion')
+    expect((await res.json()).correct).toBe(true)
   })
 })
 

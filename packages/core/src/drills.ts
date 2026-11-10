@@ -160,6 +160,9 @@ registerDrill({
   },
 })
 
+/** 영어 단어 비교용: 대소문자 · 악센트(résumé ↔ resume) · 앞뒤 공백 차이는 무시한다 */
+const plainWord = (x: string): string => x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase()
+
 // 영어 단어(토익 · 토플): 예문 빈칸
 registerDrill({
   id: 'toeic-cloze',
@@ -167,9 +170,39 @@ registerDrill({
   requires: ['word', 'example_en'],
   check(note, response) {
     const { word } = f<{ word: string }>(note)
-    // 대소문자 · 악센트(résumé ↔ resume) 차이는 무시한다
-    const plain = (x: string) => x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase()
-    return { correct: plain(response) === plain(word), expected: word }
+    return { correct: plainWord(response) === plainWord(word), expected: word }
+  },
+})
+
+/**
+ * 철자 채우기 힌트: 공백 · 하이픈으로 나눈 부분마다 앞 글자 ceil(n/2) 개만 보이고 나머지는 `_` 로 가린다.
+ * 2글자 이하인 부분은 첫 글자만 보인다. 아포스트로피 · 마침표 · 하이픈 · 공백은 그대로 둔다(글자 수에 넣지 않는다).
+ * 예: accurate → accu____, know-how → kn__-ho_, it's → it'_, on → o_
+ */
+export const spellMask = (word: string): string =>
+  word
+    .normalize('NFC')
+    .split(/([\s-]+)/)
+    .map((part, i) => {
+      if (i % 2 === 1) return part // 구분자
+      const chars = Array.from(part)
+      const isMark = (c: string) => c === "'" || c === '\u2019' || c === '.'
+      const n = chars.filter(c => !isMark(c)).length
+      const keep = n <= 2 ? 1 : Math.ceil(n / 2)
+      let seen = 0
+      return chars.map(c => (isMark(c) ? c : seen++ < keep ? c : '_')).join('')
+    })
+    .join('')
+
+// 영어 단어(토익 · 토플): 철자 채우기 (토플 2026 Complete the Words 식). 뜻과 가린 단어(spellMask)를 보고 단어 전체를 쓴다.
+// 등록 순서가 뜻 · 빈칸 뒤라서, 같은 단어의 철자 카드는 뜻 카드 다음 날부터 후속 카드로 나온다 (서버 newCandidates).
+registerDrill({
+  id: 'word-spell',
+  tracks: WORD_TRACKS,
+  requires: ['word', 'meaning_ko'],
+  check(note, response) {
+    const { word } = f<{ word: string }>(note)
+    return { correct: plainWord(response) === plainWord(word), expected: word }
   },
 })
 

@@ -9,6 +9,7 @@ import {
   getDrill,
   isStudyKey,
   isTrack,
+  spellMask,
   studyKeyOf,
   writeTracks,
   type Note,
@@ -29,7 +30,7 @@ describe('drillsFor', () => {
   it('트랙과 필요한 필드로 카드를 만든다', () => {
     expect(drillsFor(ka).map(d => d.id)).toEqual(['kana-to-romaji', 'romaji-to-kana', 'kana-listen'])
     // example_en 이 없으면 빈칸 문제는 생기지 않는다
-    expect(drillsFor(bare).map(d => d.id)).toEqual(['toeic-meaning'])
+    expect(drillsFor(bare).map(d => d.id)).toEqual(['toeic-meaning', 'word-spell'])
   })
   it('토플은 토익 연습 방식(뜻 · 빈칸)을 같은 id 로 쓴다', () => {
     const hyp: Note = {
@@ -37,7 +38,7 @@ describe('drillsFor', () => {
       track: 'toefl',
       fields: { word: 'hypothesis', meaning_ko: '가설', example_en: 'The data support the hypothesis.', list: 'NAWL' },
     }
-    expect(drillsFor(hyp).map(d => d.id)).toEqual(['toeic-meaning', 'toeic-cloze'])
+    expect(drillsFor(hyp).map(d => d.id)).toEqual(['toeic-meaning', 'toeic-cloze', 'word-spell'])
     expect(check('toeic-meaning', hyp, '가설')).toBe(true)
     expect(check('toeic-cloze', hyp, 'Hypothesis')).toBe(true)
     expect(isTrack('toefl')).toBe(true)
@@ -73,6 +74,36 @@ describe('채점', () => {
     expect(check('toeic-cloze', cv, 'Resume')).toBe(true)
     expect(check('toeic-cloze', cv, 'résumé')).toBe(true)
     expect(check('toeic-cloze', cv, 'resumes')).toBe(false)
+  })
+})
+
+describe('철자 채우기 (word-spell)', () => {
+  it('정답은 단어 전체 (대소문자 · 악센트 · 앞뒤 공백 무시)', () => {
+    expect(check('word-spell', bare, 'invoice')).toBe(true)
+    expect(check('word-spell', bare, ' Invoice ')).toBe(true)
+    expect(check('word-spell', bare, 'invoices')).toBe(false)
+    expect(check('word-spell', bare, 'invo')).toBe(false)
+    expect(check('word-spell', bare, '')).toBe(false)
+    const cv: Note = { id: 'toeic-résumé', track: 'toeic', fields: { word: 'résumé', meaning_ko: '이력서' } }
+    expect(check('word-spell', cv, 'resume')).toBe(true)
+    expect(getDrill('word-spell')!.check(cv, 'x').expected).toBe('résumé')
+    expect(getDrill('word-spell')!.selfGraded).toBeUndefined()
+    expect(drillMode(getDrill('word-spell')!)).toBe('normal')
+  })
+  it('spellMask: 부분마다 앞 절반(올림)만 보인다', () => {
+    expect(spellMask('accurate')).toBe('accu____')
+    expect(spellMask('invoice')).toBe('invo___')
+    expect(spellMask('fee')).toBe('fe_')
+    expect(spellMask('on')).toBe('o_')
+    expect(spellMask('a')).toBe('a')
+    expect(spellMask('know-how')).toBe('kn__-ho_')
+    expect(spellMask('take over')).toBe('ta__ ov__')
+    expect(spellMask("driver's license")).toBe("driv__'_ lice___")
+    expect(spellMask('e.g.')).toBe('e._.')
+    expect(spellMask('résumé')).toBe('rés___')
+    // 같은 입력이면 늘 같은 결과
+    expect(spellMask('hypothesis')).toBe(spellMask('hypothesis'))
+    expect(spellMask('hypothesis')).toBe('hypot_____')
   })
 })
 
