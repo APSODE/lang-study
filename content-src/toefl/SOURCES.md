@@ -71,3 +71,4 @@ obtain(2), distribution(3), aspect(5), dynamic(6), impact(7), publish(9), author
 ## 접두사 조각 제외 (2026-11-10)
 
 par, ex, mid, non, pre, trans, micro, semi, multi, neo 는 코퍼스의 접두사 조각이라 단어 카드로 쓸 수 없어 묶음에서 뺐다(`tools/toefl/build-base.py` 의 DROP, base.json 에는 남김). 묶음 단어 717개.
+- sub · anti 도 접두사라 번역 뒤 nawl-05 에서 뺐다 (묶음 단어 715개).

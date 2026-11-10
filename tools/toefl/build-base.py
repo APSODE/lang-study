@@ -44,7 +44,8 @@ SOURCES = {
 BATCH_TARGET = 120
 
 # 낱말이 아니라 코퍼스의 접두사 조각인 표제어 — 단어 카드로 쓸 수 없어 묶음에서 뺀다 (base.json 에는 남긴다)
-DROP = {'par', 'ex', 'mid', 'non', 'pre', 'trans', 'semi', 'multi', 'micro', 'neo'}
+DROP = {'par', 'ex', 'mid', 'non', 'pre', 'trans', 'semi', 'multi', 'micro', 'neo', 'sub', 'anti'}
+# sub · anti 는 번역 뒤에 뺐다(nawl-05 에서 직접 지움). 다시 빌드하면 묶음 경계가 바뀌므로 번역이 끝난 지금은 다시 돌리지 않는다.
 
 # 교육용 표의 표제어가 빈도 표와 다른 것: 빈도 표 표제어 → 교육용 표 표제어
 FORMS_ALIAS = {'headquarters': 'headquarter'}

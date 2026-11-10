@@ -1171,21 +1171,6 @@
   },
   {
     "band": 15,
-    "example_en": "The doctor recommended an anti-inflammatory medicine to reduce the swelling.",
-    "example_ko": "의사는 부기를 줄이기 위해 항염증제를 권했다.",
-    "forms": [
-      "antis"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "반-, 항-, ~에 반대하는",
-    "pos": "adj",
-    "rank": 732,
-    "sfi": 51.771,
-    "u": 15.0,
-    "word": "anti"
-  },
-  {
-    "band": 15,
     "example_en": "DNA has the shape of a double helix made of two twisted strands.",
     "example_ko": "디엔에이는 꼬인 두 가닥으로 이루어진 이중 나선 모양이다.",
     "forms": [
@@ -1795,22 +1780,5 @@
     "sfi": 50.636,
     "u": 12.0,
     "word": "transparency"
-  },
-  {
-    "band": 16,
-    "example_en": "The professor divided the research team into three sub-groups for the field study.",
-    "example_ko": "교수는 현장 연구를 위해 연구팀을 세 개의 하위 집단으로 나누었다.",
-    "forms": [
-      "subs",
-      "subbed",
-      "subbing"
-    ],
-    "list": "NAWL",
-    "meaning_ko": "하위-, 아-, 부-",
-    "pos": "adj",
-    "rank": 790,
-    "sfi": 50.634,
-    "u": 12.0,
-    "word": "sub"
   }
 ]
