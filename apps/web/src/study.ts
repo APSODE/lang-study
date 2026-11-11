@@ -64,7 +64,7 @@ export interface TrackSummary {
   mastery?: Mastery
 }
 
-/** 작문 모드 요약 (한자 일작). 트랙 요약의 숫자에는 작문 카드가 들어가지 않는다 */
+/** 작문 모드 요약 (한자 일작 · 토익 · 토플 영작). 트랙 요약의 숫자에는 작문 카드가 들어가지 않는다 */
 export interface WriteSummary {
   track: Track
   due: number
@@ -99,7 +99,10 @@ export interface StudySummary {
   /** 예전 서버는 없을 수 있다 */
   level?: LevelSummary
   tracks: TrackSummary[]
+  /** 한자 일작 (예전 서버 호환). 새 화면은 writings 를 쓴다 */
   writing: WriteSummary
+  /** 작문 모드가 있는 트랙마다. 예전 서버는 없을 수 있다 */
+  writings?: WriteSummary[]
   /** 친구가 만든 항목 (만든 순서). 예전 서버는 없을 수 있다 */
   decks?: DeckSummary[]
 }
@@ -112,10 +115,8 @@ export const authorsLabel = (authors: string[]): string =>
 export const guessLang = (s: string): 'ja' | 'en' | undefined =>
   /[\p{Script=Hiragana}\p{Script=Katakana}]/u.test(s) ? 'ja' : /^[\x20-\x7e]*[A-Za-z][\x20-\x7e]*$/.test(s) ? 'en' : undefined
 
-export interface WriteLevel {
-  /** JLPT 레벨 (5 = N5) */
-  jlpt: number
-  /** 작문 문제가 있는(예문이 있는) 한자 수 */
+export interface WriteCounts {
+  /** 작문 문제가 있는(예문이 있는) 노트 수 */
   total: number
   /** 그중 공부한(보통 카드가 있는) 한자 */
   learned: number
@@ -125,9 +126,17 @@ export interface WriteLevel {
   learnedFresh: number
 }
 
+export interface WriteLevel extends WriteCounts {
+  /** JLPT 레벨 (5 = N5) */
+  jlpt: number
+}
+
 /** GET study/write/options?track= */
 export interface WriteOptions {
+  /** 레벨이 있는 트랙(한자)만. 영어 트랙은 빈 배열 */
   levels: WriteLevel[]
+  /** 레벨과 상관없이 모두. 예전 서버는 없을 수 있다 */
+  all?: WriteCounts
   newPerDay: number
   /** 오늘 남은 새 문제 (레벨 조건 없이) */
   newLeft: number

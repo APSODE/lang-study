@@ -27,6 +27,7 @@ import { ExampleSentences, ExampleWords } from '../components/KanjiExamples.tsx'
 import { ProgressBar } from '../components/ProgressBar.tsx'
 import { ReportDialog } from '../components/ReportDialog.tsx'
 import { DRILL_VIEWS } from '../drills/index.ts'
+import { HighlightWord } from '../drills/toeic.tsx'
 import { speak } from '../speech.ts'
 import { type AnswerResult, guessLang, type QueueItem, type WriteParams } from '../study.ts'
 
@@ -51,7 +52,11 @@ const writeSentence = (item: QueueItem) =>
 /** 답한 뒤 들려줄 텍스트 */
 const listenText = (item: QueueItem): [string, 'ja-JP' | 'en-US'] | null => {
   if (item.track === 'kana') return [(item.fields as KanaFields).char, 'ja-JP']
-  if (isWordTrack(item.track)) return [(item.fields as ToeicFields).word, 'en-US']
+  if (isWordTrack(item.track)) {
+    const w = item.fields as ToeicFields
+    // 영작은 예문 전체를 들려준다
+    return [item.drillId === 'word-write' && w.example_en ? w.example_en : w.word, 'en-US']
+  }
   if (item.track === 'deck') {
     const back = (item.fields as DeckFields).back
     const lang = guessLang(back)
@@ -327,6 +332,20 @@ export function Study({ track, title, write }: { track: StudyKey; title: string;
                 <p className="small">
                   <span className="muted">내 답: </span>
                   <span lang="ja">{graded.response}</span>
+                </p>
+              )}
+            </>
+          ) : item.drillId === 'word-write' ? (
+            <>
+              <div className="model-answer">
+                <p className="model-ja" lang="en">
+                  <HighlightWord text={graded.expected} word={(item.fields as ToeicFields).word} />
+                </p>
+              </div>
+              {(graded.selfPending || graded.selfCorrect || !graded.correct) && (
+                <p className="small">
+                  <span className="muted">내 답: </span>
+                  <span lang="en">{graded.response}</span>
                 </p>
               )}
             </>

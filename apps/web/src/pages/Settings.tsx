@@ -18,7 +18,10 @@ import type { Profile } from '../types.ts'
 type NewPerDay = Record<Track, number>
 interface StudySettings {
   newPerDay: NewPerDay
+  /** 예전 서버 값 (한자 일작) */
   writeNewPerDay: number
+  /** 작문 모드가 있는 트랙마다 (kanji · toeic · toefl). 예전 서버는 없을 수 있다 */
+  writeNewPerDays?: Partial<Record<Track, number>>
 }
 const MAX = 100
 
@@ -246,7 +249,10 @@ function StudySection() {
     setError('')
     setSaved(false)
     try {
-      const r = await api<StudySettings>('study/settings', { method: 'PUT', body: values })
+      const body = values.writeNewPerDays
+        ? { newPerDay: values.newPerDay, writeNewPerDays: values.writeNewPerDays }
+        : { newPerDay: values.newPerDay, writeNewPerDay: values.writeNewPerDay }
+      const r = await api<StudySettings>('study/settings', { method: 'PUT', body })
       setValues(r)
       setSaved(true)
       summary.reload()
@@ -284,23 +290,53 @@ function StudySection() {
               </label>
             ))}
           </div>
-          <label>
-            작문 하루 새 문제
-            <input
-              type="number"
-              inputMode="numeric"
-              min={0}
-              max={MAX}
-              step={1}
-              value={values.writeNewPerDay}
-              onChange={e => {
-                setSaved(false)
-                setValues({ ...values, writeNewPerDay: Math.trunc(Number(e.target.value)) })
-              }}
-              required
-            />
-            <span className="muted small">일본어 일작에서 하루에 새로 볼 문제 수. 한자 트랙의 새 카드 수와 따로 셉니다.</span>
-          </label>
+          {values.writeNewPerDays ? (
+            <div className="field">
+              <span>작문 하루 새 문제</span>
+              <div className="row-3">
+                {(Object.keys(values.writeNewPerDays) as Track[]).map(t => (
+                  <label key={t}>
+                    {TRACK_LABEL[t]}
+                    <input
+                      type="number"
+                      inputMode="numeric"
+                      min={0}
+                      max={MAX}
+                      step={1}
+                      value={values.writeNewPerDays![t]}
+                      onChange={e => {
+                        setSaved(false)
+                        setValues({
+                          ...values,
+                          writeNewPerDays: { ...values.writeNewPerDays, [t]: Math.trunc(Number(e.target.value)) },
+                        })
+                      }}
+                      required
+                    />
+                  </label>
+                ))}
+              </div>
+              <span className="muted small">한자 일작 · 토익 · 토플 영작에서 하루에 새로 볼 문제 수. 트랙의 새 카드 수와 따로 셉니다.</span>
+            </div>
+          ) : (
+            <label>
+              작문 하루 새 문제
+              <input
+                type="number"
+                inputMode="numeric"
+                min={0}
+                max={MAX}
+                step={1}
+                value={values.writeNewPerDay}
+                onChange={e => {
+                  setSaved(false)
+                  setValues({ ...values, writeNewPerDay: Math.trunc(Number(e.target.value)) })
+                }}
+                required
+              />
+              <span className="muted small">일본어 일작에서 하루에 새로 볼 문제 수. 한자 트랙의 새 카드 수와 따로 셉니다.</span>
+            </label>
+          )}
           {error && <p className="error">{error}</p>}
           <div className="actions">
             <button type="submit" disabled={busy}>

@@ -2,19 +2,23 @@
 //   GET  /study/summary                 트랙별 { track, notes, due, newLeft, newPerDay, learned, reviewsToday, mastery: { mastered, total, jlpt } }
 //                                       + { day, streak, reviewsToday, level: { level, title, titleLang, xp, levelXp, nextLevelXp, xpToday } } (study/level.ts)
 //                                       + writing: { track: 'kanji', due, newLeft, newPerDay, learned } (작문 모드. 트랙 숫자에는 작문 카드가 빠진다)
+//                                       + writings: 같은 모양, 작문 모드가 있는 트랙마다 (kanji · toeic · toefl)
 //                                       + decks: { key: 'deck:<키>', name, authors, notes, due, newLeft, newPerDay, learned, reviewsToday }[]
 //                                         (친구가 만든 항목, 공개된 카드가 있는 것만, 만든 순서)
 //   GET  /study/queue?track=&limit=     { items: QueueItem[] } (순서는 study/service.ts 맨 위 설명)
 //                                       track 은 트랙(kana · kanji · toeic · toefl) 또는 항목 학습 키 deck:<키>.
 //                                       QueueItem.author = 친구가 만든 노트의 만든 사람 (보이는 이름)
 //        &mode=write&levels=5,4&learnedOnly=1
-//                                       작문 모드: 복습할 작문 카드(레벨 무관) → 새 작문 카드(levels 의 JLPT 레벨만, learnedOnly 면 공부한 한자만)
+//                                       작문 모드: 복습할 작문 카드(레벨 무관) → 새 작문 카드(levels 의 JLPT 레벨만, learnedOnly 면 공부한 노트만)
+//                                       track = kanji(일작) · toeic · toefl(영작). levels 는 한자에만 뜻이 있다.
 //   GET  /study/write/options?track=kanji
-//                                       { levels: { jlpt, total, learned, introduced, learnedFresh }[], newPerDay, newLeft, due }
+//                                       { levels: { jlpt, total, learned, introduced, learnedFresh }[], all: { total, learned, introduced, learnedFresh },
+//                                         newPerDay, newLeft, due } (영어 트랙은 levels 가 빈 배열)
 //   POST /study/answer                  { cardId, response, durationMs?, rating?, selfCorrect? } → { correct, expected, rating, due }
-//                                       selfCorrect 는 자기 평가 연습 방식(kanji-write)에서만 쓴다. 다른 연습 방식은 무시.
-//   GET  /study/settings                { newPerDay: { kana, kanji, toeic, toefl }, writeNewPerDay }
-//   PUT  /study/settings                { newPerDay?: { kana?, kanji?, toeic?, toefl? }, writeNewPerDay? } (0–100 정수, 둘 중 하나는 있어야 한다)
+//                                       selfCorrect 는 자기 평가 연습 방식(kanji-write · word-write · deck-recall)에서만 쓴다. 다른 연습 방식은 무시.
+//   GET  /study/settings                { newPerDay: { kana, kanji, toeic, toefl }, writeNewPerDay, writeNewPerDays: { kanji, toeic, toefl } }
+//   PUT  /study/settings                { newPerDay?: { kana?, kanji?, toeic?, toefl? }, writeNewPerDay?, writeNewPerDays?: { kanji?, toeic?, toefl? } }
+//                                       (0–100 정수, 하나는 있어야 한다. writeNewPerDay = 예전 한자 작문 값)
 //   POST /reports                       { noteId, cardId?, reason, body? } → 201 { id }
 // 하루 경계 · 연속 학습일은 사용자 시간대의 04:00 기준 (study/day.ts).
 import type { DatabaseSync } from 'node:sqlite'
@@ -39,7 +43,7 @@ export const REPORT_REASONS = ['wrong_answer', 'typo', 'audio', 'other'] as cons
 export const REPORT_BODY_MAX = 1000
 const RESPONSE_MAX = 200
 const QUEUE_LIMIT_MAX = 100
-/** 작문 하루 새 문제 설정 · 요약이 가리키는 트랙 (지금은 한자 일작뿐) */
+/** 예전 writeNewPerDay · summary.writing 이 가리키는 트랙 (한자 일작). 트랙별 값은 writeNewPerDays */
 const WRITE_TRACK: Track = 'kanji'
 const LEVELS = [1, 2, 3, 4, 5]
 /** 한 카드에 이보다 오래 걸린 기록은 자리를 비운 것으로 보고 자른다 */
@@ -139,14 +143,15 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
   const settingsOf = (userId: number) => ({
     newPerDay: getNewPerDay(db, userId),
     writeNewPerDay: getWriteNewPerDay(db, userId, WRITE_TRACK),
+    writeNewPerDays: Object.fromEntries(writeTracks().map(t => [t, getWriteNewPerDay(db, userId, t)])),
   })
 
   r.get('/study/settings', c => c.json(settingsOf(c.get('user')!.id)))
 
   r.put('/study/settings', async c => {
     const body = await readBody(c)
-    if (!body || (body.newPerDay === undefined && body.writeNewPerDay === undefined)) {
-      return c.json({ error: 'newPerDay 객체 또는 writeNewPerDay 가 필요합니다' }, 400)
+    if (!body || (body.newPerDay === undefined && body.writeNewPerDay === undefined && body.writeNewPerDays === undefined)) {
+      return c.json({ error: 'newPerDay · writeNewPerDays 객체 또는 writeNewPerDay 가 필요합니다' }, 400)
     }
     const values = body.newPerDay
     const next: Partial<Record<Track, number>> = {}
@@ -166,11 +171,26 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
     if (write !== undefined && (!Number.isInteger(write) || (write as number) < 0 || (write as number) > NEW_PER_DAY_MAX)) {
       return c.json({ error: `작문 하루 새 문제는 0–${NEW_PER_DAY_MAX} 정수여야 합니다` }, 400)
     }
+    const writes: [Track, number][] = []
+    if (write !== undefined) writes.push([WRITE_TRACK, write as number])
+    const perTrack = body.writeNewPerDays
+    if (perTrack !== undefined) {
+      if (!perTrack || typeof perTrack !== 'object' || Array.isArray(perTrack)) {
+        return c.json({ error: 'writeNewPerDays 객체가 필요합니다' }, 400)
+      }
+      for (const [k, v] of Object.entries(perTrack)) {
+        if (!isTrack(k) || !writeTracks().includes(k)) return c.json({ error: `작문 모드가 없는 트랙입니다: ${k}` }, 400)
+        if (!Number.isInteger(v) || (v as number) < 0 || (v as number) > NEW_PER_DAY_MAX) {
+          return c.json({ error: `작문 하루 새 문제는 0–${NEW_PER_DAY_MAX} 정수여야 합니다` }, 400)
+        }
+        writes.push([k, v as number])
+      }
+    }
     const userId = c.get('user')!.id
     db.exec('BEGIN IMMEDIATE')
     try {
       setNewPerDay(db, userId, next)
-      if (write !== undefined) setWriteNewPerDay(db, userId, WRITE_TRACK, write as number)
+      for (const [t, n] of writes) setWriteNewPerDay(db, userId, t, n)
       db.exec('COMMIT')
     } catch (err) {
       if (db.isTransaction) db.exec('ROLLBACK')

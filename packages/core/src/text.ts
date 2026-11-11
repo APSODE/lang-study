@@ -10,6 +10,20 @@ export const normReading = (s: string): string => kataToHira(s.normalize('NFKC')
 /** 문장 비교용 (일작): NFKC, 공백 · 문장 부호(、。！？!?.,) 제거. 가나 비교는 여기에 kataToHira 를 더 한다 */
 export const normSentence = (s: string): string => s.normalize('NFKC').replace(/[\s、。！？!?.,]/g, '')
 
+/**
+ * 영어 문장 비교용 (영작): NFKC, 소문자, 굽은 따옴표 → 곧은 따옴표, 문장 부호 제거, 공백은 하나로.
+ * 아포스트로피(don't) · 하이픈(well-known)은 남긴다.
+ */
+export const normEnglish = (s: string): string =>
+  s
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/[\u2018\u2019\u02bc]/g, "'")
+    .replace(/[\u201c\u201d]/g, '"')
+    .replace(/[.,!?;:"()\[\]…]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+
 /** 로마자 비교용: 소문자, 공백 · 기호 제거, 훈령식 · 헵번식 차이 흡수 */
 export const normRomaji = (s: string): string => {
   const t = s.normalize('NFKC').toLowerCase().replace(/[^a-z]/g, '')

@@ -15,9 +15,9 @@
 //
 // 학습 모드 (core 의 Drill.mode)
 //   보통(normal): mode 가 없는 연습 방식만. 위 순서 그대로.
-//   작문(write):   mode 'write' 연습 방식만 (지금은 kanji-write). 보통 큐 · 요약 · 하루 새 카드 수에 섞이지 않는다.
+//   작문(write):   mode 'write' 연습 방식만 (한자 kanji-write · 토익 · 토플 word-write). 보통 큐 · 요약 · 하루 새 카드 수에 섞이지 않는다.
 //     1. 복습할 작문 카드 — 고른 레벨과 상관없이 모두 (SRS 일정을 깨지 않게).
-//     2. 새 작문 카드 — 고른 JLPT 레벨(levels)만, learnedOnly 면 보통 카드가 하나라도 있는 노트만. 순서는 카탈로그(쉬운 레벨 → 자주 쓰는 순).
+//     2. 새 작문 카드 — 고른 JLPT 레벨(levels, 한자만)만, learnedOnly 면 보통 카드가 하나라도 있는 노트만. 순서는 카탈로그(쉬운 레벨 → 자주 쓰는 순).
 //        하루 새 문제 수는 따로 (user_track_settings 의 'write:<트랙>', 기본 10).
 //     3. learn ahead 는 보통 모드와 같다.
 //
@@ -53,6 +53,7 @@ import {
   type ToeicFields,
   type Track,
   studyKeyOf,
+  writeTracks,
 } from '@nakamura/core'
 import { displayNames } from '../authors.ts'
 import { type Catalog, type CatalogNote, publishedCatalog, publishedDecks } from './catalog.ts'
@@ -587,9 +588,7 @@ export const writeSummary = (db: DatabaseSync, userId: number, track: Track, now
   }
 }
 
-export interface WriteLevel {
-  /** JLPT 레벨 (5 = N5) */
-  jlpt: number
+export interface WriteCounts {
   /** 작문 문제가 있는(예문이 있는) 공개 노트 수 */
   total: number
   /** 그중 보통 카드가 하나라도 있는(공부한) 노트 */
@@ -598,6 +597,11 @@ export interface WriteLevel {
   introduced: number
   /** 공부했고 작문 카드는 아직 없는 노트 ("공부한 한자만" 일 때 새 문제 수) */
   learnedFresh: number
+}
+
+export interface WriteLevel extends WriteCounts {
+  /** JLPT 레벨 (5 = N5) */
+  jlpt: number
 }
 
 /** 작문 문제 고르기 화면: 레벨별 수 (N5 → N1) + 오늘 남은 새 문제 · 복습 */
@@ -611,20 +615,28 @@ export const writeOptions = (db: DatabaseSync, userId: number, track: Track, now
   const learned = new Set(rows.filter(r => !r.w).map(r => r.noteId))
   const introduced = new Set(rows.filter(r => r.w).map(r => r.noteId))
   const byLevel = new Map<number, WriteLevel>()
-  for (const entry of catalog.notes) {
-    const lv = levelOf(entry.note)
-    if (lv === undefined || modeDrills(entry, 'write').length === 0) continue
-    const l = byLevel.get(lv) ?? { jlpt: lv, total: 0, learned: 0, introduced: 0, learnedFresh: 0 }
-    const id = entry.note.id
+  const all: WriteCounts = { total: 0, learned: 0, introduced: 0, learnedFresh: 0 }
+  const add = (l: WriteCounts, id: string) => {
     l.total++
     if (learned.has(id)) l.learned++
     if (introduced.has(id)) l.introduced++
     if (learned.has(id) && !introduced.has(id)) l.learnedFresh++
+  }
+  for (const entry of catalog.notes) {
+    if (modeDrills(entry, 'write').length === 0) continue
+    add(all, entry.note.id)
+    const lv = levelOf(entry.note)
+    if (lv === undefined) continue
+    const l = byLevel.get(lv) ?? { jlpt: lv, total: 0, learned: 0, introduced: 0, learnedFresh: 0 }
+    add(l, entry.note.id)
     byLevel.set(lv, l)
   }
   const s = writeSummary(db, userId, track, now, start)
   return {
+    /** 레벨이 있는 트랙(한자)만. 영어 트랙은 빈 배열 */
     levels: [...byLevel.values()].sort((a, b) => b.jlpt - a.jlpt),
+    /** 레벨과 상관없이 모든 작문 노트 */
+    all,
     newPerDay: s.newPerDay,
     newLeft: s.newLeft,
     due: s.due,
@@ -656,7 +668,10 @@ export const summary = (db: DatabaseSync, userId: number, now: number) => {
       now,
     ),
     tracks: TRACKS.map(t => trackSummary(db, userId, t, now, start)),
+    /** 예전 클라이언트용 (한자 일작). 새 화면은 writings 를 쓴다 */
     writing: writeSummary(db, userId, 'kanji', now, start),
+    /** 작문 모드가 있는 트랙마다 (한자 일작 · 토익 · 토플 영작) */
+    writings: writeTracks().map(t => writeSummary(db, userId, t, now, start)),
     decks: deckSummaries(db, userId, now, start),
   }
 }

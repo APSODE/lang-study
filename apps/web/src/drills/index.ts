@@ -3,7 +3,7 @@
 import { DeckRecall } from './deck.tsx'
 import { KanaListen, KanaToRomaji, RomajiToKana } from './kana.tsx'
 import { KanjiMeaning, KanjiReading, KanjiWordMeaning, KanjiWordReading, KanjiWrite } from './kanji.tsx'
-import { ToeicCloze, ToeicMeaning, WordSpell } from './toeic.tsx'
+import { ToeicCloze, ToeicMeaning, WordSpell, WordWrite } from './toeic.tsx'
 import type { DrillComponent } from './types.ts'
 
 export const DRILL_VIEWS: Record<string, DrillComponent> = {
@@ -18,6 +18,7 @@ export const DRILL_VIEWS: Record<string, DrillComponent> = {
   'toeic-meaning': ToeicMeaning,
   'toeic-cloze': ToeicCloze,
   'word-spell': WordSpell,
+  'word-write': WordWrite,
   'deck-recall': DeckRecall,
 }
 

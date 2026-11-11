@@ -112,20 +112,20 @@ function MasteryLine({ m, kanji }: { m: Mastery; kanji: boolean }) {
 function TodayCard({
   tracks,
   decks,
-  writing,
+  writings,
   reviewsToday,
   streak,
 }: {
   tracks: TrackSummary[]
   decks: DeckSummary[]
-  writing: WriteSummary | undefined
+  writings: WriteSummary[]
   reviewsToday: number
   streak: number
 }) {
   const activity = useApi<ActivityResponse>('stats/activity?days=7')
   // 작문은 고르는 모드라 새 문제는 빼고 밀린 복습만 오늘 할 일에 넣는다
   const left =
-    [...tracks, ...decks].reduce((n, t) => n + (t.notes > 0 ? t.due + t.newLeft : 0), 0) + (writing?.due ?? 0)
+    [...tracks, ...decks].reduce((n, t) => n + (t.notes > 0 ? t.due + t.newLeft : 0), 0) + writings.reduce((n, w) => n + w.due, 0)
   const planned = reviewsToday + left
   const ratio = planned === 0 ? 0 : reviewsToday / planned
 
@@ -268,9 +268,13 @@ function StudyCard({
   )
 }
 
-/** 작문(일본어 일작): 문제 고르기 화면으로 간다. 한자 트랙과 따로 센다. */
-function WriteCard({ w, ready }: { w: WriteSummary; ready: boolean }) {
-  const todo = w.due + w.newLeft
+/**
+ * 작문(한자 일작 · 토익 · 토플 영작): 숫자는 트랙을 모두 더하고, 트랙마다 문제 고르기 화면(#/write/<트랙>)으로 가는 단추.
+ * 콘텐츠가 있는(ready) 트랙만 단추를 보인다. 보통 트랙 숫자와 따로 센다.
+ */
+function WriteCard({ list, ready }: { list: WriteSummary[]; ready: (t: Track) => boolean }) {
+  const open = list.filter(w => ready(w.track))
+  const sum = (k: 'due' | 'newLeft' | 'newPerDay' | 'learned') => open.reduce((n, w) => n + w[k], 0)
   return (
     <li className="card track-card">
       <div className="track-head">
@@ -279,31 +283,39 @@ function WriteCard({ w, ready }: { w: WriteSummary; ready: boolean }) {
         </span>
         <span className="track-name">
           <strong>작문</strong>
-          <span className="muted small">일본어 일작</span>
+          <span className="muted small">일본어 일작 · 영어 영작</span>
         </span>
-        {ready && <span className="muted small push">푼 문제 {fmtNum(w.learned)}개</span>}
+        {open.length > 0 && <span className="muted small push">푼 문제 {fmtNum(sum('learned'))}개</span>}
       </div>
-      {!ready ? (
+      {open.length === 0 ? (
         <p className="muted">준비 중</p>
       ) : (
         <>
           <div className="track-stats">
             <span>
-              <strong>{fmtNum(w.due)}</strong>
+              <strong>{fmtNum(sum('due'))}</strong>
               <span className="muted small">복습</span>
             </span>
             <span>
-              <strong>{fmtNum(w.newLeft)}</strong>
+              <strong>{fmtNum(sum('newLeft'))}</strong>
               <span className="muted small">새 문제</span>
             </span>
             <span>
-              <strong>{fmtNum(w.newPerDay)}</strong>
+              <strong>{fmtNum(sum('newPerDay'))}</strong>
               <span className="muted small">하루 새 문제</span>
             </span>
           </div>
-          <a className={`button${todo > 0 ? '' : ' secondary'}`} href={`#/write/${w.track}`}>
-            문제 고르기
-          </a>
+          <div className="actions write-tracks">
+            {open.map(w => (
+              <a
+                key={w.track}
+                className={`button${w.due + w.newLeft > 0 ? '' : ' secondary'}`}
+                href={`#/write/${w.track}`}
+              >
+                {TRACK_LABEL[w.track]}
+              </a>
+            ))}
+          </div>
         </>
       )}
     </li>
@@ -391,6 +403,8 @@ export function Home({ user }: { user: SessionUser }) {
   const s = summary.data
   const statsOf = (t: Track) => stats.data?.tracks.find(x => x.track === t)
   const decks = s?.decks ?? []
+  // 예전 서버는 writings 가 없다 (한자 일작 writing 하나뿐)
+  const writings = s?.writings ?? (s?.writing ? [s.writing] : [])
 
   // 이어서 학습: 지금 할 카드(복습 + 새 카드)가 가장 많은 트랙 · 항목
   const next = [
@@ -422,7 +436,7 @@ export function Home({ user }: { user: SessionUser }) {
       ) : (
         <>
           {s.level && <LevelCard lv={s.level} />}
-          <TodayCard tracks={s.tracks} decks={decks} writing={s.writing} reviewsToday={s.reviewsToday} streak={s.streak} />
+          <TodayCard tracks={s.tracks} decks={decks} writings={writings} reviewsToday={s.reviewsToday} streak={s.streak} />
 
           {next ? (
             <a className="button big continue" href={next.href}>
@@ -439,11 +453,8 @@ export function Home({ user }: { user: SessionUser }) {
               const t = s.tracks.find(x => x.track === track)
               return t ? <TrackCard key={track} t={t} stats={statsOf(track)} /> : null
             })}
-            {s.writing && (
-              <WriteCard
-                w={s.writing}
-                ready={(s.tracks.find(x => x.track === s.writing.track)?.notes ?? 0) > 0}
-              />
+            {writings.length > 0 && (
+              <WriteCard list={writings} ready={t => (s.tracks.find(x => x.track === t)?.notes ?? 0) > 0} />
             )}
           </ul>
 

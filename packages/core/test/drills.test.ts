@@ -43,7 +43,8 @@ describe('drillsFor', () => {
     expect(check('toeic-meaning', hyp, '가설')).toBe(true)
     expect(check('toeic-cloze', hyp, 'Hypothesis')).toBe(true)
     expect(isTrack('toefl')).toBe(true)
-    expect(writeTracks()).not.toContain('toefl')
+    // 예문 한국어(example_ko)가 없으면 영작 문제는 생기지 않는다
+    expect(drillsFor(hyp).some(d => d.id === 'word-write')).toBe(false)
   })
 })
 
@@ -128,9 +129,9 @@ describe('일작 (kanji-write)', () => {
   it('작문 모드: kanji-write 만 mode write, 나머지는 보통 학습', () => {
     expect(drillMode(getDrill('kanji-write')!)).toBe('write')
     expect(drillMode(getDrill('kanji-reading')!)).toBe('normal')
-    expect(drillIdsOf('write')).toEqual(['kanji-write'])
+    expect(drillIdsOf('write')).toEqual(['kanji-write', 'word-write'])
     expect(drillIdsOf('normal')).not.toContain('kanji-write')
-    expect(writeTracks()).toEqual(['kanji'])
+    expect(writeTracks()).toEqual(['kanji', 'toeic', 'toefl'])
   })
   it('정답 표시는 한자 표기 ja', () => {
     expect(run('x').expected).toBe('友だちとすしを食べます。')
@@ -166,7 +167,7 @@ describe('항목 (deck-recall)', () => {
     expect(drillsFor(card).map(d => d.id)).toEqual(['deck-recall'])
     expect(getDrill('deck-recall')!.selfGraded).toBe(true)
     expect(drillMode(getDrill('deck-recall')!)).toBe('normal')
-    expect(writeTracks()).toEqual(['kanji'])
+    expect(writeTracks()).not.toContain('deck')
   })
   it('공백 · 문장 부호 · 가타카나/히라가나 · 대소문자는 무시', () => {
     expect(check('deck-recall', card, 'いただきます')).toBe(true)
@@ -229,7 +230,7 @@ describe('예시 낱말 (kanji-word-meaning · kanji-word-reading)', () => {
     expect(drillsFor(eat).map(d => d.id)).toEqual(['kanji-reading', 'kanji-meaning'])
     expect(drillsFor(study).map(d => d.id)).toEqual(['kanji-reading', 'kanji-meaning', 'kanji-word-meaning', 'kanji-word-reading'])
     expect(drillIdsOf('normal')).toContain('kanji-word-reading')
-    expect(drillIdsOf('write')).toEqual(['kanji-write'])
+    expect(drillIdsOf('write')).toEqual(['kanji-write', 'word-write'])
     expect(getDrill('kanji-word-reading')!.after).toBe('kanji-word-meaning')
   })
   it('뜻: 고른 순번의 낱말 뜻만 정답 (괄호 · 공백 무시)', () => {
@@ -249,5 +250,44 @@ describe('예시 낱말 (kanji-word-meaning · kanji-word-reading)', () => {
   it('exampleIndex: 복습 횟수로 돌아가며 고른다', () => {
     expect([0, 1, 2, 3].map(r => exampleIndex(study, r))).toEqual([0, 1, 0, 1])
     expect(exampleIndex(eat, 3)).toBe(0)
+  })
+})
+
+describe('영작 (word-write)', () => {
+  const book: Note = {
+    id: 'toeic-book',
+    track: 'toeic',
+    fields: {
+      word: 'book',
+      meaning_ko: '예약하다',
+      example_en: "I'd like to book a table for two.",
+      example_ko: '두 명 자리를 예약하고 싶어요.',
+    },
+  }
+  const run = (r: string) => getDrill('word-write')!.check(book, r)
+
+  it('예문 영어 · 한국어가 모두 있을 때만, 토익 · 토플 모두. 작문 모드 · 자기 평가', () => {
+    expect(drillsFor(book).map(d => d.id)).toEqual(['toeic-meaning', 'toeic-cloze', 'word-spell', 'word-write'])
+    expect(drillsFor({ ...book, id: 'toefl-book', track: 'toefl' }).map(d => d.id)).toContain('word-write')
+    expect(drillsFor(bare).some(d => d.id === 'word-write')).toBe(false)
+    const d = getDrill('word-write')!
+    expect(d.selfGraded).toBe(true)
+    expect(drillMode(d)).toBe('write')
+    expect(drillIdsOf('normal')).not.toContain('word-write')
+  })
+  it('정답 표시는 예문 영어', () => {
+    expect(run('x').expected).toBe("I'd like to book a table for two.")
+  })
+  it('예문과 같으면 정답: 대소문자 · 공백 · 문장 부호 · 굽은 따옴표 무시', () => {
+    expect(run("I'd like to book a table for two.").correct).toBe(true)
+    expect(run("i'd like to book a table for two").correct).toBe(true)
+    expect(run('  I\u2019d  like to book a table for two!  ').correct).toBe(true)
+    expect(run("I'd like to book, a table for two?").correct).toBe(true)
+  })
+  it('다른 표현 · 빈 답은 자동 채점으로는 틀림 (자기 평가로 맞을 수 있다)', () => {
+    expect(run('I would like to book a table for two.').correct).toBe(false)
+    expect(run("I'd like to book a table for three.").correct).toBe(false)
+    expect(run('').correct).toBe(false)
+    expect(run(' . ').correct).toBe(false)
   })
 })

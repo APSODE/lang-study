@@ -450,11 +450,11 @@ describe('설정', () => {
   it('기본 15, 바꾸기, 검사', async () => {
     const { login } = setup()
     const u = await login()
-    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 10 })
+    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 10, writeNewPerDays: { kanji: 10, toeic: 10, toefl: 10 } })
     const ok = await u.send('PUT', '/study/settings', { newPerDay: { kana: 30, toeic: 0 } })
     expect(ok.status).toBe(200)
-    expect(await ok.json()).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0, toefl: 15 }, writeNewPerDay: 10 })
-    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0, toefl: 15 }, writeNewPerDay: 10 })
+    expect(await ok.json()).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0, toefl: 15 }, writeNewPerDay: 10, writeNewPerDays: { kanji: 10, toeic: 10, toefl: 10 } })
+    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0, toefl: 15 }, writeNewPerDay: 10, writeNewPerDays: { kanji: 10, toeic: 10, toefl: 10 } })
     expect((await u.send('PUT', '/study/settings', { newPerDay: { kana: 100 } })).status).toBe(200)
     for (const bad of [
       {},
@@ -741,6 +741,7 @@ describe('작문 모드 (mode=write)', () => {
         { jlpt: 4, total: 1, learned: 1, introduced: 0, learnedFresh: 1 },
         { jlpt: 3, total: 1, learned: 0, introduced: 0, learnedFresh: 0 },
       ],
+      all: { total: 4, learned: 2, introduced: 2, learnedFresh: 1 },
       newPerDay: 10,
       newLeft: 2,
       due: 0,
@@ -774,18 +775,108 @@ describe('작문 모드 (mode=write)', () => {
     const { u } = await start()
     const ok = await u.send('PUT', '/study/settings', { writeNewPerDay: 0 })
     expect(ok.status).toBe(200)
-    expect(await ok.json()).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 0 })
+    expect(await ok.json()).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 0, writeNewPerDays: { kanji: 0, toeic: 10, toefl: 10 } })
     expect((await u.send('PUT', '/study/settings', { writeNewPerDay: 100 })).status).toBe(200)
     for (const bad of [-1, 101, 1.5, '3', null, true]) {
       expect((await u.send('PUT', '/study/settings', { writeNewPerDay: bad })).status, String(bad)).toBe(400)
     }
     // 하나라도 틀리면 아무것도 바뀌지 않는다
     expect((await u.send('PUT', '/study/settings', { newPerDay: { kanji: 3 }, writeNewPerDay: -1 })).status).toBe(400)
-    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 100 })
+    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 100, writeNewPerDays: { kanji: 100, toeic: 10, toefl: 10 } })
     // 쓰기 0 이면 새 작문 문제가 없다
     await u.send('PUT', '/study/settings', { writeNewPerDay: 0 })
     expect((await u.get('/study/queue?track=kanji&mode=write')).items).toEqual([])
     expect((await u.get('/study/summary')).writing).toMatchObject({ newLeft: 0, newPerDay: 0 })
+  })
+})
+
+describe('영작 (word-write, 토익 · 토플 작문 모드)', () => {
+  const word = (track: 'toeic' | 'toefl', w: string, en?: string, ko?: string): Note => ({
+    id: `${track}-${w}`,
+    track,
+    fields: {
+      word: w,
+      meaning_ko: `${w} 뜻`,
+      ...(track === 'toefl' ? { list: 'NAWL' } : {}),
+      ...(en ? { example_en: en } : {}),
+      ...(ko ? { example_ko: ko } : {}),
+    },
+  })
+  const NOTES = [
+    word('toeic', 'book', "I'd like to book a table.", '자리를 예약하고 싶어요.'),
+    word('toeic', 'refund', 'You will get a full refund.', '전액 환불을 받을 거예요.'),
+    word('toeic', 'fee', 'The fee is ten dollars.'), // 한국어 예문이 없어 영작 없음
+    word('toefl', 'erosion', 'Erosion shapes the valley.', '침식이 계곡을 만든다.'),
+  ]
+  const W = (id: string) => `${id}:word-write`
+
+  const start = async () => {
+    const t = setup({ kana: false, extra: NOTES })
+    const u = await t.login()
+    const wq = async (track: string, q = '') =>
+      (await u.get(`/study/queue?track=${track}&mode=write&limit=100${q}`)).items as QueueItem[]
+    return { ...t, u, wq }
+  }
+
+  it('보통 큐에는 나오지 않고, 작문 큐에만 (예문 영어 · 한국어가 모두 있는 단어)', async () => {
+    const { db, clock, u, wq } = await start()
+    expect((await wq('toeic')).map(i => i.cardId)).toEqual([W('toeic-book'), W('toeic-refund')])
+    expect((await wq('toefl')).map(i => i.cardId)).toEqual([W('toefl-erosion')])
+    expect((await wq('toeic')).every(i => i.isNew && i.drillId === 'word-write')).toBe(true)
+    // 보통 큐: 오늘도, 다음 날 후속 카드에도 영작은 없다
+    const day1 = await u.queue('toeic')
+    expect(day1.some(i => i.drillId === 'word-write')).toBe(false)
+    for (const i of day1) expect((await u.answer(i.cardId, right(db, i.cardId))).status).toBe(200)
+    db.prepare('UPDATE user_cards SET due = ?').run(T0 + 30 * 24 * HOUR)
+    clock.now = kst('2026-11-10T09:00:00')
+    const day2 = await u.queue('toeic')
+    expect(day2.length).toBeGreaterThan(0)
+    expect(day2.some(i => i.drillId === 'word-write')).toBe(false)
+  })
+
+  it('채점: 예문과 같으면 정답, 다른 표현은 자기 평가. 요약 · 고르기 화면 수', async () => {
+    const { u } = await start()
+    let res = await u.answer(W('toeic-book'), 'i\u2019d like to book a table')
+    expect(await res.json()).toMatchObject({ correct: true, expected: "I'd like to book a table." })
+    res = await u.answer(W('toeic-refund'), 'You will receive a full refund.', { selfCorrect: true })
+    expect(await res.json()).toMatchObject({ correct: true, rating: 3 })
+    res = await u.answer(W('toefl-erosion'), 'The valley is made by erosion.')
+    expect(await res.json()).toMatchObject({ correct: false, rating: 1 })
+
+    const s = await u.get('/study/summary')
+    expect(s.writings.map((w: { track: string }) => w.track)).toEqual(['kanji', 'toeic', 'toefl'])
+    expect(s.writings[1]).toEqual({ track: 'toeic', due: 0, newLeft: 0, newPerDay: 10, learned: 2 })
+    expect(s.writings[2]).toMatchObject({ track: 'toefl', learned: 1, newLeft: 0 })
+    // 영작 카드는 트랙 숫자에 들어가지 않는다
+    expect(s.tracks.find((t: { track: string }) => t.track === 'toeic')).toMatchObject({ learned: 0, newLeft: 3 })
+
+    expect(await u.get('/study/write/options?track=toeic')).toEqual({
+      levels: [],
+      all: { total: 2, learned: 0, introduced: 2, learnedFresh: 0 },
+      newPerDay: 10,
+      newLeft: 0,
+      due: 0,
+    })
+  })
+
+  it('공부한 단어만 · 하루 새 문제 수는 트랙마다 따로 (writeNewPerDays)', async () => {
+    const { db, u, wq } = await start()
+    expect((await wq('toeic', '&learnedOnly=1')).map(i => i.cardId)).toEqual([])
+    expect((await u.answer('toeic-refund:toeic-meaning', right(db, 'toeic-refund:toeic-meaning'))).status).toBe(200)
+    expect((await wq('toeic', '&learnedOnly=1')).map(i => i.cardId)).toEqual([W('toeic-refund')])
+    expect((await u.get('/study/write/options?track=toeic')).all).toEqual({ total: 2, learned: 1, introduced: 0, learnedFresh: 1 })
+
+    const ok = await u.send('PUT', '/study/settings', { writeNewPerDays: { toeic: 1 } })
+    expect(ok.status).toBe(200)
+    expect((await ok.json()).writeNewPerDays).toEqual({ kanji: 10, toeic: 1, toefl: 10 })
+    expect((await wq('toeic')).map(i => i.cardId)).toEqual([W('toeic-book')])
+    expect((await u.answer(W('toeic-book'), "I'd like to book a table.")).status).toBe(200)
+    expect((await u.answer(W('toeic-refund'), 'You will get a full refund.')).status).toBe(409)
+    // 토플은 따로
+    expect((await wq('toefl')).map(i => i.cardId)).toEqual([W('toefl-erosion')])
+    for (const bad of [{ writeNewPerDays: { kana: 3 } }, { writeNewPerDays: { toeic: 101 } }, { writeNewPerDays: [] }, { writeNewPerDays: 3 }]) {
+      expect((await u.send('PUT', '/study/settings', bad)).status, JSON.stringify(bad)).toBe(400)
+    }
   })
 })
 

@@ -384,6 +384,8 @@ input.switch:focus-visible { outline: 2px solid var(--accent); outline-offset: 2
 .track-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); }
 .track-card { display: flex; flex-direction: column; gap: 12px; }
 .track-card > .button { margin-top: auto; }
+.track-card > .write-tracks { margin-top: auto; }
+.write-tracks > .button { flex: 1 1 0; }
 .track-head { display: flex; align-items: center; gap: 10px; }
 .track-head .push { margin-left: auto; }
 .track-badge {
@@ -628,6 +630,7 @@ input.answer-input { font-size: 1.5rem; text-align: center; padding: 12px; }
 .model-answer { display: grid; gap: 2px; }
 .model-answer p { line-height: 1.5; }
 .model-ja { font-size: 1.3rem; font-weight: 600; }
+mark.headword { background: var(--accent-soft); color: var(--accent); border-radius: 4px; padding: 0 2px; }
 .aid { margin: 0 0 12px; }
 .aid > * + * { margin-top: 8px; }
 .aid > summary { cursor: pointer; min-height: 32px; }

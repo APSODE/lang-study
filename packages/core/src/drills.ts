@@ -3,7 +3,7 @@
 // 화면(Prompt · Answer)은 apps/web 이 drill id 로 연결한다.
 // 발음 평가는 나중에 `speak` 연습 방식 + 서버 Assessor 로 추가한다 — 여기 구조는 바뀌지 않는다.
 import { isTrack, WORD_TRACKS, type DeckFields, type Note, type NoteTrack, type Track } from './notes.ts'
-import { kataToHira, normAnswer, normMeaning, normReading, normRomaji, normSentence, splitMeanings } from './text.ts'
+import { kataToHira, normAnswer, normEnglish, normMeaning, normReading, normRomaji, normSentence, splitMeanings } from './text.ts'
 
 /**
  * 채점에 필요한 카드 상태. 예시 낱말 연습 방식(kanji-word-*)은 노트의 예시 낱말 중 어느 것을 냈는지(example)를 받는다.
@@ -34,7 +34,7 @@ export interface Drill {
   /**
    * 학습 모드. 비우면 보통 학습(트랙 큐), 'write' 면 작문 모드에서만 나온다.
    * 작문 카드는 트랙의 보통 큐 · 하루 새 카드 수와 따로 센다 (서버 study/service.ts).
-   * 나중에 토익 영작도 같은 표시만 달면 작문 모드에 붙는다.
+   * 한자 일작(kanji-write) · 토익 · 토플 영작(word-write)이 이 표시를 단다.
    */
   mode?: 'write'
   /**
@@ -258,6 +258,21 @@ registerDrill({
   check(note, response) {
     const { word } = f<{ word: string }>(note)
     return { correct: plainWord(response) === plainWord(word), expected: word }
+  },
+})
+
+// 영어 단어(토익 · 토플): 영작 (예문의 한국어 → 영어). 작문 모드(mode: 'write')라 보통 큐에는 나오지 않는다.
+// 예문(example_en)과 같으면 정답 (대소문자 · 공백 · 문장 부호 · 굽은 따옴표 차이는 무시). 그 밖의 표현은 자기 평가.
+registerDrill({
+  id: 'word-write',
+  tracks: WORD_TRACKS,
+  requires: ['word', 'example_en', 'example_ko'],
+  selfGraded: true,
+  mode: 'write',
+  check(note, response) {
+    const { example_en = '' } = f<{ example_en?: string }>(note)
+    const r = normEnglish(response)
+    return { correct: r !== '' && r === normEnglish(example_en), expected: example_en }
   },
 })
 

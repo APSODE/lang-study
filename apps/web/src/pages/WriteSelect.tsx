@@ -1,4 +1,5 @@
 // 작문 문제 고르기 (#/write/<트랙>): JLPT 레벨(여러 개) · "공부한 한자만" 을 고르고 작문 학습(#/study/<트랙>?mode=write…)을 시작한다.
+// 토익 · 토플(영작)은 레벨이 없어 "공부한 단어만" 만 고른다.
 // 수는 study/write/options 로 받는다. 복습할 작문 문제는 고른 레벨과 상관없이 먼저 나온다 (서버 큐).
 // 마지막 선택은 이 기기의 localStorage 에 둔다 (못 쓰면 기본값: N5 만, 공부한 한자만 끔).
 import { useState } from 'react'
@@ -10,7 +11,7 @@ import { Skeleton } from '../components/Skeleton.tsx'
 import { fmtNum } from '../format.ts'
 import { useApi } from '../hooks.ts'
 import { navigate } from '../router.ts'
-import { type WriteOptions, writeStudyPath } from '../study.ts'
+import { TRACK_LABEL, type WriteOptions, writeStudyPath } from '../study.ts'
 
 interface Choice {
   levels: number[]
@@ -68,57 +69,84 @@ export function WriteSelect({ track }: { track: Track }) {
     )
   }
 
+  // 한자만 JLPT 레벨로 고른다. 영어(토익 · 토플)는 레벨 없이 모든 단어
+  const leveled = track === 'kanji'
+  const unit = leveled ? '한자' : '단어'
   // 서버에 없는 레벨(문제가 없는 레벨)은 고른 것에서 뺀다
   const picked = o.levels.filter(l => choice.levels.includes(l.jlpt))
-  const available = picked.reduce((n, l) => n + (choice.learnedOnly ? l.learnedFresh : l.total - l.introduced), 0)
+  const all = o.all ?? { total: 0, learned: 0, introduced: 0, learnedFresh: 0 }
+  const available = leveled
+    ? picked.reduce((n, l) => n + (choice.learnedOnly ? l.learnedFresh : l.total - l.introduced), 0)
+    : choice.learnedOnly
+      ? all.learnedFresh
+      : all.total - all.introduced
   const newToday = Math.min(o.newLeft, available)
-  const canStart = picked.length > 0 && (newToday > 0 || o.due > 0)
+  const canStart = (!leveled || picked.length > 0) && (newToday > 0 || o.due > 0)
 
   const start = () => {
     if (!canStart) return
-    navigate(writeStudyPath(track, { levels: picked.map(l => l.jlpt).sort((a, b) => b - a), learnedOnly: choice.learnedOnly }))
+    const levels = leveled ? picked.map(l => l.jlpt).sort((a, b) => b - a) : null
+    navigate(writeStudyPath(track, { levels, learnedOnly: choice.learnedOnly }))
   }
 
   const hint =
-    picked.length === 0
+    leveled && picked.length === 0
       ? '레벨을 하나 이상 고르세요.'
       : newToday === 0 && o.due === 0
         ? o.newLeft === 0
           ? `오늘 새 문제(하루 ${fmtNum(o.newPerDay)}개)를 모두 봤어요. 설정에서 바꿀 수 있어요.`
-          : choice.learnedOnly
-            ? '고른 레벨에 공부한 한자의 새 문제가 없습니다.'
-            : '고른 레벨에 남은 새 문제가 없습니다.'
+          : !leveled
+            ? choice.learnedOnly
+              ? '공부한 단어의 새 문제가 없습니다.'
+              : '남은 새 문제가 없습니다.'
+            : choice.learnedOnly
+              ? '고른 레벨에 공부한 한자의 새 문제가 없습니다.'
+              : '고른 레벨에 남은 새 문제가 없습니다.'
         : ''
 
   return (
     <div className="page write-select">
-      <Card title="일본어 일작">
-        <p className="muted small">한국어 문장을 보고 일본어로 써 봅니다. 쓴 답은 모범 답안과 비교해 스스로 채점합니다.</p>
-      </Card>
+      {leveled ? (
+        <Card title="일본어 일작">
+          <p className="muted small">한국어 문장을 보고 일본어로 써 봅니다. 쓴 답은 모범 답안과 비교해 스스로 채점합니다.</p>
+        </Card>
+      ) : (
+        <Card title={`${TRACK_LABEL[track]} 영작`}>
+          <p className="muted small">단어 예문의 한국어를 보고 영어로 써 봅니다. 쓴 답은 모범 답안과 비교해 스스로 채점합니다.</p>
+        </Card>
+      )}
 
-      <Card title="JLPT 레벨">
-        <ul className="level-chips">
-          {o.levels.map(l => {
-            const on = choice.levels.includes(l.jlpt)
-            return (
-              <li key={l.jlpt}>
-                <button type="button" className="level-chip" aria-pressed={on} onClick={() => toggleLevel(l.jlpt)}>
-                  <span className="level-name">
-                    N{l.jlpt}
-                    {on && <Icon name="check" size={18} />}
-                  </span>
-                  <span className="small">새 문제 {fmtNum(l.total - l.introduced)}개</span>
-                  <span className="muted small">공부한 한자 {fmtNum(l.learned)}자</span>
-                </button>
-              </li>
-            )
-          })}
-        </ul>
+      <Card title={leveled ? 'JLPT 레벨' : '문제'}>
+        {leveled ? (
+          <ul className="level-chips">
+            {o.levels.map(l => {
+              const on = choice.levels.includes(l.jlpt)
+              return (
+                <li key={l.jlpt}>
+                  <button type="button" className="level-chip" aria-pressed={on} onClick={() => toggleLevel(l.jlpt)}>
+                    <span className="level-name">
+                      N{l.jlpt}
+                      {on && <Icon name="check" size={18} />}
+                    </span>
+                    <span className="small">새 문제 {fmtNum(l.total - l.introduced)}개</span>
+                    <span className="muted small">공부한 한자 {fmtNum(l.learned)}자</span>
+                  </button>
+                </li>
+              )
+            })}
+          </ul>
+        ) : (
+          <p className="small">
+            새 문제 {fmtNum(all.total - all.introduced)}개 <span className="muted">· 공부한 단어 {fmtNum(all.learned)}개</span>
+          </p>
+        )}
         <div className="form">
           <label className="switch-row">
             <span>
-              공부한 한자만
-              <span className="muted small block">한자 학습에서 한 번이라도 본 한자의 문장만 새 문제로 냅니다.</span>
+              공부한 {unit}만
+              <span className="muted small block">
+                {TRACK_LABEL[track]} 학습에서 한 번이라도 본 {unit}의 문장만 새 문제로 냅니다.
+              </span>
             </span>
             <input
               type="checkbox"
@@ -135,7 +163,7 @@ export function WriteSelect({ track }: { track: Track }) {
         <p className="write-summary" role="status">
           오늘 새 문제 <strong>{fmtNum(newToday)}</strong>개 · 복습 <strong>{fmtNum(o.due)}</strong>개
         </p>
-        {o.due > 0 && <p className="muted small">복습할 문제는 고른 레벨과 상관없이 먼저 나옵니다.</p>}
+        {leveled && o.due > 0 && <p className="muted small">복습할 문제는 고른 레벨과 상관없이 먼저 나옵니다.</p>}
         <button type="button" className="big" disabled={!canStart} onClick={start}>
           <Icon name="play" size={20} />
           시작
