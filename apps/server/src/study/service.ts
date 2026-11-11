@@ -48,6 +48,7 @@ import {
   type KanjiFields,
   type Note,
   type NoteTrack,
+  type DeckStudyKey,
   type StudyKey,
   type StudyMode,
   type ToeicFields,
@@ -156,6 +157,19 @@ const deckNewPerDay = (db: DatabaseSync, userId: number, key: StudyKey): number 
       | { n: number }
       | undefined
   )?.n ?? DEFAULT_NEW_PER_DAY
+
+export const setDeckNewPerDay = (db: DatabaseSync, userId: number, key: DeckStudyKey, n: number): void => {
+  db.prepare(
+    'INSERT INTO user_track_settings(user_id, track, new_per_day) VALUES (?, ?, ?) ON CONFLICT(user_id, track) DO UPDATE SET new_per_day = excluded.new_per_day',
+  ).run(userId, key, n)
+}
+
+/** 설정 화면: 공개된 카드가 있는 항목마다 하루 새 카드 수 (만든 순서) */
+export const deckSettings = (db: DatabaseSync, userId: number): { key: DeckStudyKey; name: string; newPerDay: number }[] =>
+  publishedDecks(db).map(d => {
+    const key = deckStudyKey(d.key)
+    return { key, name: d.name, newPerDay: deckNewPerDay(db, userId, key) }
+  })
 
 const newPerDayOf = (db: DatabaseSync, userId: number, key: StudyKey, mode: StudyMode): number => {
   if (!isTrack(key)) return deckNewPerDay(db, userId, key)

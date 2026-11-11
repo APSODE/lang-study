@@ -16,22 +16,26 @@
 //                                         newPerDay, newLeft, due } (영어 트랙은 levels 가 빈 배열)
 //   POST /study/answer                  { cardId, response, durationMs?, rating?, selfCorrect? } → { correct, expected, rating, due }
 //                                       selfCorrect 는 자기 평가 연습 방식(kanji-write · word-write · deck-recall)에서만 쓴다. 다른 연습 방식은 무시.
-//   GET  /study/settings                { newPerDay: { kana, kanji, toeic, toefl }, writeNewPerDay, writeNewPerDays: { kanji, toeic, toefl } }
-//   PUT  /study/settings                { newPerDay?: { kana?, kanji?, toeic?, toefl? }, writeNewPerDay?, writeNewPerDays?: { kanji?, toeic?, toefl? } }
+//   GET  /study/settings                { newPerDay: { kana, kanji, toeic, toefl }, writeNewPerDay, writeNewPerDays: { kanji, toeic, toefl },
+//                                         decks: { key: 'deck:<키>', name, newPerDay }[] } (공개된 카드가 있는 항목, 만든 순서, 기본 15)
+//   PUT  /study/settings                { newPerDay?: { kana?, kanji?, toeic?, toefl? }, writeNewPerDay?, writeNewPerDays?: { kanji?, toeic?, toefl? },
+//                                         deckNewPerDay?: { 'deck:<키>'?: n } }
 //                                       (0–100 정수, 하나는 있어야 한다. writeNewPerDay = 예전 한자 작문 값)
 //   POST /reports                       { noteId, cardId?, reason, body? } → 201 { id }
 // 하루 경계 · 연속 학습일은 사용자 시간대의 04:00 기준 (study/day.ts).
 import type { DatabaseSync } from 'node:sqlite'
 import { Hono } from 'hono'
-import { isStudyKey, isTrack, writeTracks, type Track } from '@nakamura/core'
+import { type DeckStudyKey, isDeckStudyKey, isStudyKey, isTrack, writeTracks, type Track } from '@nakamura/core'
 import { type AppEnv, requireUser } from '../auth/middleware.ts'
 import {
   answerCard,
   buildQueue,
+  deckSettings,
   getNewPerDay,
   getWriteNewPerDay,
   NEW_PER_DAY_MAX,
   type QueueOptions,
+  setDeckNewPerDay,
   setNewPerDay,
   setWriteNewPerDay,
   summary,
@@ -144,14 +148,21 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
     newPerDay: getNewPerDay(db, userId),
     writeNewPerDay: getWriteNewPerDay(db, userId, WRITE_TRACK),
     writeNewPerDays: Object.fromEntries(writeTracks().map(t => [t, getWriteNewPerDay(db, userId, t)])),
+    decks: deckSettings(db, userId),
   })
 
   r.get('/study/settings', c => c.json(settingsOf(c.get('user')!.id)))
 
   r.put('/study/settings', async c => {
     const body = await readBody(c)
-    if (!body || (body.newPerDay === undefined && body.writeNewPerDay === undefined && body.writeNewPerDays === undefined)) {
-      return c.json({ error: 'newPerDay · writeNewPerDays 객체 또는 writeNewPerDay 가 필요합니다' }, 400)
+    if (
+      !body ||
+      (body.newPerDay === undefined &&
+        body.writeNewPerDay === undefined &&
+        body.writeNewPerDays === undefined &&
+        body.deckNewPerDay === undefined)
+    ) {
+      return c.json({ error: 'newPerDay · writeNewPerDays · deckNewPerDay 객체 또는 writeNewPerDay 가 필요합니다' }, 400)
     }
     const values = body.newPerDay
     const next: Partial<Record<Track, number>> = {}
@@ -186,11 +197,26 @@ export const studyRoutes = (db: DatabaseSync, opts: StudyOptions = {}) => {
         writes.push([k, v as number])
       }
     }
+    const decks: [DeckStudyKey, number][] = []
+    const perDeck = body.deckNewPerDay
+    if (perDeck !== undefined) {
+      if (!perDeck || typeof perDeck !== 'object' || Array.isArray(perDeck)) {
+        return c.json({ error: 'deckNewPerDay 객체가 필요합니다' }, 400)
+      }
+      for (const [k, v] of Object.entries(perDeck)) {
+        if (!isDeckStudyKey(k)) return c.json({ error: `알 수 없는 항목입니다: ${k}` }, 400)
+        if (!Number.isInteger(v) || (v as number) < 0 || (v as number) > NEW_PER_DAY_MAX) {
+          return c.json({ error: `하루 새 카드는 0–${NEW_PER_DAY_MAX} 정수여야 합니다` }, 400)
+        }
+        decks.push([k, v as number])
+      }
+    }
     const userId = c.get('user')!.id
     db.exec('BEGIN IMMEDIATE')
     try {
       setNewPerDay(db, userId, next)
       for (const [t, n] of writes) setWriteNewPerDay(db, userId, t, n)
+      for (const [k, n] of decks) setDeckNewPerDay(db, userId, k, n)
       db.exec('COMMIT')
     } catch (err) {
       if (db.isTransaction) db.exec('ROLLBACK')

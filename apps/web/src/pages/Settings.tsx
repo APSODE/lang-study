@@ -1,4 +1,4 @@
-// 설정 (#/settings): 프로필(닉네임 · 진도 공개 · 칭호 언어 · 시간대) · 학습(트랙별 하루 새 카드 · 작문 하루 새 문제) · 비밀번호 변경 · 정보.
+// 설정 (#/settings): 프로필(닉네임 · 진도 공개 · 칭호 언어 · 시간대) · 학습(트랙별 하루 새 카드 · 트랙별 작문 하루 새 문제 · 항목별 하루 새 카드) · 비밀번호 변경 · 정보.
 // me/profile · auth/password 가 아직 없으면(404) 그 부분만 "준비 중"으로 보여 준다.
 import { type FormEvent, useEffect, useState } from 'react'
 import { TRACKS, type TitlePref, type Track } from '@nakamura/core'
@@ -22,6 +22,8 @@ interface StudySettings {
   writeNewPerDay: number
   /** 작문 모드가 있는 트랙마다 (kanji · toeic · toefl). 예전 서버는 없을 수 있다 */
   writeNewPerDays?: Partial<Record<Track, number>>
+  /** 친구가 만든 항목(공개된 카드가 있는 것, 만든 순서)마다 하루 새 카드 수. 예전 서버는 없을 수 있다 */
+  decks?: { key: string; name: string; newPerDay: number }[]
 }
 const MAX = 100
 
@@ -249,9 +251,11 @@ function StudySection() {
     setError('')
     setSaved(false)
     try {
-      const body = values.writeNewPerDays
-        ? { newPerDay: values.newPerDay, writeNewPerDays: values.writeNewPerDays }
-        : { newPerDay: values.newPerDay, writeNewPerDay: values.writeNewPerDay }
+      const body = {
+        newPerDay: values.newPerDay,
+        ...(values.writeNewPerDays ? { writeNewPerDays: values.writeNewPerDays } : { writeNewPerDay: values.writeNewPerDay }),
+        ...(values.decks?.length ? { deckNewPerDay: Object.fromEntries(values.decks.map(d => [d.key, d.newPerDay])) } : {}),
+      }
       const r = await api<StudySettings>('study/settings', { method: 'PUT', body })
       setValues(r)
       setSaved(true)
@@ -336,6 +340,33 @@ function StudySection() {
               />
               <span className="muted small">일본어 일작에서 하루에 새로 볼 문제 수. 한자 트랙의 새 카드 수와 따로 셉니다.</span>
             </label>
+          )}
+          {values.decks && values.decks.length > 0 && (
+            <div className="field">
+              <span>만든 항목 하루 새 카드</span>
+              <div className="row-3">
+                {values.decks.map(d => (
+                  <label key={d.key}>
+                    {d.name}
+                    <input
+                      type="number"
+                      inputMode="numeric"
+                      min={0}
+                      max={MAX}
+                      step={1}
+                      value={d.newPerDay}
+                      onChange={e => {
+                        setSaved(false)
+                        const n = Math.trunc(Number(e.target.value))
+                        setValues({ ...values, decks: values.decks!.map(x => (x.key === d.key ? { ...x, newPerDay: n } : x)) })
+                      }}
+                      required
+                    />
+                  </label>
+                ))}
+              </div>
+              <span className="muted small">친구가 만든 항목마다 하루에 새로 볼 카드 수.</span>
+            </div>
           )}
           {error && <p className="error">{error}</p>}
           <div className="actions">

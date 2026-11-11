@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import type { DatabaseSync } from 'node:sqlite'
 import { describe, expect, it } from 'vitest'
-import type { KanaFields, Note } from '@nakamura/core'
+import { deckKey, deckNoteId, type KanaFields, type Note } from '@nakamura/core'
 import { createApp } from '../src/app.ts'
 import { hashPassword } from '../src/auth/password.ts'
 import { insertUser } from '../src/auth/users.ts'
@@ -450,11 +450,11 @@ describe('설정', () => {
   it('기본 15, 바꾸기, 검사', async () => {
     const { login } = setup()
     const u = await login()
-    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 10, writeNewPerDays: { kanji: 10, toeic: 10, toefl: 10 } })
+    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 10, writeNewPerDays: { kanji: 10, toeic: 10, toefl: 10 }, decks: [] })
     const ok = await u.send('PUT', '/study/settings', { newPerDay: { kana: 30, toeic: 0 } })
     expect(ok.status).toBe(200)
-    expect(await ok.json()).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0, toefl: 15 }, writeNewPerDay: 10, writeNewPerDays: { kanji: 10, toeic: 10, toefl: 10 } })
-    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0, toefl: 15 }, writeNewPerDay: 10, writeNewPerDays: { kanji: 10, toeic: 10, toefl: 10 } })
+    expect(await ok.json()).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0, toefl: 15 }, writeNewPerDay: 10, writeNewPerDays: { kanji: 10, toeic: 10, toefl: 10 }, decks: [] })
+    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 30, kanji: 15, toeic: 0, toefl: 15 }, writeNewPerDay: 10, writeNewPerDays: { kanji: 10, toeic: 10, toefl: 10 }, decks: [] })
     expect((await u.send('PUT', '/study/settings', { newPerDay: { kana: 100 } })).status).toBe(200)
     for (const bad of [
       {},
@@ -470,6 +470,64 @@ describe('설정', () => {
       expect((await u.send('PUT', '/study/settings', bad)).status, JSON.stringify(bad)).toBe(400)
     }
     expect((await u.get('/study/settings')).newPerDay.kana).toBe(100)
+  })
+})
+
+describe('항목 하루 새 카드 설정 (deck:<키>)', () => {
+  const card = (deck: string, front: string, back: string): Note => ({
+    id: deckNoteId(deck, front),
+    track: 'deck',
+    fields: { deck, front, back },
+  })
+  const A = '인사말'
+  const B = '여행 단어'
+  const KA = `deck:${deckKey(A)}`
+  const KB = `deck:${deckKey(B)}`
+
+  it('공개된 항목마다 기본 15, 바꾸면 큐 · 요약 · 409 가 따른다, 검사', async () => {
+    const { login } = setup({
+      kana: false,
+      extra: [card(A, 'こんにちは', '안녕하세요'), card(A, 'ありがとう', '고마워요'), card(A, 'さようなら', '안녕히'), card(B, '駅', '역')],
+    })
+    const u = await login()
+    expect((await u.get('/study/settings')).decks).toEqual([
+      { key: KA, name: A, newPerDay: 15 },
+      { key: KB, name: B, newPerDay: 15 },
+    ])
+    const ok = await u.send('PUT', '/study/settings', { deckNewPerDay: { [KA]: 2 } })
+    expect(ok.status).toBe(200)
+    expect((await ok.json()).decks).toEqual([
+      { key: KA, name: A, newPerDay: 2 },
+      { key: KB, name: B, newPerDay: 15 },
+    ])
+    const items = await u.queue(KA)
+    expect(items).toHaveLength(2)
+    const s = await u.get('/study/summary')
+    expect(s.decks.find((d: { key: string }) => d.key === KA)).toMatchObject({ newPerDay: 2, newLeft: 2 })
+    for (const i of items) expect((await u.answer(i.cardId, 'x', { selfCorrect: true })).status).toBe(200)
+    const third = ['こんにちは', 'ありがとう', 'さようなら'].map(f => `${deckNoteId(A, f)}:deck-recall`).find(id => !items.some(i => i.cardId === id))!
+    expect((await u.answer(third, 'x')).status).toBe(409)
+    // 다른 항목 · 다른 사용자는 그대로
+    expect((await u.queue(KB)).length).toBe(1)
+    expect((await (await login('dul')).get('/study/settings')).decks[0].newPerDay).toBe(15)
+
+    for (const bad of [
+      { deckNewPerDay: { kana: 3 } },
+      { deckNewPerDay: { 'deck:': 3 } },
+      { deckNewPerDay: { 'deck:ABC': 3 } },
+      { deckNewPerDay: { [KA]: 101 } },
+      { deckNewPerDay: { [KA]: -1 } },
+      { deckNewPerDay: { [KA]: '3' } },
+      { deckNewPerDay: [] },
+      { deckNewPerDay: 3 },
+      { newPerDay: { kana: 3 }, deckNewPerDay: { [KA]: 1.5 } },
+    ]) {
+      expect((await u.send('PUT', '/study/settings', bad)).status, JSON.stringify(bad)).toBe(400)
+    }
+    // 하나라도 틀리면 아무것도 바뀌지 않는다
+    const after = await u.get('/study/settings')
+    expect(after.newPerDay.kana).toBe(15)
+    expect(after.decks[0].newPerDay).toBe(2)
   })
 })
 
@@ -775,14 +833,14 @@ describe('작문 모드 (mode=write)', () => {
     const { u } = await start()
     const ok = await u.send('PUT', '/study/settings', { writeNewPerDay: 0 })
     expect(ok.status).toBe(200)
-    expect(await ok.json()).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 0, writeNewPerDays: { kanji: 0, toeic: 10, toefl: 10 } })
+    expect(await ok.json()).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 0, writeNewPerDays: { kanji: 0, toeic: 10, toefl: 10 }, decks: [] })
     expect((await u.send('PUT', '/study/settings', { writeNewPerDay: 100 })).status).toBe(200)
     for (const bad of [-1, 101, 1.5, '3', null, true]) {
       expect((await u.send('PUT', '/study/settings', { writeNewPerDay: bad })).status, String(bad)).toBe(400)
     }
     // 하나라도 틀리면 아무것도 바뀌지 않는다
     expect((await u.send('PUT', '/study/settings', { newPerDay: { kanji: 3 }, writeNewPerDay: -1 })).status).toBe(400)
-    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 100, writeNewPerDays: { kanji: 100, toeic: 10, toefl: 10 } })
+    expect(await u.get('/study/settings')).toEqual({ newPerDay: { kana: 15, kanji: 15, toeic: 15, toefl: 15 }, writeNewPerDay: 100, writeNewPerDays: { kanji: 100, toeic: 10, toefl: 10 }, decks: [] })
     // 쓰기 0 이면 새 작문 문제가 없다
     await u.send('PUT', '/study/settings', { writeNewPerDay: 0 })
     expect((await u.get('/study/queue?track=kanji&mode=write')).items).toEqual([])
