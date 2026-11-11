@@ -50,10 +50,10 @@ const FIELD_LABEL: Record<string, string> = {
   back: '뒷면',
   note: '설명',
 }
-const readable = (msg: string) => msg.replace(/fields\.([a-z_]+)/g, (m, k: string) => FIELD_LABEL[k] ?? m)
+export const readable = (msg: string) => msg.replace(/fields\.([a-z_]+)/g, (m, k: string) => FIELD_LABEL[k] ?? m)
 
 /** 쉼표(, 、 ，)로 나눈 목록 */
-const splitList = (s: string): string[] =>
+export const splitList = (s: string): string[] =>
   s
     .split(/[,、，]/)
     .map(x => x.trim())

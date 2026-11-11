@@ -1,10 +1,11 @@
 // 관리 · 검토 대기 (#/admin/drafts): 친구가 만든 문제(초안) 목록, 공개 / 반려.
 // 공개하면 바로 모두의 학습에 들어가고, 반려하면 퇴출(retired) 상태가 된다. 처리한 항목은 목록에서 뺀다.
 // 파일로 올린 문제는 파일(묶음)마다 카드 하나: 모두 공개 / 모두 반려, 펼치면 하나씩 공개 / 반려.
-// 직접 만든 문제는 그 아래에 하나씩.
+// 직접 만든 문제는 그 아래에 하나씩. 문제마다 "수정"으로 칸을 고친 뒤 공개할 수 있다 (NoteEditForm, 대표 칸은 고칠 수 없음).
 import { useState } from 'react'
 import { api } from '../api.ts'
 import { EmptyState, LoadError } from '../components/EmptyState.tsx'
+import { NoteEditForm } from '../components/NoteEditForm.tsx'
 import { NotePreview, noteLang, noteMain } from '../components/NotePreview.tsx'
 import { Skeleton } from '../components/Skeleton.tsx'
 import { fmtDateTime, fmtNum } from '../format.ts'
@@ -14,7 +15,18 @@ import type { Draft, DraftBatch, DraftsResponse } from '../types.ts'
 
 type Action = 'publish' | 'reject'
 
-function DraftItem({ d, busy, onReview }: { d: Draft; busy: boolean; onReview: (d: Draft, a: Action) => void }) {
+function DraftItem({
+  d,
+  busy,
+  onReview,
+  onEdited,
+}: {
+  d: Draft
+  busy: boolean
+  onReview: (d: Draft, a: Action) => void
+  onEdited: (d: Draft, fields: Draft['fields']) => void
+}) {
+  const [editing, setEditing] = useState(false)
   return (
     <li className="card report">
       <div className="report-head">
@@ -23,18 +35,36 @@ function DraftItem({ d, busy, onReview }: { d: Draft; busy: boolean; onReview: (
           {noteMain(d.fields) || d.id}
         </strong>
       </div>
-      <NotePreview track={d.track} fields={d.fields} />
+      {editing ? (
+        <NoteEditForm
+          id={d.id}
+          track={d.track}
+          fields={d.fields}
+          onSaved={note => {
+            onEdited(d, note.fields)
+            setEditing(false)
+          }}
+          onCancel={() => setEditing(false)}
+        />
+      ) : (
+        <NotePreview track={d.track} fields={d.fields} />
+      )}
       <p className="muted small">
         {d.uploader ?? '삭제된 사용자'} · {fmtDateTime(d.createdAt)}
       </p>
-      <div className="actions">
-        <button type="button" disabled={busy} onClick={() => onReview(d, 'publish')}>
-          공개
-        </button>
-        <button type="button" className="secondary" disabled={busy} onClick={() => onReview(d, 'reject')}>
-          반려
-        </button>
-      </div>
+      {!editing && (
+        <div className="actions">
+          <button type="button" disabled={busy} onClick={() => onReview(d, 'publish')}>
+            공개
+          </button>
+          <button type="button" className="secondary" disabled={busy} onClick={() => setEditing(true)}>
+            수정
+          </button>
+          <button type="button" className="secondary" disabled={busy} onClick={() => onReview(d, 'reject')}>
+            반려
+          </button>
+        </div>
+      )}
     </li>
   )
 }
@@ -61,6 +91,11 @@ export function AdminDrafts() {
     } finally {
       setBusy(null)
     }
+  }
+
+  const edited = (d: Draft, fields: Draft['fields']) => {
+    const data = drafts.data
+    if (data) drafts.setData({ ...data, drafts: data.drafts.map(x => (x.id === d.id ? { ...x, fields } : x)) })
   }
 
   const reviewBatch = async (b: DraftBatch, action: Action) => {
@@ -118,7 +153,7 @@ export function AdminDrafts() {
                     </summary>
                     <ul className="report-list">
                       {items.map(d => (
-                        <DraftItem key={d.id} d={d} busy={busy !== null} onReview={(x, a) => void review(x, a)} />
+                        <DraftItem key={d.id} d={d} busy={busy !== null} onReview={(x, a) => void review(x, a)} onEdited={edited} />
                       ))}
                     </ul>
                   </details>
@@ -126,7 +161,7 @@ export function AdminDrafts() {
               )
             })}
             {singles.map(d => (
-              <DraftItem key={d.id} d={d} busy={busy === d.id} onReview={(x, a) => void review(x, a)} />
+              <DraftItem key={d.id} d={d} busy={busy === d.id} onReview={(x, a) => void review(x, a)} onEdited={edited} />
             ))}
           </ul>
         )

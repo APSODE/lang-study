@@ -1,7 +1,9 @@
 // 관리 · 신고 (#/admin/reports): 상태별 목록, 해결 / 반려 / 다시 열기.
+// 친구가 만든 노트(note.editable)는 "문제 수정"으로 칸을 바로 고칠 수 있다 (NoteEditForm, 같은 id 라 학습 기록은 그대로).
 import { useState } from 'react'
 import { api } from '../api.ts'
 import { EmptyState, LoadError } from '../components/EmptyState.tsx'
+import { NoteEditForm } from '../components/NoteEditForm.tsx'
 import { noteLang } from '../components/NotePreview.tsx'
 import { Segmented } from '../components/Segmented.tsx'
 import { Skeleton } from '../components/Skeleton.tsx'
@@ -36,6 +38,7 @@ export function AdminReports() {
   const [filter, setFilter] = useState<ReportFilter>('open')
   const reports = useApi<ReportsResponse>(`admin/reports?status=${filter}`)
   const [busy, setBusy] = useState<number | null>(null)
+  const [editing, setEditing] = useState<number | null>(null)
   const [error, setError] = useState('')
 
   const update = async (r: Report, status: ReportStatus) => {
@@ -55,6 +58,13 @@ export function AdminReports() {
     } finally {
       setBusy(null)
     }
+  }
+
+  /** 같은 노트의 신고 모두에 고친 칸을 반영한다 */
+  const edited = (noteId: string, fields: Record<string, unknown>) => {
+    const list = reports.data?.reports ?? []
+    reports.setData({ reports: list.map(x => (x.noteId === noteId && x.note ? { ...x, note: { ...x.note, fields } } : x)) })
+    setEditing(null)
   }
 
   return (
@@ -90,6 +100,15 @@ export function AdminReports() {
                     {r.cardId && <span className="muted small"> · {r.cardId}</span>}
                   </p>
                   {r.body && <p className="report-body">{r.body}</p>}
+                  {editing === r.id && r.note && (
+                    <NoteEditForm
+                      id={r.noteId}
+                      track={r.note.track}
+                      fields={r.note.fields}
+                      onSaved={note => edited(r.noteId, note.fields)}
+                      onCancel={() => setEditing(null)}
+                    />
+                  )}
                   <p className="muted small">
                     {r.userName} · {fmtDateTime(r.createdAt)}
                     {r.resolvedAt !== null &&
@@ -108,6 +127,11 @@ export function AdminReports() {
                     ) : (
                       <button type="button" className="secondary" disabled={busy === r.id} onClick={() => void update(r, 'open')}>
                         다시 열기
+                      </button>
+                    )}
+                    {r.note?.editable && editing !== r.id && (
+                      <button type="button" className="secondary" onClick={() => setEditing(r.id)}>
+                        문제 수정
                       </button>
                     )}
                   </div>

@@ -43,7 +43,7 @@ describe('신고 처리', () => {
       createdAt: T0 + 1000,
       resolvedAt: null,
       resolvedBy: null,
-      note: { track: 'kana', fields: expect.objectContaining({ char: 'い', romaji: 'i' }), status: 'published' },
+      note: { track: 'kana', fields: expect.objectContaining({ char: 'い', romaji: 'i' }), status: 'published', editable: false },
     })
     expect(reports[1]).toMatchObject({ cardId: null, body: null, reason: 'typo' })
 

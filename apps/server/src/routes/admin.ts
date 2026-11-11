@@ -12,12 +12,18 @@
 //   POST  /admin/drafts/:id/reject    반려 (status retired) → { id, status }. 사용자가 만든 초안이 아니면 404
 //   POST  /admin/batches/:id/publish  파일 묶음의 남은 초안을 모두 공개 → { batch, status, count }
 //   POST  /admin/batches/:id/reject   모두 반려 → { batch, status, count }. 남은 초안이 없으면 404
+//   PATCH /admin/notes/:id     { fields } 사용자가 만든 문제(초안 · 공개된 것)의 칸 고치기 → UploadedNote { id, track, fields, status, createdAt, updatedAt }
+//                              만들기(POST /notes · 파일 올리기)와 같은 검사, 틀리면 400 { error, errors }. fields 는 통째로 보낸다.
+//                              대표 칸(한자 · 단어 · 항목 이름 · 앞면)은 노트 id 가 되므로 고칠 수 없다 (id 가 바뀌면 400).
+//                              같은 id 라 학습 기록은 그대로, 공개된 것은 바로 학습에 반영. note_revisions 에 reason 'admin-edit'.
+//                              반려된 것 · 사전에서 가져온 노트는 404
+//   신고의 note.editable = 위 PATCH 로 고칠 수 있는 노트인지 (사용자가 만든 초안 · 공개된 것)
 import type { DatabaseSync } from 'node:sqlite'
 import { Hono } from 'hono'
 import type { Note } from '@nakamura/core'
 import { type AppEnv, requireAdmin } from '../auth/middleware.ts'
 import { userOverview } from '../social.ts'
-import { listDraftBatches, listDrafts, reviewBatch, reviewDraft } from '../uploads.ts'
+import { editNote, listDraftBatches, listDrafts, reviewBatch, reviewDraft } from '../uploads.ts'
 import { readBody } from './auth.ts'
 
 export const REPORT_STATUSES = ['open', 'resolved', 'rejected'] as const
@@ -36,26 +42,36 @@ export interface Report {
   resolvedAt: number | null
   /** 처리한 관리자 이름 */
   resolvedBy: string | null
-  note: { track: Note['track']; fields: Note['fields']; status: string } | null
+  /** editable: PATCH /admin/notes/:id 로 고칠 수 있는지 */
+  note: { track: Note['track']; fields: Note['fields']; status: string; editable: boolean } | null
 }
 
 interface ReportRow extends Omit<Report, 'note'> {
   track: Note['track'] | null
   fields: string | null
   noteStatus: string | null
+  noteSource: string | null
 }
 
 const REPORT_SELECT = `SELECT r.id, r.note_id AS noteId, r.card_id AS cardId, coalesce(u.display_name, u.name) AS userName, r.reason, r.body, r.status,
        r.created_at AS createdAt, r.resolved_at AS resolvedAt, coalesce(a.display_name, a.name) AS resolvedBy,
-       n.track AS track, n.fields AS fields, n.status AS noteStatus
+       n.track AS track, n.fields AS fields, n.status AS noteStatus, n.source AS noteSource
   FROM reports r
   JOIN users u ON u.id = r.user_id
   LEFT JOIN users a ON a.id = r.resolved_by
   LEFT JOIN notes n ON n.id = r.note_id`
 
-const toReport = ({ track, fields, noteStatus, ...r }: ReportRow): Report => ({
+const toReport = ({ track, fields, noteStatus, noteSource, ...r }: ReportRow): Report => ({
   ...r,
-  note: track !== null && fields !== null ? { track, fields: JSON.parse(fields), status: noteStatus! } : null,
+  note:
+    track !== null && fields !== null
+      ? {
+          track,
+          fields: JSON.parse(fields),
+          status: noteStatus!,
+          editable: (noteSource ?? '').startsWith('upload:') && (noteStatus === 'draft' || noteStatus === 'published'),
+        }
+      : null,
 })
 
 const findReport = (db: DatabaseSync, id: number): Report | null => {
@@ -101,6 +117,13 @@ export const adminRoutes = (db: DatabaseSync, opts: { now?: () => number } = {})
   r.get('/admin/users', c => c.json({ users: userOverview(db, c.get('user')!.id, now()) }))
 
   r.get('/admin/drafts', c => c.json({ drafts: listDrafts(db), batches: listDraftBatches(db) }))
+
+  r.patch('/admin/notes/:id', async c => {
+    const body = await readBody(c)
+    const res = editNote(db, c.req.param('id'), body?.fields, c.get('user')!.id, now())
+    if (!res.ok) return c.json({ error: res.error, ...(res.errors ? { errors: res.errors } : {}) }, res.status)
+    return c.json(res.note)
+  })
 
   for (const action of ['publish', 'reject'] as const) {
     r.post(`/admin/drafts/:id/${action}`, c => {

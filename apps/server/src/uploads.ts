@@ -521,3 +521,63 @@ export const reviewBatch = (
     throw err
   }
 }
+
+// --- 관리자 수정 ---
+
+export type EditResult =
+  | { ok: true; note: UploadedNote }
+  | { ok: false; status: 400 | 404; error: string; errors?: string[] }
+
+/**
+ * 관리자가 사용자가 만든 문제(초안 또는 공개된 것)의 칸을 고친다. 만들기와 같은 검사를 한다.
+ * 노트 id 는 대표 칸(한자 · 단어 · 항목 이름 + 앞면)에서 나오므로 대표 칸은 고칠 수 없다 (id 가 바뀌면 400).
+ * 학습 기록(카드)은 노트 id 에 붙어 있어 그대로 남는다. updated_at 이 바뀌어 공개 노트면 catalog 캐시가 새로 만들어진다.
+ * 바뀐 것이 있으면 note_revisions 에 reason 'admin-edit' 로 남긴다. 반려된(retired) 것 · 사용자가 만들지 않은 것은 404.
+ */
+export const editNote = (db: DatabaseSync, id: string, rawFields: unknown, adminId: number, now: number): EditResult => {
+  const row = db
+    .prepare("SELECT id, track, fields, status, created_at AS createdAt, updated_at AS updatedAt FROM notes WHERE id = ? AND source LIKE 'upload:%' AND status IN ('draft', 'published')")
+    .get(id) as NoteRow | undefined
+  if (!row) return { ok: false, status: 404, error: '고칠 수 있는 문제가 아닙니다' }
+  if (!isObj(rawFields)) return { ok: false, status: 400, error: 'fields 는 객체여야 합니다' }
+  const current = JSON.parse(row.fields) as Record<string, unknown>
+
+  let p: Prepared
+  if (row.track === 'deck') {
+    const deck = typeof current.deck === 'string' ? current.deck : ''
+    const { deck: rawDeck, ...rest } = rawFields
+    if (rawDeck !== undefined && (typeof rawDeck !== 'string' || deckKey(normDeckName(rawDeck)) !== deckKey(deck))) {
+      return { ok: false, status: 400, error: '항목 이름은 고칠 수 없습니다' }
+    }
+    p = prepareDeckCard(deck, rest)
+  } else if (isUploadTrack(row.track)) {
+    // 한국 한자음(eum_ko)은 훈음에서 다시 만든다
+    const { eum_ko: _eum, ...rest } = rawFields
+    p = prepareTrackNote(row.track, row.track === 'kanji' ? rest : rawFields)
+  } else {
+    return { ok: false, status: 404, error: '고칠 수 있는 문제가 아닙니다' }
+  }
+  if (p.errors.length) return { ok: false, status: 400, error: p.errors.join('\n'), errors: p.errors }
+  if (p.id !== id) {
+    const key = row.track === 'kanji' ? '한자는' : row.track === 'deck' ? '앞면은' : '단어는'
+    const error = `${key} 고칠 수 없습니다 (문제 id 가 바뀝니다). 반려하고 새로 만들어 주세요`
+    return { ok: false, status: 400, error, errors: [error] }
+  }
+
+  const json = canonicalJson(p.fields)
+  if (json === canonicalJson(current)) return { ok: true, note: toUploaded(row) }
+  // catalog 캐시는 updated_at 합으로 바뀐 것을 안다: 같은 밀리초여도 반드시 커지게
+  const updatedAt = Math.max(now, row.updatedAt + 1)
+  db.exec('BEGIN')
+  try {
+    db.prepare('UPDATE notes SET fields = ?, updated_at = ? WHERE id = ?').run(json, updatedAt, id)
+    db.prepare(
+      "INSERT INTO note_revisions(note_id, fields, status, edited_by, reason, created_at) VALUES (?, ?, ?, ?, 'admin-edit', ?)",
+    ).run(id, json, row.status, adminId, now)
+    db.exec('COMMIT')
+  } catch (err) {
+    db.exec('ROLLBACK')
+    throw err
+  }
+  return { ok: true, note: { ...toUploaded(row), fields: JSON.parse(json), updatedAt } }
+}

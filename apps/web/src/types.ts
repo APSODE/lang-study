@@ -164,7 +164,8 @@ export interface Report {
   resolvedAt: number | null
   /** 처리한 관리자 이름 */
   resolvedBy: string | null
-  note: { track: NoteTrack; fields: Record<string, unknown>; status: string } | null
+  /** editable: 관리자가 칸을 고칠 수 있는 노트 (친구가 만든 초안 · 공개된 것, PATCH admin/notes/:id) */
+  note: { track: NoteTrack; fields: Record<string, unknown>; status: string; editable?: boolean } | null
 }
 
 /** GET admin/reports?status=… */
